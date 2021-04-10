@@ -1,4 +1,4 @@
-# AuthentiKit-Encoder-Tool
+# AuthentiKit Encoder Tool
 ![Version 0.1 Beta](https://img.shields.io/badge/Version-0.1--beta-blue)
 
 Multiplies the number of button pressess by a confuigurable amount. This allows encoders to be calibrated for use in a particular simulator. Compatable with Windows 10 only.
