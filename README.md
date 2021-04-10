@@ -28,7 +28,7 @@ The licensor cannot revoke these freedoms as long as you follow the following li
 
 *Appropriate Credit Example*:
 
-*The "AuthentKit Encoder Tool" was written by Ian Colman, licensed under CC BY NC ND 4.0*
+*The "AuthentKit Encoder Tool" was written by Ian Colman (RoboBoogie), licensed under CC BY NC ND 4.0*
 
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 
