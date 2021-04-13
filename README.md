@@ -1,4 +1,4 @@
-# AuthentiKit Encoder Tool
+# AuthentiKit Trim Calibration
 ![Version 0.1 Beta](https://img.shields.io/badge/Version-0.1--beta-blue)
 
 Multiplies the number of button pressess by a confuigurable amount. This allows encoders to be calibrated for use in a particular simulator. Compatable with Windows 10 only.
@@ -7,8 +7,8 @@ Multiplies the number of button pressess by a confuigurable amount. This allows 
 
 1. Copy the executable to somewhere convenient
 2. Run the executable
-3. Click 'Add Button'
-4. Press the button you wish to modify
+3. Select the button you wish to modify from the real controls
+4. Select a vJoy virtual button that will be your multiplied output controller
 5. Select a modifier ammount (e.g. x3 for trim wheels in Microsoft Flight Simulator)
 6. Leave the program running while you're in the sim
 
