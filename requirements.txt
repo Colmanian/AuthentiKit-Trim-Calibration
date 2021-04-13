@@ -1,1 +1,2 @@
+keyboard==0.13.5
 pygame==2.0.1
