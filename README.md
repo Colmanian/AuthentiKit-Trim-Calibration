@@ -9,17 +9,19 @@ Maps buttons 11 and 12 from Leo Bodnar's BU0836A 12-Bit Joystick controller to b
 
  1. Set up your AuthentiKit Trim Wheel: https://authentikit.org/ 
  2. Install vJoy, including the option to install vJoy Monitor: https://sourceforge.net/projects/vjoystick/ 
- 3. Download and run `AuthentiKit Trim Calibration.exe`
+ 3. Download and run [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/blob/main/dist/AuthentiKit%20Trim%20Calibration.exe)
  4. Run vJoy Monitor and verify buttons 1 and 2 illuminate. The console window also gives a good indication that things are working.
  5. Leave this window running and open up MSFS 
  6. Ensure the AuthentKit trim wheel isn't bound to anything in MSFS directly 
  7. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down 
 
-Limitations with proof of concept: 
+Limitations with this proof of concept: 
  - Elevator trim wheel is expected only at Buttons 11 and 12 of the 'BU0836 Interface' 
  - Elevator trim outputs are be mapped across only to vJoy buttons 1 and 2 
 
 # Development & Build
+Running an exe you've downloaded of the internet can be understandably uncomfortable. If you'd like to build it from scratch yourself, you can, all the source code is provided. Just follow these steps. You'll need to be comfortable in Python to do so.
+
 The project requires the `vJoyInterface.dll` to be copied across to project directory from your vJoy install directory to this project's `python\pyvjoy` directory. To install and run:
 * `pip install -r requirements.txt`
 * `python python/app.py`
