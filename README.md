@@ -1,16 +1,39 @@
 # AuthentiKit Trim Calibration
 ![Version 0.1 Beta](https://img.shields.io/badge/Version-0.1--beta-blue)
 
-Multiplies the number of button pressess by a confuigurable amount. This allows encoders to be calibrated for use in a particular simulator. Compatable with Windows 10 only.
+Proof of concept tool for better mapping of Authentikit Trim Wheels to Microsoft Flight Simulator 2020. 
+
+Maps buttons 11 and 12 from Leo Bodnar's BU0836A 12-Bit Joystick controller to buttons 1 and 2 of vJoy device 1, calibrated for use as trim wheel up/down in MSFS.
 
 # Usage
 
-1. Copy the executable to somewhere convenient
-2. Run the executable
-3. Select the button you wish to modify from the real controls
-4. Select a vJoy virtual button that will be your multiplied output controller
-5. Select a modifier ammount (e.g. x3 for trim wheels in Microsoft Flight Simulator)
-6. Leave the program running while you're in the sim
+ 1. Set up your AuthentiKit Trim Wheel: https://authentikit.org/ 
+ 2. Install vJoy, including the option to install vJoy Monitor: https://sourceforge.net/projects/vjoystick/ 
+ 3. Download and run `AuthentiKit Trim Calibration.exe`
+ 4. Run vJoy Monitor and verify buttons 1 and 2 illuminate. The console window also gives a good indication that things are working.
+ 5. Leave this window running and open up MSFS 
+ 6. Ensure the AuthentKit trim wheel isn't bound to anything in MSFS directly 
+ 7. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down 
+
+Limitations with proof of concept: 
+ - Elevator trim wheel is expected only at Buttons 11 and 12 of the 'BU0836 Interface' 
+ - Elevator trim outputs are be mapped across only to vJoy buttons 1 and 2 
+
+# Development & Build
+The project requires the `vJoyInterface.dll` to be copied across to project directory from your vJoy install directory to this project's `python\pyvjoy` directory. To install and run:
+* `pip install -r requirements.txt`
+* `python python/app.py`
+
+Build using PyInstaller which requires you to have copied vJoyInterface.dll as above. Note the `\` and `/` might be diferent for you depending on what type of terminal you're using. 
+
+`pyinstaller.exe --onefile --icon=images/icon.ico --add-binary='python\pyvjoy\vJoyInterface.dll:.' --name='AuthentiKit Trim Calibration' python/app.py`
+
+Your newly built `.exe` file will be overwrite the one in the `dist/` directory.
+
+# Credits
+* pyvjoy - https://github.com/tidzo/pyvjoy
+* vJoy - https://sourceforge.net/projects/vjoystick/
+* AuthentiKit - https://www.authentikit.org
 
 # License
 
@@ -28,7 +51,7 @@ The licensor cannot revoke these freedoms as long as you follow the following li
 
 *Appropriate Credit Example*:
 
-*The "AuthentKit Encoder Tool" was written by Ian Colman (RoboBoogie), licensed under CC BY NC ND 4.0*
+*The "AuthentKit Encoder Tool" was written by Ian Colman (Colmanian), licensed under CC BY NC ND 4.0*
 
 [![CC BY-NC-ND 4.0][cc-by-nc-nd-image]][cc-by-nc-nd]
 
