@@ -1,6 +1,5 @@
 import pygame
 import pyvjoy
-import os
 import threading
 import tkinter as tk
 from time import sleep
@@ -104,7 +103,6 @@ if __name__ == '__main__':
     # Initalise window 
     root = tk.Tk()
     root.title('AuthentiKit Trim Calibration')
-    root.iconbitmap(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..\images\icon.ico"))
     root.geometry("750x410")
     topFrame = tk.Frame(root)
     topFrame.pack()
