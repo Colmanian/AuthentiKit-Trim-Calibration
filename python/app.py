@@ -40,12 +40,16 @@ j = pyvjoy.VJoyDevice(1)
 
 # Hard code mappings and multipliers (for proof of concept)
 button_map = {10:1, 11:2}
-multiplier_map = {10:4, 11:4}
+multiplier_map = {10:3, 11:3}
 
 # Timing information
 ticks = 0
-HOLD_ON_THRESHOLD_MS = 100
+ticks_since_encoder_pulse = 0 
+HOLD_THRESHOLD = 500 #~ms
+OFF_THRESHOLD = 200 #~ms
+PULSE_WIDTH_SEC = 0.020 # 20 ms
 active_button = None # (Only supports one button active at a time currently)
+holding = True # If we pass the HOLD_ON_THRESHOLD then we keep the button on to max out control speed in msfs
 
 # Main Loop
 done = False
@@ -53,6 +57,7 @@ while not done:
 
     sleep(0.001)
     ticks += 1
+    ticks_since_encoder_pulse += 1
 
     if keyboard.is_pressed('esc'):
             done = True 
@@ -77,19 +82,38 @@ while not done:
 
             if (joystick == "BU0836 Interface"):
 
-                # If we're still turning the active trim wheel, reset the timer
-                if button == active_button:
-                    ticks = 0
+                if button == active_button:                    
+                    ticks_since_encoder_pulse = 0
+                    if ticks < HOLD_THRESHOLD:
+                        # Pulse vButton
+                        for n in range(0, multiplier_map[active_button]):
+                            sleep(PULSE_WIDTH_SEC)
+                            j.set_button(button_map[active_button],0)
+                            sleep(PULSE_WIDTH_SEC)
+                            ticks += int(PULSE_WIDTH_SEC*1000)
+                            j.set_button(button_map[active_button],1)
+                        print ("Button {} ".format(active_button), " PULSE x{}".format(multiplier_map[active_button]),  "ticks: {}".format(ticks))
+                    else:
+                        print ("Button {} ".format(active_button), " HOLD, ticks: {}".format(ticks))
 
-                # If we're starting to turn a trim wheel, then turn out the output 
                 elif active_button == None and (button in button_map):
+
+                    # Turn On
                     ticks = 0
+                    ticks_since_encoder_pulse = 0
                     active_button = button
-                    j.set_button(button_map[active_button],1)
-                
-                # Else ignore all other events while we're dealing with this trim turn
+                    # Pulse vButton
+                    for n in range(0, multiplier_map[active_button]):
+                        sleep(PULSE_WIDTH_SEC)
+                        j.set_button(button_map[active_button],0)
+                        sleep(PULSE_WIDTH_SEC)
+                        ticks += int(PULSE_WIDTH_SEC*1000)
+                        j.set_button(button_map[active_button],1)
+                    print ("Button {} ".format(active_button), " ON, ticks: {}".format(ticks))
     
-    # If we're outputting but haven't seen an movement for the threshold time, then turn it off
-    if (active_button != None) and (ticks > HOLD_ON_THRESHOLD_MS):
-            j.set_button(button_map[active_button],0)
-            active_button = None
+    if (active_button != None) and (ticks_since_encoder_pulse > OFF_THRESHOLD):
+        # Turn Off
+        print ("Button {} ".format(active_button), " OFF, ticks: {}".format(ticks))
+        j.set_button(button_map[active_button],0)
+        active_button = None
+               
