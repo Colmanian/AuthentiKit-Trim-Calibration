@@ -1,6 +1,8 @@
 import pygame
 import keyboard
 import pyvjoy
+import os
+from tkinter import *
 from time import sleep
 
 # Author: Ian Colman
@@ -8,15 +10,31 @@ from time import sleep
 # Credits:  https://github.com/tidzo/pyvjoy for the vJoy DLL wrapper 
 #           https://sourceforge.net/projects/vjoystick/ for the vJoy DLL
 
-# Initialize the real joysticks
+
+# # Initalise GUI Window
+# root = Tk()
+# root.title('AuthentiKit Trim Calibration')
+# root.iconbitmap(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..\images\icon.ico"))
+# root.geometry("800x800")
+
+# # Add drop downs to the GUI
+# clicked = StringVar()
+# outputButton1 = OptionMenu(root, clicked, "vJoy1:Button1", "vJoy1:Button2")
+# outputButton1.pack()
+
+# # Run the GUI
+# root.mainloop()
+
+# Get real joystick info
 pygame.init()
 pygame.joystick.init()
 joystick_count = pygame.joystick.get_count()
 for i in range(joystick_count):
         joystick = pygame.joystick.Joystick(i)
         joystick.init()
+        print(joystick.get_name())
 
-# Initialise the virtual joysticks
+# Get virtual joystick info
 j = pyvjoy.VJoyDevice(1)
 
 done = False
@@ -26,17 +44,17 @@ while not done:
             done = True 
 
     button_map = {10:1, 11:2}
-    multiplier_map = {10:3, 11:3}
+    multiplier_map = {10:4, 11:4}
 
     for event in pygame.event.get():
         if event.type == pygame.JOYBUTTONDOWN:
-            joystick = pygame.joystick.Joystick(event.joy)
-            joystick.init()
-            name = joystick.get_name()
+            #joystick = pygame.joystick.Joystick(event.joy)
+            #joystick.init()
+            #name = joystick.get_name()
             button = event.button
-            print("{}".format(name), "Button {}".format(button))
+            #print("{}".format(name), "Button {}".format(button))
             for n in range(0, multiplier_map[button]):
                 j.set_button(button_map[event.button],1)
-                sleep(0.05)
+                sleep(0.02)
                 j.set_button(button_map[event.button],0)
-                sleep(0.05)
+                sleep(0.02)
