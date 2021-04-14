@@ -3,6 +3,8 @@
 
 Proof of concept tool for better mapping of Authentikit Trim Wheels to Microsoft Flight Simulator 2020. 
 
+Direct Download Link: [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/blob/main/dist/AuthentiKit%20Trim%20Calibration.exe)
+
 Maps buttons 11 and 12 from Leo Bodnar's BU0836A 12-Bit Joystick controller to buttons 1 and 2 of vJoy device 1, calibrated for use as trim wheel up/down in MSFS.
 
 # Usage
