@@ -1,5 +1,4 @@
 import pygame
-import keyboard
 import pyvjoy
 import os
 import threading
@@ -56,9 +55,6 @@ class MappingThread (threading.Thread):
             ticks += 1
             ticks_since_encoder_pulse += 1
 
-            if keyboard.is_pressed('esc'):
-                    done = True 
-
             for event in pygame.event.get():
                 if event.type == pygame.JOYBUTTONDOWN:
                     joystick = pygame.joystick.Joystick(event.joy).get_name()
@@ -109,10 +105,14 @@ if __name__ == '__main__':
     root = tk.Tk()
     root.title('AuthentiKit Trim Calibration')
     root.iconbitmap(os.path.join(os.path.dirname(os.path.realpath(__file__)), "..\images\icon.ico"))
-    root.geometry("750x400")
+    root.geometry("750x410")
+    topFrame = tk.Frame(root)
+    topFrame.pack()
+    bottomFrame = tk.Frame(root)
+    bottomFrame.pack(side=tk.BOTTOM)
 
-    # Add description Text
-    info = tk.Text(root, height=200, width=850)
+    # Add description Text to Top Frame
+    info = tk.Text(topFrame, width=750)
     info.pack()
     info.insert(tk.END, "\
 This is a proof of concept tool for calibrating Authentikit Trim Controls for use in\n\
@@ -121,8 +121,8 @@ Microsoft Flight Simulator 2020. \n\
 Maps BU0836 Interface Buttons 11 and 12 to calibrated output buttons 1 and 2 in vJoy:1\n\
 \n\
  1. Set up your AuthentiKit controls as per the instructions https://authentikit.org/ \n\
- 2. Install vJoy: https://sourceforge.net/projects/vjoystick/ \n\
- 3. Reopen this app and confirm that your're seeing output below as you move your trim wheel \n\
+ 2. Install vJoy, including the option to install vJoy Monitor: https://sourceforge.net/projects/vjoystick/ \n\
+ 3. Run vJoy Monitor and verify buttons 1 and 2  \n\
  4. Leave this window running and open up MSFS \n\
  5. Ensure the AuthentKit trim wheel isn't bound to anything in MSFS directly \n\
  6. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down \n\
@@ -130,10 +130,15 @@ Maps BU0836 Interface Buttons 11 and 12 to calibrated output buttons 1 and 2 in 
 Limitations: \n\
  - Elevator trim wheel is expected at Buttons 11 and 12 of the 'BU0836 Interface' \n\
  - Elevator trim outputs are be mapped across to vJoy buttons 1 and 2 \n\
-\n\
-Author: Ian Colman for AuthentiKit.org\n\
-License: Free to use under Creative Commons License BY NC ND 4.0")
+")
     info.config(state=tk.DISABLED)
+
+    credit = tk.Label(bottomFrame, text="By Ian Colman for AuthentiKit. Free to use under Creative Commons License BY NC ND 4.0",
+		 fg = "orange",
+         bg = "black",
+		 font = "Verdana 10 bold",
+         width = 750)
+    credit.pack()
 
     # Run the GUI
     root.mainloop()
