@@ -71,9 +71,9 @@ class MappingThread (threading.Thread):
                                     sleep(PULSE_WIDTH_SEC)
                                     ticks += int(PULSE_WIDTH_SEC*1000)
                                     j.set_button(button_map[active_button],1)
-                                print ("Button {} ".format(active_button), " PULSE x{}".format(multiplier_map[active_button]),  "ticks: {}".format(ticks))
+                                print ("BU0836 Button {}".format(active_button), "to vJoy1 Button {}".format(button_map[active_button]),  "(Pulsing)")
                             else:
-                                print ("Button {} ".format(active_button), " HOLD, ticks: {}".format(ticks))
+                                print ("BU0836 Button {}".format(active_button), "to vJoy1 Button {}".format(button_map[active_button]),  "(Holding on)")
 
                         elif active_button == None and (button in button_map):
 
@@ -88,11 +88,11 @@ class MappingThread (threading.Thread):
                                 sleep(PULSE_WIDTH_SEC)
                                 ticks += int(PULSE_WIDTH_SEC*1000)
                                 j.set_button(button_map[active_button],1)
-                            print ("Button {} ".format(active_button), " ON, ticks: {}".format(ticks))
+                                print ("BU0836 Button {}".format(active_button), "to vJoy1 Button {}".format(button_map[active_button]),  "(Pulsing)")
             
             if (active_button != None) and (ticks_since_encoder_pulse > OFF_THRESHOLD):
                 # Turn Off
-                print ("Button {} ".format(active_button), " OFF, ticks: {}".format(ticks))
+                print ("BU0836 Button {}".format(active_button), "to vJoy1 Button {}".format(button_map[active_button]),  "(Turning off)")
                 j.set_button(button_map[active_button],0)
                 active_button = None
 
