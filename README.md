@@ -1,21 +1,26 @@
 # AuthentiKit Trim Calibration
-![Version 0.1 Beta](https://img.shields.io/badge/Version-0.1--beta-blue)
+![Version 0.2 Beta](https://img.shields.io/badge/Version-0.2--beta-blue)
 
 Proof of concept tool for better mapping of Authentikit Trim Wheels to Microsoft Flight Simulator 2020. 
 
 Direct Download Link: [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/raw/main/dist/AuthentiKit%20Trim%20Calibration.exe)
 
-Maps buttons 11 and 12 from Leo Bodnar's BU0836A 12-Bit Joystick controller to buttons 1 and 2 of vJoy device 1, calibrated for use as trim wheel up/down in MSFS.
+Maps game controller buttons to vJoy buttons, calibrated for use as trim wheel up/down in MSFS. Mappings are currently hard coded as follows
+* Input Button 11 -> vJoy Button 1
+* Input Button 12 -> vJoy Button 2
+* Input Button 09 -> vJoy Button 3
+* Input Button 10 -> vJoy Button 4
 
 # Usage
 
  1. Set up your AuthentiKit Trim Wheel: https://authentikit.org/ 
- 2. Install vJoy, including the option to install vJoy Monitor: https://sourceforge.net/projects/vjoystick/ 
+ 2. Install vJoy https://sourceforge.net/projects/vjoystick/ 
  3. Download and run [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/blob/main/dist/AuthentiKit%20Trim%20Calibration.exe)
- 4. Run vJoy Monitor and verify buttons 1 and 2 illuminate. The console window also gives a good indication that things are working.
- 5. Leave this window running and open up MSFS 
- 6. Ensure the AuthentKit trim wheel isn't bound to anything in MSFS directly 
- 7. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down 
+ 4. Select input device (usually `BU0835 Interface` for Authentkit) and vjoy output device (usually `1`)
+ 5. Verify vJoy buttons 1 and 2 illuminate in your monitor of choice. The console window also gives a good indication that things are working.
+ 6. Leave the AuthentiKit Trim Calibration window running and open up MSFS 
+ 7. Ensure the trim wheels aren't bound to anything in MSFS directly.
+ 8. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down. 3 and 4 go to Rudder trim. Note you'll have to use the drop downs to select these.
 
 Limitations with this proof of concept: 
  - Elevator trim wheel is expected only at Buttons 11 and 12 of the 'BU0836 Interface' 
@@ -33,6 +38,25 @@ Build using PyInstaller which requires you to have copied vJoyInterface.dll as a
 `pyinstaller.exe --onefile --icon=images/icon.ico --add-binary='python\pyvjoy\vJoyInterface.dll:.' --name='AuthentiKit Trim Calibration' python/app.py`
 
 Your newly built `.exe` file will be overwrite the one in the `dist/` directory.
+
+# Change Log
+
+* 0.2-beta (18-Apr-2021)
+    * Input devices configurable from dropdown (buttons still hard coded)
+    * Cleaned up GUI
+    * Added additional mappings for rudder trim. Complete mappings now
+        * Input Button 11 -> vJoy Button 1
+        * Input Button 12 -> vJoy Button 2
+        * Input Button 09 -> vJoy Button 3
+        * Input Button 10 -> vJoy Button 4
+    * Hidden anything 'vJoy' from input device list to avoid loop conditions
+
+* 0.1-beta (15-Apr-2021)
+    * Inital Release
+    * Basic hard coded mapping of BU0836 buttons 11 and 12 to vJoy device 1 buttons 1 and 2
+    * vJoy DLL bundled into exe
+    * Console window displays to show debug info
+
 
 # Credits
 * pyvjoy - https://github.com/tidzo/pyvjoy

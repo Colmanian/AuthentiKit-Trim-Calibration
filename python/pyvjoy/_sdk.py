@@ -90,9 +90,6 @@ def SetAxis(AxisValue,rID,AxisID):
 	else:
 		return True
 
-
-
-
 def SetDiscPov(PovValue, rID, PovID):
 	"""Write Value to a given discrete POV defined in the specified VDJ"""
 	if PovValue < -1 or PovValue > 3:
@@ -113,17 +110,6 @@ def SetContPov(PovValue, rID, PovID):
 		raise vJoyInvalidPovIDException
 
 	return _vj.SetContPov(PovValue,rID,PovID)
-
-
-
-def SetBtn(state,rID,buttonID):
-	"""Sets the state of vJoy Button to on or off.  SetBtn(state,rID,buttonID)"""
-	result = _vj.SetBtn(state,rID,buttonID)
-	if result == 0:
-		raise vJoyButtonError()
-	else:
-		return True
-
 
 def ResetVJD(rID):
 	"""Reset all axes and buttons to default for specified vJoy Device"""
