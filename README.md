@@ -40,17 +40,9 @@ Windows Desktop Application to calbirate button-based Trim Wheels for use in Mic
     * Console window displays to show debug info
 
 # Development & Build
-Running an exe you've downloaded of the internet can be understandably uncomfortable. If you'd like to build it from scratch yourself, you can, all the source code is provided. Just follow these steps. You'll need to be comfortable in Python to do so.
+This application is written in .NET CORE's WinUI framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
 
-The project requires the `vJoyInterface.dll` to be copied across to project directory from your vJoy install directory to this project's `python\pyvjoy` directory. To install and run:
-* `pip install -r requirements.txt`
-* `python python/app.py`
-
-Build using PyInstaller which requires you to have copied vJoyInterface.dll as above. Note the `\` and `/` might be diferent for you depending on what type of terminal you're using. 
-
-`pyinstaller.exe --onefile --icon=images/icon.ico --add-binary='python\pyvjoy\vJoyInterface.dll:.' --name='AuthentiKit Trim Calibration' python/app.py`
-
-Your newly built `.exe` file will be overwrite the one in the `dist/` directory.
+To develop and build, open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
 # Credits
 * vJoy - https://sourceforge.net/projects/vjoystick/
