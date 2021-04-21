@@ -1,0 +1,746 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows10.0.19041": {
+      "Microsoft.ProjectReunion/0.5.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ProjectReunion.DWrite": "[0.5.5]",
+          "Microsoft.ProjectReunion.Foundation": "[0.5.5]",
+          "Microsoft.ProjectReunion.WinUI": "[0.5.5]"
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.props": {},
+          "build/Microsoft.ProjectReunion.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.DWrite/0.5.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ProjectReunion.DWrite.props": {},
+          "build/Microsoft.ProjectReunion.DWrite.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.Foundation/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.Foundation.props": {},
+          "build/Microsoft.ProjectReunion.Foundation.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.WinUI/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "build": {
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.props": {},
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.targets": {}
+        }
+      },
+      "Microsoft.UI.Xaml/2.5.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/1.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/WinRT.Host.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/WinRT.Host.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      }
+    },
+    "net5.0-windows10.0.19041/win10-arm64": {
+      "Microsoft.ProjectReunion/0.5.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ProjectReunion.DWrite": "[0.5.5]",
+          "Microsoft.ProjectReunion.Foundation": "[0.5.5]",
+          "Microsoft.ProjectReunion.WinUI": "[0.5.5]"
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.props": {},
+          "build/Microsoft.ProjectReunion.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.DWrite/0.5.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ProjectReunion.DWrite.props": {},
+          "build/Microsoft.ProjectReunion.DWrite.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.Foundation/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.Foundation.props": {},
+          "build/Microsoft.ProjectReunion.Foundation.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.WinUI/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "build": {
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.props": {},
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.targets": {}
+        }
+      },
+      "Microsoft.UI.Xaml/2.5.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/1.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      }
+    },
+    "net5.0-windows10.0.19041/win10-x64": {
+      "Microsoft.ProjectReunion/0.5.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ProjectReunion.DWrite": "[0.5.5]",
+          "Microsoft.ProjectReunion.Foundation": "[0.5.5]",
+          "Microsoft.ProjectReunion.WinUI": "[0.5.5]"
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.props": {},
+          "build/Microsoft.ProjectReunion.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.DWrite/0.5.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ProjectReunion.DWrite.props": {},
+          "build/Microsoft.ProjectReunion.DWrite.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.Foundation/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.Foundation.props": {},
+          "build/Microsoft.ProjectReunion.Foundation.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.WinUI/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "build": {
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.props": {},
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.targets": {}
+        }
+      },
+      "Microsoft.UI.Xaml/2.5.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/1.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/WinRT.Host.dll": {}
+        },
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      }
+    },
+    "net5.0-windows10.0.19041/win10-x86": {
+      "Microsoft.ProjectReunion/0.5.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ProjectReunion.DWrite": "[0.5.5]",
+          "Microsoft.ProjectReunion.Foundation": "[0.5.5]",
+          "Microsoft.ProjectReunion.WinUI": "[0.5.5]"
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.props": {},
+          "build/Microsoft.ProjectReunion.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.DWrite/0.5.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ProjectReunion.DWrite.props": {},
+          "build/Microsoft.ProjectReunion.DWrite.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.Foundation/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {}
+        },
+        "build": {
+          "build/Microsoft.ProjectReunion.Foundation.props": {},
+          "build/Microsoft.ProjectReunion.Foundation.targets": {}
+        }
+      },
+      "Microsoft.ProjectReunion.WinUI/0.5.5": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {}
+        },
+        "build": {
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.props": {},
+          "buildTransitive/Microsoft.ProjectReunion.WinUI.targets": {}
+        }
+      },
+      "Microsoft.UI.Xaml/2.5.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/1.2.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {},
+          "lib/net5.0/WinRT.Runtime.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/WinRT.Host.dll": {}
+        },
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.ProjectReunion/0.5.5": {
+      "sha512": "fVW24zWvoHIbdhFhz5s0EB+wT949TlFPWDQf/8BkpQQzYtMQN0r+ti+cMG+TKIvedjUq3b+BSPezv3D4IUbbjA==",
+      "type": "package",
+      "path": "microsoft.projectreunion/0.5.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ProjectReunion.AppXReference.props",
+        "build/Microsoft.ProjectReunion.Metapackage.props",
+        "build/Microsoft.ProjectReunion.Package.props",
+        "build/Microsoft.ProjectReunion.props",
+        "build/Microsoft.ProjectReunion.targets",
+        "build/Microsoft.Xaml.Tooling.targets",
+        "build/MicrosoftProjectReunionFoundationAppXVersion.props",
+        "build/native/Microsoft.ProjectReunion.props",
+        "license.txt",
+        "microsoft.projectreunion.0.5.5.nupkg.sha512",
+        "microsoft.projectreunion.nuspec",
+        "tools/AppX/win10-arm64/Microsoft.ProjectReunion.0.5.appx",
+        "tools/AppX/win10-x64/Microsoft.ProjectReunion.0.5.appx",
+        "tools/AppX/win10-x86/Microsoft.ProjectReunion.0.5.appx"
+      ]
+    },
+    "Microsoft.ProjectReunion.DWrite/0.5.5": {
+      "sha512": "kwK3x1EIxlOnGvj+Kpn4n7DVvaKzUqV3MmUmpmuD2u/p3AixxU9E0ZTvWswoxT/eCZKO7t4vX23/ozQIWxMcTg==",
+      "type": "package",
+      "path": "microsoft.projectreunion.dwrite/0.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.ProjectReunion.DWrite.ProjectCapabilities.props",
+        "build/Microsoft.ProjectReunion.DWrite.props",
+        "build/Microsoft.ProjectReunion.DWrite.targets",
+        "lib/native/include/dwrite.h",
+        "lib/native/include/dwrite_1.h",
+        "lib/native/include/dwrite_2.h",
+        "lib/native/include/dwrite_3.h",
+        "lib/native/include/dwrite_core.h",
+        "lib/native/windows/arm64/release/DWriteCore.lib",
+        "lib/native/windows/x64/release/DWriteCore.lib",
+        "lib/native/windows/x86/release/DWriteCore.lib",
+        "license.txt",
+        "microsoft.projectreunion.dwrite.0.5.5.nupkg.sha512",
+        "microsoft.projectreunion.dwrite.nuspec"
+      ]
+    },
+    "Microsoft.ProjectReunion.Foundation/0.5.5": {
+      "sha512": "AEVYc35vGbESFlfB6xif5cL3KK9pNG3yxghlzRGLVxlMxHWjk24V16YzJCsAC49RAsDik1+qiNVd7IGVTH/gYg==",
+      "type": "package",
+      "path": "microsoft.projectreunion.foundation/0.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/Microsoft.ApplicationModel.Resources.PriGen.targets",
+        "build/Microsoft.ApplicationModel.Resources.References.targets",
+        "build/Microsoft.ApplicationModel.Resources.targets",
+        "build/Microsoft.ProjectReunion.Foundation.props",
+        "build/Microsoft.ProjectReunion.Foundation.targets",
+        "build/Microsoft.ProjectReunion.Package.props",
+        "build/README.md",
+        "build/native/Microsoft.ApplicationModel.Resources.C.props",
+        "build/native/Microsoft.ApplicationModel.Resources.WinRt.props",
+        "build/native/Microsoft.ApplicationModel.Resources.props",
+        "build/native/Microsoft.ApplicationModel.Resources.targets",
+        "build/native/Microsoft.ProjectReunion.Foundation.props",
+        "build/native/Microsoft.ProjectReunion.Foundation.targets",
+        "include/MRM.h",
+        "lib/native/Microsoft.ApplicationModel.Resources.winmd",
+        "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll",
+        "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.pdb",
+        "lib/uap10.0/Microsoft.ApplicationModel.Resources/Microsoft.ApplicationModel.Resources.winmd",
+        "lib/uap10.0/Microsoft.ProjectReunion.winmd",
+        "lib/win10-arm64/MRM.lib",
+        "lib/win10-arm64/Microsoft.ProjectReunion.lib",
+        "lib/win10-x64/MRM.lib",
+        "lib/win10-x64/Microsoft.ProjectReunion.lib",
+        "lib/win10-x86/MRM.lib",
+        "lib/win10-x86/Microsoft.ProjectReunion.lib",
+        "microsoft.projectreunion.foundation.0.5.5.nupkg.sha512",
+        "microsoft.projectreunion.foundation.nuspec"
+      ]
+    },
+    "Microsoft.ProjectReunion.WinUI/0.5.5": {
+      "sha512": "5ZZbO6BfK2AByuShDpGRqJP9iA1FuLryzDovkYqWysjBjTVweCt4hIvcSC862lFNT5P5y0Q4jWLdswTnJv6nIA==",
+      "type": "package",
+      "path": "microsoft.projectreunion.winui/0.5.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppxManifest.xml",
+        "build/AppDevPackageScripts/Add-AppDevPackage.ps1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Install.ps1",
+        "build/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
+        "build/DefaultWin32Manifests/default.manifest",
+        "build/DefaultWin32Manifests/dpiaware-permonv2.manifest",
+        "build/DefaultWin32Manifests/dpiaware-system.manifest",
+        "build/Microsoft.Build.Msix.Common.props",
+        "build/Microsoft.Build.Msix.Cpp.props",
+        "build/Microsoft.Build.Msix.Cpp.targets",
+        "build/Microsoft.Build.Msix.DesignTime.targets",
+        "build/Microsoft.Build.Msix.Packaging.targets",
+        "build/Microsoft.Build.Msix.Pri.targets",
+        "build/Microsoft.Build.Msix.ReunionManifest.targets",
+        "build/Microsoft.Build.Msix.props",
+        "build/Microsoft.Build.Msix.targets",
+        "build/Microsoft.ProjectReunion.Foundation.targets",
+        "build/Microsoft.ProjectReunion.Package.props",
+        "build/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "build/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "build/Microsoft.ProjectReunion.WinUI.props",
+        "build/Microsoft.ProjectReunion.WinUI.targets",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.props",
+        "build/Microsoft.UI.Xaml.Markup.Compiler.targets",
+        "build/Microsoft.WinUI.AppX.targets",
+        "build/Microsoft.WinUI.NET.Markup.Compiler.targets",
+        "build/Microsoft.WinUI.ProjectCapabilities.props",
+        "build/Microsoft.WinUI.References.targets",
+        "build/Microsoft.WinUI.props",
+        "build/Microsoft.WinUI.targets",
+        "build/native/LiftedWinRTClassRegistrations.xml",
+        "build/native/LiftedWinRTClassRegistrationsUnpackaged.xml",
+        "build/native/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "build/native/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "build/native/Microsoft.ProjectReunion.WinUI.props",
+        "build/native/Microsoft.ProjectReunion.WinUI.targets",
+        "build/native/Microsoft.WinUI.References.targets",
+        "build/native/Microsoft.WinUI.props",
+        "build/native/Microsoft.WinUI.targets",
+        "build/update-project-capability-version.targets",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.ps1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
+        "buildTransitive/AppDevPackageScripts/Install.ps1",
+        "buildTransitive/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
+        "buildTransitive/DefaultWin32Manifests/default.manifest",
+        "buildTransitive/DefaultWin32Manifests/dpiaware-permonv2.manifest",
+        "buildTransitive/DefaultWin32Manifests/dpiaware-system.manifest",
+        "buildTransitive/Microsoft.Build.Msix.Common.props",
+        "buildTransitive/Microsoft.Build.Msix.Cpp.props",
+        "buildTransitive/Microsoft.Build.Msix.Cpp.targets",
+        "buildTransitive/Microsoft.Build.Msix.DesignTime.targets",
+        "buildTransitive/Microsoft.Build.Msix.Packaging.targets",
+        "buildTransitive/Microsoft.Build.Msix.Pri.targets",
+        "buildTransitive/Microsoft.Build.Msix.ReunionManifest.targets",
+        "buildTransitive/Microsoft.Build.Msix.props",
+        "buildTransitive/Microsoft.Build.Msix.targets",
+        "buildTransitive/Microsoft.ProjectReunion.Foundation.targets",
+        "buildTransitive/Microsoft.ProjectReunion.Package.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.props",
+        "buildTransitive/Microsoft.ProjectReunion.WinUI.targets",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.interop.targets",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.props",
+        "buildTransitive/Microsoft.UI.Xaml.Markup.Compiler.targets",
+        "buildTransitive/Microsoft.WinUI.AppX.targets",
+        "buildTransitive/Microsoft.WinUI.NET.Markup.Compiler.targets",
+        "buildTransitive/Microsoft.WinUI.ProjectCapabilities.props",
+        "buildTransitive/Microsoft.WinUI.References.targets",
+        "buildTransitive/Microsoft.WinUI.props",
+        "buildTransitive/Microsoft.WinUI.targets",
+        "buildTransitive/native/LiftedWinRTClassRegistrations.xml",
+        "buildTransitive/native/LiftedWinRTClassRegistrationsUnpackaged.xml",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.TransportPackage.props",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.TransportPackage.targets",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.props",
+        "buildTransitive/native/Microsoft.ProjectReunion.WinUI.targets",
+        "buildTransitive/native/Microsoft.WinUI.References.targets",
+        "buildTransitive/native/Microsoft.WinUI.props",
+        "buildTransitive/native/Microsoft.WinUI.targets",
+        "buildTransitive/update-project-capability-version.targets",
+        "include/Microsoft.Graphics.Interop.h",
+        "include/Microsoft.System.DispatcherQueue.Interop.h",
+        "include/Microsoft.UI.Composition.Interop.h",
+        "include/microsoft.ui.xaml.hosting.desktopwindowxamlsource.h",
+        "include/microsoft.ui.xaml.hosting.desktopwindowxamlsource.idl",
+        "include/microsoft.ui.xaml.hosting.referencetracker.h",
+        "include/microsoft.ui.xaml.hosting.referencetracker.idl",
+        "include/microsoft.ui.xaml.media.dxinterop.h",
+        "include/microsoft.ui.xaml.media.dxinterop.idl",
+        "include/microsoft.ui.xaml.window.h",
+        "include/microsoft.ui.xaml.window.idl",
+        "include/microsoft.ui.xaml.xamlroot.h",
+        "include/microsoft.ui.xaml.xamlroot.idl",
+        "include/winrtdirect3d11.h",
+        "include/winrtdirectxcommon.h",
+        "include/xamlom.h",
+        "include/xamlom.idl",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.xml",
+        "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI/Themes/generic.xaml",
+        "lib/uap10.0/Microsoft.Foundation.winmd",
+        "lib/uap10.0/Microsoft.Graphics.winmd",
+        "lib/uap10.0/Microsoft.System.winmd",
+        "lib/uap10.0/Microsoft.System.xml",
+        "lib/uap10.0/Microsoft.UI.Text.winmd",
+        "lib/uap10.0/Microsoft.UI.winmd",
+        "lib/uap10.0/Microsoft.UI.xml",
+        "lib/uap10.0/Microsoft.UI/Themes/generic.xaml",
+        "lib/uap10.0/Microsoft.Web.WebView2.Core.winmd",
+        "license.txt",
+        "microsoft.projectreunion.winui.0.5.5.nupkg.sha512",
+        "microsoft.projectreunion.winui.nuspec",
+        "tools/Microsoft.Build.Framework.dll",
+        "tools/Microsoft.Build.Msix.dll",
+        "tools/Microsoft.Build.Utilities.Core.dll",
+        "tools/Microsoft.Diagnostics.Tracing.EventSource.dll",
+        "tools/Microsoft.UI.Xaml.Markup.Compiler.MSBuildInterop.dll",
+        "tools/Microsoft.UI.Xaml.Markup.Compiler.dll",
+        "tools/Microsoft.VisualStudio.RemoteControl.dll",
+        "tools/Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
+        "tools/Microsoft.VisualStudio.Telemetry.dll",
+        "tools/Microsoft.VisualStudio.Utilities.Internal.dll",
+        "tools/arm64/GenXbf.dll",
+        "tools/x64/GenXbf.dll",
+        "tools/x86/GenXbf.dll"
+      ]
+    },
+    "Microsoft.UI.Xaml/2.5.0": {
+      "sha512": "fI2rIvTd9G+2cADLucgHwvauPOfnfDmNtbebq0+Hk9VhZlT9UZcNyrKIJWQEReGL4DAEhNRMwImHJSV+y0mu4A==",
+      "type": "package",
+      "path": "microsoft.ui.xaml/2.5.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Common.targets",
+        "build/Microsoft.UI.Xaml.props",
+        "build/MicrosoftUIXamlVersion.props",
+        "build/native/Microsoft.UI.Xaml.targets",
+        "buildTransitive/Common.targets",
+        "buildTransitive/Microsoft.UI.Xaml.props",
+        "buildTransitive/MicrosoftUIXamlVersion.props",
+        "lib/uap10.0/Design/Microsoft.UI.Xaml.Design.dll",
+        "lib/uap10.0/Microsoft.UI.Xaml.pri",
+        "lib/uap10.0/Microsoft.UI.Xaml.winmd",
+        "lib/uap10.0/Microsoft.UI.Xaml.xml",
+        "lib/uap10.0/Microsoft.UI.Xaml/Themes/Generic.xaml",
+        "license.txt",
+        "microsoft.ui.xaml.2.5.0.nupkg.sha512",
+        "microsoft.ui.xaml.nuspec",
+        "readme.txt",
+        "tools/AppX/arm/Release/Microsoft.UI.Xaml.2.5.appx",
+        "tools/AppX/arm64/Release/Microsoft.UI.Xaml.2.5.appx",
+        "tools/AppX/x64/Release/Microsoft.UI.Xaml.2.5.appx",
+        "tools/AppX/x86/Release/Microsoft.UI.Xaml.2.5.appx",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Microsoft.Windows.CsWinRT/1.2.4": {
+      "sha512": "1s4ylMF4y/+2zyF95jqZHTaAoEeTxIU1fygoxhOTA3dC2+4kFZCYhv3dfK4j0TNNDn6p/nazS4andihkWtRSCg==",
+      "type": "package",
+      "path": "microsoft.windows.cswinrt/1.2.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/cs/WinRT.SourceGenerator.dll",
+        "build/Microsoft.Windows.CsWinRT.Authoring.Transitive.targets",
+        "build/Microsoft.Windows.CsWinRT.Authoring.targets",
+        "build/Microsoft.Windows.CsWinRT.props",
+        "build/Microsoft.Windows.CsWinRT.targets",
+        "buildTransitive/Microsoft.Windows.CsWinRT.Authoring.Transitive.targets",
+        "cswinrt.exe",
+        "lib/net5.0/WinRT.Host.Shim.dll",
+        "lib/net5.0/WinRT.Runtime.dll",
+        "microsoft.windows.cswinrt.1.2.4.nupkg.sha512",
+        "microsoft.windows.cswinrt.nuspec",
+        "readme.txt",
+        "runtimes/win-x64/native/WinRT.Host.dll",
+        "runtimes/win-x86/native/WinRT.Host.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows10.0.19041": [
+      "Microsoft.ProjectReunion >= 0.5.5",
+      "Microsoft.ProjectReunion.Foundation >= 0.5.5",
+      "Microsoft.ProjectReunion.WinUI >= 0.5.5",
+      "Microsoft.UI.Xaml >= 2.5.0",
+      "Microsoft.Windows.CsWinRT >= 1.2.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\colma\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.csproj",
+      "projectName": "AuthentiKitTrimCalibration",
+      "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.csproj",
+      "packagesPath": "C:\\Users\\colma\\.nuget\\packages\\",
+      "outputPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\colma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows10.0.19041"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows10.0.19041": {
+          "targetAlias": "net5.0-windows10.0.19041.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows10.0.19041": {
+        "targetAlias": "net5.0-windows10.0.19041.0",
+        "dependencies": {
+          "Microsoft.ProjectReunion": {
+            "target": "Package",
+            "version": "[0.5.5, )"
+          },
+          "Microsoft.ProjectReunion.Foundation": {
+            "target": "Package",
+            "version": "[0.5.5, )"
+          },
+          "Microsoft.ProjectReunion.WinUI": {
+            "target": "Package",
+            "version": "[0.5.5, )"
+          },
+          "Microsoft.UI.Xaml": {
+            "target": "Package",
+            "version": "[2.5.0, )"
+          },
+          "Microsoft.Windows.CsWinRT": {
+            "target": "Package",
+            "version": "[1.2.4, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-arm64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-arm64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Runtime.win-x86",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.Windows.SDK.NET.Ref",
+            "version": "[10.0.19041.15, 10.0.19041.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+            "version": "[5.0.5, 5.0.5]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
+            "version": "[5.0.5, 5.0.5]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.Windows.SDK.NET.Ref": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win10-arm64": {
+        "#import": []
+      },
+      "win10-x64": {
+        "#import": []
+      },
+      "win10-x86": {
+        "#import": []
+      }
+    }
+  }
+}

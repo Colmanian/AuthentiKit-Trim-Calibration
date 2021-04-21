@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "G8UV5S6p6G14S2E+O6Gsu4zxFokNjEavS9PUWcezPvPYR0PwTpCxy0FZvClOGrti6NGg0H0ojxNJunLgRbKO7A==",
+  "success": true,
+  "projectFilePath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration (Package)\\AuthentiKitTrimCalibration (Package).wapproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\colma\\.nuget\\packages\\microsoft.projectreunion\\0.5.5\\microsoft.projectreunion.0.5.5.nupkg.sha512",
+    "C:\\Users\\colma\\.nuget\\packages\\microsoft.projectreunion.dwrite\\0.5.5\\microsoft.projectreunion.dwrite.0.5.5.nupkg.sha512",
+    "C:\\Users\\colma\\.nuget\\packages\\microsoft.projectreunion.foundation\\0.5.5\\microsoft.projectreunion.foundation.0.5.5.nupkg.sha512",
+    "C:\\Users\\colma\\.nuget\\packages\\microsoft.projectreunion.winui\\0.5.5\\microsoft.projectreunion.winui.0.5.5.nupkg.sha512"
+  ],
+  "logs": []
+}

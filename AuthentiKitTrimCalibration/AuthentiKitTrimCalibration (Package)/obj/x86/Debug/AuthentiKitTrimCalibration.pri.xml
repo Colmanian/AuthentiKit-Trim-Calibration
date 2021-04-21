@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="AuthentiKitTrimCalibration" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://AuthentiKitTrimCalibration/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainWindow.xbf" uri="ms-resource://AuthentiKitTrimCalibration/Files/MainWindow.xbf">
+				<Candidate type="Path">
+					<Value>MainWindow.xbf</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

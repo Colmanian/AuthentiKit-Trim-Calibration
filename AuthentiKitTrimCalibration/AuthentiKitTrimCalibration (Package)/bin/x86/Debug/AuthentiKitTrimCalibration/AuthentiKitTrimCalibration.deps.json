@@ -1,0 +1,119 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "AuthentiKitTrimCalibration/1.0.0": {
+        "dependencies": {
+          "Microsoft.ProjectReunion": "0.5.5",
+          "Microsoft.ProjectReunion.Foundation": "0.5.5",
+          "Microsoft.ProjectReunion.WinUI": "0.5.5",
+          "Microsoft.UI.Xaml": "2.5.0",
+          "Microsoft.Windows.CsWinRT": "1.2.4",
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.15"
+        },
+        "runtime": {
+          "AuthentiKitTrimCalibration.dll": {}
+        }
+      },
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.15": {
+        "runtime": {
+          "Microsoft.Windows.SDK.NET.dll": {
+            "assemblyVersion": "10.0.19041.10",
+            "fileVersion": "10.0.19041.15"
+          }
+        }
+      },
+      "Microsoft.ProjectReunion/0.5.5": {
+        "dependencies": {
+          "Microsoft.ProjectReunion.DWrite": "0.5.5",
+          "Microsoft.ProjectReunion.Foundation": "0.5.5",
+          "Microsoft.ProjectReunion.WinUI": "0.5.5"
+        }
+      },
+      "Microsoft.ProjectReunion.DWrite/0.5.5": {},
+      "Microsoft.ProjectReunion.Foundation/0.5.5": {
+        "runtime": {
+          "lib/net5.0-windows/Microsoft.ApplicationModel.Resources.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.ProjectReunion.WinUI/0.5.5": {
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.2104"
+          }
+        }
+      },
+      "Microsoft.UI.Xaml/2.5.0": {},
+      "Microsoft.Windows.CsWinRT/1.2.4": {
+        "runtime": {
+          "lib/net5.0/WinRT.Runtime.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.4.35101"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AuthentiKitTrimCalibration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.15": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.ProjectReunion/0.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fVW24zWvoHIbdhFhz5s0EB+wT949TlFPWDQf/8BkpQQzYtMQN0r+ti+cMG+TKIvedjUq3b+BSPezv3D4IUbbjA==",
+      "path": "microsoft.projectreunion/0.5.5",
+      "hashPath": "microsoft.projectreunion.0.5.5.nupkg.sha512"
+    },
+    "Microsoft.ProjectReunion.DWrite/0.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kwK3x1EIxlOnGvj+Kpn4n7DVvaKzUqV3MmUmpmuD2u/p3AixxU9E0ZTvWswoxT/eCZKO7t4vX23/ozQIWxMcTg==",
+      "path": "microsoft.projectreunion.dwrite/0.5.5",
+      "hashPath": "microsoft.projectreunion.dwrite.0.5.5.nupkg.sha512"
+    },
+    "Microsoft.ProjectReunion.Foundation/0.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AEVYc35vGbESFlfB6xif5cL3KK9pNG3yxghlzRGLVxlMxHWjk24V16YzJCsAC49RAsDik1+qiNVd7IGVTH/gYg==",
+      "path": "microsoft.projectreunion.foundation/0.5.5",
+      "hashPath": "microsoft.projectreunion.foundation.0.5.5.nupkg.sha512"
+    },
+    "Microsoft.ProjectReunion.WinUI/0.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ZZbO6BfK2AByuShDpGRqJP9iA1FuLryzDovkYqWysjBjTVweCt4hIvcSC862lFNT5P5y0Q4jWLdswTnJv6nIA==",
+      "path": "microsoft.projectreunion.winui/0.5.5",
+      "hashPath": "microsoft.projectreunion.winui.0.5.5.nupkg.sha512"
+    },
+    "Microsoft.UI.Xaml/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fI2rIvTd9G+2cADLucgHwvauPOfnfDmNtbebq0+Hk9VhZlT9UZcNyrKIJWQEReGL4DAEhNRMwImHJSV+y0mu4A==",
+      "path": "microsoft.ui.xaml/2.5.0",
+      "hashPath": "microsoft.ui.xaml.2.5.0.nupkg.sha512"
+    },
+    "Microsoft.Windows.CsWinRT/1.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1s4ylMF4y/+2zyF95jqZHTaAoEeTxIU1fygoxhOTA3dC2+4kFZCYhv3dfK4j0TNNDn6p/nazS4andihkWtRSCg==",
+      "path": "microsoft.windows.cswinrt/1.2.4",
+      "hashPath": "microsoft.windows.cswinrt.1.2.4.nupkg.sha512"
+    }
+  }
+}

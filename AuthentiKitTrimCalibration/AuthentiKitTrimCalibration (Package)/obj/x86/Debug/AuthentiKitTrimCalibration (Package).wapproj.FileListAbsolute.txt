@@ -1,0 +1,39 @@
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\App.xbf
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\MainWindow.xbf
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.deps.json
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.exe
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.runtimeconfig.json
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.pdb
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\Microsoft.Windows.SDK.NET.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\Microsoft.ApplicationModel.Resources.Projection.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\Microsoft.WinUI.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\WinRT.Runtime.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\Microsoft.Internal.FrameworkUdk.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\Microsoft.ui.xaml.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\resources.pri
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AppxManifest.xml
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration (Package).build.appxrecipe
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\Microsoft.Internal.FrameworkUdk.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\Microsoft.ui.xaml.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration (Package).wapprojAssemblyReference.cache
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration (Package).wapproj.CoreCompileInputs.cache
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration (Package).wapproj.CopyComplete
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration.pri.xml
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\priconfig.xml
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\priconfig.xml.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\unfiltered.layout.resfiles
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\unfiltered.layout.resfiles.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\filtered.layout.resfiles
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\filtered.layout.resfiles.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\excluded.layout.resfiles
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\excluded.layout.resfiles.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\resources.resfiles
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\resources.resfiles.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\pri.resfiles
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\pri.resfiles.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\qualifiers.txt
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\qualifiers.txt.intermediate
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\ProjectArchitectures.txt
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration (Package).wapproj.LastBuild.txt

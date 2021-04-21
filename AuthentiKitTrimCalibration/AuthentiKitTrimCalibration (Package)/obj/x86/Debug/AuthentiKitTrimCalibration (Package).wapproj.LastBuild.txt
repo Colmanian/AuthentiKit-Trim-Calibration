@@ -1,0 +1,24 @@
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AppxContent\Microsoft.Internal.FrameworkUdk.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AppxContent\Microsoft.ui.xaml.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\App.xbf
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\MainWindow.xbf
+C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\Redist\Debug\x86\ucrtbased.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\SplashScreen.scale-200.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\LockScreenLogo.scale-200.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\Square150x150Logo.scale-200.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\Square44x44Logo.scale-200.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\Square44x44Logo.targetsize-24_altform-unplated.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\StoreLogo.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\Images\Wide310x150Logo.scale-200.png
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\resources.pri
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\Msix\AuthentiKitTrimCalibration.deps.json
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\apphost.exe
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.runtimeconfig.json
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.pdb
+C:\Users\colma\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.15\lib\Microsoft.Windows.SDK.NET.dll
+C:\Users\colma\.nuget\packages\microsoft.projectreunion.foundation\0.5.5\lib\net5.0-windows\Microsoft.ApplicationModel.Resources.Projection.dll
+C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\net5.0-windows10.0.18362.0\Microsoft.WinUI.dll
+C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.Internal.FrameworkUdk.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.ui.xaml.dll

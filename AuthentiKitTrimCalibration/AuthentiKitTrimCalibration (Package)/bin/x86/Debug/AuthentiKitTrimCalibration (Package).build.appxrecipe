@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-UCFBHU2</Machine>
+    <WindowsUser>colma</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>9c708f24-5f45-4b1d-acf8-0c7b41c5eb43</PackageIdentityName>
+    <PackageIdentityPublisher>CN=colma</PackageIdentityPublisher>
+    <IntermediateOutputPath>E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\obj\x86\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\AppxContent\Microsoft.Internal.FrameworkUdk.dll">
+      <PackagePath>Microsoft.Internal.FrameworkUdk.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\AppxContent\Microsoft.ui.xaml.dll">
+      <PackagePath>Microsoft.ui.xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\MainWindow.xbf">
+      <PackagePath>MainWindow.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\Redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\SplashScreen.scale-200.png">
+      <PackagePath>Images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\LockScreenLogo.scale-200.png">
+      <PackagePath>Images\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\Square150x150Logo.scale-200.png">
+      <PackagePath>Images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\Square44x44Logo.scale-200.png">
+      <PackagePath>Images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\StoreLogo.png">
+      <PackagePath>Images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\Images\Wide310x150Logo.scale-200.png">
+      <PackagePath>Images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\Msix\AuthentiKitTrimCalibration.deps.json">
+      <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\apphost.exe">
+      <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.dll">
+      <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.runtimeconfig.json">
+      <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.runtimeconfig.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.15\lib\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>AuthentiKitTrimCalibration\Microsoft.Windows.SDK.NET.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion.foundation\0.5.5\lib\net5.0-windows\Microsoft.ApplicationModel.Resources.Projection.dll">
+      <PackagePath>AuthentiKitTrimCalibration\Microsoft.ApplicationModel.Resources.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\net5.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+      <PackagePath>AuthentiKitTrimCalibration\Microsoft.WinUI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll">
+      <PackagePath>AuthentiKitTrimCalibration\WinRT.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.Internal.FrameworkUdk.dll">
+      <PackagePath>AuthentiKitTrimCalibration\Microsoft.Internal.FrameworkUdk.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.ui.xaml.dll">
+      <PackagePath>AuthentiKitTrimCalibration\Microsoft.ui.xaml.dll</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x86\Microsoft.ProjectReunion.0.5.appx">
+      <Name>Microsoft.ProjectReunion.0.5</Name>
+      <Version>0.52104.15000.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.ProjectReunion.0.5, MinVersion = 0.52104.15000.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x86\Microsoft.ProjectReunion.0.5.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x86\Microsoft.ProjectReunion.0.5.appx">
+      <Name>Microsoft.ProjectReunion.0.5</Name>
+      <Version>0.52104.15000.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.ProjectReunion.0.5, MinVersion = 0.52104.15000.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x86\Microsoft.ProjectReunion.0.5.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x64\Microsoft.ProjectReunion.0.5.appx">
+      <Name>Microsoft.ProjectReunion.0.5</Name>
+      <Version>0.52104.15000.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.ProjectReunion.0.5, MinVersion = 0.52104.15000.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-x64\Microsoft.ProjectReunion.0.5.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-arm64\Microsoft.ProjectReunion.0.5.appx">
+      <Name>Microsoft.ProjectReunion.0.5</Name>
+      <Version>0.52104.15000.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.ProjectReunion.0.5, MinVersion = 0.52104.15000.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\colma\.nuget\packages\microsoft.projectreunion\0.5.5\build\..\tools\AppX\win10-arm64\Microsoft.ProjectReunion.0.5.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\arm\Microsoft.VCLibs.arm.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug.UWPDesktop</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug.UWPDesktop, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs.Desktop\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.Desktop.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.29231.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.29231.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
