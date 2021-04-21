@@ -27,10 +27,5 @@ namespace AuthentiKitTrimCalibration
         {
             this.InitializeComponent();
         }
-
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "AuthentiKit";
-        }
     }
 }

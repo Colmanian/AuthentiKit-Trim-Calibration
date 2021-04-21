@@ -13,6 +13,13 @@
 					<Value>MainWindow.xbf</Value>
 				</Candidate>
 			</NamedResource>
+			<ResourceMapSubtree name="Images">
+				<NamedResource name="logo.jpg" uri="ms-resource://AuthentiKitTrimCalibration/Files/Images/logo.jpg">
+					<Candidate type="Path">
+						<Value>Images\logo.jpg</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
 		</ResourceMapSubtree>
 	</ResourceMap>
 </PriInfo>
