@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:AuthentiKitTrimCalibration"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:AuthentiKitTrimCalibration.Controls"
     mc:Ignorable="d">
 
     <Grid>
@@ -18,13 +18,8 @@
         </Grid.ColumnDefinitions>
     
         <!--Header-->
-        <Border Grid.ColumnSpan="2" Background="#F48A00">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Image Source="/Images/logo.jpg"  Height="90" Margin="20"/>
-                <TextBlock Text="  AuthentiKit Trim Calibration" FontSize="40" VerticalAlignment="Center" />
-            </StackPanel>
-        </Border>
-        
+        <controls:HeaderControl Grid.ColumnSpan="2" />
+
         <!--Navigation-->
         <Grid Grid.Row="1" Grid.Column="0">
             <Grid.RowDefinitions>

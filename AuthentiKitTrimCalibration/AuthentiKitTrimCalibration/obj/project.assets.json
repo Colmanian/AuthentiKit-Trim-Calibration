@@ -77,6 +77,29 @@
             "rid": "win-x86"
           }
         }
+      },
+      "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MappingManager.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        }
+      },
+      "MappingManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        }
       }
     },
     "net5.0-windows10.0.19041/win10-arm64": {
@@ -144,6 +167,29 @@
         "build": {
           "build/Microsoft.Windows.CsWinRT.props": {},
           "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      },
+      "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MappingManager.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        }
+      },
+      "MappingManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MappingManager.Common.dll": {}
         }
       }
     },
@@ -216,6 +262,29 @@
           "build/Microsoft.Windows.CsWinRT.props": {},
           "build/Microsoft.Windows.CsWinRT.targets": {}
         }
+      },
+      "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MappingManager.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        }
+      },
+      "MappingManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        }
       }
     },
     "net5.0-windows10.0.19041/win10-x86": {
@@ -286,6 +355,29 @@
         "build": {
           "build/Microsoft.Windows.CsWinRT.props": {},
           "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      },
+      "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "MappingManager.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AuthentiKitTrimCalibration.ViewModel.dll": {}
+        }
+      },
+      "MappingManager.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/MappingManager.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MappingManager.Common.dll": {}
         }
       }
     }
@@ -595,10 +687,22 @@
         "runtimes/win-x64/native/WinRT.Host.dll",
         "runtimes/win-x86/native/WinRT.Host.dll"
       ]
+    },
+    "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../AuthentiKitTrimCalibration.ViewModel/AuthentiKitTrimCalibration.ViewModel.csproj",
+      "msbuildProject": "../AuthentiKitTrimCalibration.ViewModel/AuthentiKitTrimCalibration.ViewModel.csproj"
+    },
+    "MappingManager.Common/1.0.0": {
+      "type": "project",
+      "path": "../Mapping.Common/MappingManager.Common.csproj",
+      "msbuildProject": "../Mapping.Common/MappingManager.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0-windows10.0.19041": [
+      "AuthentiKitTrimCalibration.ViewModel >= 1.0.0",
+      "MappingManager.Common >= 1.0.0",
       "Microsoft.ProjectReunion >= 0.5.5",
       "Microsoft.ProjectReunion.Foundation >= 0.5.5",
       "Microsoft.ProjectReunion.WinUI >= 0.5.5",
@@ -637,7 +741,14 @@
       "frameworks": {
         "net5.0-windows10.0.19041": {
           "targetAlias": "net5.0-windows10.0.19041.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.ViewModel\\AuthentiKitTrimCalibration.ViewModel.csproj": {
+              "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.ViewModel\\AuthentiKitTrimCalibration.ViewModel.csproj"
+            },
+            "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\Mapping.Common\\MappingManager.Common.csproj": {
+              "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\Mapping.Common\\MappingManager.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "AuthentiKitTrimCalibration/1.0.0": {
         "dependencies": {
+          "AuthentiKitTrimCalibration.ViewModel": "1.0.0",
+          "MappingManager.Common": "1.0.0",
           "Microsoft.ProjectReunion": "0.5.5",
           "Microsoft.ProjectReunion.Foundation": "0.5.5",
           "Microsoft.ProjectReunion.WinUI": "0.5.5",
@@ -58,6 +60,19 @@
             "assemblyVersion": "1.2.0.0",
             "fileVersion": "1.2.4.35101"
           }
+        }
+      },
+      "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+        "dependencies": {
+          "MappingManager.Common": "1.0.0"
+        },
+        "runtime": {
+          "AuthentiKitTrimCalibration.ViewModel.dll": {}
+        }
+      },
+      "MappingManager.Common/1.0.0": {
+        "runtime": {
+          "MappingManager.Common.dll": {}
         }
       }
     }
@@ -114,6 +129,16 @@
       "sha512": "sha512-1s4ylMF4y/+2zyF95jqZHTaAoEeTxIU1fygoxhOTA3dC2+4kFZCYhv3dfK4j0TNNDn6p/nazS4andihkWtRSCg==",
       "path": "microsoft.windows.cswinrt/1.2.4",
       "hashPath": "microsoft.windows.cswinrt.1.2.4.nupkg.sha512"
+    },
+    "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MappingManager.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

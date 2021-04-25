@@ -223,7 +223,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[155];
+            _typeNameTable = new string[157];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Application";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Microsoft.UI.Xaml.ResourceDictionary";
@@ -243,144 +243,146 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             _typeNameTable[16] = "Windows.UI.Core.CoreDispatcher";
             _typeNameTable[17] = "Microsoft.System.DispatcherQueue";
             _typeNameTable[18] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
-            _typeNameTable[19] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[20] = "Microsoft.UI.Xaml.UIElement";
-            _typeNameTable[21] = "Windows.Foundation.Rect";
-            _typeNameTable[22] = "Microsoft.UI.Composition.Compositor";
-            _typeNameTable[23] = "Windows.UI.Core.CoreWindow";
-            _typeNameTable[24] = "String";
-            _typeNameTable[25] = "Microsoft.UI.Xaml.Controls.Grid";
-            _typeNameTable[26] = "Microsoft.UI.Xaml.Controls.Panel";
-            _typeNameTable[27] = "Microsoft.UI.Xaml.FrameworkElement";
-            _typeNameTable[28] = "Microsoft.UI.Xaml.Controls.UIElementCollection";
-            _typeNameTable[29] = "System.Numerics.Vector3";
-            _typeNameTable[30] = "System.Numerics.Vector2";
-            _typeNameTable[31] = "Microsoft.UI.Xaml.Media.CacheMode";
-            _typeNameTable[32] = "Microsoft.UI.Xaml.Media.RectangleGeometry";
-            _typeNameTable[33] = "Microsoft.UI.Xaml.Media.Geometry";
-            _typeNameTable[34] = "Microsoft.UI.Xaml.Media.ElementCompositeMode";
-            _typeNameTable[35] = "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase";
-            _typeNameTable[36] = "Windows.Foundation.Size";
-            _typeNameTable[37] = "Microsoft.UI.Xaml.FocusState";
-            _typeNameTable[38] = "Microsoft.UI.Xaml.ElementHighContrastAdjustment";
-            _typeNameTable[39] = "Double";
-            _typeNameTable[40] = "Microsoft.UI.Xaml.Input.KeyTipPlacementMode";
-            _typeNameTable[41] = "Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode";
-            _typeNameTable[42] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>";
-            _typeNameTable[43] = "Microsoft.UI.Xaml.Input.KeyboardAccelerator";
-            _typeNameTable[44] = "Windows.System.VirtualKey";
-            _typeNameTable[45] = "Windows.System.VirtualKeyModifiers";
-            _typeNameTable[46] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>";
-            _typeNameTable[47] = "Microsoft.UI.Xaml.Media.XamlLight";
-            _typeNameTable[48] = "Microsoft.UI.Xaml.Input.ManipulationModes";
-            _typeNameTable[49] = "Microsoft.UI.Xaml.ScalarTransition";
-            _typeNameTable[50] = "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>";
-            _typeNameTable[51] = "Microsoft.UI.Xaml.Media.Projection";
-            _typeNameTable[52] = "Microsoft.UI.Xaml.Media.Transform";
-            _typeNameTable[53] = "Microsoft.UI.Xaml.Media.GeneralTransform";
-            _typeNameTable[54] = "Windows.Foundation.Point";
-            _typeNameTable[55] = "Single";
-            _typeNameTable[56] = "Microsoft.UI.Xaml.Vector3Transition";
-            _typeNameTable[57] = "Microsoft.UI.Xaml.Media.Shadow";
-            _typeNameTable[58] = "Microsoft.UI.Xaml.Input.KeyboardNavigationMode";
-            _typeNameTable[59] = "Microsoft.UI.Xaml.Media.Media3D.Transform3D";
-            _typeNameTable[60] = "System.Numerics.Matrix4x4";
-            _typeNameTable[61] = "Microsoft.UI.Xaml.Media.Animation.TransitionCollection";
-            _typeNameTable[62] = "Microsoft.UI.Xaml.Media.Animation.Transition";
-            _typeNameTable[63] = "Microsoft.UI.Xaml.Visibility";
-            _typeNameTable[64] = "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy";
-            _typeNameTable[65] = "Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode";
-            _typeNameTable[66] = "Microsoft.UI.Xaml.XamlRoot";
-            _typeNameTable[67] = "Microsoft.UI.Xaml.Controls.RowDefinitionCollection";
-            _typeNameTable[68] = "Microsoft.UI.Xaml.Controls.RowDefinition";
-            _typeNameTable[69] = "Microsoft.UI.Xaml.GridLength";
-            _typeNameTable[70] = "Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection";
-            _typeNameTable[71] = "Microsoft.UI.Xaml.Controls.ColumnDefinition";
-            _typeNameTable[72] = "Microsoft.UI.Xaml.Controls.BackgroundSizing";
-            _typeNameTable[73] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[74] = "Microsoft.UI.Xaml.Thickness";
-            _typeNameTable[75] = "Microsoft.UI.Xaml.CornerRadius";
-            _typeNameTable[76] = "Microsoft.UI.Xaml.BrushTransition";
-            _typeNameTable[77] = "Microsoft.UI.Xaml.ElementTheme";
-            _typeNameTable[78] = "Microsoft.UI.Xaml.FlowDirection";
-            _typeNameTable[79] = "Microsoft.UI.Xaml.HorizontalAlignment";
-            _typeNameTable[80] = "Microsoft.UI.Xaml.Style";
-            _typeNameTable[81] = "Microsoft.UI.Xaml.SetterBaseCollection";
-            _typeNameTable[82] = "Microsoft.UI.Xaml.SetterBase";
-            _typeNameTable[83] = "Microsoft.UI.Xaml.TriggerCollection";
-            _typeNameTable[84] = "Microsoft.UI.Xaml.TriggerBase";
-            _typeNameTable[85] = "Microsoft.UI.Xaml.VerticalAlignment";
-            _typeNameTable[86] = "Microsoft.UI.Xaml.Controls.Border";
-            _typeNameTable[87] = "Microsoft.UI.Xaml.Controls.TextBox";
-            _typeNameTable[88] = "Microsoft.UI.Xaml.Controls.Control";
-            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.CharacterCasing";
-            _typeNameTable[90] = "Microsoft.UI.Xaml.Controls.CandidateWindowAlignment";
-            _typeNameTable[91] = "Microsoft.UI.Xaml.DataTemplate";
-            _typeNameTable[92] = "Microsoft.UI.Xaml.FrameworkTemplate";
-            _typeNameTable[93] = "Microsoft.UI.Xaml.TextAlignment";
-            _typeNameTable[94] = "Microsoft.UI.Xaml.Input.InputScope";
-            _typeNameTable[95] = "Microsoft.UI.Xaml.Media.SolidColorBrush";
-            _typeNameTable[96] = "Windows.UI.Color";
-            _typeNameTable[97] = "Microsoft.UI.Xaml.TextReadingOrder";
-            _typeNameTable[98] = "Microsoft.UI.Xaml.TextWrapping";
-            _typeNameTable[99] = "Microsoft.UI.Xaml.ElementSoundMode";
-            _typeNameTable[100] = "Microsoft.UI.Xaml.Media.FontFamily";
-            _typeNameTable[101] = "Windows.UI.Text.FontStretch";
-            _typeNameTable[102] = "Windows.UI.Text.FontStyle";
-            _typeNameTable[103] = "Windows.UI.Text.FontWeight";
-            _typeNameTable[104] = "Microsoft.UI.Xaml.Controls.RequiresPointer";
-            _typeNameTable[105] = "Microsoft.UI.Xaml.Controls.ControlTemplate";
-            _typeNameTable[106] = "Microsoft.UI.Xaml.Controls.ComboBox";
-            _typeNameTable[107] = "Microsoft.UI.Xaml.Controls.Primitives.Selector";
-            _typeNameTable[108] = "Microsoft.UI.Xaml.Controls.ItemsControl";
-            _typeNameTable[109] = "Microsoft.UI.Xaml.Controls.ItemCollection";
-            _typeNameTable[110] = "Microsoft.UI.Xaml.Controls.LightDismissOverlayMode";
-            _typeNameTable[111] = "Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger";
-            _typeNameTable[112] = "Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings";
-            _typeNameTable[113] = "System.Nullable`1<Boolean>";
-            _typeNameTable[114] = "Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>";
-            _typeNameTable[115] = "Microsoft.UI.Xaml.Controls.GroupStyle";
-            _typeNameTable[116] = "Microsoft.UI.Xaml.Controls.StyleSelector";
-            _typeNameTable[117] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
-            _typeNameTable[118] = "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate";
-            _typeNameTable[119] = "Microsoft.UI.Xaml.Controls.GroupStyleSelector";
-            _typeNameTable[120] = "Microsoft.UI.Xaml.Controls.ItemContainerGenerator";
-            _typeNameTable[121] = "Microsoft.UI.Xaml.Controls.TextBlock";
-            _typeNameTable[122] = "Microsoft.UI.Xaml.Documents.InlineCollection";
-            _typeNameTable[123] = "Microsoft.UI.Xaml.Documents.Inline";
-            _typeNameTable[124] = "Microsoft.UI.Xaml.Documents.TextElement";
-            _typeNameTable[125] = "Microsoft.UI.Xaml.Documents.TextPointer";
-            _typeNameTable[126] = "Windows.UI.Text.TextDecorations";
-            _typeNameTable[127] = "Microsoft.UI.Xaml.LineStackingStrategy";
-            _typeNameTable[128] = "Microsoft.UI.Xaml.OpticalMarginAlignment";
-            _typeNameTable[129] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>";
-            _typeNameTable[130] = "Microsoft.UI.Xaml.Documents.TextHighlighter";
-            _typeNameTable[131] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>";
-            _typeNameTable[132] = "Microsoft.UI.Xaml.Documents.TextRange";
-            _typeNameTable[133] = "Microsoft.UI.Xaml.TextLineBounds";
-            _typeNameTable[134] = "Microsoft.UI.Xaml.TextTrimming";
-            _typeNameTable[135] = "Microsoft.UI.Xaml.Controls.StackPanel";
-            _typeNameTable[136] = "Microsoft.UI.Xaml.Controls.Orientation";
-            _typeNameTable[137] = "Microsoft.UI.Xaml.Controls.Button";
-            _typeNameTable[138] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
-            _typeNameTable[139] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[140] = "Microsoft.UI.Xaml.Controls.ClickMode";
-            _typeNameTable[141] = "System.Windows.Input.ICommand";
-            _typeNameTable[142] = "Microsoft.UI.Xaml.Controls.ListView";
-            _typeNameTable[143] = "Microsoft.UI.Xaml.Controls.ListViewBase";
-            _typeNameTable[144] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
-            _typeNameTable[145] = "Microsoft.UI.Xaml.Controls.ListViewReorderMode";
-            _typeNameTable[146] = "System.Collections.Generic.IList`1<Object>";
-            _typeNameTable[147] = "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Data.ItemIndexRange>";
-            _typeNameTable[148] = "Microsoft.UI.Xaml.Controls.ListViewSelectionMode";
-            _typeNameTable[149] = "Microsoft.UI.Xaml.Controls.SemanticZoom";
-            _typeNameTable[150] = "Microsoft.UI.Xaml.Controls.ISemanticZoomInformation";
-            _typeNameTable[151] = "Microsoft.UI.Xaml.Controls.Image";
-            _typeNameTable[152] = "Microsoft.UI.Xaml.Media.ImageSource";
-            _typeNameTable[153] = "Microsoft.UI.Xaml.Media.Stretch";
-            _typeNameTable[154] = "AuthentiKitTrimCalibration.MainWindow";
+            _typeNameTable[19] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[20] = "Microsoft.UI.Xaml.Controls.Control";
+            _typeNameTable[21] = "Microsoft.UI.Xaml.FrameworkElement";
+            _typeNameTable[22] = "Microsoft.UI.Xaml.UIElement";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.Controls.BackgroundSizing";
+            _typeNameTable[25] = "Microsoft.UI.Xaml.Thickness";
+            _typeNameTable[26] = "Microsoft.UI.Xaml.CornerRadius";
+            _typeNameTable[27] = "Microsoft.UI.Xaml.ElementSoundMode";
+            _typeNameTable[28] = "Microsoft.UI.Xaml.Media.FontFamily";
+            _typeNameTable[29] = "Double";
+            _typeNameTable[30] = "Windows.UI.Text.FontStretch";
+            _typeNameTable[31] = "Windows.UI.Text.FontStyle";
+            _typeNameTable[32] = "Windows.UI.Text.FontWeight";
+            _typeNameTable[33] = "Microsoft.UI.Xaml.HorizontalAlignment";
+            _typeNameTable[34] = "Microsoft.UI.Xaml.Controls.RequiresPointer";
+            _typeNameTable[35] = "Microsoft.UI.Xaml.Input.KeyboardNavigationMode";
+            _typeNameTable[36] = "Microsoft.UI.Xaml.Controls.ControlTemplate";
+            _typeNameTable[37] = "Microsoft.UI.Xaml.FrameworkTemplate";
+            _typeNameTable[38] = "Microsoft.UI.Xaml.VerticalAlignment";
+            _typeNameTable[39] = "Microsoft.UI.Xaml.ElementTheme";
+            _typeNameTable[40] = "Microsoft.UI.Xaml.FlowDirection";
+            _typeNameTable[41] = "String";
+            _typeNameTable[42] = "Microsoft.UI.Xaml.Style";
+            _typeNameTable[43] = "Microsoft.UI.Xaml.SetterBaseCollection";
+            _typeNameTable[44] = "Microsoft.UI.Xaml.SetterBase";
+            _typeNameTable[45] = "Microsoft.UI.Xaml.TriggerCollection";
+            _typeNameTable[46] = "Microsoft.UI.Xaml.TriggerBase";
+            _typeNameTable[47] = "System.Numerics.Vector3";
+            _typeNameTable[48] = "System.Numerics.Vector2";
+            _typeNameTable[49] = "Microsoft.UI.Xaml.Media.CacheMode";
+            _typeNameTable[50] = "Microsoft.UI.Xaml.Media.RectangleGeometry";
+            _typeNameTable[51] = "Microsoft.UI.Xaml.Media.Geometry";
+            _typeNameTable[52] = "Microsoft.UI.Xaml.Media.ElementCompositeMode";
+            _typeNameTable[53] = "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase";
+            _typeNameTable[54] = "Windows.Foundation.Size";
+            _typeNameTable[55] = "Microsoft.UI.Xaml.FocusState";
+            _typeNameTable[56] = "Microsoft.UI.Xaml.ElementHighContrastAdjustment";
+            _typeNameTable[57] = "Microsoft.UI.Xaml.Input.KeyTipPlacementMode";
+            _typeNameTable[58] = "Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode";
+            _typeNameTable[59] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>";
+            _typeNameTable[60] = "Microsoft.UI.Xaml.Input.KeyboardAccelerator";
+            _typeNameTable[61] = "Windows.System.VirtualKey";
+            _typeNameTable[62] = "Windows.System.VirtualKeyModifiers";
+            _typeNameTable[63] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>";
+            _typeNameTable[64] = "Microsoft.UI.Xaml.Media.XamlLight";
+            _typeNameTable[65] = "Microsoft.UI.Xaml.Input.ManipulationModes";
+            _typeNameTable[66] = "Microsoft.UI.Xaml.ScalarTransition";
+            _typeNameTable[67] = "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>";
+            _typeNameTable[68] = "Microsoft.UI.Xaml.Media.Projection";
+            _typeNameTable[69] = "Microsoft.UI.Xaml.Media.Transform";
+            _typeNameTable[70] = "Microsoft.UI.Xaml.Media.GeneralTransform";
+            _typeNameTable[71] = "Windows.Foundation.Point";
+            _typeNameTable[72] = "Single";
+            _typeNameTable[73] = "Microsoft.UI.Xaml.Vector3Transition";
+            _typeNameTable[74] = "Microsoft.UI.Xaml.Media.Shadow";
+            _typeNameTable[75] = "Microsoft.UI.Xaml.Media.Media3D.Transform3D";
+            _typeNameTable[76] = "System.Numerics.Matrix4x4";
+            _typeNameTable[77] = "Microsoft.UI.Xaml.Media.Animation.TransitionCollection";
+            _typeNameTable[78] = "Microsoft.UI.Xaml.Media.Animation.Transition";
+            _typeNameTable[79] = "Microsoft.UI.Xaml.Visibility";
+            _typeNameTable[80] = "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy";
+            _typeNameTable[81] = "Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode";
+            _typeNameTable[82] = "Microsoft.UI.Xaml.XamlRoot";
+            _typeNameTable[83] = "Microsoft.UI.Xaml.Controls.Border";
+            _typeNameTable[84] = "Microsoft.UI.Xaml.BrushTransition";
+            _typeNameTable[85] = "Microsoft.UI.Xaml.Controls.StackPanel";
+            _typeNameTable[86] = "Microsoft.UI.Xaml.Controls.Panel";
+            _typeNameTable[87] = "Microsoft.UI.Xaml.Controls.UIElementCollection";
+            _typeNameTable[88] = "Microsoft.UI.Xaml.Controls.Orientation";
+            _typeNameTable[89] = "Microsoft.UI.Xaml.Controls.Image";
+            _typeNameTable[90] = "Microsoft.UI.Xaml.Media.ImageSource";
+            _typeNameTable[91] = "Microsoft.UI.Xaml.Media.Stretch";
+            _typeNameTable[92] = "Microsoft.UI.Xaml.Controls.TextBlock";
+            _typeNameTable[93] = "Microsoft.UI.Xaml.Documents.InlineCollection";
+            _typeNameTable[94] = "Microsoft.UI.Xaml.Documents.Inline";
+            _typeNameTable[95] = "Microsoft.UI.Xaml.Documents.TextElement";
+            _typeNameTable[96] = "Microsoft.UI.Xaml.Documents.TextPointer";
+            _typeNameTable[97] = "Windows.UI.Text.TextDecorations";
+            _typeNameTable[98] = "Microsoft.UI.Xaml.TextAlignment";
+            _typeNameTable[99] = "Microsoft.UI.Xaml.LineStackingStrategy";
+            _typeNameTable[100] = "Microsoft.UI.Xaml.OpticalMarginAlignment";
+            _typeNameTable[101] = "Microsoft.UI.Xaml.Media.SolidColorBrush";
+            _typeNameTable[102] = "Windows.UI.Color";
+            _typeNameTable[103] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>";
+            _typeNameTable[104] = "Microsoft.UI.Xaml.Documents.TextHighlighter";
+            _typeNameTable[105] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>";
+            _typeNameTable[106] = "Microsoft.UI.Xaml.Documents.TextRange";
+            _typeNameTable[107] = "Microsoft.UI.Xaml.TextLineBounds";
+            _typeNameTable[108] = "Microsoft.UI.Xaml.TextReadingOrder";
+            _typeNameTable[109] = "Microsoft.UI.Xaml.TextTrimming";
+            _typeNameTable[110] = "Microsoft.UI.Xaml.TextWrapping";
+            _typeNameTable[111] = "AuthentiKitTrimCalibration.Controls.HeaderControl";
+            _typeNameTable[112] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[113] = "Windows.Foundation.Rect";
+            _typeNameTable[114] = "Microsoft.UI.Composition.Compositor";
+            _typeNameTable[115] = "Windows.UI.Core.CoreWindow";
+            _typeNameTable[116] = "Microsoft.UI.Xaml.Controls.Grid";
+            _typeNameTable[117] = "Microsoft.UI.Xaml.Controls.RowDefinitionCollection";
+            _typeNameTable[118] = "Microsoft.UI.Xaml.Controls.RowDefinition";
+            _typeNameTable[119] = "Microsoft.UI.Xaml.GridLength";
+            _typeNameTable[120] = "Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection";
+            _typeNameTable[121] = "Microsoft.UI.Xaml.Controls.ColumnDefinition";
+            _typeNameTable[122] = "Microsoft.UI.Xaml.Controls.TextBox";
+            _typeNameTable[123] = "Microsoft.UI.Xaml.Controls.CharacterCasing";
+            _typeNameTable[124] = "Microsoft.UI.Xaml.Controls.CandidateWindowAlignment";
+            _typeNameTable[125] = "Microsoft.UI.Xaml.DataTemplate";
+            _typeNameTable[126] = "Microsoft.UI.Xaml.Input.InputScope";
+            _typeNameTable[127] = "Microsoft.UI.Xaml.Controls.ComboBox";
+            _typeNameTable[128] = "Microsoft.UI.Xaml.Controls.Primitives.Selector";
+            _typeNameTable[129] = "Microsoft.UI.Xaml.Controls.ItemsControl";
+            _typeNameTable[130] = "Microsoft.UI.Xaml.Controls.ItemCollection";
+            _typeNameTable[131] = "Microsoft.UI.Xaml.Controls.LightDismissOverlayMode";
+            _typeNameTable[132] = "Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger";
+            _typeNameTable[133] = "Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings";
+            _typeNameTable[134] = "System.Nullable`1<Boolean>";
+            _typeNameTable[135] = "Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>";
+            _typeNameTable[136] = "Microsoft.UI.Xaml.Controls.GroupStyle";
+            _typeNameTable[137] = "Microsoft.UI.Xaml.Controls.StyleSelector";
+            _typeNameTable[138] = "Microsoft.UI.Xaml.Controls.DataTemplateSelector";
+            _typeNameTable[139] = "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate";
+            _typeNameTable[140] = "Microsoft.UI.Xaml.Controls.GroupStyleSelector";
+            _typeNameTable[141] = "Microsoft.UI.Xaml.Controls.ItemContainerGenerator";
+            _typeNameTable[142] = "Microsoft.UI.Xaml.Controls.Button";
+            _typeNameTable[143] = "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase";
+            _typeNameTable[144] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[145] = "Microsoft.UI.Xaml.Controls.ClickMode";
+            _typeNameTable[146] = "System.Windows.Input.ICommand";
+            _typeNameTable[147] = "Microsoft.UI.Xaml.Controls.ListView";
+            _typeNameTable[148] = "Microsoft.UI.Xaml.Controls.ListViewBase";
+            _typeNameTable[149] = "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger";
+            _typeNameTable[150] = "Microsoft.UI.Xaml.Controls.ListViewReorderMode";
+            _typeNameTable[151] = "System.Collections.Generic.IList`1<Object>";
+            _typeNameTable[152] = "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Data.ItemIndexRange>";
+            _typeNameTable[153] = "Microsoft.UI.Xaml.Controls.ListViewSelectionMode";
+            _typeNameTable[154] = "Microsoft.UI.Xaml.Controls.SemanticZoom";
+            _typeNameTable[155] = "Microsoft.UI.Xaml.Controls.ISemanticZoomInformation";
+            _typeNameTable[156] = "AuthentiKitTrimCalibration.MainWindow";
 
-            _typeTable = new global::System.Type[155];
+            _typeTable = new global::System.Type[157];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Application);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
@@ -400,142 +402,144 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             _typeTable[16] = typeof(global::Windows.UI.Core.CoreDispatcher);
             _typeTable[17] = typeof(global::Microsoft.System.DispatcherQueue);
             _typeTable[18] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
-            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.UIElement);
-            _typeTable[21] = typeof(global::Windows.Foundation.Rect);
-            _typeTable[22] = typeof(global::Microsoft.UI.Composition.Compositor);
-            _typeTable[23] = typeof(global::Windows.UI.Core.CoreWindow);
-            _typeTable[24] = typeof(global::System.String);
-            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Controls.Grid);
-            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.Controls.Panel);
-            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
-            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Controls.UIElementCollection);
-            _typeTable[29] = typeof(global::System.Numerics.Vector3);
-            _typeTable[30] = typeof(global::System.Numerics.Vector2);
-            _typeTable[31] = typeof(global::Microsoft.UI.Xaml.Media.CacheMode);
-            _typeTable[32] = typeof(global::Microsoft.UI.Xaml.Media.RectangleGeometry);
-            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.Media.Geometry);
-            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Media.ElementCompositeMode);
-            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase);
-            _typeTable[36] = typeof(global::Windows.Foundation.Size);
-            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.FocusState);
-            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.ElementHighContrastAdjustment);
-            _typeTable[39] = typeof(global::System.Double);
-            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode);
-            _typeTable[41] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode);
-            _typeTable[42] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Input.KeyboardAccelerator>);
-            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardAccelerator);
-            _typeTable[44] = typeof(global::Windows.System.VirtualKey);
-            _typeTable[45] = typeof(global::Windows.System.VirtualKeyModifiers);
-            _typeTable[46] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Media.XamlLight>);
-            _typeTable[47] = typeof(global::Microsoft.UI.Xaml.Media.XamlLight);
-            _typeTable[48] = typeof(global::Microsoft.UI.Xaml.Input.ManipulationModes);
-            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.ScalarTransition);
-            _typeTable[50] = typeof(global::System.Collections.Generic.IReadOnlyList<global::Microsoft.UI.Xaml.Input.Pointer>);
-            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Media.Projection);
-            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Media.Transform);
-            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Media.GeneralTransform);
-            _typeTable[54] = typeof(global::Windows.Foundation.Point);
-            _typeTable[55] = typeof(global::System.Single);
-            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.Vector3Transition);
-            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Media.Shadow);
-            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode);
-            _typeTable[59] = typeof(global::Microsoft.UI.Xaml.Media.Media3D.Transform3D);
-            _typeTable[60] = typeof(global::System.Numerics.Matrix4x4);
-            _typeTable[61] = typeof(global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection);
-            _typeTable[62] = typeof(global::Microsoft.UI.Xaml.Media.Animation.Transition);
-            _typeTable[63] = typeof(global::Microsoft.UI.Xaml.Visibility);
-            _typeTable[64] = typeof(global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy);
-            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode);
-            _typeTable[66] = typeof(global::Microsoft.UI.Xaml.XamlRoot);
-            _typeTable[67] = typeof(global::Microsoft.UI.Xaml.Controls.RowDefinitionCollection);
-            _typeTable[68] = typeof(global::Microsoft.UI.Xaml.Controls.RowDefinition);
-            _typeTable[69] = typeof(global::Microsoft.UI.Xaml.GridLength);
-            _typeTable[70] = typeof(global::Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection);
-            _typeTable[71] = typeof(global::Microsoft.UI.Xaml.Controls.ColumnDefinition);
-            _typeTable[72] = typeof(global::Microsoft.UI.Xaml.Controls.BackgroundSizing);
-            _typeTable[73] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[74] = typeof(global::Microsoft.UI.Xaml.Thickness);
-            _typeTable[75] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
-            _typeTable[76] = typeof(global::Microsoft.UI.Xaml.BrushTransition);
-            _typeTable[77] = typeof(global::Microsoft.UI.Xaml.ElementTheme);
-            _typeTable[78] = typeof(global::Microsoft.UI.Xaml.FlowDirection);
-            _typeTable[79] = typeof(global::Microsoft.UI.Xaml.HorizontalAlignment);
-            _typeTable[80] = typeof(global::Microsoft.UI.Xaml.Style);
-            _typeTable[81] = typeof(global::Microsoft.UI.Xaml.SetterBaseCollection);
-            _typeTable[82] = typeof(global::Microsoft.UI.Xaml.SetterBase);
-            _typeTable[83] = typeof(global::Microsoft.UI.Xaml.TriggerCollection);
-            _typeTable[84] = typeof(global::Microsoft.UI.Xaml.TriggerBase);
-            _typeTable[85] = typeof(global::Microsoft.UI.Xaml.VerticalAlignment);
-            _typeTable[86] = typeof(global::Microsoft.UI.Xaml.Controls.Border);
-            _typeTable[87] = typeof(global::Microsoft.UI.Xaml.Controls.TextBox);
-            _typeTable[88] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
-            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.CharacterCasing);
-            _typeTable[90] = typeof(global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment);
-            _typeTable[91] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
-            _typeTable[92] = typeof(global::Microsoft.UI.Xaml.FrameworkTemplate);
-            _typeTable[93] = typeof(global::Microsoft.UI.Xaml.TextAlignment);
-            _typeTable[94] = typeof(global::Microsoft.UI.Xaml.Input.InputScope);
-            _typeTable[95] = typeof(global::Microsoft.UI.Xaml.Media.SolidColorBrush);
-            _typeTable[96] = typeof(global::Windows.UI.Color);
-            _typeTable[97] = typeof(global::Microsoft.UI.Xaml.TextReadingOrder);
-            _typeTable[98] = typeof(global::Microsoft.UI.Xaml.TextWrapping);
-            _typeTable[99] = typeof(global::Microsoft.UI.Xaml.ElementSoundMode);
-            _typeTable[100] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
-            _typeTable[101] = typeof(global::Windows.UI.Text.FontStretch);
-            _typeTable[102] = typeof(global::Windows.UI.Text.FontStyle);
-            _typeTable[103] = typeof(global::Windows.UI.Text.FontWeight);
-            _typeTable[104] = typeof(global::Microsoft.UI.Xaml.Controls.RequiresPointer);
-            _typeTable[105] = typeof(global::Microsoft.UI.Xaml.Controls.ControlTemplate);
-            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Controls.ComboBox);
-            _typeTable[107] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.Selector);
-            _typeTable[108] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsControl);
-            _typeTable[109] = typeof(global::Microsoft.UI.Xaml.Controls.ItemCollection);
-            _typeTable[110] = typeof(global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode);
-            _typeTable[111] = typeof(global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger);
-            _typeTable[112] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings);
-            _typeTable[113] = typeof(global::System.Nullable<global::System.Boolean>);
-            _typeTable[114] = typeof(global::Windows.Foundation.Collections.IObservableVector<global::Microsoft.UI.Xaml.Controls.GroupStyle>);
-            _typeTable[115] = typeof(global::Microsoft.UI.Xaml.Controls.GroupStyle);
-            _typeTable[116] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
-            _typeTable[117] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
-            _typeTable[118] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate);
-            _typeTable[119] = typeof(global::Microsoft.UI.Xaml.Controls.GroupStyleSelector);
-            _typeTable[120] = typeof(global::Microsoft.UI.Xaml.Controls.ItemContainerGenerator);
-            _typeTable[121] = typeof(global::Microsoft.UI.Xaml.Controls.TextBlock);
-            _typeTable[122] = typeof(global::Microsoft.UI.Xaml.Documents.InlineCollection);
-            _typeTable[123] = typeof(global::Microsoft.UI.Xaml.Documents.Inline);
-            _typeTable[124] = typeof(global::Microsoft.UI.Xaml.Documents.TextElement);
-            _typeTable[125] = typeof(global::Microsoft.UI.Xaml.Documents.TextPointer);
-            _typeTable[126] = typeof(global::Windows.UI.Text.TextDecorations);
-            _typeTable[127] = typeof(global::Microsoft.UI.Xaml.LineStackingStrategy);
-            _typeTable[128] = typeof(global::Microsoft.UI.Xaml.OpticalMarginAlignment);
-            _typeTable[129] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Documents.TextHighlighter>);
-            _typeTable[130] = typeof(global::Microsoft.UI.Xaml.Documents.TextHighlighter);
-            _typeTable[131] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Documents.TextRange>);
-            _typeTable[132] = typeof(global::Microsoft.UI.Xaml.Documents.TextRange);
-            _typeTable[133] = typeof(global::Microsoft.UI.Xaml.TextLineBounds);
-            _typeTable[134] = typeof(global::Microsoft.UI.Xaml.TextTrimming);
-            _typeTable[135] = typeof(global::Microsoft.UI.Xaml.Controls.StackPanel);
-            _typeTable[136] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
-            _typeTable[137] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
-            _typeTable[138] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
-            _typeTable[139] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[140] = typeof(global::Microsoft.UI.Xaml.Controls.ClickMode);
-            _typeTable[141] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[142] = typeof(global::Microsoft.UI.Xaml.Controls.ListView);
-            _typeTable[143] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewBase);
-            _typeTable[144] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
-            _typeTable[145] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewReorderMode);
-            _typeTable[146] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
-            _typeTable[147] = typeof(global::System.Collections.Generic.IReadOnlyList<global::Microsoft.UI.Xaml.Data.ItemIndexRange>);
-            _typeTable[148] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode);
-            _typeTable[149] = typeof(global::Microsoft.UI.Xaml.Controls.SemanticZoom);
-            _typeTable[150] = typeof(global::Microsoft.UI.Xaml.Controls.ISemanticZoomInformation);
-            _typeTable[151] = typeof(global::Microsoft.UI.Xaml.Controls.Image);
-            _typeTable[152] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
-            _typeTable[153] = typeof(global::Microsoft.UI.Xaml.Media.Stretch);
-            _typeTable[154] = typeof(global::AuthentiKitTrimCalibration.MainWindow);
+            _typeTable[19] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[20] = typeof(global::Microsoft.UI.Xaml.Controls.Control);
+            _typeTable[21] = typeof(global::Microsoft.UI.Xaml.FrameworkElement);
+            _typeTable[22] = typeof(global::Microsoft.UI.Xaml.UIElement);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.Controls.BackgroundSizing);
+            _typeTable[25] = typeof(global::Microsoft.UI.Xaml.Thickness);
+            _typeTable[26] = typeof(global::Microsoft.UI.Xaml.CornerRadius);
+            _typeTable[27] = typeof(global::Microsoft.UI.Xaml.ElementSoundMode);
+            _typeTable[28] = typeof(global::Microsoft.UI.Xaml.Media.FontFamily);
+            _typeTable[29] = typeof(global::System.Double);
+            _typeTable[30] = typeof(global::Windows.UI.Text.FontStretch);
+            _typeTable[31] = typeof(global::Windows.UI.Text.FontStyle);
+            _typeTable[32] = typeof(global::Windows.UI.Text.FontWeight);
+            _typeTable[33] = typeof(global::Microsoft.UI.Xaml.HorizontalAlignment);
+            _typeTable[34] = typeof(global::Microsoft.UI.Xaml.Controls.RequiresPointer);
+            _typeTable[35] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode);
+            _typeTable[36] = typeof(global::Microsoft.UI.Xaml.Controls.ControlTemplate);
+            _typeTable[37] = typeof(global::Microsoft.UI.Xaml.FrameworkTemplate);
+            _typeTable[38] = typeof(global::Microsoft.UI.Xaml.VerticalAlignment);
+            _typeTable[39] = typeof(global::Microsoft.UI.Xaml.ElementTheme);
+            _typeTable[40] = typeof(global::Microsoft.UI.Xaml.FlowDirection);
+            _typeTable[41] = typeof(global::System.String);
+            _typeTable[42] = typeof(global::Microsoft.UI.Xaml.Style);
+            _typeTable[43] = typeof(global::Microsoft.UI.Xaml.SetterBaseCollection);
+            _typeTable[44] = typeof(global::Microsoft.UI.Xaml.SetterBase);
+            _typeTable[45] = typeof(global::Microsoft.UI.Xaml.TriggerCollection);
+            _typeTable[46] = typeof(global::Microsoft.UI.Xaml.TriggerBase);
+            _typeTable[47] = typeof(global::System.Numerics.Vector3);
+            _typeTable[48] = typeof(global::System.Numerics.Vector2);
+            _typeTable[49] = typeof(global::Microsoft.UI.Xaml.Media.CacheMode);
+            _typeTable[50] = typeof(global::Microsoft.UI.Xaml.Media.RectangleGeometry);
+            _typeTable[51] = typeof(global::Microsoft.UI.Xaml.Media.Geometry);
+            _typeTable[52] = typeof(global::Microsoft.UI.Xaml.Media.ElementCompositeMode);
+            _typeTable[53] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase);
+            _typeTable[54] = typeof(global::Windows.Foundation.Size);
+            _typeTable[55] = typeof(global::Microsoft.UI.Xaml.FocusState);
+            _typeTable[56] = typeof(global::Microsoft.UI.Xaml.ElementHighContrastAdjustment);
+            _typeTable[57] = typeof(global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode);
+            _typeTable[58] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode);
+            _typeTable[59] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Input.KeyboardAccelerator>);
+            _typeTable[60] = typeof(global::Microsoft.UI.Xaml.Input.KeyboardAccelerator);
+            _typeTable[61] = typeof(global::Windows.System.VirtualKey);
+            _typeTable[62] = typeof(global::Windows.System.VirtualKeyModifiers);
+            _typeTable[63] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Media.XamlLight>);
+            _typeTable[64] = typeof(global::Microsoft.UI.Xaml.Media.XamlLight);
+            _typeTable[65] = typeof(global::Microsoft.UI.Xaml.Input.ManipulationModes);
+            _typeTable[66] = typeof(global::Microsoft.UI.Xaml.ScalarTransition);
+            _typeTable[67] = typeof(global::System.Collections.Generic.IReadOnlyList<global::Microsoft.UI.Xaml.Input.Pointer>);
+            _typeTable[68] = typeof(global::Microsoft.UI.Xaml.Media.Projection);
+            _typeTable[69] = typeof(global::Microsoft.UI.Xaml.Media.Transform);
+            _typeTable[70] = typeof(global::Microsoft.UI.Xaml.Media.GeneralTransform);
+            _typeTable[71] = typeof(global::Windows.Foundation.Point);
+            _typeTable[72] = typeof(global::System.Single);
+            _typeTable[73] = typeof(global::Microsoft.UI.Xaml.Vector3Transition);
+            _typeTable[74] = typeof(global::Microsoft.UI.Xaml.Media.Shadow);
+            _typeTable[75] = typeof(global::Microsoft.UI.Xaml.Media.Media3D.Transform3D);
+            _typeTable[76] = typeof(global::System.Numerics.Matrix4x4);
+            _typeTable[77] = typeof(global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection);
+            _typeTable[78] = typeof(global::Microsoft.UI.Xaml.Media.Animation.Transition);
+            _typeTable[79] = typeof(global::Microsoft.UI.Xaml.Visibility);
+            _typeTable[80] = typeof(global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy);
+            _typeTable[81] = typeof(global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode);
+            _typeTable[82] = typeof(global::Microsoft.UI.Xaml.XamlRoot);
+            _typeTable[83] = typeof(global::Microsoft.UI.Xaml.Controls.Border);
+            _typeTable[84] = typeof(global::Microsoft.UI.Xaml.BrushTransition);
+            _typeTable[85] = typeof(global::Microsoft.UI.Xaml.Controls.StackPanel);
+            _typeTable[86] = typeof(global::Microsoft.UI.Xaml.Controls.Panel);
+            _typeTable[87] = typeof(global::Microsoft.UI.Xaml.Controls.UIElementCollection);
+            _typeTable[88] = typeof(global::Microsoft.UI.Xaml.Controls.Orientation);
+            _typeTable[89] = typeof(global::Microsoft.UI.Xaml.Controls.Image);
+            _typeTable[90] = typeof(global::Microsoft.UI.Xaml.Media.ImageSource);
+            _typeTable[91] = typeof(global::Microsoft.UI.Xaml.Media.Stretch);
+            _typeTable[92] = typeof(global::Microsoft.UI.Xaml.Controls.TextBlock);
+            _typeTable[93] = typeof(global::Microsoft.UI.Xaml.Documents.InlineCollection);
+            _typeTable[94] = typeof(global::Microsoft.UI.Xaml.Documents.Inline);
+            _typeTable[95] = typeof(global::Microsoft.UI.Xaml.Documents.TextElement);
+            _typeTable[96] = typeof(global::Microsoft.UI.Xaml.Documents.TextPointer);
+            _typeTable[97] = typeof(global::Windows.UI.Text.TextDecorations);
+            _typeTable[98] = typeof(global::Microsoft.UI.Xaml.TextAlignment);
+            _typeTable[99] = typeof(global::Microsoft.UI.Xaml.LineStackingStrategy);
+            _typeTable[100] = typeof(global::Microsoft.UI.Xaml.OpticalMarginAlignment);
+            _typeTable[101] = typeof(global::Microsoft.UI.Xaml.Media.SolidColorBrush);
+            _typeTable[102] = typeof(global::Windows.UI.Color);
+            _typeTable[103] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Documents.TextHighlighter>);
+            _typeTable[104] = typeof(global::Microsoft.UI.Xaml.Documents.TextHighlighter);
+            _typeTable[105] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Documents.TextRange>);
+            _typeTable[106] = typeof(global::Microsoft.UI.Xaml.Documents.TextRange);
+            _typeTable[107] = typeof(global::Microsoft.UI.Xaml.TextLineBounds);
+            _typeTable[108] = typeof(global::Microsoft.UI.Xaml.TextReadingOrder);
+            _typeTable[109] = typeof(global::Microsoft.UI.Xaml.TextTrimming);
+            _typeTable[110] = typeof(global::Microsoft.UI.Xaml.TextWrapping);
+            _typeTable[111] = typeof(global::AuthentiKitTrimCalibration.Controls.HeaderControl);
+            _typeTable[112] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[113] = typeof(global::Windows.Foundation.Rect);
+            _typeTable[114] = typeof(global::Microsoft.UI.Composition.Compositor);
+            _typeTable[115] = typeof(global::Windows.UI.Core.CoreWindow);
+            _typeTable[116] = typeof(global::Microsoft.UI.Xaml.Controls.Grid);
+            _typeTable[117] = typeof(global::Microsoft.UI.Xaml.Controls.RowDefinitionCollection);
+            _typeTable[118] = typeof(global::Microsoft.UI.Xaml.Controls.RowDefinition);
+            _typeTable[119] = typeof(global::Microsoft.UI.Xaml.GridLength);
+            _typeTable[120] = typeof(global::Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection);
+            _typeTable[121] = typeof(global::Microsoft.UI.Xaml.Controls.ColumnDefinition);
+            _typeTable[122] = typeof(global::Microsoft.UI.Xaml.Controls.TextBox);
+            _typeTable[123] = typeof(global::Microsoft.UI.Xaml.Controls.CharacterCasing);
+            _typeTable[124] = typeof(global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment);
+            _typeTable[125] = typeof(global::Microsoft.UI.Xaml.DataTemplate);
+            _typeTable[126] = typeof(global::Microsoft.UI.Xaml.Input.InputScope);
+            _typeTable[127] = typeof(global::Microsoft.UI.Xaml.Controls.ComboBox);
+            _typeTable[128] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.Selector);
+            _typeTable[129] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsControl);
+            _typeTable[130] = typeof(global::Microsoft.UI.Xaml.Controls.ItemCollection);
+            _typeTable[131] = typeof(global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode);
+            _typeTable[132] = typeof(global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger);
+            _typeTable[133] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings);
+            _typeTable[134] = typeof(global::System.Nullable<global::System.Boolean>);
+            _typeTable[135] = typeof(global::Windows.Foundation.Collections.IObservableVector<global::Microsoft.UI.Xaml.Controls.GroupStyle>);
+            _typeTable[136] = typeof(global::Microsoft.UI.Xaml.Controls.GroupStyle);
+            _typeTable[137] = typeof(global::Microsoft.UI.Xaml.Controls.StyleSelector);
+            _typeTable[138] = typeof(global::Microsoft.UI.Xaml.Controls.DataTemplateSelector);
+            _typeTable[139] = typeof(global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate);
+            _typeTable[140] = typeof(global::Microsoft.UI.Xaml.Controls.GroupStyleSelector);
+            _typeTable[141] = typeof(global::Microsoft.UI.Xaml.Controls.ItemContainerGenerator);
+            _typeTable[142] = typeof(global::Microsoft.UI.Xaml.Controls.Button);
+            _typeTable[143] = typeof(global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase);
+            _typeTable[144] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[145] = typeof(global::Microsoft.UI.Xaml.Controls.ClickMode);
+            _typeTable[146] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[147] = typeof(global::Microsoft.UI.Xaml.Controls.ListView);
+            _typeTable[148] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewBase);
+            _typeTable[149] = typeof(global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger);
+            _typeTable[150] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewReorderMode);
+            _typeTable[151] = typeof(global::System.Collections.Generic.IList<global::System.Object>);
+            _typeTable[152] = typeof(global::System.Collections.Generic.IReadOnlyList<global::Microsoft.UI.Xaml.Data.ItemIndexRange>);
+            _typeTable[153] = typeof(global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode);
+            _typeTable[154] = typeof(global::Microsoft.UI.Xaml.Controls.SemanticZoom);
+            _typeTable[155] = typeof(global::Microsoft.UI.Xaml.Controls.ISemanticZoomInformation);
+            _typeTable[156] = typeof(global::AuthentiKitTrimCalibration.MainWindow);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -573,42 +577,44 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
         private object Activate_0_Application() { return new global::Microsoft.UI.Xaml.Application(); }
         private object Activate_2_ResourceDictionary() { return new global::Microsoft.UI.Xaml.ResourceDictionary(); }
         private object Activate_18_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_19_Window() { return new global::Microsoft.UI.Xaml.Window(); }
-        private object Activate_22_Compositor() { return new global::Microsoft.UI.Composition.Compositor(); }
-        private object Activate_25_Grid() { return new global::Microsoft.UI.Xaml.Controls.Grid(); }
-        private object Activate_32_RectangleGeometry() { return new global::Microsoft.UI.Xaml.Media.RectangleGeometry(); }
-        private object Activate_43_KeyboardAccelerator() { return new global::Microsoft.UI.Xaml.Input.KeyboardAccelerator(); }
-        private object Activate_47_XamlLight() { return new global::Microsoft.UI.Xaml.Media.XamlLight(); }
-        private object Activate_49_ScalarTransition() { return new global::Microsoft.UI.Xaml.ScalarTransition(); }
-        private object Activate_56_Vector3Transition() { return new global::Microsoft.UI.Xaml.Vector3Transition(); }
-        private object Activate_61_TransitionCollection() { return new global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection(); }
-        private object Activate_68_RowDefinition() { return new global::Microsoft.UI.Xaml.Controls.RowDefinition(); }
-        private object Activate_71_ColumnDefinition() { return new global::Microsoft.UI.Xaml.Controls.ColumnDefinition(); }
-        private object Activate_76_BrushTransition() { return new global::Microsoft.UI.Xaml.BrushTransition(); }
-        private object Activate_80_Style() { return new global::Microsoft.UI.Xaml.Style(); }
-        private object Activate_81_SetterBaseCollection() { return new global::Microsoft.UI.Xaml.SetterBaseCollection(); }
-        private object Activate_86_Border() { return new global::Microsoft.UI.Xaml.Controls.Border(); }
-        private object Activate_87_TextBox() { return new global::Microsoft.UI.Xaml.Controls.TextBox(); }
-        private object Activate_91_DataTemplate() { return new global::Microsoft.UI.Xaml.DataTemplate(); }
-        private object Activate_94_InputScope() { return new global::Microsoft.UI.Xaml.Input.InputScope(); }
-        private object Activate_95_SolidColorBrush() { return new global::Microsoft.UI.Xaml.Media.SolidColorBrush(); }
-        private object Activate_105_ControlTemplate() { return new global::Microsoft.UI.Xaml.Controls.ControlTemplate(); }
-        private object Activate_106_ComboBox() { return new global::Microsoft.UI.Xaml.Controls.ComboBox(); }
-        private object Activate_108_ItemsControl() { return new global::Microsoft.UI.Xaml.Controls.ItemsControl(); }
-        private object Activate_115_GroupStyle() { return new global::Microsoft.UI.Xaml.Controls.GroupStyle(); }
-        private object Activate_116_StyleSelector() { return new global::Microsoft.UI.Xaml.Controls.StyleSelector(); }
-        private object Activate_117_DataTemplateSelector() { return new global::Microsoft.UI.Xaml.Controls.DataTemplateSelector(); }
-        private object Activate_118_ItemsPanelTemplate() { return new global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate(); }
-        private object Activate_119_GroupStyleSelector() { return new global::Microsoft.UI.Xaml.Controls.GroupStyleSelector(); }
-        private object Activate_121_TextBlock() { return new global::Microsoft.UI.Xaml.Controls.TextBlock(); }
-        private object Activate_130_TextHighlighter() { return new global::Microsoft.UI.Xaml.Documents.TextHighlighter(); }
-        private object Activate_135_StackPanel() { return new global::Microsoft.UI.Xaml.Controls.StackPanel(); }
-        private object Activate_137_Button() { return new global::Microsoft.UI.Xaml.Controls.Button(); }
-        private object Activate_139_ContentControl() { return new global::Microsoft.UI.Xaml.Controls.ContentControl(); }
-        private object Activate_142_ListView() { return new global::Microsoft.UI.Xaml.Controls.ListView(); }
-        private object Activate_149_SemanticZoom() { return new global::Microsoft.UI.Xaml.Controls.SemanticZoom(); }
-        private object Activate_151_Image() { return new global::Microsoft.UI.Xaml.Controls.Image(); }
-        private object Activate_154_MainWindow() { return new global::AuthentiKitTrimCalibration.MainWindow(); }
+        private object Activate_19_UserControl() { return new global::Microsoft.UI.Xaml.Controls.UserControl(); }
+        private object Activate_36_ControlTemplate() { return new global::Microsoft.UI.Xaml.Controls.ControlTemplate(); }
+        private object Activate_42_Style() { return new global::Microsoft.UI.Xaml.Style(); }
+        private object Activate_43_SetterBaseCollection() { return new global::Microsoft.UI.Xaml.SetterBaseCollection(); }
+        private object Activate_50_RectangleGeometry() { return new global::Microsoft.UI.Xaml.Media.RectangleGeometry(); }
+        private object Activate_60_KeyboardAccelerator() { return new global::Microsoft.UI.Xaml.Input.KeyboardAccelerator(); }
+        private object Activate_64_XamlLight() { return new global::Microsoft.UI.Xaml.Media.XamlLight(); }
+        private object Activate_66_ScalarTransition() { return new global::Microsoft.UI.Xaml.ScalarTransition(); }
+        private object Activate_73_Vector3Transition() { return new global::Microsoft.UI.Xaml.Vector3Transition(); }
+        private object Activate_77_TransitionCollection() { return new global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection(); }
+        private object Activate_83_Border() { return new global::Microsoft.UI.Xaml.Controls.Border(); }
+        private object Activate_84_BrushTransition() { return new global::Microsoft.UI.Xaml.BrushTransition(); }
+        private object Activate_85_StackPanel() { return new global::Microsoft.UI.Xaml.Controls.StackPanel(); }
+        private object Activate_89_Image() { return new global::Microsoft.UI.Xaml.Controls.Image(); }
+        private object Activate_92_TextBlock() { return new global::Microsoft.UI.Xaml.Controls.TextBlock(); }
+        private object Activate_101_SolidColorBrush() { return new global::Microsoft.UI.Xaml.Media.SolidColorBrush(); }
+        private object Activate_104_TextHighlighter() { return new global::Microsoft.UI.Xaml.Documents.TextHighlighter(); }
+        private object Activate_111_HeaderControl() { return new global::AuthentiKitTrimCalibration.Controls.HeaderControl(); }
+        private object Activate_112_Window() { return new global::Microsoft.UI.Xaml.Window(); }
+        private object Activate_114_Compositor() { return new global::Microsoft.UI.Composition.Compositor(); }
+        private object Activate_116_Grid() { return new global::Microsoft.UI.Xaml.Controls.Grid(); }
+        private object Activate_118_RowDefinition() { return new global::Microsoft.UI.Xaml.Controls.RowDefinition(); }
+        private object Activate_121_ColumnDefinition() { return new global::Microsoft.UI.Xaml.Controls.ColumnDefinition(); }
+        private object Activate_122_TextBox() { return new global::Microsoft.UI.Xaml.Controls.TextBox(); }
+        private object Activate_125_DataTemplate() { return new global::Microsoft.UI.Xaml.DataTemplate(); }
+        private object Activate_126_InputScope() { return new global::Microsoft.UI.Xaml.Input.InputScope(); }
+        private object Activate_127_ComboBox() { return new global::Microsoft.UI.Xaml.Controls.ComboBox(); }
+        private object Activate_129_ItemsControl() { return new global::Microsoft.UI.Xaml.Controls.ItemsControl(); }
+        private object Activate_136_GroupStyle() { return new global::Microsoft.UI.Xaml.Controls.GroupStyle(); }
+        private object Activate_137_StyleSelector() { return new global::Microsoft.UI.Xaml.Controls.StyleSelector(); }
+        private object Activate_138_DataTemplateSelector() { return new global::Microsoft.UI.Xaml.Controls.DataTemplateSelector(); }
+        private object Activate_139_ItemsPanelTemplate() { return new global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate(); }
+        private object Activate_140_GroupStyleSelector() { return new global::Microsoft.UI.Xaml.Controls.GroupStyleSelector(); }
+        private object Activate_142_Button() { return new global::Microsoft.UI.Xaml.Controls.Button(); }
+        private object Activate_144_ContentControl() { return new global::Microsoft.UI.Xaml.Controls.ContentControl(); }
+        private object Activate_147_ListView() { return new global::Microsoft.UI.Xaml.Controls.ListView(); }
+        private object Activate_154_SemanticZoom() { return new global::Microsoft.UI.Xaml.Controls.SemanticZoom(); }
+        private object Activate_156_MainWindow() { return new global::AuthentiKitTrimCalibration.MainWindow(); }
         private void MapAdd_2_ResourceDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -642,85 +648,85 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_28_UIElementCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.UIElement>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.UIElement)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_42_IList(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Input.KeyboardAccelerator>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_46_IList(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Media.XamlLight>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Media.XamlLight)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_61_TransitionCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Media.Animation.Transition>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Media.Animation.Transition)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_67_RowDefinitionCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.RowDefinition>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Controls.RowDefinition)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_70_ColumnDefinitionCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.ColumnDefinition>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_81_SetterBaseCollection(object instance, object item)
+        private void VectorAdd_43_SetterBaseCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.SetterBase>)instance;
             var newItem = (global::Microsoft.UI.Xaml.SetterBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_83_TriggerCollection(object instance, object item)
+        private void VectorAdd_45_TriggerCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.TriggerBase>)instance;
             var newItem = (global::Microsoft.UI.Xaml.TriggerBase)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_109_ItemCollection(object instance, object item)
+        private void VectorAdd_59_IList(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
-            var newItem = (global::System.Object)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Input.KeyboardAccelerator>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_114_IObservableVector(object instance, object item)
+        private void VectorAdd_63_IList(object instance, object item)
         {
-            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.GroupStyle>)instance;
-            var newItem = (global::Microsoft.UI.Xaml.Controls.GroupStyle)item;
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Media.XamlLight>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Media.XamlLight)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_122_InlineCollection(object instance, object item)
+        private void VectorAdd_77_TransitionCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Media.Animation.Transition>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Media.Animation.Transition)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_87_UIElementCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.UIElement>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.UIElement)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_93_InlineCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Documents.Inline>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Documents.Inline)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_129_IList(object instance, object item)
+        private void VectorAdd_103_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Documents.TextHighlighter>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_131_IList(object instance, object item)
+        private void VectorAdd_105_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Documents.TextRange>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Documents.TextRange)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_146_IList(object instance, object item)
+        private void VectorAdd_117_RowDefinitionCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.RowDefinition>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Controls.RowDefinition)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_120_ColumnDefinitionCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.ColumnDefinition>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_130_ItemCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
+            var newItem = (global::System.Object)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_135_IObservableVector(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.GroupStyle>)instance;
+            var newItem = (global::Microsoft.UI.Xaml.Controls.GroupStyle)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_151_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::System.Object>)instance;
             var newItem = (global::System.Object)item;
@@ -866,23 +872,82 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.UI.Xaml.Window
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_19_Window;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Window.Content");
+            case 19:   //  Microsoft.UI.Xaml.Controls.UserControl
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
+                userType.Activator = Activate_19_UserControl;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.UserControl.Content");
                 userType.AddMemberName("Content");
-                userType.AddMemberName("Bounds");
-                userType.AddMemberName("Compositor");
-                userType.AddMemberName("CoreWindow");
-                userType.AddMemberName("Dispatcher");
-                userType.AddMemberName("DispatcherQueue");
-                userType.AddMemberName("ExtendsContentIntoTitleBar");
-                userType.AddMemberName("Title");
-                userType.AddMemberName("Visible");
                 xamlType = userType;
                 break;
 
-            case 20:   //  Microsoft.UI.Xaml.UIElement
+            case 20:   //  Microsoft.UI.Xaml.Controls.Control
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.AddMemberName("Background");
+                userType.AddMemberName("BackgroundSizing");
+                userType.AddMemberName("BorderBrush");
+                userType.AddMemberName("BorderThickness");
+                userType.AddMemberName("CharacterSpacing");
+                userType.AddMemberName("CornerRadius");
+                userType.AddMemberName("DefaultStyleResourceUri");
+                userType.AddMemberName("ElementSoundMode");
+                userType.AddMemberName("FontFamily");
+                userType.AddMemberName("FontSize");
+                userType.AddMemberName("FontStretch");
+                userType.AddMemberName("FontStyle");
+                userType.AddMemberName("FontWeight");
+                userType.AddMemberName("Foreground");
+                userType.AddMemberName("HorizontalContentAlignment");
+                userType.AddMemberName("IsEnabled");
+                userType.AddMemberName("IsFocusEngaged");
+                userType.AddMemberName("IsFocusEngagementEnabled");
+                userType.AddMemberName("IsTextScaleFactorEnabled");
+                userType.AddMemberName("Padding");
+                userType.AddMemberName("RequiresPointer");
+                userType.AddMemberName("TabNavigation");
+                userType.AddMemberName("Template");
+                userType.AddMemberName("VerticalContentAlignment");
+                userType.AddMemberName("IsTemplateFocusTarget");
+                userType.AddMemberName("IsTemplateKeyTipTarget");
+                xamlType = userType;
+                break;
+
+            case 21:   //  Microsoft.UI.Xaml.FrameworkElement
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.UIElement"));
+                userType.AddMemberName("ActualHeight");
+                userType.AddMemberName("ActualTheme");
+                userType.AddMemberName("ActualWidth");
+                userType.AddMemberName("AllowFocusOnInteraction");
+                userType.AddMemberName("AllowFocusWhenDisabled");
+                userType.AddMemberName("BaseUri");
+                userType.AddMemberName("DataContext");
+                userType.AddMemberName("FlowDirection");
+                userType.AddMemberName("FocusVisualMargin");
+                userType.AddMemberName("FocusVisualPrimaryBrush");
+                userType.AddMemberName("FocusVisualPrimaryThickness");
+                userType.AddMemberName("FocusVisualSecondaryBrush");
+                userType.AddMemberName("FocusVisualSecondaryThickness");
+                userType.AddMemberName("Height");
+                userType.AddMemberName("HorizontalAlignment");
+                userType.AddMemberName("IsLoaded");
+                userType.AddMemberName("Language");
+                userType.AddMemberName("Margin");
+                userType.AddMemberName("MaxHeight");
+                userType.AddMemberName("MaxWidth");
+                userType.AddMemberName("MinHeight");
+                userType.AddMemberName("MinWidth");
+                userType.AddMemberName("Name");
+                userType.AddMemberName("Parent");
+                userType.AddMemberName("RequestedTheme");
+                userType.AddMemberName("Resources");
+                userType.AddMemberName("Style");
+                userType.AddMemberName("Tag");
+                userType.AddMemberName("Triggers");
+                userType.AddMemberName("VerticalAlignment");
+                userType.AddMemberName("Width");
+                xamlType = userType;
+                break;
+
+            case 22:   //  Microsoft.UI.Xaml.UIElement
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("AccessKey");
                 userType.AddMemberName("AccessKeyScopeOwner");
@@ -953,130 +1018,208 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 21:   //  Windows.Foundation.Rect
-                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 22:   //  Microsoft.UI.Composition.Compositor
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
+            case 23:   //  Microsoft.UI.Xaml.Media.Brush
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 23:   //  Windows.UI.Core.CoreWindow
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
+            case 24:   //  Microsoft.UI.Xaml.Controls.BackgroundSizing
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("InnerBorderEdge", global::Microsoft.UI.Xaml.Controls.BackgroundSizing.InnerBorderEdge);
+                userType.AddEnumValue("OuterBorderEdge", global::Microsoft.UI.Xaml.Controls.BackgroundSizing.OuterBorderEdge);
                 xamlType = userType;
                 break;
 
-            case 24:   //  String
-                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 25:   //  Microsoft.UI.Xaml.Controls.Grid
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel"));
-                userType.Activator = Activate_25_Grid;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
-                userType.AddMemberName("RowDefinitions");
-                userType.AddMemberName("ColumnDefinitions");
-                userType.AddMemberName("BackgroundSizing");
-                userType.AddMemberName("BorderBrush");
-                userType.AddMemberName("BorderThickness");
-                userType.AddMemberName("ColumnSpacing");
-                userType.AddMemberName("CornerRadius");
-                userType.AddMemberName("Padding");
-                userType.AddMemberName("RowSpacing");
-                userType.AddMemberName("ColumnSpan");
-                userType.AddMemberName("Row");
-                userType.AddMemberName("Column");
-                userType.AddMemberName("RowSpan");
-                xamlType = userType;
-                break;
-
-            case 26:   //  Microsoft.UI.Xaml.Controls.Panel
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
-                userType.AddMemberName("Children");
-                userType.AddMemberName("Background");
-                userType.AddMemberName("BackgroundTransition");
-                userType.AddMemberName("ChildrenTransitions");
-                userType.AddMemberName("IsItemsHost");
-                xamlType = userType;
-                break;
-
-            case 27:   //  Microsoft.UI.Xaml.FrameworkElement
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.UIElement"));
-                userType.AddMemberName("ActualHeight");
-                userType.AddMemberName("ActualTheme");
-                userType.AddMemberName("ActualWidth");
-                userType.AddMemberName("AllowFocusOnInteraction");
-                userType.AddMemberName("AllowFocusWhenDisabled");
-                userType.AddMemberName("BaseUri");
-                userType.AddMemberName("DataContext");
-                userType.AddMemberName("FlowDirection");
-                userType.AddMemberName("FocusVisualMargin");
-                userType.AddMemberName("FocusVisualPrimaryBrush");
-                userType.AddMemberName("FocusVisualPrimaryThickness");
-                userType.AddMemberName("FocusVisualSecondaryBrush");
-                userType.AddMemberName("FocusVisualSecondaryThickness");
-                userType.AddMemberName("Height");
-                userType.AddMemberName("HorizontalAlignment");
-                userType.AddMemberName("IsLoaded");
-                userType.AddMemberName("Language");
-                userType.AddMemberName("Margin");
-                userType.AddMemberName("MaxHeight");
-                userType.AddMemberName("MaxWidth");
-                userType.AddMemberName("MinHeight");
-                userType.AddMemberName("MinWidth");
-                userType.AddMemberName("Name");
-                userType.AddMemberName("Parent");
-                userType.AddMemberName("RequestedTheme");
-                userType.AddMemberName("Resources");
-                userType.AddMemberName("Style");
-                userType.AddMemberName("Tag");
-                userType.AddMemberName("Triggers");
-                userType.AddMemberName("VerticalAlignment");
-                userType.AddMemberName("Width");
-                xamlType = userType;
-                break;
-
-            case 28:   //  Microsoft.UI.Xaml.Controls.UIElementCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_28_UIElementCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 29:   //  System.Numerics.Vector3
+            case 25:   //  Microsoft.UI.Xaml.Thickness
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  System.Numerics.Vector2
+            case 26:   //  Microsoft.UI.Xaml.CornerRadius
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 31:   //  Microsoft.UI.Xaml.Media.CacheMode
+            case 27:   //  Microsoft.UI.Xaml.ElementSoundMode
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.ElementSoundMode.Default);
+                userType.AddEnumValue("FocusOnly", global::Microsoft.UI.Xaml.ElementSoundMode.FocusOnly);
+                userType.AddEnumValue("Off", global::Microsoft.UI.Xaml.ElementSoundMode.Off);
+                xamlType = userType;
+                break;
+
+            case 28:   //  Microsoft.UI.Xaml.Media.FontFamily
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 29:   //  Double
+                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 30:   //  Windows.UI.Text.FontStretch
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Undefined", global::Windows.UI.Text.FontStretch.Undefined);
+                userType.AddEnumValue("UltraCondensed", global::Windows.UI.Text.FontStretch.UltraCondensed);
+                userType.AddEnumValue("ExtraCondensed", global::Windows.UI.Text.FontStretch.ExtraCondensed);
+                userType.AddEnumValue("Condensed", global::Windows.UI.Text.FontStretch.Condensed);
+                userType.AddEnumValue("SemiCondensed", global::Windows.UI.Text.FontStretch.SemiCondensed);
+                userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStretch.Normal);
+                userType.AddEnumValue("SemiExpanded", global::Windows.UI.Text.FontStretch.SemiExpanded);
+                userType.AddEnumValue("Expanded", global::Windows.UI.Text.FontStretch.Expanded);
+                userType.AddEnumValue("ExtraExpanded", global::Windows.UI.Text.FontStretch.ExtraExpanded);
+                userType.AddEnumValue("UltraExpanded", global::Windows.UI.Text.FontStretch.UltraExpanded);
+                xamlType = userType;
+                break;
+
+            case 31:   //  Windows.UI.Text.FontStyle
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
+                userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
+                userType.AddEnumValue("Italic", global::Windows.UI.Text.FontStyle.Italic);
+                xamlType = userType;
+                break;
+
+            case 32:   //  Windows.UI.Text.FontWeight
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 33:   //  Microsoft.UI.Xaml.HorizontalAlignment
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.HorizontalAlignment.Left);
+                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.HorizontalAlignment.Center);
+                userType.AddEnumValue("Right", global::Microsoft.UI.Xaml.HorizontalAlignment.Right);
+                userType.AddEnumValue("Stretch", global::Microsoft.UI.Xaml.HorizontalAlignment.Stretch);
+                xamlType = userType;
+                break;
+
+            case 34:   //  Microsoft.UI.Xaml.Controls.RequiresPointer
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Never", global::Microsoft.UI.Xaml.Controls.RequiresPointer.Never);
+                userType.AddEnumValue("WhenEngaged", global::Microsoft.UI.Xaml.Controls.RequiresPointer.WhenEngaged);
+                userType.AddEnumValue("WhenFocused", global::Microsoft.UI.Xaml.Controls.RequiresPointer.WhenFocused);
+                xamlType = userType;
+                break;
+
+            case 35:   //  Microsoft.UI.Xaml.Input.KeyboardNavigationMode
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Local", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Local);
+                userType.AddEnumValue("Cycle", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Cycle);
+                userType.AddEnumValue("Once", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Once);
+                xamlType = userType;
+                break;
+
+            case 36:   //  Microsoft.UI.Xaml.Controls.ControlTemplate
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate"));
+                userType.Activator = Activate_36_ControlTemplate;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ControlTemplate.Template");
+                userType.AddMemberName("Template");
+                xamlType = userType;
+                break;
+
+            case 37:   //  Microsoft.UI.Xaml.FrameworkTemplate
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.FrameworkTemplate.Template");
+                userType.AddMemberName("Template");
+                xamlType = userType;
+                break;
+
+            case 38:   //  Microsoft.UI.Xaml.VerticalAlignment
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.VerticalAlignment.Top);
+                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.VerticalAlignment.Center);
+                userType.AddEnumValue("Bottom", global::Microsoft.UI.Xaml.VerticalAlignment.Bottom);
+                userType.AddEnumValue("Stretch", global::Microsoft.UI.Xaml.VerticalAlignment.Stretch);
+                xamlType = userType;
+                break;
+
+            case 39:   //  Microsoft.UI.Xaml.ElementTheme
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.ElementTheme.Default);
+                userType.AddEnumValue("Light", global::Microsoft.UI.Xaml.ElementTheme.Light);
+                userType.AddEnumValue("Dark", global::Microsoft.UI.Xaml.ElementTheme.Dark);
+                xamlType = userType;
+                break;
+
+            case 40:   //  Microsoft.UI.Xaml.FlowDirection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("LeftToRight", global::Microsoft.UI.Xaml.FlowDirection.LeftToRight);
+                userType.AddEnumValue("RightToLeft", global::Microsoft.UI.Xaml.FlowDirection.RightToLeft);
+                xamlType = userType;
+                break;
+
+            case 41:   //  String
+                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 42:   //  Microsoft.UI.Xaml.Style
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_42_Style;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Style.Setters");
+                userType.AddMemberName("Setters");
+                xamlType = userType;
+                break;
+
+            case 43:   //  Microsoft.UI.Xaml.SetterBaseCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_43_SetterBaseCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 44:   //  Microsoft.UI.Xaml.SetterBase
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.AddMemberName("IsSealed");
+                xamlType = userType;
+                break;
+
+            case 45:   //  Microsoft.UI.Xaml.TriggerCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_45_TriggerCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 46:   //  Microsoft.UI.Xaml.TriggerBase
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                xamlType = userType;
+                break;
+
+            case 47:   //  System.Numerics.Vector3
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 48:   //  System.Numerics.Vector2
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 49:   //  Microsoft.UI.Xaml.Media.CacheMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Microsoft.UI.Xaml.Media.RectangleGeometry
+            case 50:   //  Microsoft.UI.Xaml.Media.RectangleGeometry
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.Geometry"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 33:   //  Microsoft.UI.Xaml.Media.Geometry
+            case 51:   //  Microsoft.UI.Xaml.Media.Geometry
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 34:   //  Microsoft.UI.Xaml.Media.ElementCompositeMode
+            case 52:   //  Microsoft.UI.Xaml.Media.ElementCompositeMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Inherit", global::Microsoft.UI.Xaml.Media.ElementCompositeMode.Inherit);
                 userType.AddEnumValue("SourceOver", global::Microsoft.UI.Xaml.Media.ElementCompositeMode.SourceOver);
@@ -1084,17 +1227,17 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 35:   //  Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
+            case 53:   //  Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 36:   //  Windows.Foundation.Size
+            case 54:   //  Windows.Foundation.Size
                 xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 37:   //  Microsoft.UI.Xaml.FocusState
+            case 55:   //  Microsoft.UI.Xaml.FocusState
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Unfocused", global::Microsoft.UI.Xaml.FocusState.Unfocused);
                 userType.AddEnumValue("Pointer", global::Microsoft.UI.Xaml.FocusState.Pointer);
@@ -1103,7 +1246,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 38:   //  Microsoft.UI.Xaml.ElementHighContrastAdjustment
+            case 56:   //  Microsoft.UI.Xaml.ElementHighContrastAdjustment
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.ElementHighContrastAdjustment.None);
                 userType.AddEnumValue("Application", global::Microsoft.UI.Xaml.ElementHighContrastAdjustment.Application);
@@ -1111,11 +1254,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 39:   //  Double
-                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 40:   //  Microsoft.UI.Xaml.Input.KeyTipPlacementMode
+            case 57:   //  Microsoft.UI.Xaml.Input.KeyTipPlacementMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode.Auto);
                 userType.AddEnumValue("Bottom", global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode.Bottom);
@@ -1127,23 +1266,23 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 41:   //  Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode
+            case 58:   //  Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode.Auto);
                 userType.AddEnumValue("Hidden", global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode.Hidden);
                 xamlType = userType;
                 break;
 
-            case 42:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>
+            case 59:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_42_IList;
+                userType.CollectionAdd = VectorAdd_59_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 43:   //  Microsoft.UI.Xaml.Input.KeyboardAccelerator
+            case 60:   //  Microsoft.UI.Xaml.Input.KeyboardAccelerator
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_43_KeyboardAccelerator;
+                userType.Activator = Activate_60_KeyboardAccelerator;
                 userType.AddMemberName("IsEnabled");
                 userType.AddMemberName("Key");
                 userType.AddMemberName("Modifiers");
@@ -1151,7 +1290,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 44:   //  Windows.System.VirtualKey
+            case 61:   //  Windows.System.VirtualKey
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Windows.System.VirtualKey.None);
                 userType.AddEnumValue("LeftButton", global::Windows.System.VirtualKey.LeftButton);
@@ -1326,7 +1465,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 45:   //  Windows.System.VirtualKeyModifiers
+            case 62:   //  Windows.System.VirtualKeyModifiers
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Windows.System.VirtualKeyModifiers.None);
                 userType.AddEnumValue("Control", global::Windows.System.VirtualKeyModifiers.Control);
@@ -1336,20 +1475,20 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 46:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>
+            case 63:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_46_IList;
+                userType.CollectionAdd = VectorAdd_63_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Microsoft.UI.Xaml.Media.XamlLight
+            case 64:   //  Microsoft.UI.Xaml.Media.XamlLight
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_47_XamlLight;
+                userType.Activator = Activate_64_XamlLight;
                 xamlType = userType;
                 break;
 
-            case 48:   //  Microsoft.UI.Xaml.Input.ManipulationModes
+            case 65:   //  Microsoft.UI.Xaml.Input.ManipulationModes
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Input.ManipulationModes.None);
                 userType.AddEnumValue("TranslateX", global::Microsoft.UI.Xaml.Input.ManipulationModes.TranslateX);
@@ -1366,95 +1505,87 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 49:   //  Microsoft.UI.Xaml.ScalarTransition
+            case 66:   //  Microsoft.UI.Xaml.ScalarTransition
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 50:   //  System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>
+            case 67:   //  System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 51:   //  Microsoft.UI.Xaml.Media.Projection
+            case 68:   //  Microsoft.UI.Xaml.Media.Projection
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Microsoft.UI.Xaml.Media.Transform
+            case 69:   //  Microsoft.UI.Xaml.Media.Transform
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.GeneralTransform"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 53:   //  Microsoft.UI.Xaml.Media.GeneralTransform
+            case 70:   //  Microsoft.UI.Xaml.Media.GeneralTransform
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 54:   //  Windows.Foundation.Point
+            case 71:   //  Windows.Foundation.Point
                 xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 55:   //  Single
+            case 72:   //  Single
                 xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 56:   //  Microsoft.UI.Xaml.Vector3Transition
+            case 73:   //  Microsoft.UI.Xaml.Vector3Transition
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.UI.Xaml.Media.Shadow
+            case 74:   //  Microsoft.UI.Xaml.Media.Shadow
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.UI.Xaml.Input.KeyboardNavigationMode
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Local", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Local);
-                userType.AddEnumValue("Cycle", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Cycle);
-                userType.AddEnumValue("Once", global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode.Once);
-                xamlType = userType;
-                break;
-
-            case 59:   //  Microsoft.UI.Xaml.Media.Media3D.Transform3D
+            case 75:   //  Microsoft.UI.Xaml.Media.Media3D.Transform3D
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 60:   //  System.Numerics.Matrix4x4
+            case 76:   //  System.Numerics.Matrix4x4
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Microsoft.UI.Xaml.Media.Animation.TransitionCollection
+            case 77:   //  Microsoft.UI.Xaml.Media.Animation.TransitionCollection
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_61_TransitionCollection;
+                userType.CollectionAdd = VectorAdd_77_TransitionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Microsoft.UI.Xaml.Media.Animation.Transition
+            case 78:   //  Microsoft.UI.Xaml.Media.Animation.Transition
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 xamlType = userType;
                 break;
 
-            case 63:   //  Microsoft.UI.Xaml.Visibility
+            case 79:   //  Microsoft.UI.Xaml.Visibility
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Visible", global::Microsoft.UI.Xaml.Visibility.Visible);
                 userType.AddEnumValue("Collapsed", global::Microsoft.UI.Xaml.Visibility.Collapsed);
                 xamlType = userType;
                 break;
 
-            case 64:   //  Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy
+            case 80:   //  Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy.Auto);
                 userType.AddEnumValue("Projection", global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy.Projection);
@@ -1463,7 +1594,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 65:   //  Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode
+            case 81:   //  Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode.Auto);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode.Enabled);
@@ -1471,153 +1602,15 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 66:   //  Microsoft.UI.Xaml.XamlRoot
+            case 82:   //  Microsoft.UI.Xaml.XamlRoot
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 67:   //  Microsoft.UI.Xaml.Controls.RowDefinitionCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_67_RowDefinitionCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 68:   //  Microsoft.UI.Xaml.Controls.RowDefinition
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_68_RowDefinition;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.RowDefinition.Height");
-                userType.AddMemberName("Height");
-                userType.AddMemberName("ActualHeight");
-                userType.AddMemberName("MaxHeight");
-                userType.AddMemberName("MinHeight");
-                xamlType = userType;
-                break;
-
-            case 69:   //  Microsoft.UI.Xaml.GridLength
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 70:   //  Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_70_ColumnDefinitionCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 71:   //  Microsoft.UI.Xaml.Controls.ColumnDefinition
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_71_ColumnDefinition;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ColumnDefinition.Width");
-                userType.AddMemberName("Width");
-                userType.AddMemberName("ActualWidth");
-                userType.AddMemberName("MaxWidth");
-                userType.AddMemberName("MinWidth");
-                xamlType = userType;
-                break;
-
-            case 72:   //  Microsoft.UI.Xaml.Controls.BackgroundSizing
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("InnerBorderEdge", global::Microsoft.UI.Xaml.Controls.BackgroundSizing.InnerBorderEdge);
-                userType.AddEnumValue("OuterBorderEdge", global::Microsoft.UI.Xaml.Controls.BackgroundSizing.OuterBorderEdge);
-                xamlType = userType;
-                break;
-
-            case 73:   //  Microsoft.UI.Xaml.Media.Brush
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                xamlType = userType;
-                break;
-
-            case 74:   //  Microsoft.UI.Xaml.Thickness
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 75:   //  Microsoft.UI.Xaml.CornerRadius
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 76:   //  Microsoft.UI.Xaml.BrushTransition
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 77:   //  Microsoft.UI.Xaml.ElementTheme
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.ElementTheme.Default);
-                userType.AddEnumValue("Light", global::Microsoft.UI.Xaml.ElementTheme.Light);
-                userType.AddEnumValue("Dark", global::Microsoft.UI.Xaml.ElementTheme.Dark);
-                xamlType = userType;
-                break;
-
-            case 78:   //  Microsoft.UI.Xaml.FlowDirection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("LeftToRight", global::Microsoft.UI.Xaml.FlowDirection.LeftToRight);
-                userType.AddEnumValue("RightToLeft", global::Microsoft.UI.Xaml.FlowDirection.RightToLeft);
-                xamlType = userType;
-                break;
-
-            case 79:   //  Microsoft.UI.Xaml.HorizontalAlignment
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.HorizontalAlignment.Left);
-                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.HorizontalAlignment.Center);
-                userType.AddEnumValue("Right", global::Microsoft.UI.Xaml.HorizontalAlignment.Right);
-                userType.AddEnumValue("Stretch", global::Microsoft.UI.Xaml.HorizontalAlignment.Stretch);
-                xamlType = userType;
-                break;
-
-            case 80:   //  Microsoft.UI.Xaml.Style
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_80_Style;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Style.Setters");
-                userType.AddMemberName("Setters");
-                xamlType = userType;
-                break;
-
-            case 81:   //  Microsoft.UI.Xaml.SetterBaseCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_81_SetterBaseCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 82:   //  Microsoft.UI.Xaml.SetterBase
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.AddMemberName("IsSealed");
-                xamlType = userType;
-                break;
-
-            case 83:   //  Microsoft.UI.Xaml.TriggerCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_83_TriggerCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 84:   //  Microsoft.UI.Xaml.TriggerBase
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                xamlType = userType;
-                break;
-
-            case 85:   //  Microsoft.UI.Xaml.VerticalAlignment
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Top", global::Microsoft.UI.Xaml.VerticalAlignment.Top);
-                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.VerticalAlignment.Center);
-                userType.AddEnumValue("Bottom", global::Microsoft.UI.Xaml.VerticalAlignment.Bottom);
-                userType.AddEnumValue("Stretch", global::Microsoft.UI.Xaml.VerticalAlignment.Stretch);
-                xamlType = userType;
-                break;
-
-            case 86:   //  Microsoft.UI.Xaml.Controls.Border
+            case 83:   //  Microsoft.UI.Xaml.Controls.Border
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_86_Border;
+                userType.Activator = Activate_83_Border;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Border.Child");
                 userType.AddMemberName("Child");
                 userType.AddMemberName("Background");
@@ -1631,9 +1624,382 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 87:   //  Microsoft.UI.Xaml.Controls.TextBox
+            case 84:   //  Microsoft.UI.Xaml.BrushTransition
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 85:   //  Microsoft.UI.Xaml.Controls.StackPanel
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel"));
+                userType.Activator = Activate_85_StackPanel;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
+                userType.AddMemberName("Orientation");
+                userType.AddMemberName("AreHorizontalSnapPointsRegular");
+                userType.AddMemberName("AreScrollSnapPointsRegular");
+                userType.AddMemberName("AreVerticalSnapPointsRegular");
+                userType.AddMemberName("BackgroundSizing");
+                userType.AddMemberName("BorderBrush");
+                userType.AddMemberName("BorderThickness");
+                userType.AddMemberName("CornerRadius");
+                userType.AddMemberName("Padding");
+                userType.AddMemberName("Spacing");
+                xamlType = userType;
+                break;
+
+            case 86:   //  Microsoft.UI.Xaml.Controls.Panel
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
+                userType.AddMemberName("Children");
+                userType.AddMemberName("Background");
+                userType.AddMemberName("BackgroundTransition");
+                userType.AddMemberName("ChildrenTransitions");
+                userType.AddMemberName("IsItemsHost");
+                xamlType = userType;
+                break;
+
+            case 87:   //  Microsoft.UI.Xaml.Controls.UIElementCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_87_UIElementCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 88:   //  Microsoft.UI.Xaml.Controls.Orientation
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Vertical", global::Microsoft.UI.Xaml.Controls.Orientation.Vertical);
+                userType.AddEnumValue("Horizontal", global::Microsoft.UI.Xaml.Controls.Orientation.Horizontal);
+                xamlType = userType;
+                break;
+
+            case 89:   //  Microsoft.UI.Xaml.Controls.Image
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.Activator = Activate_89_Image;
+                userType.AddMemberName("Source");
+                userType.AddMemberName("NineGrid");
+                userType.AddMemberName("Stretch");
+                xamlType = userType;
+                break;
+
+            case 90:   //  Microsoft.UI.Xaml.Media.ImageSource
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 91:   //  Microsoft.UI.Xaml.Media.Stretch
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Media.Stretch.None);
+                userType.AddEnumValue("Fill", global::Microsoft.UI.Xaml.Media.Stretch.Fill);
+                userType.AddEnumValue("Uniform", global::Microsoft.UI.Xaml.Media.Stretch.Uniform);
+                userType.AddEnumValue("UniformToFill", global::Microsoft.UI.Xaml.Media.Stretch.UniformToFill);
+                xamlType = userType;
+                break;
+
+            case 92:   //  Microsoft.UI.Xaml.Controls.TextBlock
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
+                userType.Activator = Activate_92_TextBlock;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TextBlock.Inlines");
+                userType.AddMemberName("Inlines");
+                userType.AddMemberName("Text");
+                userType.AddMemberName("FontSize");
+                userType.AddMemberName("BaselineOffset");
+                userType.AddMemberName("CharacterSpacing");
+                userType.AddMemberName("ContentEnd");
+                userType.AddMemberName("ContentStart");
+                userType.AddMemberName("FontFamily");
+                userType.AddMemberName("FontStretch");
+                userType.AddMemberName("FontStyle");
+                userType.AddMemberName("FontWeight");
+                userType.AddMemberName("Foreground");
+                userType.AddMemberName("HorizontalTextAlignment");
+                userType.AddMemberName("IsColorFontEnabled");
+                userType.AddMemberName("IsTextScaleFactorEnabled");
+                userType.AddMemberName("IsTextSelectionEnabled");
+                userType.AddMemberName("IsTextTrimmed");
+                userType.AddMemberName("LineHeight");
+                userType.AddMemberName("LineStackingStrategy");
+                userType.AddMemberName("MaxLines");
+                userType.AddMemberName("OpticalMarginAlignment");
+                userType.AddMemberName("Padding");
+                userType.AddMemberName("SelectedText");
+                userType.AddMemberName("SelectionEnd");
+                userType.AddMemberName("SelectionFlyout");
+                userType.AddMemberName("SelectionHighlightColor");
+                userType.AddMemberName("SelectionStart");
+                userType.AddMemberName("TextAlignment");
+                userType.AddMemberName("TextDecorations");
+                userType.AddMemberName("TextHighlighters");
+                userType.AddMemberName("TextLineBounds");
+                userType.AddMemberName("TextReadingOrder");
+                userType.AddMemberName("TextTrimming");
+                userType.AddMemberName("TextWrapping");
+                xamlType = userType;
+                break;
+
+            case 93:   //  Microsoft.UI.Xaml.Documents.InlineCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_93_InlineCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 94:   //  Microsoft.UI.Xaml.Documents.Inline
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement"));
+                xamlType = userType;
+                break;
+
+            case 95:   //  Microsoft.UI.Xaml.Documents.TextElement
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.AddMemberName("AccessKey");
+                userType.AddMemberName("AccessKeyScopeOwner");
+                userType.AddMemberName("AllowFocusOnInteraction");
+                userType.AddMemberName("CharacterSpacing");
+                userType.AddMemberName("ContentEnd");
+                userType.AddMemberName("ContentStart");
+                userType.AddMemberName("ElementEnd");
+                userType.AddMemberName("ElementStart");
+                userType.AddMemberName("ExitDisplayModeOnAccessKeyInvoked");
+                userType.AddMemberName("FontFamily");
+                userType.AddMemberName("FontSize");
+                userType.AddMemberName("FontStretch");
+                userType.AddMemberName("FontStyle");
+                userType.AddMemberName("FontWeight");
+                userType.AddMemberName("Foreground");
+                userType.AddMemberName("IsAccessKeyScope");
+                userType.AddMemberName("IsTextScaleFactorEnabled");
+                userType.AddMemberName("KeyTipHorizontalOffset");
+                userType.AddMemberName("KeyTipPlacementMode");
+                userType.AddMemberName("KeyTipVerticalOffset");
+                userType.AddMemberName("Language");
+                userType.AddMemberName("Name");
+                userType.AddMemberName("TextDecorations");
+                userType.AddMemberName("XamlRoot");
+                xamlType = userType;
+                break;
+
+            case 96:   //  Microsoft.UI.Xaml.Documents.TextPointer
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 97:   //  Windows.UI.Text.TextDecorations
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::Windows.UI.Text.TextDecorations.None);
+                userType.AddEnumValue("Underline", global::Windows.UI.Text.TextDecorations.Underline);
+                userType.AddEnumValue("Strikethrough", global::Windows.UI.Text.TextDecorations.Strikethrough);
+                xamlType = userType;
+                break;
+
+            case 98:   //  Microsoft.UI.Xaml.TextAlignment
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.TextAlignment.Center);
+                userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.TextAlignment.Left);
+                userType.AddEnumValue("Start", global::Microsoft.UI.Xaml.TextAlignment.Start);
+                userType.AddEnumValue("Right", global::Microsoft.UI.Xaml.TextAlignment.Right);
+                userType.AddEnumValue("End", global::Microsoft.UI.Xaml.TextAlignment.End);
+                userType.AddEnumValue("Justify", global::Microsoft.UI.Xaml.TextAlignment.Justify);
+                userType.AddEnumValue("DetectFromContent", global::Microsoft.UI.Xaml.TextAlignment.DetectFromContent);
+                xamlType = userType;
+                break;
+
+            case 99:   //  Microsoft.UI.Xaml.LineStackingStrategy
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("MaxHeight", global::Microsoft.UI.Xaml.LineStackingStrategy.MaxHeight);
+                userType.AddEnumValue("BlockLineHeight", global::Microsoft.UI.Xaml.LineStackingStrategy.BlockLineHeight);
+                userType.AddEnumValue("BaselineToBaseline", global::Microsoft.UI.Xaml.LineStackingStrategy.BaselineToBaseline);
+                xamlType = userType;
+                break;
+
+            case 100:   //  Microsoft.UI.Xaml.OpticalMarginAlignment
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.OpticalMarginAlignment.None);
+                userType.AddEnumValue("TrimSideBearings", global::Microsoft.UI.Xaml.OpticalMarginAlignment.TrimSideBearings);
+                xamlType = userType;
+                break;
+
+            case 101:   //  Microsoft.UI.Xaml.Media.SolidColorBrush
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.Brush"));
+                userType.Activator = Activate_101_SolidColorBrush;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Media.SolidColorBrush.Color");
+                userType.AddMemberName("Color");
+                xamlType = userType;
+                break;
+
+            case 102:   //  Windows.UI.Color
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 103:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.CollectionAdd = VectorAdd_103_IList;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 104:   //  Microsoft.UI.Xaml.Documents.TextHighlighter
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_104_TextHighlighter;
+                userType.AddMemberName("Background");
+                userType.AddMemberName("Foreground");
+                userType.AddMemberName("Ranges");
+                xamlType = userType;
+                break;
+
+            case 105:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.CollectionAdd = VectorAdd_105_IList;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 106:   //  Microsoft.UI.Xaml.Documents.TextRange
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 107:   //  Microsoft.UI.Xaml.TextLineBounds
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Full", global::Microsoft.UI.Xaml.TextLineBounds.Full);
+                userType.AddEnumValue("TrimToCapHeight", global::Microsoft.UI.Xaml.TextLineBounds.TrimToCapHeight);
+                userType.AddEnumValue("TrimToBaseline", global::Microsoft.UI.Xaml.TextLineBounds.TrimToBaseline);
+                userType.AddEnumValue("Tight", global::Microsoft.UI.Xaml.TextLineBounds.Tight);
+                xamlType = userType;
+                break;
+
+            case 108:   //  Microsoft.UI.Xaml.TextReadingOrder
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.TextReadingOrder.Default);
+                userType.AddEnumValue("UseFlowDirection", global::Microsoft.UI.Xaml.TextReadingOrder.UseFlowDirection);
+                userType.AddEnumValue("DetectFromContent", global::Microsoft.UI.Xaml.TextReadingOrder.DetectFromContent);
+                xamlType = userType;
+                break;
+
+            case 109:   //  Microsoft.UI.Xaml.TextTrimming
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.TextTrimming.None);
+                userType.AddEnumValue("CharacterEllipsis", global::Microsoft.UI.Xaml.TextTrimming.CharacterEllipsis);
+                userType.AddEnumValue("WordEllipsis", global::Microsoft.UI.Xaml.TextTrimming.WordEllipsis);
+                userType.AddEnumValue("Clip", global::Microsoft.UI.Xaml.TextTrimming.Clip);
+                xamlType = userType;
+                break;
+
+            case 110:   //  Microsoft.UI.Xaml.TextWrapping
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("NoWrap", global::Microsoft.UI.Xaml.TextWrapping.NoWrap);
+                userType.AddEnumValue("Wrap", global::Microsoft.UI.Xaml.TextWrapping.Wrap);
+                userType.AddEnumValue("WrapWholeWords", global::Microsoft.UI.Xaml.TextWrapping.WrapWholeWords);
+                xamlType = userType;
+                break;
+
+            case 111:   //  AuthentiKitTrimCalibration.Controls.HeaderControl
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_111_HeaderControl;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.UserControl.Content");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 112:   //  Microsoft.UI.Xaml.Window
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_112_Window;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Window.Content");
+                userType.AddMemberName("Content");
+                userType.AddMemberName("Bounds");
+                userType.AddMemberName("Compositor");
+                userType.AddMemberName("CoreWindow");
+                userType.AddMemberName("Dispatcher");
+                userType.AddMemberName("DispatcherQueue");
+                userType.AddMemberName("ExtendsContentIntoTitleBar");
+                userType.AddMemberName("Title");
+                userType.AddMemberName("Visible");
+                xamlType = userType;
+                break;
+
+            case 113:   //  Windows.Foundation.Rect
+                xamlType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 114:   //  Microsoft.UI.Composition.Compositor
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 115:   //  Windows.UI.Core.CoreWindow
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 116:   //  Microsoft.UI.Xaml.Controls.Grid
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel"));
+                userType.Activator = Activate_116_Grid;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
+                userType.AddMemberName("RowDefinitions");
+                userType.AddMemberName("ColumnDefinitions");
+                userType.AddMemberName("BackgroundSizing");
+                userType.AddMemberName("BorderBrush");
+                userType.AddMemberName("BorderThickness");
+                userType.AddMemberName("ColumnSpacing");
+                userType.AddMemberName("CornerRadius");
+                userType.AddMemberName("Padding");
+                userType.AddMemberName("RowSpacing");
+                userType.AddMemberName("ColumnSpan");
+                userType.AddMemberName("Row");
+                userType.AddMemberName("Column");
+                userType.AddMemberName("RowSpan");
+                xamlType = userType;
+                break;
+
+            case 117:   //  Microsoft.UI.Xaml.Controls.RowDefinitionCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_117_RowDefinitionCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 118:   //  Microsoft.UI.Xaml.Controls.RowDefinition
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_118_RowDefinition;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.RowDefinition.Height");
+                userType.AddMemberName("Height");
+                userType.AddMemberName("ActualHeight");
+                userType.AddMemberName("MaxHeight");
+                userType.AddMemberName("MinHeight");
+                xamlType = userType;
+                break;
+
+            case 119:   //  Microsoft.UI.Xaml.GridLength
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 120:   //  Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.CollectionAdd = VectorAdd_120_ColumnDefinitionCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 121:   //  Microsoft.UI.Xaml.Controls.ColumnDefinition
+                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
+                userType.Activator = Activate_121_ColumnDefinition;
+                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ColumnDefinition.Width");
+                userType.AddMemberName("Width");
+                userType.AddMemberName("ActualWidth");
+                userType.AddMemberName("MaxWidth");
+                userType.AddMemberName("MinWidth");
+                xamlType = userType;
+                break;
+
+            case 122:   //  Microsoft.UI.Xaml.Controls.TextBox
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_87_TextBox;
+                userType.Activator = Activate_122_TextBox;
                 userType.AddMemberName("Header");
                 userType.AddMemberName("AcceptsReturn");
                 userType.AddMemberName("CanPasteClipboardContent");
@@ -1667,38 +2033,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 88:   //  Microsoft.UI.Xaml.Controls.Control
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
-                userType.AddMemberName("Background");
-                userType.AddMemberName("BackgroundSizing");
-                userType.AddMemberName("BorderBrush");
-                userType.AddMemberName("BorderThickness");
-                userType.AddMemberName("CharacterSpacing");
-                userType.AddMemberName("CornerRadius");
-                userType.AddMemberName("DefaultStyleResourceUri");
-                userType.AddMemberName("ElementSoundMode");
-                userType.AddMemberName("FontFamily");
-                userType.AddMemberName("FontSize");
-                userType.AddMemberName("FontStretch");
-                userType.AddMemberName("FontStyle");
-                userType.AddMemberName("FontWeight");
-                userType.AddMemberName("Foreground");
-                userType.AddMemberName("HorizontalContentAlignment");
-                userType.AddMemberName("IsEnabled");
-                userType.AddMemberName("IsFocusEngaged");
-                userType.AddMemberName("IsFocusEngagementEnabled");
-                userType.AddMemberName("IsTextScaleFactorEnabled");
-                userType.AddMemberName("Padding");
-                userType.AddMemberName("RequiresPointer");
-                userType.AddMemberName("TabNavigation");
-                userType.AddMemberName("Template");
-                userType.AddMemberName("VerticalContentAlignment");
-                userType.AddMemberName("IsTemplateFocusTarget");
-                userType.AddMemberName("IsTemplateKeyTipTarget");
-                xamlType = userType;
-                break;
-
-            case 89:   //  Microsoft.UI.Xaml.Controls.CharacterCasing
+            case 123:   //  Microsoft.UI.Xaml.Controls.CharacterCasing
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::Microsoft.UI.Xaml.Controls.CharacterCasing.Normal);
                 userType.AddEnumValue("Lower", global::Microsoft.UI.Xaml.Controls.CharacterCasing.Lower);
@@ -1706,138 +2041,30 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 90:   //  Microsoft.UI.Xaml.Controls.CandidateWindowAlignment
+            case 124:   //  Microsoft.UI.Xaml.Controls.CandidateWindowAlignment
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment.Default);
                 userType.AddEnumValue("BottomEdge", global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment.BottomEdge);
                 xamlType = userType;
                 break;
 
-            case 91:   //  Microsoft.UI.Xaml.DataTemplate
+            case 125:   //  Microsoft.UI.Xaml.DataTemplate
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate"));
-                userType.Activator = Activate_91_DataTemplate;
+                userType.Activator = Activate_125_DataTemplate;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.DataTemplate.Template");
                 userType.AddMemberName("Template");
                 xamlType = userType;
                 break;
 
-            case 92:   //  Microsoft.UI.Xaml.FrameworkTemplate
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.FrameworkTemplate.Template");
-                userType.AddMemberName("Template");
-                xamlType = userType;
-                break;
-
-            case 93:   //  Microsoft.UI.Xaml.TextAlignment
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Center", global::Microsoft.UI.Xaml.TextAlignment.Center);
-                userType.AddEnumValue("Left", global::Microsoft.UI.Xaml.TextAlignment.Left);
-                userType.AddEnumValue("Start", global::Microsoft.UI.Xaml.TextAlignment.Start);
-                userType.AddEnumValue("Right", global::Microsoft.UI.Xaml.TextAlignment.Right);
-                userType.AddEnumValue("End", global::Microsoft.UI.Xaml.TextAlignment.End);
-                userType.AddEnumValue("Justify", global::Microsoft.UI.Xaml.TextAlignment.Justify);
-                userType.AddEnumValue("DetectFromContent", global::Microsoft.UI.Xaml.TextAlignment.DetectFromContent);
-                xamlType = userType;
-                break;
-
-            case 94:   //  Microsoft.UI.Xaml.Input.InputScope
+            case 126:   //  Microsoft.UI.Xaml.Input.InputScope
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 95:   //  Microsoft.UI.Xaml.Media.SolidColorBrush
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.Brush"));
-                userType.Activator = Activate_95_SolidColorBrush;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Media.SolidColorBrush.Color");
-                userType.AddMemberName("Color");
-                xamlType = userType;
-                break;
-
-            case 96:   //  Windows.UI.Color
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 97:   //  Microsoft.UI.Xaml.TextReadingOrder
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.TextReadingOrder.Default);
-                userType.AddEnumValue("UseFlowDirection", global::Microsoft.UI.Xaml.TextReadingOrder.UseFlowDirection);
-                userType.AddEnumValue("DetectFromContent", global::Microsoft.UI.Xaml.TextReadingOrder.DetectFromContent);
-                xamlType = userType;
-                break;
-
-            case 98:   //  Microsoft.UI.Xaml.TextWrapping
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("NoWrap", global::Microsoft.UI.Xaml.TextWrapping.NoWrap);
-                userType.AddEnumValue("Wrap", global::Microsoft.UI.Xaml.TextWrapping.Wrap);
-                userType.AddEnumValue("WrapWholeWords", global::Microsoft.UI.Xaml.TextWrapping.WrapWholeWords);
-                xamlType = userType;
-                break;
-
-            case 99:   //  Microsoft.UI.Xaml.ElementSoundMode
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Default", global::Microsoft.UI.Xaml.ElementSoundMode.Default);
-                userType.AddEnumValue("FocusOnly", global::Microsoft.UI.Xaml.ElementSoundMode.FocusOnly);
-                userType.AddEnumValue("Off", global::Microsoft.UI.Xaml.ElementSoundMode.Off);
-                xamlType = userType;
-                break;
-
-            case 100:   //  Microsoft.UI.Xaml.Media.FontFamily
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 101:   //  Windows.UI.Text.FontStretch
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Undefined", global::Windows.UI.Text.FontStretch.Undefined);
-                userType.AddEnumValue("UltraCondensed", global::Windows.UI.Text.FontStretch.UltraCondensed);
-                userType.AddEnumValue("ExtraCondensed", global::Windows.UI.Text.FontStretch.ExtraCondensed);
-                userType.AddEnumValue("Condensed", global::Windows.UI.Text.FontStretch.Condensed);
-                userType.AddEnumValue("SemiCondensed", global::Windows.UI.Text.FontStretch.SemiCondensed);
-                userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStretch.Normal);
-                userType.AddEnumValue("SemiExpanded", global::Windows.UI.Text.FontStretch.SemiExpanded);
-                userType.AddEnumValue("Expanded", global::Windows.UI.Text.FontStretch.Expanded);
-                userType.AddEnumValue("ExtraExpanded", global::Windows.UI.Text.FontStretch.ExtraExpanded);
-                userType.AddEnumValue("UltraExpanded", global::Windows.UI.Text.FontStretch.UltraExpanded);
-                xamlType = userType;
-                break;
-
-            case 102:   //  Windows.UI.Text.FontStyle
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Normal", global::Windows.UI.Text.FontStyle.Normal);
-                userType.AddEnumValue("Oblique", global::Windows.UI.Text.FontStyle.Oblique);
-                userType.AddEnumValue("Italic", global::Windows.UI.Text.FontStyle.Italic);
-                xamlType = userType;
-                break;
-
-            case 103:   //  Windows.UI.Text.FontWeight
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 104:   //  Microsoft.UI.Xaml.Controls.RequiresPointer
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Never", global::Microsoft.UI.Xaml.Controls.RequiresPointer.Never);
-                userType.AddEnumValue("WhenEngaged", global::Microsoft.UI.Xaml.Controls.RequiresPointer.WhenEngaged);
-                userType.AddEnumValue("WhenFocused", global::Microsoft.UI.Xaml.Controls.RequiresPointer.WhenFocused);
-                xamlType = userType;
-                break;
-
-            case 105:   //  Microsoft.UI.Xaml.Controls.ControlTemplate
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate"));
-                userType.Activator = Activate_105_ControlTemplate;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ControlTemplate.Template");
-                userType.AddMemberName("Template");
-                xamlType = userType;
-                break;
-
-            case 106:   //  Microsoft.UI.Xaml.Controls.ComboBox
+            case 127:   //  Microsoft.UI.Xaml.Controls.ComboBox
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector"));
-                userType.Activator = Activate_106_ComboBox;
+                userType.Activator = Activate_127_ComboBox;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 userType.AddMemberName("Header");
                 userType.AddMemberName("Description");
@@ -1859,7 +2086,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 107:   //  Microsoft.UI.Xaml.Controls.Primitives.Selector
+            case 128:   //  Microsoft.UI.Xaml.Controls.Primitives.Selector
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl"));
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 userType.AddMemberName("IsSynchronizedWithCurrentItem");
@@ -1870,9 +2097,9 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 108:   //  Microsoft.UI.Xaml.Controls.ItemsControl
+            case 129:   //  Microsoft.UI.Xaml.Controls.ItemsControl
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_108_ItemsControl;
+                userType.Activator = Activate_129_ItemsControl;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 userType.AddMemberName("Items");
                 userType.AddMemberName("DisplayMemberPath");
@@ -1891,14 +2118,14 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 109:   //  Microsoft.UI.Xaml.Controls.ItemCollection
+            case 130:   //  Microsoft.UI.Xaml.Controls.ItemCollection
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_109_ItemCollection;
+                userType.CollectionAdd = VectorAdd_130_ItemCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 110:   //  Microsoft.UI.Xaml.Controls.LightDismissOverlayMode
+            case 131:   //  Microsoft.UI.Xaml.Controls.LightDismissOverlayMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Auto", global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode.Auto);
                 userType.AddEnumValue("On", global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode.On);
@@ -1906,20 +2133,20 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 111:   //  Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger
+            case 132:   //  Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Committed", global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger.Committed);
                 userType.AddEnumValue("Always", global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger.Always);
                 xamlType = userType;
                 break;
 
-            case 112:   //  Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings
+            case 133:   //  Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 113:   //  System.Nullable`1<Boolean>
+            case 134:   //  System.Nullable`1<Boolean>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetBoxedType(GetXamlTypeByName("Boolean"));
                 userType.BoxInstance = userType.BoxType<global::System.Boolean>;
@@ -1927,16 +2154,16 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 114:   //  Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>
+            case 135:   //  Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_114_IObservableVector;
+                userType.CollectionAdd = VectorAdd_135_IObservableVector;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 115:   //  Microsoft.UI.Xaml.Controls.GroupStyle
+            case 136:   //  Microsoft.UI.Xaml.Controls.GroupStyle
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_115_GroupStyle;
+                userType.Activator = Activate_136_GroupStyle;
                 userType.AddMemberName("ContainerStyle");
                 userType.AddMemberName("ContainerStyleSelector");
                 userType.AddMemberName("HeaderContainerStyle");
@@ -1947,228 +2174,47 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 116:   //  Microsoft.UI.Xaml.Controls.StyleSelector
+            case 137:   //  Microsoft.UI.Xaml.Controls.StyleSelector
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 117:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
+            case 138:   //  Microsoft.UI.Xaml.Controls.DataTemplateSelector
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 118:   //  Microsoft.UI.Xaml.Controls.ItemsPanelTemplate
+            case 139:   //  Microsoft.UI.Xaml.Controls.ItemsPanelTemplate
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate"));
-                userType.Activator = Activate_118_ItemsPanelTemplate;
+                userType.Activator = Activate_139_ItemsPanelTemplate;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsPanelTemplate.Template");
                 userType.AddMemberName("Template");
                 xamlType = userType;
                 break;
 
-            case 119:   //  Microsoft.UI.Xaml.Controls.GroupStyleSelector
+            case 140:   //  Microsoft.UI.Xaml.Controls.GroupStyleSelector
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 120:   //  Microsoft.UI.Xaml.Controls.ItemContainerGenerator
+            case 141:   //  Microsoft.UI.Xaml.Controls.ItemContainerGenerator
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 121:   //  Microsoft.UI.Xaml.Controls.TextBlock
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_121_TextBlock;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.TextBlock.Inlines");
-                userType.AddMemberName("Inlines");
-                userType.AddMemberName("Text");
-                userType.AddMemberName("FontSize");
-                userType.AddMemberName("FontWeight");
-                userType.AddMemberName("BaselineOffset");
-                userType.AddMemberName("CharacterSpacing");
-                userType.AddMemberName("ContentEnd");
-                userType.AddMemberName("ContentStart");
-                userType.AddMemberName("FontFamily");
-                userType.AddMemberName("FontStretch");
-                userType.AddMemberName("FontStyle");
-                userType.AddMemberName("Foreground");
-                userType.AddMemberName("HorizontalTextAlignment");
-                userType.AddMemberName("IsColorFontEnabled");
-                userType.AddMemberName("IsTextScaleFactorEnabled");
-                userType.AddMemberName("IsTextSelectionEnabled");
-                userType.AddMemberName("IsTextTrimmed");
-                userType.AddMemberName("LineHeight");
-                userType.AddMemberName("LineStackingStrategy");
-                userType.AddMemberName("MaxLines");
-                userType.AddMemberName("OpticalMarginAlignment");
-                userType.AddMemberName("Padding");
-                userType.AddMemberName("SelectedText");
-                userType.AddMemberName("SelectionEnd");
-                userType.AddMemberName("SelectionFlyout");
-                userType.AddMemberName("SelectionHighlightColor");
-                userType.AddMemberName("SelectionStart");
-                userType.AddMemberName("TextAlignment");
-                userType.AddMemberName("TextDecorations");
-                userType.AddMemberName("TextHighlighters");
-                userType.AddMemberName("TextLineBounds");
-                userType.AddMemberName("TextReadingOrder");
-                userType.AddMemberName("TextTrimming");
-                userType.AddMemberName("TextWrapping");
-                xamlType = userType;
-                break;
-
-            case 122:   //  Microsoft.UI.Xaml.Documents.InlineCollection
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.CollectionAdd = VectorAdd_122_InlineCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 123:   //  Microsoft.UI.Xaml.Documents.Inline
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement"));
-                xamlType = userType;
-                break;
-
-            case 124:   //  Microsoft.UI.Xaml.Documents.TextElement
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.AddMemberName("AccessKey");
-                userType.AddMemberName("AccessKeyScopeOwner");
-                userType.AddMemberName("AllowFocusOnInteraction");
-                userType.AddMemberName("CharacterSpacing");
-                userType.AddMemberName("ContentEnd");
-                userType.AddMemberName("ContentStart");
-                userType.AddMemberName("ElementEnd");
-                userType.AddMemberName("ElementStart");
-                userType.AddMemberName("ExitDisplayModeOnAccessKeyInvoked");
-                userType.AddMemberName("FontFamily");
-                userType.AddMemberName("FontSize");
-                userType.AddMemberName("FontStretch");
-                userType.AddMemberName("FontStyle");
-                userType.AddMemberName("FontWeight");
-                userType.AddMemberName("Foreground");
-                userType.AddMemberName("IsAccessKeyScope");
-                userType.AddMemberName("IsTextScaleFactorEnabled");
-                userType.AddMemberName("KeyTipHorizontalOffset");
-                userType.AddMemberName("KeyTipPlacementMode");
-                userType.AddMemberName("KeyTipVerticalOffset");
-                userType.AddMemberName("Language");
-                userType.AddMemberName("Name");
-                userType.AddMemberName("TextDecorations");
-                userType.AddMemberName("XamlRoot");
-                xamlType = userType;
-                break;
-
-            case 125:   //  Microsoft.UI.Xaml.Documents.TextPointer
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 126:   //  Windows.UI.Text.TextDecorations
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Windows.UI.Text.TextDecorations.None);
-                userType.AddEnumValue("Underline", global::Windows.UI.Text.TextDecorations.Underline);
-                userType.AddEnumValue("Strikethrough", global::Windows.UI.Text.TextDecorations.Strikethrough);
-                xamlType = userType;
-                break;
-
-            case 127:   //  Microsoft.UI.Xaml.LineStackingStrategy
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("MaxHeight", global::Microsoft.UI.Xaml.LineStackingStrategy.MaxHeight);
-                userType.AddEnumValue("BlockLineHeight", global::Microsoft.UI.Xaml.LineStackingStrategy.BlockLineHeight);
-                userType.AddEnumValue("BaselineToBaseline", global::Microsoft.UI.Xaml.LineStackingStrategy.BaselineToBaseline);
-                xamlType = userType;
-                break;
-
-            case 128:   //  Microsoft.UI.Xaml.OpticalMarginAlignment
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.OpticalMarginAlignment.None);
-                userType.AddEnumValue("TrimSideBearings", global::Microsoft.UI.Xaml.OpticalMarginAlignment.TrimSideBearings);
-                xamlType = userType;
-                break;
-
-            case 129:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_129_IList;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 130:   //  Microsoft.UI.Xaml.Documents.TextHighlighter
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_130_TextHighlighter;
-                userType.AddMemberName("Background");
-                userType.AddMemberName("Foreground");
-                userType.AddMemberName("Ranges");
-                xamlType = userType;
-                break;
-
-            case 131:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_131_IList;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 132:   //  Microsoft.UI.Xaml.Documents.TextRange
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                xamlType = userType;
-                break;
-
-            case 133:   //  Microsoft.UI.Xaml.TextLineBounds
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Full", global::Microsoft.UI.Xaml.TextLineBounds.Full);
-                userType.AddEnumValue("TrimToCapHeight", global::Microsoft.UI.Xaml.TextLineBounds.TrimToCapHeight);
-                userType.AddEnumValue("TrimToBaseline", global::Microsoft.UI.Xaml.TextLineBounds.TrimToBaseline);
-                userType.AddEnumValue("Tight", global::Microsoft.UI.Xaml.TextLineBounds.Tight);
-                xamlType = userType;
-                break;
-
-            case 134:   //  Microsoft.UI.Xaml.TextTrimming
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.TextTrimming.None);
-                userType.AddEnumValue("CharacterEllipsis", global::Microsoft.UI.Xaml.TextTrimming.CharacterEllipsis);
-                userType.AddEnumValue("WordEllipsis", global::Microsoft.UI.Xaml.TextTrimming.WordEllipsis);
-                userType.AddEnumValue("Clip", global::Microsoft.UI.Xaml.TextTrimming.Clip);
-                xamlType = userType;
-                break;
-
-            case 135:   //  Microsoft.UI.Xaml.Controls.StackPanel
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel"));
-                userType.Activator = Activate_135_StackPanel;
-                userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.Panel.Children");
-                userType.AddMemberName("Orientation");
-                userType.AddMemberName("AreHorizontalSnapPointsRegular");
-                userType.AddMemberName("AreScrollSnapPointsRegular");
-                userType.AddMemberName("AreVerticalSnapPointsRegular");
-                userType.AddMemberName("BackgroundSizing");
-                userType.AddMemberName("BorderBrush");
-                userType.AddMemberName("BorderThickness");
-                userType.AddMemberName("CornerRadius");
-                userType.AddMemberName("Padding");
-                userType.AddMemberName("Spacing");
-                xamlType = userType;
-                break;
-
-            case 136:   //  Microsoft.UI.Xaml.Controls.Orientation
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("Vertical", global::Microsoft.UI.Xaml.Controls.Orientation.Vertical);
-                userType.AddEnumValue("Horizontal", global::Microsoft.UI.Xaml.Controls.Orientation.Horizontal);
-                xamlType = userType;
-                break;
-
-            case 137:   //  Microsoft.UI.Xaml.Controls.Button
+            case 142:   //  Microsoft.UI.Xaml.Controls.Button
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
-                userType.Activator = Activate_137_Button;
+                userType.Activator = Activate_142_Button;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ContentControl.Content");
                 userType.AddMemberName("Flyout");
                 xamlType = userType;
                 break;
 
-            case 138:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+            case 143:   //  Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ContentControl.Content");
                 userType.AddMemberName("ClickMode");
@@ -2179,9 +2225,9 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 139:   //  Microsoft.UI.Xaml.Controls.ContentControl
+            case 144:   //  Microsoft.UI.Xaml.Controls.ContentControl
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_139_ContentControl;
+                userType.Activator = Activate_144_ContentControl;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ContentControl.Content");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("ContentTemplate");
@@ -2191,7 +2237,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 140:   //  Microsoft.UI.Xaml.Controls.ClickMode
+            case 145:   //  Microsoft.UI.Xaml.Controls.ClickMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Release", global::Microsoft.UI.Xaml.Controls.ClickMode.Release);
                 userType.AddEnumValue("Press", global::Microsoft.UI.Xaml.Controls.ClickMode.Press);
@@ -2199,20 +2245,20 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 141:   //  System.Windows.Input.ICommand
+            case 146:   //  System.Windows.Input.ICommand
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 142:   //  Microsoft.UI.Xaml.Controls.ListView
+            case 147:   //  Microsoft.UI.Xaml.Controls.ListView
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase"));
-                userType.Activator = Activate_142_ListView;
+                userType.Activator = Activate_147_ListView;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 xamlType = userType;
                 break;
 
-            case 143:   //  Microsoft.UI.Xaml.Controls.ListViewBase
+            case 148:   //  Microsoft.UI.Xaml.Controls.ListViewBase
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector"));
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 userType.AddMemberName("CanDragItems");
@@ -2241,34 +2287,34 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 144:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
+            case 149:   //  Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger.None);
                 userType.AddEnumValue("Edge", global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger.Edge);
                 xamlType = userType;
                 break;
 
-            case 145:   //  Microsoft.UI.Xaml.Controls.ListViewReorderMode
+            case 150:   //  Microsoft.UI.Xaml.Controls.ListViewReorderMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Disabled", global::Microsoft.UI.Xaml.Controls.ListViewReorderMode.Disabled);
                 userType.AddEnumValue("Enabled", global::Microsoft.UI.Xaml.Controls.ListViewReorderMode.Enabled);
                 xamlType = userType;
                 break;
 
-            case 146:   //  System.Collections.Generic.IList`1<Object>
+            case 151:   //  System.Collections.Generic.IList`1<Object>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_146_IList;
+                userType.CollectionAdd = VectorAdd_151_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 147:   //  System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Data.ItemIndexRange>
+            case 152:   //  System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Data.ItemIndexRange>
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 148:   //  Microsoft.UI.Xaml.Controls.ListViewSelectionMode
+            case 153:   //  Microsoft.UI.Xaml.Controls.ListViewSelectionMode
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode.None);
                 userType.AddEnumValue("Single", global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode.Single);
@@ -2277,47 +2323,23 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 149:   //  Microsoft.UI.Xaml.Controls.SemanticZoom
+            case 154:   //  Microsoft.UI.Xaml.Controls.SemanticZoom
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
-                userType.Activator = Activate_149_SemanticZoom;
+                userType.Activator = Activate_154_SemanticZoom;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.SemanticZoom.ZoomedInView");
                 userType.AddMemberName("ZoomedInView");
                 xamlType = userType;
                 break;
 
-            case 150:   //  Microsoft.UI.Xaml.Controls.ISemanticZoomInformation
+            case 155:   //  Microsoft.UI.Xaml.Controls.ISemanticZoomInformation
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 151:   //  Microsoft.UI.Xaml.Controls.Image
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_151_Image;
-                userType.AddMemberName("Source");
-                userType.AddMemberName("NineGrid");
-                userType.AddMemberName("Stretch");
-                xamlType = userType;
-                break;
-
-            case 152:   //  Microsoft.UI.Xaml.Media.ImageSource
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 153:   //  Microsoft.UI.Xaml.Media.Stretch
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Microsoft.UI.Xaml.Media.Stretch.None);
-                userType.AddEnumValue("Fill", global::Microsoft.UI.Xaml.Media.Stretch.Fill);
-                userType.AddEnumValue("Uniform", global::Microsoft.UI.Xaml.Media.Stretch.Uniform);
-                userType.AddEnumValue("UniformToFill", global::Microsoft.UI.Xaml.Media.Stretch.UniformToFill);
-                xamlType = userType;
-                break;
-
-            case 154:   //  AuthentiKitTrimCalibration.MainWindow
+            case 156:   //  AuthentiKitTrimCalibration.MainWindow
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_154_MainWindow;
+                userType.Activator = Activate_156_MainWindow;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Window.Content");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -2486,3258 +2508,3268 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
-        private object get_15_Window_Content(object instance)
+        private object get_15_UserControl_Content(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            var that = (global::Microsoft.UI.Xaml.Controls.UserControl)instance;
             return that.Content;
         }
-        private void set_15_Window_Content(object instance, object Value)
+        private void set_15_UserControl_Content(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            var that = (global::Microsoft.UI.Xaml.Controls.UserControl)instance;
             that.Content = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private object get_16_Window_Bounds(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.Bounds;
-        }
-        private object get_17_Window_Compositor(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.Compositor;
-        }
-        private object get_18_Window_CoreWindow(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.CoreWindow;
-        }
-        private object get_19_Window_Dispatcher(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.Dispatcher;
-        }
-        private object get_20_Window_DispatcherQueue(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.DispatcherQueue;
-        }
-        private object get_21_Window_ExtendsContentIntoTitleBar(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.ExtendsContentIntoTitleBar;
-        }
-        private void set_21_Window_ExtendsContentIntoTitleBar(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            that.ExtendsContentIntoTitleBar = (global::System.Boolean)Value;
-        }
-        private object get_22_Window_Title(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.Title;
-        }
-        private void set_22_Window_Title(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            that.Title = (global::System.String)Value;
-        }
-        private object get_23_Window_Visible(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Window)instance;
-            return that.Visible;
-        }
-        private object get_24_Panel_Children(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            return that.Children;
-        }
-        private object get_25_UIElement_AccessKey(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.AccessKey;
-        }
-        private void set_25_UIElement_AccessKey(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.AccessKey = (global::System.String)Value;
-        }
-        private object get_26_UIElement_AccessKeyScopeOwner(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.AccessKeyScopeOwner;
-        }
-        private void set_26_UIElement_AccessKeyScopeOwner(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.AccessKeyScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_27_UIElement_ActualOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ActualOffset;
-        }
-        private object get_28_UIElement_ActualSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ActualSize;
-        }
-        private object get_29_UIElement_AllowDrop(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.AllowDrop;
-        }
-        private void set_29_UIElement_AllowDrop(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.AllowDrop = (global::System.Boolean)Value;
-        }
-        private object get_30_UIElement_CacheMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.CacheMode;
-        }
-        private void set_30_UIElement_CacheMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.CacheMode = (global::Microsoft.UI.Xaml.Media.CacheMode)Value;
-        }
-        private object get_31_UIElement_CanBeScrollAnchor(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.CanBeScrollAnchor;
-        }
-        private void set_31_UIElement_CanBeScrollAnchor(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.CanBeScrollAnchor = (global::System.Boolean)Value;
-        }
-        private object get_32_UIElement_CanDrag(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.CanDrag;
-        }
-        private void set_32_UIElement_CanDrag(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.CanDrag = (global::System.Boolean)Value;
-        }
-        private object get_33_UIElement_CenterPoint(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.CenterPoint;
-        }
-        private void set_33_UIElement_CenterPoint(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.CenterPoint = (global::System.Numerics.Vector3)Value;
-        }
-        private object get_34_UIElement_Clip(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Clip;
-        }
-        private void set_34_UIElement_Clip(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Clip = (global::Microsoft.UI.Xaml.Media.RectangleGeometry)Value;
-        }
-        private object get_35_UIElement_CompositeMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.CompositeMode;
-        }
-        private void set_35_UIElement_CompositeMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.CompositeMode = (global::Microsoft.UI.Xaml.Media.ElementCompositeMode)Value;
-        }
-        private object get_36_UIElement_ContextFlyout(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ContextFlyout;
-        }
-        private void set_36_UIElement_ContextFlyout(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.ContextFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
-        }
-        private object get_37_UIElement_DesiredSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.DesiredSize;
-        }
-        private object get_38_UIElement_ExitDisplayModeOnAccessKeyInvoked(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ExitDisplayModeOnAccessKeyInvoked;
-        }
-        private void set_38_UIElement_ExitDisplayModeOnAccessKeyInvoked(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.ExitDisplayModeOnAccessKeyInvoked = (global::System.Boolean)Value;
-        }
-        private object get_39_UIElement_FocusState(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.FocusState;
-        }
-        private object get_40_UIElement_HighContrastAdjustment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.HighContrastAdjustment;
-        }
-        private void set_40_UIElement_HighContrastAdjustment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.HighContrastAdjustment = (global::Microsoft.UI.Xaml.ElementHighContrastAdjustment)Value;
-        }
-        private object get_41_UIElement_IsAccessKeyScope(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsAccessKeyScope;
-        }
-        private void set_41_UIElement_IsAccessKeyScope(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsAccessKeyScope = (global::System.Boolean)Value;
-        }
-        private object get_42_UIElement_IsDoubleTapEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsDoubleTapEnabled;
-        }
-        private void set_42_UIElement_IsDoubleTapEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsDoubleTapEnabled = (global::System.Boolean)Value;
-        }
-        private object get_43_UIElement_IsHitTestVisible(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsHitTestVisible;
-        }
-        private void set_43_UIElement_IsHitTestVisible(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsHitTestVisible = (global::System.Boolean)Value;
-        }
-        private object get_44_UIElement_IsHoldingEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsHoldingEnabled;
-        }
-        private void set_44_UIElement_IsHoldingEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsHoldingEnabled = (global::System.Boolean)Value;
-        }
-        private object get_45_UIElement_IsRightTapEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsRightTapEnabled;
-        }
-        private void set_45_UIElement_IsRightTapEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsRightTapEnabled = (global::System.Boolean)Value;
-        }
-        private object get_46_UIElement_IsTabStop(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsTabStop;
-        }
-        private void set_46_UIElement_IsTabStop(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsTabStop = (global::System.Boolean)Value;
-        }
-        private object get_47_UIElement_IsTapEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.IsTapEnabled;
-        }
-        private void set_47_UIElement_IsTapEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.IsTapEnabled = (global::System.Boolean)Value;
-        }
-        private object get_48_UIElement_KeyTipHorizontalOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyTipHorizontalOffset;
-        }
-        private void set_48_UIElement_KeyTipHorizontalOffset(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyTipHorizontalOffset = (global::System.Double)Value;
-        }
-        private object get_49_UIElement_KeyTipPlacementMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyTipPlacementMode;
-        }
-        private void set_49_UIElement_KeyTipPlacementMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyTipPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode)Value;
-        }
-        private object get_50_UIElement_KeyTipTarget(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyTipTarget;
-        }
-        private void set_50_UIElement_KeyTipTarget(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyTipTarget = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_51_UIElement_KeyTipVerticalOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyTipVerticalOffset;
-        }
-        private void set_51_UIElement_KeyTipVerticalOffset(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyTipVerticalOffset = (global::System.Double)Value;
-        }
-        private object get_52_UIElement_KeyboardAcceleratorPlacementMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyboardAcceleratorPlacementMode;
-        }
-        private void set_52_UIElement_KeyboardAcceleratorPlacementMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyboardAcceleratorPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode)Value;
-        }
-        private object get_53_UIElement_KeyboardAcceleratorPlacementTarget(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyboardAcceleratorPlacementTarget;
-        }
-        private void set_53_UIElement_KeyboardAcceleratorPlacementTarget(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.KeyboardAcceleratorPlacementTarget = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_54_UIElement_KeyboardAccelerators(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.KeyboardAccelerators;
-        }
-        private object get_55_KeyboardAccelerator_IsEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            return that.IsEnabled;
-        }
-        private void set_55_KeyboardAccelerator_IsEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            that.IsEnabled = (global::System.Boolean)Value;
-        }
-        private object get_56_KeyboardAccelerator_Key(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            return that.Key;
-        }
-        private void set_56_KeyboardAccelerator_Key(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            that.Key = (global::Windows.System.VirtualKey)Value;
-        }
-        private object get_57_KeyboardAccelerator_Modifiers(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            return that.Modifiers;
-        }
-        private void set_57_KeyboardAccelerator_Modifiers(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            that.Modifiers = (global::Windows.System.VirtualKeyModifiers)Value;
-        }
-        private object get_58_KeyboardAccelerator_ScopeOwner(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            return that.ScopeOwner;
-        }
-        private void set_58_KeyboardAccelerator_ScopeOwner(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
-            that.ScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_59_UIElement_Lights(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Lights;
-        }
-        private object get_60_UIElement_ManipulationMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ManipulationMode;
-        }
-        private void set_60_UIElement_ManipulationMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.ManipulationMode = (global::Microsoft.UI.Xaml.Input.ManipulationModes)Value;
-        }
-        private object get_61_UIElement_Opacity(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Opacity;
-        }
-        private void set_61_UIElement_Opacity(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Opacity = (global::System.Double)Value;
-        }
-        private object get_62_UIElement_OpacityTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.OpacityTransition;
-        }
-        private void set_62_UIElement_OpacityTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.OpacityTransition = (global::Microsoft.UI.Xaml.ScalarTransition)Value;
-        }
-        private object get_63_UIElement_PointerCaptures(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.PointerCaptures;
-        }
-        private object get_64_UIElement_Projection(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Projection;
-        }
-        private void set_64_UIElement_Projection(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Projection = (global::Microsoft.UI.Xaml.Media.Projection)Value;
-        }
-        private object get_65_UIElement_RasterizationScale(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RasterizationScale;
-        }
-        private void set_65_UIElement_RasterizationScale(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.RasterizationScale = (global::System.Double)Value;
-        }
-        private object get_66_UIElement_RenderSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RenderSize;
-        }
-        private object get_67_UIElement_RenderTransform(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RenderTransform;
-        }
-        private void set_67_UIElement_RenderTransform(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.RenderTransform = (global::Microsoft.UI.Xaml.Media.Transform)Value;
-        }
-        private object get_68_UIElement_RenderTransformOrigin(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RenderTransformOrigin;
-        }
-        private void set_68_UIElement_RenderTransformOrigin(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.RenderTransformOrigin = (global::Windows.Foundation.Point)Value;
-        }
-        private object get_69_UIElement_Rotation(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Rotation;
-        }
-        private void set_69_UIElement_Rotation(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Rotation = (global::System.Single)Value;
-        }
-        private object get_70_UIElement_RotationAxis(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RotationAxis;
-        }
-        private void set_70_UIElement_RotationAxis(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.RotationAxis = (global::System.Numerics.Vector3)Value;
-        }
-        private object get_71_UIElement_RotationTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.RotationTransition;
-        }
-        private void set_71_UIElement_RotationTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.RotationTransition = (global::Microsoft.UI.Xaml.ScalarTransition)Value;
-        }
-        private object get_72_UIElement_Scale(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Scale;
-        }
-        private void set_72_UIElement_Scale(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Scale = (global::System.Numerics.Vector3)Value;
-        }
-        private object get_73_UIElement_ScaleTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.ScaleTransition;
-        }
-        private void set_73_UIElement_ScaleTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.ScaleTransition = (global::Microsoft.UI.Xaml.Vector3Transition)Value;
-        }
-        private object get_74_UIElement_Shadow(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Shadow;
-        }
-        private void set_74_UIElement_Shadow(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Shadow = (global::Microsoft.UI.Xaml.Media.Shadow)Value;
-        }
-        private object get_75_UIElement_TabFocusNavigation(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.TabFocusNavigation;
-        }
-        private void set_75_UIElement_TabFocusNavigation(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.TabFocusNavigation = (global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode)Value;
-        }
-        private object get_76_UIElement_TabIndex(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.TabIndex;
-        }
-        private void set_76_UIElement_TabIndex(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.TabIndex = (global::System.Int32)Value;
-        }
-        private object get_77_UIElement_Transform3D(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Transform3D;
-        }
-        private void set_77_UIElement_Transform3D(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Transform3D = (global::Microsoft.UI.Xaml.Media.Media3D.Transform3D)Value;
-        }
-        private object get_78_UIElement_TransformMatrix(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.TransformMatrix;
-        }
-        private void set_78_UIElement_TransformMatrix(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.TransformMatrix = (global::System.Numerics.Matrix4x4)Value;
-        }
-        private object get_79_UIElement_Transitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Transitions;
-        }
-        private void set_79_UIElement_Transitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Transitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_80_UIElement_Translation(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Translation;
-        }
-        private void set_80_UIElement_Translation(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Translation = (global::System.Numerics.Vector3)Value;
-        }
-        private object get_81_UIElement_TranslationTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.TranslationTransition;
-        }
-        private void set_81_UIElement_TranslationTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.TranslationTransition = (global::Microsoft.UI.Xaml.Vector3Transition)Value;
-        }
-        private object get_82_UIElement_UseLayoutRounding(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.UseLayoutRounding;
-        }
-        private void set_82_UIElement_UseLayoutRounding(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.UseLayoutRounding = (global::System.Boolean)Value;
-        }
-        private object get_83_UIElement_UseSystemFocusVisuals(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.UseSystemFocusVisuals;
-        }
-        private void set_83_UIElement_UseSystemFocusVisuals(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.UseSystemFocusVisuals = (global::System.Boolean)Value;
-        }
-        private object get_84_UIElement_Visibility(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.Visibility;
-        }
-        private void set_84_UIElement_Visibility(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.Visibility = (global::Microsoft.UI.Xaml.Visibility)Value;
-        }
-        private object get_85_UIElement_XYFocusDown(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusDown;
-        }
-        private void set_85_UIElement_XYFocusDown(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusDown = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_86_UIElement_XYFocusDownNavigationStrategy(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusDownNavigationStrategy;
-        }
-        private void set_86_UIElement_XYFocusDownNavigationStrategy(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusDownNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
-        }
-        private object get_87_UIElement_XYFocusKeyboardNavigation(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusKeyboardNavigation;
-        }
-        private void set_87_UIElement_XYFocusKeyboardNavigation(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusKeyboardNavigation = (global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode)Value;
-        }
-        private object get_88_UIElement_XYFocusLeft(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusLeft;
-        }
-        private void set_88_UIElement_XYFocusLeft(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusLeft = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_89_UIElement_XYFocusLeftNavigationStrategy(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusLeftNavigationStrategy;
-        }
-        private void set_89_UIElement_XYFocusLeftNavigationStrategy(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusLeftNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
-        }
-        private object get_90_UIElement_XYFocusRight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusRight;
-        }
-        private void set_90_UIElement_XYFocusRight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusRight = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_91_UIElement_XYFocusRightNavigationStrategy(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusRightNavigationStrategy;
-        }
-        private void set_91_UIElement_XYFocusRightNavigationStrategy(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusRightNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
-        }
-        private object get_92_UIElement_XYFocusUp(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusUp;
-        }
-        private void set_92_UIElement_XYFocusUp(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusUp = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_93_UIElement_XYFocusUpNavigationStrategy(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XYFocusUpNavigationStrategy;
-        }
-        private void set_93_UIElement_XYFocusUpNavigationStrategy(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XYFocusUpNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
-        }
-        private object get_94_UIElement_XamlRoot(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            return that.XamlRoot;
-        }
-        private void set_94_UIElement_XamlRoot(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
-            that.XamlRoot = (global::Microsoft.UI.Xaml.XamlRoot)Value;
-        }
-        private object get_95_Grid_RowDefinitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.RowDefinitions;
-        }
-        private object get_96_RowDefinition_Height(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            return that.Height;
-        }
-        private void set_96_RowDefinition_Height(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            that.Height = (global::Microsoft.UI.Xaml.GridLength)Value;
-        }
-        private object get_97_RowDefinition_ActualHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            return that.ActualHeight;
-        }
-        private object get_98_RowDefinition_MaxHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            return that.MaxHeight;
-        }
-        private void set_98_RowDefinition_MaxHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            that.MaxHeight = (global::System.Double)Value;
-        }
-        private object get_99_RowDefinition_MinHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            return that.MinHeight;
-        }
-        private void set_99_RowDefinition_MinHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
-            that.MinHeight = (global::System.Double)Value;
-        }
-        private object get_100_Grid_ColumnDefinitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.ColumnDefinitions;
-        }
-        private object get_101_ColumnDefinition_Width(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            return that.Width;
-        }
-        private void set_101_ColumnDefinition_Width(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            that.Width = (global::Microsoft.UI.Xaml.GridLength)Value;
-        }
-        private object get_102_ColumnDefinition_ActualWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            return that.ActualWidth;
-        }
-        private object get_103_ColumnDefinition_MaxWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            return that.MaxWidth;
-        }
-        private void set_103_ColumnDefinition_MaxWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            that.MaxWidth = (global::System.Double)Value;
-        }
-        private object get_104_ColumnDefinition_MinWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            return that.MinWidth;
-        }
-        private void set_104_ColumnDefinition_MinWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
-            that.MinWidth = (global::System.Double)Value;
-        }
-        private object get_105_Grid_BackgroundSizing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.BackgroundSizing;
-        }
-        private void set_105_Grid_BackgroundSizing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
-        }
-        private object get_106_Grid_BorderBrush(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.BorderBrush;
-        }
-        private void set_106_Grid_BorderBrush(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_107_Grid_BorderThickness(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.BorderThickness;
-        }
-        private void set_107_Grid_BorderThickness(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_108_Grid_ColumnSpacing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.ColumnSpacing;
-        }
-        private void set_108_Grid_ColumnSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.ColumnSpacing = (global::System.Double)Value;
-        }
-        private object get_109_Grid_CornerRadius(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.CornerRadius;
-        }
-        private void set_109_Grid_CornerRadius(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
-        }
-        private object get_110_Grid_Padding(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.Padding;
-        }
-        private void set_110_Grid_Padding(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_111_Grid_RowSpacing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            return that.RowSpacing;
-        }
-        private void set_111_Grid_RowSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
-            that.RowSpacing = (global::System.Double)Value;
-        }
-        private object get_112_Panel_Background(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            return that.Background;
-        }
-        private void set_112_Panel_Background(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_113_Panel_BackgroundTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            return that.BackgroundTransition;
-        }
-        private void set_113_Panel_BackgroundTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            that.BackgroundTransition = (global::Microsoft.UI.Xaml.BrushTransition)Value;
-        }
-        private object get_114_Panel_ChildrenTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            return that.ChildrenTransitions;
-        }
-        private void set_114_Panel_ChildrenTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            that.ChildrenTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_115_Panel_IsItemsHost(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
-            return that.IsItemsHost;
-        }
-        private object get_116_FrameworkElement_ActualHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.ActualHeight;
-        }
-        private object get_117_FrameworkElement_ActualTheme(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.ActualTheme;
-        }
-        private object get_118_FrameworkElement_ActualWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.ActualWidth;
-        }
-        private object get_119_FrameworkElement_AllowFocusOnInteraction(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.AllowFocusOnInteraction;
-        }
-        private void set_119_FrameworkElement_AllowFocusOnInteraction(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.AllowFocusOnInteraction = (global::System.Boolean)Value;
-        }
-        private object get_120_FrameworkElement_AllowFocusWhenDisabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.AllowFocusWhenDisabled;
-        }
-        private void set_120_FrameworkElement_AllowFocusWhenDisabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.AllowFocusWhenDisabled = (global::System.Boolean)Value;
-        }
-        private object get_121_FrameworkElement_BaseUri(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.BaseUri;
-        }
-        private object get_122_FrameworkElement_DataContext(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.DataContext;
-        }
-        private void set_122_FrameworkElement_DataContext(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.DataContext = (global::System.Object)Value;
-        }
-        private object get_123_FrameworkElement_FlowDirection(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FlowDirection;
-        }
-        private void set_123_FrameworkElement_FlowDirection(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FlowDirection = (global::Microsoft.UI.Xaml.FlowDirection)Value;
-        }
-        private object get_124_FrameworkElement_FocusVisualMargin(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FocusVisualMargin;
-        }
-        private void set_124_FrameworkElement_FocusVisualMargin(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FocusVisualMargin = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_125_FrameworkElement_FocusVisualPrimaryBrush(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FocusVisualPrimaryBrush;
-        }
-        private void set_125_FrameworkElement_FocusVisualPrimaryBrush(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FocusVisualPrimaryBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_126_FrameworkElement_FocusVisualPrimaryThickness(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FocusVisualPrimaryThickness;
-        }
-        private void set_126_FrameworkElement_FocusVisualPrimaryThickness(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FocusVisualPrimaryThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_127_FrameworkElement_FocusVisualSecondaryBrush(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FocusVisualSecondaryBrush;
-        }
-        private void set_127_FrameworkElement_FocusVisualSecondaryBrush(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FocusVisualSecondaryBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_128_FrameworkElement_FocusVisualSecondaryThickness(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.FocusVisualSecondaryThickness;
-        }
-        private void set_128_FrameworkElement_FocusVisualSecondaryThickness(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.FocusVisualSecondaryThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_129_FrameworkElement_Height(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Height;
-        }
-        private void set_129_FrameworkElement_Height(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Height = (global::System.Double)Value;
-        }
-        private object get_130_FrameworkElement_HorizontalAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.HorizontalAlignment;
-        }
-        private void set_130_FrameworkElement_HorizontalAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.HorizontalAlignment = (global::Microsoft.UI.Xaml.HorizontalAlignment)Value;
-        }
-        private object get_131_FrameworkElement_IsLoaded(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.IsLoaded;
-        }
-        private object get_132_FrameworkElement_Language(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Language;
-        }
-        private void set_132_FrameworkElement_Language(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Language = (global::System.String)Value;
-        }
-        private object get_133_FrameworkElement_Margin(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Margin;
-        }
-        private void set_133_FrameworkElement_Margin(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Margin = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_134_FrameworkElement_MaxHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.MaxHeight;
-        }
-        private void set_134_FrameworkElement_MaxHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.MaxHeight = (global::System.Double)Value;
-        }
-        private object get_135_FrameworkElement_MaxWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.MaxWidth;
-        }
-        private void set_135_FrameworkElement_MaxWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.MaxWidth = (global::System.Double)Value;
-        }
-        private object get_136_FrameworkElement_MinHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.MinHeight;
-        }
-        private void set_136_FrameworkElement_MinHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.MinHeight = (global::System.Double)Value;
-        }
-        private object get_137_FrameworkElement_MinWidth(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.MinWidth;
-        }
-        private void set_137_FrameworkElement_MinWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.MinWidth = (global::System.Double)Value;
-        }
-        private object get_138_FrameworkElement_Name(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Name;
-        }
-        private void set_138_FrameworkElement_Name(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Name = (global::System.String)Value;
-        }
-        private object get_139_FrameworkElement_Parent(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Parent;
-        }
-        private object get_140_FrameworkElement_RequestedTheme(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.RequestedTheme;
-        }
-        private void set_140_FrameworkElement_RequestedTheme(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.RequestedTheme = (global::Microsoft.UI.Xaml.ElementTheme)Value;
-        }
-        private object get_141_FrameworkElement_Resources(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Resources;
-        }
-        private void set_141_FrameworkElement_Resources(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Resources = (global::Microsoft.UI.Xaml.ResourceDictionary)Value;
-        }
-        private object get_142_FrameworkElement_Style(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Style;
-        }
-        private void set_142_FrameworkElement_Style(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Style = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_143_Style_Setters(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Style)instance;
-            return that.Setters;
-        }
-        private object get_144_SetterBase_IsSealed(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.SetterBase)instance;
-            return that.IsSealed;
-        }
-        private object get_145_FrameworkElement_Tag(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Tag;
-        }
-        private void set_145_FrameworkElement_Tag(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Tag = (global::System.Object)Value;
-        }
-        private object get_146_FrameworkElement_Triggers(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Triggers;
-        }
-        private object get_147_FrameworkElement_VerticalAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.VerticalAlignment;
-        }
-        private void set_147_FrameworkElement_VerticalAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.VerticalAlignment = (global::Microsoft.UI.Xaml.VerticalAlignment)Value;
-        }
-        private object get_148_FrameworkElement_Width(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            return that.Width;
-        }
-        private void set_148_FrameworkElement_Width(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
-            that.Width = (global::System.Double)Value;
-        }
-        private object get_149_Grid_ColumnSpan(object instance)
-        {
-            return global::Microsoft.UI.Xaml.Controls.Grid.GetColumnSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance);
-        }
-        private void set_149_Grid_ColumnSpan(object instance, object Value)
-        {
-            global::Microsoft.UI.Xaml.Controls.Grid.SetColumnSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
-        }
-        private object get_150_Grid_Row(object instance)
-        {
-            return global::Microsoft.UI.Xaml.Controls.Grid.GetRow((global::Microsoft.UI.Xaml.FrameworkElement)instance);
-        }
-        private void set_150_Grid_Row(object instance, object Value)
-        {
-            global::Microsoft.UI.Xaml.Controls.Grid.SetRow((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
-        }
-        private object get_151_Grid_Column(object instance)
-        {
-            return global::Microsoft.UI.Xaml.Controls.Grid.GetColumn((global::Microsoft.UI.Xaml.FrameworkElement)instance);
-        }
-        private void set_151_Grid_Column(object instance, object Value)
-        {
-            global::Microsoft.UI.Xaml.Controls.Grid.SetColumn((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
-        }
-        private object get_152_Grid_RowSpan(object instance)
-        {
-            return global::Microsoft.UI.Xaml.Controls.Grid.GetRowSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance);
-        }
-        private void set_152_Grid_RowSpan(object instance, object Value)
-        {
-            global::Microsoft.UI.Xaml.Controls.Grid.SetRowSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
-        }
-        private object get_153_Border_Child(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.Child;
-        }
-        private void set_153_Border_Child(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.Child = (global::Microsoft.UI.Xaml.UIElement)Value;
-        }
-        private object get_154_Border_Background(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.Background;
-        }
-        private void set_154_Border_Background(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_155_Border_BackgroundSizing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.BackgroundSizing;
-        }
-        private void set_155_Border_BackgroundSizing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
-        }
-        private object get_156_Border_BackgroundTransition(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.BackgroundTransition;
-        }
-        private void set_156_Border_BackgroundTransition(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.BackgroundTransition = (global::Microsoft.UI.Xaml.BrushTransition)Value;
-        }
-        private object get_157_Border_BorderBrush(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.BorderBrush;
-        }
-        private void set_157_Border_BorderBrush(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_158_Border_BorderThickness(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.BorderThickness;
-        }
-        private void set_158_Border_BorderThickness(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_159_Border_ChildTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.ChildTransitions;
-        }
-        private void set_159_Border_ChildTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.ChildTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_160_Border_CornerRadius(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.CornerRadius;
-        }
-        private void set_160_Border_CornerRadius(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
-        }
-        private object get_161_Border_Padding(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            return that.Padding;
-        }
-        private void set_161_Border_Padding(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
-            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_162_TextBox_Header(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.Header;
-        }
-        private void set_162_TextBox_Header(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_163_TextBox_AcceptsReturn(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.AcceptsReturn;
-        }
-        private void set_163_TextBox_AcceptsReturn(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.AcceptsReturn = (global::System.Boolean)Value;
-        }
-        private object get_164_TextBox_CanPasteClipboardContent(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.CanPasteClipboardContent;
-        }
-        private object get_165_TextBox_CanRedo(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.CanRedo;
-        }
-        private object get_166_TextBox_CanUndo(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.CanUndo;
-        }
-        private object get_167_TextBox_CharacterCasing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.CharacterCasing;
-        }
-        private void set_167_TextBox_CharacterCasing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.CharacterCasing = (global::Microsoft.UI.Xaml.Controls.CharacterCasing)Value;
-        }
-        private object get_168_TextBox_Description(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.Description;
-        }
-        private void set_168_TextBox_Description(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.Description = (global::System.Object)Value;
-        }
-        private object get_169_TextBox_DesiredCandidateWindowAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.DesiredCandidateWindowAlignment;
-        }
-        private void set_169_TextBox_DesiredCandidateWindowAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.DesiredCandidateWindowAlignment = (global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)Value;
-        }
-        private object get_170_TextBox_HeaderTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_170_TextBox_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_171_FrameworkTemplate_Template(object instance)
-        {
-            return null;
-        }
-        private void set_171_FrameworkTemplate_Template(object instance, object Value)
-        {
-        }
-        private object get_172_DataTemplate_Template(object instance)
-        {
-            return null;
-        }
-        private void set_172_DataTemplate_Template(object instance, object Value)
-        {
-        }
-        private object get_173_TextBox_HorizontalTextAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.HorizontalTextAlignment;
-        }
-        private void set_173_TextBox_HorizontalTextAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.HorizontalTextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
-        }
-        private object get_174_TextBox_InputScope(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.InputScope;
-        }
-        private void set_174_TextBox_InputScope(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.InputScope = (global::Microsoft.UI.Xaml.Input.InputScope)Value;
-        }
-        private object get_175_TextBox_IsColorFontEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.IsColorFontEnabled;
-        }
-        private void set_175_TextBox_IsColorFontEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.IsColorFontEnabled = (global::System.Boolean)Value;
-        }
-        private object get_176_TextBox_IsReadOnly(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.IsReadOnly;
-        }
-        private void set_176_TextBox_IsReadOnly(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.IsReadOnly = (global::System.Boolean)Value;
-        }
-        private object get_177_TextBox_IsSpellCheckEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.IsSpellCheckEnabled;
-        }
-        private void set_177_TextBox_IsSpellCheckEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.IsSpellCheckEnabled = (global::System.Boolean)Value;
-        }
-        private object get_178_TextBox_IsTextPredictionEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.IsTextPredictionEnabled;
-        }
-        private void set_178_TextBox_IsTextPredictionEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.IsTextPredictionEnabled = (global::System.Boolean)Value;
-        }
-        private object get_179_TextBox_MaxLength(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.MaxLength;
-        }
-        private void set_179_TextBox_MaxLength(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.MaxLength = (global::System.Int32)Value;
-        }
-        private object get_180_TextBox_PlaceholderForeground(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.PlaceholderForeground;
-        }
-        private void set_180_TextBox_PlaceholderForeground(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_181_TextBox_PlaceholderText(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.PlaceholderText;
-        }
-        private void set_181_TextBox_PlaceholderText(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.PlaceholderText = (global::System.String)Value;
-        }
-        private object get_182_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.PreventKeyboardDisplayOnProgrammaticFocus;
-        }
-        private void set_182_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.PreventKeyboardDisplayOnProgrammaticFocus = (global::System.Boolean)Value;
-        }
-        private object get_183_TextBox_ProofingMenuFlyout(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.ProofingMenuFlyout;
-        }
-        private object get_184_TextBox_SelectedText(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectedText;
-        }
-        private void set_184_TextBox_SelectedText(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectedText = (global::System.String)Value;
-        }
-        private object get_185_TextBox_SelectionFlyout(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectionFlyout;
-        }
-        private void set_185_TextBox_SelectionFlyout(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
-        }
-        private object get_186_TextBox_SelectionHighlightColor(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectionHighlightColor;
-        }
-        private void set_186_TextBox_SelectionHighlightColor(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
-        }
-        private object get_187_SolidColorBrush_Color(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)instance;
-            return that.Color;
-        }
-        private void set_187_SolidColorBrush_Color(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)instance;
-            that.Color = (global::Windows.UI.Color)Value;
-        }
-        private object get_188_TextBox_SelectionHighlightColorWhenNotFocused(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectionHighlightColorWhenNotFocused;
-        }
-        private void set_188_TextBox_SelectionHighlightColorWhenNotFocused(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectionHighlightColorWhenNotFocused = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
-        }
-        private object get_189_TextBox_SelectionLength(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectionLength;
-        }
-        private void set_189_TextBox_SelectionLength(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectionLength = (global::System.Int32)Value;
-        }
-        private object get_190_TextBox_SelectionStart(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.SelectionStart;
-        }
-        private void set_190_TextBox_SelectionStart(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.SelectionStart = (global::System.Int32)Value;
-        }
-        private object get_191_TextBox_Text(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.Text;
-        }
-        private void set_191_TextBox_Text(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.Text = (global::System.String)Value;
-        }
-        private object get_192_TextBox_TextAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.TextAlignment;
-        }
-        private void set_192_TextBox_TextAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.TextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
-        }
-        private object get_193_TextBox_TextReadingOrder(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.TextReadingOrder;
-        }
-        private void set_193_TextBox_TextReadingOrder(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.TextReadingOrder = (global::Microsoft.UI.Xaml.TextReadingOrder)Value;
-        }
-        private object get_194_TextBox_TextWrapping(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.TextWrapping;
-        }
-        private void set_194_TextBox_TextWrapping(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.TextWrapping = (global::Microsoft.UI.Xaml.TextWrapping)Value;
-        }
-        private object get_195_Control_Background(object instance)
+        private object get_16_Control_Background(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.Background;
         }
-        private void set_195_Control_Background(object instance, object Value)
+        private void set_16_Control_Background(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_196_Control_BackgroundSizing(object instance)
+        private object get_17_Control_BackgroundSizing(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.BackgroundSizing;
         }
-        private void set_196_Control_BackgroundSizing(object instance, object Value)
+        private void set_17_Control_BackgroundSizing(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
         }
-        private object get_197_Control_BorderBrush(object instance)
+        private object get_18_Control_BorderBrush(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.BorderBrush;
         }
-        private void set_197_Control_BorderBrush(object instance, object Value)
+        private void set_18_Control_BorderBrush(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_198_Control_BorderThickness(object instance)
+        private object get_19_Control_BorderThickness(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.BorderThickness;
         }
-        private void set_198_Control_BorderThickness(object instance, object Value)
+        private void set_19_Control_BorderThickness(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_199_Control_CharacterSpacing(object instance)
+        private object get_20_Control_CharacterSpacing(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.CharacterSpacing;
         }
-        private void set_199_Control_CharacterSpacing(object instance, object Value)
+        private void set_20_Control_CharacterSpacing(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.CharacterSpacing = (global::System.Int32)Value;
         }
-        private object get_200_Control_CornerRadius(object instance)
+        private object get_21_Control_CornerRadius(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.CornerRadius;
         }
-        private void set_200_Control_CornerRadius(object instance, object Value)
+        private void set_21_Control_CornerRadius(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
         }
-        private object get_201_Control_DefaultStyleResourceUri(object instance)
+        private object get_22_Control_DefaultStyleResourceUri(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.DefaultStyleResourceUri;
         }
-        private void set_201_Control_DefaultStyleResourceUri(object instance, object Value)
+        private void set_22_Control_DefaultStyleResourceUri(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.DefaultStyleResourceUri = (global::System.Uri)Value;
         }
-        private object get_202_Control_ElementSoundMode(object instance)
+        private object get_23_Control_ElementSoundMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.ElementSoundMode;
         }
-        private void set_202_Control_ElementSoundMode(object instance, object Value)
+        private void set_23_Control_ElementSoundMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.ElementSoundMode = (global::Microsoft.UI.Xaml.ElementSoundMode)Value;
         }
-        private object get_203_Control_FontFamily(object instance)
+        private object get_24_Control_FontFamily(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.FontFamily;
         }
-        private void set_203_Control_FontFamily(object instance, object Value)
+        private void set_24_Control_FontFamily(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.FontFamily = (global::Microsoft.UI.Xaml.Media.FontFamily)Value;
         }
-        private object get_204_Control_FontSize(object instance)
+        private object get_25_Control_FontSize(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.FontSize;
         }
-        private void set_204_Control_FontSize(object instance, object Value)
+        private void set_25_Control_FontSize(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.FontSize = (global::System.Double)Value;
         }
-        private object get_205_Control_FontStretch(object instance)
+        private object get_26_Control_FontStretch(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.FontStretch;
         }
-        private void set_205_Control_FontStretch(object instance, object Value)
+        private void set_26_Control_FontStretch(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
         }
-        private object get_206_Control_FontStyle(object instance)
+        private object get_27_Control_FontStyle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.FontStyle;
         }
-        private void set_206_Control_FontStyle(object instance, object Value)
+        private void set_27_Control_FontStyle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
         }
-        private object get_207_Control_FontWeight(object instance)
+        private object get_28_Control_FontWeight(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.FontWeight;
         }
-        private void set_207_Control_FontWeight(object instance, object Value)
+        private void set_28_Control_FontWeight(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
         }
-        private object get_208_Control_Foreground(object instance)
+        private object get_29_Control_Foreground(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.Foreground;
         }
-        private void set_208_Control_Foreground(object instance, object Value)
+        private void set_29_Control_Foreground(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_209_Control_HorizontalContentAlignment(object instance)
+        private object get_30_Control_HorizontalContentAlignment(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.HorizontalContentAlignment;
         }
-        private void set_209_Control_HorizontalContentAlignment(object instance, object Value)
+        private void set_30_Control_HorizontalContentAlignment(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.HorizontalContentAlignment = (global::Microsoft.UI.Xaml.HorizontalAlignment)Value;
         }
-        private object get_210_Control_IsEnabled(object instance)
+        private object get_31_Control_IsEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.IsEnabled;
         }
-        private void set_210_Control_IsEnabled(object instance, object Value)
+        private void set_31_Control_IsEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.IsEnabled = (global::System.Boolean)Value;
         }
-        private object get_211_Control_IsFocusEngaged(object instance)
+        private object get_32_Control_IsFocusEngaged(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.IsFocusEngaged;
         }
-        private void set_211_Control_IsFocusEngaged(object instance, object Value)
+        private void set_32_Control_IsFocusEngaged(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.IsFocusEngaged = (global::System.Boolean)Value;
         }
-        private object get_212_Control_IsFocusEngagementEnabled(object instance)
+        private object get_33_Control_IsFocusEngagementEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.IsFocusEngagementEnabled;
         }
-        private void set_212_Control_IsFocusEngagementEnabled(object instance, object Value)
+        private void set_33_Control_IsFocusEngagementEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.IsFocusEngagementEnabled = (global::System.Boolean)Value;
         }
-        private object get_213_Control_IsTextScaleFactorEnabled(object instance)
+        private object get_34_Control_IsTextScaleFactorEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.IsTextScaleFactorEnabled;
         }
-        private void set_213_Control_IsTextScaleFactorEnabled(object instance, object Value)
+        private void set_34_Control_IsTextScaleFactorEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.IsTextScaleFactorEnabled = (global::System.Boolean)Value;
         }
-        private object get_214_Control_Padding(object instance)
+        private object get_35_Control_Padding(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.Padding;
         }
-        private void set_214_Control_Padding(object instance, object Value)
+        private void set_35_Control_Padding(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_215_Control_RequiresPointer(object instance)
+        private object get_36_Control_RequiresPointer(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.RequiresPointer;
         }
-        private void set_215_Control_RequiresPointer(object instance, object Value)
+        private void set_36_Control_RequiresPointer(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.RequiresPointer = (global::Microsoft.UI.Xaml.Controls.RequiresPointer)Value;
         }
-        private object get_216_Control_TabNavigation(object instance)
+        private object get_37_Control_TabNavigation(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.TabNavigation;
         }
-        private void set_216_Control_TabNavigation(object instance, object Value)
+        private void set_37_Control_TabNavigation(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.TabNavigation = (global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode)Value;
         }
-        private object get_217_Control_Template(object instance)
+        private object get_38_Control_Template(object instance)
         {
             return null;
         }
-        private void set_217_Control_Template(object instance, object Value)
+        private void set_38_Control_Template(object instance, object Value)
         {
         }
-        private object get_218_ControlTemplate_Template(object instance)
+        private object get_39_FrameworkTemplate_Template(object instance)
         {
             return null;
         }
-        private void set_218_ControlTemplate_Template(object instance, object Value)
+        private void set_39_FrameworkTemplate_Template(object instance, object Value)
         {
         }
-        private object get_219_Control_VerticalContentAlignment(object instance)
+        private object get_40_ControlTemplate_Template(object instance)
+        {
+            return null;
+        }
+        private void set_40_ControlTemplate_Template(object instance, object Value)
+        {
+        }
+        private object get_41_Control_VerticalContentAlignment(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             return that.VerticalContentAlignment;
         }
-        private void set_219_Control_VerticalContentAlignment(object instance, object Value)
+        private void set_41_Control_VerticalContentAlignment(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Control)instance;
             that.VerticalContentAlignment = (global::Microsoft.UI.Xaml.VerticalAlignment)Value;
         }
-        private object get_220_Control_IsTemplateFocusTarget(object instance)
+        private object get_42_FrameworkElement_ActualHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.ActualHeight;
+        }
+        private object get_43_FrameworkElement_ActualTheme(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.ActualTheme;
+        }
+        private object get_44_FrameworkElement_ActualWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.ActualWidth;
+        }
+        private object get_45_FrameworkElement_AllowFocusOnInteraction(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.AllowFocusOnInteraction;
+        }
+        private void set_45_FrameworkElement_AllowFocusOnInteraction(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.AllowFocusOnInteraction = (global::System.Boolean)Value;
+        }
+        private object get_46_FrameworkElement_AllowFocusWhenDisabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.AllowFocusWhenDisabled;
+        }
+        private void set_46_FrameworkElement_AllowFocusWhenDisabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.AllowFocusWhenDisabled = (global::System.Boolean)Value;
+        }
+        private object get_47_FrameworkElement_BaseUri(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.BaseUri;
+        }
+        private object get_48_FrameworkElement_DataContext(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.DataContext;
+        }
+        private void set_48_FrameworkElement_DataContext(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.DataContext = (global::System.Object)Value;
+        }
+        private object get_49_FrameworkElement_FlowDirection(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FlowDirection;
+        }
+        private void set_49_FrameworkElement_FlowDirection(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FlowDirection = (global::Microsoft.UI.Xaml.FlowDirection)Value;
+        }
+        private object get_50_FrameworkElement_FocusVisualMargin(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FocusVisualMargin;
+        }
+        private void set_50_FrameworkElement_FocusVisualMargin(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FocusVisualMargin = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_51_FrameworkElement_FocusVisualPrimaryBrush(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FocusVisualPrimaryBrush;
+        }
+        private void set_51_FrameworkElement_FocusVisualPrimaryBrush(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FocusVisualPrimaryBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_52_FrameworkElement_FocusVisualPrimaryThickness(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FocusVisualPrimaryThickness;
+        }
+        private void set_52_FrameworkElement_FocusVisualPrimaryThickness(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FocusVisualPrimaryThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_53_FrameworkElement_FocusVisualSecondaryBrush(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FocusVisualSecondaryBrush;
+        }
+        private void set_53_FrameworkElement_FocusVisualSecondaryBrush(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FocusVisualSecondaryBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_54_FrameworkElement_FocusVisualSecondaryThickness(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.FocusVisualSecondaryThickness;
+        }
+        private void set_54_FrameworkElement_FocusVisualSecondaryThickness(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.FocusVisualSecondaryThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_55_FrameworkElement_Height(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Height;
+        }
+        private void set_55_FrameworkElement_Height(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Height = (global::System.Double)Value;
+        }
+        private object get_56_FrameworkElement_HorizontalAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.HorizontalAlignment;
+        }
+        private void set_56_FrameworkElement_HorizontalAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.HorizontalAlignment = (global::Microsoft.UI.Xaml.HorizontalAlignment)Value;
+        }
+        private object get_57_FrameworkElement_IsLoaded(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.IsLoaded;
+        }
+        private object get_58_FrameworkElement_Language(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Language;
+        }
+        private void set_58_FrameworkElement_Language(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Language = (global::System.String)Value;
+        }
+        private object get_59_FrameworkElement_Margin(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Margin;
+        }
+        private void set_59_FrameworkElement_Margin(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Margin = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_60_FrameworkElement_MaxHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.MaxHeight;
+        }
+        private void set_60_FrameworkElement_MaxHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.MaxHeight = (global::System.Double)Value;
+        }
+        private object get_61_FrameworkElement_MaxWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.MaxWidth;
+        }
+        private void set_61_FrameworkElement_MaxWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.MaxWidth = (global::System.Double)Value;
+        }
+        private object get_62_FrameworkElement_MinHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.MinHeight;
+        }
+        private void set_62_FrameworkElement_MinHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.MinHeight = (global::System.Double)Value;
+        }
+        private object get_63_FrameworkElement_MinWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.MinWidth;
+        }
+        private void set_63_FrameworkElement_MinWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.MinWidth = (global::System.Double)Value;
+        }
+        private object get_64_FrameworkElement_Name(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Name;
+        }
+        private void set_64_FrameworkElement_Name(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Name = (global::System.String)Value;
+        }
+        private object get_65_FrameworkElement_Parent(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Parent;
+        }
+        private object get_66_FrameworkElement_RequestedTheme(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.RequestedTheme;
+        }
+        private void set_66_FrameworkElement_RequestedTheme(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.RequestedTheme = (global::Microsoft.UI.Xaml.ElementTheme)Value;
+        }
+        private object get_67_FrameworkElement_Resources(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Resources;
+        }
+        private void set_67_FrameworkElement_Resources(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Resources = (global::Microsoft.UI.Xaml.ResourceDictionary)Value;
+        }
+        private object get_68_FrameworkElement_Style(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Style;
+        }
+        private void set_68_FrameworkElement_Style(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Style = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_69_Style_Setters(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Style)instance;
+            return that.Setters;
+        }
+        private object get_70_SetterBase_IsSealed(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.SetterBase)instance;
+            return that.IsSealed;
+        }
+        private object get_71_FrameworkElement_Tag(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Tag;
+        }
+        private void set_71_FrameworkElement_Tag(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Tag = (global::System.Object)Value;
+        }
+        private object get_72_FrameworkElement_Triggers(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Triggers;
+        }
+        private object get_73_FrameworkElement_VerticalAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.VerticalAlignment;
+        }
+        private void set_73_FrameworkElement_VerticalAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.VerticalAlignment = (global::Microsoft.UI.Xaml.VerticalAlignment)Value;
+        }
+        private object get_74_FrameworkElement_Width(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            return that.Width;
+        }
+        private void set_74_FrameworkElement_Width(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.FrameworkElement)instance;
+            that.Width = (global::System.Double)Value;
+        }
+        private object get_75_UIElement_AccessKey(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.AccessKey;
+        }
+        private void set_75_UIElement_AccessKey(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.AccessKey = (global::System.String)Value;
+        }
+        private object get_76_UIElement_AccessKeyScopeOwner(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.AccessKeyScopeOwner;
+        }
+        private void set_76_UIElement_AccessKeyScopeOwner(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.AccessKeyScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_77_UIElement_ActualOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ActualOffset;
+        }
+        private object get_78_UIElement_ActualSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ActualSize;
+        }
+        private object get_79_UIElement_AllowDrop(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.AllowDrop;
+        }
+        private void set_79_UIElement_AllowDrop(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.AllowDrop = (global::System.Boolean)Value;
+        }
+        private object get_80_UIElement_CacheMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.CacheMode;
+        }
+        private void set_80_UIElement_CacheMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.CacheMode = (global::Microsoft.UI.Xaml.Media.CacheMode)Value;
+        }
+        private object get_81_UIElement_CanBeScrollAnchor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.CanBeScrollAnchor;
+        }
+        private void set_81_UIElement_CanBeScrollAnchor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.CanBeScrollAnchor = (global::System.Boolean)Value;
+        }
+        private object get_82_UIElement_CanDrag(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.CanDrag;
+        }
+        private void set_82_UIElement_CanDrag(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.CanDrag = (global::System.Boolean)Value;
+        }
+        private object get_83_UIElement_CenterPoint(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.CenterPoint;
+        }
+        private void set_83_UIElement_CenterPoint(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.CenterPoint = (global::System.Numerics.Vector3)Value;
+        }
+        private object get_84_UIElement_Clip(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Clip;
+        }
+        private void set_84_UIElement_Clip(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Clip = (global::Microsoft.UI.Xaml.Media.RectangleGeometry)Value;
+        }
+        private object get_85_UIElement_CompositeMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.CompositeMode;
+        }
+        private void set_85_UIElement_CompositeMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.CompositeMode = (global::Microsoft.UI.Xaml.Media.ElementCompositeMode)Value;
+        }
+        private object get_86_UIElement_ContextFlyout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ContextFlyout;
+        }
+        private void set_86_UIElement_ContextFlyout(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.ContextFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
+        }
+        private object get_87_UIElement_DesiredSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.DesiredSize;
+        }
+        private object get_88_UIElement_ExitDisplayModeOnAccessKeyInvoked(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ExitDisplayModeOnAccessKeyInvoked;
+        }
+        private void set_88_UIElement_ExitDisplayModeOnAccessKeyInvoked(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.ExitDisplayModeOnAccessKeyInvoked = (global::System.Boolean)Value;
+        }
+        private object get_89_UIElement_FocusState(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.FocusState;
+        }
+        private object get_90_UIElement_HighContrastAdjustment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.HighContrastAdjustment;
+        }
+        private void set_90_UIElement_HighContrastAdjustment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.HighContrastAdjustment = (global::Microsoft.UI.Xaml.ElementHighContrastAdjustment)Value;
+        }
+        private object get_91_UIElement_IsAccessKeyScope(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsAccessKeyScope;
+        }
+        private void set_91_UIElement_IsAccessKeyScope(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsAccessKeyScope = (global::System.Boolean)Value;
+        }
+        private object get_92_UIElement_IsDoubleTapEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsDoubleTapEnabled;
+        }
+        private void set_92_UIElement_IsDoubleTapEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsDoubleTapEnabled = (global::System.Boolean)Value;
+        }
+        private object get_93_UIElement_IsHitTestVisible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsHitTestVisible;
+        }
+        private void set_93_UIElement_IsHitTestVisible(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsHitTestVisible = (global::System.Boolean)Value;
+        }
+        private object get_94_UIElement_IsHoldingEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsHoldingEnabled;
+        }
+        private void set_94_UIElement_IsHoldingEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsHoldingEnabled = (global::System.Boolean)Value;
+        }
+        private object get_95_UIElement_IsRightTapEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsRightTapEnabled;
+        }
+        private void set_95_UIElement_IsRightTapEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsRightTapEnabled = (global::System.Boolean)Value;
+        }
+        private object get_96_UIElement_IsTabStop(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsTabStop;
+        }
+        private void set_96_UIElement_IsTabStop(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsTabStop = (global::System.Boolean)Value;
+        }
+        private object get_97_UIElement_IsTapEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.IsTapEnabled;
+        }
+        private void set_97_UIElement_IsTapEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.IsTapEnabled = (global::System.Boolean)Value;
+        }
+        private object get_98_UIElement_KeyTipHorizontalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyTipHorizontalOffset;
+        }
+        private void set_98_UIElement_KeyTipHorizontalOffset(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyTipHorizontalOffset = (global::System.Double)Value;
+        }
+        private object get_99_UIElement_KeyTipPlacementMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyTipPlacementMode;
+        }
+        private void set_99_UIElement_KeyTipPlacementMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyTipPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode)Value;
+        }
+        private object get_100_UIElement_KeyTipTarget(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyTipTarget;
+        }
+        private void set_100_UIElement_KeyTipTarget(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyTipTarget = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_101_UIElement_KeyTipVerticalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyTipVerticalOffset;
+        }
+        private void set_101_UIElement_KeyTipVerticalOffset(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyTipVerticalOffset = (global::System.Double)Value;
+        }
+        private object get_102_UIElement_KeyboardAcceleratorPlacementMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyboardAcceleratorPlacementMode;
+        }
+        private void set_102_UIElement_KeyboardAcceleratorPlacementMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyboardAcceleratorPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode)Value;
+        }
+        private object get_103_UIElement_KeyboardAcceleratorPlacementTarget(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyboardAcceleratorPlacementTarget;
+        }
+        private void set_103_UIElement_KeyboardAcceleratorPlacementTarget(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.KeyboardAcceleratorPlacementTarget = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_104_UIElement_KeyboardAccelerators(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.KeyboardAccelerators;
+        }
+        private object get_105_KeyboardAccelerator_IsEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            return that.IsEnabled;
+        }
+        private void set_105_KeyboardAccelerator_IsEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            that.IsEnabled = (global::System.Boolean)Value;
+        }
+        private object get_106_KeyboardAccelerator_Key(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            return that.Key;
+        }
+        private void set_106_KeyboardAccelerator_Key(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            that.Key = (global::Windows.System.VirtualKey)Value;
+        }
+        private object get_107_KeyboardAccelerator_Modifiers(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            return that.Modifiers;
+        }
+        private void set_107_KeyboardAccelerator_Modifiers(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            that.Modifiers = (global::Windows.System.VirtualKeyModifiers)Value;
+        }
+        private object get_108_KeyboardAccelerator_ScopeOwner(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            return that.ScopeOwner;
+        }
+        private void set_108_KeyboardAccelerator_ScopeOwner(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Input.KeyboardAccelerator)instance;
+            that.ScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_109_UIElement_Lights(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Lights;
+        }
+        private object get_110_UIElement_ManipulationMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ManipulationMode;
+        }
+        private void set_110_UIElement_ManipulationMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.ManipulationMode = (global::Microsoft.UI.Xaml.Input.ManipulationModes)Value;
+        }
+        private object get_111_UIElement_Opacity(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Opacity;
+        }
+        private void set_111_UIElement_Opacity(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Opacity = (global::System.Double)Value;
+        }
+        private object get_112_UIElement_OpacityTransition(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.OpacityTransition;
+        }
+        private void set_112_UIElement_OpacityTransition(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.OpacityTransition = (global::Microsoft.UI.Xaml.ScalarTransition)Value;
+        }
+        private object get_113_UIElement_PointerCaptures(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.PointerCaptures;
+        }
+        private object get_114_UIElement_Projection(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Projection;
+        }
+        private void set_114_UIElement_Projection(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Projection = (global::Microsoft.UI.Xaml.Media.Projection)Value;
+        }
+        private object get_115_UIElement_RasterizationScale(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RasterizationScale;
+        }
+        private void set_115_UIElement_RasterizationScale(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.RasterizationScale = (global::System.Double)Value;
+        }
+        private object get_116_UIElement_RenderSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RenderSize;
+        }
+        private object get_117_UIElement_RenderTransform(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RenderTransform;
+        }
+        private void set_117_UIElement_RenderTransform(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.RenderTransform = (global::Microsoft.UI.Xaml.Media.Transform)Value;
+        }
+        private object get_118_UIElement_RenderTransformOrigin(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RenderTransformOrigin;
+        }
+        private void set_118_UIElement_RenderTransformOrigin(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.RenderTransformOrigin = (global::Windows.Foundation.Point)Value;
+        }
+        private object get_119_UIElement_Rotation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Rotation;
+        }
+        private void set_119_UIElement_Rotation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Rotation = (global::System.Single)Value;
+        }
+        private object get_120_UIElement_RotationAxis(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RotationAxis;
+        }
+        private void set_120_UIElement_RotationAxis(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.RotationAxis = (global::System.Numerics.Vector3)Value;
+        }
+        private object get_121_UIElement_RotationTransition(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.RotationTransition;
+        }
+        private void set_121_UIElement_RotationTransition(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.RotationTransition = (global::Microsoft.UI.Xaml.ScalarTransition)Value;
+        }
+        private object get_122_UIElement_Scale(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Scale;
+        }
+        private void set_122_UIElement_Scale(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Scale = (global::System.Numerics.Vector3)Value;
+        }
+        private object get_123_UIElement_ScaleTransition(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.ScaleTransition;
+        }
+        private void set_123_UIElement_ScaleTransition(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.ScaleTransition = (global::Microsoft.UI.Xaml.Vector3Transition)Value;
+        }
+        private object get_124_UIElement_Shadow(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Shadow;
+        }
+        private void set_124_UIElement_Shadow(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Shadow = (global::Microsoft.UI.Xaml.Media.Shadow)Value;
+        }
+        private object get_125_UIElement_TabFocusNavigation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.TabFocusNavigation;
+        }
+        private void set_125_UIElement_TabFocusNavigation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.TabFocusNavigation = (global::Microsoft.UI.Xaml.Input.KeyboardNavigationMode)Value;
+        }
+        private object get_126_UIElement_TabIndex(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.TabIndex;
+        }
+        private void set_126_UIElement_TabIndex(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.TabIndex = (global::System.Int32)Value;
+        }
+        private object get_127_UIElement_Transform3D(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Transform3D;
+        }
+        private void set_127_UIElement_Transform3D(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Transform3D = (global::Microsoft.UI.Xaml.Media.Media3D.Transform3D)Value;
+        }
+        private object get_128_UIElement_TransformMatrix(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.TransformMatrix;
+        }
+        private void set_128_UIElement_TransformMatrix(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.TransformMatrix = (global::System.Numerics.Matrix4x4)Value;
+        }
+        private object get_129_UIElement_Transitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Transitions;
+        }
+        private void set_129_UIElement_Transitions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Transitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+        }
+        private object get_130_UIElement_Translation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Translation;
+        }
+        private void set_130_UIElement_Translation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Translation = (global::System.Numerics.Vector3)Value;
+        }
+        private object get_131_UIElement_TranslationTransition(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.TranslationTransition;
+        }
+        private void set_131_UIElement_TranslationTransition(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.TranslationTransition = (global::Microsoft.UI.Xaml.Vector3Transition)Value;
+        }
+        private object get_132_UIElement_UseLayoutRounding(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.UseLayoutRounding;
+        }
+        private void set_132_UIElement_UseLayoutRounding(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.UseLayoutRounding = (global::System.Boolean)Value;
+        }
+        private object get_133_UIElement_UseSystemFocusVisuals(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.UseSystemFocusVisuals;
+        }
+        private void set_133_UIElement_UseSystemFocusVisuals(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.UseSystemFocusVisuals = (global::System.Boolean)Value;
+        }
+        private object get_134_UIElement_Visibility(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.Visibility;
+        }
+        private void set_134_UIElement_Visibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.Visibility = (global::Microsoft.UI.Xaml.Visibility)Value;
+        }
+        private object get_135_UIElement_XYFocusDown(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusDown;
+        }
+        private void set_135_UIElement_XYFocusDown(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusDown = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_136_UIElement_XYFocusDownNavigationStrategy(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusDownNavigationStrategy;
+        }
+        private void set_136_UIElement_XYFocusDownNavigationStrategy(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusDownNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
+        }
+        private object get_137_UIElement_XYFocusKeyboardNavigation(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusKeyboardNavigation;
+        }
+        private void set_137_UIElement_XYFocusKeyboardNavigation(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusKeyboardNavigation = (global::Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode)Value;
+        }
+        private object get_138_UIElement_XYFocusLeft(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusLeft;
+        }
+        private void set_138_UIElement_XYFocusLeft(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusLeft = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_139_UIElement_XYFocusLeftNavigationStrategy(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusLeftNavigationStrategy;
+        }
+        private void set_139_UIElement_XYFocusLeftNavigationStrategy(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusLeftNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
+        }
+        private object get_140_UIElement_XYFocusRight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusRight;
+        }
+        private void set_140_UIElement_XYFocusRight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusRight = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_141_UIElement_XYFocusRightNavigationStrategy(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusRightNavigationStrategy;
+        }
+        private void set_141_UIElement_XYFocusRightNavigationStrategy(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusRightNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
+        }
+        private object get_142_UIElement_XYFocusUp(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusUp;
+        }
+        private void set_142_UIElement_XYFocusUp(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusUp = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_143_UIElement_XYFocusUpNavigationStrategy(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XYFocusUpNavigationStrategy;
+        }
+        private void set_143_UIElement_XYFocusUpNavigationStrategy(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XYFocusUpNavigationStrategy = (global::Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)Value;
+        }
+        private object get_144_UIElement_XamlRoot(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            return that.XamlRoot;
+        }
+        private void set_144_UIElement_XamlRoot(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.UIElement)instance;
+            that.XamlRoot = (global::Microsoft.UI.Xaml.XamlRoot)Value;
+        }
+        private object get_145_Control_IsTemplateFocusTarget(object instance)
         {
             return global::Microsoft.UI.Xaml.Controls.Control.GetIsTemplateFocusTarget((global::Microsoft.UI.Xaml.FrameworkElement)instance);
         }
-        private void set_220_Control_IsTemplateFocusTarget(object instance, object Value)
+        private void set_145_Control_IsTemplateFocusTarget(object instance, object Value)
         {
             global::Microsoft.UI.Xaml.Controls.Control.SetIsTemplateFocusTarget((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Boolean)Value);
         }
-        private object get_221_Control_IsTemplateKeyTipTarget(object instance)
+        private object get_146_Control_IsTemplateKeyTipTarget(object instance)
         {
             return global::Microsoft.UI.Xaml.Controls.Control.GetIsTemplateKeyTipTarget((global::Microsoft.UI.Xaml.DependencyObject)instance);
         }
-        private void set_221_Control_IsTemplateKeyTipTarget(object instance, object Value)
+        private void set_146_Control_IsTemplateKeyTipTarget(object instance, object Value)
         {
             global::Microsoft.UI.Xaml.Controls.Control.SetIsTemplateKeyTipTarget((global::Microsoft.UI.Xaml.DependencyObject)instance, (global::System.Boolean)Value);
         }
-        private object get_222_ItemsControl_Items(object instance)
+        private object get_147_Border_Child(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.Items;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.Child;
         }
-        private object get_223_ComboBox_Header(object instance)
+        private void set_147_Border_Child(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.Header;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.Child = (global::Microsoft.UI.Xaml.UIElement)Value;
         }
-        private void set_223_ComboBox_Header(object instance, object Value)
+        private object get_148_Border_Background(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_224_ComboBox_Description(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.Description;
-        }
-        private void set_224_ComboBox_Description(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.Description = (global::System.Object)Value;
-        }
-        private object get_225_ComboBox_HeaderTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_225_ComboBox_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_226_ComboBox_IsDropDownOpen(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.IsDropDownOpen;
-        }
-        private void set_226_ComboBox_IsDropDownOpen(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.IsDropDownOpen = (global::System.Boolean)Value;
-        }
-        private object get_227_ComboBox_IsEditable(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.IsEditable;
-        }
-        private void set_227_ComboBox_IsEditable(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.IsEditable = (global::System.Boolean)Value;
-        }
-        private object get_228_ComboBox_IsSelectionBoxHighlighted(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.IsSelectionBoxHighlighted;
-        }
-        private object get_229_ComboBox_IsTextSearchEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.IsTextSearchEnabled;
-        }
-        private void set_229_ComboBox_IsTextSearchEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.IsTextSearchEnabled = (global::System.Boolean)Value;
-        }
-        private object get_230_ComboBox_LightDismissOverlayMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.LightDismissOverlayMode;
-        }
-        private void set_230_ComboBox_LightDismissOverlayMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.LightDismissOverlayMode = (global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)Value;
-        }
-        private object get_231_ComboBox_MaxDropDownHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.MaxDropDownHeight;
-        }
-        private void set_231_ComboBox_MaxDropDownHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.MaxDropDownHeight = (global::System.Double)Value;
-        }
-        private object get_232_ComboBox_PlaceholderForeground(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.PlaceholderForeground;
-        }
-        private void set_232_ComboBox_PlaceholderForeground(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_233_ComboBox_PlaceholderText(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.PlaceholderText;
-        }
-        private void set_233_ComboBox_PlaceholderText(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.PlaceholderText = (global::System.String)Value;
-        }
-        private object get_234_ComboBox_SelectionBoxItem(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.SelectionBoxItem;
-        }
-        private object get_235_ComboBox_SelectionBoxItemTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.SelectionBoxItemTemplate;
-        }
-        private object get_236_ComboBox_SelectionChangedTrigger(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.SelectionChangedTrigger;
-        }
-        private void set_236_ComboBox_SelectionChangedTrigger(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.SelectionChangedTrigger = (global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger)Value;
-        }
-        private object get_237_ComboBox_TemplateSettings(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.TemplateSettings;
-        }
-        private object get_238_ComboBox_Text(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.Text;
-        }
-        private void set_238_ComboBox_Text(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.Text = (global::System.String)Value;
-        }
-        private object get_239_ComboBox_TextBoxStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.TextBoxStyle;
-        }
-        private void set_239_ComboBox_TextBoxStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.TextBoxStyle = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_240_Selector_IsSynchronizedWithCurrentItem(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.IsSynchronizedWithCurrentItem;
-        }
-        private void set_240_Selector_IsSynchronizedWithCurrentItem(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.IsSynchronizedWithCurrentItem = (global::System.Nullable<global::System.Boolean>)Value;
-        }
-        private object get_241_Selector_SelectedIndex(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedIndex;
-        }
-        private void set_241_Selector_SelectedIndex(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedIndex = (global::System.Int32)Value;
-        }
-        private object get_242_Selector_SelectedItem(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedItem;
-        }
-        private void set_242_Selector_SelectedItem(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedItem = (global::System.Object)Value;
-        }
-        private object get_243_Selector_SelectedValue(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedValue;
-        }
-        private void set_243_Selector_SelectedValue(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedValue = (global::System.Object)Value;
-        }
-        private object get_244_Selector_SelectedValuePath(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedValuePath;
-        }
-        private void set_244_Selector_SelectedValuePath(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedValuePath = (global::System.String)Value;
-        }
-        private object get_245_ItemsControl_DisplayMemberPath(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.DisplayMemberPath;
-        }
-        private void set_245_ItemsControl_DisplayMemberPath(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.DisplayMemberPath = (global::System.String)Value;
-        }
-        private object get_246_ItemsControl_GroupStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.GroupStyle;
-        }
-        private object get_247_GroupStyle_ContainerStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.ContainerStyle;
-        }
-        private void set_247_GroupStyle_ContainerStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.ContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_248_GroupStyle_ContainerStyleSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.ContainerStyleSelector;
-        }
-        private void set_248_GroupStyle_ContainerStyleSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.ContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
-        }
-        private object get_249_GroupStyle_HeaderContainerStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.HeaderContainerStyle;
-        }
-        private void set_249_GroupStyle_HeaderContainerStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.HeaderContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_250_GroupStyle_HeaderTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_250_GroupStyle_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_251_GroupStyle_HeaderTemplateSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.HeaderTemplateSelector;
-        }
-        private void set_251_GroupStyle_HeaderTemplateSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
-        }
-        private object get_252_GroupStyle_HidesIfEmpty(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.HidesIfEmpty;
-        }
-        private void set_252_GroupStyle_HidesIfEmpty(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.HidesIfEmpty = (global::System.Boolean)Value;
-        }
-        private object get_253_GroupStyle_Panel(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            return that.Panel;
-        }
-        private void set_253_GroupStyle_Panel(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
-            that.Panel = (global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)Value;
-        }
-        private object get_254_ItemsPanelTemplate_Template(object instance)
-        {
-            return null;
-        }
-        private void set_254_ItemsPanelTemplate_Template(object instance, object Value)
-        {
-        }
-        private object get_255_ItemsControl_GroupStyleSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.GroupStyleSelector;
-        }
-        private void set_255_ItemsControl_GroupStyleSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.GroupStyleSelector = (global::Microsoft.UI.Xaml.Controls.GroupStyleSelector)Value;
-        }
-        private object get_256_ItemsControl_IsGrouping(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.IsGrouping;
-        }
-        private object get_257_ItemsControl_ItemContainerGenerator(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemContainerGenerator;
-        }
-        private object get_258_ItemsControl_ItemContainerStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemContainerStyle;
-        }
-        private void set_258_ItemsControl_ItemContainerStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
-        }
-        private object get_259_ItemsControl_ItemContainerStyleSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemContainerStyleSelector;
-        }
-        private void set_259_ItemsControl_ItemContainerStyleSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
-        }
-        private object get_260_ItemsControl_ItemContainerTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemContainerTransitions;
-        }
-        private void set_260_ItemsControl_ItemContainerTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemContainerTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_261_ItemsControl_ItemTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemTemplate;
-        }
-        private void set_261_ItemsControl_ItemTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_262_ItemsControl_ItemTemplateSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemTemplateSelector;
-        }
-        private void set_262_ItemsControl_ItemTemplateSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
-        }
-        private object get_263_ItemsControl_ItemsPanel(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemsPanel;
-        }
-        private void set_263_ItemsControl_ItemsPanel(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemsPanel = (global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)Value;
-        }
-        private object get_264_ItemsControl_ItemsPanelRoot(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemsPanelRoot;
-        }
-        private object get_265_ItemsControl_ItemsSource(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.ItemsSource;
-        }
-        private void set_265_ItemsControl_ItemsSource(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.ItemsSource = (global::System.Object)Value;
-        }
-        private object get_266_TextBlock_Inlines(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.Inlines;
-        }
-        private object get_267_TextElement_AccessKey(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.AccessKey;
-        }
-        private void set_267_TextElement_AccessKey(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.AccessKey = (global::System.String)Value;
-        }
-        private object get_268_TextElement_AccessKeyScopeOwner(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.AccessKeyScopeOwner;
-        }
-        private void set_268_TextElement_AccessKeyScopeOwner(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.AccessKeyScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
-        }
-        private object get_269_TextElement_AllowFocusOnInteraction(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.AllowFocusOnInteraction;
-        }
-        private void set_269_TextElement_AllowFocusOnInteraction(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.AllowFocusOnInteraction = (global::System.Boolean)Value;
-        }
-        private object get_270_TextElement_CharacterSpacing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.CharacterSpacing;
-        }
-        private void set_270_TextElement_CharacterSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.CharacterSpacing = (global::System.Int32)Value;
-        }
-        private object get_271_TextElement_ContentEnd(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.ContentEnd;
-        }
-        private object get_272_TextElement_ContentStart(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.ContentStart;
-        }
-        private object get_273_TextElement_ElementEnd(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.ElementEnd;
-        }
-        private object get_274_TextElement_ElementStart(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.ElementStart;
-        }
-        private object get_275_TextElement_ExitDisplayModeOnAccessKeyInvoked(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.ExitDisplayModeOnAccessKeyInvoked;
-        }
-        private void set_275_TextElement_ExitDisplayModeOnAccessKeyInvoked(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.ExitDisplayModeOnAccessKeyInvoked = (global::System.Boolean)Value;
-        }
-        private object get_276_TextElement_FontFamily(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.FontFamily;
-        }
-        private void set_276_TextElement_FontFamily(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.FontFamily = (global::Microsoft.UI.Xaml.Media.FontFamily)Value;
-        }
-        private object get_277_TextElement_FontSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.FontSize;
-        }
-        private void set_277_TextElement_FontSize(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.FontSize = (global::System.Double)Value;
-        }
-        private object get_278_TextElement_FontStretch(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.FontStretch;
-        }
-        private void set_278_TextElement_FontStretch(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
-        }
-        private object get_279_TextElement_FontStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.FontStyle;
-        }
-        private void set_279_TextElement_FontStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
-        }
-        private object get_280_TextElement_FontWeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.FontWeight;
-        }
-        private void set_280_TextElement_FontWeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
-        }
-        private object get_281_TextElement_Foreground(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.Foreground;
-        }
-        private void set_281_TextElement_Foreground(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_282_TextElement_IsAccessKeyScope(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.IsAccessKeyScope;
-        }
-        private void set_282_TextElement_IsAccessKeyScope(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.IsAccessKeyScope = (global::System.Boolean)Value;
-        }
-        private object get_283_TextElement_IsTextScaleFactorEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.IsTextScaleFactorEnabled;
-        }
-        private void set_283_TextElement_IsTextScaleFactorEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.IsTextScaleFactorEnabled = (global::System.Boolean)Value;
-        }
-        private object get_284_TextElement_KeyTipHorizontalOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.KeyTipHorizontalOffset;
-        }
-        private void set_284_TextElement_KeyTipHorizontalOffset(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.KeyTipHorizontalOffset = (global::System.Double)Value;
-        }
-        private object get_285_TextElement_KeyTipPlacementMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.KeyTipPlacementMode;
-        }
-        private void set_285_TextElement_KeyTipPlacementMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.KeyTipPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode)Value;
-        }
-        private object get_286_TextElement_KeyTipVerticalOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.KeyTipVerticalOffset;
-        }
-        private void set_286_TextElement_KeyTipVerticalOffset(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.KeyTipVerticalOffset = (global::System.Double)Value;
-        }
-        private object get_287_TextElement_Language(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.Language;
-        }
-        private void set_287_TextElement_Language(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.Language = (global::System.String)Value;
-        }
-        private object get_288_TextElement_Name(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.Name;
-        }
-        private object get_289_TextElement_TextDecorations(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.TextDecorations;
-        }
-        private void set_289_TextElement_TextDecorations(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.TextDecorations = (global::Windows.UI.Text.TextDecorations)Value;
-        }
-        private object get_290_TextElement_XamlRoot(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            return that.XamlRoot;
-        }
-        private void set_290_TextElement_XamlRoot(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
-            that.XamlRoot = (global::Microsoft.UI.Xaml.XamlRoot)Value;
-        }
-        private object get_291_TextBlock_Text(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.Text;
-        }
-        private void set_291_TextBlock_Text(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.Text = (global::System.String)Value;
-        }
-        private object get_292_TextBlock_FontSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.FontSize;
-        }
-        private void set_292_TextBlock_FontSize(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.FontSize = (global::System.Double)Value;
-        }
-        private object get_293_TextBlock_FontWeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.FontWeight;
-        }
-        private void set_293_TextBlock_FontWeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
-        }
-        private object get_294_TextBlock_BaselineOffset(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.BaselineOffset;
-        }
-        private object get_295_TextBlock_CharacterSpacing(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.CharacterSpacing;
-        }
-        private void set_295_TextBlock_CharacterSpacing(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.CharacterSpacing = (global::System.Int32)Value;
-        }
-        private object get_296_TextBlock_ContentEnd(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.ContentEnd;
-        }
-        private object get_297_TextBlock_ContentStart(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.ContentStart;
-        }
-        private object get_298_TextBlock_FontFamily(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.FontFamily;
-        }
-        private void set_298_TextBlock_FontFamily(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.FontFamily = (global::Microsoft.UI.Xaml.Media.FontFamily)Value;
-        }
-        private object get_299_TextBlock_FontStretch(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.FontStretch;
-        }
-        private void set_299_TextBlock_FontStretch(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
-        }
-        private object get_300_TextBlock_FontStyle(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.FontStyle;
-        }
-        private void set_300_TextBlock_FontStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
-        }
-        private object get_301_TextBlock_Foreground(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.Foreground;
-        }
-        private void set_301_TextBlock_Foreground(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_302_TextBlock_HorizontalTextAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.HorizontalTextAlignment;
-        }
-        private void set_302_TextBlock_HorizontalTextAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.HorizontalTextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
-        }
-        private object get_303_TextBlock_IsColorFontEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.IsColorFontEnabled;
-        }
-        private void set_303_TextBlock_IsColorFontEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.IsColorFontEnabled = (global::System.Boolean)Value;
-        }
-        private object get_304_TextBlock_IsTextScaleFactorEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.IsTextScaleFactorEnabled;
-        }
-        private void set_304_TextBlock_IsTextScaleFactorEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.IsTextScaleFactorEnabled = (global::System.Boolean)Value;
-        }
-        private object get_305_TextBlock_IsTextSelectionEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.IsTextSelectionEnabled;
-        }
-        private void set_305_TextBlock_IsTextSelectionEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.IsTextSelectionEnabled = (global::System.Boolean)Value;
-        }
-        private object get_306_TextBlock_IsTextTrimmed(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.IsTextTrimmed;
-        }
-        private object get_307_TextBlock_LineHeight(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.LineHeight;
-        }
-        private void set_307_TextBlock_LineHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.LineHeight = (global::System.Double)Value;
-        }
-        private object get_308_TextBlock_LineStackingStrategy(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.LineStackingStrategy;
-        }
-        private void set_308_TextBlock_LineStackingStrategy(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.LineStackingStrategy = (global::Microsoft.UI.Xaml.LineStackingStrategy)Value;
-        }
-        private object get_309_TextBlock_MaxLines(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.MaxLines;
-        }
-        private void set_309_TextBlock_MaxLines(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.MaxLines = (global::System.Int32)Value;
-        }
-        private object get_310_TextBlock_OpticalMarginAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.OpticalMarginAlignment;
-        }
-        private void set_310_TextBlock_OpticalMarginAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.OpticalMarginAlignment = (global::Microsoft.UI.Xaml.OpticalMarginAlignment)Value;
-        }
-        private object get_311_TextBlock_Padding(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.Padding;
-        }
-        private void set_311_TextBlock_Padding(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
-        }
-        private object get_312_TextBlock_SelectedText(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.SelectedText;
-        }
-        private object get_313_TextBlock_SelectionEnd(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.SelectionEnd;
-        }
-        private object get_314_TextBlock_SelectionFlyout(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.SelectionFlyout;
-        }
-        private void set_314_TextBlock_SelectionFlyout(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
-        }
-        private object get_315_TextBlock_SelectionHighlightColor(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.SelectionHighlightColor;
-        }
-        private void set_315_TextBlock_SelectionHighlightColor(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
-        }
-        private object get_316_TextBlock_SelectionStart(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.SelectionStart;
-        }
-        private object get_317_TextBlock_TextAlignment(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextAlignment;
-        }
-        private void set_317_TextBlock_TextAlignment(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
-        }
-        private object get_318_TextBlock_TextDecorations(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextDecorations;
-        }
-        private void set_318_TextBlock_TextDecorations(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextDecorations = (global::Windows.UI.Text.TextDecorations)Value;
-        }
-        private object get_319_TextBlock_TextHighlighters(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextHighlighters;
-        }
-        private object get_320_TextHighlighter_Background(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
             return that.Background;
         }
-        private void set_320_TextHighlighter_Background(object instance, object Value)
+        private void set_148_Border_Background(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
             that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_321_TextHighlighter_Foreground(object instance)
+        private object get_149_Border_BackgroundSizing(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
-            return that.Foreground;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.BackgroundSizing;
         }
-        private void set_321_TextHighlighter_Foreground(object instance, object Value)
+        private void set_149_Border_BackgroundSizing(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
-            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
         }
-        private object get_322_TextHighlighter_Ranges(object instance)
+        private object get_150_Border_BackgroundTransition(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
-            return that.Ranges;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.BackgroundTransition;
         }
-        private object get_323_TextBlock_TextLineBounds(object instance)
+        private void set_150_Border_BackgroundTransition(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextLineBounds;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.BackgroundTransition = (global::Microsoft.UI.Xaml.BrushTransition)Value;
         }
-        private void set_323_TextBlock_TextLineBounds(object instance, object Value)
+        private object get_151_Border_BorderBrush(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextLineBounds = (global::Microsoft.UI.Xaml.TextLineBounds)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.BorderBrush;
         }
-        private object get_324_TextBlock_TextReadingOrder(object instance)
+        private void set_151_Border_BorderBrush(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextReadingOrder;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private void set_324_TextBlock_TextReadingOrder(object instance, object Value)
+        private object get_152_Border_BorderThickness(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextReadingOrder = (global::Microsoft.UI.Xaml.TextReadingOrder)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.BorderThickness;
         }
-        private object get_325_TextBlock_TextTrimming(object instance)
+        private void set_152_Border_BorderThickness(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextTrimming;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private void set_325_TextBlock_TextTrimming(object instance, object Value)
+        private object get_153_Border_ChildTransitions(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextTrimming = (global::Microsoft.UI.Xaml.TextTrimming)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.ChildTransitions;
         }
-        private object get_326_TextBlock_TextWrapping(object instance)
+        private void set_153_Border_ChildTransitions(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            return that.TextWrapping;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.ChildTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
         }
-        private void set_326_TextBlock_TextWrapping(object instance, object Value)
+        private object get_154_Border_CornerRadius(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
-            that.TextWrapping = (global::Microsoft.UI.Xaml.TextWrapping)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.CornerRadius;
         }
-        private object get_327_StackPanel_Orientation(object instance)
+        private void set_154_Border_CornerRadius(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
+        }
+        private object get_155_Border_Padding(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            return that.Padding;
+        }
+        private void set_155_Border_Padding(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Border)instance;
+            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_156_Panel_Children(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            return that.Children;
+        }
+        private object get_157_StackPanel_Orientation(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.Orientation;
         }
-        private void set_327_StackPanel_Orientation(object instance, object Value)
+        private void set_157_StackPanel_Orientation(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.Orientation = (global::Microsoft.UI.Xaml.Controls.Orientation)Value;
         }
-        private object get_328_StackPanel_AreHorizontalSnapPointsRegular(object instance)
+        private object get_158_StackPanel_AreHorizontalSnapPointsRegular(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.AreHorizontalSnapPointsRegular;
         }
-        private object get_329_StackPanel_AreScrollSnapPointsRegular(object instance)
+        private object get_159_StackPanel_AreScrollSnapPointsRegular(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.AreScrollSnapPointsRegular;
         }
-        private void set_329_StackPanel_AreScrollSnapPointsRegular(object instance, object Value)
+        private void set_159_StackPanel_AreScrollSnapPointsRegular(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.AreScrollSnapPointsRegular = (global::System.Boolean)Value;
         }
-        private object get_330_StackPanel_AreVerticalSnapPointsRegular(object instance)
+        private object get_160_StackPanel_AreVerticalSnapPointsRegular(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.AreVerticalSnapPointsRegular;
         }
-        private object get_331_StackPanel_BackgroundSizing(object instance)
+        private object get_161_StackPanel_BackgroundSizing(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.BackgroundSizing;
         }
-        private void set_331_StackPanel_BackgroundSizing(object instance, object Value)
+        private void set_161_StackPanel_BackgroundSizing(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
         }
-        private object get_332_StackPanel_BorderBrush(object instance)
+        private object get_162_StackPanel_BorderBrush(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.BorderBrush;
         }
-        private void set_332_StackPanel_BorderBrush(object instance, object Value)
+        private void set_162_StackPanel_BorderBrush(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_333_StackPanel_BorderThickness(object instance)
+        private object get_163_StackPanel_BorderThickness(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.BorderThickness;
         }
-        private void set_333_StackPanel_BorderThickness(object instance, object Value)
+        private void set_163_StackPanel_BorderThickness(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_334_StackPanel_CornerRadius(object instance)
+        private object get_164_StackPanel_CornerRadius(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.CornerRadius;
         }
-        private void set_334_StackPanel_CornerRadius(object instance, object Value)
+        private void set_164_StackPanel_CornerRadius(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
         }
-        private object get_335_StackPanel_Padding(object instance)
+        private object get_165_StackPanel_Padding(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.Padding;
         }
-        private void set_335_StackPanel_Padding(object instance, object Value)
+        private void set_165_StackPanel_Padding(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_336_StackPanel_Spacing(object instance)
+        private object get_166_StackPanel_Spacing(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             return that.Spacing;
         }
-        private void set_336_StackPanel_Spacing(object instance, object Value)
+        private void set_166_StackPanel_Spacing(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.StackPanel)instance;
             that.Spacing = (global::System.Double)Value;
         }
-        private object get_337_ContentControl_Content(object instance)
+        private object get_167_Panel_Background(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            return that.Content;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            return that.Background;
         }
-        private void set_337_ContentControl_Content(object instance, object Value)
+        private void set_167_Panel_Background(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            that.Content = (global::System.Object)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_338_Button_Flyout(object instance)
+        private object get_168_Panel_BackgroundTransition(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.Button)instance;
-            return that.Flyout;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            return that.BackgroundTransition;
         }
-        private void set_338_Button_Flyout(object instance, object Value)
+        private void set_168_Panel_BackgroundTransition(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.Button)instance;
-            that.Flyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            that.BackgroundTransition = (global::Microsoft.UI.Xaml.BrushTransition)Value;
         }
-        private object get_339_ButtonBase_ClickMode(object instance)
+        private object get_169_Panel_ChildrenTransitions(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            return that.ClickMode;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            return that.ChildrenTransitions;
         }
-        private void set_339_ButtonBase_ClickMode(object instance, object Value)
+        private void set_169_Panel_ChildrenTransitions(object instance, object Value)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            that.ClickMode = (global::Microsoft.UI.Xaml.Controls.ClickMode)Value;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            that.ChildrenTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
         }
-        private object get_340_ButtonBase_Command(object instance)
+        private object get_170_Panel_IsItemsHost(object instance)
         {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            return that.Command;
+            var that = (global::Microsoft.UI.Xaml.Controls.Panel)instance;
+            return that.IsItemsHost;
         }
-        private void set_340_ButtonBase_Command(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            that.Command = (global::System.Windows.Input.ICommand)Value;
-        }
-        private object get_341_ButtonBase_CommandParameter(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            return that.CommandParameter;
-        }
-        private void set_341_ButtonBase_CommandParameter(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            that.CommandParameter = (global::System.Object)Value;
-        }
-        private object get_342_ButtonBase_IsPointerOver(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            return that.IsPointerOver;
-        }
-        private object get_343_ButtonBase_IsPressed(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
-            return that.IsPressed;
-        }
-        private object get_344_ContentControl_ContentTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            return that.ContentTemplate;
-        }
-        private void set_344_ContentControl_ContentTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            that.ContentTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_345_ContentControl_ContentTemplateRoot(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            return that.ContentTemplateRoot;
-        }
-        private object get_346_ContentControl_ContentTemplateSelector(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            return that.ContentTemplateSelector;
-        }
-        private void set_346_ContentControl_ContentTemplateSelector(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            that.ContentTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
-        }
-        private object get_347_ContentControl_ContentTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            return that.ContentTransitions;
-        }
-        private void set_347_ContentControl_ContentTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
-            that.ContentTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_348_ListViewBase_CanDragItems(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.CanDragItems;
-        }
-        private void set_348_ListViewBase_CanDragItems(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.CanDragItems = (global::System.Boolean)Value;
-        }
-        private object get_349_ListViewBase_CanReorderItems(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.CanReorderItems;
-        }
-        private void set_349_ListViewBase_CanReorderItems(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.CanReorderItems = (global::System.Boolean)Value;
-        }
-        private object get_350_ListViewBase_DataFetchSize(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.DataFetchSize;
-        }
-        private void set_350_ListViewBase_DataFetchSize(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.DataFetchSize = (global::System.Double)Value;
-        }
-        private object get_351_ListViewBase_Footer(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.Footer;
-        }
-        private void set_351_ListViewBase_Footer(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.Footer = (global::System.Object)Value;
-        }
-        private object get_352_ListViewBase_FooterTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.FooterTemplate;
-        }
-        private void set_352_ListViewBase_FooterTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.FooterTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_353_ListViewBase_FooterTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.FooterTransitions;
-        }
-        private void set_353_ListViewBase_FooterTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.FooterTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_354_ListViewBase_Header(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.Header;
-        }
-        private void set_354_ListViewBase_Header(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.Header = (global::System.Object)Value;
-        }
-        private object get_355_ListViewBase_HeaderTemplate(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.HeaderTemplate;
-        }
-        private void set_355_ListViewBase_HeaderTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_356_ListViewBase_HeaderTransitions(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.HeaderTransitions;
-        }
-        private void set_356_ListViewBase_HeaderTransitions(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.HeaderTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
-        }
-        private object get_357_ListViewBase_IncrementalLoadingThreshold(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IncrementalLoadingThreshold;
-        }
-        private void set_357_ListViewBase_IncrementalLoadingThreshold(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IncrementalLoadingThreshold = (global::System.Double)Value;
-        }
-        private object get_358_ListViewBase_IncrementalLoadingTrigger(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IncrementalLoadingTrigger;
-        }
-        private void set_358_ListViewBase_IncrementalLoadingTrigger(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IncrementalLoadingTrigger = (global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger)Value;
-        }
-        private object get_359_ListViewBase_IsActiveView(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IsActiveView;
-        }
-        private void set_359_ListViewBase_IsActiveView(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IsActiveView = (global::System.Boolean)Value;
-        }
-        private object get_360_ListViewBase_IsItemClickEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IsItemClickEnabled;
-        }
-        private void set_360_ListViewBase_IsItemClickEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IsItemClickEnabled = (global::System.Boolean)Value;
-        }
-        private object get_361_ListViewBase_IsMultiSelectCheckBoxEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IsMultiSelectCheckBoxEnabled;
-        }
-        private void set_361_ListViewBase_IsMultiSelectCheckBoxEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IsMultiSelectCheckBoxEnabled = (global::System.Boolean)Value;
-        }
-        private object get_362_ListViewBase_IsSwipeEnabled(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IsSwipeEnabled;
-        }
-        private void set_362_ListViewBase_IsSwipeEnabled(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IsSwipeEnabled = (global::System.Boolean)Value;
-        }
-        private object get_363_ListViewBase_IsZoomedInView(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.IsZoomedInView;
-        }
-        private void set_363_ListViewBase_IsZoomedInView(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.IsZoomedInView = (global::System.Boolean)Value;
-        }
-        private object get_364_ListViewBase_ReorderMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.ReorderMode;
-        }
-        private void set_364_ListViewBase_ReorderMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.ReorderMode = (global::Microsoft.UI.Xaml.Controls.ListViewReorderMode)Value;
-        }
-        private object get_365_ListViewBase_SelectedItems(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.SelectedItems;
-        }
-        private object get_366_ListViewBase_SelectedRanges(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.SelectedRanges;
-        }
-        private object get_367_ListViewBase_SelectionMode(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.SelectionMode;
-        }
-        private void set_367_ListViewBase_SelectionMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.SelectionMode = (global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode)Value;
-        }
-        private object get_368_ListViewBase_SemanticZoomOwner(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.SemanticZoomOwner;
-        }
-        private void set_368_ListViewBase_SemanticZoomOwner(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.SemanticZoomOwner = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)Value;
-        }
-        private object get_369_SemanticZoom_ZoomedInView(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)instance;
-            return that.ZoomedInView;
-        }
-        private void set_369_SemanticZoom_ZoomedInView(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)instance;
-            that.ZoomedInView = (global::Microsoft.UI.Xaml.Controls.ISemanticZoomInformation)Value;
-        }
-        private object get_370_ListViewBase_ShowsScrollingPlaceholders(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.ShowsScrollingPlaceholders;
-        }
-        private void set_370_ListViewBase_ShowsScrollingPlaceholders(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.ShowsScrollingPlaceholders = (global::System.Boolean)Value;
-        }
-        private object get_371_ListViewBase_SingleSelectionFollowsFocus(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            return that.SingleSelectionFollowsFocus;
-        }
-        private void set_371_ListViewBase_SingleSelectionFollowsFocus(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
-            that.SingleSelectionFollowsFocus = (global::System.Boolean)Value;
-        }
-        private object get_372_Image_Source(object instance)
+        private object get_171_Image_Source(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             return that.Source;
         }
-        private void set_372_Image_Source(object instance, object Value)
+        private void set_171_Image_Source(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             that.Source = (global::Microsoft.UI.Xaml.Media.ImageSource)Value;
         }
-        private object get_373_Image_NineGrid(object instance)
+        private object get_172_Image_NineGrid(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             return that.NineGrid;
         }
-        private void set_373_Image_NineGrid(object instance, object Value)
+        private void set_172_Image_NineGrid(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             that.NineGrid = (global::Microsoft.UI.Xaml.Thickness)Value;
         }
-        private object get_374_Image_Stretch(object instance)
+        private object get_173_Image_Stretch(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             return that.Stretch;
         }
-        private void set_374_Image_Stretch(object instance, object Value)
+        private void set_173_Image_Stretch(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Image)instance;
             that.Stretch = (global::Microsoft.UI.Xaml.Media.Stretch)Value;
+        }
+        private object get_174_TextBlock_Inlines(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.Inlines;
+        }
+        private object get_175_TextElement_AccessKey(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.AccessKey;
+        }
+        private void set_175_TextElement_AccessKey(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.AccessKey = (global::System.String)Value;
+        }
+        private object get_176_TextElement_AccessKeyScopeOwner(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.AccessKeyScopeOwner;
+        }
+        private void set_176_TextElement_AccessKeyScopeOwner(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.AccessKeyScopeOwner = (global::Microsoft.UI.Xaml.DependencyObject)Value;
+        }
+        private object get_177_TextElement_AllowFocusOnInteraction(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.AllowFocusOnInteraction;
+        }
+        private void set_177_TextElement_AllowFocusOnInteraction(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.AllowFocusOnInteraction = (global::System.Boolean)Value;
+        }
+        private object get_178_TextElement_CharacterSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.CharacterSpacing;
+        }
+        private void set_178_TextElement_CharacterSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.CharacterSpacing = (global::System.Int32)Value;
+        }
+        private object get_179_TextElement_ContentEnd(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.ContentEnd;
+        }
+        private object get_180_TextElement_ContentStart(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.ContentStart;
+        }
+        private object get_181_TextElement_ElementEnd(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.ElementEnd;
+        }
+        private object get_182_TextElement_ElementStart(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.ElementStart;
+        }
+        private object get_183_TextElement_ExitDisplayModeOnAccessKeyInvoked(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.ExitDisplayModeOnAccessKeyInvoked;
+        }
+        private void set_183_TextElement_ExitDisplayModeOnAccessKeyInvoked(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.ExitDisplayModeOnAccessKeyInvoked = (global::System.Boolean)Value;
+        }
+        private object get_184_TextElement_FontFamily(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.FontFamily;
+        }
+        private void set_184_TextElement_FontFamily(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.FontFamily = (global::Microsoft.UI.Xaml.Media.FontFamily)Value;
+        }
+        private object get_185_TextElement_FontSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.FontSize;
+        }
+        private void set_185_TextElement_FontSize(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.FontSize = (global::System.Double)Value;
+        }
+        private object get_186_TextElement_FontStretch(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.FontStretch;
+        }
+        private void set_186_TextElement_FontStretch(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
+        }
+        private object get_187_TextElement_FontStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.FontStyle;
+        }
+        private void set_187_TextElement_FontStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
+        }
+        private object get_188_TextElement_FontWeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.FontWeight;
+        }
+        private void set_188_TextElement_FontWeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
+        }
+        private object get_189_TextElement_Foreground(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.Foreground;
+        }
+        private void set_189_TextElement_Foreground(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_190_TextElement_IsAccessKeyScope(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.IsAccessKeyScope;
+        }
+        private void set_190_TextElement_IsAccessKeyScope(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.IsAccessKeyScope = (global::System.Boolean)Value;
+        }
+        private object get_191_TextElement_IsTextScaleFactorEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.IsTextScaleFactorEnabled;
+        }
+        private void set_191_TextElement_IsTextScaleFactorEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.IsTextScaleFactorEnabled = (global::System.Boolean)Value;
+        }
+        private object get_192_TextElement_KeyTipHorizontalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.KeyTipHorizontalOffset;
+        }
+        private void set_192_TextElement_KeyTipHorizontalOffset(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.KeyTipHorizontalOffset = (global::System.Double)Value;
+        }
+        private object get_193_TextElement_KeyTipPlacementMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.KeyTipPlacementMode;
+        }
+        private void set_193_TextElement_KeyTipPlacementMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.KeyTipPlacementMode = (global::Microsoft.UI.Xaml.Input.KeyTipPlacementMode)Value;
+        }
+        private object get_194_TextElement_KeyTipVerticalOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.KeyTipVerticalOffset;
+        }
+        private void set_194_TextElement_KeyTipVerticalOffset(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.KeyTipVerticalOffset = (global::System.Double)Value;
+        }
+        private object get_195_TextElement_Language(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.Language;
+        }
+        private void set_195_TextElement_Language(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.Language = (global::System.String)Value;
+        }
+        private object get_196_TextElement_Name(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.Name;
+        }
+        private object get_197_TextElement_TextDecorations(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.TextDecorations;
+        }
+        private void set_197_TextElement_TextDecorations(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.TextDecorations = (global::Windows.UI.Text.TextDecorations)Value;
+        }
+        private object get_198_TextElement_XamlRoot(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            return that.XamlRoot;
+        }
+        private void set_198_TextElement_XamlRoot(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextElement)instance;
+            that.XamlRoot = (global::Microsoft.UI.Xaml.XamlRoot)Value;
+        }
+        private object get_199_TextBlock_Text(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.Text;
+        }
+        private void set_199_TextBlock_Text(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.Text = (global::System.String)Value;
+        }
+        private object get_200_TextBlock_FontSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.FontSize;
+        }
+        private void set_200_TextBlock_FontSize(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.FontSize = (global::System.Double)Value;
+        }
+        private object get_201_TextBlock_BaselineOffset(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.BaselineOffset;
+        }
+        private object get_202_TextBlock_CharacterSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.CharacterSpacing;
+        }
+        private void set_202_TextBlock_CharacterSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.CharacterSpacing = (global::System.Int32)Value;
+        }
+        private object get_203_TextBlock_ContentEnd(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.ContentEnd;
+        }
+        private object get_204_TextBlock_ContentStart(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.ContentStart;
+        }
+        private object get_205_TextBlock_FontFamily(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.FontFamily;
+        }
+        private void set_205_TextBlock_FontFamily(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.FontFamily = (global::Microsoft.UI.Xaml.Media.FontFamily)Value;
+        }
+        private object get_206_TextBlock_FontStretch(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.FontStretch;
+        }
+        private void set_206_TextBlock_FontStretch(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.FontStretch = (global::Windows.UI.Text.FontStretch)Value;
+        }
+        private object get_207_TextBlock_FontStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.FontStyle;
+        }
+        private void set_207_TextBlock_FontStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.FontStyle = (global::Windows.UI.Text.FontStyle)Value;
+        }
+        private object get_208_TextBlock_FontWeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.FontWeight;
+        }
+        private void set_208_TextBlock_FontWeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.FontWeight = (global::Windows.UI.Text.FontWeight)Value;
+        }
+        private object get_209_TextBlock_Foreground(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.Foreground;
+        }
+        private void set_209_TextBlock_Foreground(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_210_TextBlock_HorizontalTextAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.HorizontalTextAlignment;
+        }
+        private void set_210_TextBlock_HorizontalTextAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.HorizontalTextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
+        }
+        private object get_211_TextBlock_IsColorFontEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.IsColorFontEnabled;
+        }
+        private void set_211_TextBlock_IsColorFontEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.IsColorFontEnabled = (global::System.Boolean)Value;
+        }
+        private object get_212_TextBlock_IsTextScaleFactorEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.IsTextScaleFactorEnabled;
+        }
+        private void set_212_TextBlock_IsTextScaleFactorEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.IsTextScaleFactorEnabled = (global::System.Boolean)Value;
+        }
+        private object get_213_TextBlock_IsTextSelectionEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.IsTextSelectionEnabled;
+        }
+        private void set_213_TextBlock_IsTextSelectionEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.IsTextSelectionEnabled = (global::System.Boolean)Value;
+        }
+        private object get_214_TextBlock_IsTextTrimmed(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.IsTextTrimmed;
+        }
+        private object get_215_TextBlock_LineHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.LineHeight;
+        }
+        private void set_215_TextBlock_LineHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.LineHeight = (global::System.Double)Value;
+        }
+        private object get_216_TextBlock_LineStackingStrategy(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.LineStackingStrategy;
+        }
+        private void set_216_TextBlock_LineStackingStrategy(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.LineStackingStrategy = (global::Microsoft.UI.Xaml.LineStackingStrategy)Value;
+        }
+        private object get_217_TextBlock_MaxLines(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.MaxLines;
+        }
+        private void set_217_TextBlock_MaxLines(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.MaxLines = (global::System.Int32)Value;
+        }
+        private object get_218_TextBlock_OpticalMarginAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.OpticalMarginAlignment;
+        }
+        private void set_218_TextBlock_OpticalMarginAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.OpticalMarginAlignment = (global::Microsoft.UI.Xaml.OpticalMarginAlignment)Value;
+        }
+        private object get_219_TextBlock_Padding(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.Padding;
+        }
+        private void set_219_TextBlock_Padding(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_220_TextBlock_SelectedText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.SelectedText;
+        }
+        private object get_221_TextBlock_SelectionEnd(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.SelectionEnd;
+        }
+        private object get_222_TextBlock_SelectionFlyout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.SelectionFlyout;
+        }
+        private void set_222_TextBlock_SelectionFlyout(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
+        }
+        private object get_223_TextBlock_SelectionHighlightColor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.SelectionHighlightColor;
+        }
+        private void set_223_TextBlock_SelectionHighlightColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
+        }
+        private object get_224_SolidColorBrush_Color(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)instance;
+            return that.Color;
+        }
+        private void set_224_SolidColorBrush_Color(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)instance;
+            that.Color = (global::Windows.UI.Color)Value;
+        }
+        private object get_225_TextBlock_SelectionStart(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.SelectionStart;
+        }
+        private object get_226_TextBlock_TextAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextAlignment;
+        }
+        private void set_226_TextBlock_TextAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
+        }
+        private object get_227_TextBlock_TextDecorations(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextDecorations;
+        }
+        private void set_227_TextBlock_TextDecorations(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextDecorations = (global::Windows.UI.Text.TextDecorations)Value;
+        }
+        private object get_228_TextBlock_TextHighlighters(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextHighlighters;
+        }
+        private object get_229_TextHighlighter_Background(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            return that.Background;
+        }
+        private void set_229_TextHighlighter_Background(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            that.Background = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_230_TextHighlighter_Foreground(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            return that.Foreground;
+        }
+        private void set_230_TextHighlighter_Foreground(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            that.Foreground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_231_TextHighlighter_Ranges(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Documents.TextHighlighter)instance;
+            return that.Ranges;
+        }
+        private object get_232_TextBlock_TextLineBounds(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextLineBounds;
+        }
+        private void set_232_TextBlock_TextLineBounds(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextLineBounds = (global::Microsoft.UI.Xaml.TextLineBounds)Value;
+        }
+        private object get_233_TextBlock_TextReadingOrder(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextReadingOrder;
+        }
+        private void set_233_TextBlock_TextReadingOrder(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextReadingOrder = (global::Microsoft.UI.Xaml.TextReadingOrder)Value;
+        }
+        private object get_234_TextBlock_TextTrimming(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextTrimming;
+        }
+        private void set_234_TextBlock_TextTrimming(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextTrimming = (global::Microsoft.UI.Xaml.TextTrimming)Value;
+        }
+        private object get_235_TextBlock_TextWrapping(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            return that.TextWrapping;
+        }
+        private void set_235_TextBlock_TextWrapping(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBlock)instance;
+            that.TextWrapping = (global::Microsoft.UI.Xaml.TextWrapping)Value;
+        }
+        private object get_236_Window_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Content;
+        }
+        private void set_236_Window_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            that.Content = (global::Microsoft.UI.Xaml.UIElement)Value;
+        }
+        private object get_237_Window_Bounds(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Bounds;
+        }
+        private object get_238_Window_Compositor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Compositor;
+        }
+        private object get_239_Window_CoreWindow(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.CoreWindow;
+        }
+        private object get_240_Window_Dispatcher(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Dispatcher;
+        }
+        private object get_241_Window_DispatcherQueue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.DispatcherQueue;
+        }
+        private object get_242_Window_ExtendsContentIntoTitleBar(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.ExtendsContentIntoTitleBar;
+        }
+        private void set_242_Window_ExtendsContentIntoTitleBar(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            that.ExtendsContentIntoTitleBar = (global::System.Boolean)Value;
+        }
+        private object get_243_Window_Title(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Title;
+        }
+        private void set_243_Window_Title(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            that.Title = (global::System.String)Value;
+        }
+        private object get_244_Window_Visible(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Window)instance;
+            return that.Visible;
+        }
+        private object get_245_Grid_RowDefinitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.RowDefinitions;
+        }
+        private object get_246_RowDefinition_Height(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            return that.Height;
+        }
+        private void set_246_RowDefinition_Height(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            that.Height = (global::Microsoft.UI.Xaml.GridLength)Value;
+        }
+        private object get_247_RowDefinition_ActualHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            return that.ActualHeight;
+        }
+        private object get_248_RowDefinition_MaxHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            return that.MaxHeight;
+        }
+        private void set_248_RowDefinition_MaxHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            that.MaxHeight = (global::System.Double)Value;
+        }
+        private object get_249_RowDefinition_MinHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            return that.MinHeight;
+        }
+        private void set_249_RowDefinition_MinHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.RowDefinition)instance;
+            that.MinHeight = (global::System.Double)Value;
+        }
+        private object get_250_Grid_ColumnDefinitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.ColumnDefinitions;
+        }
+        private object get_251_ColumnDefinition_Width(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            return that.Width;
+        }
+        private void set_251_ColumnDefinition_Width(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            that.Width = (global::Microsoft.UI.Xaml.GridLength)Value;
+        }
+        private object get_252_ColumnDefinition_ActualWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            return that.ActualWidth;
+        }
+        private object get_253_ColumnDefinition_MaxWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            return that.MaxWidth;
+        }
+        private void set_253_ColumnDefinition_MaxWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            that.MaxWidth = (global::System.Double)Value;
+        }
+        private object get_254_ColumnDefinition_MinWidth(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            return that.MinWidth;
+        }
+        private void set_254_ColumnDefinition_MinWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ColumnDefinition)instance;
+            that.MinWidth = (global::System.Double)Value;
+        }
+        private object get_255_Grid_BackgroundSizing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.BackgroundSizing;
+        }
+        private void set_255_Grid_BackgroundSizing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.BackgroundSizing = (global::Microsoft.UI.Xaml.Controls.BackgroundSizing)Value;
+        }
+        private object get_256_Grid_BorderBrush(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.BorderBrush;
+        }
+        private void set_256_Grid_BorderBrush(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.BorderBrush = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_257_Grid_BorderThickness(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.BorderThickness;
+        }
+        private void set_257_Grid_BorderThickness(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.BorderThickness = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_258_Grid_ColumnSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.ColumnSpacing;
+        }
+        private void set_258_Grid_ColumnSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.ColumnSpacing = (global::System.Double)Value;
+        }
+        private object get_259_Grid_CornerRadius(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.CornerRadius;
+        }
+        private void set_259_Grid_CornerRadius(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.CornerRadius = (global::Microsoft.UI.Xaml.CornerRadius)Value;
+        }
+        private object get_260_Grid_Padding(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.Padding;
+        }
+        private void set_260_Grid_Padding(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.Padding = (global::Microsoft.UI.Xaml.Thickness)Value;
+        }
+        private object get_261_Grid_RowSpacing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            return that.RowSpacing;
+        }
+        private void set_261_Grid_RowSpacing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Grid)instance;
+            that.RowSpacing = (global::System.Double)Value;
+        }
+        private object get_262_Grid_ColumnSpan(object instance)
+        {
+            return global::Microsoft.UI.Xaml.Controls.Grid.GetColumnSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance);
+        }
+        private void set_262_Grid_ColumnSpan(object instance, object Value)
+        {
+            global::Microsoft.UI.Xaml.Controls.Grid.SetColumnSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
+        }
+        private object get_263_Grid_Row(object instance)
+        {
+            return global::Microsoft.UI.Xaml.Controls.Grid.GetRow((global::Microsoft.UI.Xaml.FrameworkElement)instance);
+        }
+        private void set_263_Grid_Row(object instance, object Value)
+        {
+            global::Microsoft.UI.Xaml.Controls.Grid.SetRow((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
+        }
+        private object get_264_Grid_Column(object instance)
+        {
+            return global::Microsoft.UI.Xaml.Controls.Grid.GetColumn((global::Microsoft.UI.Xaml.FrameworkElement)instance);
+        }
+        private void set_264_Grid_Column(object instance, object Value)
+        {
+            global::Microsoft.UI.Xaml.Controls.Grid.SetColumn((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
+        }
+        private object get_265_Grid_RowSpan(object instance)
+        {
+            return global::Microsoft.UI.Xaml.Controls.Grid.GetRowSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance);
+        }
+        private void set_265_Grid_RowSpan(object instance, object Value)
+        {
+            global::Microsoft.UI.Xaml.Controls.Grid.SetRowSpan((global::Microsoft.UI.Xaml.FrameworkElement)instance, (global::System.Int32)Value);
+        }
+        private object get_266_TextBox_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.Header;
+        }
+        private void set_266_TextBox_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_267_TextBox_AcceptsReturn(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.AcceptsReturn;
+        }
+        private void set_267_TextBox_AcceptsReturn(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.AcceptsReturn = (global::System.Boolean)Value;
+        }
+        private object get_268_TextBox_CanPasteClipboardContent(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.CanPasteClipboardContent;
+        }
+        private object get_269_TextBox_CanRedo(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.CanRedo;
+        }
+        private object get_270_TextBox_CanUndo(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.CanUndo;
+        }
+        private object get_271_TextBox_CharacterCasing(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.CharacterCasing;
+        }
+        private void set_271_TextBox_CharacterCasing(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.CharacterCasing = (global::Microsoft.UI.Xaml.Controls.CharacterCasing)Value;
+        }
+        private object get_272_TextBox_Description(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.Description;
+        }
+        private void set_272_TextBox_Description(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.Description = (global::System.Object)Value;
+        }
+        private object get_273_TextBox_DesiredCandidateWindowAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.DesiredCandidateWindowAlignment;
+        }
+        private void set_273_TextBox_DesiredCandidateWindowAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.DesiredCandidateWindowAlignment = (global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)Value;
+        }
+        private object get_274_TextBox_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_274_TextBox_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_275_DataTemplate_Template(object instance)
+        {
+            return null;
+        }
+        private void set_275_DataTemplate_Template(object instance, object Value)
+        {
+        }
+        private object get_276_TextBox_HorizontalTextAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.HorizontalTextAlignment;
+        }
+        private void set_276_TextBox_HorizontalTextAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.HorizontalTextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
+        }
+        private object get_277_TextBox_InputScope(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.InputScope;
+        }
+        private void set_277_TextBox_InputScope(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.InputScope = (global::Microsoft.UI.Xaml.Input.InputScope)Value;
+        }
+        private object get_278_TextBox_IsColorFontEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.IsColorFontEnabled;
+        }
+        private void set_278_TextBox_IsColorFontEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.IsColorFontEnabled = (global::System.Boolean)Value;
+        }
+        private object get_279_TextBox_IsReadOnly(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.IsReadOnly;
+        }
+        private void set_279_TextBox_IsReadOnly(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.IsReadOnly = (global::System.Boolean)Value;
+        }
+        private object get_280_TextBox_IsSpellCheckEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.IsSpellCheckEnabled;
+        }
+        private void set_280_TextBox_IsSpellCheckEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.IsSpellCheckEnabled = (global::System.Boolean)Value;
+        }
+        private object get_281_TextBox_IsTextPredictionEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.IsTextPredictionEnabled;
+        }
+        private void set_281_TextBox_IsTextPredictionEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.IsTextPredictionEnabled = (global::System.Boolean)Value;
+        }
+        private object get_282_TextBox_MaxLength(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.MaxLength;
+        }
+        private void set_282_TextBox_MaxLength(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.MaxLength = (global::System.Int32)Value;
+        }
+        private object get_283_TextBox_PlaceholderForeground(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.PlaceholderForeground;
+        }
+        private void set_283_TextBox_PlaceholderForeground(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_284_TextBox_PlaceholderText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.PlaceholderText;
+        }
+        private void set_284_TextBox_PlaceholderText(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.PlaceholderText = (global::System.String)Value;
+        }
+        private object get_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.PreventKeyboardDisplayOnProgrammaticFocus;
+        }
+        private void set_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.PreventKeyboardDisplayOnProgrammaticFocus = (global::System.Boolean)Value;
+        }
+        private object get_286_TextBox_ProofingMenuFlyout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.ProofingMenuFlyout;
+        }
+        private object get_287_TextBox_SelectedText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectedText;
+        }
+        private void set_287_TextBox_SelectedText(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectedText = (global::System.String)Value;
+        }
+        private object get_288_TextBox_SelectionFlyout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectionFlyout;
+        }
+        private void set_288_TextBox_SelectionFlyout(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
+        }
+        private object get_289_TextBox_SelectionHighlightColor(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectionHighlightColor;
+        }
+        private void set_289_TextBox_SelectionHighlightColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
+        }
+        private object get_290_TextBox_SelectionHighlightColorWhenNotFocused(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectionHighlightColorWhenNotFocused;
+        }
+        private void set_290_TextBox_SelectionHighlightColorWhenNotFocused(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectionHighlightColorWhenNotFocused = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
+        }
+        private object get_291_TextBox_SelectionLength(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectionLength;
+        }
+        private void set_291_TextBox_SelectionLength(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectionLength = (global::System.Int32)Value;
+        }
+        private object get_292_TextBox_SelectionStart(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.SelectionStart;
+        }
+        private void set_292_TextBox_SelectionStart(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.SelectionStart = (global::System.Int32)Value;
+        }
+        private object get_293_TextBox_Text(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.Text;
+        }
+        private void set_293_TextBox_Text(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.Text = (global::System.String)Value;
+        }
+        private object get_294_TextBox_TextAlignment(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.TextAlignment;
+        }
+        private void set_294_TextBox_TextAlignment(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.TextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
+        }
+        private object get_295_TextBox_TextReadingOrder(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.TextReadingOrder;
+        }
+        private void set_295_TextBox_TextReadingOrder(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.TextReadingOrder = (global::Microsoft.UI.Xaml.TextReadingOrder)Value;
+        }
+        private object get_296_TextBox_TextWrapping(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.TextWrapping;
+        }
+        private void set_296_TextBox_TextWrapping(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.TextWrapping = (global::Microsoft.UI.Xaml.TextWrapping)Value;
+        }
+        private object get_297_ItemsControl_Items(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.Items;
+        }
+        private object get_298_ComboBox_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.Header;
+        }
+        private void set_298_ComboBox_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_299_ComboBox_Description(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.Description;
+        }
+        private void set_299_ComboBox_Description(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.Description = (global::System.Object)Value;
+        }
+        private object get_300_ComboBox_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_300_ComboBox_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_301_ComboBox_IsDropDownOpen(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.IsDropDownOpen;
+        }
+        private void set_301_ComboBox_IsDropDownOpen(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.IsDropDownOpen = (global::System.Boolean)Value;
+        }
+        private object get_302_ComboBox_IsEditable(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.IsEditable;
+        }
+        private void set_302_ComboBox_IsEditable(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.IsEditable = (global::System.Boolean)Value;
+        }
+        private object get_303_ComboBox_IsSelectionBoxHighlighted(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.IsSelectionBoxHighlighted;
+        }
+        private object get_304_ComboBox_IsTextSearchEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.IsTextSearchEnabled;
+        }
+        private void set_304_ComboBox_IsTextSearchEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.IsTextSearchEnabled = (global::System.Boolean)Value;
+        }
+        private object get_305_ComboBox_LightDismissOverlayMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.LightDismissOverlayMode;
+        }
+        private void set_305_ComboBox_LightDismissOverlayMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.LightDismissOverlayMode = (global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)Value;
+        }
+        private object get_306_ComboBox_MaxDropDownHeight(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.MaxDropDownHeight;
+        }
+        private void set_306_ComboBox_MaxDropDownHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.MaxDropDownHeight = (global::System.Double)Value;
+        }
+        private object get_307_ComboBox_PlaceholderForeground(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.PlaceholderForeground;
+        }
+        private void set_307_ComboBox_PlaceholderForeground(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_308_ComboBox_PlaceholderText(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.PlaceholderText;
+        }
+        private void set_308_ComboBox_PlaceholderText(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.PlaceholderText = (global::System.String)Value;
+        }
+        private object get_309_ComboBox_SelectionBoxItem(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.SelectionBoxItem;
+        }
+        private object get_310_ComboBox_SelectionBoxItemTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.SelectionBoxItemTemplate;
+        }
+        private object get_311_ComboBox_SelectionChangedTrigger(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.SelectionChangedTrigger;
+        }
+        private void set_311_ComboBox_SelectionChangedTrigger(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.SelectionChangedTrigger = (global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger)Value;
+        }
+        private object get_312_ComboBox_TemplateSettings(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.TemplateSettings;
+        }
+        private object get_313_ComboBox_Text(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.Text;
+        }
+        private void set_313_ComboBox_Text(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.Text = (global::System.String)Value;
+        }
+        private object get_314_ComboBox_TextBoxStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.TextBoxStyle;
+        }
+        private void set_314_ComboBox_TextBoxStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.TextBoxStyle = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_315_Selector_IsSynchronizedWithCurrentItem(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.IsSynchronizedWithCurrentItem;
+        }
+        private void set_315_Selector_IsSynchronizedWithCurrentItem(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.IsSynchronizedWithCurrentItem = (global::System.Nullable<global::System.Boolean>)Value;
+        }
+        private object get_316_Selector_SelectedIndex(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedIndex;
+        }
+        private void set_316_Selector_SelectedIndex(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedIndex = (global::System.Int32)Value;
+        }
+        private object get_317_Selector_SelectedItem(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedItem;
+        }
+        private void set_317_Selector_SelectedItem(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedItem = (global::System.Object)Value;
+        }
+        private object get_318_Selector_SelectedValue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedValue;
+        }
+        private void set_318_Selector_SelectedValue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedValue = (global::System.Object)Value;
+        }
+        private object get_319_Selector_SelectedValuePath(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedValuePath;
+        }
+        private void set_319_Selector_SelectedValuePath(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedValuePath = (global::System.String)Value;
+        }
+        private object get_320_ItemsControl_DisplayMemberPath(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.DisplayMemberPath;
+        }
+        private void set_320_ItemsControl_DisplayMemberPath(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.DisplayMemberPath = (global::System.String)Value;
+        }
+        private object get_321_ItemsControl_GroupStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.GroupStyle;
+        }
+        private object get_322_GroupStyle_ContainerStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.ContainerStyle;
+        }
+        private void set_322_GroupStyle_ContainerStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.ContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_323_GroupStyle_ContainerStyleSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.ContainerStyleSelector;
+        }
+        private void set_323_GroupStyle_ContainerStyleSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.ContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
+        }
+        private object get_324_GroupStyle_HeaderContainerStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.HeaderContainerStyle;
+        }
+        private void set_324_GroupStyle_HeaderContainerStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.HeaderContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_325_GroupStyle_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_325_GroupStyle_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_326_GroupStyle_HeaderTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.HeaderTemplateSelector;
+        }
+        private void set_326_GroupStyle_HeaderTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.HeaderTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_327_GroupStyle_HidesIfEmpty(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.HidesIfEmpty;
+        }
+        private void set_327_GroupStyle_HidesIfEmpty(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.HidesIfEmpty = (global::System.Boolean)Value;
+        }
+        private object get_328_GroupStyle_Panel(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            return that.Panel;
+        }
+        private void set_328_GroupStyle_Panel(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.GroupStyle)instance;
+            that.Panel = (global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)Value;
+        }
+        private object get_329_ItemsPanelTemplate_Template(object instance)
+        {
+            return null;
+        }
+        private void set_329_ItemsPanelTemplate_Template(object instance, object Value)
+        {
+        }
+        private object get_330_ItemsControl_GroupStyleSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.GroupStyleSelector;
+        }
+        private void set_330_ItemsControl_GroupStyleSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.GroupStyleSelector = (global::Microsoft.UI.Xaml.Controls.GroupStyleSelector)Value;
+        }
+        private object get_331_ItemsControl_IsGrouping(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.IsGrouping;
+        }
+        private object get_332_ItemsControl_ItemContainerGenerator(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemContainerGenerator;
+        }
+        private object get_333_ItemsControl_ItemContainerStyle(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemContainerStyle;
+        }
+        private void set_333_ItemsControl_ItemContainerStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemContainerStyle = (global::Microsoft.UI.Xaml.Style)Value;
+        }
+        private object get_334_ItemsControl_ItemContainerStyleSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemContainerStyleSelector;
+        }
+        private void set_334_ItemsControl_ItemContainerStyleSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemContainerStyleSelector = (global::Microsoft.UI.Xaml.Controls.StyleSelector)Value;
+        }
+        private object get_335_ItemsControl_ItemContainerTransitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemContainerTransitions;
+        }
+        private void set_335_ItemsControl_ItemContainerTransitions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemContainerTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+        }
+        private object get_336_ItemsControl_ItemTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemTemplate;
+        }
+        private void set_336_ItemsControl_ItemTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_337_ItemsControl_ItemTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemTemplateSelector;
+        }
+        private void set_337_ItemsControl_ItemTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_338_ItemsControl_ItemsPanel(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemsPanel;
+        }
+        private void set_338_ItemsControl_ItemsPanel(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemsPanel = (global::Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)Value;
+        }
+        private object get_339_ItemsControl_ItemsPanelRoot(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemsPanelRoot;
+        }
+        private object get_340_ItemsControl_ItemsSource(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.ItemsSource;
+        }
+        private void set_340_ItemsControl_ItemsSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.ItemsSource = (global::System.Object)Value;
+        }
+        private object get_341_ContentControl_Content(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            return that.Content;
+        }
+        private void set_341_ContentControl_Content(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            that.Content = (global::System.Object)Value;
+        }
+        private object get_342_Button_Flyout(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Button)instance;
+            return that.Flyout;
+        }
+        private void set_342_Button_Flyout(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Button)instance;
+            that.Flyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
+        }
+        private object get_343_ButtonBase_ClickMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            return that.ClickMode;
+        }
+        private void set_343_ButtonBase_ClickMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            that.ClickMode = (global::Microsoft.UI.Xaml.Controls.ClickMode)Value;
+        }
+        private object get_344_ButtonBase_Command(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            return that.Command;
+        }
+        private void set_344_ButtonBase_Command(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            that.Command = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_345_ButtonBase_CommandParameter(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            return that.CommandParameter;
+        }
+        private void set_345_ButtonBase_CommandParameter(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            that.CommandParameter = (global::System.Object)Value;
+        }
+        private object get_346_ButtonBase_IsPointerOver(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            return that.IsPointerOver;
+        }
+        private object get_347_ButtonBase_IsPressed(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.ButtonBase)instance;
+            return that.IsPressed;
+        }
+        private object get_348_ContentControl_ContentTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            return that.ContentTemplate;
+        }
+        private void set_348_ContentControl_ContentTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            that.ContentTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_349_ContentControl_ContentTemplateRoot(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            return that.ContentTemplateRoot;
+        }
+        private object get_350_ContentControl_ContentTemplateSelector(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            return that.ContentTemplateSelector;
+        }
+        private void set_350_ContentControl_ContentTemplateSelector(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            that.ContentTemplateSelector = (global::Microsoft.UI.Xaml.Controls.DataTemplateSelector)Value;
+        }
+        private object get_351_ContentControl_ContentTransitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            return that.ContentTransitions;
+        }
+        private void set_351_ContentControl_ContentTransitions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ContentControl)instance;
+            that.ContentTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+        }
+        private object get_352_ListViewBase_CanDragItems(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.CanDragItems;
+        }
+        private void set_352_ListViewBase_CanDragItems(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.CanDragItems = (global::System.Boolean)Value;
+        }
+        private object get_353_ListViewBase_CanReorderItems(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.CanReorderItems;
+        }
+        private void set_353_ListViewBase_CanReorderItems(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.CanReorderItems = (global::System.Boolean)Value;
+        }
+        private object get_354_ListViewBase_DataFetchSize(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.DataFetchSize;
+        }
+        private void set_354_ListViewBase_DataFetchSize(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.DataFetchSize = (global::System.Double)Value;
+        }
+        private object get_355_ListViewBase_Footer(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.Footer;
+        }
+        private void set_355_ListViewBase_Footer(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.Footer = (global::System.Object)Value;
+        }
+        private object get_356_ListViewBase_FooterTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.FooterTemplate;
+        }
+        private void set_356_ListViewBase_FooterTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.FooterTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_357_ListViewBase_FooterTransitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.FooterTransitions;
+        }
+        private void set_357_ListViewBase_FooterTransitions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.FooterTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+        }
+        private object get_358_ListViewBase_Header(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.Header;
+        }
+        private void set_358_ListViewBase_Header(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.Header = (global::System.Object)Value;
+        }
+        private object get_359_ListViewBase_HeaderTemplate(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.HeaderTemplate;
+        }
+        private void set_359_ListViewBase_HeaderTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_360_ListViewBase_HeaderTransitions(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.HeaderTransitions;
+        }
+        private void set_360_ListViewBase_HeaderTransitions(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.HeaderTransitions = (global::Microsoft.UI.Xaml.Media.Animation.TransitionCollection)Value;
+        }
+        private object get_361_ListViewBase_IncrementalLoadingThreshold(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IncrementalLoadingThreshold;
+        }
+        private void set_361_ListViewBase_IncrementalLoadingThreshold(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IncrementalLoadingThreshold = (global::System.Double)Value;
+        }
+        private object get_362_ListViewBase_IncrementalLoadingTrigger(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IncrementalLoadingTrigger;
+        }
+        private void set_362_ListViewBase_IncrementalLoadingTrigger(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IncrementalLoadingTrigger = (global::Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger)Value;
+        }
+        private object get_363_ListViewBase_IsActiveView(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IsActiveView;
+        }
+        private void set_363_ListViewBase_IsActiveView(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IsActiveView = (global::System.Boolean)Value;
+        }
+        private object get_364_ListViewBase_IsItemClickEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IsItemClickEnabled;
+        }
+        private void set_364_ListViewBase_IsItemClickEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IsItemClickEnabled = (global::System.Boolean)Value;
+        }
+        private object get_365_ListViewBase_IsMultiSelectCheckBoxEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IsMultiSelectCheckBoxEnabled;
+        }
+        private void set_365_ListViewBase_IsMultiSelectCheckBoxEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IsMultiSelectCheckBoxEnabled = (global::System.Boolean)Value;
+        }
+        private object get_366_ListViewBase_IsSwipeEnabled(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IsSwipeEnabled;
+        }
+        private void set_366_ListViewBase_IsSwipeEnabled(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IsSwipeEnabled = (global::System.Boolean)Value;
+        }
+        private object get_367_ListViewBase_IsZoomedInView(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.IsZoomedInView;
+        }
+        private void set_367_ListViewBase_IsZoomedInView(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.IsZoomedInView = (global::System.Boolean)Value;
+        }
+        private object get_368_ListViewBase_ReorderMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.ReorderMode;
+        }
+        private void set_368_ListViewBase_ReorderMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.ReorderMode = (global::Microsoft.UI.Xaml.Controls.ListViewReorderMode)Value;
+        }
+        private object get_369_ListViewBase_SelectedItems(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.SelectedItems;
+        }
+        private object get_370_ListViewBase_SelectedRanges(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.SelectedRanges;
+        }
+        private object get_371_ListViewBase_SelectionMode(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.SelectionMode;
+        }
+        private void set_371_ListViewBase_SelectionMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.SelectionMode = (global::Microsoft.UI.Xaml.Controls.ListViewSelectionMode)Value;
+        }
+        private object get_372_ListViewBase_SemanticZoomOwner(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.SemanticZoomOwner;
+        }
+        private void set_372_ListViewBase_SemanticZoomOwner(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.SemanticZoomOwner = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)Value;
+        }
+        private object get_373_SemanticZoom_ZoomedInView(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)instance;
+            return that.ZoomedInView;
+        }
+        private void set_373_SemanticZoom_ZoomedInView(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.SemanticZoom)instance;
+            that.ZoomedInView = (global::Microsoft.UI.Xaml.Controls.ISemanticZoomInformation)Value;
+        }
+        private object get_374_ListViewBase_ShowsScrollingPlaceholders(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.ShowsScrollingPlaceholders;
+        }
+        private void set_374_ListViewBase_ShowsScrollingPlaceholders(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.ShowsScrollingPlaceholders = (global::System.Boolean)Value;
+        }
+        private object get_375_ListViewBase_SingleSelectionFollowsFocus(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            return that.SingleSelectionFollowsFocus;
+        }
+        private void set_375_ListViewBase_SingleSelectionFollowsFocus(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
+            that.SingleSelectionFollowsFocus = (global::System.Boolean)Value;
         }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -5838,1401 +5870,889 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.Getter = get_14_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_14_XamlControlsResources_UseCompactResources;
                 break;
-            case "Microsoft.UI.Xaml.Window.Content":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+            case "Microsoft.UI.Xaml.Controls.UserControl.Content":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.UserControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
-                xamlMember.Getter = get_15_Window_Content;
-                xamlMember.Setter = set_15_Window_Content;
-                break;
-            case "Microsoft.UI.Xaml.Window.Bounds":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Bounds", "Windows.Foundation.Rect");
-                xamlMember.Getter = get_16_Window_Bounds;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Window.Compositor":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Compositor", "Microsoft.UI.Composition.Compositor");
-                xamlMember.Getter = get_17_Window_Compositor;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Window.CoreWindow":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CoreWindow", "Windows.UI.Core.CoreWindow");
-                xamlMember.Getter = get_18_Window_CoreWindow;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Window.Dispatcher":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Dispatcher", "Windows.UI.Core.CoreDispatcher");
-                xamlMember.Getter = get_19_Window_Dispatcher;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Window.DispatcherQueue":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DispatcherQueue", "Microsoft.System.DispatcherQueue");
-                xamlMember.Getter = get_20_Window_DispatcherQueue;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Window.ExtendsContentIntoTitleBar":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExtendsContentIntoTitleBar", "Boolean");
-                xamlMember.Getter = get_21_Window_ExtendsContentIntoTitleBar;
-                xamlMember.Setter = set_21_Window_ExtendsContentIntoTitleBar;
-                break;
-            case "Microsoft.UI.Xaml.Window.Title":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Title", "String");
-                xamlMember.Getter = get_22_Window_Title;
-                xamlMember.Setter = set_22_Window_Title;
-                break;
-            case "Microsoft.UI.Xaml.Window.Visible":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Visible", "Boolean");
-                xamlMember.Getter = get_23_Window_Visible;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.Panel.Children":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Children", "Microsoft.UI.Xaml.Controls.UIElementCollection");
-                xamlMember.Getter = get_24_Panel_Children;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.AccessKey":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKey", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_UIElement_AccessKey;
-                xamlMember.Setter = set_25_UIElement_AccessKey;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.AccessKeyScopeOwner":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKeyScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_UIElement_AccessKeyScopeOwner;
-                xamlMember.Setter = set_26_UIElement_AccessKeyScopeOwner;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ActualOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualOffset", "System.Numerics.Vector3");
-                xamlMember.Getter = get_27_UIElement_ActualOffset;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ActualSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualSize", "System.Numerics.Vector2");
-                xamlMember.Getter = get_28_UIElement_ActualSize;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.AllowDrop":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowDrop", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_UIElement_AllowDrop;
-                xamlMember.Setter = set_29_UIElement_AllowDrop;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.CacheMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CacheMode", "Microsoft.UI.Xaml.Media.CacheMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_UIElement_CacheMode;
-                xamlMember.Setter = set_30_UIElement_CacheMode;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.CanBeScrollAnchor":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanBeScrollAnchor", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_UIElement_CanBeScrollAnchor;
-                xamlMember.Setter = set_31_UIElement_CanBeScrollAnchor;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.CanDrag":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanDrag", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_UIElement_CanDrag;
-                xamlMember.Setter = set_32_UIElement_CanDrag;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.CenterPoint":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CenterPoint", "System.Numerics.Vector3");
-                xamlMember.Getter = get_33_UIElement_CenterPoint;
-                xamlMember.Setter = set_33_UIElement_CenterPoint;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Clip":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Clip", "Microsoft.UI.Xaml.Media.RectangleGeometry");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_UIElement_Clip;
-                xamlMember.Setter = set_34_UIElement_Clip;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.CompositeMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CompositeMode", "Microsoft.UI.Xaml.Media.ElementCompositeMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_UIElement_CompositeMode;
-                xamlMember.Setter = set_35_UIElement_CompositeMode;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ContextFlyout":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContextFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_UIElement_ContextFlyout;
-                xamlMember.Setter = set_36_UIElement_ContextFlyout;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.DesiredSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DesiredSize", "Windows.Foundation.Size");
-                xamlMember.Getter = get_37_UIElement_DesiredSize;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ExitDisplayModeOnAccessKeyInvoked":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExitDisplayModeOnAccessKeyInvoked", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_UIElement_ExitDisplayModeOnAccessKeyInvoked;
-                xamlMember.Setter = set_38_UIElement_ExitDisplayModeOnAccessKeyInvoked;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.FocusState":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusState", "Microsoft.UI.Xaml.FocusState");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_39_UIElement_FocusState;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.HighContrastAdjustment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HighContrastAdjustment", "Microsoft.UI.Xaml.ElementHighContrastAdjustment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_UIElement_HighContrastAdjustment;
-                xamlMember.Setter = set_40_UIElement_HighContrastAdjustment;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsAccessKeyScope":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsAccessKeyScope", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_41_UIElement_IsAccessKeyScope;
-                xamlMember.Setter = set_41_UIElement_IsAccessKeyScope;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsDoubleTapEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsDoubleTapEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_42_UIElement_IsDoubleTapEnabled;
-                xamlMember.Setter = set_42_UIElement_IsDoubleTapEnabled;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsHitTestVisible":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsHitTestVisible", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_43_UIElement_IsHitTestVisible;
-                xamlMember.Setter = set_43_UIElement_IsHitTestVisible;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsHoldingEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsHoldingEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_UIElement_IsHoldingEnabled;
-                xamlMember.Setter = set_44_UIElement_IsHoldingEnabled;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsRightTapEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsRightTapEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_UIElement_IsRightTapEnabled;
-                xamlMember.Setter = set_45_UIElement_IsRightTapEnabled;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsTabStop":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTabStop", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_46_UIElement_IsTabStop;
-                xamlMember.Setter = set_46_UIElement_IsTabStop;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.IsTapEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTapEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_UIElement_IsTapEnabled;
-                xamlMember.Setter = set_47_UIElement_IsTapEnabled;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyTipHorizontalOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipHorizontalOffset", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_48_UIElement_KeyTipHorizontalOffset;
-                xamlMember.Setter = set_48_UIElement_KeyTipHorizontalOffset;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyTipPlacementMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipPlacementMode", "Microsoft.UI.Xaml.Input.KeyTipPlacementMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_UIElement_KeyTipPlacementMode;
-                xamlMember.Setter = set_49_UIElement_KeyTipPlacementMode;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyTipTarget":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipTarget", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_UIElement_KeyTipTarget;
-                xamlMember.Setter = set_50_UIElement_KeyTipTarget;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyTipVerticalOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipVerticalOffset", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_UIElement_KeyTipVerticalOffset;
-                xamlMember.Setter = set_51_UIElement_KeyTipVerticalOffset;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyboardAcceleratorPlacementMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAcceleratorPlacementMode", "Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_UIElement_KeyboardAcceleratorPlacementMode;
-                xamlMember.Setter = set_52_UIElement_KeyboardAcceleratorPlacementMode;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyboardAcceleratorPlacementTarget":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAcceleratorPlacementTarget", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_UIElement_KeyboardAcceleratorPlacementTarget;
-                xamlMember.Setter = set_53_UIElement_KeyboardAcceleratorPlacementTarget;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.KeyboardAccelerators":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAccelerators", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>");
-                xamlMember.Getter = get_54_UIElement_KeyboardAccelerators;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.IsEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_KeyboardAccelerator_IsEnabled;
-                xamlMember.Setter = set_55_KeyboardAccelerator_IsEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.Key":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Key", "Windows.System.VirtualKey");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_KeyboardAccelerator_Key;
-                xamlMember.Setter = set_56_KeyboardAccelerator_Key;
-                break;
-            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.Modifiers":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Modifiers", "Windows.System.VirtualKeyModifiers");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_KeyboardAccelerator_Modifiers;
-                xamlMember.Setter = set_57_KeyboardAccelerator_Modifiers;
-                break;
-            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.ScopeOwner":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_KeyboardAccelerator_ScopeOwner;
-                xamlMember.Setter = set_58_KeyboardAccelerator_ScopeOwner;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Lights":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Lights", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_UIElement_Lights;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ManipulationMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ManipulationMode", "Microsoft.UI.Xaml.Input.ManipulationModes");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_UIElement_ManipulationMode;
-                xamlMember.Setter = set_60_UIElement_ManipulationMode;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Opacity":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Opacity", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_61_UIElement_Opacity;
-                xamlMember.Setter = set_61_UIElement_Opacity;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.OpacityTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "OpacityTransition", "Microsoft.UI.Xaml.ScalarTransition");
-                xamlMember.Getter = get_62_UIElement_OpacityTransition;
-                xamlMember.Setter = set_62_UIElement_OpacityTransition;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.PointerCaptures":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PointerCaptures", "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_UIElement_PointerCaptures;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Projection":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Projection", "Microsoft.UI.Xaml.Media.Projection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_UIElement_Projection;
-                xamlMember.Setter = set_64_UIElement_Projection;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RasterizationScale":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RasterizationScale", "Double");
-                xamlMember.Getter = get_65_UIElement_RasterizationScale;
-                xamlMember.Setter = set_65_UIElement_RasterizationScale;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RenderSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderSize", "Windows.Foundation.Size");
-                xamlMember.Getter = get_66_UIElement_RenderSize;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RenderTransform":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderTransform", "Microsoft.UI.Xaml.Media.Transform");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_UIElement_RenderTransform;
-                xamlMember.Setter = set_67_UIElement_RenderTransform;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RenderTransformOrigin":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderTransformOrigin", "Windows.Foundation.Point");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_UIElement_RenderTransformOrigin;
-                xamlMember.Setter = set_68_UIElement_RenderTransformOrigin;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Rotation":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Rotation", "Single");
-                xamlMember.Getter = get_69_UIElement_Rotation;
-                xamlMember.Setter = set_69_UIElement_Rotation;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RotationAxis":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RotationAxis", "System.Numerics.Vector3");
-                xamlMember.Getter = get_70_UIElement_RotationAxis;
-                xamlMember.Setter = set_70_UIElement_RotationAxis;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.RotationTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RotationTransition", "Microsoft.UI.Xaml.ScalarTransition");
-                xamlMember.Getter = get_71_UIElement_RotationTransition;
-                xamlMember.Setter = set_71_UIElement_RotationTransition;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Scale":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Scale", "System.Numerics.Vector3");
-                xamlMember.Getter = get_72_UIElement_Scale;
-                xamlMember.Setter = set_72_UIElement_Scale;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.ScaleTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ScaleTransition", "Microsoft.UI.Xaml.Vector3Transition");
-                xamlMember.Getter = get_73_UIElement_ScaleTransition;
-                xamlMember.Setter = set_73_UIElement_ScaleTransition;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Shadow":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Shadow", "Microsoft.UI.Xaml.Media.Shadow");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_74_UIElement_Shadow;
-                xamlMember.Setter = set_74_UIElement_Shadow;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.TabFocusNavigation":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabFocusNavigation", "Microsoft.UI.Xaml.Input.KeyboardNavigationMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_UIElement_TabFocusNavigation;
-                xamlMember.Setter = set_75_UIElement_TabFocusNavigation;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.TabIndex":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabIndex", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_UIElement_TabIndex;
-                xamlMember.Setter = set_76_UIElement_TabIndex;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Transform3D":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Transform3D", "Microsoft.UI.Xaml.Media.Media3D.Transform3D");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_UIElement_Transform3D;
-                xamlMember.Setter = set_77_UIElement_Transform3D;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.TransformMatrix":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TransformMatrix", "System.Numerics.Matrix4x4");
-                xamlMember.Getter = get_78_UIElement_TransformMatrix;
-                xamlMember.Setter = set_78_UIElement_TransformMatrix;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Transitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Transitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_UIElement_Transitions;
-                xamlMember.Setter = set_79_UIElement_Transitions;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Translation":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Translation", "System.Numerics.Vector3");
-                xamlMember.Getter = get_80_UIElement_Translation;
-                xamlMember.Setter = set_80_UIElement_Translation;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.TranslationTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TranslationTransition", "Microsoft.UI.Xaml.Vector3Transition");
-                xamlMember.Getter = get_81_UIElement_TranslationTransition;
-                xamlMember.Setter = set_81_UIElement_TranslationTransition;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.UseLayoutRounding":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "UseLayoutRounding", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_82_UIElement_UseLayoutRounding;
-                xamlMember.Setter = set_82_UIElement_UseLayoutRounding;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.UseSystemFocusVisuals":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "UseSystemFocusVisuals", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_83_UIElement_UseSystemFocusVisuals;
-                xamlMember.Setter = set_83_UIElement_UseSystemFocusVisuals;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.Visibility":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Visibility", "Microsoft.UI.Xaml.Visibility");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_UIElement_Visibility;
-                xamlMember.Setter = set_84_UIElement_Visibility;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusDown":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusDown", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_UIElement_XYFocusDown;
-                xamlMember.Setter = set_85_UIElement_XYFocusDown;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusDownNavigationStrategy":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusDownNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_86_UIElement_XYFocusDownNavigationStrategy;
-                xamlMember.Setter = set_86_UIElement_XYFocusDownNavigationStrategy;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusKeyboardNavigation":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusKeyboardNavigation", "Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_UIElement_XYFocusKeyboardNavigation;
-                xamlMember.Setter = set_87_UIElement_XYFocusKeyboardNavigation;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusLeft":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusLeft", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_88_UIElement_XYFocusLeft;
-                xamlMember.Setter = set_88_UIElement_XYFocusLeft;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusLeftNavigationStrategy":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusLeftNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_89_UIElement_XYFocusLeftNavigationStrategy;
-                xamlMember.Setter = set_89_UIElement_XYFocusLeftNavigationStrategy;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusRight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusRight", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_90_UIElement_XYFocusRight;
-                xamlMember.Setter = set_90_UIElement_XYFocusRight;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusRightNavigationStrategy":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusRightNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_91_UIElement_XYFocusRightNavigationStrategy;
-                xamlMember.Setter = set_91_UIElement_XYFocusRightNavigationStrategy;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusUp":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusUp", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_92_UIElement_XYFocusUp;
-                xamlMember.Setter = set_92_UIElement_XYFocusUp;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XYFocusUpNavigationStrategy":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusUpNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_93_UIElement_XYFocusUpNavigationStrategy;
-                xamlMember.Setter = set_93_UIElement_XYFocusUpNavigationStrategy;
-                break;
-            case "Microsoft.UI.Xaml.UIElement.XamlRoot":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XamlRoot", "Microsoft.UI.Xaml.XamlRoot");
-                xamlMember.Getter = get_94_UIElement_XamlRoot;
-                xamlMember.Setter = set_94_UIElement_XamlRoot;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.RowDefinitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowDefinitions", "Microsoft.UI.Xaml.Controls.RowDefinitionCollection");
-                xamlMember.Getter = get_95_Grid_RowDefinitions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.RowDefinition.Height":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Height", "Microsoft.UI.Xaml.GridLength");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_96_RowDefinition_Height;
-                xamlMember.Setter = set_96_RowDefinition_Height;
-                break;
-            case "Microsoft.UI.Xaml.Controls.RowDefinition.ActualHeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualHeight", "Double");
-                xamlMember.Getter = get_97_RowDefinition_ActualHeight;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.RowDefinition.MaxHeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_98_RowDefinition_MaxHeight;
-                xamlMember.Setter = set_98_RowDefinition_MaxHeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.RowDefinition.MinHeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_99_RowDefinition_MinHeight;
-                xamlMember.Setter = set_99_RowDefinition_MinHeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.ColumnDefinitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnDefinitions", "Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection");
-                xamlMember.Getter = get_100_Grid_ColumnDefinitions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.Width":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Width", "Microsoft.UI.Xaml.GridLength");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_101_ColumnDefinition_Width;
-                xamlMember.Setter = set_101_ColumnDefinition_Width;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.ActualWidth":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualWidth", "Double");
-                xamlMember.Getter = get_102_ColumnDefinition_ActualWidth;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.MaxWidth":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxWidth", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_103_ColumnDefinition_MaxWidth;
-                xamlMember.Setter = set_103_ColumnDefinition_MaxWidth;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.MinWidth":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinWidth", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_104_ColumnDefinition_MinWidth;
-                xamlMember.Setter = set_104_ColumnDefinition_MinWidth;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.BackgroundSizing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_105_Grid_BackgroundSizing;
-                xamlMember.Setter = set_105_Grid_BackgroundSizing;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.BorderBrush":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_106_Grid_BorderBrush;
-                xamlMember.Setter = set_106_Grid_BorderBrush;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.BorderThickness":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_107_Grid_BorderThickness;
-                xamlMember.Setter = set_107_Grid_BorderThickness;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.ColumnSpacing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnSpacing", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_108_Grid_ColumnSpacing;
-                xamlMember.Setter = set_108_Grid_ColumnSpacing;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.CornerRadius":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_109_Grid_CornerRadius;
-                xamlMember.Setter = set_109_Grid_CornerRadius;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.Padding":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_110_Grid_Padding;
-                xamlMember.Setter = set_110_Grid_Padding;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.RowSpacing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowSpacing", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_111_Grid_RowSpacing;
-                xamlMember.Setter = set_111_Grid_RowSpacing;
+                xamlMember.Getter = get_15_UserControl_Content;
+                xamlMember.Setter = set_15_UserControl_Content;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Panel.Background":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+            case "Microsoft.UI.Xaml.Controls.Control.Background":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_112_Panel_Background;
-                xamlMember.Setter = set_112_Panel_Background;
+                xamlMember.Getter = get_16_Control_Background;
+                xamlMember.Setter = set_16_Control_Background;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Panel.BackgroundTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundTransition", "Microsoft.UI.Xaml.BrushTransition");
-                xamlMember.Getter = get_113_Panel_BackgroundTransition;
-                xamlMember.Setter = set_113_Panel_BackgroundTransition;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Panel.ChildrenTransitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ChildrenTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
+            case "Microsoft.UI.Xaml.Controls.Control.BackgroundSizing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_114_Panel_ChildrenTransitions;
-                xamlMember.Setter = set_114_Panel_ChildrenTransitions;
+                xamlMember.Getter = get_17_Control_BackgroundSizing;
+                xamlMember.Setter = set_17_Control_BackgroundSizing;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Panel.IsItemsHost":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsItemsHost", "Boolean");
+            case "Microsoft.UI.Xaml.Controls.Control.BorderBrush":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_115_Panel_IsItemsHost;
-                xamlMember.SetIsReadOnly();
+                xamlMember.Getter = get_18_Control_BorderBrush;
+                xamlMember.Setter = set_18_Control_BorderBrush;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.BorderThickness":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_19_Control_BorderThickness;
+                xamlMember.Setter = set_19_Control_BorderThickness;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.CharacterSpacing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_20_Control_CharacterSpacing;
+                xamlMember.Setter = set_20_Control_CharacterSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.CornerRadius":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_21_Control_CornerRadius;
+                xamlMember.Setter = set_21_Control_CornerRadius;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.DefaultStyleResourceUri":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DefaultStyleResourceUri", "System.Uri");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_22_Control_DefaultStyleResourceUri;
+                xamlMember.Setter = set_22_Control_DefaultStyleResourceUri;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.ElementSoundMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementSoundMode", "Microsoft.UI.Xaml.ElementSoundMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_23_Control_ElementSoundMode;
+                xamlMember.Setter = set_23_Control_ElementSoundMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.FontFamily":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_24_Control_FontFamily;
+                xamlMember.Setter = set_24_Control_FontFamily;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.FontSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_25_Control_FontSize;
+                xamlMember.Setter = set_25_Control_FontSize;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.FontStretch":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_26_Control_FontStretch;
+                xamlMember.Setter = set_26_Control_FontStretch;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.FontStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_27_Control_FontStyle;
+                xamlMember.Setter = set_27_Control_FontStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.FontWeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_28_Control_FontWeight;
+                xamlMember.Setter = set_28_Control_FontWeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.Foreground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_29_Control_Foreground;
+                xamlMember.Setter = set_29_Control_Foreground;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.HorizontalContentAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalContentAlignment", "Microsoft.UI.Xaml.HorizontalAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_30_Control_HorizontalContentAlignment;
+                xamlMember.Setter = set_30_Control_HorizontalContentAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.IsEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_31_Control_IsEnabled;
+                xamlMember.Setter = set_31_Control_IsEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.IsFocusEngaged":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsFocusEngaged", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_32_Control_IsFocusEngaged;
+                xamlMember.Setter = set_32_Control_IsFocusEngaged;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.IsFocusEngagementEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsFocusEngagementEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_33_Control_IsFocusEngagementEnabled;
+                xamlMember.Setter = set_33_Control_IsFocusEngagementEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.IsTextScaleFactorEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_34_Control_IsTextScaleFactorEnabled;
+                xamlMember.Setter = set_34_Control_IsTextScaleFactorEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.Padding":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_35_Control_Padding;
+                xamlMember.Setter = set_35_Control_Padding;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.RequiresPointer":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RequiresPointer", "Microsoft.UI.Xaml.Controls.RequiresPointer");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_36_Control_RequiresPointer;
+                xamlMember.Setter = set_36_Control_RequiresPointer;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.TabNavigation":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabNavigation", "Microsoft.UI.Xaml.Input.KeyboardNavigationMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_37_Control_TabNavigation;
+                xamlMember.Setter = set_37_Control_TabNavigation;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.Template":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Microsoft.UI.Xaml.Controls.ControlTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_38_Control_Template;
+                xamlMember.Setter = set_38_Control_Template;
+                break;
+            case "Microsoft.UI.Xaml.FrameworkTemplate.Template":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
+                xamlMember.Getter = get_39_FrameworkTemplate_Template;
+                xamlMember.Setter = set_39_FrameworkTemplate_Template;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ControlTemplate.Template":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ControlTemplate");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
+                xamlMember.Getter = get_40_ControlTemplate_Template;
+                xamlMember.Setter = set_40_ControlTemplate_Template;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Control.VerticalContentAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "VerticalContentAlignment", "Microsoft.UI.Xaml.VerticalAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_41_Control_VerticalContentAlignment;
+                xamlMember.Setter = set_41_Control_VerticalContentAlignment;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.ActualHeight":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_116_FrameworkElement_ActualHeight;
+                xamlMember.Getter = get_42_FrameworkElement_ActualHeight;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.ActualTheme":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualTheme", "Microsoft.UI.Xaml.ElementTheme");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_117_FrameworkElement_ActualTheme;
+                xamlMember.Getter = get_43_FrameworkElement_ActualTheme;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.ActualWidth":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_118_FrameworkElement_ActualWidth;
+                xamlMember.Getter = get_44_FrameworkElement_ActualWidth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.AllowFocusOnInteraction":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowFocusOnInteraction", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_119_FrameworkElement_AllowFocusOnInteraction;
-                xamlMember.Setter = set_119_FrameworkElement_AllowFocusOnInteraction;
+                xamlMember.Getter = get_45_FrameworkElement_AllowFocusOnInteraction;
+                xamlMember.Setter = set_45_FrameworkElement_AllowFocusOnInteraction;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.AllowFocusWhenDisabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowFocusWhenDisabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_120_FrameworkElement_AllowFocusWhenDisabled;
-                xamlMember.Setter = set_120_FrameworkElement_AllowFocusWhenDisabled;
+                xamlMember.Getter = get_46_FrameworkElement_AllowFocusWhenDisabled;
+                xamlMember.Setter = set_46_FrameworkElement_AllowFocusWhenDisabled;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.BaseUri":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BaseUri", "System.Uri");
-                xamlMember.Getter = get_121_FrameworkElement_BaseUri;
+                xamlMember.Getter = get_47_FrameworkElement_BaseUri;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.DataContext":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DataContext", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_122_FrameworkElement_DataContext;
-                xamlMember.Setter = set_122_FrameworkElement_DataContext;
+                xamlMember.Getter = get_48_FrameworkElement_DataContext;
+                xamlMember.Setter = set_48_FrameworkElement_DataContext;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FlowDirection":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FlowDirection", "Microsoft.UI.Xaml.FlowDirection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_123_FrameworkElement_FlowDirection;
-                xamlMember.Setter = set_123_FrameworkElement_FlowDirection;
+                xamlMember.Getter = get_49_FrameworkElement_FlowDirection;
+                xamlMember.Setter = set_49_FrameworkElement_FlowDirection;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FocusVisualMargin":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusVisualMargin", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_124_FrameworkElement_FocusVisualMargin;
-                xamlMember.Setter = set_124_FrameworkElement_FocusVisualMargin;
+                xamlMember.Getter = get_50_FrameworkElement_FocusVisualMargin;
+                xamlMember.Setter = set_50_FrameworkElement_FocusVisualMargin;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FocusVisualPrimaryBrush":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusVisualPrimaryBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_125_FrameworkElement_FocusVisualPrimaryBrush;
-                xamlMember.Setter = set_125_FrameworkElement_FocusVisualPrimaryBrush;
+                xamlMember.Getter = get_51_FrameworkElement_FocusVisualPrimaryBrush;
+                xamlMember.Setter = set_51_FrameworkElement_FocusVisualPrimaryBrush;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FocusVisualPrimaryThickness":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusVisualPrimaryThickness", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_126_FrameworkElement_FocusVisualPrimaryThickness;
-                xamlMember.Setter = set_126_FrameworkElement_FocusVisualPrimaryThickness;
+                xamlMember.Getter = get_52_FrameworkElement_FocusVisualPrimaryThickness;
+                xamlMember.Setter = set_52_FrameworkElement_FocusVisualPrimaryThickness;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FocusVisualSecondaryBrush":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusVisualSecondaryBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_127_FrameworkElement_FocusVisualSecondaryBrush;
-                xamlMember.Setter = set_127_FrameworkElement_FocusVisualSecondaryBrush;
+                xamlMember.Getter = get_53_FrameworkElement_FocusVisualSecondaryBrush;
+                xamlMember.Setter = set_53_FrameworkElement_FocusVisualSecondaryBrush;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.FocusVisualSecondaryThickness":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusVisualSecondaryThickness", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_128_FrameworkElement_FocusVisualSecondaryThickness;
-                xamlMember.Setter = set_128_FrameworkElement_FocusVisualSecondaryThickness;
+                xamlMember.Getter = get_54_FrameworkElement_FocusVisualSecondaryThickness;
+                xamlMember.Setter = set_54_FrameworkElement_FocusVisualSecondaryThickness;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Height":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Height", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_129_FrameworkElement_Height;
-                xamlMember.Setter = set_129_FrameworkElement_Height;
+                xamlMember.Getter = get_55_FrameworkElement_Height;
+                xamlMember.Setter = set_55_FrameworkElement_Height;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.HorizontalAlignment":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalAlignment", "Microsoft.UI.Xaml.HorizontalAlignment");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_130_FrameworkElement_HorizontalAlignment;
-                xamlMember.Setter = set_130_FrameworkElement_HorizontalAlignment;
+                xamlMember.Getter = get_56_FrameworkElement_HorizontalAlignment;
+                xamlMember.Setter = set_56_FrameworkElement_HorizontalAlignment;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.IsLoaded":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsLoaded", "Boolean");
-                xamlMember.Getter = get_131_FrameworkElement_IsLoaded;
+                xamlMember.Getter = get_57_FrameworkElement_IsLoaded;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Language":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Language", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_132_FrameworkElement_Language;
-                xamlMember.Setter = set_132_FrameworkElement_Language;
+                xamlMember.Getter = get_58_FrameworkElement_Language;
+                xamlMember.Setter = set_58_FrameworkElement_Language;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Margin":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Margin", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_133_FrameworkElement_Margin;
-                xamlMember.Setter = set_133_FrameworkElement_Margin;
+                xamlMember.Getter = get_59_FrameworkElement_Margin;
+                xamlMember.Setter = set_59_FrameworkElement_Margin;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.MaxHeight":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_134_FrameworkElement_MaxHeight;
-                xamlMember.Setter = set_134_FrameworkElement_MaxHeight;
+                xamlMember.Getter = get_60_FrameworkElement_MaxHeight;
+                xamlMember.Setter = set_60_FrameworkElement_MaxHeight;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.MaxWidth":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_135_FrameworkElement_MaxWidth;
-                xamlMember.Setter = set_135_FrameworkElement_MaxWidth;
+                xamlMember.Getter = get_61_FrameworkElement_MaxWidth;
+                xamlMember.Setter = set_61_FrameworkElement_MaxWidth;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.MinHeight":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_136_FrameworkElement_MinHeight;
-                xamlMember.Setter = set_136_FrameworkElement_MinHeight;
+                xamlMember.Getter = get_62_FrameworkElement_MinHeight;
+                xamlMember.Setter = set_62_FrameworkElement_MinHeight;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.MinWidth":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_137_FrameworkElement_MinWidth;
-                xamlMember.Setter = set_137_FrameworkElement_MinWidth;
+                xamlMember.Getter = get_63_FrameworkElement_MinWidth;
+                xamlMember.Setter = set_63_FrameworkElement_MinWidth;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Name":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Name", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_138_FrameworkElement_Name;
-                xamlMember.Setter = set_138_FrameworkElement_Name;
+                xamlMember.Getter = get_64_FrameworkElement_Name;
+                xamlMember.Setter = set_64_FrameworkElement_Name;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Parent":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_139_FrameworkElement_Parent;
+                xamlMember.Getter = get_65_FrameworkElement_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.RequestedTheme":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RequestedTheme", "Microsoft.UI.Xaml.ElementTheme");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_140_FrameworkElement_RequestedTheme;
-                xamlMember.Setter = set_140_FrameworkElement_RequestedTheme;
+                xamlMember.Getter = get_66_FrameworkElement_RequestedTheme;
+                xamlMember.Setter = set_66_FrameworkElement_RequestedTheme;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Resources":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Resources", "Microsoft.UI.Xaml.ResourceDictionary");
-                xamlMember.Getter = get_141_FrameworkElement_Resources;
-                xamlMember.Setter = set_141_FrameworkElement_Resources;
+                xamlMember.Getter = get_67_FrameworkElement_Resources;
+                xamlMember.Setter = set_67_FrameworkElement_Resources;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Style":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Style", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_142_FrameworkElement_Style;
-                xamlMember.Setter = set_142_FrameworkElement_Style;
+                xamlMember.Getter = get_68_FrameworkElement_Style;
+                xamlMember.Setter = set_68_FrameworkElement_Style;
                 break;
             case "Microsoft.UI.Xaml.Style.Setters":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Style");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Setters", "Microsoft.UI.Xaml.SetterBaseCollection");
-                xamlMember.Getter = get_143_Style_Setters;
+                xamlMember.Getter = get_69_Style_Setters;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.SetterBase.IsSealed":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.SetterBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSealed", "Boolean");
-                xamlMember.Getter = get_144_SetterBase_IsSealed;
+                xamlMember.Getter = get_70_SetterBase_IsSealed;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Tag":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Tag", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_145_FrameworkElement_Tag;
-                xamlMember.Setter = set_145_FrameworkElement_Tag;
+                xamlMember.Getter = get_71_FrameworkElement_Tag;
+                xamlMember.Setter = set_71_FrameworkElement_Tag;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Triggers":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Triggers", "Microsoft.UI.Xaml.TriggerCollection");
-                xamlMember.Getter = get_146_FrameworkElement_Triggers;
+                xamlMember.Getter = get_72_FrameworkElement_Triggers;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.VerticalAlignment":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "VerticalAlignment", "Microsoft.UI.Xaml.VerticalAlignment");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_147_FrameworkElement_VerticalAlignment;
-                xamlMember.Setter = set_147_FrameworkElement_VerticalAlignment;
+                xamlMember.Getter = get_73_FrameworkElement_VerticalAlignment;
+                xamlMember.Setter = set_73_FrameworkElement_VerticalAlignment;
                 break;
             case "Microsoft.UI.Xaml.FrameworkElement.Width":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Width", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_148_FrameworkElement_Width;
-                xamlMember.Setter = set_148_FrameworkElement_Width;
+                xamlMember.Getter = get_74_FrameworkElement_Width;
+                xamlMember.Setter = set_74_FrameworkElement_Width;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Grid.ColumnSpan":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnSpan", "Int32");
-                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+            case "Microsoft.UI.Xaml.UIElement.AccessKey":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKey", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_149_Grid_ColumnSpan;
-                xamlMember.Setter = set_149_Grid_ColumnSpan;
+                xamlMember.Getter = get_75_UIElement_AccessKey;
+                xamlMember.Setter = set_75_UIElement_AccessKey;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Grid.Row":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Row", "Int32");
-                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+            case "Microsoft.UI.Xaml.UIElement.AccessKeyScopeOwner":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKeyScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_150_Grid_Row;
-                xamlMember.Setter = set_150_Grid_Row;
+                xamlMember.Getter = get_76_UIElement_AccessKeyScopeOwner;
+                xamlMember.Setter = set_76_UIElement_AccessKeyScopeOwner;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Grid.Column":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Column", "Int32");
-                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_151_Grid_Column;
-                xamlMember.Setter = set_151_Grid_Column;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Grid.RowSpan":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowSpan", "Int32");
-                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_152_Grid_RowSpan;
-                xamlMember.Setter = set_152_Grid_RowSpan;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.Child":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Child", "Microsoft.UI.Xaml.UIElement");
-                xamlMember.Getter = get_153_Border_Child;
-                xamlMember.Setter = set_153_Border_Child;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.Background":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_154_Border_Background;
-                xamlMember.Setter = set_154_Border_Background;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.BackgroundSizing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_155_Border_BackgroundSizing;
-                xamlMember.Setter = set_155_Border_BackgroundSizing;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.BackgroundTransition":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundTransition", "Microsoft.UI.Xaml.BrushTransition");
-                xamlMember.Getter = get_156_Border_BackgroundTransition;
-                xamlMember.Setter = set_156_Border_BackgroundTransition;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.BorderBrush":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_157_Border_BorderBrush;
-                xamlMember.Setter = set_157_Border_BorderBrush;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.BorderThickness":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_158_Border_BorderThickness;
-                xamlMember.Setter = set_158_Border_BorderThickness;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.ChildTransitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ChildTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_159_Border_ChildTransitions;
-                xamlMember.Setter = set_159_Border_ChildTransitions;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.CornerRadius":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_160_Border_CornerRadius;
-                xamlMember.Setter = set_160_Border_CornerRadius;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Border.Padding":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_161_Border_Padding;
-                xamlMember.Setter = set_161_Border_Padding;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.Header":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Header", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_162_TextBox_Header;
-                xamlMember.Setter = set_162_TextBox_Header;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.AcceptsReturn":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AcceptsReturn", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_163_TextBox_AcceptsReturn;
-                xamlMember.Setter = set_163_TextBox_AcceptsReturn;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.CanPasteClipboardContent":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanPasteClipboardContent", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_164_TextBox_CanPasteClipboardContent;
+            case "Microsoft.UI.Xaml.UIElement.ActualOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualOffset", "System.Numerics.Vector3");
+                xamlMember.Getter = get_77_UIElement_ActualOffset;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.CanRedo":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanRedo", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_165_TextBox_CanRedo;
+            case "Microsoft.UI.Xaml.UIElement.ActualSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualSize", "System.Numerics.Vector2");
+                xamlMember.Getter = get_78_UIElement_ActualSize;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.CanUndo":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanUndo", "Boolean");
+            case "Microsoft.UI.Xaml.UIElement.AllowDrop":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowDrop", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_166_TextBox_CanUndo;
+                xamlMember.Getter = get_79_UIElement_AllowDrop;
+                xamlMember.Setter = set_79_UIElement_AllowDrop;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.CacheMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CacheMode", "Microsoft.UI.Xaml.Media.CacheMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_80_UIElement_CacheMode;
+                xamlMember.Setter = set_80_UIElement_CacheMode;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.CanBeScrollAnchor":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanBeScrollAnchor", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_81_UIElement_CanBeScrollAnchor;
+                xamlMember.Setter = set_81_UIElement_CanBeScrollAnchor;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.CanDrag":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanDrag", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_82_UIElement_CanDrag;
+                xamlMember.Setter = set_82_UIElement_CanDrag;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.CenterPoint":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CenterPoint", "System.Numerics.Vector3");
+                xamlMember.Getter = get_83_UIElement_CenterPoint;
+                xamlMember.Setter = set_83_UIElement_CenterPoint;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Clip":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Clip", "Microsoft.UI.Xaml.Media.RectangleGeometry");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_84_UIElement_Clip;
+                xamlMember.Setter = set_84_UIElement_Clip;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.CompositeMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CompositeMode", "Microsoft.UI.Xaml.Media.ElementCompositeMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_85_UIElement_CompositeMode;
+                xamlMember.Setter = set_85_UIElement_CompositeMode;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.ContextFlyout":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContextFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_86_UIElement_ContextFlyout;
+                xamlMember.Setter = set_86_UIElement_ContextFlyout;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.DesiredSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DesiredSize", "Windows.Foundation.Size");
+                xamlMember.Getter = get_87_UIElement_DesiredSize;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.CharacterCasing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterCasing", "Microsoft.UI.Xaml.Controls.CharacterCasing");
+            case "Microsoft.UI.Xaml.UIElement.ExitDisplayModeOnAccessKeyInvoked":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExitDisplayModeOnAccessKeyInvoked", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_167_TextBox_CharacterCasing;
-                xamlMember.Setter = set_167_TextBox_CharacterCasing;
+                xamlMember.Getter = get_88_UIElement_ExitDisplayModeOnAccessKeyInvoked;
+                xamlMember.Setter = set_88_UIElement_ExitDisplayModeOnAccessKeyInvoked;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.Description":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
+            case "Microsoft.UI.Xaml.UIElement.FocusState":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FocusState", "Microsoft.UI.Xaml.FocusState");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_168_TextBox_Description;
-                xamlMember.Setter = set_168_TextBox_Description;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.DesiredCandidateWindowAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DesiredCandidateWindowAlignment", "Microsoft.UI.Xaml.Controls.CandidateWindowAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_169_TextBox_DesiredCandidateWindowAlignment;
-                xamlMember.Setter = set_169_TextBox_DesiredCandidateWindowAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.HeaderTemplate":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_170_TextBox_HeaderTemplate;
-                xamlMember.Setter = set_170_TextBox_HeaderTemplate;
-                break;
-            case "Microsoft.UI.Xaml.FrameworkTemplate.Template":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.FrameworkTemplate");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
-                xamlMember.Getter = get_171_FrameworkTemplate_Template;
-                xamlMember.Setter = set_171_FrameworkTemplate_Template;
-                break;
-            case "Microsoft.UI.Xaml.DataTemplate.Template":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.DataTemplate");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
-                xamlMember.Getter = get_172_DataTemplate_Template;
-                xamlMember.Setter = set_172_DataTemplate_Template;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.HorizontalTextAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalTextAlignment", "Microsoft.UI.Xaml.TextAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_173_TextBox_HorizontalTextAlignment;
-                xamlMember.Setter = set_173_TextBox_HorizontalTextAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.InputScope":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "InputScope", "Microsoft.UI.Xaml.Input.InputScope");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_174_TextBox_InputScope;
-                xamlMember.Setter = set_174_TextBox_InputScope;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.IsColorFontEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsColorFontEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_175_TextBox_IsColorFontEnabled;
-                xamlMember.Setter = set_175_TextBox_IsColorFontEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.IsReadOnly":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_176_TextBox_IsReadOnly;
-                xamlMember.Setter = set_176_TextBox_IsReadOnly;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.IsSpellCheckEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSpellCheckEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_177_TextBox_IsSpellCheckEnabled;
-                xamlMember.Setter = set_177_TextBox_IsSpellCheckEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.IsTextPredictionEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextPredictionEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_178_TextBox_IsTextPredictionEnabled;
-                xamlMember.Setter = set_178_TextBox_IsTextPredictionEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.MaxLength":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxLength", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_179_TextBox_MaxLength;
-                xamlMember.Setter = set_179_TextBox_MaxLength;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderForeground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_180_TextBox_PlaceholderForeground;
-                xamlMember.Setter = set_180_TextBox_PlaceholderForeground;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderText":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_181_TextBox_PlaceholderText;
-                xamlMember.Setter = set_181_TextBox_PlaceholderText;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.PreventKeyboardDisplayOnProgrammaticFocus":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PreventKeyboardDisplayOnProgrammaticFocus", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_182_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
-                xamlMember.Setter = set_182_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.ProofingMenuFlyout":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ProofingMenuFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_183_TextBox_ProofingMenuFlyout;
+                xamlMember.Getter = get_89_UIElement_FocusState;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectedText":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedText", "String");
-                xamlMember.Getter = get_184_TextBox_SelectedText;
-                xamlMember.Setter = set_184_TextBox_SelectedText;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionFlyout":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
+            case "Microsoft.UI.Xaml.UIElement.HighContrastAdjustment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HighContrastAdjustment", "Microsoft.UI.Xaml.ElementHighContrastAdjustment");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_185_TextBox_SelectionFlyout;
-                xamlMember.Setter = set_185_TextBox_SelectionFlyout;
+                xamlMember.Getter = get_90_UIElement_HighContrastAdjustment;
+                xamlMember.Setter = set_90_UIElement_HighContrastAdjustment;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColor":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
+            case "Microsoft.UI.Xaml.UIElement.IsAccessKeyScope":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsAccessKeyScope", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_186_TextBox_SelectionHighlightColor;
-                xamlMember.Setter = set_186_TextBox_SelectionHighlightColor;
+                xamlMember.Getter = get_91_UIElement_IsAccessKeyScope;
+                xamlMember.Setter = set_91_UIElement_IsAccessKeyScope;
                 break;
-            case "Microsoft.UI.Xaml.Media.SolidColorBrush.Color":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.SolidColorBrush");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Color", "Windows.UI.Color");
+            case "Microsoft.UI.Xaml.UIElement.IsDoubleTapEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsDoubleTapEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_187_SolidColorBrush_Color;
-                xamlMember.Setter = set_187_SolidColorBrush_Color;
+                xamlMember.Getter = get_92_UIElement_IsDoubleTapEnabled;
+                xamlMember.Setter = set_92_UIElement_IsDoubleTapEnabled;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColorWhenNotFocused":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColorWhenNotFocused", "Microsoft.UI.Xaml.Media.SolidColorBrush");
+            case "Microsoft.UI.Xaml.UIElement.IsHitTestVisible":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsHitTestVisible", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_188_TextBox_SelectionHighlightColorWhenNotFocused;
-                xamlMember.Setter = set_188_TextBox_SelectionHighlightColorWhenNotFocused;
+                xamlMember.Getter = get_93_UIElement_IsHitTestVisible;
+                xamlMember.Setter = set_93_UIElement_IsHitTestVisible;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionLength":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionLength", "Int32");
-                xamlMember.Getter = get_189_TextBox_SelectionLength;
-                xamlMember.Setter = set_189_TextBox_SelectionLength;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionStart":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionStart", "Int32");
-                xamlMember.Getter = get_190_TextBox_SelectionStart;
-                xamlMember.Setter = set_190_TextBox_SelectionStart;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.Text":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+            case "Microsoft.UI.Xaml.UIElement.IsHoldingEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsHoldingEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_191_TextBox_Text;
-                xamlMember.Setter = set_191_TextBox_Text;
+                xamlMember.Getter = get_94_UIElement_IsHoldingEnabled;
+                xamlMember.Setter = set_94_UIElement_IsHoldingEnabled;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.TextAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextAlignment", "Microsoft.UI.Xaml.TextAlignment");
+            case "Microsoft.UI.Xaml.UIElement.IsRightTapEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsRightTapEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_192_TextBox_TextAlignment;
-                xamlMember.Setter = set_192_TextBox_TextAlignment;
+                xamlMember.Getter = get_95_UIElement_IsRightTapEnabled;
+                xamlMember.Setter = set_95_UIElement_IsRightTapEnabled;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.TextReadingOrder":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextReadingOrder", "Microsoft.UI.Xaml.TextReadingOrder");
+            case "Microsoft.UI.Xaml.UIElement.IsTabStop":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTabStop", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_193_TextBox_TextReadingOrder;
-                xamlMember.Setter = set_193_TextBox_TextReadingOrder;
+                xamlMember.Getter = get_96_UIElement_IsTabStop;
+                xamlMember.Setter = set_96_UIElement_IsTabStop;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.TextWrapping":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextWrapping", "Microsoft.UI.Xaml.TextWrapping");
+            case "Microsoft.UI.Xaml.UIElement.IsTapEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTapEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_194_TextBox_TextWrapping;
-                xamlMember.Setter = set_194_TextBox_TextWrapping;
+                xamlMember.Getter = get_97_UIElement_IsTapEnabled;
+                xamlMember.Setter = set_97_UIElement_IsTapEnabled;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.Background":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
+            case "Microsoft.UI.Xaml.UIElement.KeyTipHorizontalOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipHorizontalOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_195_Control_Background;
-                xamlMember.Setter = set_195_Control_Background;
+                xamlMember.Getter = get_98_UIElement_KeyTipHorizontalOffset;
+                xamlMember.Setter = set_98_UIElement_KeyTipHorizontalOffset;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.BackgroundSizing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
+            case "Microsoft.UI.Xaml.UIElement.KeyTipPlacementMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipPlacementMode", "Microsoft.UI.Xaml.Input.KeyTipPlacementMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_196_Control_BackgroundSizing;
-                xamlMember.Setter = set_196_Control_BackgroundSizing;
+                xamlMember.Getter = get_99_UIElement_KeyTipPlacementMode;
+                xamlMember.Setter = set_99_UIElement_KeyTipPlacementMode;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.BorderBrush":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
+            case "Microsoft.UI.Xaml.UIElement.KeyTipTarget":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipTarget", "Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_197_Control_BorderBrush;
-                xamlMember.Setter = set_197_Control_BorderBrush;
+                xamlMember.Getter = get_100_UIElement_KeyTipTarget;
+                xamlMember.Setter = set_100_UIElement_KeyTipTarget;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.BorderThickness":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
+            case "Microsoft.UI.Xaml.UIElement.KeyTipVerticalOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipVerticalOffset", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_198_Control_BorderThickness;
-                xamlMember.Setter = set_198_Control_BorderThickness;
+                xamlMember.Getter = get_101_UIElement_KeyTipVerticalOffset;
+                xamlMember.Setter = set_101_UIElement_KeyTipVerticalOffset;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.CharacterSpacing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
+            case "Microsoft.UI.Xaml.UIElement.KeyboardAcceleratorPlacementMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAcceleratorPlacementMode", "Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_199_Control_CharacterSpacing;
-                xamlMember.Setter = set_199_Control_CharacterSpacing;
+                xamlMember.Getter = get_102_UIElement_KeyboardAcceleratorPlacementMode;
+                xamlMember.Setter = set_102_UIElement_KeyboardAcceleratorPlacementMode;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.CornerRadius":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
+            case "Microsoft.UI.Xaml.UIElement.KeyboardAcceleratorPlacementTarget":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAcceleratorPlacementTarget", "Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_200_Control_CornerRadius;
-                xamlMember.Setter = set_200_Control_CornerRadius;
+                xamlMember.Getter = get_103_UIElement_KeyboardAcceleratorPlacementTarget;
+                xamlMember.Setter = set_103_UIElement_KeyboardAcceleratorPlacementTarget;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.DefaultStyleResourceUri":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DefaultStyleResourceUri", "System.Uri");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_201_Control_DefaultStyleResourceUri;
-                xamlMember.Setter = set_201_Control_DefaultStyleResourceUri;
+            case "Microsoft.UI.Xaml.UIElement.KeyboardAccelerators":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyboardAccelerators", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Input.KeyboardAccelerator>");
+                xamlMember.Getter = get_104_UIElement_KeyboardAccelerators;
+                xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.ElementSoundMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementSoundMode", "Microsoft.UI.Xaml.ElementSoundMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_202_Control_ElementSoundMode;
-                xamlMember.Setter = set_202_Control_ElementSoundMode;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.FontFamily":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_203_Control_FontFamily;
-                xamlMember.Setter = set_203_Control_FontFamily;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.FontSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_204_Control_FontSize;
-                xamlMember.Setter = set_204_Control_FontSize;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.FontStretch":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_205_Control_FontStretch;
-                xamlMember.Setter = set_205_Control_FontStretch;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.FontStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_206_Control_FontStyle;
-                xamlMember.Setter = set_206_Control_FontStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.FontWeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_207_Control_FontWeight;
-                xamlMember.Setter = set_207_Control_FontWeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.Foreground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_208_Control_Foreground;
-                xamlMember.Setter = set_208_Control_Foreground;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.HorizontalContentAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalContentAlignment", "Microsoft.UI.Xaml.HorizontalAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_209_Control_HorizontalContentAlignment;
-                xamlMember.Setter = set_209_Control_HorizontalContentAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.IsEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
+            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.IsEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_210_Control_IsEnabled;
-                xamlMember.Setter = set_210_Control_IsEnabled;
+                xamlMember.Getter = get_105_KeyboardAccelerator_IsEnabled;
+                xamlMember.Setter = set_105_KeyboardAccelerator_IsEnabled;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.IsFocusEngaged":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsFocusEngaged", "Boolean");
+            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.Key":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Key", "Windows.System.VirtualKey");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_211_Control_IsFocusEngaged;
-                xamlMember.Setter = set_211_Control_IsFocusEngaged;
+                xamlMember.Getter = get_106_KeyboardAccelerator_Key;
+                xamlMember.Setter = set_106_KeyboardAccelerator_Key;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.IsFocusEngagementEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsFocusEngagementEnabled", "Boolean");
+            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.Modifiers":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Modifiers", "Windows.System.VirtualKeyModifiers");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_212_Control_IsFocusEngagementEnabled;
-                xamlMember.Setter = set_212_Control_IsFocusEngagementEnabled;
+                xamlMember.Getter = get_107_KeyboardAccelerator_Modifiers;
+                xamlMember.Setter = set_107_KeyboardAccelerator_Modifiers;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.IsTextScaleFactorEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
+            case "Microsoft.UI.Xaml.Input.KeyboardAccelerator.ScopeOwner":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_213_Control_IsTextScaleFactorEnabled;
-                xamlMember.Setter = set_213_Control_IsTextScaleFactorEnabled;
+                xamlMember.Getter = get_108_KeyboardAccelerator_ScopeOwner;
+                xamlMember.Setter = set_108_KeyboardAccelerator_ScopeOwner;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.Padding":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
+            case "Microsoft.UI.Xaml.UIElement.Lights":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Lights", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Media.XamlLight>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_214_Control_Padding;
-                xamlMember.Setter = set_214_Control_Padding;
+                xamlMember.Getter = get_109_UIElement_Lights;
+                xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.RequiresPointer":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RequiresPointer", "Microsoft.UI.Xaml.Controls.RequiresPointer");
+            case "Microsoft.UI.Xaml.UIElement.ManipulationMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ManipulationMode", "Microsoft.UI.Xaml.Input.ManipulationModes");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_215_Control_RequiresPointer;
-                xamlMember.Setter = set_215_Control_RequiresPointer;
+                xamlMember.Getter = get_110_UIElement_ManipulationMode;
+                xamlMember.Setter = set_110_UIElement_ManipulationMode;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.TabNavigation":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabNavigation", "Microsoft.UI.Xaml.Input.KeyboardNavigationMode");
+            case "Microsoft.UI.Xaml.UIElement.Opacity":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Opacity", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_216_Control_TabNavigation;
-                xamlMember.Setter = set_216_Control_TabNavigation;
+                xamlMember.Getter = get_111_UIElement_Opacity;
+                xamlMember.Setter = set_111_UIElement_Opacity;
                 break;
-            case "Microsoft.UI.Xaml.Controls.Control.Template":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Microsoft.UI.Xaml.Controls.ControlTemplate");
+            case "Microsoft.UI.Xaml.UIElement.OpacityTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "OpacityTransition", "Microsoft.UI.Xaml.ScalarTransition");
+                xamlMember.Getter = get_112_UIElement_OpacityTransition;
+                xamlMember.Setter = set_112_UIElement_OpacityTransition;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.PointerCaptures":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PointerCaptures", "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Input.Pointer>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_217_Control_Template;
-                xamlMember.Setter = set_217_Control_Template;
+                xamlMember.Getter = get_113_UIElement_PointerCaptures;
+                xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.UI.Xaml.Controls.ControlTemplate.Template":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ControlTemplate");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
-                xamlMember.Getter = get_218_ControlTemplate_Template;
-                xamlMember.Setter = set_218_ControlTemplate_Template;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Control.VerticalContentAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "VerticalContentAlignment", "Microsoft.UI.Xaml.VerticalAlignment");
+            case "Microsoft.UI.Xaml.UIElement.Projection":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Projection", "Microsoft.UI.Xaml.Media.Projection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_219_Control_VerticalContentAlignment;
-                xamlMember.Setter = set_219_Control_VerticalContentAlignment;
+                xamlMember.Getter = get_114_UIElement_Projection;
+                xamlMember.Setter = set_114_UIElement_Projection;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RasterizationScale":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RasterizationScale", "Double");
+                xamlMember.Getter = get_115_UIElement_RasterizationScale;
+                xamlMember.Setter = set_115_UIElement_RasterizationScale;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RenderSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderSize", "Windows.Foundation.Size");
+                xamlMember.Getter = get_116_UIElement_RenderSize;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RenderTransform":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderTransform", "Microsoft.UI.Xaml.Media.Transform");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_117_UIElement_RenderTransform;
+                xamlMember.Setter = set_117_UIElement_RenderTransform;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RenderTransformOrigin":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RenderTransformOrigin", "Windows.Foundation.Point");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_118_UIElement_RenderTransformOrigin;
+                xamlMember.Setter = set_118_UIElement_RenderTransformOrigin;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Rotation":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Rotation", "Single");
+                xamlMember.Getter = get_119_UIElement_Rotation;
+                xamlMember.Setter = set_119_UIElement_Rotation;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RotationAxis":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RotationAxis", "System.Numerics.Vector3");
+                xamlMember.Getter = get_120_UIElement_RotationAxis;
+                xamlMember.Setter = set_120_UIElement_RotationAxis;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.RotationTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RotationTransition", "Microsoft.UI.Xaml.ScalarTransition");
+                xamlMember.Getter = get_121_UIElement_RotationTransition;
+                xamlMember.Setter = set_121_UIElement_RotationTransition;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Scale":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Scale", "System.Numerics.Vector3");
+                xamlMember.Getter = get_122_UIElement_Scale;
+                xamlMember.Setter = set_122_UIElement_Scale;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.ScaleTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ScaleTransition", "Microsoft.UI.Xaml.Vector3Transition");
+                xamlMember.Getter = get_123_UIElement_ScaleTransition;
+                xamlMember.Setter = set_123_UIElement_ScaleTransition;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Shadow":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Shadow", "Microsoft.UI.Xaml.Media.Shadow");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_124_UIElement_Shadow;
+                xamlMember.Setter = set_124_UIElement_Shadow;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.TabFocusNavigation":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabFocusNavigation", "Microsoft.UI.Xaml.Input.KeyboardNavigationMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_125_UIElement_TabFocusNavigation;
+                xamlMember.Setter = set_125_UIElement_TabFocusNavigation;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.TabIndex":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TabIndex", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_126_UIElement_TabIndex;
+                xamlMember.Setter = set_126_UIElement_TabIndex;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Transform3D":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Transform3D", "Microsoft.UI.Xaml.Media.Media3D.Transform3D");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_127_UIElement_Transform3D;
+                xamlMember.Setter = set_127_UIElement_Transform3D;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.TransformMatrix":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TransformMatrix", "System.Numerics.Matrix4x4");
+                xamlMember.Getter = get_128_UIElement_TransformMatrix;
+                xamlMember.Setter = set_128_UIElement_TransformMatrix;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Transitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Transitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_129_UIElement_Transitions;
+                xamlMember.Setter = set_129_UIElement_Transitions;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Translation":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Translation", "System.Numerics.Vector3");
+                xamlMember.Getter = get_130_UIElement_Translation;
+                xamlMember.Setter = set_130_UIElement_Translation;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.TranslationTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TranslationTransition", "Microsoft.UI.Xaml.Vector3Transition");
+                xamlMember.Getter = get_131_UIElement_TranslationTransition;
+                xamlMember.Setter = set_131_UIElement_TranslationTransition;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.UseLayoutRounding":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "UseLayoutRounding", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_132_UIElement_UseLayoutRounding;
+                xamlMember.Setter = set_132_UIElement_UseLayoutRounding;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.UseSystemFocusVisuals":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "UseSystemFocusVisuals", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_133_UIElement_UseSystemFocusVisuals;
+                xamlMember.Setter = set_133_UIElement_UseSystemFocusVisuals;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.Visibility":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Visibility", "Microsoft.UI.Xaml.Visibility");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_134_UIElement_Visibility;
+                xamlMember.Setter = set_134_UIElement_Visibility;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusDown":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusDown", "Microsoft.UI.Xaml.DependencyObject");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_135_UIElement_XYFocusDown;
+                xamlMember.Setter = set_135_UIElement_XYFocusDown;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusDownNavigationStrategy":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusDownNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_136_UIElement_XYFocusDownNavigationStrategy;
+                xamlMember.Setter = set_136_UIElement_XYFocusDownNavigationStrategy;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusKeyboardNavigation":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusKeyboardNavigation", "Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_137_UIElement_XYFocusKeyboardNavigation;
+                xamlMember.Setter = set_137_UIElement_XYFocusKeyboardNavigation;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusLeft":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusLeft", "Microsoft.UI.Xaml.DependencyObject");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_138_UIElement_XYFocusLeft;
+                xamlMember.Setter = set_138_UIElement_XYFocusLeft;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusLeftNavigationStrategy":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusLeftNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_139_UIElement_XYFocusLeftNavigationStrategy;
+                xamlMember.Setter = set_139_UIElement_XYFocusLeftNavigationStrategy;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusRight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusRight", "Microsoft.UI.Xaml.DependencyObject");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_140_UIElement_XYFocusRight;
+                xamlMember.Setter = set_140_UIElement_XYFocusRight;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusRightNavigationStrategy":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusRightNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_141_UIElement_XYFocusRightNavigationStrategy;
+                xamlMember.Setter = set_141_UIElement_XYFocusRightNavigationStrategy;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusUp":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusUp", "Microsoft.UI.Xaml.DependencyObject");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_142_UIElement_XYFocusUp;
+                xamlMember.Setter = set_142_UIElement_XYFocusUp;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XYFocusUpNavigationStrategy":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XYFocusUpNavigationStrategy", "Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_143_UIElement_XYFocusUpNavigationStrategy;
+                xamlMember.Setter = set_143_UIElement_XYFocusUpNavigationStrategy;
+                break;
+            case "Microsoft.UI.Xaml.UIElement.XamlRoot":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.UIElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XamlRoot", "Microsoft.UI.Xaml.XamlRoot");
+                xamlMember.Getter = get_144_UIElement_XamlRoot;
+                xamlMember.Setter = set_144_UIElement_XamlRoot;
                 break;
             case "Microsoft.UI.Xaml.Controls.Control.IsTemplateFocusTarget":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
@@ -7240,8 +6760,8 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_220_Control_IsTemplateFocusTarget;
-                xamlMember.Setter = set_220_Control_IsTemplateFocusTarget;
+                xamlMember.Getter = get_145_Control_IsTemplateFocusTarget;
+                xamlMember.Setter = set_145_Control_IsTemplateFocusTarget;
                 break;
             case "Microsoft.UI.Xaml.Controls.Control.IsTemplateKeyTipTarget":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control");
@@ -7249,1042 +6769,1561 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_221_Control_IsTemplateKeyTipTarget;
-                xamlMember.Setter = set_221_Control_IsTemplateKeyTipTarget;
+                xamlMember.Getter = get_146_Control_IsTemplateKeyTipTarget;
+                xamlMember.Setter = set_146_Control_IsTemplateKeyTipTarget;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.Items":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Items", "Microsoft.UI.Xaml.Controls.ItemCollection");
-                xamlMember.Getter = get_222_ItemsControl_Items;
-                xamlMember.SetIsReadOnly();
+            case "Microsoft.UI.Xaml.Controls.Border.Child":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Child", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.Getter = get_147_Border_Child;
+                xamlMember.Setter = set_147_Border_Child;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.Header":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Header", "Object");
+            case "Microsoft.UI.Xaml.Controls.Border.Background":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_223_ComboBox_Header;
-                xamlMember.Setter = set_223_ComboBox_Header;
+                xamlMember.Getter = get_148_Border_Background;
+                xamlMember.Setter = set_148_Border_Background;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.Description":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
+            case "Microsoft.UI.Xaml.Controls.Border.BackgroundSizing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_224_ComboBox_Description;
-                xamlMember.Setter = set_224_ComboBox_Description;
+                xamlMember.Getter = get_149_Border_BackgroundSizing;
+                xamlMember.Setter = set_149_Border_BackgroundSizing;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.HeaderTemplate":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+            case "Microsoft.UI.Xaml.Controls.Border.BackgroundTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundTransition", "Microsoft.UI.Xaml.BrushTransition");
+                xamlMember.Getter = get_150_Border_BackgroundTransition;
+                xamlMember.Setter = set_150_Border_BackgroundTransition;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Border.BorderBrush":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_225_ComboBox_HeaderTemplate;
-                xamlMember.Setter = set_225_ComboBox_HeaderTemplate;
+                xamlMember.Getter = get_151_Border_BorderBrush;
+                xamlMember.Setter = set_151_Border_BorderBrush;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.IsDropDownOpen":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsDropDownOpen", "Boolean");
+            case "Microsoft.UI.Xaml.Controls.Border.BorderThickness":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_226_ComboBox_IsDropDownOpen;
-                xamlMember.Setter = set_226_ComboBox_IsDropDownOpen;
+                xamlMember.Getter = get_152_Border_BorderThickness;
+                xamlMember.Setter = set_152_Border_BorderThickness;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.IsEditable":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEditable", "Boolean");
+            case "Microsoft.UI.Xaml.Controls.Border.ChildTransitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ChildTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_227_ComboBox_IsEditable;
-                xamlMember.Setter = set_227_ComboBox_IsEditable;
+                xamlMember.Getter = get_153_Border_ChildTransitions;
+                xamlMember.Setter = set_153_Border_ChildTransitions;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.IsSelectionBoxHighlighted":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSelectionBoxHighlighted", "Boolean");
-                xamlMember.Getter = get_228_ComboBox_IsSelectionBoxHighlighted;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.IsTextSearchEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextSearchEnabled", "Boolean");
+            case "Microsoft.UI.Xaml.Controls.Border.CornerRadius":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_229_ComboBox_IsTextSearchEnabled;
-                xamlMember.Setter = set_229_ComboBox_IsTextSearchEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.LightDismissOverlayMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LightDismissOverlayMode", "Microsoft.UI.Xaml.Controls.LightDismissOverlayMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_230_ComboBox_LightDismissOverlayMode;
-                xamlMember.Setter = set_230_ComboBox_LightDismissOverlayMode;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.MaxDropDownHeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxDropDownHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_231_ComboBox_MaxDropDownHeight;
-                xamlMember.Setter = set_231_ComboBox_MaxDropDownHeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderForeground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_232_ComboBox_PlaceholderForeground;
-                xamlMember.Setter = set_232_ComboBox_PlaceholderForeground;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderText":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_233_ComboBox_PlaceholderText;
-                xamlMember.Setter = set_233_ComboBox_PlaceholderText;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItem":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItem", "Object");
-                xamlMember.Getter = get_234_ComboBox_SelectionBoxItem;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItemTemplate":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_235_ComboBox_SelectionBoxItemTemplate;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionChangedTrigger":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionChangedTrigger", "Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_236_ComboBox_SelectionChangedTrigger;
-                xamlMember.Setter = set_236_ComboBox_SelectionChangedTrigger;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.TemplateSettings":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings");
-                xamlMember.Getter = get_237_ComboBox_TemplateSettings;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.Text":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_238_ComboBox_Text;
-                xamlMember.Setter = set_238_ComboBox_Text;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.TextBoxStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextBoxStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_239_ComboBox_TextBoxStyle;
-                xamlMember.Setter = set_239_ComboBox_TextBoxStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSynchronizedWithCurrentItem", "System.Nullable`1<Boolean>");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_240_Selector_IsSynchronizedWithCurrentItem;
-                xamlMember.Setter = set_240_Selector_IsSynchronizedWithCurrentItem;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedIndex":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_241_Selector_SelectedIndex;
-                xamlMember.Setter = set_241_Selector_SelectedIndex;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedItem":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_242_Selector_SelectedItem;
-                xamlMember.Setter = set_242_Selector_SelectedItem;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValue":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValue", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_243_Selector_SelectedValue;
-                xamlMember.Setter = set_243_Selector_SelectedValue;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValuePath":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValuePath", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_244_Selector_SelectedValuePath;
-                xamlMember.Setter = set_244_Selector_SelectedValuePath;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.DisplayMemberPath":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DisplayMemberPath", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_245_ItemsControl_DisplayMemberPath;
-                xamlMember.Setter = set_245_ItemsControl_DisplayMemberPath;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.GroupStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "GroupStyle", "Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>");
-                xamlMember.Getter = get_246_ItemsControl_GroupStyle;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.ContainerStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContainerStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.Getter = get_247_GroupStyle_ContainerStyle;
-                xamlMember.Setter = set_247_GroupStyle_ContainerStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.ContainerStyleSelector":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
-                xamlMember.Getter = get_248_GroupStyle_ContainerStyleSelector;
-                xamlMember.Setter = set_248_GroupStyle_ContainerStyleSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderContainerStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderContainerStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.Getter = get_249_GroupStyle_HeaderContainerStyle;
-                xamlMember.Setter = set_249_GroupStyle_HeaderContainerStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderTemplate":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_250_GroupStyle_HeaderTemplate;
-                xamlMember.Setter = set_250_GroupStyle_HeaderTemplate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderTemplateSelector":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
-                xamlMember.Getter = get_251_GroupStyle_HeaderTemplateSelector;
-                xamlMember.Setter = set_251_GroupStyle_HeaderTemplateSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.HidesIfEmpty":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HidesIfEmpty", "Boolean");
-                xamlMember.Getter = get_252_GroupStyle_HidesIfEmpty;
-                xamlMember.Setter = set_252_GroupStyle_HidesIfEmpty;
-                break;
-            case "Microsoft.UI.Xaml.Controls.GroupStyle.Panel":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Panel", "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
-                xamlMember.Getter = get_253_GroupStyle_Panel;
-                xamlMember.Setter = set_253_GroupStyle_Panel;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate.Template":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
-                xamlMember.Getter = get_254_ItemsPanelTemplate_Template;
-                xamlMember.Setter = set_254_ItemsPanelTemplate_Template;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.GroupStyleSelector":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "GroupStyleSelector", "Microsoft.UI.Xaml.Controls.GroupStyleSelector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_255_ItemsControl_GroupStyleSelector;
-                xamlMember.Setter = set_255_ItemsControl_GroupStyleSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.IsGrouping":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsGrouping", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_256_ItemsControl_IsGrouping;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerGenerator":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerGenerator", "Microsoft.UI.Xaml.Controls.ItemContainerGenerator");
-                xamlMember.Getter = get_257_ItemsControl_ItemContainerGenerator;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerStyle", "Microsoft.UI.Xaml.Style");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_258_ItemsControl_ItemContainerStyle;
-                xamlMember.Setter = set_258_ItemsControl_ItemContainerStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerStyleSelector":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_259_ItemsControl_ItemContainerStyleSelector;
-                xamlMember.Setter = set_259_ItemsControl_ItemContainerStyleSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerTransitions":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_260_ItemsControl_ItemContainerTransitions;
-                xamlMember.Setter = set_260_ItemsControl_ItemContainerTransitions;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemTemplate":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_261_ItemsControl_ItemTemplate;
-                xamlMember.Setter = set_261_ItemsControl_ItemTemplate;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemTemplateSelector":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_262_ItemsControl_ItemTemplateSelector;
-                xamlMember.Setter = set_262_ItemsControl_ItemTemplateSelector;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsPanel":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsPanel", "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_263_ItemsControl_ItemsPanel;
-                xamlMember.Setter = set_263_ItemsControl_ItemsPanel;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsPanelRoot":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsPanelRoot", "Microsoft.UI.Xaml.Controls.Panel");
-                xamlMember.Getter = get_264_ItemsControl_ItemsPanelRoot;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsSource":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_265_ItemsControl_ItemsSource;
-                xamlMember.Setter = set_265_ItemsControl_ItemsSource;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.Inlines":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Inlines", "Microsoft.UI.Xaml.Documents.InlineCollection");
-                xamlMember.Getter = get_266_TextBlock_Inlines;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.AccessKey":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKey", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_267_TextElement_AccessKey;
-                xamlMember.Setter = set_267_TextElement_AccessKey;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.AccessKeyScopeOwner":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKeyScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_268_TextElement_AccessKeyScopeOwner;
-                xamlMember.Setter = set_268_TextElement_AccessKeyScopeOwner;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.AllowFocusOnInteraction":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowFocusOnInteraction", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_269_TextElement_AllowFocusOnInteraction;
-                xamlMember.Setter = set_269_TextElement_AllowFocusOnInteraction;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.CharacterSpacing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_270_TextElement_CharacterSpacing;
-                xamlMember.Setter = set_270_TextElement_CharacterSpacing;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.ContentEnd":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_271_TextElement_ContentEnd;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.ContentStart":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentStart", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_272_TextElement_ContentStart;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.ElementEnd":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_273_TextElement_ElementEnd;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.ElementStart":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementStart", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_274_TextElement_ElementStart;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.ExitDisplayModeOnAccessKeyInvoked":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExitDisplayModeOnAccessKeyInvoked", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_275_TextElement_ExitDisplayModeOnAccessKeyInvoked;
-                xamlMember.Setter = set_275_TextElement_ExitDisplayModeOnAccessKeyInvoked;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.FontFamily":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_276_TextElement_FontFamily;
-                xamlMember.Setter = set_276_TextElement_FontFamily;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.FontSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_277_TextElement_FontSize;
-                xamlMember.Setter = set_277_TextElement_FontSize;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.FontStretch":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_278_TextElement_FontStretch;
-                xamlMember.Setter = set_278_TextElement_FontStretch;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.FontStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_279_TextElement_FontStyle;
-                xamlMember.Setter = set_279_TextElement_FontStyle;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.FontWeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_280_TextElement_FontWeight;
-                xamlMember.Setter = set_280_TextElement_FontWeight;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.Foreground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_281_TextElement_Foreground;
-                xamlMember.Setter = set_281_TextElement_Foreground;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.IsAccessKeyScope":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsAccessKeyScope", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_282_TextElement_IsAccessKeyScope;
-                xamlMember.Setter = set_282_TextElement_IsAccessKeyScope;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.IsTextScaleFactorEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_283_TextElement_IsTextScaleFactorEnabled;
-                xamlMember.Setter = set_283_TextElement_IsTextScaleFactorEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipHorizontalOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipHorizontalOffset", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_284_TextElement_KeyTipHorizontalOffset;
-                xamlMember.Setter = set_284_TextElement_KeyTipHorizontalOffset;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipPlacementMode":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipPlacementMode", "Microsoft.UI.Xaml.Input.KeyTipPlacementMode");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_285_TextElement_KeyTipPlacementMode;
-                xamlMember.Setter = set_285_TextElement_KeyTipPlacementMode;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipVerticalOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipVerticalOffset", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_286_TextElement_KeyTipVerticalOffset;
-                xamlMember.Setter = set_286_TextElement_KeyTipVerticalOffset;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.Language":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Language", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_287_TextElement_Language;
-                xamlMember.Setter = set_287_TextElement_Language;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.Name":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_288_TextElement_Name;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.TextDecorations":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextDecorations", "Windows.UI.Text.TextDecorations");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_289_TextElement_TextDecorations;
-                xamlMember.Setter = set_289_TextElement_TextDecorations;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextElement.XamlRoot":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XamlRoot", "Microsoft.UI.Xaml.XamlRoot");
-                xamlMember.Getter = get_290_TextElement_XamlRoot;
-                xamlMember.Setter = set_290_TextElement_XamlRoot;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.Text":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_291_TextBlock_Text;
-                xamlMember.Setter = set_291_TextBlock_Text;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.FontSize":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_292_TextBlock_FontSize;
-                xamlMember.Setter = set_292_TextBlock_FontSize;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.FontWeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_293_TextBlock_FontWeight;
-                xamlMember.Setter = set_293_TextBlock_FontWeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.BaselineOffset":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BaselineOffset", "Double");
-                xamlMember.Getter = get_294_TextBlock_BaselineOffset;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.CharacterSpacing":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_295_TextBlock_CharacterSpacing;
-                xamlMember.Setter = set_295_TextBlock_CharacterSpacing;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.ContentEnd":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_296_TextBlock_ContentEnd;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.ContentStart":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentStart", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_297_TextBlock_ContentStart;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.FontFamily":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_298_TextBlock_FontFamily;
-                xamlMember.Setter = set_298_TextBlock_FontFamily;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.FontStretch":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_299_TextBlock_FontStretch;
-                xamlMember.Setter = set_299_TextBlock_FontStretch;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.FontStyle":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_300_TextBlock_FontStyle;
-                xamlMember.Setter = set_300_TextBlock_FontStyle;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.Foreground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_301_TextBlock_Foreground;
-                xamlMember.Setter = set_301_TextBlock_Foreground;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.HorizontalTextAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalTextAlignment", "Microsoft.UI.Xaml.TextAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_302_TextBlock_HorizontalTextAlignment;
-                xamlMember.Setter = set_302_TextBlock_HorizontalTextAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.IsColorFontEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsColorFontEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_303_TextBlock_IsColorFontEnabled;
-                xamlMember.Setter = set_303_TextBlock_IsColorFontEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextScaleFactorEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_304_TextBlock_IsTextScaleFactorEnabled;
-                xamlMember.Setter = set_304_TextBlock_IsTextScaleFactorEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextSelectionEnabled":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextSelectionEnabled", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_305_TextBlock_IsTextSelectionEnabled;
-                xamlMember.Setter = set_305_TextBlock_IsTextSelectionEnabled;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextTrimmed":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextTrimmed", "Boolean");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_306_TextBlock_IsTextTrimmed;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.LineHeight":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LineHeight", "Double");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_307_TextBlock_LineHeight;
-                xamlMember.Setter = set_307_TextBlock_LineHeight;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.LineStackingStrategy":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LineStackingStrategy", "Microsoft.UI.Xaml.LineStackingStrategy");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_308_TextBlock_LineStackingStrategy;
-                xamlMember.Setter = set_308_TextBlock_LineStackingStrategy;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.MaxLines":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxLines", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_309_TextBlock_MaxLines;
-                xamlMember.Setter = set_309_TextBlock_MaxLines;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.OpticalMarginAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "OpticalMarginAlignment", "Microsoft.UI.Xaml.OpticalMarginAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_310_TextBlock_OpticalMarginAlignment;
-                xamlMember.Setter = set_310_TextBlock_OpticalMarginAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.Padding":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember.Getter = get_154_Border_CornerRadius;
+                xamlMember.Setter = set_154_Border_CornerRadius;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Border.Padding":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Border");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_311_TextBlock_Padding;
-                xamlMember.Setter = set_311_TextBlock_Padding;
+                xamlMember.Getter = get_155_Border_Padding;
+                xamlMember.Setter = set_155_Border_Padding;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectedText":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedText", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_312_TextBlock_SelectedText;
+            case "Microsoft.UI.Xaml.Controls.Panel.Children":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Children", "Microsoft.UI.Xaml.Controls.UIElementCollection");
+                xamlMember.Getter = get_156_Panel_Children;
                 xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionEnd":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_313_TextBlock_SelectionEnd;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionFlyout":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_314_TextBlock_SelectionFlyout;
-                xamlMember.Setter = set_314_TextBlock_SelectionFlyout;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionHighlightColor":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_315_TextBlock_SelectionHighlightColor;
-                xamlMember.Setter = set_315_TextBlock_SelectionHighlightColor;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionStart":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionStart", "Microsoft.UI.Xaml.Documents.TextPointer");
-                xamlMember.Getter = get_316_TextBlock_SelectionStart;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextAlignment":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextAlignment", "Microsoft.UI.Xaml.TextAlignment");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_317_TextBlock_TextAlignment;
-                xamlMember.Setter = set_317_TextBlock_TextAlignment;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextDecorations":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextDecorations", "Windows.UI.Text.TextDecorations");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_318_TextBlock_TextDecorations;
-                xamlMember.Setter = set_318_TextBlock_TextDecorations;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextHighlighters":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextHighlighters", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>");
-                xamlMember.Getter = get_319_TextBlock_TextHighlighters;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Background":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.Getter = get_320_TextHighlighter_Background;
-                xamlMember.Setter = set_320_TextHighlighter_Background;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Foreground":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.Getter = get_321_TextHighlighter_Foreground;
-                xamlMember.Setter = set_321_TextHighlighter_Foreground;
-                break;
-            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Ranges":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Ranges", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>");
-                xamlMember.Getter = get_322_TextHighlighter_Ranges;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextLineBounds":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextLineBounds", "Microsoft.UI.Xaml.TextLineBounds");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_323_TextBlock_TextLineBounds;
-                xamlMember.Setter = set_323_TextBlock_TextLineBounds;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextReadingOrder":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextReadingOrder", "Microsoft.UI.Xaml.TextReadingOrder");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_324_TextBlock_TextReadingOrder;
-                xamlMember.Setter = set_324_TextBlock_TextReadingOrder;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextTrimming":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextTrimming", "Microsoft.UI.Xaml.TextTrimming");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_325_TextBlock_TextTrimming;
-                xamlMember.Setter = set_325_TextBlock_TextTrimming;
-                break;
-            case "Microsoft.UI.Xaml.Controls.TextBlock.TextWrapping":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextWrapping", "Microsoft.UI.Xaml.TextWrapping");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_326_TextBlock_TextWrapping;
-                xamlMember.Setter = set_326_TextBlock_TextWrapping;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.Orientation":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Orientation", "Microsoft.UI.Xaml.Controls.Orientation");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_327_StackPanel_Orientation;
-                xamlMember.Setter = set_327_StackPanel_Orientation;
+                xamlMember.Getter = get_157_StackPanel_Orientation;
+                xamlMember.Setter = set_157_StackPanel_Orientation;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.AreHorizontalSnapPointsRegular":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AreHorizontalSnapPointsRegular", "Boolean");
-                xamlMember.Getter = get_328_StackPanel_AreHorizontalSnapPointsRegular;
+                xamlMember.Getter = get_158_StackPanel_AreHorizontalSnapPointsRegular;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.AreScrollSnapPointsRegular":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AreScrollSnapPointsRegular", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_329_StackPanel_AreScrollSnapPointsRegular;
-                xamlMember.Setter = set_329_StackPanel_AreScrollSnapPointsRegular;
+                xamlMember.Getter = get_159_StackPanel_AreScrollSnapPointsRegular;
+                xamlMember.Setter = set_159_StackPanel_AreScrollSnapPointsRegular;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.AreVerticalSnapPointsRegular":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AreVerticalSnapPointsRegular", "Boolean");
-                xamlMember.Getter = get_330_StackPanel_AreVerticalSnapPointsRegular;
+                xamlMember.Getter = get_160_StackPanel_AreVerticalSnapPointsRegular;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.BackgroundSizing":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_331_StackPanel_BackgroundSizing;
-                xamlMember.Setter = set_331_StackPanel_BackgroundSizing;
+                xamlMember.Getter = get_161_StackPanel_BackgroundSizing;
+                xamlMember.Setter = set_161_StackPanel_BackgroundSizing;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.BorderBrush":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_332_StackPanel_BorderBrush;
-                xamlMember.Setter = set_332_StackPanel_BorderBrush;
+                xamlMember.Getter = get_162_StackPanel_BorderBrush;
+                xamlMember.Setter = set_162_StackPanel_BorderBrush;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.BorderThickness":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_333_StackPanel_BorderThickness;
-                xamlMember.Setter = set_333_StackPanel_BorderThickness;
+                xamlMember.Getter = get_163_StackPanel_BorderThickness;
+                xamlMember.Setter = set_163_StackPanel_BorderThickness;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.CornerRadius":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_334_StackPanel_CornerRadius;
-                xamlMember.Setter = set_334_StackPanel_CornerRadius;
+                xamlMember.Getter = get_164_StackPanel_CornerRadius;
+                xamlMember.Setter = set_164_StackPanel_CornerRadius;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.Padding":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_335_StackPanel_Padding;
-                xamlMember.Setter = set_335_StackPanel_Padding;
+                xamlMember.Getter = get_165_StackPanel_Padding;
+                xamlMember.Setter = set_165_StackPanel_Padding;
                 break;
             case "Microsoft.UI.Xaml.Controls.StackPanel.Spacing":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.StackPanel");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Spacing", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_336_StackPanel_Spacing;
-                xamlMember.Setter = set_336_StackPanel_Spacing;
+                xamlMember.Getter = get_166_StackPanel_Spacing;
+                xamlMember.Setter = set_166_StackPanel_Spacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Panel.Background":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_167_Panel_Background;
+                xamlMember.Setter = set_167_Panel_Background;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Panel.BackgroundTransition":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundTransition", "Microsoft.UI.Xaml.BrushTransition");
+                xamlMember.Getter = get_168_Panel_BackgroundTransition;
+                xamlMember.Setter = set_168_Panel_BackgroundTransition;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Panel.ChildrenTransitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ChildrenTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_169_Panel_ChildrenTransitions;
+                xamlMember.Setter = set_169_Panel_ChildrenTransitions;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Panel.IsItemsHost":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsItemsHost", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_170_Panel_IsItemsHost;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.Image.Source":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Source", "Microsoft.UI.Xaml.Media.ImageSource");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_171_Image_Source;
+                xamlMember.Setter = set_171_Image_Source;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Image.NineGrid":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "NineGrid", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_172_Image_NineGrid;
+                xamlMember.Setter = set_172_Image_NineGrid;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Image.Stretch":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Stretch", "Microsoft.UI.Xaml.Media.Stretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_173_Image_Stretch;
+                xamlMember.Setter = set_173_Image_Stretch;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.Inlines":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Inlines", "Microsoft.UI.Xaml.Documents.InlineCollection");
+                xamlMember.Getter = get_174_TextBlock_Inlines;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.AccessKey":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKey", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_175_TextElement_AccessKey;
+                xamlMember.Setter = set_175_TextElement_AccessKey;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.AccessKeyScopeOwner":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AccessKeyScopeOwner", "Microsoft.UI.Xaml.DependencyObject");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_176_TextElement_AccessKeyScopeOwner;
+                xamlMember.Setter = set_176_TextElement_AccessKeyScopeOwner;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.AllowFocusOnInteraction":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AllowFocusOnInteraction", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_177_TextElement_AllowFocusOnInteraction;
+                xamlMember.Setter = set_177_TextElement_AllowFocusOnInteraction;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.CharacterSpacing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_178_TextElement_CharacterSpacing;
+                xamlMember.Setter = set_178_TextElement_CharacterSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.ContentEnd":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_179_TextElement_ContentEnd;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.ContentStart":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentStart", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_180_TextElement_ContentStart;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.ElementEnd":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_181_TextElement_ElementEnd;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.ElementStart":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ElementStart", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_182_TextElement_ElementStart;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.ExitDisplayModeOnAccessKeyInvoked":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExitDisplayModeOnAccessKeyInvoked", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_183_TextElement_ExitDisplayModeOnAccessKeyInvoked;
+                xamlMember.Setter = set_183_TextElement_ExitDisplayModeOnAccessKeyInvoked;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.FontFamily":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_184_TextElement_FontFamily;
+                xamlMember.Setter = set_184_TextElement_FontFamily;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.FontSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_185_TextElement_FontSize;
+                xamlMember.Setter = set_185_TextElement_FontSize;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.FontStretch":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_186_TextElement_FontStretch;
+                xamlMember.Setter = set_186_TextElement_FontStretch;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.FontStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_187_TextElement_FontStyle;
+                xamlMember.Setter = set_187_TextElement_FontStyle;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.FontWeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_188_TextElement_FontWeight;
+                xamlMember.Setter = set_188_TextElement_FontWeight;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.Foreground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_189_TextElement_Foreground;
+                xamlMember.Setter = set_189_TextElement_Foreground;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.IsAccessKeyScope":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsAccessKeyScope", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_190_TextElement_IsAccessKeyScope;
+                xamlMember.Setter = set_190_TextElement_IsAccessKeyScope;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.IsTextScaleFactorEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_191_TextElement_IsTextScaleFactorEnabled;
+                xamlMember.Setter = set_191_TextElement_IsTextScaleFactorEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipHorizontalOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipHorizontalOffset", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_192_TextElement_KeyTipHorizontalOffset;
+                xamlMember.Setter = set_192_TextElement_KeyTipHorizontalOffset;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipPlacementMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipPlacementMode", "Microsoft.UI.Xaml.Input.KeyTipPlacementMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_193_TextElement_KeyTipPlacementMode;
+                xamlMember.Setter = set_193_TextElement_KeyTipPlacementMode;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.KeyTipVerticalOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "KeyTipVerticalOffset", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_194_TextElement_KeyTipVerticalOffset;
+                xamlMember.Setter = set_194_TextElement_KeyTipVerticalOffset;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.Language":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Language", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_195_TextElement_Language;
+                xamlMember.Setter = set_195_TextElement_Language;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.Name":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Name", "String");
+                xamlMember.Getter = get_196_TextElement_Name;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.TextDecorations":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextDecorations", "Windows.UI.Text.TextDecorations");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_197_TextElement_TextDecorations;
+                xamlMember.Setter = set_197_TextElement_TextDecorations;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextElement.XamlRoot":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextElement");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "XamlRoot", "Microsoft.UI.Xaml.XamlRoot");
+                xamlMember.Getter = get_198_TextElement_XamlRoot;
+                xamlMember.Setter = set_198_TextElement_XamlRoot;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.Text":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_199_TextBlock_Text;
+                xamlMember.Setter = set_199_TextBlock_Text;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.FontSize":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontSize", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_200_TextBlock_FontSize;
+                xamlMember.Setter = set_200_TextBlock_FontSize;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.BaselineOffset":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BaselineOffset", "Double");
+                xamlMember.Getter = get_201_TextBlock_BaselineOffset;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.CharacterSpacing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterSpacing", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_202_TextBlock_CharacterSpacing;
+                xamlMember.Setter = set_202_TextBlock_CharacterSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.ContentEnd":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_203_TextBlock_ContentEnd;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.ContentStart":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentStart", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_204_TextBlock_ContentStart;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.FontFamily":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontFamily", "Microsoft.UI.Xaml.Media.FontFamily");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_205_TextBlock_FontFamily;
+                xamlMember.Setter = set_205_TextBlock_FontFamily;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.FontStretch":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStretch", "Windows.UI.Text.FontStretch");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_206_TextBlock_FontStretch;
+                xamlMember.Setter = set_206_TextBlock_FontStretch;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.FontStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontStyle", "Windows.UI.Text.FontStyle");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_207_TextBlock_FontStyle;
+                xamlMember.Setter = set_207_TextBlock_FontStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.FontWeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FontWeight", "Windows.UI.Text.FontWeight");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_208_TextBlock_FontWeight;
+                xamlMember.Setter = set_208_TextBlock_FontWeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.Foreground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_209_TextBlock_Foreground;
+                xamlMember.Setter = set_209_TextBlock_Foreground;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.HorizontalTextAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalTextAlignment", "Microsoft.UI.Xaml.TextAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_210_TextBlock_HorizontalTextAlignment;
+                xamlMember.Setter = set_210_TextBlock_HorizontalTextAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.IsColorFontEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsColorFontEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_211_TextBlock_IsColorFontEnabled;
+                xamlMember.Setter = set_211_TextBlock_IsColorFontEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextScaleFactorEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextScaleFactorEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_212_TextBlock_IsTextScaleFactorEnabled;
+                xamlMember.Setter = set_212_TextBlock_IsTextScaleFactorEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextSelectionEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextSelectionEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_213_TextBlock_IsTextSelectionEnabled;
+                xamlMember.Setter = set_213_TextBlock_IsTextSelectionEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.IsTextTrimmed":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextTrimmed", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_214_TextBlock_IsTextTrimmed;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.LineHeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LineHeight", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_215_TextBlock_LineHeight;
+                xamlMember.Setter = set_215_TextBlock_LineHeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.LineStackingStrategy":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LineStackingStrategy", "Microsoft.UI.Xaml.LineStackingStrategy");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_216_TextBlock_LineStackingStrategy;
+                xamlMember.Setter = set_216_TextBlock_LineStackingStrategy;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.MaxLines":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxLines", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_217_TextBlock_MaxLines;
+                xamlMember.Setter = set_217_TextBlock_MaxLines;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.OpticalMarginAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "OpticalMarginAlignment", "Microsoft.UI.Xaml.OpticalMarginAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_218_TextBlock_OpticalMarginAlignment;
+                xamlMember.Setter = set_218_TextBlock_OpticalMarginAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.Padding":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_219_TextBlock_Padding;
+                xamlMember.Setter = set_219_TextBlock_Padding;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectedText":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_220_TextBlock_SelectedText;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionEnd":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionEnd", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_221_TextBlock_SelectionEnd;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionFlyout":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_222_TextBlock_SelectionFlyout;
+                xamlMember.Setter = set_222_TextBlock_SelectionFlyout;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionHighlightColor":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_223_TextBlock_SelectionHighlightColor;
+                xamlMember.Setter = set_223_TextBlock_SelectionHighlightColor;
+                break;
+            case "Microsoft.UI.Xaml.Media.SolidColorBrush.Color":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.SolidColorBrush");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Color", "Windows.UI.Color");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_224_SolidColorBrush_Color;
+                xamlMember.Setter = set_224_SolidColorBrush_Color;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.SelectionStart":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionStart", "Microsoft.UI.Xaml.Documents.TextPointer");
+                xamlMember.Getter = get_225_TextBlock_SelectionStart;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextAlignment", "Microsoft.UI.Xaml.TextAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_226_TextBlock_TextAlignment;
+                xamlMember.Setter = set_226_TextBlock_TextAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextDecorations":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextDecorations", "Windows.UI.Text.TextDecorations");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_227_TextBlock_TextDecorations;
+                xamlMember.Setter = set_227_TextBlock_TextDecorations;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextHighlighters":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextHighlighters", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextHighlighter>");
+                xamlMember.Getter = get_228_TextBlock_TextHighlighters;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Background":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Background", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.Getter = get_229_TextHighlighter_Background;
+                xamlMember.Setter = set_229_TextHighlighter_Background;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Foreground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Foreground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.Getter = get_230_TextHighlighter_Foreground;
+                xamlMember.Setter = set_230_TextHighlighter_Foreground;
+                break;
+            case "Microsoft.UI.Xaml.Documents.TextHighlighter.Ranges":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Documents.TextHighlighter");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Ranges", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Documents.TextRange>");
+                xamlMember.Getter = get_231_TextHighlighter_Ranges;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextLineBounds":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextLineBounds", "Microsoft.UI.Xaml.TextLineBounds");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_232_TextBlock_TextLineBounds;
+                xamlMember.Setter = set_232_TextBlock_TextLineBounds;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextReadingOrder":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextReadingOrder", "Microsoft.UI.Xaml.TextReadingOrder");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_233_TextBlock_TextReadingOrder;
+                xamlMember.Setter = set_233_TextBlock_TextReadingOrder;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextTrimming":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextTrimming", "Microsoft.UI.Xaml.TextTrimming");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_234_TextBlock_TextTrimming;
+                xamlMember.Setter = set_234_TextBlock_TextTrimming;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBlock.TextWrapping":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBlock");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextWrapping", "Microsoft.UI.Xaml.TextWrapping");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_235_TextBlock_TextWrapping;
+                xamlMember.Setter = set_235_TextBlock_TextWrapping;
+                break;
+            case "Microsoft.UI.Xaml.Window.Content":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Content", "Microsoft.UI.Xaml.UIElement");
+                xamlMember.Getter = get_236_Window_Content;
+                xamlMember.Setter = set_236_Window_Content;
+                break;
+            case "Microsoft.UI.Xaml.Window.Bounds":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Bounds", "Windows.Foundation.Rect");
+                xamlMember.Getter = get_237_Window_Bounds;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Window.Compositor":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Compositor", "Microsoft.UI.Composition.Compositor");
+                xamlMember.Getter = get_238_Window_Compositor;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Window.CoreWindow":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CoreWindow", "Windows.UI.Core.CoreWindow");
+                xamlMember.Getter = get_239_Window_CoreWindow;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Window.Dispatcher":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Dispatcher", "Windows.UI.Core.CoreDispatcher");
+                xamlMember.Getter = get_240_Window_Dispatcher;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Window.DispatcherQueue":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DispatcherQueue", "Microsoft.System.DispatcherQueue");
+                xamlMember.Getter = get_241_Window_DispatcherQueue;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Window.ExtendsContentIntoTitleBar":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ExtendsContentIntoTitleBar", "Boolean");
+                xamlMember.Getter = get_242_Window_ExtendsContentIntoTitleBar;
+                xamlMember.Setter = set_242_Window_ExtendsContentIntoTitleBar;
+                break;
+            case "Microsoft.UI.Xaml.Window.Title":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Title", "String");
+                xamlMember.Getter = get_243_Window_Title;
+                xamlMember.Setter = set_243_Window_Title;
+                break;
+            case "Microsoft.UI.Xaml.Window.Visible":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Window");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Visible", "Boolean");
+                xamlMember.Getter = get_244_Window_Visible;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.RowDefinitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowDefinitions", "Microsoft.UI.Xaml.Controls.RowDefinitionCollection");
+                xamlMember.Getter = get_245_Grid_RowDefinitions;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.RowDefinition.Height":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Height", "Microsoft.UI.Xaml.GridLength");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_246_RowDefinition_Height;
+                xamlMember.Setter = set_246_RowDefinition_Height;
+                break;
+            case "Microsoft.UI.Xaml.Controls.RowDefinition.ActualHeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualHeight", "Double");
+                xamlMember.Getter = get_247_RowDefinition_ActualHeight;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.RowDefinition.MaxHeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxHeight", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_248_RowDefinition_MaxHeight;
+                xamlMember.Setter = set_248_RowDefinition_MaxHeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.RowDefinition.MinHeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.RowDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinHeight", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_249_RowDefinition_MinHeight;
+                xamlMember.Setter = set_249_RowDefinition_MinHeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.ColumnDefinitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnDefinitions", "Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection");
+                xamlMember.Getter = get_250_Grid_ColumnDefinitions;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.Width":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Width", "Microsoft.UI.Xaml.GridLength");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_251_ColumnDefinition_Width;
+                xamlMember.Setter = set_251_ColumnDefinition_Width;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.ActualWidth":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ActualWidth", "Double");
+                xamlMember.Getter = get_252_ColumnDefinition_ActualWidth;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.MaxWidth":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxWidth", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_253_ColumnDefinition_MaxWidth;
+                xamlMember.Setter = set_253_ColumnDefinition_MaxWidth;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ColumnDefinition.MinWidth":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ColumnDefinition");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MinWidth", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_254_ColumnDefinition_MinWidth;
+                xamlMember.Setter = set_254_ColumnDefinition_MinWidth;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.BackgroundSizing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BackgroundSizing", "Microsoft.UI.Xaml.Controls.BackgroundSizing");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_255_Grid_BackgroundSizing;
+                xamlMember.Setter = set_255_Grid_BackgroundSizing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.BorderBrush":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderBrush", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_256_Grid_BorderBrush;
+                xamlMember.Setter = set_256_Grid_BorderBrush;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.BorderThickness":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "BorderThickness", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_257_Grid_BorderThickness;
+                xamlMember.Setter = set_257_Grid_BorderThickness;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.ColumnSpacing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_258_Grid_ColumnSpacing;
+                xamlMember.Setter = set_258_Grid_ColumnSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.CornerRadius":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CornerRadius", "Microsoft.UI.Xaml.CornerRadius");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_259_Grid_CornerRadius;
+                xamlMember.Setter = set_259_Grid_CornerRadius;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.Padding":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Padding", "Microsoft.UI.Xaml.Thickness");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_260_Grid_Padding;
+                xamlMember.Setter = set_260_Grid_Padding;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.RowSpacing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowSpacing", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_261_Grid_RowSpacing;
+                xamlMember.Setter = set_261_Grid_RowSpacing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.ColumnSpan":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ColumnSpan", "Int32");
+                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_262_Grid_ColumnSpan;
+                xamlMember.Setter = set_262_Grid_ColumnSpan;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.Row":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Row", "Int32");
+                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_263_Grid_Row;
+                xamlMember.Setter = set_263_Grid_Row;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.Column":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Column", "Int32");
+                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_264_Grid_Column;
+                xamlMember.Setter = set_264_Grid_Column;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Grid.RowSpan":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Grid");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "RowSpan", "Int32");
+                xamlMember.SetTargetTypeName("Microsoft.UI.Xaml.FrameworkElement");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_265_Grid_RowSpan;
+                xamlMember.Setter = set_265_Grid_RowSpan;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.Header":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_266_TextBox_Header;
+                xamlMember.Setter = set_266_TextBox_Header;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.AcceptsReturn":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AcceptsReturn", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_267_TextBox_AcceptsReturn;
+                xamlMember.Setter = set_267_TextBox_AcceptsReturn;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.CanPasteClipboardContent":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanPasteClipboardContent", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_268_TextBox_CanPasteClipboardContent;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.CanRedo":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanRedo", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_269_TextBox_CanRedo;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.CanUndo":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanUndo", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_270_TextBox_CanUndo;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.CharacterCasing":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterCasing", "Microsoft.UI.Xaml.Controls.CharacterCasing");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_271_TextBox_CharacterCasing;
+                xamlMember.Setter = set_271_TextBox_CharacterCasing;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.Description":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_272_TextBox_Description;
+                xamlMember.Setter = set_272_TextBox_Description;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.DesiredCandidateWindowAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DesiredCandidateWindowAlignment", "Microsoft.UI.Xaml.Controls.CandidateWindowAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_273_TextBox_DesiredCandidateWindowAlignment;
+                xamlMember.Setter = set_273_TextBox_DesiredCandidateWindowAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.HeaderTemplate":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_274_TextBox_HeaderTemplate;
+                xamlMember.Setter = set_274_TextBox_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.DataTemplate.Template":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.DataTemplate");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
+                xamlMember.Getter = get_275_DataTemplate_Template;
+                xamlMember.Setter = set_275_DataTemplate_Template;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.HorizontalTextAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalTextAlignment", "Microsoft.UI.Xaml.TextAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_276_TextBox_HorizontalTextAlignment;
+                xamlMember.Setter = set_276_TextBox_HorizontalTextAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.InputScope":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "InputScope", "Microsoft.UI.Xaml.Input.InputScope");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_277_TextBox_InputScope;
+                xamlMember.Setter = set_277_TextBox_InputScope;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.IsColorFontEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsColorFontEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_278_TextBox_IsColorFontEnabled;
+                xamlMember.Setter = set_278_TextBox_IsColorFontEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.IsReadOnly":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_279_TextBox_IsReadOnly;
+                xamlMember.Setter = set_279_TextBox_IsReadOnly;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.IsSpellCheckEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSpellCheckEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_280_TextBox_IsSpellCheckEnabled;
+                xamlMember.Setter = set_280_TextBox_IsSpellCheckEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.IsTextPredictionEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextPredictionEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_281_TextBox_IsTextPredictionEnabled;
+                xamlMember.Setter = set_281_TextBox_IsTextPredictionEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.MaxLength":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxLength", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_282_TextBox_MaxLength;
+                xamlMember.Setter = set_282_TextBox_MaxLength;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderForeground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_283_TextBox_PlaceholderForeground;
+                xamlMember.Setter = set_283_TextBox_PlaceholderForeground;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderText":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_284_TextBox_PlaceholderText;
+                xamlMember.Setter = set_284_TextBox_PlaceholderText;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.PreventKeyboardDisplayOnProgrammaticFocus":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PreventKeyboardDisplayOnProgrammaticFocus", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                xamlMember.Setter = set_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.ProofingMenuFlyout":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ProofingMenuFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_286_TextBox_ProofingMenuFlyout;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectedText":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedText", "String");
+                xamlMember.Getter = get_287_TextBox_SelectedText;
+                xamlMember.Setter = set_287_TextBox_SelectedText;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionFlyout":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_288_TextBox_SelectionFlyout;
+                xamlMember.Setter = set_288_TextBox_SelectionFlyout;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColor":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_289_TextBox_SelectionHighlightColor;
+                xamlMember.Setter = set_289_TextBox_SelectionHighlightColor;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColorWhenNotFocused":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColorWhenNotFocused", "Microsoft.UI.Xaml.Media.SolidColorBrush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_290_TextBox_SelectionHighlightColorWhenNotFocused;
+                xamlMember.Setter = set_290_TextBox_SelectionHighlightColorWhenNotFocused;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionLength":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionLength", "Int32");
+                xamlMember.Getter = get_291_TextBox_SelectionLength;
+                xamlMember.Setter = set_291_TextBox_SelectionLength;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.SelectionStart":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionStart", "Int32");
+                xamlMember.Getter = get_292_TextBox_SelectionStart;
+                xamlMember.Setter = set_292_TextBox_SelectionStart;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.Text":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_293_TextBox_Text;
+                xamlMember.Setter = set_293_TextBox_Text;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.TextAlignment":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextAlignment", "Microsoft.UI.Xaml.TextAlignment");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_294_TextBox_TextAlignment;
+                xamlMember.Setter = set_294_TextBox_TextAlignment;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.TextReadingOrder":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextReadingOrder", "Microsoft.UI.Xaml.TextReadingOrder");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_295_TextBox_TextReadingOrder;
+                xamlMember.Setter = set_295_TextBox_TextReadingOrder;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.TextWrapping":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextWrapping", "Microsoft.UI.Xaml.TextWrapping");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_296_TextBox_TextWrapping;
+                xamlMember.Setter = set_296_TextBox_TextWrapping;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.Items":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Items", "Microsoft.UI.Xaml.Controls.ItemCollection");
+                xamlMember.Getter = get_297_ItemsControl_Items;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.Header":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Header", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_298_ComboBox_Header;
+                xamlMember.Setter = set_298_ComboBox_Header;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.Description":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_299_ComboBox_Description;
+                xamlMember.Setter = set_299_ComboBox_Description;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.HeaderTemplate":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_300_ComboBox_HeaderTemplate;
+                xamlMember.Setter = set_300_ComboBox_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.IsDropDownOpen":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsDropDownOpen", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_301_ComboBox_IsDropDownOpen;
+                xamlMember.Setter = set_301_ComboBox_IsDropDownOpen;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.IsEditable":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEditable", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_302_ComboBox_IsEditable;
+                xamlMember.Setter = set_302_ComboBox_IsEditable;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.IsSelectionBoxHighlighted":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSelectionBoxHighlighted", "Boolean");
+                xamlMember.Getter = get_303_ComboBox_IsSelectionBoxHighlighted;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.IsTextSearchEnabled":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextSearchEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_304_ComboBox_IsTextSearchEnabled;
+                xamlMember.Setter = set_304_ComboBox_IsTextSearchEnabled;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.LightDismissOverlayMode":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LightDismissOverlayMode", "Microsoft.UI.Xaml.Controls.LightDismissOverlayMode");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_305_ComboBox_LightDismissOverlayMode;
+                xamlMember.Setter = set_305_ComboBox_LightDismissOverlayMode;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.MaxDropDownHeight":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxDropDownHeight", "Double");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_306_ComboBox_MaxDropDownHeight;
+                xamlMember.Setter = set_306_ComboBox_MaxDropDownHeight;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderForeground":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_307_ComboBox_PlaceholderForeground;
+                xamlMember.Setter = set_307_ComboBox_PlaceholderForeground;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderText":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_308_ComboBox_PlaceholderText;
+                xamlMember.Setter = set_308_ComboBox_PlaceholderText;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItem":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItem", "Object");
+                xamlMember.Getter = get_309_ComboBox_SelectionBoxItem;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItemTemplate":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.Getter = get_310_ComboBox_SelectionBoxItemTemplate;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionChangedTrigger":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionChangedTrigger", "Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_311_ComboBox_SelectionChangedTrigger;
+                xamlMember.Setter = set_311_ComboBox_SelectionChangedTrigger;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.TemplateSettings":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings");
+                xamlMember.Getter = get_312_ComboBox_TemplateSettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.Text":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_313_ComboBox_Text;
+                xamlMember.Setter = set_313_ComboBox_Text;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.TextBoxStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextBoxStyle", "Microsoft.UI.Xaml.Style");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_314_ComboBox_TextBoxStyle;
+                xamlMember.Setter = set_314_ComboBox_TextBoxStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSynchronizedWithCurrentItem", "System.Nullable`1<Boolean>");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_315_Selector_IsSynchronizedWithCurrentItem;
+                xamlMember.Setter = set_315_Selector_IsSynchronizedWithCurrentItem;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedIndex":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_316_Selector_SelectedIndex;
+                xamlMember.Setter = set_316_Selector_SelectedIndex;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedItem":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_317_Selector_SelectedItem;
+                xamlMember.Setter = set_317_Selector_SelectedItem;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValue":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValue", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_318_Selector_SelectedValue;
+                xamlMember.Setter = set_318_Selector_SelectedValue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValuePath":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValuePath", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_319_Selector_SelectedValuePath;
+                xamlMember.Setter = set_319_Selector_SelectedValuePath;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.DisplayMemberPath":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DisplayMemberPath", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_320_ItemsControl_DisplayMemberPath;
+                xamlMember.Setter = set_320_ItemsControl_DisplayMemberPath;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.GroupStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "GroupStyle", "Windows.Foundation.Collections.IObservableVector`1<Microsoft.UI.Xaml.Controls.GroupStyle>");
+                xamlMember.Getter = get_321_ItemsControl_GroupStyle;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.ContainerStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContainerStyle", "Microsoft.UI.Xaml.Style");
+                xamlMember.Getter = get_322_GroupStyle_ContainerStyle;
+                xamlMember.Setter = set_322_GroupStyle_ContainerStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.ContainerStyleSelector":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
+                xamlMember.Getter = get_323_GroupStyle_ContainerStyleSelector;
+                xamlMember.Setter = set_323_GroupStyle_ContainerStyleSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderContainerStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderContainerStyle", "Microsoft.UI.Xaml.Style");
+                xamlMember.Getter = get_324_GroupStyle_HeaderContainerStyle;
+                xamlMember.Setter = set_324_GroupStyle_HeaderContainerStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderTemplate":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.Getter = get_325_GroupStyle_HeaderTemplate;
+                xamlMember.Setter = set_325_GroupStyle_HeaderTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.HeaderTemplateSelector":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                xamlMember.Getter = get_326_GroupStyle_HeaderTemplateSelector;
+                xamlMember.Setter = set_326_GroupStyle_HeaderTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.HidesIfEmpty":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HidesIfEmpty", "Boolean");
+                xamlMember.Getter = get_327_GroupStyle_HidesIfEmpty;
+                xamlMember.Setter = set_327_GroupStyle_HidesIfEmpty;
+                break;
+            case "Microsoft.UI.Xaml.Controls.GroupStyle.Panel":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.GroupStyle");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Panel", "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
+                xamlMember.Getter = get_328_GroupStyle_Panel;
+                xamlMember.Setter = set_328_GroupStyle_Panel;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate.Template":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
+                xamlMember.Getter = get_329_ItemsPanelTemplate_Template;
+                xamlMember.Setter = set_329_ItemsPanelTemplate_Template;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.GroupStyleSelector":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "GroupStyleSelector", "Microsoft.UI.Xaml.Controls.GroupStyleSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_330_ItemsControl_GroupStyleSelector;
+                xamlMember.Setter = set_330_ItemsControl_GroupStyleSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.IsGrouping":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsGrouping", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_331_ItemsControl_IsGrouping;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerGenerator":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerGenerator", "Microsoft.UI.Xaml.Controls.ItemContainerGenerator");
+                xamlMember.Getter = get_332_ItemsControl_ItemContainerGenerator;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerStyle":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerStyle", "Microsoft.UI.Xaml.Style");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_333_ItemsControl_ItemContainerStyle;
+                xamlMember.Setter = set_333_ItemsControl_ItemContainerStyle;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerStyleSelector":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerStyleSelector", "Microsoft.UI.Xaml.Controls.StyleSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_334_ItemsControl_ItemContainerStyleSelector;
+                xamlMember.Setter = set_334_ItemsControl_ItemContainerStyleSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemContainerTransitions":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemContainerTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_335_ItemsControl_ItemContainerTransitions;
+                xamlMember.Setter = set_335_ItemsControl_ItemContainerTransitions;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemTemplate":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_336_ItemsControl_ItemTemplate;
+                xamlMember.Setter = set_336_ItemsControl_ItemTemplate;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemTemplateSelector":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_337_ItemsControl_ItemTemplateSelector;
+                xamlMember.Setter = set_337_ItemsControl_ItemTemplateSelector;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsPanel":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsPanel", "Microsoft.UI.Xaml.Controls.ItemsPanelTemplate");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_338_ItemsControl_ItemsPanel;
+                xamlMember.Setter = set_338_ItemsControl_ItemsPanel;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsPanelRoot":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsPanelRoot", "Microsoft.UI.Xaml.Controls.Panel");
+                xamlMember.Getter = get_339_ItemsControl_ItemsPanelRoot;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.ItemsSource":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ItemsSource", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_340_ItemsControl_ItemsSource;
+                xamlMember.Setter = set_340_ItemsControl_ItemsSource;
                 break;
             case "Microsoft.UI.Xaml.Controls.ContentControl.Content":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_337_ContentControl_Content;
-                xamlMember.Setter = set_337_ContentControl_Content;
+                xamlMember.Getter = get_341_ContentControl_Content;
+                xamlMember.Setter = set_341_ContentControl_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.Button.Flyout":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Button");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Flyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_338_Button_Flyout;
-                xamlMember.Setter = set_338_Button_Flyout;
+                xamlMember.Getter = get_342_Button_Flyout;
+                xamlMember.Setter = set_342_Button_Flyout;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase.ClickMode":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ClickMode", "Microsoft.UI.Xaml.Controls.ClickMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_339_ButtonBase_ClickMode;
-                xamlMember.Setter = set_339_ButtonBase_ClickMode;
+                xamlMember.Getter = get_343_ButtonBase_ClickMode;
+                xamlMember.Setter = set_343_ButtonBase_ClickMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase.Command":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_340_ButtonBase_Command;
-                xamlMember.Setter = set_340_ButtonBase_Command;
+                xamlMember.Getter = get_344_ButtonBase_Command;
+                xamlMember.Setter = set_344_ButtonBase_Command;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase.CommandParameter":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_341_ButtonBase_CommandParameter;
-                xamlMember.Setter = set_341_ButtonBase_CommandParameter;
+                xamlMember.Getter = get_345_ButtonBase_CommandParameter;
+                xamlMember.Setter = set_345_ButtonBase_CommandParameter;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase.IsPointerOver":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsPointerOver", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_342_ButtonBase_IsPointerOver;
+                xamlMember.Getter = get_346_ButtonBase_IsPointerOver;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.ButtonBase.IsPressed":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsPressed", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_343_ButtonBase_IsPressed;
+                xamlMember.Getter = get_347_ButtonBase_IsPressed;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ContentControl.ContentTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_344_ContentControl_ContentTemplate;
-                xamlMember.Setter = set_344_ContentControl_ContentTemplate;
+                xamlMember.Getter = get_348_ContentControl_ContentTemplate;
+                xamlMember.Setter = set_348_ContentControl_ContentTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ContentControl.ContentTemplateRoot":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentTemplateRoot", "Microsoft.UI.Xaml.UIElement");
-                xamlMember.Getter = get_345_ContentControl_ContentTemplateRoot;
+                xamlMember.Getter = get_349_ContentControl_ContentTemplateRoot;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ContentControl.ContentTemplateSelector":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentTemplateSelector", "Microsoft.UI.Xaml.Controls.DataTemplateSelector");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_346_ContentControl_ContentTemplateSelector;
-                xamlMember.Setter = set_346_ContentControl_ContentTemplateSelector;
+                xamlMember.Getter = get_350_ContentControl_ContentTemplateSelector;
+                xamlMember.Setter = set_350_ContentControl_ContentTemplateSelector;
                 break;
             case "Microsoft.UI.Xaml.Controls.ContentControl.ContentTransitions":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ContentTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_347_ContentControl_ContentTransitions;
-                xamlMember.Setter = set_347_ContentControl_ContentTransitions;
+                xamlMember.Getter = get_351_ContentControl_ContentTransitions;
+                xamlMember.Setter = set_351_ContentControl_ContentTransitions;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.CanDragItems":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanDragItems", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_348_ListViewBase_CanDragItems;
-                xamlMember.Setter = set_348_ListViewBase_CanDragItems;
+                xamlMember.Getter = get_352_ListViewBase_CanDragItems;
+                xamlMember.Setter = set_352_ListViewBase_CanDragItems;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.CanReorderItems":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanReorderItems", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_349_ListViewBase_CanReorderItems;
-                xamlMember.Setter = set_349_ListViewBase_CanReorderItems;
+                xamlMember.Getter = get_353_ListViewBase_CanReorderItems;
+                xamlMember.Setter = set_353_ListViewBase_CanReorderItems;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.DataFetchSize":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DataFetchSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_350_ListViewBase_DataFetchSize;
-                xamlMember.Setter = set_350_ListViewBase_DataFetchSize;
+                xamlMember.Getter = get_354_ListViewBase_DataFetchSize;
+                xamlMember.Setter = set_354_ListViewBase_DataFetchSize;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.Footer":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Footer", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_351_ListViewBase_Footer;
-                xamlMember.Setter = set_351_ListViewBase_Footer;
+                xamlMember.Getter = get_355_ListViewBase_Footer;
+                xamlMember.Setter = set_355_ListViewBase_Footer;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.FooterTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FooterTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_352_ListViewBase_FooterTemplate;
-                xamlMember.Setter = set_352_ListViewBase_FooterTemplate;
+                xamlMember.Getter = get_356_ListViewBase_FooterTemplate;
+                xamlMember.Setter = set_356_ListViewBase_FooterTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.FooterTransitions":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "FooterTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_353_ListViewBase_FooterTransitions;
-                xamlMember.Setter = set_353_ListViewBase_FooterTransitions;
+                xamlMember.Getter = get_357_ListViewBase_FooterTransitions;
+                xamlMember.Setter = set_357_ListViewBase_FooterTransitions;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.Header":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Header", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_354_ListViewBase_Header;
-                xamlMember.Setter = set_354_ListViewBase_Header;
+                xamlMember.Getter = get_358_ListViewBase_Header;
+                xamlMember.Setter = set_358_ListViewBase_Header;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.HeaderTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_355_ListViewBase_HeaderTemplate;
-                xamlMember.Setter = set_355_ListViewBase_HeaderTemplate;
+                xamlMember.Getter = get_359_ListViewBase_HeaderTemplate;
+                xamlMember.Setter = set_359_ListViewBase_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.HeaderTransitions":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTransitions", "Microsoft.UI.Xaml.Media.Animation.TransitionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_356_ListViewBase_HeaderTransitions;
-                xamlMember.Setter = set_356_ListViewBase_HeaderTransitions;
+                xamlMember.Getter = get_360_ListViewBase_HeaderTransitions;
+                xamlMember.Setter = set_360_ListViewBase_HeaderTransitions;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IncrementalLoadingThreshold":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IncrementalLoadingThreshold", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_357_ListViewBase_IncrementalLoadingThreshold;
-                xamlMember.Setter = set_357_ListViewBase_IncrementalLoadingThreshold;
+                xamlMember.Getter = get_361_ListViewBase_IncrementalLoadingThreshold;
+                xamlMember.Setter = set_361_ListViewBase_IncrementalLoadingThreshold;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IncrementalLoadingTrigger":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IncrementalLoadingTrigger", "Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_358_ListViewBase_IncrementalLoadingTrigger;
-                xamlMember.Setter = set_358_ListViewBase_IncrementalLoadingTrigger;
+                xamlMember.Getter = get_362_ListViewBase_IncrementalLoadingTrigger;
+                xamlMember.Setter = set_362_ListViewBase_IncrementalLoadingTrigger;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IsActiveView":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsActiveView", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_359_ListViewBase_IsActiveView;
-                xamlMember.Setter = set_359_ListViewBase_IsActiveView;
+                xamlMember.Getter = get_363_ListViewBase_IsActiveView;
+                xamlMember.Setter = set_363_ListViewBase_IsActiveView;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IsItemClickEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsItemClickEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_360_ListViewBase_IsItemClickEnabled;
-                xamlMember.Setter = set_360_ListViewBase_IsItemClickEnabled;
+                xamlMember.Getter = get_364_ListViewBase_IsItemClickEnabled;
+                xamlMember.Setter = set_364_ListViewBase_IsItemClickEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IsMultiSelectCheckBoxEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsMultiSelectCheckBoxEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_361_ListViewBase_IsMultiSelectCheckBoxEnabled;
-                xamlMember.Setter = set_361_ListViewBase_IsMultiSelectCheckBoxEnabled;
+                xamlMember.Getter = get_365_ListViewBase_IsMultiSelectCheckBoxEnabled;
+                xamlMember.Setter = set_365_ListViewBase_IsMultiSelectCheckBoxEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IsSwipeEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSwipeEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_362_ListViewBase_IsSwipeEnabled;
-                xamlMember.Setter = set_362_ListViewBase_IsSwipeEnabled;
+                xamlMember.Getter = get_366_ListViewBase_IsSwipeEnabled;
+                xamlMember.Setter = set_366_ListViewBase_IsSwipeEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.IsZoomedInView":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsZoomedInView", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_363_ListViewBase_IsZoomedInView;
-                xamlMember.Setter = set_363_ListViewBase_IsZoomedInView;
+                xamlMember.Getter = get_367_ListViewBase_IsZoomedInView;
+                xamlMember.Setter = set_367_ListViewBase_IsZoomedInView;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.ReorderMode":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ReorderMode", "Microsoft.UI.Xaml.Controls.ListViewReorderMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_364_ListViewBase_ReorderMode;
-                xamlMember.Setter = set_364_ListViewBase_ReorderMode;
+                xamlMember.Getter = get_368_ListViewBase_ReorderMode;
+                xamlMember.Setter = set_368_ListViewBase_ReorderMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.SelectedItems":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.Generic.IList`1<Object>");
-                xamlMember.Getter = get_365_ListViewBase_SelectedItems;
+                xamlMember.Getter = get_369_ListViewBase_SelectedItems;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.SelectedRanges":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedRanges", "System.Collections.Generic.IReadOnlyList`1<Microsoft.UI.Xaml.Data.ItemIndexRange>");
-                xamlMember.Getter = get_366_ListViewBase_SelectedRanges;
+                xamlMember.Getter = get_370_ListViewBase_SelectedRanges;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.SelectionMode":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionMode", "Microsoft.UI.Xaml.Controls.ListViewSelectionMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_367_ListViewBase_SelectionMode;
-                xamlMember.Setter = set_367_ListViewBase_SelectionMode;
+                xamlMember.Getter = get_371_ListViewBase_SelectionMode;
+                xamlMember.Setter = set_371_ListViewBase_SelectionMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.SemanticZoomOwner":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SemanticZoomOwner", "Microsoft.UI.Xaml.Controls.SemanticZoom");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_368_ListViewBase_SemanticZoomOwner;
-                xamlMember.Setter = set_368_ListViewBase_SemanticZoomOwner;
+                xamlMember.Getter = get_372_ListViewBase_SemanticZoomOwner;
+                xamlMember.Setter = set_372_ListViewBase_SemanticZoomOwner;
                 break;
             case "Microsoft.UI.Xaml.Controls.SemanticZoom.ZoomedInView":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.SemanticZoom");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ZoomedInView", "Microsoft.UI.Xaml.Controls.ISemanticZoomInformation");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_369_SemanticZoom_ZoomedInView;
-                xamlMember.Setter = set_369_SemanticZoom_ZoomedInView;
+                xamlMember.Getter = get_373_SemanticZoom_ZoomedInView;
+                xamlMember.Setter = set_373_SemanticZoom_ZoomedInView;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.ShowsScrollingPlaceholders":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ShowsScrollingPlaceholders", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_370_ListViewBase_ShowsScrollingPlaceholders;
-                xamlMember.Setter = set_370_ListViewBase_ShowsScrollingPlaceholders;
+                xamlMember.Getter = get_374_ListViewBase_ShowsScrollingPlaceholders;
+                xamlMember.Setter = set_374_ListViewBase_ShowsScrollingPlaceholders;
                 break;
             case "Microsoft.UI.Xaml.Controls.ListViewBase.SingleSelectionFollowsFocus":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ListViewBase");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SingleSelectionFollowsFocus", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_371_ListViewBase_SingleSelectionFollowsFocus;
-                xamlMember.Setter = set_371_ListViewBase_SingleSelectionFollowsFocus;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Image.Source":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Source", "Microsoft.UI.Xaml.Media.ImageSource");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_372_Image_Source;
-                xamlMember.Setter = set_372_Image_Source;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Image.NineGrid":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "NineGrid", "Microsoft.UI.Xaml.Thickness");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_373_Image_NineGrid;
-                xamlMember.Setter = set_373_Image_NineGrid;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Image.Stretch":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Image");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Stretch", "Microsoft.UI.Xaml.Media.Stretch");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_374_Image_Stretch;
-                xamlMember.Setter = set_374_Image_Stretch;
+                xamlMember.Getter = get_375_ListViewBase_SingleSelectionFollowsFocus;
+                xamlMember.Setter = set_375_ListViewBase_SingleSelectionFollowsFocus;
                 break;
             }
             return xamlMember;

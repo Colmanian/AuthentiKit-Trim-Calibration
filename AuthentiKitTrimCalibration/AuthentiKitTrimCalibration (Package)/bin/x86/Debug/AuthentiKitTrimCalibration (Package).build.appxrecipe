@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\MainWindow.xbf">
       <PackagePath>MainWindow.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\Controls\HeaderControl.xbf">
+      <PackagePath>Controls\HeaderControl.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\Images\logo.jpg">
       <PackagePath>Images\logo.jpg</PackagePath>
     </AppxPackagedFile>
@@ -96,6 +99,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll">
       <PackagePath>AuthentiKitTrimCalibration\WinRT.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.dll">
+      <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\Mapping.Common\bin\Debug\net5.0\MappingManager.Common.dll">
+      <PackagePath>AuthentiKitTrimCalibration\MappingManager.Common.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.Internal.FrameworkUdk.dll">
       <PackagePath>AuthentiKitTrimCalibration\Microsoft.Internal.FrameworkUdk.dll</PackagePath>

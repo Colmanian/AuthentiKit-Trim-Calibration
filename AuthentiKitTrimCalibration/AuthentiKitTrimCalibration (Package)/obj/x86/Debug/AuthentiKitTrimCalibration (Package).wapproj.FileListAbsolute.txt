@@ -38,3 +38,8 @@ E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\Authent
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\ProjectArchitectures.txt
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\obj\x86\Debug\AuthentiKitTrimCalibration (Package).wapproj.LastBuild.txt
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\Images\logo.jpg
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\Controls\HeaderControl.xbf
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\MappingManager.Common.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\MappingManager.Common.pdb
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.pdb
