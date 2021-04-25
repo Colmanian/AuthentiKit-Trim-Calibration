@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using AuthentiKitTrimCalibration.DataAccess;
+using AuthentiKitTrimCalibration.ViewModel;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -26,6 +28,18 @@ namespace AuthentiKitTrimCalibration
         public MainWindow()
         {
             this.InitializeComponent();
+            ViewModel = new MainViewModel(new MappingDataProvider());
+            this.Activated += MainWindow_Activated;
         }
+
+        private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
+        {
+            if (ViewModel.Mappings.Count == 0)
+            {
+                ViewModel.Load();
+            }
+        }
+
+        public MainViewModel ViewModel { get; }
     }
 }

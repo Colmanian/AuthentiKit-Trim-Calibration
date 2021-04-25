@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.DataAccess.csproj" />
     <ProjectReference Include="..\AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj" />
     <ProjectReference Include="..\Mapping.Common\MappingManager.Common.csproj" />
   </ItemGroup>

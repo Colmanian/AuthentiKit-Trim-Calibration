@@ -223,7 +223,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[159];
+            _typeNameTable = new string[157];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Application";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Microsoft.UI.Xaml.ResourceDictionary";
@@ -381,10 +381,8 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             _typeNameTable[154] = "Microsoft.UI.Xaml.Controls.SemanticZoom";
             _typeNameTable[155] = "Microsoft.UI.Xaml.Controls.ISemanticZoomInformation";
             _typeNameTable[156] = "AuthentiKitTrimCalibration.MainWindow";
-            _typeNameTable[157] = "AuthentiKitTrimCalibration.ViewModel.MainViewModel";
-            _typeNameTable[158] = "AuthentiKitTrimCalibration.ViewModel.ViewModelBase";
 
-            _typeTable = new global::System.Type[159];
+            _typeTable = new global::System.Type[157];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Application);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
@@ -542,8 +540,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             _typeTable[154] = typeof(global::Microsoft.UI.Xaml.Controls.SemanticZoom);
             _typeTable[155] = typeof(global::Microsoft.UI.Xaml.Controls.ISemanticZoomInformation);
             _typeTable[156] = typeof(global::AuthentiKitTrimCalibration.MainWindow);
-            _typeTable[157] = typeof(global::AuthentiKitTrimCalibration.ViewModel.MainViewModel);
-            _typeTable[158] = typeof(global::AuthentiKitTrimCalibration.ViewModel.ViewModelBase);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -619,7 +615,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
         private object Activate_147_ListView() { return new global::Microsoft.UI.Xaml.Controls.ListView(); }
         private object Activate_154_SemanticZoom() { return new global::Microsoft.UI.Xaml.Controls.SemanticZoom(); }
         private object Activate_156_MainWindow() { return new global::AuthentiKitTrimCalibration.MainWindow(); }
-        private object Activate_158_ViewModelBase() { return new global::AuthentiKitTrimCalibration.ViewModel.ViewModelBase(); }
         private void MapAdd_2_ResourceDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -2006,7 +2001,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_122_TextBox;
                 userType.AddMemberName("Header");
-                userType.AddMemberName("Text");
                 userType.AddMemberName("AcceptsReturn");
                 userType.AddMemberName("CanPasteClipboardContent");
                 userType.AddMemberName("CanRedo");
@@ -2032,6 +2026,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType.AddMemberName("SelectionHighlightColorWhenNotFocused");
                 userType.AddMemberName("SelectionLength");
                 userType.AddMemberName("SelectionStart");
+                userType.AddMemberName("Text");
                 userType.AddMemberName("TextAlignment");
                 userType.AddMemberName("TextReadingOrder");
                 userType.AddMemberName("TextWrapping");
@@ -2072,7 +2067,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType.Activator = Activate_127_ComboBox;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
                 userType.AddMemberName("Header");
-                userType.AddMemberName("Text");
                 userType.AddMemberName("Description");
                 userType.AddMemberName("HeaderTemplate");
                 userType.AddMemberName("IsDropDownOpen");
@@ -2087,6 +2081,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType.AddMemberName("SelectionBoxItemTemplate");
                 userType.AddMemberName("SelectionChangedTrigger");
                 userType.AddMemberName("TemplateSettings");
+                userType.AddMemberName("Text");
                 userType.AddMemberName("TextBoxStyle");
                 xamlType = userType;
                 break;
@@ -2094,11 +2089,11 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             case 128:   //  Microsoft.UI.Xaml.Controls.Primitives.Selector
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl"));
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Controls.ItemsControl.Items");
-                userType.AddMemberName("SelectedValuePath");
-                userType.AddMemberName("SelectedValue");
                 userType.AddMemberName("IsSynchronizedWithCurrentItem");
                 userType.AddMemberName("SelectedIndex");
                 userType.AddMemberName("SelectedItem");
+                userType.AddMemberName("SelectedValue");
+                userType.AddMemberName("SelectedValuePath");
                 xamlType = userType;
                 break;
 
@@ -2346,20 +2341,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
                 userType.Activator = Activate_156_MainWindow;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Window.Content");
-                userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 157:   //  AuthentiKitTrimCalibration.ViewModel.MainViewModel
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("AuthentiKitTrimCalibration.ViewModel.ViewModelBase"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 158:   //  AuthentiKitTrimCalibration.ViewModel.ViewModelBase
-                userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_158_ViewModelBase;
                 xamlType = userType;
                 break;
             }
@@ -4795,252 +4777,252 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_267_TextBox_Text(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            return that.Text;
-        }
-        private void set_267_TextBox_Text(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
-            that.Text = (global::System.String)Value;
-        }
-        private object get_268_TextBox_AcceptsReturn(object instance)
+        private object get_267_TextBox_AcceptsReturn(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.AcceptsReturn;
         }
-        private void set_268_TextBox_AcceptsReturn(object instance, object Value)
+        private void set_267_TextBox_AcceptsReturn(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.AcceptsReturn = (global::System.Boolean)Value;
         }
-        private object get_269_TextBox_CanPasteClipboardContent(object instance)
+        private object get_268_TextBox_CanPasteClipboardContent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.CanPasteClipboardContent;
         }
-        private object get_270_TextBox_CanRedo(object instance)
+        private object get_269_TextBox_CanRedo(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.CanRedo;
         }
-        private object get_271_TextBox_CanUndo(object instance)
+        private object get_270_TextBox_CanUndo(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.CanUndo;
         }
-        private object get_272_TextBox_CharacterCasing(object instance)
+        private object get_271_TextBox_CharacterCasing(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.CharacterCasing;
         }
-        private void set_272_TextBox_CharacterCasing(object instance, object Value)
+        private void set_271_TextBox_CharacterCasing(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.CharacterCasing = (global::Microsoft.UI.Xaml.Controls.CharacterCasing)Value;
         }
-        private object get_273_TextBox_Description(object instance)
+        private object get_272_TextBox_Description(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.Description;
         }
-        private void set_273_TextBox_Description(object instance, object Value)
+        private void set_272_TextBox_Description(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.Description = (global::System.Object)Value;
         }
-        private object get_274_TextBox_DesiredCandidateWindowAlignment(object instance)
+        private object get_273_TextBox_DesiredCandidateWindowAlignment(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.DesiredCandidateWindowAlignment;
         }
-        private void set_274_TextBox_DesiredCandidateWindowAlignment(object instance, object Value)
+        private void set_273_TextBox_DesiredCandidateWindowAlignment(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.DesiredCandidateWindowAlignment = (global::Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)Value;
         }
-        private object get_275_TextBox_HeaderTemplate(object instance)
+        private object get_274_TextBox_HeaderTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.HeaderTemplate;
         }
-        private void set_275_TextBox_HeaderTemplate(object instance, object Value)
+        private void set_274_TextBox_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_276_DataTemplate_Template(object instance)
+        private object get_275_DataTemplate_Template(object instance)
         {
             return null;
         }
-        private void set_276_DataTemplate_Template(object instance, object Value)
+        private void set_275_DataTemplate_Template(object instance, object Value)
         {
         }
-        private object get_277_TextBox_HorizontalTextAlignment(object instance)
+        private object get_276_TextBox_HorizontalTextAlignment(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.HorizontalTextAlignment;
         }
-        private void set_277_TextBox_HorizontalTextAlignment(object instance, object Value)
+        private void set_276_TextBox_HorizontalTextAlignment(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.HorizontalTextAlignment = (global::Microsoft.UI.Xaml.TextAlignment)Value;
         }
-        private object get_278_TextBox_InputScope(object instance)
+        private object get_277_TextBox_InputScope(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.InputScope;
         }
-        private void set_278_TextBox_InputScope(object instance, object Value)
+        private void set_277_TextBox_InputScope(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.InputScope = (global::Microsoft.UI.Xaml.Input.InputScope)Value;
         }
-        private object get_279_TextBox_IsColorFontEnabled(object instance)
+        private object get_278_TextBox_IsColorFontEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.IsColorFontEnabled;
         }
-        private void set_279_TextBox_IsColorFontEnabled(object instance, object Value)
+        private void set_278_TextBox_IsColorFontEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.IsColorFontEnabled = (global::System.Boolean)Value;
         }
-        private object get_280_TextBox_IsReadOnly(object instance)
+        private object get_279_TextBox_IsReadOnly(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.IsReadOnly;
         }
-        private void set_280_TextBox_IsReadOnly(object instance, object Value)
+        private void set_279_TextBox_IsReadOnly(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.IsReadOnly = (global::System.Boolean)Value;
         }
-        private object get_281_TextBox_IsSpellCheckEnabled(object instance)
+        private object get_280_TextBox_IsSpellCheckEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.IsSpellCheckEnabled;
         }
-        private void set_281_TextBox_IsSpellCheckEnabled(object instance, object Value)
+        private void set_280_TextBox_IsSpellCheckEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.IsSpellCheckEnabled = (global::System.Boolean)Value;
         }
-        private object get_282_TextBox_IsTextPredictionEnabled(object instance)
+        private object get_281_TextBox_IsTextPredictionEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.IsTextPredictionEnabled;
         }
-        private void set_282_TextBox_IsTextPredictionEnabled(object instance, object Value)
+        private void set_281_TextBox_IsTextPredictionEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.IsTextPredictionEnabled = (global::System.Boolean)Value;
         }
-        private object get_283_TextBox_MaxLength(object instance)
+        private object get_282_TextBox_MaxLength(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.MaxLength;
         }
-        private void set_283_TextBox_MaxLength(object instance, object Value)
+        private void set_282_TextBox_MaxLength(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.MaxLength = (global::System.Int32)Value;
         }
-        private object get_284_TextBox_PlaceholderForeground(object instance)
+        private object get_283_TextBox_PlaceholderForeground(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.PlaceholderForeground;
         }
-        private void set_284_TextBox_PlaceholderForeground(object instance, object Value)
+        private void set_283_TextBox_PlaceholderForeground(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_285_TextBox_PlaceholderText(object instance)
+        private object get_284_TextBox_PlaceholderText(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.PlaceholderText;
         }
-        private void set_285_TextBox_PlaceholderText(object instance, object Value)
+        private void set_284_TextBox_PlaceholderText(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.PlaceholderText = (global::System.String)Value;
         }
-        private object get_286_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
+        private object get_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.PreventKeyboardDisplayOnProgrammaticFocus;
         }
-        private void set_286_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
+        private void set_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.PreventKeyboardDisplayOnProgrammaticFocus = (global::System.Boolean)Value;
         }
-        private object get_287_TextBox_ProofingMenuFlyout(object instance)
+        private object get_286_TextBox_ProofingMenuFlyout(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.ProofingMenuFlyout;
         }
-        private object get_288_TextBox_SelectedText(object instance)
+        private object get_287_TextBox_SelectedText(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectedText;
         }
-        private void set_288_TextBox_SelectedText(object instance, object Value)
+        private void set_287_TextBox_SelectedText(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectedText = (global::System.String)Value;
         }
-        private object get_289_TextBox_SelectionFlyout(object instance)
+        private object get_288_TextBox_SelectionFlyout(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectionFlyout;
         }
-        private void set_289_TextBox_SelectionFlyout(object instance, object Value)
+        private void set_288_TextBox_SelectionFlyout(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectionFlyout = (global::Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)Value;
         }
-        private object get_290_TextBox_SelectionHighlightColor(object instance)
+        private object get_289_TextBox_SelectionHighlightColor(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectionHighlightColor;
         }
-        private void set_290_TextBox_SelectionHighlightColor(object instance, object Value)
+        private void set_289_TextBox_SelectionHighlightColor(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectionHighlightColor = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
         }
-        private object get_291_TextBox_SelectionHighlightColorWhenNotFocused(object instance)
+        private object get_290_TextBox_SelectionHighlightColorWhenNotFocused(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectionHighlightColorWhenNotFocused;
         }
-        private void set_291_TextBox_SelectionHighlightColorWhenNotFocused(object instance, object Value)
+        private void set_290_TextBox_SelectionHighlightColorWhenNotFocused(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectionHighlightColorWhenNotFocused = (global::Microsoft.UI.Xaml.Media.SolidColorBrush)Value;
         }
-        private object get_292_TextBox_SelectionLength(object instance)
+        private object get_291_TextBox_SelectionLength(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectionLength;
         }
-        private void set_292_TextBox_SelectionLength(object instance, object Value)
+        private void set_291_TextBox_SelectionLength(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectionLength = (global::System.Int32)Value;
         }
-        private object get_293_TextBox_SelectionStart(object instance)
+        private object get_292_TextBox_SelectionStart(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             return that.SelectionStart;
         }
-        private void set_293_TextBox_SelectionStart(object instance, object Value)
+        private void set_292_TextBox_SelectionStart(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
             that.SelectionStart = (global::System.Int32)Value;
+        }
+        private object get_293_TextBox_Text(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            return that.Text;
+        }
+        private void set_293_TextBox_Text(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.TextBox)instance;
+            that.Text = (global::System.String)Value;
         }
         private object get_294_TextBox_TextAlignment(object instance)
         {
@@ -5087,205 +5069,205 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.Header = (global::System.Object)Value;
         }
-        private object get_299_ComboBox_Text(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            return that.Text;
-        }
-        private void set_299_ComboBox_Text(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
-            that.Text = (global::System.String)Value;
-        }
-        private object get_300_ItemsControl_DisplayMemberPath(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            return that.DisplayMemberPath;
-        }
-        private void set_300_ItemsControl_DisplayMemberPath(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
-            that.DisplayMemberPath = (global::System.String)Value;
-        }
-        private object get_301_Selector_SelectedValuePath(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedValuePath;
-        }
-        private void set_301_Selector_SelectedValuePath(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedValuePath = (global::System.String)Value;
-        }
-        private object get_302_Selector_SelectedValue(object instance)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            return that.SelectedValue;
-        }
-        private void set_302_Selector_SelectedValue(object instance, object Value)
-        {
-            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
-            that.SelectedValue = (global::System.Object)Value;
-        }
-        private object get_303_ComboBox_Description(object instance)
+        private object get_299_ComboBox_Description(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.Description;
         }
-        private void set_303_ComboBox_Description(object instance, object Value)
+        private void set_299_ComboBox_Description(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.Description = (global::System.Object)Value;
         }
-        private object get_304_ComboBox_HeaderTemplate(object instance)
+        private object get_300_ComboBox_HeaderTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.HeaderTemplate;
         }
-        private void set_304_ComboBox_HeaderTemplate(object instance, object Value)
+        private void set_300_ComboBox_HeaderTemplate(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.HeaderTemplate = (global::Microsoft.UI.Xaml.DataTemplate)Value;
         }
-        private object get_305_ComboBox_IsDropDownOpen(object instance)
+        private object get_301_ComboBox_IsDropDownOpen(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.IsDropDownOpen;
         }
-        private void set_305_ComboBox_IsDropDownOpen(object instance, object Value)
+        private void set_301_ComboBox_IsDropDownOpen(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.IsDropDownOpen = (global::System.Boolean)Value;
         }
-        private object get_306_ComboBox_IsEditable(object instance)
+        private object get_302_ComboBox_IsEditable(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.IsEditable;
         }
-        private void set_306_ComboBox_IsEditable(object instance, object Value)
+        private void set_302_ComboBox_IsEditable(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.IsEditable = (global::System.Boolean)Value;
         }
-        private object get_307_ComboBox_IsSelectionBoxHighlighted(object instance)
+        private object get_303_ComboBox_IsSelectionBoxHighlighted(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.IsSelectionBoxHighlighted;
         }
-        private object get_308_ComboBox_IsTextSearchEnabled(object instance)
+        private object get_304_ComboBox_IsTextSearchEnabled(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.IsTextSearchEnabled;
         }
-        private void set_308_ComboBox_IsTextSearchEnabled(object instance, object Value)
+        private void set_304_ComboBox_IsTextSearchEnabled(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.IsTextSearchEnabled = (global::System.Boolean)Value;
         }
-        private object get_309_ComboBox_LightDismissOverlayMode(object instance)
+        private object get_305_ComboBox_LightDismissOverlayMode(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.LightDismissOverlayMode;
         }
-        private void set_309_ComboBox_LightDismissOverlayMode(object instance, object Value)
+        private void set_305_ComboBox_LightDismissOverlayMode(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.LightDismissOverlayMode = (global::Microsoft.UI.Xaml.Controls.LightDismissOverlayMode)Value;
         }
-        private object get_310_ComboBox_MaxDropDownHeight(object instance)
+        private object get_306_ComboBox_MaxDropDownHeight(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.MaxDropDownHeight;
         }
-        private void set_310_ComboBox_MaxDropDownHeight(object instance, object Value)
+        private void set_306_ComboBox_MaxDropDownHeight(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.MaxDropDownHeight = (global::System.Double)Value;
         }
-        private object get_311_ComboBox_PlaceholderForeground(object instance)
+        private object get_307_ComboBox_PlaceholderForeground(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.PlaceholderForeground;
         }
-        private void set_311_ComboBox_PlaceholderForeground(object instance, object Value)
+        private void set_307_ComboBox_PlaceholderForeground(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.PlaceholderForeground = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
-        private object get_312_ComboBox_PlaceholderText(object instance)
+        private object get_308_ComboBox_PlaceholderText(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.PlaceholderText;
         }
-        private void set_312_ComboBox_PlaceholderText(object instance, object Value)
+        private void set_308_ComboBox_PlaceholderText(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.PlaceholderText = (global::System.String)Value;
         }
-        private object get_313_ComboBox_SelectionBoxItem(object instance)
+        private object get_309_ComboBox_SelectionBoxItem(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.SelectionBoxItem;
         }
-        private object get_314_ComboBox_SelectionBoxItemTemplate(object instance)
+        private object get_310_ComboBox_SelectionBoxItemTemplate(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.SelectionBoxItemTemplate;
         }
-        private object get_315_ComboBox_SelectionChangedTrigger(object instance)
+        private object get_311_ComboBox_SelectionChangedTrigger(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.SelectionChangedTrigger;
         }
-        private void set_315_ComboBox_SelectionChangedTrigger(object instance, object Value)
+        private void set_311_ComboBox_SelectionChangedTrigger(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.SelectionChangedTrigger = (global::Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger)Value;
         }
-        private object get_316_ComboBox_TemplateSettings(object instance)
+        private object get_312_ComboBox_TemplateSettings(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.TemplateSettings;
         }
-        private object get_317_ComboBox_TextBoxStyle(object instance)
+        private object get_313_ComboBox_Text(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            return that.Text;
+        }
+        private void set_313_ComboBox_Text(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
+            that.Text = (global::System.String)Value;
+        }
+        private object get_314_ComboBox_TextBoxStyle(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             return that.TextBoxStyle;
         }
-        private void set_317_ComboBox_TextBoxStyle(object instance, object Value)
+        private void set_314_ComboBox_TextBoxStyle(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ComboBox)instance;
             that.TextBoxStyle = (global::Microsoft.UI.Xaml.Style)Value;
         }
-        private object get_318_Selector_IsSynchronizedWithCurrentItem(object instance)
+        private object get_315_Selector_IsSynchronizedWithCurrentItem(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             return that.IsSynchronizedWithCurrentItem;
         }
-        private void set_318_Selector_IsSynchronizedWithCurrentItem(object instance, object Value)
+        private void set_315_Selector_IsSynchronizedWithCurrentItem(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             that.IsSynchronizedWithCurrentItem = (global::System.Nullable<global::System.Boolean>)Value;
         }
-        private object get_319_Selector_SelectedIndex(object instance)
+        private object get_316_Selector_SelectedIndex(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             return that.SelectedIndex;
         }
-        private void set_319_Selector_SelectedIndex(object instance, object Value)
+        private void set_316_Selector_SelectedIndex(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             that.SelectedIndex = (global::System.Int32)Value;
         }
-        private object get_320_Selector_SelectedItem(object instance)
+        private object get_317_Selector_SelectedItem(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             return that.SelectedItem;
         }
-        private void set_320_Selector_SelectedItem(object instance, object Value)
+        private void set_317_Selector_SelectedItem(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
             that.SelectedItem = (global::System.Object)Value;
+        }
+        private object get_318_Selector_SelectedValue(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedValue;
+        }
+        private void set_318_Selector_SelectedValue(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedValue = (global::System.Object)Value;
+        }
+        private object get_319_Selector_SelectedValuePath(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            return that.SelectedValuePath;
+        }
+        private void set_319_Selector_SelectedValuePath(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.Primitives.Selector)instance;
+            that.SelectedValuePath = (global::System.String)Value;
+        }
+        private object get_320_ItemsControl_DisplayMemberPath(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            return that.DisplayMemberPath;
+        }
+        private void set_320_ItemsControl_DisplayMemberPath(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Controls.ItemsControl)instance;
+            that.DisplayMemberPath = (global::System.String)Value;
         }
         private object get_321_ItemsControl_GroupStyle(object instance)
         {
@@ -5788,11 +5770,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
         {
             var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
             that.SingleSelectionFollowsFocus = (global::System.Boolean)Value;
-        }
-        private object get_376_MainWindow_ViewModel(object instance)
-        {
-            var that = (global::AuthentiKitTrimCalibration.MainWindow)instance;
-            return that.ViewModel;
         }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -7608,190 +7585,190 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.Getter = get_266_TextBox_Header;
                 xamlMember.Setter = set_266_TextBox_Header;
                 break;
-            case "Microsoft.UI.Xaml.Controls.TextBox.Text":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_267_TextBox_Text;
-                xamlMember.Setter = set_267_TextBox_Text;
-                break;
             case "Microsoft.UI.Xaml.Controls.TextBox.AcceptsReturn":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "AcceptsReturn", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_268_TextBox_AcceptsReturn;
-                xamlMember.Setter = set_268_TextBox_AcceptsReturn;
+                xamlMember.Getter = get_267_TextBox_AcceptsReturn;
+                xamlMember.Setter = set_267_TextBox_AcceptsReturn;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.CanPasteClipboardContent":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanPasteClipboardContent", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_269_TextBox_CanPasteClipboardContent;
+                xamlMember.Getter = get_268_TextBox_CanPasteClipboardContent;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.CanRedo":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanRedo", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_270_TextBox_CanRedo;
+                xamlMember.Getter = get_269_TextBox_CanRedo;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.CanUndo":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CanUndo", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_271_TextBox_CanUndo;
+                xamlMember.Getter = get_270_TextBox_CanUndo;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.CharacterCasing":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "CharacterCasing", "Microsoft.UI.Xaml.Controls.CharacterCasing");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_272_TextBox_CharacterCasing;
-                xamlMember.Setter = set_272_TextBox_CharacterCasing;
+                xamlMember.Getter = get_271_TextBox_CharacterCasing;
+                xamlMember.Setter = set_271_TextBox_CharacterCasing;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.Description":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_273_TextBox_Description;
-                xamlMember.Setter = set_273_TextBox_Description;
+                xamlMember.Getter = get_272_TextBox_Description;
+                xamlMember.Setter = set_272_TextBox_Description;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.DesiredCandidateWindowAlignment":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DesiredCandidateWindowAlignment", "Microsoft.UI.Xaml.Controls.CandidateWindowAlignment");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_274_TextBox_DesiredCandidateWindowAlignment;
-                xamlMember.Setter = set_274_TextBox_DesiredCandidateWindowAlignment;
+                xamlMember.Getter = get_273_TextBox_DesiredCandidateWindowAlignment;
+                xamlMember.Setter = set_273_TextBox_DesiredCandidateWindowAlignment;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.HeaderTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_275_TextBox_HeaderTemplate;
-                xamlMember.Setter = set_275_TextBox_HeaderTemplate;
+                xamlMember.Getter = get_274_TextBox_HeaderTemplate;
+                xamlMember.Setter = set_274_TextBox_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.DataTemplate.Template":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.DataTemplate");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Template", "Object");
-                xamlMember.Getter = get_276_DataTemplate_Template;
-                xamlMember.Setter = set_276_DataTemplate_Template;
+                xamlMember.Getter = get_275_DataTemplate_Template;
+                xamlMember.Setter = set_275_DataTemplate_Template;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.HorizontalTextAlignment":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HorizontalTextAlignment", "Microsoft.UI.Xaml.TextAlignment");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_277_TextBox_HorizontalTextAlignment;
-                xamlMember.Setter = set_277_TextBox_HorizontalTextAlignment;
+                xamlMember.Getter = get_276_TextBox_HorizontalTextAlignment;
+                xamlMember.Setter = set_276_TextBox_HorizontalTextAlignment;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.InputScope":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "InputScope", "Microsoft.UI.Xaml.Input.InputScope");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_278_TextBox_InputScope;
-                xamlMember.Setter = set_278_TextBox_InputScope;
+                xamlMember.Getter = get_277_TextBox_InputScope;
+                xamlMember.Setter = set_277_TextBox_InputScope;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.IsColorFontEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsColorFontEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_279_TextBox_IsColorFontEnabled;
-                xamlMember.Setter = set_279_TextBox_IsColorFontEnabled;
+                xamlMember.Getter = get_278_TextBox_IsColorFontEnabled;
+                xamlMember.Setter = set_278_TextBox_IsColorFontEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.IsReadOnly":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_280_TextBox_IsReadOnly;
-                xamlMember.Setter = set_280_TextBox_IsReadOnly;
+                xamlMember.Getter = get_279_TextBox_IsReadOnly;
+                xamlMember.Setter = set_279_TextBox_IsReadOnly;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.IsSpellCheckEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSpellCheckEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_281_TextBox_IsSpellCheckEnabled;
-                xamlMember.Setter = set_281_TextBox_IsSpellCheckEnabled;
+                xamlMember.Getter = get_280_TextBox_IsSpellCheckEnabled;
+                xamlMember.Setter = set_280_TextBox_IsSpellCheckEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.IsTextPredictionEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextPredictionEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_282_TextBox_IsTextPredictionEnabled;
-                xamlMember.Setter = set_282_TextBox_IsTextPredictionEnabled;
+                xamlMember.Getter = get_281_TextBox_IsTextPredictionEnabled;
+                xamlMember.Setter = set_281_TextBox_IsTextPredictionEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.MaxLength":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxLength", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_283_TextBox_MaxLength;
-                xamlMember.Setter = set_283_TextBox_MaxLength;
+                xamlMember.Getter = get_282_TextBox_MaxLength;
+                xamlMember.Setter = set_282_TextBox_MaxLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderForeground":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_284_TextBox_PlaceholderForeground;
-                xamlMember.Setter = set_284_TextBox_PlaceholderForeground;
+                xamlMember.Getter = get_283_TextBox_PlaceholderForeground;
+                xamlMember.Setter = set_283_TextBox_PlaceholderForeground;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.PlaceholderText":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_285_TextBox_PlaceholderText;
-                xamlMember.Setter = set_285_TextBox_PlaceholderText;
+                xamlMember.Getter = get_284_TextBox_PlaceholderText;
+                xamlMember.Setter = set_284_TextBox_PlaceholderText;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.PreventKeyboardDisplayOnProgrammaticFocus":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PreventKeyboardDisplayOnProgrammaticFocus", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_286_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
-                xamlMember.Setter = set_286_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                xamlMember.Getter = get_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
+                xamlMember.Setter = set_285_TextBox_PreventKeyboardDisplayOnProgrammaticFocus;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.ProofingMenuFlyout":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ProofingMenuFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_287_TextBox_ProofingMenuFlyout;
+                xamlMember.Getter = get_286_TextBox_ProofingMenuFlyout;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectedText":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedText", "String");
-                xamlMember.Getter = get_288_TextBox_SelectedText;
-                xamlMember.Setter = set_288_TextBox_SelectedText;
+                xamlMember.Getter = get_287_TextBox_SelectedText;
+                xamlMember.Setter = set_287_TextBox_SelectedText;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectionFlyout":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionFlyout", "Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_289_TextBox_SelectionFlyout;
-                xamlMember.Setter = set_289_TextBox_SelectionFlyout;
+                xamlMember.Getter = get_288_TextBox_SelectionFlyout;
+                xamlMember.Setter = set_288_TextBox_SelectionFlyout;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColor":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColor", "Microsoft.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_290_TextBox_SelectionHighlightColor;
-                xamlMember.Setter = set_290_TextBox_SelectionHighlightColor;
+                xamlMember.Getter = get_289_TextBox_SelectionHighlightColor;
+                xamlMember.Setter = set_289_TextBox_SelectionHighlightColor;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectionHighlightColorWhenNotFocused":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionHighlightColorWhenNotFocused", "Microsoft.UI.Xaml.Media.SolidColorBrush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_291_TextBox_SelectionHighlightColorWhenNotFocused;
-                xamlMember.Setter = set_291_TextBox_SelectionHighlightColorWhenNotFocused;
+                xamlMember.Getter = get_290_TextBox_SelectionHighlightColorWhenNotFocused;
+                xamlMember.Setter = set_290_TextBox_SelectionHighlightColorWhenNotFocused;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectionLength":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionLength", "Int32");
-                xamlMember.Getter = get_292_TextBox_SelectionLength;
-                xamlMember.Setter = set_292_TextBox_SelectionLength;
+                xamlMember.Getter = get_291_TextBox_SelectionLength;
+                xamlMember.Setter = set_291_TextBox_SelectionLength;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.SelectionStart":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionStart", "Int32");
-                xamlMember.Getter = get_293_TextBox_SelectionStart;
-                xamlMember.Setter = set_293_TextBox_SelectionStart;
+                xamlMember.Getter = get_292_TextBox_SelectionStart;
+                xamlMember.Setter = set_292_TextBox_SelectionStart;
+                break;
+            case "Microsoft.UI.Xaml.Controls.TextBox.Text":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_293_TextBox_Text;
+                xamlMember.Setter = set_293_TextBox_Text;
                 break;
             case "Microsoft.UI.Xaml.Controls.TextBox.TextAlignment":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TextBox");
@@ -7827,155 +7804,155 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.Getter = get_298_ComboBox_Header;
                 xamlMember.Setter = set_298_ComboBox_Header;
                 break;
-            case "Microsoft.UI.Xaml.Controls.ComboBox.Text":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_299_ComboBox_Text;
-                xamlMember.Setter = set_299_ComboBox_Text;
-                break;
-            case "Microsoft.UI.Xaml.Controls.ItemsControl.DisplayMemberPath":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DisplayMemberPath", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_300_ItemsControl_DisplayMemberPath;
-                xamlMember.Setter = set_300_ItemsControl_DisplayMemberPath;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValuePath":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValuePath", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_301_Selector_SelectedValuePath;
-                xamlMember.Setter = set_301_Selector_SelectedValuePath;
-                break;
-            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValue":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValue", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_302_Selector_SelectedValue;
-                xamlMember.Setter = set_302_Selector_SelectedValue;
-                break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.Description":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Description", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_303_ComboBox_Description;
-                xamlMember.Setter = set_303_ComboBox_Description;
+                xamlMember.Getter = get_299_ComboBox_Description;
+                xamlMember.Setter = set_299_ComboBox_Description;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.HeaderTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "HeaderTemplate", "Microsoft.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_304_ComboBox_HeaderTemplate;
-                xamlMember.Setter = set_304_ComboBox_HeaderTemplate;
+                xamlMember.Getter = get_300_ComboBox_HeaderTemplate;
+                xamlMember.Setter = set_300_ComboBox_HeaderTemplate;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.IsDropDownOpen":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsDropDownOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_305_ComboBox_IsDropDownOpen;
-                xamlMember.Setter = set_305_ComboBox_IsDropDownOpen;
+                xamlMember.Getter = get_301_ComboBox_IsDropDownOpen;
+                xamlMember.Setter = set_301_ComboBox_IsDropDownOpen;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.IsEditable":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsEditable", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_306_ComboBox_IsEditable;
-                xamlMember.Setter = set_306_ComboBox_IsEditable;
+                xamlMember.Getter = get_302_ComboBox_IsEditable;
+                xamlMember.Setter = set_302_ComboBox_IsEditable;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.IsSelectionBoxHighlighted":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSelectionBoxHighlighted", "Boolean");
-                xamlMember.Getter = get_307_ComboBox_IsSelectionBoxHighlighted;
+                xamlMember.Getter = get_303_ComboBox_IsSelectionBoxHighlighted;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.IsTextSearchEnabled":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsTextSearchEnabled", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_308_ComboBox_IsTextSearchEnabled;
-                xamlMember.Setter = set_308_ComboBox_IsTextSearchEnabled;
+                xamlMember.Getter = get_304_ComboBox_IsTextSearchEnabled;
+                xamlMember.Setter = set_304_ComboBox_IsTextSearchEnabled;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.LightDismissOverlayMode":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "LightDismissOverlayMode", "Microsoft.UI.Xaml.Controls.LightDismissOverlayMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_309_ComboBox_LightDismissOverlayMode;
-                xamlMember.Setter = set_309_ComboBox_LightDismissOverlayMode;
+                xamlMember.Getter = get_305_ComboBox_LightDismissOverlayMode;
+                xamlMember.Setter = set_305_ComboBox_LightDismissOverlayMode;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.MaxDropDownHeight":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MaxDropDownHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_310_ComboBox_MaxDropDownHeight;
-                xamlMember.Setter = set_310_ComboBox_MaxDropDownHeight;
+                xamlMember.Getter = get_306_ComboBox_MaxDropDownHeight;
+                xamlMember.Setter = set_306_ComboBox_MaxDropDownHeight;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderForeground":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderForeground", "Microsoft.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_311_ComboBox_PlaceholderForeground;
-                xamlMember.Setter = set_311_ComboBox_PlaceholderForeground;
+                xamlMember.Getter = get_307_ComboBox_PlaceholderForeground;
+                xamlMember.Setter = set_307_ComboBox_PlaceholderForeground;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.PlaceholderText":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "PlaceholderText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_312_ComboBox_PlaceholderText;
-                xamlMember.Setter = set_312_ComboBox_PlaceholderText;
+                xamlMember.Getter = get_308_ComboBox_PlaceholderText;
+                xamlMember.Setter = set_308_ComboBox_PlaceholderText;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItem":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItem", "Object");
-                xamlMember.Getter = get_313_ComboBox_SelectionBoxItem;
+                xamlMember.Getter = get_309_ComboBox_SelectionBoxItem;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionBoxItemTemplate":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionBoxItemTemplate", "Microsoft.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_314_ComboBox_SelectionBoxItemTemplate;
+                xamlMember.Getter = get_310_ComboBox_SelectionBoxItemTemplate;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.SelectionChangedTrigger":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectionChangedTrigger", "Microsoft.UI.Xaml.Controls.ComboBoxSelectionChangedTrigger");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_315_ComboBox_SelectionChangedTrigger;
-                xamlMember.Setter = set_315_ComboBox_SelectionChangedTrigger;
+                xamlMember.Getter = get_311_ComboBox_SelectionChangedTrigger;
+                xamlMember.Setter = set_311_ComboBox_SelectionChangedTrigger;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.TemplateSettings":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TemplateSettings", "Microsoft.UI.Xaml.Controls.Primitives.ComboBoxTemplateSettings");
-                xamlMember.Getter = get_316_ComboBox_TemplateSettings;
+                xamlMember.Getter = get_312_ComboBox_TemplateSettings;
                 xamlMember.SetIsReadOnly();
+                break;
+            case "Microsoft.UI.Xaml.Controls.ComboBox.Text":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "Text", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_313_ComboBox_Text;
+                xamlMember.Setter = set_313_ComboBox_Text;
                 break;
             case "Microsoft.UI.Xaml.Controls.ComboBox.TextBoxStyle":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ComboBox");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "TextBoxStyle", "Microsoft.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_317_ComboBox_TextBoxStyle;
-                xamlMember.Setter = set_317_ComboBox_TextBoxStyle;
+                xamlMember.Getter = get_314_ComboBox_TextBoxStyle;
+                xamlMember.Setter = set_314_ComboBox_TextBoxStyle;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "IsSynchronizedWithCurrentItem", "System.Nullable`1<Boolean>");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_318_Selector_IsSynchronizedWithCurrentItem;
-                xamlMember.Setter = set_318_Selector_IsSynchronizedWithCurrentItem;
+                xamlMember.Getter = get_315_Selector_IsSynchronizedWithCurrentItem;
+                xamlMember.Setter = set_315_Selector_IsSynchronizedWithCurrentItem;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedIndex":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_319_Selector_SelectedIndex;
-                xamlMember.Setter = set_319_Selector_SelectedIndex;
+                xamlMember.Getter = get_316_Selector_SelectedIndex;
+                xamlMember.Setter = set_316_Selector_SelectedIndex;
                 break;
             case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedItem":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
                 xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_320_Selector_SelectedItem;
-                xamlMember.Setter = set_320_Selector_SelectedItem;
+                xamlMember.Getter = get_317_Selector_SelectedItem;
+                xamlMember.Setter = set_317_Selector_SelectedItem;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValue":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValue", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_318_Selector_SelectedValue;
+                xamlMember.Setter = set_318_Selector_SelectedValue;
+                break;
+            case "Microsoft.UI.Xaml.Controls.Primitives.Selector.SelectedValuePath":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Primitives.Selector");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "SelectedValuePath", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_319_Selector_SelectedValuePath;
+                xamlMember.Setter = set_319_Selector_SelectedValuePath;
+                break;
+            case "Microsoft.UI.Xaml.Controls.ItemsControl.DisplayMemberPath":
+                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "DisplayMemberPath", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_320_ItemsControl_DisplayMemberPath;
+                xamlMember.Setter = set_320_ItemsControl_DisplayMemberPath;
                 break;
             case "Microsoft.UI.Xaml.Controls.ItemsControl.GroupStyle":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ItemsControl");
@@ -8347,12 +8324,6 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_375_ListViewBase_SingleSelectionFollowsFocus;
                 xamlMember.Setter = set_375_ListViewBase_SingleSelectionFollowsFocus;
-                break;
-            case "AuthentiKitTrimCalibration.MainWindow.ViewModel":
-                userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AuthentiKitTrimCalibration.MainWindow");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ViewModel", "AuthentiKitTrimCalibration.ViewModel.MainViewModel");
-                xamlMember.Getter = get_376_MainWindow_ViewModel;
-                xamlMember.SetIsReadOnly();
                 break;
             }
             return xamlMember;

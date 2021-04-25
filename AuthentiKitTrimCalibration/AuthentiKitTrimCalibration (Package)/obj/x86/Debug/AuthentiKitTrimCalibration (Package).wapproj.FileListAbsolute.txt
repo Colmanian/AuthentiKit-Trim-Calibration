@@ -43,3 +43,5 @@ E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\Authent
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\MappingManager.Common.pdb
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.pdb
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration (Package)\bin\x86\Debug\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess.pdb
