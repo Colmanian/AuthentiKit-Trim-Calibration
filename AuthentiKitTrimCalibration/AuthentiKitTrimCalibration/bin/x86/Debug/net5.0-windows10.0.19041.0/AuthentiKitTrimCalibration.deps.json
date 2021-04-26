@@ -83,6 +83,14 @@
         "runtime": {
           "MappingManager.Common.dll": {}
         }
+      },
+      "vJoyInterfaceWrap/2.2.0.0": {
+        "runtime": {
+          "vJoyInterfaceWrap.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
       }
     }
   },
@@ -151,6 +159,11 @@
     },
     "MappingManager.Common/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "vJoyInterfaceWrap/2.2.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

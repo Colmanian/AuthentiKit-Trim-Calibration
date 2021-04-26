@@ -1,8 +1,8 @@
 ﻿using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using vJoyInterfaceWrap;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -59,6 +59,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public IEnumerable<Device> LoadDevices()
         {
+            Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
+            var vJoystick = new vJoy();
+            if (!vJoystick.vJoyEnabled())
+            {
+                Debug.WriteLine("vJoy driver not enabled: Failed Getting vJoy attributes.\n");
+            }
+            else
+            {
+                Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", vJoystick.GetvJoyManufacturerString(), vJoystick.GetvJoyProductString(), vJoystick.GetvJoySerialNumberString());
+            }
+
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
             return new List<Device>
             {
