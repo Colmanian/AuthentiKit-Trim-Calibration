@@ -67,11 +67,11 @@ C:\Users\colma\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.15\lib\M
 C:\Users\colma\.nuget\packages\microsoft.projectreunion.foundation\0.5.5\lib\net5.0-windows\Microsoft.ApplicationModel.Resources.Projection.dll
 C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\net5.0-windows10.0.18362.0\Microsoft.WinUI.dll
 C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll
-E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.DataAccess.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\Mapping.Common\bin\Debug\net5.0\MappingManager.Common.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\vJoyInterfaceWrap.dll
-E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.DataAccess.pdb
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.pdb
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.pdb
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\Mapping.Common\bin\Debug\net5.0\MappingManager.Common.pdb
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AppxContent\Microsoft.Internal.FrameworkUdk.dll

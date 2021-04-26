@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HWowNG7kKUOwOXOrimzWHkOTah0D+0y++mKhLQmXm/7XWpjCJ4274yXNcq2O3tVpD7GU7qRgb2SHAz5sNqhmxg==",
+  "dgSpecHash": "87GtXvkqbSY9VjyGSZ5YztSzPoatO1rqvk5RI4jdRG/c9Q72LcypqtCY3CrPQmUYk4BHq1nqR+gsYdlUUKoIBg==",
   "success": true,
-  "projectFilePath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.DataAccess.csproj",
+  "projectFilePath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "AuthentiKitTrimCalibration/1.0.0": {
         "dependencies": {
-          "AuthentiKitTrimCalibration.DataAccess": "1.0.0",
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "AuthentiKitTrimCalibration.ViewModel": "1.0.0",
           "MappingManager.Common": "1.0.0",
           "Microsoft.ProjectReunion": "0.5.5",
@@ -63,12 +63,12 @@
           }
         }
       },
-      "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+      "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
         "dependencies": {
           "MappingManager.Common": "1.0.0"
         },
         "runtime": {
-          "AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         }
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
@@ -147,7 +147,7 @@
       "path": "microsoft.windows.cswinrt/1.2.4",
       "hashPath": "microsoft.windows.cswinrt.1.2.4.nupkg.sha512"
     },
-    "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+    "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

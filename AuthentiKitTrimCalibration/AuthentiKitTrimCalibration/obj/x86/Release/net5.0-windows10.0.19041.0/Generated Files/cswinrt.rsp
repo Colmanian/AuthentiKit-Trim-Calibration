@@ -1,0 +1,7 @@
+-target net5.0-windows10.0.19041.0
+-input 10.0.19041.0
+-input "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.Foundation.winmd" "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.Graphics.winmd" "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.System.winmd" "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.UI.Text.winmd" "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.UI.winmd" "C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\uap10.0\Microsoft.Web.WebView2.Core.winmd"
+-output "E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Release\net5.0-windows10.0.19041.0\Generated Files"
+
+-exclude Windows
+-exclude Microsoft

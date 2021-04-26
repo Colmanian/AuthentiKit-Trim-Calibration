@@ -33,9 +33,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.DataAccess.csproj",
-      "projectName": "AuthentiKitTrimCalibration.DataAccess",
-      "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.DataAccess.csproj",
+      "projectUniqueName": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj",
+      "projectName": "AuthentiKitTrimCalibration.MappingProcessor",
+      "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj",
       "packagesPath": "C:\\Users\\colma\\.nuget\\packages\\",
       "outputPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\obj\\",
       "projectStyle": "PackageReference",

@@ -78,17 +78,17 @@
           }
         }
       },
-      "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+      "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         }
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
@@ -182,17 +182,17 @@
           "build/Microsoft.Windows.CsWinRT.targets": {}
         }
       },
-      "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+      "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         }
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
@@ -289,17 +289,17 @@
           "build/Microsoft.Windows.CsWinRT.targets": {}
         }
       },
-      "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+      "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         }
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
@@ -396,17 +396,17 @@
           "build/Microsoft.Windows.CsWinRT.targets": {}
         }
       },
-      "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+      "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         },
         "runtime": {
-          "bin/placeholder/AuthentiKitTrimCalibration.DataAccess.dll": {}
+          "bin/placeholder/AuthentiKitTrimCalibration.MappingProcessor.dll": {}
         }
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
@@ -740,10 +740,10 @@
         "runtimes/win-x86/native/WinRT.Host.dll"
       ]
     },
-    "AuthentiKitTrimCalibration.DataAccess/1.0.0": {
+    "AuthentiKitTrimCalibration.MappingProcessor/1.0.0": {
       "type": "project",
-      "path": "../AuthentiKitTrimCalibration.DataAccess/AuthentiKitTrimCalibration.DataAccess.csproj",
-      "msbuildProject": "../AuthentiKitTrimCalibration.DataAccess/AuthentiKitTrimCalibration.DataAccess.csproj"
+      "path": "../AuthentiKitTrimCalibration.DataAccess/AuthentiKitTrimCalibration.MappingProcessor.csproj",
+      "msbuildProject": "../AuthentiKitTrimCalibration.DataAccess/AuthentiKitTrimCalibration.MappingProcessor.csproj"
     },
     "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
       "type": "project",
@@ -758,7 +758,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows10.0.19041": [
-      "AuthentiKitTrimCalibration.DataAccess >= 1.0.0",
+      "AuthentiKitTrimCalibration.MappingProcessor >= 1.0.0",
       "AuthentiKitTrimCalibration.ViewModel >= 1.0.0",
       "MappingManager.Common >= 1.0.0",
       "Microsoft.ProjectReunion >= 0.5.5",
@@ -800,8 +800,8 @@
         "net5.0-windows10.0.19041": {
           "targetAlias": "net5.0-windows10.0.19041.0",
           "projectReferences": {
-            "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.DataAccess.csproj": {
-              "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.DataAccess.csproj"
+            "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj": {
+              "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj"
             },
             "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.ViewModel\\AuthentiKitTrimCalibration.ViewModel.csproj": {
               "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.ViewModel\\AuthentiKitTrimCalibration.ViewModel.csproj"

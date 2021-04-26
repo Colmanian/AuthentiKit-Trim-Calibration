@@ -7,11 +7,11 @@ Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "AuthentiKitTrimCalibration 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration", "AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.csproj", "{F7AE0455-9A6C-4A73-BE30-A413F63FE9DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthentiKitTrimCalibration.ViewModel", "AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj", "{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.ViewModel", "AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj", "{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingManager.Common", "Mapping.Common\MappingManager.Common.csproj", "{F8334BA6-910B-4F6B-98E7-91CBB0FA644F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.DataAccess", "AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.DataAccess.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.MappingProcessor", "AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.MappingProcessor.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
