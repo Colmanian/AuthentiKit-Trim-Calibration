@@ -48,16 +48,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 var joystick = new Joystick(directInput, inputGuid);
                 joystick.Properties.BufferSize = 128;
                 joystick.Acquire();
+                bool button11 = false;
+                Stopwatch stopWatch = new();
+                stopWatch.Start();
                 while (true)
                 {
-                    Thread.Sleep(5);
-                    joystick.Poll();
-                    var data = joystick.GetBufferedData();
-                    foreach (var state in data)
+                    Thread.Sleep(10);
+                    if (button11 != joystick.GetCurrentState().Buttons[11])
                     {
-                        Debug.WriteLine("- - - - - -");
-                        Debug.WriteLine(state.Offset);
-                        Debug.WriteLine(state.Value);
+                        button11 = joystick.GetCurrentState().Buttons[11];
+                        Debug.WriteLine("Button 11 now {0} at {1}ms", button11, stopWatch.ElapsedMilliseconds);
                     }
                 }
             }
