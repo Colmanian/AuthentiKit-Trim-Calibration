@@ -67,6 +67,8 @@ C:\Users\colma\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.15\lib\M
 C:\Users\colma\.nuget\packages\microsoft.projectreunion.foundation\0.5.5\lib\net5.0-windows\Microsoft.ApplicationModel.Resources.Projection.dll
 C:\Users\colma\.nuget\packages\microsoft.projectreunion.winui\0.5.5\lib\net5.0-windows10.0.18362.0\Microsoft.WinUI.dll
 C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll
+C:\Users\colma\.nuget\packages\sharpdx\4.2.0\lib\netstandard1.1\SharpDX.dll
+C:\Users\colma\.nuget\packages\sharpdx.directinput\4.2.0\lib\netstandard1.3\SharpDX.DirectInput.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\Mapping.Common\bin\Debug\net5.0\MappingManager.Common.dll

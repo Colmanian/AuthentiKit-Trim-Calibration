@@ -16,7 +16,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
 
         public ObservableCollection<MappingViewModel> Mappings { get; } = new();
-        public ObservableCollection<Device> Devices { get; } = new();
+        public ObservableCollection<InputDevice> Devices { get; } = new();
         public MappingViewModel SelectedMapping
         {
             get => _selectedMapping;

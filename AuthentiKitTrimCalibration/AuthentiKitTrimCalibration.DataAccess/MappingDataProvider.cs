@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using vJoyInterfaceWrap;
+using SharpDX.DirectInput;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -15,7 +16,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             try
             {
-
                 Debug.WriteLine("I've started mapping");
                 Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
                 var vJoystick = new vJoy();
@@ -103,13 +103,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
         }
 
-        public IEnumerable<Device> LoadDevices()
+        public IEnumerable<InputDevice> LoadDevices()
         {
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
-            return new List<Device>
+            return new List<InputDevice>
             {
-                new Device{ Id = 1, Name = "Dummy Device A" },
-                new Device{ Id = 2, Name = "Dummy Device B" },
+                new InputDevice{ Id = 1, Name = "Dummy Device A" },
+                new InputDevice{ Id = 2, Name = "Dummy Device B" },
             };
         }
     }

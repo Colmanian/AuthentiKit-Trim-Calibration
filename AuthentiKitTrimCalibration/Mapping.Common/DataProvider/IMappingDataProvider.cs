@@ -9,6 +9,6 @@ namespace MappingManager.Common.DataProvider
 
     void ApplyMapping(Mapping mapping);
 
-    IEnumerable<Device> LoadDevices();
+    IEnumerable<InputDevice> LoadDevices();
   }
 }

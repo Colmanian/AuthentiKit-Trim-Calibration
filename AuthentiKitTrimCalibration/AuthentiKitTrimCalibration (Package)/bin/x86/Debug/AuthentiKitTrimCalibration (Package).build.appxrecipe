@@ -279,6 +279,12 @@
     <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\microsoft.windows.cswinrt\1.2.4\lib\net5.0\WinRT.Runtime.dll">
       <PackagePath>AuthentiKitTrimCalibration\WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\sharpdx\4.2.0\lib\netstandard1.1\SharpDX.dll">
+      <PackagePath>AuthentiKitTrimCalibration\SharpDX.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\colma\.nuget\packages\sharpdx.directinput\4.2.0\lib\netstandard1.3\SharpDX.DirectInput.dll">
+      <PackagePath>AuthentiKitTrimCalibration\SharpDX.DirectInput.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.dll">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.MappingProcessor.dll</PackagePath>
     </AppxPackagedFile>

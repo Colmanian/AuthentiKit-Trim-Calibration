@@ -1,6 +1,6 @@
 ﻿namespace MappingManager.Common.Model
 {
-  public class Device
+  public class InputDevice
   {
     public int Id { get; set; }
 
