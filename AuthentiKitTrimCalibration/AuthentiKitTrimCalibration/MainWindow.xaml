@@ -26,7 +26,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Content="Load Mappings" Click="{x:Bind ViewModel.Load}" Margin="10"/>
+            
             <ListView Grid.Row="1"
                       ItemsSource="{x:Bind ViewModel.Mappings, Mode=OneWay}"
                       SelectedItem="{x:Bind ViewModel.SelectedMapping, Mode=TwoWay}"

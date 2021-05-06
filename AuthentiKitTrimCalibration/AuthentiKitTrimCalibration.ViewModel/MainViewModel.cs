@@ -1,6 +1,7 @@
 ﻿using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -9,6 +10,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         public IMappingDataProvider _mappingDataProvider { get; }
         private MappingViewModel _selectedMapping;
+        private bool _active;
 
         public MainViewModel(IMappingDataProvider mappingDataProvider)
         {
@@ -31,6 +33,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
 
         public bool IsMappingSelected => _selectedMapping != null;
+
+        public void Run()
+        {
+            Debug.WriteLine("Run() NOT IMPLMENTED");
+        }
 
         public void Load()
         {

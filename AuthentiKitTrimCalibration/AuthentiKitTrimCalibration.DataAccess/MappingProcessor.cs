@@ -9,7 +9,7 @@ using SharpDX.DirectInput;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    public class MappingDataProvider : IMappingDataProvider
+    public class MappingProcessor : IMappingDataProvider
     {
         private Thread _mappingThread;
 

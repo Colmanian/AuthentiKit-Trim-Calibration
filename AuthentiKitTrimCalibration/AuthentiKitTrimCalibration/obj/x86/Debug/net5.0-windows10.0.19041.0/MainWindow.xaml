@@ -26,8 +26,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:ConnectionId='10' Content="Load Mappings"                                 Margin="10"/>
-            <ListView x:ConnectionId='11' Grid.Row="1"
+            
+            <ListView x:ConnectionId='10' Grid.Row="1"
                                                                             
                                                                                     
                       DisplayMemberPath="Name"

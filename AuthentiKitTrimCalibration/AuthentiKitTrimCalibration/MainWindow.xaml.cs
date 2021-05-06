@@ -28,7 +28,7 @@ namespace AuthentiKitTrimCalibration
         public MainWindow()
         {
             this.InitializeComponent();
-            ViewModel = new MainViewModel(new MappingDataProvider());
+            ViewModel = new MainViewModel(new MappingProcessor());
             this.Activated += MainWindow_Activated;
         }
 
@@ -38,6 +38,7 @@ namespace AuthentiKitTrimCalibration
             {
                 ViewModel.Load();
             }
+            ViewModel.Run();
         }
 
         public MainViewModel ViewModel { get; }
