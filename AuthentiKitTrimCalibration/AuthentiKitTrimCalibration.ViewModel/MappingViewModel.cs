@@ -8,9 +8,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MappingViewModel : ViewModelBase
     {
         private readonly Mapping _mapping;
-        private readonly IMappingDataProvider _mappingDataProvider;
+        private readonly IMappingProcessor _mappingDataProvider;
 
-        public MappingViewModel(Mapping mapping, IMappingDataProvider mappingDataProvider)
+        public bool CanApply => !string.IsNullOrEmpty(Name);
+
+        public MappingViewModel(Mapping mapping, IMappingProcessor mappingDataProvider)
         {
             _mapping = mapping;
             this._mappingDataProvider = mappingDataProvider;
@@ -31,27 +33,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
 
 
-        public string Input
+        public int InputId
         {
-            get { return _mapping.Input; }
+            get { return _mapping.InputId; }
             set
             {
-                if (_mapping.Input != value)
+                if (_mapping.InputId != value)
                 {
-                    _mapping.Input = value;
+                    _mapping.InputId = value;
                     RaisePropertyChanged();
                 }
             }
         }
 
-        public string Output
+        public int OutputId
         {
-            get { return _mapping.Output; }
+            get { return _mapping.OutputId; }
             set
             {
-                if (_mapping.Output != value)
+                if (_mapping.OutputId != value)
                 {
-                    _mapping.Output = value;
+                    _mapping.OutputId = value;
                     RaisePropertyChanged();
                 }
             }
@@ -105,8 +107,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-
-        public bool CanApply => !string.IsNullOrEmpty(Name);
         public void Apply()
         {
             _mappingDataProvider.ApplyMapping(_mapping);

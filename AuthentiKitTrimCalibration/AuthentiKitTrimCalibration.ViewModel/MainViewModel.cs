@@ -1,29 +1,26 @@
 ﻿using MappingManager.Common.DataProvider;
-using MappingManager.Common.Model;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
 
-        public IMappingDataProvider _mappingDataProvider { get; }
+        public IMappingProcessor _mappingDataProvider { get; }
         private MappingViewModel _selectedMapping;
-        private bool _active;
 
-        public MainViewModel(IMappingDataProvider mappingDataProvider)
+        public MainViewModel(IMappingProcessor mappingDataProvider)
         {
             _mappingDataProvider = mappingDataProvider;
         }
 
         public ObservableCollection<MappingViewModel> Mappings { get; } = new();
-        public ObservableCollection<InputDevice> Devices { get; } = new();
         public MappingViewModel SelectedMapping
         {
             get => _selectedMapping;
-            set {
-                if(_selectedMapping != value)
+            set
+            {
+                if (_selectedMapping != value)
                 {
                     _selectedMapping = value;
                     RaisePropertyChanged();
@@ -36,24 +33,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         public void Run()
         {
-            Debug.WriteLine("Run() NOT IMPLMENTED");
+            _mappingDataProvider.Run();
         }
 
         public void Load()
         {
             var mappings = _mappingDataProvider.LoadMappings();
-            var devices = _mappingDataProvider.LoadDevices();
 
             Mappings.Clear();
             foreach (var mapping in mappings)
             {
                 Mappings.Add(new MappingViewModel(mapping, _mappingDataProvider));
-            }
-
-            Devices.Clear();
-            foreach (var device in devices)
-            {
-                Devices.Add(device);
             }
         }
     }
