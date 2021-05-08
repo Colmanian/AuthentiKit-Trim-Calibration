@@ -29,6 +29,33 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
+        public ObservableCollection<string> Inputs
+        {
+            get
+            {
+                ObservableCollection<string> inputs = new();
+                var channels = _mappingDataProvider.GetInputChannels();
+                foreach (var channel in channels)
+                {
+                    inputs.Add(channel.DisplayText);
+                }
+                return inputs;
+            }
+        }
+        public ObservableCollection<string> Outputs
+        {
+            get
+            {
+                ObservableCollection<string> outputs = new();
+                var channels = _mappingDataProvider.GetOutputChannels();
+                foreach (var channel in channels)
+                {
+                    outputs.Add(channel.DisplayText);
+                }
+                return outputs;
+            }
+        }
+
         public bool IsMappingSelected => _selectedMapping != null;
 
         public void Run()

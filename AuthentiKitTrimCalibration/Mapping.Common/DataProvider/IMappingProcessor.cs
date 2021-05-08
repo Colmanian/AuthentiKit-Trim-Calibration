@@ -13,6 +13,6 @@ namespace MappingManager.Common.DataProvider
 
         IEnumerable<InputChannel> GetInputChannels();
 
-        IEnumerable<OutputChannel> GetOutputs();
+        IEnumerable<OutputChannel> GetOutputChannels();
     }
 }

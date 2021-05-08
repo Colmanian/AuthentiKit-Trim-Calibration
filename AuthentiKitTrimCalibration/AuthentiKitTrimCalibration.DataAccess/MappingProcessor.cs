@@ -142,7 +142,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
         }
 
-        public IEnumerable<OutputChannel> GetOutputs()
+        public IEnumerable<OutputChannel> GetOutputChannels()
         {
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
             return new List<OutputChannel>

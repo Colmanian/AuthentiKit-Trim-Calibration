@@ -48,8 +48,8 @@
 
             <TextBox Grid.Row="0" Header="Name" Margin="10"
                      Text="{x:Bind ViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <ComboBox Grid.Row="1" Header="Input" Margin="10" HorizontalAlignment="Stretch"/>
-            <ComboBox Grid.Row="2" Header="Output" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="1" Header="Input" ItemsSource="{x:Bind ViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="2" Header="Output" ItemsSource="{x:Bind ViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
             <TextBlock Grid.Row="3" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
             <StackPanel Grid.Row="4" Margin="10">
                 <TextBox Header="Button Multipler" Margin="10"
