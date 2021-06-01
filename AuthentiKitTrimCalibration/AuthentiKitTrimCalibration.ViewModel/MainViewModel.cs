@@ -5,13 +5,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        public bool IsAnyMappingSelected => _selectedMapping != null;
 
-        public IMappingProcessor _mappingDataProvider { get; }
+        private IMappingProcessor _mappingProcessor { get; }
         private MappingViewModel _selectedMapping;
 
         public MainViewModel(IMappingProcessor mappingDataProvider)
         {
-            _mappingDataProvider = mappingDataProvider;
+            _mappingProcessor = mappingDataProvider;
         }
 
         public ObservableCollection<MappingViewModel> Mappings { get; } = new();
@@ -24,7 +25,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _selectedMapping = value;
                     RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(IsMappingSelected));
+                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
                 }
             }
         }
@@ -34,7 +35,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get
             {
                 ObservableCollection<string> inputs = new();
-                var channels = _mappingDataProvider.GetInputChannels();
+                var channels = _mappingProcessor.GetInputChannels();
                 foreach (var channel in channels)
                 {
                     inputs.Add(channel.DisplayText);
@@ -47,7 +48,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get
             {
                 ObservableCollection<string> outputs = new();
-                var channels = _mappingDataProvider.GetOutputChannels();
+                var channels = _mappingProcessor.GetOutputChannels();
                 foreach (var channel in channels)
                 {
                     outputs.Add(channel.DisplayText);
@@ -56,21 +57,21 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public bool IsMappingSelected => _selectedMapping != null;
+
 
         public void Run()
         {
-            _mappingDataProvider.Run();
+            _mappingProcessor.Run();
         }
 
         public void Load()
         {
-            var mappings = _mappingDataProvider.LoadMappings();
+            var mappings = _mappingProcessor.LoadMappings();
 
             Mappings.Clear();
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, _mappingDataProvider));
+                Mappings.Add(new MappingViewModel(mapping, _mappingProcessor));
             }
         }
     }

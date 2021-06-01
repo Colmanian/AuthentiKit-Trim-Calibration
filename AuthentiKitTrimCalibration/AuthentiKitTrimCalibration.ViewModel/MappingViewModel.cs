@@ -8,14 +8,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MappingViewModel : ViewModelBase
     {
         private readonly Mapping _mapping;
-        private readonly IMappingProcessor _mappingDataProvider;
+        private readonly IMappingProcessor _mappingProcessor;
 
         public bool CanApply => !string.IsNullOrEmpty(Name);
 
         public MappingViewModel(Mapping mapping, IMappingProcessor mappingDataProvider)
         {
             _mapping = mapping;
-            this._mappingDataProvider = mappingDataProvider;
+            this._mappingProcessor = mappingDataProvider;
         }
 
         public string Name
@@ -109,7 +109,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void Apply()
         {
-            _mappingDataProvider.ApplyMapping(_mapping);
+            _mappingProcessor.ApplyMapping(_mapping);
         }
     }
 }

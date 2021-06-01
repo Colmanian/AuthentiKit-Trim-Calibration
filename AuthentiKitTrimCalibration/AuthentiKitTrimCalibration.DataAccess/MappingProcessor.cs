@@ -13,7 +13,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
     {
         private Thread _mappingThread;
 
-        public static void MappingProcess()
+        private static void MappingProcess()
         {
             try
             {

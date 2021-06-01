@@ -36,7 +36,7 @@
 
         <!--Main Area-->
         <Grid x:ConnectionId='2' Grid.Row="1" Grid.Column="1"
-                                                                            >
+                                                                               >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
