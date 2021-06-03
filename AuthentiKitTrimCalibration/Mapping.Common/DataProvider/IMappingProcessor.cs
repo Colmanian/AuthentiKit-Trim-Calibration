@@ -14,5 +14,6 @@ namespace MappingManager.Common.DataProvider
         IEnumerable<InputChannel> GetInputChannels();
 
         IEnumerable<OutputChannel> GetOutputChannels();
+        Mapping GetDefaultMapping();
     }
 }

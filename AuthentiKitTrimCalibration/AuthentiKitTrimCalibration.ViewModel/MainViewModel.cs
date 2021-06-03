@@ -9,10 +9,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         private IMappingProcessor _mappingProcessor { get; }
         private MappingViewModel _selectedMapping;
+        private readonly int MAX_MAPPINGS = 20;
 
         public MainViewModel(IMappingProcessor mappingDataProvider)
         {
             _mappingProcessor = mappingDataProvider;
+            CanAddMapping = true;
         }
 
         public ObservableCollection<MappingViewModel> Mappings { get; } = new();
@@ -57,7 +59,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-
+        public bool CanAddMapping { get; private set; }
 
         public void Run()
         {
@@ -73,6 +75,18 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 Mappings.Add(new MappingViewModel(mapping, _mappingProcessor));
             }
+        }
+        public void NewMapping()
+        {
+            if (Mappings.Count < MAX_MAPPINGS)
+            {
+                Mappings.Add(new MappingViewModel(_mappingProcessor.GetDefaultMapping(), _mappingProcessor));
+            }                
+
+            if (Mappings.Count >= MAX_MAPPINGS)
+            {
+                CanAddMapping = false;
+            }          
         }
     }
 }

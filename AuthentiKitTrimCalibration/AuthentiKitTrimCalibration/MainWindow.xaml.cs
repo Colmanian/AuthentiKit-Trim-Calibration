@@ -28,19 +28,19 @@ namespace AuthentiKitTrimCalibration
         public MainWindow()
         {
             this.InitializeComponent();
-            ViewModel = new MainViewModel(new MappingProcessor());
+            MainViewModel = new MainViewModel(new MappingProcessor());
             this.Activated += MainWindow_Activated;
         }
 
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
-            if (ViewModel.Mappings.Count == 0)
+            if (MainViewModel.Mappings.Count == 0)
             {
-                ViewModel.Load();
+                MainViewModel.Load();
             }
-            ViewModel.Run();
+            MainViewModel.Run();
         }
 
-        public MainViewModel ViewModel { get; }
+        public MainViewModel MainViewModel { get; }
     }
 }

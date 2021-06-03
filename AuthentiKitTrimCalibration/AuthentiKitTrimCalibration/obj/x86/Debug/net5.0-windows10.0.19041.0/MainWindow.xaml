@@ -26,17 +26,20 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
             <ListView x:ConnectionId='10' Grid.Row="1"
-                                                                            
-                                                                                    
+                                                                                
+                                                                                        
                       DisplayMemberPath="Name"
                       />
+
+
+            <Button x:ConnectionId='11' Grid.Row="2" Content="New Mapping" Margin="10 10 10 30"                                                               VerticalAlignment="Bottom"                                          />
+
         </Grid>
 
         <!--Main Area-->
         <Grid x:ConnectionId='2' Grid.Row="1" Grid.Column="1"
-                                                                               >
+                                                                                   >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -47,21 +50,21 @@
             </Grid.RowDefinitions>
 
             <TextBox x:ConnectionId='3' Grid.Row="0" Header="Name" Margin="10"
-                                                                                                                     />
-            <ComboBox x:ConnectionId='4' Grid.Row="1" Header="Input"                                         Margin="10" HorizontalAlignment="Stretch"/>
-            <ComboBox x:ConnectionId='5' Grid.Row="2" Header="Output"                                          Margin="10" HorizontalAlignment="Stretch"/>
+                                                                                                                         />
+            <ComboBox x:ConnectionId='4' Grid.Row="1" Header="Input"                                             Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox x:ConnectionId='5' Grid.Row="2" Header="Output"                                              Margin="10" HorizontalAlignment="Stretch"/>
             <TextBlock Grid.Row="3" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
             <StackPanel Grid.Row="4" Margin="10">
                 <TextBox x:ConnectionId='7' Header="Button Multipler" Margin="10"
-                                                                                                                               />
+                                                                                                                                   />
                 <TextBox x:ConnectionId='8' Header="'Start Holding' Threshold (ms)" Margin="10"
-                                                                                                                                       />
+                                                                                                                                           />
                 <TextBox x:ConnectionId='9' Header="'Stop Holding' Threshold (ms)" Margin="10"
-                                                                                                                                      />
+                                                                                                                                          />
             </StackPanel>
             <Button x:ConnectionId='6' Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                                                                                        
-                                                                    />
+                                                                                            
+                                                                        />
         </Grid>
 
     </Grid>

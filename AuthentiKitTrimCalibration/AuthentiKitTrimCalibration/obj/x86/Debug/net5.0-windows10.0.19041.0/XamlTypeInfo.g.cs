@@ -2346,7 +2346,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 userType = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
                 userType.Activator = Activate_156_MainWindow;
                 userType.SetContentPropertyName("Microsoft.UI.Xaml.Window.Content");
-                userType.AddMemberName("ViewModel");
+                userType.AddMemberName("MainViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -5789,10 +5789,10 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.ListViewBase)instance;
             that.SingleSelectionFollowsFocus = (global::System.Boolean)Value;
         }
-        private object get_376_MainWindow_ViewModel(object instance)
+        private object get_376_MainWindow_MainViewModel(object instance)
         {
             var that = (global::AuthentiKitTrimCalibration.MainWindow)instance;
-            return that.ViewModel;
+            return that.MainViewModel;
         }
 
         private global::Microsoft.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -8348,10 +8348,10 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
                 xamlMember.Getter = get_375_ListViewBase_SingleSelectionFollowsFocus;
                 xamlMember.Setter = set_375_ListViewBase_SingleSelectionFollowsFocus;
                 break;
-            case "AuthentiKitTrimCalibration.MainWindow.ViewModel":
+            case "AuthentiKitTrimCalibration.MainWindow.MainViewModel":
                 userType = (global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlUserType)GetXamlTypeByName("AuthentiKitTrimCalibration.MainWindow");
-                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "ViewModel", "AuthentiKitTrimCalibration.ViewModel.MainViewModel");
-                xamlMember.Getter = get_376_MainWindow_ViewModel;
+                xamlMember = new global::AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo.XamlMember(this, "MainViewModel", "AuthentiKitTrimCalibration.ViewModel.MainViewModel");
+                xamlMember.Getter = get_376_MainWindow_MainViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

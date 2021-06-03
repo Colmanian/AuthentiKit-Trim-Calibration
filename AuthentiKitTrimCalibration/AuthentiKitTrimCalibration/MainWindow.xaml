@@ -26,17 +26,20 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
             <ListView Grid.Row="1"
-                      ItemsSource="{x:Bind ViewModel.Mappings, Mode=OneWay}"
-                      SelectedItem="{x:Bind ViewModel.SelectedMapping, Mode=TwoWay}"
+                      ItemsSource="{x:Bind MainViewModel.Mappings, Mode=OneWay}"
+                      SelectedItem="{x:Bind MainViewModel.SelectedMapping, Mode=TwoWay}"
                       DisplayMemberPath="Name"
                       />
+
+
+            <Button Grid.Row="2" Content="New Mapping" Margin="10 10 10 30" IsEnabled="{x:Bind MainViewModel.CanAddMapping, Mode=OneWay}" VerticalAlignment="Bottom" Click="{x:Bind MainViewModel.NewMapping}"/>
+
         </Grid>
 
         <!--Main Area-->
         <Grid Grid.Row="1" Grid.Column="1"
-              Visibility="{x:Bind ViewModel.IsAnyMappingSelected, Mode=OneWay}">
+              Visibility="{x:Bind MainViewModel.IsAnyMappingSelected, Mode=OneWay}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -47,21 +50,21 @@
             </Grid.RowDefinitions>
 
             <TextBox Grid.Row="0" Header="Name" Margin="10"
-                     Text="{x:Bind ViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <ComboBox Grid.Row="1" Header="Input" ItemsSource="{x:Bind ViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
-            <ComboBox Grid.Row="2" Header="Output" ItemsSource="{x:Bind ViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
+                     Text="{x:Bind MainViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <ComboBox Grid.Row="1" Header="Input" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="2" Header="Output" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
             <TextBlock Grid.Row="3" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
             <StackPanel Grid.Row="4" Margin="10">
                 <TextBox Header="Button Multipler" Margin="10"
-                         Text="{x:Bind ViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                         Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Header="'Start Holding' Threshold (ms)" Margin="10"
-                         Text="{x:Bind ViewModel.SelectedMapping.HoldThresholdStart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                         Text="{x:Bind MainViewModel.SelectedMapping.HoldThresholdStart, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Header="'Stop Holding' Threshold (ms)" Margin="10"
-                         Text="{x:Bind ViewModel.SelectedMapping.HoldThresholdStop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                         Text="{x:Bind MainViewModel.SelectedMapping.HoldThresholdStop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             <Button Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                    IsEnabled="{x:Bind ViewModel.SelectedMapping.CanApply, Mode=OneWay}"
-                    Click="{x:Bind ViewModel.SelectedMapping.Apply}"/>
+                    IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
+                    Click="{x:Bind MainViewModel.SelectedMapping.Apply}"/>
         </Grid>
 
     </Grid>

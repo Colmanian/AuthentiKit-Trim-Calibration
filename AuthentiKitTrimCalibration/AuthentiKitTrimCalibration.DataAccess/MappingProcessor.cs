@@ -152,5 +152,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 20, DisplayText = "vJoy 1: Axis 1" },
             };
         }
+
+        Mapping IMappingProcessor.GetDefaultMapping()
+        {
+            return new Mapping {Name = "New Mapping"};
+        }
     }
 }
