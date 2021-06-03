@@ -81,12 +81,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
             if (Mappings.Count < MAX_MAPPINGS)
             {
                 Mappings.Add(new MappingViewModel(_mappingProcessor.GetDefaultMapping(), _mappingProcessor));
-            }                
+            }
 
             if (Mappings.Count >= MAX_MAPPINGS)
             {
                 CanAddMapping = false;
-            }          
+            }
+        }
+        public void RemoveMapping()
+        {
+            //TODO Kill mapping process
+            Mappings.Remove(_selectedMapping);
         }
     }
 }

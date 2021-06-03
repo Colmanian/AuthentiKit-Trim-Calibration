@@ -49,6 +49,11 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
             <TextBox Grid.Row="0" Header="Name" Margin="10"
                      Text="{x:Bind MainViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <ComboBox Grid.Row="1" Header="Input" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
@@ -65,6 +70,10 @@
             <Button Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
                     Click="{x:Bind MainViewModel.SelectedMapping.Apply}"/>
+            
+            <Button Grid.Row="5" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                    IsEnabled="{x:Bind MainViewModel.IsAnyMappingSelected, Mode=OneWay}"
+                    Click="{x:Bind MainViewModel.RemoveMapping}"/>
         </Grid>
 
     </Grid>

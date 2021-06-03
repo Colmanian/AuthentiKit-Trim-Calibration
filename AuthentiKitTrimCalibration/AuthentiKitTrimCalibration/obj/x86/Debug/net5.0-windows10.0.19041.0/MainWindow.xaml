@@ -26,14 +26,14 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <ListView x:ConnectionId='10' Grid.Row="1"
+            <ListView x:ConnectionId='11' Grid.Row="1"
                                                                                 
                                                                                         
                       DisplayMemberPath="Name"
                       />
 
 
-            <Button x:ConnectionId='11' Grid.Row="2" Content="New Mapping" Margin="10 10 10 30"                                                               VerticalAlignment="Bottom"                                          />
+            <Button x:ConnectionId='12' Grid.Row="2" Content="New Mapping" Margin="10 10 10 30"                                                               VerticalAlignment="Bottom"                                          />
 
         </Grid>
 
@@ -49,22 +49,31 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
             <TextBox x:ConnectionId='3' Grid.Row="0" Header="Name" Margin="10"
                                                                                                                          />
             <ComboBox x:ConnectionId='4' Grid.Row="1" Header="Input"                                             Margin="10" HorizontalAlignment="Stretch"/>
             <ComboBox x:ConnectionId='5' Grid.Row="2" Header="Output"                                              Margin="10" HorizontalAlignment="Stretch"/>
             <TextBlock Grid.Row="3" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
             <StackPanel Grid.Row="4" Margin="10">
-                <TextBox x:ConnectionId='7' Header="Button Multipler" Margin="10"
+                <TextBox x:ConnectionId='8' Header="Button Multipler" Margin="10"
                                                                                                                                    />
-                <TextBox x:ConnectionId='8' Header="'Start Holding' Threshold (ms)" Margin="10"
+                <TextBox x:ConnectionId='9' Header="'Start Holding' Threshold (ms)" Margin="10"
                                                                                                                                            />
-                <TextBox x:ConnectionId='9' Header="'Stop Holding' Threshold (ms)" Margin="10"
+                <TextBox x:ConnectionId='10' Header="'Stop Holding' Threshold (ms)" Margin="10"
                                                                                                                                           />
             </StackPanel>
             <Button x:ConnectionId='6' Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                                                                                             
                                                                         />
+            
+            <Button x:ConnectionId='7' Grid.Row="5" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                                                                                        
+                                                                />
         </Grid>
 
     </Grid>
