@@ -763,6 +763,7 @@
       },
       "AuthentiKitTrimCalibration.ViewModel/1.0.0": {
         "dependencies": {
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "MappingManager.Common": "1.0.0"
         },
         "runtime": {

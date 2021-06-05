@@ -1,6 +1,8 @@
-﻿using MappingManager.Common.DataProvider;
+﻿using AuthentiKitTrimCalibration.DataAccess;
+using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 namespace AuthentiKitTrimCalibration.ViewModel
@@ -8,21 +10,22 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MappingViewModel : ViewModelBase
     {
 
-        private readonly Mapping _mapping;
-        private readonly IMappingProcessor _mappingProcessor;
+        private MappingDTO _mapping;
+        private IMappingProcessor _mappingProcessor;
 
-        public MappingViewModel(Mapping mapping, IMappingProcessor mappingDataProvider)
+        public MappingViewModel(MappingDTO mapping)
         {
             _mapping = mapping;
-            this._mappingProcessor = mappingDataProvider;
+            _mappingProcessor = new MappingProcessor();
+            ApplyMapping();
         }
         public void ApplyMapping()
         {
             _mappingProcessor.ApplyMapping(_mapping);
         }
-        public void KillMapping()
+        public void Stop()
         {
-            _mappingProcessor.Stop(_mapping);
+            _mappingProcessor.Stop();
         }
         public bool CanApply => !string.IsNullOrEmpty(Name);
 
@@ -40,7 +43,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-
         public int InputId
         {
             get { return _mapping.InputId; }
@@ -53,7 +55,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-
         public int OutputId
         {
             get { return _mapping.OutputId; }

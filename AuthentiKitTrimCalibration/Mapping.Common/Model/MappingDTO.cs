@@ -2,7 +2,7 @@
 
 namespace MappingManager.Common.Model
 {
-    public class Mapping
+    public class MappingDTO
     {
         public string Name { get; set; }
         public int InputId { get; set; }

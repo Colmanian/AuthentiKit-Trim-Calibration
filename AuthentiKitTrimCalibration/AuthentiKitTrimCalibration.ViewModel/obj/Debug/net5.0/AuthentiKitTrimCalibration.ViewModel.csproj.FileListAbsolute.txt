@@ -13,3 +13,7 @@ E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\Authent
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\obj\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\obj\Debug\net5.0\ref\AuthentiKitTrimCalibration.ViewModel.dll
 E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\obj\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.pdb
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\vJoyInterface.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\vJoyInterfaceWrap.dll
+E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.pdb

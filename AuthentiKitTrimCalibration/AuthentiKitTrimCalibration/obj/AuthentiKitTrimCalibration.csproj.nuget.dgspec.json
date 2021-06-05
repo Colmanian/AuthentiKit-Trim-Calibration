@@ -100,6 +100,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj": {
+                "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\AuthentiKitTrimCalibration.DataAccess\\AuthentiKitTrimCalibration.MappingProcessor.csproj"
+              },
               "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\Mapping.Common\\MappingManager.Common.csproj": {
                 "projectPath": "E:\\3D Printing\\Authentikit Trim Calibration\\AuthentiKit-Trim-Calibration\\AuthentiKitTrimCalibration\\Mapping.Common\\MappingManager.Common.csproj"
               }

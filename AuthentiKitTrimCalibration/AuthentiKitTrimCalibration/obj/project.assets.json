@@ -1309,6 +1309,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
@@ -2920,6 +2921,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
@@ -4534,6 +4536,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "MappingManager.Common": "1.0.0"
         },
         "compile": {
@@ -6148,6 +6151,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "AuthentiKitTrimCalibration.MappingProcessor": "1.0.0",
           "MappingManager.Common": "1.0.0"
         },
         "compile": {

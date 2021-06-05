@@ -12,11 +12,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
     public class MappingProcessor : IMappingProcessor
     {
         private Thread _mappingThread;
-        private bool Running;
+        private MappingDTO _mapping;
 
         private void MappingProcess()
         {
-            Running = true;
             try
             {
                 Debug.WriteLine("*** ATTEMPTING TO USE DirectX ***");
@@ -53,7 +52,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 bool button11 = false;
                 Stopwatch stopWatch = new();
                 stopWatch.Start();
-                while (Running)
+                while (true)
                 {
                     Thread.Sleep(10);
                     if (button11 != joystick.GetCurrentState().Buttons[11])
@@ -63,101 +62,31 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     }
                 }
             }
-            catch (ThreadAbortException e)
+            catch (ThreadInterruptedException e)
             {
-                Debug.WriteLine("Thread Abort Exception: {0}", e);
+                Debug.WriteLine("Thread Interrupted Exception: {0}", _mapping.Name, e);
+                //TODO Clean Up
             }
         }
 
-        public IEnumerable<Mapping> LoadMappings()
+        public void ApplyMapping(MappingDTO mapping)
         {
-            return new List<Mapping>
+            _mapping = mapping;
+            Stop();
+            var mappingThreadRef = new ThreadStart(MappingProcess);
+            _mappingThread = new Thread(mappingThreadRef);
+            _mappingThread.Start();
+        }
+
+        public void Stop()
+        {
+            if (_mappingThread != null)
             {
-                new Mapping
-                {
-                  Name = "Elevator Trim (Up)",
-                  InputId = 1,
-                  OutputId = 2,
-                  Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
-                },new Mapping
-                {
-                  Name = "Elevator Trim (Down)",
-                  InputId = 2,
-                  OutputId = 1,
-                  Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
-                },new Mapping
-                {
-                  Name = "Rudder Trim (Left)",
-                  InputId = 1,
-                  OutputId = 2,
-                  Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
-                },new Mapping
-                {
-                  Name = "Rudder Trim (Right)",
-                  InputId = 3,
-                  OutputId = 2,
-                  Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
-                }
-            };
-        }
-
-        public void ApplyMapping(Mapping mapping)
-        {
-            Debug.WriteLine($"APPLY IS UNIMPLEMTNED: {mapping.Name}");
-        }
-
-        public void Stop(Mapping mapping)
-        {
-            Debug.WriteLine($"Stopping Mapping: {mapping.Name}");
-            Running = false;
-        }
-
-        public IEnumerable<InputChannel> GetInputChannels()
-        {
-            Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
-            return new List<InputChannel>
-            {
-                new InputChannel{ Id = 0, Device = "Dummy Device A", Button = 1, DisplayText = "Device A: Button 1" },
-                new InputChannel{ Id = 1, Device = "Dummy Device A", Button = 2, DisplayText = "Device A: Button 2" },
-                new InputChannel{ Id = 2, Device = "Dummy Device B", Button = 1, DisplayText = "Device B: Button 1" },
-            };
-        }
-
-        public void Run()
-        {
-            if (_mappingThread == null)
-            {
-                var mappingThreadRef = new ThreadStart(MappingProcess);
-                _mappingThread = new Thread(mappingThreadRef);
-                _mappingThread.Start();
+                Debug.WriteLine($"Stopping Mapping: {_mapping.Name}");
+                _mappingThread.Interrupt();
+                _mappingThread = null;
             }
         }
-    public IEnumerable<OutputChannel> GetOutputChannels()
-        {
-            Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
-            return new List<OutputChannel>
-            {
-                new OutputChannel{ Id = 0, VJoyDevice = 1, VJoyItem = 1, DisplayText = "vJoy 1: Button 1" },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 2, DisplayText = "vJoy 1: Button 2" },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 20, DisplayText = "vJoy 1: Axis 1" },
-            };
-        }
 
-        Mapping IMappingProcessor.GetDefaultMapping()
-        {
-            return new Mapping {Name = "New Mapping"};
-        }
     }
 }

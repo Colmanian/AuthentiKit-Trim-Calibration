@@ -619,6 +619,7 @@ namespace AuthentiKitTrimCalibration.AuthentiKitTrimCalibration_XamlTypeInfo
         private object Activate_147_ListView() { return new global::Microsoft.UI.Xaml.Controls.ListView(); }
         private object Activate_154_SemanticZoom() { return new global::Microsoft.UI.Xaml.Controls.SemanticZoom(); }
         private object Activate_156_MainWindow() { return new global::AuthentiKitTrimCalibration.MainWindow(); }
+        private object Activate_157_MainViewModel() { return new global::AuthentiKitTrimCalibration.ViewModel.MainViewModel(); }
         private object Activate_158_ViewModelBase() { return new global::AuthentiKitTrimCalibration.ViewModel.ViewModelBase(); }
         private void MapAdd_2_ResourceDictionary(object instance, object key, object item)
         {

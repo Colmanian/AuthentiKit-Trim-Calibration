@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.MappingProcessor.csproj" />
     <ProjectReference Include="..\Mapping.Common\MappingManager.Common.csproj" />
   </ItemGroup>
 

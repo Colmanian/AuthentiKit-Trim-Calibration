@@ -1,47 +1,43 @@
-﻿using MappingManager.Common.DataProvider;
+﻿using AuthentiKitTrimCalibration.DataAccess;
+using MappingManager.Common.DataProvider;
 using System.Collections.ObjectModel;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private IMappingProcessor _mappingProcessor;
+        private IMainDataHandler _mainDataHandler;
         private MappingViewModel _selectedMapping;
         private readonly int MAX_MAPPINGS = 20;
-        public MainViewModel(IMappingProcessor mappingDataProvider)
+        public MainViewModel()
         {
-            _mappingProcessor = mappingDataProvider;
+            _mainDataHandler = new MainDataHandler();
             CanAddMapping = true;
-        }
-
-        public void Run()
-        {
-            _mappingProcessor.Run();
         }
 
         public void Stop()
         {
             foreach (var mapping in Mappings)
             {
-                mapping.KillMapping();
+                mapping.Stop();
             }
         }
 
-        public void Load()
+        public void LoadMappings()
         {
-            var mappings = _mappingProcessor.LoadMappings();
-
+            Stop();
             Mappings.Clear();
+            var mappings = _mainDataHandler.LoadMappings();
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, _mappingProcessor));
+                Mappings.Add(new MappingViewModel(mapping));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mappingProcessor.GetDefaultMapping(), _mappingProcessor));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping()));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
@@ -51,11 +47,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void RemoveMapping()
         {
-            _selectedMapping.KillMapping();
+            _selectedMapping.Stop();
             Mappings.Remove(_selectedMapping);
         }
 
-        public ObservableCollection<MappingViewModel> Mappings { get; } = new();
+        public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public MappingViewModel SelectedMapping
         {
             get => _selectedMapping;
@@ -71,12 +67,13 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public bool IsAnyMappingSelected => _selectedMapping != null;
         public bool CanAddMapping { get; private set; }
+
         public ObservableCollection<string> Inputs
         {
             get
             {
                 ObservableCollection<string> inputs = new();
-                var channels = _mappingProcessor.GetInputChannels();
+                var channels = HardwareInfo.GetInputChannels();
                 foreach (var channel in channels)
                 {
                     inputs.Add(channel.DisplayText);
@@ -89,7 +86,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get
             {
                 ObservableCollection<string> outputs = new();
-                var channels = _mappingProcessor.GetOutputChannels();
+                var channels = HardwareInfo.GetOutputChannels();
                 foreach (var channel in channels)
                 {
                     outputs.Add(channel.DisplayText);
@@ -97,6 +94,5 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 return outputs;
             }
         }
-
     }
 }
