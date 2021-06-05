@@ -22,40 +22,34 @@ namespace AuthentiKitTrimCalibration.DataAccess
             {
                 new MappingDTO
                 {
-                  Name = "Elevator Trim (Up)",
-                  InputId = 1,
-                  OutputId = 2,
+                  Name = "Elevator Trim Axis",
+                  Type = MappingDTO.MappingType.Axis,
+                  Enabled = false,
+                  InputID_A = 0,
+                  InputID_B = 0,
+                  OutputId = 0,
                   Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
-                },new MappingDTO
-                {
-                  Name = "Elevator Trim (Down)",
-                  InputId = 2,
-                  OutputId = 1,
-                  Multiplier = 3,
-                  HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
                 {
                   Name = "Rudder Trim (Left)",
-                  InputId = 1,
-                  OutputId = 2,
+                  Type = MappingDTO.MappingType.Button,
+                  Enabled = false,
+                  InputID_A = 0,
+                  OutputId = 0,
                   Multiplier = 3,
                   HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
+                  HoldThresholdStop = 200
                 },new MappingDTO
                 {
                   Name = "Rudder Trim (Right)",
-                  InputId = 3,
-                  OutputId = 2,
+                  Type = MappingDTO.MappingType.Button,
+                  Enabled = false,
+                  InputID_A = 0,
+                  OutputId = 0,
                   Multiplier = 3,
                   HoldThresholdStart = 200,
-                  HoldThresholdStop = 200,
-                  ResetCommand = "CTRL+T"
+                  HoldThresholdStop = 200
                 }
             };
         }

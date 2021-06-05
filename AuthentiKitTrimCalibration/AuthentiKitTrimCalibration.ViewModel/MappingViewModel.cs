@@ -43,14 +43,26 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public int InputId
+        public int InputID_A
         {
-            get { return _mapping.InputId; }
+            get { return _mapping.InputID_A; }
             set
             {
-                if (_mapping.InputId != value)
+                if (_mapping.InputID_A != value)
                 {
-                    _mapping.InputId = value;
+                    _mapping.InputID_A = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+        public int InputID_B
+        {
+            get { return _mapping.InputID_B; }
+            set
+            {
+                if (_mapping.InputID_B != value)
+                {
+                    _mapping.InputID_B = value;
                     RaisePropertyChanged();
                 }
             }

@@ -2,15 +2,26 @@
 
 namespace MappingManager.Common.Model
 {
-    public class MappingDTO
-    {
-        public string Name { get; set; }
-        public int InputId { get; set; }
-        public int OutputId { get; set; }
-        public int Multiplier { get; set; }
-        public int HoldThresholdStart { get; set; }
-        public int HoldThresholdStop { get; set; }
-        public string ResetCommand { get; set; }
-        public bool Enabled { get; set; }
+    //TODO Refactor to use polymorphism 
+    public class MappingDTO 
+    { 
+        public enum MappingType
+        {
+            Button,
+            Axis
+        }
+
+        public string Name { get; set; } // Both
+        public MappingType Type { get; set; } // Both
+        public bool Enabled { get; set; } // Both
+        public int OutputId { get; set; } // Both
+        public int Multiplier { get; set; } // Both
+        public int InputID_A { get; set; } // Both
+        public int InputID_B { get; set; } // Axis Only
+        public string ResetCommand { get; set; } // Axis Only
+        public int HoldThresholdStart { get; set; } // Button Only
+        public int HoldThresholdStop { get; set; } // Button Only
+
+
     }
 }
