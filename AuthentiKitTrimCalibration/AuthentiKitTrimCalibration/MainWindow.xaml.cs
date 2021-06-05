@@ -30,6 +30,7 @@ namespace AuthentiKitTrimCalibration
             this.InitializeComponent();
             MainViewModel = new MainViewModel(new MappingProcessor());
             this.Activated += MainWindow_Activated;
+            this.Closed += MainWindow_Closed;
         }
 
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
@@ -39,6 +40,11 @@ namespace AuthentiKitTrimCalibration
                 MainViewModel.Load();
             }
             MainViewModel.Run();
+        }
+
+        private void MainWindow_Closed(object sender, WindowEventArgs args)
+        {
+            MainViewModel.Stop();
         }
 
         public MainViewModel MainViewModel { get; }

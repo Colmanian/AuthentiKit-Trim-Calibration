@@ -30,7 +30,7 @@
     <AppXManifest Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration %28Package%29\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-06-05T09:38:22.412</Modified>
+      <Modified>2021-06-05T10:25:25.458</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,15 +44,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-06-05T09:38:20.956</Modified>
+      <Modified>2021-06-05T10:25:24.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\MainWindow.xbf">
       <PackagePath>MainWindow.xbf</PackagePath>
-      <Modified>2021-06-05T09:38:20.956</Modified>
+      <Modified>2021-06-05T10:25:24.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\Controls\HeaderControl.xbf">
       <PackagePath>Controls\HeaderControl.xbf</PackagePath>
-      <Modified>2021-06-05T09:38:20.956</Modified>
+      <Modified>2021-06-05T10:25:24.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\Images\logo.jpg">
       <PackagePath>Images\logo.jpg</PackagePath>
@@ -330,11 +330,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\apphost.exe">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.exe</PackagePath>
-      <Modified>2021-06-05T09:38:21.377</Modified>
+      <Modified>2021-06-05T10:17:20.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\obj\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.dll">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.dll</PackagePath>
-      <Modified>2021-06-05T09:38:21.370</Modified>
+      <Modified>2021-06-05T10:17:20.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration\bin\x86\Debug\net5.0-windows10.0.19041.0\AuthentiKitTrimCalibration.runtimeconfig.json">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.runtimeconfig.json</PackagePath>
@@ -366,15 +366,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\AuthentiKitTrimCalibration.MappingProcessor.dll">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.MappingProcessor.dll</PackagePath>
-      <Modified>2021-06-05T09:30:43.534</Modified>
+      <Modified>2021-06-05T10:25:19.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel\bin\Debug\net5.0\AuthentiKitTrimCalibration.ViewModel.dll">
       <PackagePath>AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.ViewModel.dll</PackagePath>
-      <Modified>2021-06-05T09:38:15.871</Modified>
+      <Modified>2021-06-05T10:15:12.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\Mapping.Common\bin\Debug\net5.0\MappingManager.Common.dll">
       <PackagePath>AuthentiKitTrimCalibration\MappingManager.Common.dll</PackagePath>
-      <Modified>2021-06-05T09:30:43.317</Modified>
+      <Modified>2021-06-05T10:11:38.422</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\3D Printing\Authentikit Trim Calibration\AuthentiKit-Trim-Calibration\AuthentiKitTrimCalibration\AuthentiKitTrimCalibration.DataAccess\bin\Debug\net5.0\vJoyInterfaceWrap.dll">
       <PackagePath>AuthentiKitTrimCalibration\vJoyInterfaceWrap.dll</PackagePath>

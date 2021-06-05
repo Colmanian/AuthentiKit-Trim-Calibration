@@ -12,9 +12,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
     public class MappingProcessor : IMappingProcessor
     {
         private Thread _mappingThread;
+        private bool Running;
 
-        private static void MappingProcess()
+        private void MappingProcess()
         {
+            Running = true;
             try
             {
                 Debug.WriteLine("*** ATTEMPTING TO USE DirectX ***");
@@ -51,7 +53,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 bool button11 = false;
                 Stopwatch stopWatch = new();
                 stopWatch.Start();
-                while (true)
+                while (Running)
                 {
                     Thread.Sleep(10);
                     if (button11 != joystick.GetCurrentState().Buttons[11])
@@ -63,13 +65,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             catch (ThreadAbortException e)
             {
-                Debug.WriteLine("Thread Abort Exception: ", e);
+                Debug.WriteLine("Thread Abort Exception: {0}", e);
             }
-            finally
-            {
-                Debug.WriteLine("Something else went wrong");
-            }
-
         }
 
         public IEnumerable<Mapping> LoadMappings()
@@ -121,9 +118,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine($"APPLY IS UNIMPLEMTNED: {mapping.Name}");
         }
 
-        public void KillMapping(Mapping mapping)
+        public void Stop(Mapping mapping)
         {
-            Debug.WriteLine($"KILL IS UNIMPLEMTNED: {mapping.Name}");
+            Debug.WriteLine($"Stopping Mapping: {mapping.Name}");
+            Running = false;
         }
 
         public IEnumerable<InputChannel> GetInputChannels()
@@ -146,8 +144,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 _mappingThread.Start();
             }
         }
-
-        public IEnumerable<OutputChannel> GetOutputChannels()
+    public IEnumerable<OutputChannel> GetOutputChannels()
         {
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
             return new List<OutputChannel>

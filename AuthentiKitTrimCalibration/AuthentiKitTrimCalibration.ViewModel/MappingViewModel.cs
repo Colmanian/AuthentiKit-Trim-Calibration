@@ -22,7 +22,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void KillMapping()
         {
-            _mappingProcessor.KillMapping(_mapping);
+            _mappingProcessor.Stop(_mapping);
         }
         public bool CanApply => !string.IsNullOrEmpty(Name);
 
