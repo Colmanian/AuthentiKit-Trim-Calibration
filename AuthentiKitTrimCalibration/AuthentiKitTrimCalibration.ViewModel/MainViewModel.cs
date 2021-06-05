@@ -1,5 +1,6 @@
 ﻿using AuthentiKitTrimCalibration.DataAccess;
 using MappingManager.Common.DataProvider;
+using MappingManager.Common.Model;
 using System.Collections.ObjectModel;
 
 namespace AuthentiKitTrimCalibration.ViewModel
@@ -92,6 +93,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     outputs.Add(channel.DisplayText);
                 }
                 return outputs;
+            }
+        }
+
+        public ObservableCollection<string> MappingTypes
+        {
+            get
+            {
+                ObservableCollection<string> mappingTypes = new();
+                mappingTypes.Add(MappingDTO.MappingType.Axis.ToString());
+                mappingTypes.Add(MappingDTO.MappingType.Button.ToString());
+                return mappingTypes;
             }
         }
     }

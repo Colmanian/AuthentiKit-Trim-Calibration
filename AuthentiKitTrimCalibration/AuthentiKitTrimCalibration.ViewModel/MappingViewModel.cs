@@ -4,6 +4,7 @@ using MappingManager.Common.Model;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -43,6 +44,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
+        public static T ParseEnum<T>(string value)
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
+        }
+        public string Type
+        {
+            get {
+                Debug.WriteLine("getting enum {0} as string {1}", _mapping.Type, _mapping.Type.ToString());
+                return _mapping.Type.ToString();
+            }
+            set
+            {
+                MappingDTO.MappingType enumValue = ParseEnum<MappingDTO.MappingType>(value);
+                if (_mapping.Type != enumValue)
+                {
+                    _mapping.Type = enumValue;
+                    RaisePropertyChanged();
+                }
+                Debug.WriteLine("Setting string {0} to enum {1}", value, enumValue);
+            }
+        }
         public int InputID_A
         {
             get { return _mapping.InputID_A; }

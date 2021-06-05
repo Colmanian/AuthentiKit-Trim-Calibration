@@ -56,10 +56,11 @@
 
             <TextBox Grid.Row="0" Header="Name" Margin="10"
                      Text="{x:Bind MainViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <ComboBox Grid.Row="1" Header="Input" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
-            <ComboBox Grid.Row="2" Header="Output" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
-            <TextBlock Grid.Row="3" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
-            <StackPanel Grid.Row="4" Margin="10">
+            <ComboBox Grid.Row="1" Header="MappingType" ItemsSource="{x:Bind MainViewModel.MappingTypes}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="2" Header="Input" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="3" Header="Output" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
+            <TextBlock Grid.Row="4" Margin="10" Text="Calibration Settings" FontWeight="Bold"/>
+            <StackPanel Grid.Row="5" Margin="10">
                 <TextBox Header="Button Multipler" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Header="'Start Holding' Threshold (ms)" Margin="10"
@@ -67,11 +68,11 @@
                 <TextBox Header="'Stop Holding' Threshold (ms)" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.HoldThresholdStop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
-            <Button Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+            <Button Grid.Row="6" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
                     Click="{x:Bind MainViewModel.SelectedMapping.ApplyMapping}"/>
             
-            <Button Grid.Row="5" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+            <Button Grid.Row="7" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.IsAnyMappingSelected, Mode=OneWay}"
                     Click="{x:Bind MainViewModel.RemoveMapping}"/>
         </Grid>
