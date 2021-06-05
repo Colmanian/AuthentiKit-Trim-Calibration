@@ -11,5 +11,6 @@ namespace MappingManager.Common.Model
         public int HoldThresholdStart { get; set; }
         public int HoldThresholdStop { get; set; }
         public string ResetCommand { get; set; }
+        public bool Enabled { get; set; }
     }
 }

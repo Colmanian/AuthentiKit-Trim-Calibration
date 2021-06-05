@@ -121,6 +121,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine($"APPLY IS UNIMPLEMTNED: {mapping.Name}");
         }
 
+        public void KillMapping(Mapping mapping)
+        {
+            Debug.WriteLine($"KILL IS UNIMPLEMTNED: {mapping.Name}");
+        }
+
         public IEnumerable<InputChannel> GetInputChannels()
         {
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");

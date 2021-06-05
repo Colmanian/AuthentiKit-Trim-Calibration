@@ -69,7 +69,7 @@
             </StackPanel>
             <Button Grid.Row="5" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
-                    Click="{x:Bind MainViewModel.SelectedMapping.Apply}"/>
+                    Click="{x:Bind MainViewModel.SelectedMapping.ApplyMapping}"/>
             
             <Button Grid.Row="5" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.IsAnyMappingSelected, Mode=OneWay}"

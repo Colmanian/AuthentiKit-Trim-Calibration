@@ -10,6 +10,7 @@ namespace MappingManager.Common.DataProvider
         void Run();
 
         void ApplyMapping(Mapping mapping);
+        void KillMapping(Mapping mapping);
 
         IEnumerable<InputChannel> GetInputChannels();
 

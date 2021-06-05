@@ -7,16 +7,24 @@ namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MappingViewModel : ViewModelBase
     {
+
         private readonly Mapping _mapping;
         private readonly IMappingProcessor _mappingProcessor;
-
-        public bool CanApply => !string.IsNullOrEmpty(Name);
 
         public MappingViewModel(Mapping mapping, IMappingProcessor mappingDataProvider)
         {
             _mapping = mapping;
             this._mappingProcessor = mappingDataProvider;
         }
+        public void ApplyMapping()
+        {
+            _mappingProcessor.ApplyMapping(_mapping);
+        }
+        public void KillMapping()
+        {
+            _mappingProcessor.KillMapping(_mapping);
+        }
+        public bool CanApply => !string.IsNullOrEmpty(Name);
 
         public string Name
         {
@@ -107,9 +115,20 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        public void Apply()
+        
+        public bool Enabled
         {
-            _mappingProcessor.ApplyMapping(_mapping);
+            get { return _mapping.Enabled; }
+            set
+            {
+                if (_mapping.Enabled != value)
+                {
+                    _mapping.Enabled = value;
+                    RaisePropertyChanged();
+                    RaisePropertyChanged(nameof(CanApply));
+                }
+            }
         }
+
     }
 }
