@@ -5,61 +5,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public bool IsAnyMappingSelected => _selectedMapping != null;
-
-        private IMappingProcessor _mappingProcessor { get; }
         private MappingViewModel _selectedMapping;
+        private IMappingProcessor _mappingProcessor;
         private readonly int MAX_MAPPINGS = 20;
-
         public MainViewModel(IMappingProcessor mappingDataProvider)
         {
             _mappingProcessor = mappingDataProvider;
             CanAddMapping = true;
         }
-
-        public ObservableCollection<MappingViewModel> Mappings { get; } = new();
-        public MappingViewModel SelectedMapping
-        {
-            get => _selectedMapping;
-            set
-            {
-                if (_selectedMapping != value)
-                {
-                    _selectedMapping = value;
-                    RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
-                }
-            }
-        }
-
-        public ObservableCollection<string> Inputs
-        {
-            get
-            {
-                ObservableCollection<string> inputs = new();
-                var channels = _mappingProcessor.GetInputChannels();
-                foreach (var channel in channels)
-                {
-                    inputs.Add(channel.DisplayText);
-                }
-                return inputs;
-            }
-        }
-        public ObservableCollection<string> Outputs
-        {
-            get
-            {
-                ObservableCollection<string> outputs = new();
-                var channels = _mappingProcessor.GetOutputChannels();
-                foreach (var channel in channels)
-                {
-                    outputs.Add(channel.DisplayText);
-                }
-                return outputs;
-            }
-        }
-
-        public bool CanAddMapping { get; private set; }
 
         public void Run()
         {
@@ -90,8 +43,52 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void RemoveMapping()
         {
-            //TODO Kill mapping process
+            _selectedMapping.KillMapping();
             Mappings.Remove(_selectedMapping);
         }
+
+        public bool IsAnyMappingSelected => _selectedMapping != null;
+        public ObservableCollection<MappingViewModel> Mappings { get; } = new();
+        public MappingViewModel SelectedMapping
+        {
+            get => _selectedMapping;
+            set
+            {
+                if (_selectedMapping != value)
+                {
+                    _selectedMapping = value;
+                    RaisePropertyChanged();
+                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
+                }
+            }
+        }
+        public ObservableCollection<string> Inputs
+        {
+            get
+            {
+                ObservableCollection<string> inputs = new();
+                var channels = _mappingProcessor.GetInputChannels();
+                foreach (var channel in channels)
+                {
+                    inputs.Add(channel.DisplayText);
+                }
+                return inputs;
+            }
+        }
+        public ObservableCollection<string> Outputs
+        {
+            get
+            {
+                ObservableCollection<string> outputs = new();
+                var channels = _mappingProcessor.GetOutputChannels();
+                foreach (var channel in channels)
+                {
+                    outputs.Add(channel.DisplayText);
+                }
+                return outputs;
+            }
+        }
+        public bool CanAddMapping { get; private set; }
+
     }
 }
