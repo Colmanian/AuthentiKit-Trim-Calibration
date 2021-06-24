@@ -33,6 +33,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         Debug.WriteLine("Choosing this one....");
                     }
                 }
+                if (inputGuid == Guid.Empty)
+                {
+                    Debug.WriteLine("No BU0836 Found!");
+                    return;
+                }
 
                 Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
                 var vJoystick = new vJoy();
