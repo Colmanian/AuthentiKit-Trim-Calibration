@@ -5,6 +5,9 @@
         public int Id { get; set; }
         public int VJoyDevice { get; set; }
         public int VJoyItem { get; set; }
-        public string DisplayText { get; set; }
+        override public string ToString()
+        {
+            return ("vJoy " + VJoyDevice + ": " + VJoyItem);
+        }
     }
 }

@@ -77,7 +77,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 var channels = HardwareInfo.GetInputChannels();
                 foreach (var channel in channels)
                 {
-                    inputs.Add(channel.DisplayText);
+                    inputs.Add(channel.ToString());
                 }
                 return inputs;
             }
@@ -90,7 +90,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 var channels = HardwareInfo.GetOutputChannels();
                 foreach (var channel in channels)
                 {
-                    outputs.Add(channel.DisplayText);
+                    outputs.Add(channel.ToString());
                 }
                 return outputs;
             }

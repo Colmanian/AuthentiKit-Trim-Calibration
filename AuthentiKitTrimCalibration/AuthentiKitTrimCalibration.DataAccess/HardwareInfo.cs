@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SharpDX.DirectInput;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -12,13 +13,22 @@ namespace AuthentiKitTrimCalibration.DataAccess
     {
         public static IEnumerable<InputChannel> GetInputChannels()
         {
-            Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
-            return new List<InputChannel>
+            List<InputChannel> inputChannels = new();
+            var directInput = new DirectInput();
+            foreach (var d in directInput.GetDevices())
             {
-                new InputChannel{ Id = 0, Device = "Dummy Device A", Button = 1, DisplayText = "Device A: Button 1" },
-                new InputChannel{ Id = 1, Device = "Dummy Device A", Button = 2, DisplayText = "Device A: Button 2" },
-                new InputChannel{ Id = 2, Device = "Dummy Device B", Button = 1, DisplayText = "Device B: Button 1" },
-            };
+                
+                if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
+                {
+                    var joystick = new Joystick(directInput, d.InstanceGuid);
+                    var buttons = joystick.Capabilities.ButtonCount;
+                    for (int i = 1; i <= buttons; i++)
+                    {
+                        inputChannels.Add(item: new InputChannel { Id = d.InstanceGuid, Device = d.InstanceName, Button = i });
+                    }
+                }
+            }
+            return inputChannels;
         }
 
         public static IEnumerable<OutputChannel> GetOutputChannels()
@@ -26,9 +36,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
             return new List<OutputChannel>
             {
-                new OutputChannel{ Id = 0, VJoyDevice = 1, VJoyItem = 1, DisplayText = "vJoy 1: Button 1" },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 2, DisplayText = "vJoy 1: Button 2" },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 20, DisplayText = "vJoy 1: Axis 1" },
+                new OutputChannel{ Id = 0, VJoyDevice = 1, VJoyItem = 1 },
+                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 2 },
+                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 20},
             };
         }
     }
