@@ -2,8 +2,6 @@
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
@@ -29,6 +27,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mappingProcessor.Stop();
         }
         public bool CanApply => !string.IsNullOrEmpty(Name);
+        public bool IsAxisMapping => Type == MappingDTO.MappingType.Axis.ToString();
+        public bool IsButtonMapping => Type == MappingDTO.MappingType.Button.ToString();
 
         public string Name
         {
@@ -61,6 +61,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.Type = enumValue;
                     RaisePropertyChanged();
+                    RaisePropertyChanged(nameof(IsAxisMapping));
+                    RaisePropertyChanged(nameof(IsButtonMapping));
                 }
                 Debug.WriteLine("Setting string {0} to enum {1}", value, enumValue);
             }

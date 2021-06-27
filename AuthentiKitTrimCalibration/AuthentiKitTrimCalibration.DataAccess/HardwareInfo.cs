@@ -36,9 +36,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
             return new List<OutputChannel>
             {
-                new OutputChannel{ Id = 0, VJoyDevice = 1, VJoyItem = 1 },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 2 },
-                new OutputChannel{ Id = 1, VJoyDevice = 1, VJoyItem = 20},
+                new OutputAxis{ Id = 0, VJoyDevice = 1, VJoyItem = 20 },
+                new OutputButton{ Id = 1, VJoyDevice = 1, VJoyItem = 1 },
+                new OutputButton{ Id = 1, VJoyDevice = 1, VJoyItem = 2},
             };
         }
     }
