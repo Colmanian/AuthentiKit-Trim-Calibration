@@ -5,7 +5,9 @@ namespace MappingManager.Common.DataProvider
 {
     public interface IMappingProcessor
     {        
-        void ApplyMapping(MappingDTO mapping);
-        void Stop();
+        void Activate(MappingDTO mapping);
+        void Deactivate();
+        bool IsErrored();
+        bool IsRunning();
     }
 }

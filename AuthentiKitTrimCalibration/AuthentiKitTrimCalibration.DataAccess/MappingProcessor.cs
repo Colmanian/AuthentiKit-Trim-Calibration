@@ -20,7 +20,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             {
                 while (true)
                 {
-                    Thread.Sleep(10);
+                    Thread.Sleep(1000);
+                    Debug.WriteLine("PING from " + _mapping.Name);
                 }
                     /*
                     Debug.WriteLine("*** ATTEMPTING TO USE DirectX ***");
@@ -78,18 +79,24 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 Debug.WriteLine("Thread Interrupted Exception: {0}", _mapping.Name, e);
                 //TODO Clean Up
             }
+            catch (Exception e)
+            {
+                _mapping.Errored = true;
+                _mapping.ErrorMessage = e.Message;
+            }
         }
 
-        public void ApplyMapping(MappingDTO mapping)
+        public void Activate(MappingDTO mapping)
         {
             _mapping = mapping;
-            Stop();
+            Deactivate();
             var mappingThreadRef = new ThreadStart(MappingProcess);
             _mappingThread = new Thread(mappingThreadRef);
             _mappingThread.Start();
+            _mapping.Active = true;
         }
 
-        public void Stop()
+        public void Deactivate()
         {
             if (_mappingThread != null)
             {
@@ -97,7 +104,31 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 _mappingThread.Interrupt();
                 _mappingThread = null;
             }
+            if (_mapping != null)
+            {
+                _mapping.Active = false;
+                _mapping.Errored = false;
+            }
         }
 
+        public bool IsRunning()
+        {
+            bool active = false;
+            if (_mapping != null)
+            {
+                active = _mapping.Active;
+            }
+            return active;
+        }
+
+        public bool IsErrored()
+        {
+            bool errored = false;
+            if (_mapping != null)
+            {
+                errored = _mapping.Errored;
+            }
+            return errored;
+        }
     }
 }

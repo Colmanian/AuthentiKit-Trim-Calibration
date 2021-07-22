@@ -20,7 +20,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             foreach (var mapping in Mappings)
             {
-                mapping.Stop();
+                mapping.Deactivate();
             }
         }
 
@@ -48,7 +48,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void RemoveMapping()
         {
-            _selectedMapping.Stop();
+            _selectedMapping.Deactivate();
             Mappings.Remove(_selectedMapping);
         }
 

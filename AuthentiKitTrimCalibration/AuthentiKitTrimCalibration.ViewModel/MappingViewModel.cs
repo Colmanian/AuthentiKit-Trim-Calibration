@@ -8,23 +8,32 @@ namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MappingViewModel : ViewModelBase
     {
-
-        private MappingDTO _mapping;
         private IMappingProcessor _mappingProcessor;
+        private MappingDTO _mapping;
 
         public MappingViewModel(MappingDTO mapping)
         {
-            _mapping = mapping;
             _mappingProcessor = new MappingProcessor();
-            ApplyMapping();
+            _mapping = mapping;
+            Deactivate();
         }
-        public void ApplyMapping()
+
+        private void UpdateStatus()
         {
-            _mappingProcessor.ApplyMapping(_mapping);
+            RaisePropertyChanged(nameof(Activated));
+            RaisePropertyChanged(nameof(Deactivated));
+            RaisePropertyChanged(nameof(Status));
+            RaisePropertyChanged(nameof(StatusColour));
         }
-        public void Stop()
+        public void Activate()
         {
-            _mappingProcessor.Stop();
+            _mappingProcessor.Activate(_mapping);
+            UpdateStatus();
+        }
+        public void Deactivate()
+        {
+            _mappingProcessor.Deactivate();
+            UpdateStatus();
         }
         public bool CanApply => !string.IsNullOrEmpty(Name);
         public bool IsAxisMapping => Type == MappingDTO.MappingType.Axis.ToString();
@@ -37,9 +46,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.Name != value)
                 {
+                    Deactivate();
                     _mapping.Name = value;
                     RaisePropertyChanged();
                     RaisePropertyChanged(nameof(CanApply));
+                    UpdateStatus();
                 }
             }
         }
@@ -54,11 +65,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get
             {
                 string status = "Deactivated";
-                if (_mapping.Errored)
+                if (_mappingProcessor.IsErrored())
                 {
                     status = "Error!";    
                 }
-                else if (_mapping.Active)
+                else if (_mappingProcessor.IsRunning())
                 {
                     status = "Activated";
                 }
@@ -71,11 +82,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get
             {
                 string status = "Gray"; // Deactivated
-                if (_mapping.Errored)
+                if (_mappingProcessor.IsErrored())
                 {
                     status = "Salmon"; // Error
                 }
-                else if (_mapping.Active)
+                else if (_mappingProcessor.IsRunning())
                 {
                     status = "Green"; // Activated
                 }
@@ -94,12 +105,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 MappingDTO.MappingType enumValue = ParseEnum<MappingDTO.MappingType>(value);
                 if (_mapping.Type != enumValue)
                 {
+                    Deactivate();
                     _mapping.Type = enumValue;
                     RaisePropertyChanged();
                     RaisePropertyChanged(nameof(IsAxisMapping));
                     RaisePropertyChanged(nameof(IsButtonMapping));
                 }
                 Debug.WriteLine("Setting string {0} to enum {1}", value, enumValue);
+                UpdateStatus();
             }
         }
         public int InputID_A
@@ -109,8 +122,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.InputID_A != value)
                 {
+                    Deactivate();
                     _mapping.InputID_A = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -121,8 +136,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.InputID_B != value)
                 {
+                    Deactivate();
                     _mapping.InputID_B = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -133,8 +150,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.OutputId != value)
                 {
+                    Deactivate();
                     _mapping.OutputId = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -146,8 +165,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.Multiplier != value)
                 {
+                    Deactivate();
                     _mapping.Multiplier = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -158,8 +179,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.HoldThresholdStart != value)
                 {
+                    Deactivate();
                     _mapping.HoldThresholdStart = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -170,8 +193,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.HoldThresholdStop != value)
                 {
+                    Deactivate();
                     _mapping.HoldThresholdStop = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
@@ -182,25 +207,19 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.ResetCommand != value)
                 {
+                    Deactivate();
                     _mapping.ResetCommand = value;
                     RaisePropertyChanged();
+                    UpdateStatus();
                 }
             }
         }
         
-        public bool Enabled
+        public bool Activated
         {
-            get { return _mapping.Active; }
-            set
-            {
-                if (_mapping.Active != value)
-                {
-                    _mapping.Active = value;
-                    RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(CanApply));
-                }
-            }
+            get { return _mappingProcessor.IsRunning(); }
         }
+        public bool Deactivated => !Activated;
 
     }
 }

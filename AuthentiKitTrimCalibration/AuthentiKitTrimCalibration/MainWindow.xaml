@@ -90,10 +90,19 @@
                          Text="{x:Bind MainViewModel.SelectedMapping.HoldThresholdStop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
 
+            <!-- Activate Button-->
             <Button Grid.Row="7" Content="Activate" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
-                    Click="{x:Bind MainViewModel.SelectedMapping.ApplyMapping}"/>
-            
+                    Visibility="{x:Bind MainViewModel.SelectedMapping.Deactivated, Mode=OneWay}"
+                    Click="{x:Bind MainViewModel.SelectedMapping.Activate}"/>
+
+            <!-- Dectivate Button-->
+            <Button Grid.Row="7" Content="Deactivate" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                    IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
+                    Visibility="{x:Bind MainViewModel.SelectedMapping.Activated, Mode=OneWay}"
+                    Click="{x:Bind MainViewModel.SelectedMapping.Deactivate}"/>
+
+            <!-- Remove Mapping Button-->
             <Button Grid.Row="8" Grid.Column="1" Content="Remove Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.IsAnyMappingSelected, Mode=OneWay}"
                     Click="{x:Bind MainViewModel.RemoveMapping}"/>

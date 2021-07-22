@@ -22,5 +22,6 @@ namespace MappingManager.Common.Model
         public int HoldThresholdStart { get; set; } // Button Only
         public int HoldThresholdStop { get; set; } // Button Only
         public bool Errored { get; set; }
+        public string ErrorMessage { get; set; }
     }
 }
