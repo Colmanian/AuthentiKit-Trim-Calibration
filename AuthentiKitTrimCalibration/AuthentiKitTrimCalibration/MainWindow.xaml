@@ -66,7 +66,7 @@
                 <ComboBox Header="Input +" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
                 <ComboBox Header="Input -" ItemsSource="{x:Bind MainViewModel.Inputs}" Margin="10" HorizontalAlignment="Stretch"/>
                 <ComboBox Header="Output Axis" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
-                <TextBox Header="Button Multipler" Margin="10"
+                <TextBox Header="Multipler" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
             
