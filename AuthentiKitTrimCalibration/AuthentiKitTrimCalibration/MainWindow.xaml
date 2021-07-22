@@ -48,6 +48,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -56,9 +57,15 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Row="0" Header="Name" Margin="10"
+            <Border Grid.Row="0" Background="{x:Bind MainViewModel.SelectedMapping.StatusColour, Mode=OneWay}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBlock Text="{x:Bind MainViewModel.SelectedMapping.Status, Mode=OneWay}" FontSize="20" VerticalAlignment="Center" />
+                </StackPanel>
+            </Border>
+
+            <TextBox Grid.Row="1" Header="Name" Margin="10"
                      Text="{x:Bind MainViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <ComboBox Grid.Row="1" Header="MappingType" ItemsSource="{x:Bind MainViewModel.MappingTypes}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
+            <ComboBox Grid.Row="2" Header="MappingType" ItemsSource="{x:Bind MainViewModel.MappingTypes}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
 
             <!-- Axis Mapping -->
             <TextBlock Grid.Row="3" Margin="10" Text="Axis Map Settings" FontWeight="Bold" Visibility="{x:Bind MainViewModel.SelectedMapping.IsAxisMapping, Mode=OneWay}"/>
@@ -83,7 +90,7 @@
                          Text="{x:Bind MainViewModel.SelectedMapping.HoldThresholdStop, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
 
-            <Button Grid.Row="7" Content="Apply Mapping" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+            <Button Grid.Row="7" Content="Activate" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
                     IsEnabled="{x:Bind MainViewModel.SelectedMapping.CanApply, Mode=OneWay}"
                     Click="{x:Bind MainViewModel.SelectedMapping.ApplyMapping}"/>
             

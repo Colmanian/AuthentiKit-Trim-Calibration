@@ -48,6 +48,41 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             return (T)Enum.Parse(typeof(T), value, true);
         }
+
+        public string Status
+        {
+            get
+            {
+                string status = "Deactivated";
+                if (_mapping.Errored)
+                {
+                    status = "Error!";    
+                }
+                else if (_mapping.Active)
+                {
+                    status = "Activated";
+                }
+                return status;
+            }
+        }
+
+        public string StatusColour
+        {
+            get
+            {
+                string status = "Gray"; // Deactivated
+                if (_mapping.Errored)
+                {
+                    status = "Salmon"; // Error
+                }
+                else if (_mapping.Active)
+                {
+                    status = "Green"; // Activated
+                }
+                return status;
+            }
+        }
+
         public string Type
         {
             get {
@@ -155,12 +190,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
         
         public bool Enabled
         {
-            get { return _mapping.Enabled; }
+            get { return _mapping.Active; }
             set
             {
-                if (_mapping.Enabled != value)
+                if (_mapping.Active != value)
                 {
-                    _mapping.Enabled = value;
+                    _mapping.Active = value;
                     RaisePropertyChanged();
                     RaisePropertyChanged(nameof(CanApply));
                 }
