@@ -35,8 +35,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
             List<OutputChannel> outputChannels = new();
             vJoy joystick = new vJoy();
             int output_id = 0;
+
             for (uint vjoy_id = 1; vjoy_id <= 16; vjoy_id++)
             {
+                // Buttons
+                for (int b = 0; b < joystick.GetVJDButtonNumber(vjoy_id); b++)
+                {
+                    outputChannels.Add(new OutputButton { Id = output_id, VJoyDevice = vjoy_id, VJoyItem = b});
+                }
+
+                // Axes
                 VjdStat status = joystick.GetVJDStatus(vjoy_id);
                 if (status == VjdStat.VJD_STAT_FREE)
                 {
@@ -50,6 +58,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     }
                 }
             }
+
+
             return outputChannels;
         }
     }
