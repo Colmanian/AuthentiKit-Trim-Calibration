@@ -1,11 +1,10 @@
 ﻿using MappingManager.Common.Model;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SharpDX.DirectInput;
+using vJoyInterfaceWrap;
+using System;
+using static MappingManager.Common.Model.OutputAxis;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -17,7 +16,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             var directInput = new DirectInput();
             foreach (var d in directInput.GetDevices())
             {
-                
+
                 if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
                 {
                     var joystick = new Joystick(directInput, d.InstanceGuid);
@@ -33,13 +32,25 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public static IEnumerable<OutputChannel> GetOutputChannels()
         {
-            Debug.WriteLine("LOAD DEVICES IS UNIMPLEMTNED");
-            return new List<OutputChannel>
+            List<OutputChannel> outputChannels = new();
+            vJoy joystick = new vJoy();
+            int output_id = 0;
+            for (uint vjoy_id = 1; vjoy_id <= 16; vjoy_id++)
             {
-                new OutputAxis{ Id = 0, VJoyDevice = 1, VJoyItem = 20 },
-                new OutputButton{ Id = 1, VJoyDevice = 1, VJoyItem = 1 },
-                new OutputButton{ Id = 1, VJoyDevice = 1, VJoyItem = 2},
-            };
+                VjdStat status = joystick.GetVJDStatus(vjoy_id);
+                if (status == VjdStat.VJD_STAT_FREE)
+                {
+                    foreach (HID_USAGES axis in Enum.GetValues(typeof(HID_USAGES)))
+                    {
+                        if (joystick.GetVJDAxisExist(vjoy_id, axis))
+                        {
+                            outputChannels.Add(new OutputAxis { Id = output_id, VJoyDevice = vjoy_id, VJoyItem = (int)axis });
+                            output_id++;
+                        }
+                    }
+                }
+            }
+            return outputChannels;
         }
     }
 }
