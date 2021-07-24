@@ -18,27 +18,30 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             try
             {
-                /*
                 // Input Event Generation
                 var directInput = new DirectInput();
-                var inputGuid = _mapping.InputID_A;
-                var joystick = new Joystick(directInput, inputGuid);
-                joystick.Properties.BufferSize = 128;
-                joystick.Acquire();
-                bool button11 = false;
+                var inputGuid = _mapping.InputChannelA.Id;
+                var joystickA = new Joystick(directInput, inputGuid);
+                joystickA.Properties.BufferSize = 128;
+                joystickA.Acquire();
+
+                bool buttonA = false;
                 Stopwatch stopWatch = new();
                 stopWatch.Start();
                 while (true)
                 {
                     Thread.Sleep(10);
-                    if (button11 != joystick.GetCurrentState().Buttons[11])
+                    // Input A
+                    if (buttonA != joystickA.GetCurrentState().Buttons[_mapping.InputChannelA.Button])
                     {
-                        button11 = joystick.GetCurrentState().Buttons[11];
-                        Debug.WriteLine("Button 11 now {0} at {1}ms", button11, stopWatch.ElapsedMilliseconds);
+                        buttonA = joystickA.GetCurrentState().Buttons[_mapping.InputChannelA.Button];
+                        Debug.WriteLine("Button {0} now {1} at {2}ms", _mapping.InputChannelA.Button, buttonA, stopWatch.ElapsedMilliseconds);
                     }
+                    // Input B (Used for Axis Only)
+                    // TODO
                 }
 
-                Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
+                /*Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
                 var vJoystick = new vJoy();
                 if (!vJoystick.vJoyEnabled())
                 {
@@ -47,7 +50,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 else
                 {
                     Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", vJoystick.GetvJoyManufacturerString(), vJoystick.GetvJoyProductString(), vJoystick.GetvJoySerialNumberString());
-                } */
+                }*/
             }
             catch (ThreadInterruptedException e)
             {

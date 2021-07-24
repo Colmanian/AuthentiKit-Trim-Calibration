@@ -115,20 +115,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 UpdateStatus();
             }
         }
-        public string InputA
-        {
-            get { return _mapping.InputChannelA.ToString(); }
-            set
-            {
-                if (_mapping.InputChannelA.ToString() != value)
-                {
-                    Deactivate();
-                    _mapping.InputChannelA = getInputChannelFromString(value);
-                    RaisePropertyChanged();
-                    UpdateStatus();
-                }
-            }
-        }
         private InputChannel getInputChannelFromString(string value)
         {
             InputChannel returnValue = new();
@@ -144,9 +130,35 @@ namespace AuthentiKitTrimCalibration.ViewModel
             return returnValue;
         }
 
+        public string InputA
+        {
+            get
+            {
+                if (_mapping.InputChannelA != null)
+                    return _mapping.InputChannelA.ToString();
+                else
+                    return "";
+            }
+            set
+            {
+                if (_mapping.InputChannelA.ToString() != value)
+                {
+                    Deactivate();
+                    _mapping.InputChannelA = getInputChannelFromString(value);
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
         public string InputB
         {
-            get { return _mapping.InputChannelB.ToString(); }
+            get 
+            {
+                if (_mapping.InputChannelB != null)
+                    return _mapping.InputChannelB.ToString();
+                else
+                    return "";
+            }
             set
             {
                 if (_mapping.InputChannelB.ToString() != value)
