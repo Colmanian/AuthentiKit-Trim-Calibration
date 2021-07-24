@@ -39,7 +39,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             for (uint vjoy_id = 1; vjoy_id <= 16; vjoy_id++)
             {
                 // Buttons
-                for (int b = 0; b < joystick.GetVJDButtonNumber(vjoy_id); b++)
+                for (uint b = 1; b <= joystick.GetVJDButtonNumber(vjoy_id); b++)
                 {
                     outputChannels.Add(new OutputButton { Id = output_id, VJoyDevice = vjoy_id, VJoyItem = b});
                 }
@@ -52,7 +52,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     {
                         if (joystick.GetVJDAxisExist(vjoy_id, axis))
                         {
-                            outputChannels.Add(new OutputAxis { Id = output_id, VJoyDevice = vjoy_id, VJoyItem = (int)axis });
+                            outputChannels.Add(new OutputAxis { Id = output_id, VJoyDevice = vjoy_id, VJoyItem = (uint)axis });
                             output_id++;
                         }
                     }

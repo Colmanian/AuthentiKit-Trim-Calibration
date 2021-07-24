@@ -14,7 +14,7 @@ namespace MappingManager.Common.Model
         public string Name { get; set; } // Both
         public MappingType Type { get; set; } // Both
         public bool Active { get; set; } // Both
-        public int OutputId { get; set; } // Both
+        public OutputChannel OutputChannel { get; set; } // Both
         public int Multiplier { get; set; } // Both
         public InputChannel InputChannelA { get; set; } // Both
         public InputChannel InputChannelB { get; set; } // Axis Only

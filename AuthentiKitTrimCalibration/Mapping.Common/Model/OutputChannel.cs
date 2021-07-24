@@ -6,7 +6,7 @@ namespace MappingManager.Common.Model
     {
         public int Id { get; set; }
         public uint VJoyDevice { get; set; }
-        public int VJoyItem { get; set; }
+        public uint VJoyItem { get; set; }
     }
 
     public class OutputAxis : OutputChannel

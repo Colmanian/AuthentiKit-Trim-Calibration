@@ -46,17 +46,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         _buttonProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
                     }
                 }
-
-                /*Debug.WriteLine("*** ATTEMPTING TO USE VJOY *** ");
-                var vJoystick = new vJoy();
-                if (!vJoystick.vJoyEnabled())
-                {
-                    Debug.WriteLine("vJoy driver not enabled: Failed Getting vJoy attributes.\n");
-                }
-                else
-                {
-                    Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", vJoystick.GetvJoyManufacturerString(), vJoystick.GetvJoyProductString(), vJoystick.GetvJoySerialNumberString());
-                }*/
             }
             catch (ThreadInterruptedException e)
             {
@@ -75,18 +64,24 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             _mapping = mapping;
             Deactivate();
-            if(_mapping.Type == MappingDTO.MappingType.Button)
+            if (_mapping.Type == MappingDTO.MappingType.Button)
             {
-                _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop);
-            }else if (_mapping.Type == MappingDTO.MappingType.Axis)
+                if (_mapping.OutputChannel is OutputButton)
+                {
+                    OutputButton outputButton = (OutputButton)_mapping.OutputChannel;
+                    _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
+                }
+            }
+            else if (_mapping.Type == MappingDTO.MappingType.Axis)
             {
                 return; // Not implemented
 
-            } else
+            }
+            else
             {
                 return;
             }
-            
+
             var mappingThreadRef = new ThreadStart(MappingProcess);
             _mappingThread = new Thread(mappingThreadRef);
             _mappingThread.Start();

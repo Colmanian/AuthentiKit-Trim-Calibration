@@ -129,6 +129,20 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             return returnValue;
         }
+        private OutputChannel getOutputChannelFromString(string value)
+        {
+            OutputChannel returnValue = new();
+            var channels = HardwareInfo.GetOutputChannels();
+            foreach (var channel in channels)
+            {
+                if (value == channel.ToString())
+                {
+                    returnValue = channel;
+                    break;
+                }
+            }
+            return returnValue;
+        }
 
         public string InputA
         {
@@ -170,15 +184,21 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        public int OutputId
+        public string Output
         {
-            get { return _mapping.OutputId; }
+            get
+            {
+                if (_mapping.OutputChannel != null)
+                    return _mapping.OutputChannel.ToString();
+                else
+                    return "";
+            }
             set
             {
-                if (_mapping.OutputId != value)
+                if (_mapping.OutputChannel.ToString() != value)
                 {
                     Deactivate();
-                    _mapping.OutputId = value;
+                    _mapping.OutputChannel = getOutputChannelFromString(value);
                     RaisePropertyChanged();
                     UpdateStatus();
                 }

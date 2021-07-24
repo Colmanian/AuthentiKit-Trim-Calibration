@@ -27,7 +27,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   Active = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputId = 0,
+                  OutputChannel = new OutputAxis(),
                   Multiplier = 3,
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
@@ -37,7 +37,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   Active = false,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputId = 0,
+                  OutputChannel = new OutputButton(),
                   Multiplier = 3,
                   HoldThresholdStart = 200,
                   HoldThresholdStop = 200
@@ -49,7 +49,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   Errored = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputId = 0,
+                  OutputChannel = new OutputButton(),
                   Multiplier = 3,
                   HoldThresholdStart = 200,
                   HoldThresholdStop = 200

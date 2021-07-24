@@ -72,7 +72,7 @@
             <StackPanel Grid.Row="4" Margin="10" Visibility="{x:Bind MainViewModel.SelectedMapping.IsAxisMapping, Mode=OneWay}">
                 <ComboBox Header="Input +" ItemsSource="{x:Bind MainViewModel.Inputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.InputA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
                 <ComboBox Header="Input -" ItemsSource="{x:Bind MainViewModel.Inputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.InputB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
-                <ComboBox Header="Output Axis" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
+                <ComboBox Header="Output Axis" ItemsSource="{x:Bind MainViewModel.Outputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Output, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
                 <TextBox Header="Multipler" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
@@ -81,7 +81,7 @@
             <TextBlock Grid.Row="5" Margin="10" Text="Button Map Settings" FontWeight="Bold" Visibility="{x:Bind MainViewModel.SelectedMapping.IsButtonMapping, Mode=OneWay}"/>
             <StackPanel Grid.Row="6" Margin="10" Visibility="{x:Bind MainViewModel.SelectedMapping.IsButtonMapping, Mode=OneWay}">
                 <ComboBox Header="Input Button" ItemsSource="{x:Bind MainViewModel.Inputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.InputA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
-                <ComboBox Header="Output Button" ItemsSource="{x:Bind MainViewModel.Outputs}" Margin="10" HorizontalAlignment="Stretch"/>
+                <ComboBox Header="Output Button" ItemsSource="{x:Bind MainViewModel.Outputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Output, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
                 <TextBox Header="Button Multipler" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBox Header="'Start Holding' Threshold (ms)" Margin="10"
