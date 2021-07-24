@@ -115,29 +115,44 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 UpdateStatus();
             }
         }
-        public int InputID_A
+        public string InputA
         {
-            get { return _mapping.InputID_A; }
+            get { return _mapping.InputChannelA.ToString(); }
             set
             {
-                if (_mapping.InputID_A != value)
+                if (_mapping.InputChannelA.ToString() != value)
                 {
                     Deactivate();
-                    _mapping.InputID_A = value;
+                    _mapping.InputChannelA = getInputChannelFromString(value);
                     RaisePropertyChanged();
                     UpdateStatus();
                 }
             }
         }
-        public int InputID_B
+        private InputChannel getInputChannelFromString(string value)
         {
-            get { return _mapping.InputID_B; }
+            InputChannel returnValue = new();
+            var channels = HardwareInfo.GetInputChannels();
+            foreach (var channel in channels)
+            {
+                if (value == channel.ToString())
+                {
+                    returnValue = channel;
+                    break;
+                }
+            }
+            return returnValue;
+        }
+
+        public string InputB
+        {
+            get { return _mapping.InputChannelB.ToString(); }
             set
             {
-                if (_mapping.InputID_B != value)
+                if (_mapping.InputChannelB.ToString() != value)
                 {
                     Deactivate();
-                    _mapping.InputID_B = value;
+                    _mapping.InputChannelB = getInputChannelFromString(value);
                     RaisePropertyChanged();
                     UpdateStatus();
                 }
