@@ -12,6 +12,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private Thread _mappingThread;
         private MappingDTO _mapping;
         private ButtonProcessor _buttonProcessor;
+        private AxisProcessor _axisProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -26,6 +27,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 joystickA.Acquire();
 
                 bool buttonAState = false;
+                bool buttonBState = false;
                 Stopwatch stopWatch = new();
                 stopWatch.Start();
                 while (true)
@@ -38,21 +40,23 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         buttonAState = joystickA.GetCurrentState().Buttons[_mapping.InputChannelA.Button];
                     }
 
-                    // Button B Polling (Used for Axis Only)
-                    // TODO
-
                     // Pass to relevent processor
-                    if (_mapping.Type == MappingDTO.MappingType.Button)
+                    if (_mapping.Type == MappingDTO.MappingType.Button && _buttonProcessor != null)
                     {
                         _buttonProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
-                    } else if (_mapping.Type == MappingDTO.MappingType.Axis)
+                    } else if (_mapping.Type == MappingDTO.MappingType.Axis & _axisProcessor != null)
                     {
-                        /*if (_needToCentre)
+                        // Button B Polling (Used for Axis Only)
+                        if (buttonBState != joystickA.GetCurrentState().Buttons[_mapping.InputChannelB.Button])
+                        {
+                            buttonBState = joystickA.GetCurrentState().Buttons[_mapping.InputChannelB.Button];
+                        }
+                        if (_needToCentre)
                         {
                             _axisProcessor.Centre();
                             _needToCentre = false;
                         }
-                        _axisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds); */
+                        _axisProcessor.Process(buttonAState, buttonBState);
                     }
                 }
             }
@@ -83,8 +87,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             else if (_mapping.Type == MappingDTO.MappingType.Axis)
             {
-                return; // Not implemented
-
+                if (_mapping.OutputChannel is OutputAxis)
+                {
+                    OutputAxis outputAxis = (OutputAxis)_mapping.OutputChannel;
+                    _axisProcessor = new AxisProcessor(_mapping.Multiplier, outputAxis);
+                }
             }
             else
             {
