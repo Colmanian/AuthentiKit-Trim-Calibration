@@ -35,6 +35,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mappingProcessor.Deactivate();
             UpdateStatus();
         }
+        public void CentreAxis()
+        {
+            _mappingProcessor.Centre();
+            UpdateStatus();
+        }
+
         public bool CanApply => !string.IsNullOrEmpty(Name);
         public bool IsAxisMapping => Type == MappingDTO.MappingType.Axis.ToString();
         public bool IsButtonMapping => Type == MappingDTO.MappingType.Button.ToString();

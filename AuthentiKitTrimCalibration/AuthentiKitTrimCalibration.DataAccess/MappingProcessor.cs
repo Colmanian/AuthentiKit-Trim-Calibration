@@ -12,6 +12,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private Thread _mappingThread;
         private MappingDTO _mapping;
         private ButtonProcessor _buttonProcessor;
+        bool _needToCentre;
 
         private void MappingProcess()
         {
@@ -44,6 +45,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     if (_mapping.Type == MappingDTO.MappingType.Button)
                     {
                         _buttonProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
+                    } else if (_mapping.Type == MappingDTO.MappingType.Axis)
+                    {
+                        /*if (_needToCentre)
+                        {
+                            _axisProcessor.Centre();
+                            _needToCentre = false;
+                        }
+                        _axisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds); */
                     }
                 }
             }
@@ -121,6 +130,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 errored = _mapping.Errored;
             }
             return errored;
+        }
+        public void Centre()
+        {
+            _needToCentre = true;
         }
     }
 }

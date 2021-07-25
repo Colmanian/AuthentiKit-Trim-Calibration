@@ -9,5 +9,6 @@ namespace MappingManager.Common.DataProvider
         void Deactivate();
         bool IsErrored();
         bool IsRunning();
+        public void Centre();
     }
 }

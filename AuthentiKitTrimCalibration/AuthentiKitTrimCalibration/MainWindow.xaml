@@ -75,6 +75,9 @@
                 <ComboBox Header="Output Axis" ItemsSource="{x:Bind MainViewModel.Outputs}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Output, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
                 <TextBox Header="Multipler" Margin="10"
                          Text="{x:Bind MainViewModel.SelectedMapping.Multiplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <!-- Centre Button-->
+                <Button Grid.Row="7" Content="Centre Axis" Margin="10 10 10 30" VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                    Click="{x:Bind MainViewModel.SelectedMapping.CentreAxis}"/>
             </StackPanel>
 
             <!-- Button Mapping -->
