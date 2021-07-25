@@ -32,7 +32,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 stopWatch.Start();
                 while (true)
                 {
-                    Thread.Sleep(10); // Pole button state every this milliseconds
+                    Thread.Sleep(2); // Pole button state every this milliseconds
 
                     // Button A Polling
                     if (buttonAState != joystickA.GetCurrentState().Buttons[_mapping.InputChannelA.Button])
@@ -84,7 +84,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     OutputButton outputButton = (OutputButton)_mapping.OutputChannel;
                     _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
                 }
-            }
+            }   
             else if (_mapping.Type == MappingDTO.MappingType.Axis)
             {
                 if (_mapping.OutputChannel is OutputAxis)

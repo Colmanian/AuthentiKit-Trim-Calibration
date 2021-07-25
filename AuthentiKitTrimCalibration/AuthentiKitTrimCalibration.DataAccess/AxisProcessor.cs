@@ -15,6 +15,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyAxisNumber;
+        long _maxAxisValue;
+        int _axisPosition;
         bool _priorAState;
         bool _priorBState;
 
@@ -42,8 +44,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
             else
                 Console.WriteLine("Acquired: vJoy device number {0}.", _vJoyId);
             _joystick.ResetVJD(_vJoyId);
+            _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
+            Debug.WriteLine("Max value of axis {0} is {1}", (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
+            Centre();
         }
-
         internal void Process(bool buttonAState, bool buttonBState)
         {
 
@@ -70,8 +74,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             if (_joystick != null)
             {
-                Debug.WriteLine("Moving vJoy {0} Axis {1} by {2}", _vJoyId, _vJoyAxisNumber, movement);
-                //TODO
+                _axisPosition += movement;
+                if (_axisPosition > _maxAxisValue)
+                {
+                    _axisPosition = (int) _maxAxisValue;
+                } else if (_axisPosition < 0)
+                {
+                    _axisPosition = 0;
+                }
+                _joystick.SetAxis(_axisPosition, _vJoyId, (HID_USAGES)_vJoyAxisNumber);
+                Debug.WriteLine("Moving vJoy {0} Axis {1} to {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _axisPosition);
             }
         }
 
@@ -80,7 +92,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             if (_joystick != null)
             {
                 Debug.WriteLine("Centring vJoy {0} Axis {1}", _vJoyId, _vJoyAxisNumber);
-                //TODO
+                _axisPosition = (int)(_maxAxisValue / 2);
+                MoveAxisBy(0);
             }
         }
     }

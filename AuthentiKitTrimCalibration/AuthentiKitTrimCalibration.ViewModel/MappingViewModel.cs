@@ -2,7 +2,6 @@
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System;
-using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -103,7 +102,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public string Type
         {
             get {
-                Debug.WriteLine("getting enum {0} as string {1}", _mapping.Type, _mapping.Type.ToString());
                 return _mapping.Type.ToString();
             }
             set
@@ -117,7 +115,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     RaisePropertyChanged(nameof(IsAxisMapping));
                     RaisePropertyChanged(nameof(IsButtonMapping));
                 }
-                Debug.WriteLine("Setting string {0} to enum {1}", value, enumValue);
                 UpdateStatus();
             }
         }
