@@ -18,8 +18,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
         uint _vJoyId;
         uint _vJoyButtonNumber;
         bool _priorState;
+        long _priorButtonPressTime;
+        bool _holdingOn;
+        long _pulseStartTime;
+        int _pulsesLeft;
 
-        const int OUT_PULSE_LENGTH = 30; //ms
+        const int PULSE_LENGTH = 60; //ms
 
         public ButtonProcessor(int multiplier, int holdThresholdStart, int holdThresholdStop, OutputButton outputButton)
         {
@@ -51,11 +55,67 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         internal void Process(bool buttonAState, long elapsedMilliseconds)
         {
+            // If button has turned on or off
             if (_priorState != buttonAState)
             {
-                Debug.WriteLine("Button {0} now {1} at {2}ms", _vJoyButtonNumber, buttonAState, elapsedMilliseconds);
-                SetOutput(buttonAState);
+                // If button is now on
+                if (buttonAState && !_holdingOn)
+                {
+                    var timeSinceLast = elapsedMilliseconds - _priorButtonPressTime;
+
+                    // Pulse
+                    if (timeSinceLast > _holdThresholdStart)
+                    {
+                        Debug.WriteLine("*********** PULSE ***********", timeSinceLast);
+                        _pulsesLeft = _multiplier;
+                        _pulseStartTime = elapsedMilliseconds;
+                        SetOutput(true);
+                        Debug.WriteLine("{0} ({1}ms)", _pulsesLeft, 0);
+                    }
+                    // Start Holding
+                    else
+                    {
+                        Debug.WriteLine("*********** HOLD ON *********** ({0}ms)", timeSinceLast);
+                        _holdingOn = true;
+                        SetOutput(true);
+                        _pulsesLeft = 0;
+                    }
+                    _priorButtonPressTime = elapsedMilliseconds;
+                }
                 _priorState = buttonAState;
+            }
+
+            // Ouptut Pulses
+            if (_pulsesLeft > 0)
+            {
+                var timeSincePulseStart = elapsedMilliseconds - _pulseStartTime;
+                if (timeSincePulseStart > 2 * PULSE_LENGTH)
+                {
+                    _pulsesLeft--;
+                    if (_pulsesLeft > 0)
+                    {
+                        _pulseStartTime = elapsedMilliseconds;
+                        SetOutput(true);
+                        Debug.WriteLine("{0} on  ({1}ms)", _pulsesLeft, 0);
+                    }
+                }
+                else if (timeSincePulseStart > PULSE_LENGTH)
+                {
+                    SetOutput(false);
+                    Debug.WriteLine("{0} off ({1}ms)", _pulsesLeft, timeSincePulseStart);
+                }
+                else
+                {
+                    Debug.WriteLine("{0} mid pulse ({1}ms)", _pulsesLeft, timeSincePulseStart);
+                }
+            }
+
+            // Check if holding should be turned off
+            if (_holdingOn && ((elapsedMilliseconds - _priorButtonPressTime) > _holdThresholdStop))
+            {
+                Debug.WriteLine("*********** HOLD OFF *********** ({0}ms)", (elapsedMilliseconds - _priorButtonPressTime));
+                _holdingOn = false;
+                SetOutput(false);
             }
         }
 
@@ -63,9 +123,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             if (_joystick != null)
             {
-                Debug.WriteLine("Setting vJoy {0} Button {1} to {2}", _vJoyId, _vJoyButtonNumber, state);
                 _joystick.SetBtn(state, _vJoyId, _vJoyButtonNumber);
-            }                
+            }
         }
     }
 }

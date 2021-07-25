@@ -1,11 +1,7 @@
 ﻿using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -28,7 +24,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
                   OutputChannel = new OutputAxis(),
-                  Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down
+                  Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
                 {
@@ -39,7 +35,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   InputChannelB = new InputChannel(),
                   OutputChannel = new OutputButton(),
                   Multiplier = 3,
-                  HoldThresholdStart = 200,
+                  HoldThresholdStart = 500,
                   HoldThresholdStop = 200
                 },new MappingDTO
                 {
@@ -51,7 +47,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   InputChannelB = new InputChannel(),
                   OutputChannel = new OutputButton(),
                   Multiplier = 3,
-                  HoldThresholdStart = 200,
+                  HoldThresholdStart = 500,
                   HoldThresholdStop = 200
                 }
             };
