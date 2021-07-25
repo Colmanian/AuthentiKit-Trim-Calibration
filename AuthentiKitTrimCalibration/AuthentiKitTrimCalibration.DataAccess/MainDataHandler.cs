@@ -28,7 +28,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
                   OutputChannel = new OutputAxis(),
-                  Multiplier = 3,
+                  Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
                 {

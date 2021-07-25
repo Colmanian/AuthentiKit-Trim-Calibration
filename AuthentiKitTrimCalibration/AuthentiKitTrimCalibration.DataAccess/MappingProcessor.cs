@@ -56,7 +56,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             _axisProcessor.Centre();
                             _needToCentre = false;
                         }
-                        _axisProcessor.Process(buttonAState, buttonBState);
+                        _axisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds);
                     }
                 }
             }

@@ -20,6 +20,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
         bool _priorAState;
         bool _priorBState;
 
+        long _previousATime;
+        long _previousBTime;
+
         public AxisProcessor(int multiplier, OutputAxis outputAxis)
         {
             _multiplier = multiplier;
@@ -48,23 +51,30 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("Max value of axis {0} is {1}", (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
             Centre();
         }
-        internal void Process(bool buttonAState, bool buttonBState)
+        internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {
+
 
             if (_priorAState != buttonAState)
             {
-                if (buttonAState)
+                var timeSinceLast = (elapsedMilliseconds - _previousATime);
+                if (buttonAState && (timeSinceLast > 150)) // filter out spureous output
                 {
                     MoveAxisBy(_multiplier);
+                    _previousATime = elapsedMilliseconds;
+                    Debug.WriteLine("+{0} : {1}ms", _multiplier, timeSinceLast);
                 }
                 _priorAState = buttonAState;
             }
 
             if (_priorBState != buttonBState)
             {
-                if (buttonBState)
+                var timeSinceLast = (elapsedMilliseconds - _previousBTime);
+                if (buttonBState && (timeSinceLast > 150))
                 {
                     MoveAxisBy(-_multiplier);
+                    _previousBTime = elapsedMilliseconds;
+                    Debug.WriteLine("-{0} : {1}ms", _multiplier, timeSinceLast);
                 }
                 _priorBState = buttonBState;
             }
@@ -77,13 +87,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 _axisPosition += movement;
                 if (_axisPosition > _maxAxisValue)
                 {
-                    _axisPosition = (int) _maxAxisValue;
-                } else if (_axisPosition < 0)
+                    _axisPosition = (int)_maxAxisValue;
+                }
+                else if (_axisPosition < 0)
                 {
                     _axisPosition = 0;
                 }
                 _joystick.SetAxis(_axisPosition, _vJoyId, (HID_USAGES)_vJoyAxisNumber);
-                Debug.WriteLine("Moving vJoy {0} Axis {1} to {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _axisPosition);
+                //Debug.WriteLine("Moving vJoy {0} Axis {1} to {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _axisPosition);
             }
         }
 
