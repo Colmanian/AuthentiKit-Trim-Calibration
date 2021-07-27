@@ -158,12 +158,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             set
             {
-                if (_mapping.InputChannelA.ToString() != value)
+                if (_mapping.InputChannelA != null)
                 {
-                    Deactivate();
-                    _mapping.InputChannelA = getInputChannelFromString(value);
-                    RaisePropertyChanged();
-                    UpdateStatus();
+                    if (_mapping.InputChannelA.ToString() != value)
+                    {
+                        Deactivate();
+                        _mapping.InputChannelA = getInputChannelFromString(value);
+                        RaisePropertyChanged();
+                        UpdateStatus();
+                    }
                 }
             }
         }
@@ -178,12 +181,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             set
             {
-                if (_mapping.InputChannelB.ToString() != value)
+                if (_mapping.InputChannelB != null)
                 {
-                    Deactivate();
-                    _mapping.InputChannelB = getInputChannelFromString(value);
-                    RaisePropertyChanged();
-                    UpdateStatus();
+                    if (_mapping.InputChannelB.ToString() != value)
+                    {
+                        Deactivate();
+                        _mapping.InputChannelB = getInputChannelFromString(value);
+                        RaisePropertyChanged();
+                        UpdateStatus();
+                    }
                 }
             }
         }
@@ -198,12 +204,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             set
             {
-                if (_mapping.OutputChannel.ToString() != value)
+                if (_mapping.OutputChannel != null)
                 {
-                    Deactivate();
-                    _mapping.OutputChannel = getOutputChannelFromString(value);
-                    RaisePropertyChanged();
-                    UpdateStatus();
+                    if (_mapping.OutputChannel.ToString() != value)
+                    {
+                        Deactivate();
+                        _mapping.OutputChannel = getOutputChannelFromString(value);
+                        RaisePropertyChanged();
+                        UpdateStatus();
+                    }
                 }
             }
         }

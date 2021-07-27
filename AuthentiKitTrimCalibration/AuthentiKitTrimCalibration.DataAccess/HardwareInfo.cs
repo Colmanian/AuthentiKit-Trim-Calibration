@@ -21,7 +21,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     var joystick = new Joystick(directInput, d.InstanceGuid);
                     var buttons = joystick.Capabilities.ButtonCount;
-                    for (int i = 1; i <= buttons; i++)
+                    for (int i = 0; i < buttons; i++)
                     {
                         inputChannels.Add(item: new InputChannel { Id = d.InstanceGuid, Device = d.InstanceName, Button = i });
                     }

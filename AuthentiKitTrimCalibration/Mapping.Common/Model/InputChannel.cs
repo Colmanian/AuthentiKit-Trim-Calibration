@@ -9,7 +9,7 @@ namespace MappingManager.Common.Model
         public int Button { get; set; }
         override public string ToString()
         {
-            return (Device + ": Button " + Button);
+            return (Device + ": Button " + (Button+1));
         }
     }
 }
