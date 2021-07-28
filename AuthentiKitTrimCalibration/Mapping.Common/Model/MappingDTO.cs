@@ -2,9 +2,23 @@
 
 namespace MappingManager.Common.Model
 {
-    //TODO Refactor to use polymorphism 
-    public class MappingDTO 
-    { 
+    public class MappingDTO
+    {
+        public MappingDTO()
+        {
+            Name = "";
+            Type = MappingType.Axis;
+            Active = false;
+            OutputChannel = new();
+            Multiplier = 1;
+            InputChannelA = new();
+            InputChannelB = new();
+            ResetCommand = "";
+            HoldThresholdStart = 500;
+            HoldThresholdStop = 1000;
+            Errored = false;
+            ErrorMessage = "";
+        }
         public enum MappingType
         {
             Button,
