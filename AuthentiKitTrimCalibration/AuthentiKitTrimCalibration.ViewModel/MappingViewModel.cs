@@ -2,6 +2,7 @@
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System;
+using System.Collections.Generic;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -9,9 +10,13 @@ namespace AuthentiKitTrimCalibration.ViewModel
     {
         private IMappingProcessor _mappingProcessor;
         private MappingDTO _mapping;
+        private readonly IEnumerable<InputChannel> _inputs;
+        private readonly IEnumerable<OutputChannel> _outputs;
 
-        public MappingViewModel(MappingDTO mapping)
+        public MappingViewModel(MappingDTO mapping, IEnumerable<InputChannel> inputs, IEnumerable<OutputChannel> outputs)
         {
+            _inputs = inputs;
+            _outputs = outputs;
             _mappingProcessor = new MappingProcessor();
             _mapping = mapping;
             Deactivate();
@@ -72,7 +77,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 string status = "Deactivated";
                 if (_mappingProcessor.IsErrored())
                 {
-                    status = "Error!";    
+                    status = "Error!";
                 }
                 else if (_mappingProcessor.IsRunning())
                 {
@@ -101,7 +106,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         public string Type
         {
-            get {
+            get
+            {
                 return _mapping.Type.ToString();
             }
             set
@@ -121,8 +127,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private InputChannel getInputChannelFromString(string value)
         {
             InputChannel returnValue = new();
-            var channels = HardwareInfo.GetInputChannels();
-            foreach (var channel in channels)
+            foreach (var channel in _inputs)
             {
                 if (value == channel.ToString())
                 {
@@ -135,8 +140,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private OutputChannel getOutputChannelFromString(string value)
         {
             OutputChannel returnValue = new();
-            var channels = HardwareInfo.GetOutputChannels();
-            foreach (var channel in channels)
+            foreach (var channel in _outputs)
             {
                 if (value == channel.ToString())
                 {
@@ -172,7 +176,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public string InputB
         {
-            get 
+            get
             {
                 if (_mapping.InputChannelB != null)
                     return _mapping.InputChannelB.ToString();
@@ -273,7 +277,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        
+
         public bool Activated
         {
             get { return _mappingProcessor.IsRunning(); }

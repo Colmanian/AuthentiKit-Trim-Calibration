@@ -1,21 +1,65 @@
 ﻿using AuthentiKitTrimCalibration.DataAccess;
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        private readonly int MAX_MAPPINGS = 20;
         private IMainDataHandler _mainDataHandler;
         private MappingViewModel _selectedMapping;
-        private readonly int MAX_MAPPINGS = 20;
+        public ObservableCollection<string> InputStrings;
+        public ObservableCollection<string> OutputStrings;
+        private IEnumerable<InputChannel> _inputChannels;
+        private IEnumerable<OutputChannel> _outputChannels;
+        public ObservableCollection<string> MappingTypes;
+        public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
+        public bool IsAnyMappingSelected => _selectedMapping != null;
+        public bool CanAddMapping { get; private set; }
+
         public MainViewModel()
         {
             _mainDataHandler = new MainDataHandler();
             CanAddMapping = true;
-        }
 
+            // Get the input list once on startup
+            InputStrings = new();
+            _inputChannels = HardwareInfo.GetInputChannels();
+            foreach (var channel in _inputChannels)
+            {
+                InputStrings.Add(channel.ToString());
+            }
+
+            // Get the output list once on startup
+            OutputStrings = new();
+            _outputChannels = HardwareInfo.GetOutputChannels();
+            foreach (var channel in _outputChannels)
+            {
+                OutputStrings.Add(channel.ToString());
+            }
+
+            // Get the mapping types once on startup
+            MappingTypes = new();
+            MappingTypes.Add(MappingDTO.MappingType.Axis.ToString());
+            MappingTypes.Add(MappingDTO.MappingType.Button.ToString());
+
+        }
+        public MappingViewModel SelectedMapping
+        {
+            get => _selectedMapping;
+            set
+            {
+                if (_selectedMapping != value)
+                {
+                    _selectedMapping = value;
+                    RaisePropertyChanged();
+                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
+                }
+            }
+        }
         public void Stop()
         {
             foreach (var mapping in Mappings)
@@ -31,14 +75,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
             var mappings = _mainDataHandler.LoadMappings();
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping));
+                Mappings.Add(new MappingViewModel(mapping, _inputChannels, _outputChannels));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping()));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), _inputChannels, _outputChannels));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
@@ -50,61 +94,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             _selectedMapping.Deactivate();
             Mappings.Remove(_selectedMapping);
-        }
-
-        public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
-        public MappingViewModel SelectedMapping
-        {
-            get => _selectedMapping;
-            set
-            {
-                if (_selectedMapping != value)
-                {
-                    _selectedMapping = value;
-                    RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
-                }
-            }
-        }
-        public bool IsAnyMappingSelected => _selectedMapping != null;
-        public bool CanAddMapping { get; private set; }
-
-        public ObservableCollection<string> Inputs
-        {
-            get
-            {
-                ObservableCollection<string> inputs = new();
-                var channels = HardwareInfo.GetInputChannels();
-                foreach (var channel in channels)
-                {
-                    inputs.Add(channel.ToString());
-                }
-                return inputs;
-            }
-        }
-        public ObservableCollection<string> Outputs
-        {
-            get
-            {
-                ObservableCollection<string> outputs = new();
-                var channels = HardwareInfo.GetOutputChannels();
-                foreach (var channel in channels)
-                {
-                    outputs.Add(channel.ToString());
-                }
-                return outputs;
-            }
-        }
-
-        public ObservableCollection<string> MappingTypes
-        {
-            get
-            {
-                ObservableCollection<string> mappingTypes = new();
-                mappingTypes.Add(MappingDTO.MappingType.Axis.ToString());
-                mappingTypes.Add(MappingDTO.MappingType.Button.ToString());
-                return mappingTypes;
-            }
         }
     }
 }
