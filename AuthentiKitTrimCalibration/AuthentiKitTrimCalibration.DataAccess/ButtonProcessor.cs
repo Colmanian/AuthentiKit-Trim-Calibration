@@ -45,11 +45,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
             VjdStat status = _joystick.GetVJDStatus(_vJoyId);
             if ((status == VjdStat.VJD_STAT_OWN) || ((status == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyId))))
             {
-                Console.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyId);
+                Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyId);
                 return;
             }
             else
-                Console.WriteLine("Acquired: vJoy device number {0}.", _vJoyId);
+                Debug.WriteLine("Acquired: vJoy device number {0}.", _vJoyId);
             _joystick.ResetVJD(_vJoyId);
         }
 

@@ -63,7 +63,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
             catch (ThreadInterruptedException e)
             {
                 Debug.WriteLine("Thread Interrupted Exception: {0}", _mapping.Name, e);
-                //TODO Clean Up
+                if (_axisProcessor != null)
+                {
+                    _axisProcessor.CleanUp();
+                }
             }
             catch (Exception e)
             {
@@ -77,19 +80,20 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             _mapping = mapping;
             Deactivate();
+            Debug.WriteLine("Activating MappingProcessor with type {0}", _mapping.Type);
             if (_mapping.Type == MappingDTO.MappingType.Button)
             {
-                if (_mapping.OutputChannel is OutputButton)
+                if (_mapping.OutputChannel is OutputButton outputButton)
                 {
-                    OutputButton outputButton = (OutputButton)_mapping.OutputChannel;
+                    Debug.WriteLine("so creating new Button Processor...");
                     _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
                 }
             }   
             else if (_mapping.Type == MappingDTO.MappingType.Axis)
             {
-                if (_mapping.OutputChannel is OutputAxis)
+                if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
-                    OutputAxis outputAxis = (OutputAxis)_mapping.OutputChannel;
+                    Debug.WriteLine("so creating new Axis Processor...");
                     _axisProcessor = new AxisProcessor(_mapping.Multiplier, outputAxis);
                 }
             }
