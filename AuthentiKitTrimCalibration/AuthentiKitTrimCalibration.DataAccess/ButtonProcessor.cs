@@ -59,26 +59,29 @@ namespace AuthentiKitTrimCalibration.DataAccess
             if (_priorState != buttonAState)
             {
                 // If button is now on
-                if (buttonAState && !_holdingOn)
+                if (buttonAState)
                 {
                     var timeSinceLast = elapsedMilliseconds - _priorButtonPressTime;
 
-                    // Pulse
-                    if (timeSinceLast > _holdThresholdStart)
+                    if (!_holdingOn)
                     {
-                        Debug.WriteLine("*********** PULSE ***********", timeSinceLast);
-                        _pulsesLeft = _multiplier;
-                        _pulseStartTime = elapsedMilliseconds;
-                        SetOutput(true);
-                        Debug.WriteLine("{0} ({1}ms)", _pulsesLeft, 0);
-                    }
-                    // Start Holding
-                    else
-                    {
-                        Debug.WriteLine("*********** HOLD ON *********** ({0}ms)", timeSinceLast);
-                        _holdingOn = true;
-                        SetOutput(true);
-                        _pulsesLeft = 0;
+                        // Pulse
+                        if (timeSinceLast > _holdThresholdStart)
+                        {
+                            Debug.WriteLine("*********** PULSE ***********", timeSinceLast);
+                            _pulsesLeft = _multiplier;
+                            _pulseStartTime = elapsedMilliseconds;
+                            SetOutput(true);
+                            Debug.WriteLine("{0} ({1}ms)", _pulsesLeft, 0);
+                        }
+                        // Start Holding
+                        else
+                        {
+                            Debug.WriteLine("*********** HOLD ON *********** ({0}ms)", timeSinceLast);
+                            _holdingOn = true;
+                            SetOutput(true);
+                            _pulsesLeft = 0;
+                        }
                     }
                     _priorButtonPressTime = elapsedMilliseconds;
                 }
