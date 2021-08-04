@@ -1,7 +1,7 @@
 ﻿
 namespace ATC_Windows_Forms_App
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,7 @@ namespace ATC_Windows_Forms_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.headerControl1 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.pnlNavigation = new System.Windows.Forms.Panel();
@@ -43,10 +44,12 @@ namespace ATC_Windows_Forms_App
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
             this.pnlMainArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -189,7 +192,7 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,13 +200,15 @@ namespace ATC_Windows_Forms_App
             this.Controls.Add(this.pnlMainArea);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Authentikit Trim Calibration";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlNavigation.ResumeLayout(false);
             this.pnlAddMapping.ResumeLayout(false);
             this.pnlMainArea.ResumeLayout(false);
             this.pnlMainArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +229,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.TextBox tbMultipler;
         private System.Windows.Forms.Button btnActivate;
         private Controls.HeaderControl headerControl1;
+        private System.Windows.Forms.BindingSource mappingBindingSource;
     }
 }
 

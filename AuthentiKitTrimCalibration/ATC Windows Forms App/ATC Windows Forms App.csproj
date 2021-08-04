@@ -7,6 +7,16 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.MappingProcessor.csproj" />
+    <ProjectReference Include="..\AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj" />
+    <ProjectReference Include="..\Mapping.Common\MappingManager.Common.csproj" />
+  </ItemGroup>
+
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
