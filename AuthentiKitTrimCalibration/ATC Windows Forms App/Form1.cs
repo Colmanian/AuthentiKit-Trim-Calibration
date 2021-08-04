@@ -16,30 +16,5 @@ namespace ATC_Windows_Forms_App
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlMainArea_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

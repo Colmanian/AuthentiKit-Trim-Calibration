@@ -122,7 +122,6 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Name = "pnlMainArea";
             this.pnlMainArea.Size = new System.Drawing.Size(915, 350);
             this.pnlMainArea.TabIndex = 2;
-            this.pnlMainArea.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainArea_Paint);
             // 
             // btnActivate
             // 
@@ -134,7 +133,6 @@ namespace ATC_Windows_Forms_App
             this.btnActivate.TabIndex = 6;
             this.btnActivate.Text = "Activate";
             this.btnActivate.UseVisualStyleBackColor = true;
-            this.btnActivate.Click += new System.EventHandler(this.button1_Click);
             // 
             // tbMultipler
             // 
@@ -172,7 +170,6 @@ namespace ATC_Windows_Forms_App
             this.lblMultiplier.Size = new System.Drawing.Size(58, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Multiplier";
-            this.lblMultiplier.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblMappingType
             // 
@@ -191,7 +188,6 @@ namespace ATC_Windows_Forms_App
             this.lblName.Size = new System.Drawing.Size(39, 15);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
-            this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
