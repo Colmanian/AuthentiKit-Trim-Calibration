@@ -46,8 +46,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
 
         public bool CanApply => !string.IsNullOrEmpty(Name);
-        public bool IsAxisMapping => Type == MappingDTO.MappingType.Axis.ToString();
-        public bool IsButtonMapping => Type == MappingDTO.MappingType.Button.ToString();
+        public bool IsAxisMapping => TypeId == MappingType.AXIS;
+        public bool IsButtonMapping => TypeId == MappingType.BUTTON;
 
         public string Name
         {
@@ -104,24 +104,16 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public string Type
+        public int TypeId
         {
-            get
-            {
-                return _mapping.Type.ToString();
-            }
+            get => _mapping.TypeId;
             set
             {
-                MappingDTO.MappingType enumValue = ParseEnum<MappingDTO.MappingType>(value);
-                if (_mapping.Type != enumValue)
+                if (_mapping.TypeId != value)
                 {
-                    Deactivate();
-                    _mapping.Type = enumValue;
+                    _mapping.TypeId = value;
                     RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(IsAxisMapping));
-                    RaisePropertyChanged(nameof(IsButtonMapping));
                 }
-                UpdateStatus();
             }
         }
         private InputChannel getInputChannelFromString(string value)

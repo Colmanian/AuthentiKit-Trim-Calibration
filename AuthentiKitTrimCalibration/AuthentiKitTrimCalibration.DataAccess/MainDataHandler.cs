@@ -19,7 +19,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 new MappingDTO
                 {
                   Name = "Elevator Trim Axis",
-                  Type = MappingDTO.MappingType.Axis,
+                  TypeId = MappingType.AXIS,
                   Active = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
@@ -29,7 +29,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 },new MappingDTO
                 {
                   Name = "Rudder Trim (Left)",
-                  Type = MappingDTO.MappingType.Button,
+                  TypeId = MappingType.BUTTON,
                   Active = false,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
@@ -40,7 +40,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 },new MappingDTO
                 {
                   Name = "Rudder Trim (Right)",
-                  Type = MappingDTO.MappingType.Button,
+                  TypeId = MappingType.BUTTON,
                   Active = true,
                   Errored = true,
                   InputChannelA = new InputChannel(),

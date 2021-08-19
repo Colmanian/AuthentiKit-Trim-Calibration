@@ -7,7 +7,7 @@ namespace MappingManager.Common.Model
         public MappingDTO()
         {
             Name = "";
-            Type = MappingType.Axis;
+            TypeId = 0;
             Active = false;
             OutputChannel = new();
             Multiplier = 1;
@@ -19,14 +19,9 @@ namespace MappingManager.Common.Model
             Errored = false;
             ErrorMessage = "";
         }
-        public enum MappingType
-        {
-            Button,
-            Axis
-        }
 
         public string Name { get; set; } // Both
-        public MappingType Type { get; set; } // Both
+        public int TypeId { get; set; } // Both
         public bool Active { get; set; } // Both
         public OutputChannel OutputChannel { get; set; } // Both
         public int Multiplier { get; set; } // Both

@@ -15,7 +15,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public ObservableCollection<string> OutputStrings;
         private IEnumerable<InputChannel> _inputChannels;
         private IEnumerable<OutputChannel> _outputChannels;
-        public ObservableCollection<string> MappingTypes;
+
+        public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public bool IsAnyMappingSelected => _selectedMapping != null;
         public bool CanAddMapping { get; private set; }
@@ -40,12 +41,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 OutputStrings.Add(channel.ToString());
             }
-
-            // Get the mapping types once on startup
-            MappingTypes = new();
-            MappingTypes.Add(MappingDTO.MappingType.Axis.ToString());
-            MappingTypes.Add(MappingDTO.MappingType.Button.ToString());
-
         }
         public MappingViewModel SelectedMapping
         {

@@ -33,6 +33,12 @@ namespace ATC_Windows_Forms_App
             tbName.DataBindings.Add("Text", mappingBindingSource, "Name",
                 false, DataSourceUpdateMode.OnPropertyChanged);
 
+            // Mapping Type
+            cbMappingType.DataSource = _viewModel.MappingTypes;
+            cbMappingType.ValueMember = "Name";
+            cbMappingType.ValueMember = "Id";
+            cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+
             // Activate Button
             btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
         }
