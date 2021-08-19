@@ -23,10 +23,18 @@ namespace ATC_Windows_Forms_App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Mapping selection on the Left
             _viewModel.LoadMappings();
             mappingBindingSource.DataSource = _viewModel.Mappings;
             lsbMappings.DataSource = mappingBindingSource;
             lsbMappings.DisplayMember = "Name";
+
+            // Mapping Name
+            tbName.DataBindings.Add("Text", mappingBindingSource, "Name",
+                false, DataSourceUpdateMode.OnPropertyChanged);
+
+            // Activate Button
+            btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
         }
     }
 }
