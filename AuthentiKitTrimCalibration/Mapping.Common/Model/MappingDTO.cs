@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace MappingManager.Common.Model
+﻿namespace MappingManager.Common.Model
 {
     public class MappingDTO
     {
         public MappingDTO()
         {
             Name = "";
-            TypeId = 0;
+            TypeId = MappingType.AXIS;
             Active = false;
             OutputChannel = new();
             Multiplier = 1;

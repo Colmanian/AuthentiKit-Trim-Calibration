@@ -21,7 +21,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             {
                 // Input Event Generation
                 var directInput = new DirectInput();
-                var inputGuid = _mapping.InputChannelA.Id;
+                var inputGuid = _mapping.InputChannelA.Guid;
                 var joystickA = new Joystick(directInput, inputGuid);
                 joystickA.Properties.BufferSize = 128;
                 joystickA.Acquire();

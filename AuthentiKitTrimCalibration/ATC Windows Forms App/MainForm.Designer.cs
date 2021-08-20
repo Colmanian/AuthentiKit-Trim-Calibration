@@ -37,6 +37,7 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping = new System.Windows.Forms.Panel();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.pnlMainArea = new System.Windows.Forms.Panel();
+            this.btnDeactivate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDeactivate = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
@@ -141,6 +141,16 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Size = new System.Drawing.Size(915, 444);
             this.pnlMainArea.TabIndex = 2;
             // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.Enabled = false;
+            this.btnDeactivate.Location = new System.Drawing.Point(472, 397);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(343, 30);
+            this.btnDeactivate.TabIndex = 14;
+            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.UseVisualStyleBackColor = true;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -168,7 +178,6 @@ namespace ATC_Windows_Forms_App
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 11;
             this.label2.Text = "Input Button -";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -178,7 +187,6 @@ namespace ATC_Windows_Forms_App
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "Input Button +";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbInputB
             // 
@@ -245,9 +253,9 @@ namespace ATC_Windows_Forms_App
             this.lblMultiplier.AutoSize = true;
             this.lblMultiplier.Location = new System.Drawing.Point(19, 288);
             this.lblMultiplier.Name = "lblMultiplier";
-            this.lblMultiplier.Size = new System.Drawing.Size(58, 15);
+            this.lblMultiplier.Size = new System.Drawing.Size(60, 15);
             this.lblMultiplier.TabIndex = 2;
-            this.lblMultiplier.Text = "Multiplier";
+            this.lblMultiplier.Text = "Sensitivity";
             // 
             // lblMappingType
             // 
@@ -266,16 +274,6 @@ namespace ATC_Windows_Forms_App
             this.lblName.Size = new System.Drawing.Size(39, 15);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
-            // 
-            // btnDeactivate
-            // 
-            this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(472, 397);
-            this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(343, 30);
-            this.btnDeactivate.TabIndex = 14;
-            this.btnDeactivate.Text = "Deactivate";
-            this.btnDeactivate.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

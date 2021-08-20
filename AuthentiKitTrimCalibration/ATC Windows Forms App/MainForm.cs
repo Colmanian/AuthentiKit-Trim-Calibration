@@ -60,22 +60,18 @@ namespace ATC_Windows_Forms_App
                 cbMappingType.ValueMember = "Id";
                 cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
 
+                // Input A
+                cbInputA.DataSource = _viewModel.InputChannels;
+                cbInputA.ValueMember = "DisplayString";
+                cbInputA.ValueMember = "Id";
+                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+
                 // Activate Button
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
             }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
         {
 
         }

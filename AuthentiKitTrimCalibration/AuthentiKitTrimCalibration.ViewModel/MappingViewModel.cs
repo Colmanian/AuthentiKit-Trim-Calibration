@@ -65,11 +65,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public static T ParseEnum<T>(string value)
-        {
-            return (T)Enum.Parse(typeof(T), value, true);
-        }
-
         public string Status
         {
             get
@@ -86,7 +81,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 return status;
             }
         }
-
         public string StatusColour
         {
             get
@@ -103,7 +97,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 return status;
             }
         }
-
         public int TypeId
         {
             get => _mapping.TypeId;
@@ -116,99 +109,41 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        private InputChannel getInputChannelFromString(string value)
+
+        public int InputAId
         {
-            InputChannel returnValue = new();
-            foreach (var channel in _inputs)
+            get => _mapping.InputChannelA.Id;
+            set
             {
-                if (value == channel.ToString())
+                if (_mapping.InputChannelA.Id != value)
                 {
-                    returnValue = channel;
-                    break;
+                    _mapping.InputChannelA.Id = value;
+                    RaisePropertyChanged();
                 }
             }
-            return returnValue;
-        }
-        private OutputChannel getOutputChannelFromString(string value)
-        {
-            OutputChannel returnValue = new();
-            foreach (var channel in _outputs)
-            {
-                if (value == channel.ToString())
-                {
-                    returnValue = channel;
-                    break;
-                }
-            }
-            return returnValue;
         }
 
-        public string InputA
+        public int InputBId
         {
-            get
-            {
-                if (_mapping.InputChannelA != null)
-                    return _mapping.InputChannelA.ToString();
-                else
-                    return "";
-            }
+            get => _mapping.InputChannelB.Id;
             set
             {
-                if (_mapping.InputChannelA != null)
+                if (_mapping.InputChannelB.Id != value)
                 {
-                    if (_mapping.InputChannelA.ToString() != value)
-                    {
-                        Deactivate();
-                        _mapping.InputChannelA = getInputChannelFromString(value);
-                        RaisePropertyChanged();
-                        UpdateStatus();
-                    }
+                    _mapping.InputChannelB.Id = value;
+                    RaisePropertyChanged();
                 }
             }
         }
-        public string InputB
+        public int OutputChannelId
         {
-            get
-            {
-                if (_mapping.InputChannelB != null)
-                    return _mapping.InputChannelB.ToString();
-                else
-                    return "";
-            }
+            get => _mapping.OutputChannel.Id;
             set
             {
-                if (_mapping.InputChannelB != null)
+                if (_mapping.OutputChannel.Id != value)
                 {
-                    if (_mapping.InputChannelB.ToString() != value)
-                    {
-                        Deactivate();
-                        _mapping.InputChannelB = getInputChannelFromString(value);
-                        RaisePropertyChanged();
-                        UpdateStatus();
-                    }
-                }
-            }
-        }
-        public string Output
-        {
-            get
-            {
-                if (_mapping.OutputChannel != null)
-                    return _mapping.OutputChannel.ToString();
-                else
-                    return "";
-            }
-            set
-            {
-                if (_mapping.OutputChannel != null)
-                {
-                    if (_mapping.OutputChannel.ToString() != value)
-                    {
-                        Deactivate();
-                        _mapping.OutputChannel = getOutputChannelFromString(value);
-                        RaisePropertyChanged();
-                        UpdateStatus();
-                    }
+                    _mapping.OutputChannel.Id = value;
+                    RaisePropertyChanged();
                 }
             }
         }

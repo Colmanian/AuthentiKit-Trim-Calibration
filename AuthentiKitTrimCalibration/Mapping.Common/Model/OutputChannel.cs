@@ -5,6 +5,7 @@ namespace MappingManager.Common.Model
     public class OutputChannel
     {
         public int Id { get; set; }
+        public int VJoyId { get; set; }
         public uint VJoyDevice { get; set; }
         public uint VJoyItem { get; set; }
     }

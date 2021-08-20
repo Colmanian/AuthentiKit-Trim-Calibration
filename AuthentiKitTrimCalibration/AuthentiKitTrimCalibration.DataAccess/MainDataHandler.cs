@@ -23,7 +23,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   Active = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputChannel = new OutputAxis(),
+                  OutputChannel = new OutputChannel(),
                   Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
@@ -33,7 +33,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   Active = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputChannel = new OutputAxis(),
+                  OutputChannel = new OutputChannel(),
                   Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
                   ResetCommand = "CTRL+T"
                 }

@@ -10,14 +10,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
     {
         private readonly int MAX_MAPPINGS = 20;
         private IMainDataHandler _mainDataHandler;
-        private MappingViewModel _selectedMapping;
-        public ObservableCollection<string> InputStrings;
-        public ObservableCollection<string> OutputStrings;
-        private IEnumerable<InputChannel> _inputChannels;
-        private IEnumerable<OutputChannel> _outputChannels;
-
-        public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
+        public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
+        public ObservableCollection<InputChannel> InputChannels = HardwareInfo.GetInputChannels();
+        public ObservableCollection<OutputChannel> OutputChannels = HardwareInfo.GetOutputChannels();
+
+        private MappingViewModel _selectedMapping;
         public bool IsAnyMappingSelected => _selectedMapping != null;
         public bool CanAddMapping { get; private set; }
 
@@ -25,22 +23,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             _mainDataHandler = new MainDataHandler();
             CanAddMapping = true;
-
-            // Get the input list once on startup
-            InputStrings = new();
-            _inputChannels = HardwareInfo.GetInputChannels();
-            foreach (var channel in _inputChannels)
-            {
-                InputStrings.Add(channel.ToString());
-            }
-
-            // Get the output list once on startup
-            OutputStrings = new();
-            _outputChannels = HardwareInfo.GetOutputChannels();
-            foreach (var channel in _outputChannels)
-            {
-                OutputStrings.Add(channel.ToString());
-            }
         }
         public MappingViewModel SelectedMapping
         {
@@ -70,14 +52,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
             var mappings = _mainDataHandler.LoadMappings();
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, _inputChannels, _outputChannels));
+                Mappings.Add(new MappingViewModel(mapping, InputChannels, OutputChannels));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), _inputChannels, _outputChannels));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), InputChannels, OutputChannels));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
