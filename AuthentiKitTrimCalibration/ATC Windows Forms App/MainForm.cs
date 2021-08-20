@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,24 +24,46 @@ namespace ATC_Windows_Forms_App
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Mapping selection on the Left
             _viewModel.LoadMappings();
+            LoadFormData();
+        }
+
+
+        private void btnAddMapping_Click(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Adding New mapping"); /// You're trying to get this function working
+            _viewModel.NewMapping();
+            LoadFormData();
+        }
+
+        private void LoadFormData()
+        {
+            // Mapping selection on the Left
             mappingBindingSource.DataSource = _viewModel.Mappings;
             lsbMappings.DataSource = mappingBindingSource;
             lsbMappings.DisplayMember = "Name";
 
-            // Mapping Name
-            tbName.DataBindings.Add("Text", mappingBindingSource, "Name",
-                false, DataSourceUpdateMode.OnPropertyChanged);
+            var dataBindingsInitalised = (tbName.DataBindings.Count > 0) ||
+                (cbMappingType.DataBindings.Count > 0) ||
+                (btnActivate.DataBindings.Count > 0);
+            if (dataBindingsInitalised)
+            {
+                mappingBindingSource.ResetBindings(false);
+            }
+            else {
+                // Mapping Name
+                tbName.DataBindings.Add("Text", mappingBindingSource, "Name",
+                    false, DataSourceUpdateMode.OnPropertyChanged);
 
-            // Mapping Type
-            cbMappingType.DataSource = _viewModel.MappingTypes;
-            cbMappingType.ValueMember = "Name";
-            cbMappingType.ValueMember = "Id";
-            cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+                // Mapping Type
+                cbMappingType.DataSource = _viewModel.MappingTypes;
+                cbMappingType.ValueMember = "Name";
+                cbMappingType.ValueMember = "Id";
+                cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
 
-            // Activate Button
-            btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+                // Activate Button
+                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+            }
         }
     }
 }

@@ -31,7 +31,6 @@ namespace ATC_Windows_Forms_App
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.headerControl1 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -45,6 +44,7 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
@@ -54,21 +54,12 @@ namespace ATC_Windows_Forms_App
             // 
             // pnlHeader
             // 
-            this.pnlHeader.Controls.Add(this.headerControl1);
+            this.pnlHeader.Controls.Add(this.headerControl2);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1157, 100);
             this.pnlHeader.TabIndex = 0;
-            // 
-            // headerControl1
-            // 
-            this.headerControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.headerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headerControl1.Location = new System.Drawing.Point(0, 0);
-            this.headerControl1.Name = "headerControl1";
-            this.headerControl1.Size = new System.Drawing.Size(1157, 100);
-            this.headerControl1.TabIndex = 0;
             // 
             // pnlNavigation
             // 
@@ -109,6 +100,7 @@ namespace ATC_Windows_Forms_App
             this.btnAddMapping.TabIndex = 0;
             this.btnAddMapping.Text = "Add Mapping";
             this.btnAddMapping.UseVisualStyleBackColor = true;
+            this.btnAddMapping.Click += new System.EventHandler(this.btnAddMapping_Click);
             // 
             // pnlMainArea
             // 
@@ -150,6 +142,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.cbMappingType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMappingType.FormattingEnabled = true;
             this.cbMappingType.Location = new System.Drawing.Point(19, 92);
             this.cbMappingType.Name = "cbMappingType";
@@ -192,6 +185,15 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
+            // headerControl2
+            // 
+            this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.headerControl2.Location = new System.Drawing.Point(0, 0);
+            this.headerControl2.Name = "headerControl2";
+            this.headerControl2.Size = new System.Drawing.Size(1157, 100);
+            this.headerControl2.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -230,6 +232,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Button btnActivate;
         private Controls.HeaderControl headerControl1;
         private System.Windows.Forms.BindingSource mappingBindingSource;
+        private Controls.HeaderControl headerControl2;
     }
 }
 

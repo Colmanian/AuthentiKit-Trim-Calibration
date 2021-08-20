@@ -16,10 +16,5 @@ namespace ATC_Windows_Forms_App.Controls
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

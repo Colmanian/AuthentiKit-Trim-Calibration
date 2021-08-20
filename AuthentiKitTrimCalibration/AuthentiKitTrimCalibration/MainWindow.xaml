@@ -65,8 +65,8 @@
 
             <TextBox Grid.Row="1" Header="Name" Margin="10"
                      Text="{x:Bind MainViewModel.SelectedMapping.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <ComboBox Grid.Row="2" Header="MappingType" ItemsSource="{x:Bind MainViewModel.MappingTypes}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
-
+            <!-- <ComboBox Grid.Row="2" Header="MappingType" ItemsSource="{x:Bind MainViewModel.MappingTypes}" SelectedItem="{x:Bind MainViewModel.SelectedMapping.Type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10" HorizontalAlignment="Stretch"/>
+                -->
             <!-- Axis Mapping -->
             <TextBlock Grid.Row="3" Margin="10" Text="Axis Map Settings" FontWeight="Bold" Visibility="{x:Bind MainViewModel.SelectedMapping.IsAxisMapping, Mode=OneWay}"/>
             <StackPanel Grid.Row="4" Margin="10" Visibility="{x:Bind MainViewModel.SelectedMapping.IsAxisMapping, Mode=OneWay}">
