@@ -10,7 +10,7 @@ namespace MappingManager.Common.Model
     public class MappingType
     {
         public const int AXIS = 0;
-        public const int BUTTON = 1;
+        public const int BUTTON = 1; // Just support axis for now
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -25,7 +25,7 @@ namespace MappingManager.Common.Model
         {
             ObservableCollection<MappingType> types = new();
             types.Add(new MappingType(AXIS, "Axis"));
-            types.Add(new MappingType(BUTTON, "Button"));
+            // types.Add(new MappingType(BUTTON, "Button")); // Just support axis for now
             return types;
         }
     }

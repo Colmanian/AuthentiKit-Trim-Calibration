@@ -64,5 +64,40 @@ namespace ATC_Windows_Forms_App
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
             }
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbMultipler_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,27 +28,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                   ResetCommand = "CTRL+T"
                 },new MappingDTO
                 {
-                  Name = "Rudder Trim (Left)",
-                  TypeId = MappingType.BUTTON,
-                  Active = false,
-                  InputChannelA = new InputChannel(),
-                  InputChannelB = new InputChannel(),
-                  OutputChannel = new OutputButton(),
-                  Multiplier = 3,
-                  HoldThresholdStart = 500,
-                  HoldThresholdStop = 200
-                },new MappingDTO
-                {
-                  Name = "Rudder Trim (Right)",
-                  TypeId = MappingType.BUTTON,
+                  Name = "Rudder Trim Axis",
+                  TypeId = MappingType.AXIS,
                   Active = true,
-                  Errored = true,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
-                  OutputChannel = new OutputButton(),
-                  Multiplier = 3,
-                  HoldThresholdStart = 500,
-                  HoldThresholdStop = 200
+                  OutputChannel = new OutputAxis(),
+                  Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
+                  ResetCommand = "CTRL+T"
                 }
             };
         }
