@@ -52,8 +52,7 @@ namespace ATC_Windows_Forms_App
             }
             else {
                 // Mapping Name
-                tbName.DataBindings.Add("Text", mappingBindingSource, "Name",
-                    false, DataSourceUpdateMode.OnPropertyChanged);
+                tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
 
                 // Mapping Type
                 cbMappingType.DataSource = _viewModel.MappingTypes;

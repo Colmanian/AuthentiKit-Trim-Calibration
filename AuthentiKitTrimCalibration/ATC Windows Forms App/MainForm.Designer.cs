@@ -31,6 +31,7 @@ namespace ATC_Windows_Forms_App
         {
             this.components = new System.ComponentModel.Container();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -39,12 +40,11 @@ namespace ATC_Windows_Forms_App
             this.btnActivate = new System.Windows.Forms.Button();
             this.tbMultipler = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
-            this.tbName = new System.Windows.Forms.TextBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
@@ -60,6 +60,15 @@ namespace ATC_Windows_Forms_App
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1157, 100);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // headerControl2
+            // 
+            this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.headerControl2.Location = new System.Drawing.Point(0, 0);
+            this.headerControl2.Name = "headerControl2";
+            this.headerControl2.Size = new System.Drawing.Size(1157, 100);
+            this.headerControl2.TabIndex = 0;
             // 
             // pnlNavigation
             // 
@@ -106,10 +115,10 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainArea.Controls.Add(this.tbName);
             this.pnlMainArea.Controls.Add(this.btnActivate);
             this.pnlMainArea.Controls.Add(this.tbMultipler);
             this.pnlMainArea.Controls.Add(this.cbMappingType);
-            this.pnlMainArea.Controls.Add(this.tbName);
             this.pnlMainArea.Controls.Add(this.lblMultiplier);
             this.pnlMainArea.Controls.Add(this.lblMappingType);
             this.pnlMainArea.Controls.Add(this.lblName);
@@ -149,15 +158,6 @@ namespace ATC_Windows_Forms_App
             this.cbMappingType.Size = new System.Drawing.Size(868, 23);
             this.cbMappingType.TabIndex = 4;
             // 
-            // tbName
-            // 
-            this.tbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbName.Location = new System.Drawing.Point(19, 37);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(868, 23);
-            this.tbName.TabIndex = 3;
-            // 
             // lblMultiplier
             // 
             this.lblMultiplier.AutoSize = true;
@@ -185,14 +185,12 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // headerControl2
+            // tbName
             // 
-            this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headerControl2.Location = new System.Drawing.Point(0, 0);
-            this.headerControl2.Name = "headerControl2";
-            this.headerControl2.Size = new System.Drawing.Size(1157, 100);
-            this.headerControl2.TabIndex = 0;
+            this.tbName.Location = new System.Drawing.Point(19, 36);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(868, 23);
+            this.tbName.TabIndex = 7;
             // 
             // MainForm
             // 
@@ -227,12 +225,12 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.ComboBox cbMappingType;
-        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbMultipler;
         private System.Windows.Forms.Button btnActivate;
         private Controls.HeaderControl headerControl1;
         private System.Windows.Forms.BindingSource mappingBindingSource;
         private Controls.HeaderControl headerControl2;
+        private System.Windows.Forms.TextBox tbName;
     }
 }
 
