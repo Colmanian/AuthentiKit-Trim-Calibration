@@ -30,7 +30,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                   Name = "Rudder Trim Axis",
                   TypeId = MappingType.AXIS,
-                  Active = true,
+                  Active = false,
                   InputChannelA = new InputChannel(),
                   InputChannelB = new InputChannel(),
                   OutputChannel = new OutputChannel(),

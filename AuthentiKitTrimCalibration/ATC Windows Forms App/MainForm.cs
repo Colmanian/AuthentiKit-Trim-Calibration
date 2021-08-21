@@ -84,6 +84,9 @@ namespace ATC_Windows_Forms_App
 
                 // Activate Button
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+
+                // Panel Activation
+                pnlMainArea.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
             }
         }
 
