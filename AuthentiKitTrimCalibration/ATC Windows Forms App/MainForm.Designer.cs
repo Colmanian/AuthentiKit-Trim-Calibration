@@ -271,6 +271,7 @@ namespace ATC_Windows_Forms_App
             this.btnDeactivate.TabIndex = 14;
             this.btnDeactivate.Text = "Deactivate";
             this.btnDeactivate.UseVisualStyleBackColor = true;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
             // 
             // btnActivate
             // 
@@ -307,6 +308,7 @@ namespace ATC_Windows_Forms_App
             this.MinimumSize = new System.Drawing.Size(665, 560);
             this.Name = "MainForm";
             this.Text = "Authentikit Trim Calibration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlHeader.ResumeLayout(false);
             this.pnlNavigation.ResumeLayout(false);

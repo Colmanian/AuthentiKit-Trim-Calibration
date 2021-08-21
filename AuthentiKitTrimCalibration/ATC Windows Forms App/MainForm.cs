@@ -50,7 +50,8 @@ namespace ATC_Windows_Forms_App
             {
                 mappingBindingSource.ResetBindings(false);
             }
-            else {
+            else
+            {
                 // Mapping Name
                 tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
 
@@ -77,7 +78,7 @@ namespace ATC_Windows_Forms_App
                 cbOutput.ValueMember = "Name";
                 cbOutput.ValueMember = "Id";
                 cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelId");
-                
+
                 // Multiplier
                 tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");
 
@@ -96,5 +97,14 @@ namespace ATC_Windows_Forms_App
 
         }
 
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _viewModel.Stop();
+        }
     }
 }
