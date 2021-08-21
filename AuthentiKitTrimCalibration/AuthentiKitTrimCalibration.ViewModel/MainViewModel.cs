@@ -12,7 +12,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private IMainDataHandler _mainDataHandler;
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
-        public ObservableCollection<InputChannel> InputChannels = HardwareInfo.GetInputChannels();
+        public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
+        public ObservableCollection<InputChannel> InputChannelsB = HardwareInfo.GetInputChannels();
         public ObservableCollection<OutputChannel> OutputChannels = HardwareInfo.GetOutputChannels();
 
         private MappingViewModel _selectedMapping;
@@ -44,7 +45,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 mapping.Deactivate();
             }
         }
-
         public void LoadMappings()
         {
             Stop();
@@ -52,14 +52,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
             var mappings = _mainDataHandler.LoadMappings();
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, InputChannels, OutputChannels));
+                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, OutputChannels));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), InputChannels, OutputChannels));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), InputChannelsA, OutputChannels));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)

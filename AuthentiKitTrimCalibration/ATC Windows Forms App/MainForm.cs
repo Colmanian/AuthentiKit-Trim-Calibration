@@ -61,29 +61,26 @@ namespace ATC_Windows_Forms_App
                 cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
 
                 // Input A
-                cbInputA.DataSource = _viewModel.InputChannels;
-                cbInputA.ValueMember = "DisplayString";
+                cbInputA.DataSource = _viewModel.InputChannelsA;
+                cbInputA.ValueMember = "Name";
                 cbInputA.ValueMember = "Id";
-                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAId");
+
+                // Input B
+                cbInputB.DataSource = _viewModel.InputChannelsB;
+                cbInputB.ValueMember = "Name";
+                cbInputB.ValueMember = "Id";
+                cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBId");
+
+                // Output
+                cbOutput.DataSource = _viewModel.OutputChannels;
+                cbOutput.ValueMember = "Name";
+                cbOutput.ValueMember = "Id";
+                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelId");
 
                 // Activate Button
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
             }
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void tbMultipler_TextChanged(object sender, EventArgs e)
@@ -95,5 +92,6 @@ namespace ATC_Windows_Forms_App
         {
 
         }
+
     }
 }

@@ -22,6 +22,7 @@
         public int TypeId { get; set; } // Both
         public bool Active { get; set; } // Both
         public OutputChannel OutputChannel { get; set; } // Both
+        public int OutputChannelId { get; set; } // Both
         public int Multiplier { get; set; } // Both
         public InputChannel InputChannelA { get; set; } // Both
         public InputChannel InputChannelB { get; set; } // Axis Only

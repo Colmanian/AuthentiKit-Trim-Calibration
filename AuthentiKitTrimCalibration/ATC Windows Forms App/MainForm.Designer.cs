@@ -168,7 +168,7 @@ namespace ATC_Windows_Forms_App
             this.cbOutput.Name = "cbOutput";
             this.cbOutput.Size = new System.Drawing.Size(868, 23);
             this.cbOutput.TabIndex = 12;
-            this.cbOutput.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+
             // 
             // label2
             // 
@@ -187,16 +187,19 @@ namespace ATC_Windows_Forms_App
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "Input Button +";
+
             // 
-            // cbInputB
+            // cbMappingType
             // 
-            this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputB.FormattingEnabled = true;
-            this.cbInputB.Location = new System.Drawing.Point(19, 208);
-            this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(868, 23);
-            this.cbInputB.TabIndex = 9;
-            this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cbMappingType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMappingType.FormattingEnabled = true;
+            this.cbMappingType.Location = new System.Drawing.Point(19, 90);
+            this.cbMappingType.Name = "cbMappingType";
+            this.cbMappingType.Size = new System.Drawing.Size(868, 23);
+            this.cbMappingType.TabIndex = 4;
+            
             // 
             // cbInputA
             // 
@@ -206,7 +209,17 @@ namespace ATC_Windows_Forms_App
             this.cbInputA.Name = "cbInputA";
             this.cbInputA.Size = new System.Drawing.Size(868, 23);
             this.cbInputA.TabIndex = 8;
-            this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+
+            // 
+            // cbInputB
+            // 
+            this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputB.FormattingEnabled = true;
+            this.cbInputB.Location = new System.Drawing.Point(19, 208);
+            this.cbInputB.Name = "cbInputB";
+            this.cbInputB.Size = new System.Drawing.Size(868, 23);
+            this.cbInputB.TabIndex = 9;
+
             // 
             // tbName
             // 
@@ -236,17 +249,7 @@ namespace ATC_Windows_Forms_App
             this.tbMultipler.Size = new System.Drawing.Size(869, 23);
             this.tbMultipler.TabIndex = 5;
             this.tbMultipler.TextChanged += new System.EventHandler(this.tbMultipler_TextChanged);
-            // 
-            // cbMappingType
-            // 
-            this.cbMappingType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMappingType.FormattingEnabled = true;
-            this.cbMappingType.Location = new System.Drawing.Point(19, 90);
-            this.cbMappingType.Name = "cbMappingType";
-            this.cbMappingType.Size = new System.Drawing.Size(868, 23);
-            this.cbMappingType.TabIndex = 4;
+            
             // 
             // lblMultiplier
             // 

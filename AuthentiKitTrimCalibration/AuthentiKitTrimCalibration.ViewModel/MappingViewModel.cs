@@ -3,6 +3,8 @@ using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -10,13 +12,13 @@ namespace AuthentiKitTrimCalibration.ViewModel
     {
         private IMappingProcessor _mappingProcessor;
         private MappingDTO _mapping;
-        private readonly IEnumerable<InputChannel> _inputs;
-        private readonly IEnumerable<OutputChannel> _outputs;
+        private ObservableCollection<InputChannel> InputChannels;
+        private ObservableCollection<OutputChannel> OutputChannels;
 
-        public MappingViewModel(MappingDTO mapping, IEnumerable<InputChannel> inputs, IEnumerable<OutputChannel> outputs)
+        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputs, ObservableCollection<OutputChannel> outputs)
         {
-            _inputs = inputs;
-            _outputs = outputs;
+            InputChannels = inputs;
+            OutputChannels = outputs;
             _mappingProcessor = new MappingProcessor();
             _mapping = mapping;
             Deactivate();
@@ -110,27 +112,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public int InputAId
+        public int InputChannelAId
         {
             get => _mapping.InputChannelA.Id;
             set
             {
                 if (_mapping.InputChannelA.Id != value)
                 {
-                    _mapping.InputChannelA.Id = value;
+                    _mapping.InputChannelA = GetInputChannel(value);
                     RaisePropertyChanged();
                 }
             }
         }
 
-        public int InputBId
+        public int InputChannelBId
         {
             get => _mapping.InputChannelB.Id;
             set
             {
                 if (_mapping.InputChannelB.Id != value)
                 {
-                    _mapping.InputChannelB.Id = value;
+                    _mapping.InputChannelB = GetInputChannel(value);
                     RaisePropertyChanged();
                 }
             }
@@ -142,10 +144,35 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (_mapping.OutputChannel.Id != value)
                 {
-                    _mapping.OutputChannel.Id = value;
+                    _mapping.OutputChannel = GetOutputChannel(value);
                     RaisePropertyChanged();
                 }
             }
+        }
+        private InputChannel GetInputChannel(int id)
+        {
+            Debug.WriteLine("Getting input for id " + id);
+            for (int i = 0; i < InputChannels.Count; i++)
+            {
+                if (id == InputChannels[i].Id)
+                {
+                    Debug.WriteLine("Found " + InputChannels[i]);
+                    return InputChannels[i];
+                }
+            }
+            Debug.WriteLine("Not Found anything");
+            return new InputChannel();
+        }
+        private OutputChannel GetOutputChannel(int id)
+        {
+            for (int i = 0; i < OutputChannels.Count; i++)
+            {
+                if (id == OutputChannels[i].Id)
+                {
+                    return OutputChannels[i];
+                }
+            }
+            return new OutputChannel();
         }
 
         public int Multiplier

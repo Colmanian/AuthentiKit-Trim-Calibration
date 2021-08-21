@@ -21,7 +21,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     var buttons = joystick.Capabilities.ButtonCount;
                     for (int i = 0; i < buttons; i++)
                     {
-                        inputChannels.Add(item: new InputChannel { Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, DisplayString = string.Format(d.InstanceName + ": Button " + (i + 1)) });
+                        inputChannels.Add(item: new InputChannel { Id = i, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) }); ;
                     }
                 }
             }
@@ -39,7 +39,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Buttons
                 for (uint b = 1; b <= joystick.GetVJDButtonNumber(vjoy_id); b++)
                 {
-                    outputChannels.Add(new OutputButton { VJoyId = output_id, VJoyDevice = vjoy_id, VJoyItem = b });
+                    outputChannels.Add(new OutputButton {Id = (int)b, VJoyId = output_id, VJoyDevice = vjoy_id, VJoyItem = b, Name = string.Format("vJoy " + vjoy_id + ": Axis " + (OutputAxis.AxisId)b) });
                 }
 
                 // Axes
