@@ -37,7 +37,6 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping = new System.Windows.Forms.Panel();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.pnlMainArea = new System.Windows.Forms.Panel();
-            this.btnDeactivate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,18 +44,21 @@ namespace ATC_Windows_Forms_App
             this.cbInputB = new System.Windows.Forms.ComboBox();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.btnActivate = new System.Windows.Forms.Button();
             this.tbMultipler = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.btnDeactivate = new System.Windows.Forms.Button();
+            this.btnActivate = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
             this.pnlMainArea.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -122,7 +124,6 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMainArea.Controls.Add(this.btnDeactivate);
             this.pnlMainArea.Controls.Add(this.label3);
             this.pnlMainArea.Controls.Add(this.cbOutput);
             this.pnlMainArea.Controls.Add(this.label2);
@@ -130,7 +131,6 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Controls.Add(this.cbInputB);
             this.pnlMainArea.Controls.Add(this.cbInputA);
             this.pnlMainArea.Controls.Add(this.tbName);
-            this.pnlMainArea.Controls.Add(this.btnActivate);
             this.pnlMainArea.Controls.Add(this.tbMultipler);
             this.pnlMainArea.Controls.Add(this.cbMappingType);
             this.pnlMainArea.Controls.Add(this.lblMultiplier);
@@ -138,18 +138,8 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Controls.Add(this.lblName);
             this.pnlMainArea.Location = new System.Drawing.Point(242, 100);
             this.pnlMainArea.Name = "pnlMainArea";
-            this.pnlMainArea.Size = new System.Drawing.Size(915, 444);
+            this.pnlMainArea.Size = new System.Drawing.Size(915, 345);
             this.pnlMainArea.TabIndex = 2;
-            // 
-            // btnDeactivate
-            // 
-            this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(472, 397);
-            this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(343, 30);
-            this.btnDeactivate.TabIndex = 14;
-            this.btnDeactivate.Text = "Deactivate";
-            this.btnDeactivate.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -162,13 +152,14 @@ namespace ATC_Windows_Forms_App
             // 
             // cbOutput
             // 
+            this.cbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutput.FormattingEnabled = true;
             this.cbOutput.Location = new System.Drawing.Point(19, 257);
             this.cbOutput.Name = "cbOutput";
             this.cbOutput.Size = new System.Drawing.Size(868, 23);
             this.cbOutput.TabIndex = 12;
-
             // 
             // label2
             // 
@@ -187,58 +178,37 @@ namespace ATC_Windows_Forms_App
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "Input Button +";
-
-            // 
-            // cbMappingType
-            // 
-            this.cbMappingType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMappingType.FormattingEnabled = true;
-            this.cbMappingType.Location = new System.Drawing.Point(19, 90);
-            this.cbMappingType.Name = "cbMappingType";
-            this.cbMappingType.Size = new System.Drawing.Size(868, 23);
-            this.cbMappingType.TabIndex = 4;
-            
-            // 
-            // cbInputA
-            // 
-            this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputA.FormattingEnabled = true;
-            this.cbInputA.Location = new System.Drawing.Point(19, 159);
-            this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(868, 23);
-            this.cbInputA.TabIndex = 8;
-
             // 
             // cbInputB
             // 
+            this.cbInputB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(19, 208);
             this.cbInputB.Name = "cbInputB";
             this.cbInputB.Size = new System.Drawing.Size(868, 23);
             this.cbInputB.TabIndex = 9;
-
+            // 
+            // cbInputA
+            // 
+            this.cbInputA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputA.FormattingEnabled = true;
+            this.cbInputA.Location = new System.Drawing.Point(19, 159);
+            this.cbInputA.Name = "cbInputA";
+            this.cbInputA.Size = new System.Drawing.Size(868, 23);
+            this.cbInputA.TabIndex = 8;
             // 
             // tbName
             // 
+            this.tbName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbName.Location = new System.Drawing.Point(19, 36);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(868, 23);
             this.tbName.TabIndex = 7;
-            // 
-            // btnActivate
-            // 
-            this.btnActivate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActivate.Location = new System.Drawing.Point(100, 397);
-            this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(343, 30);
-            this.btnActivate.TabIndex = 6;
-            this.btnActivate.Text = "Activate";
-            this.btnActivate.UseVisualStyleBackColor = true;
-            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
             // tbMultipler
             // 
@@ -249,7 +219,17 @@ namespace ATC_Windows_Forms_App
             this.tbMultipler.Size = new System.Drawing.Size(869, 23);
             this.tbMultipler.TabIndex = 5;
             this.tbMultipler.TextChanged += new System.EventHandler(this.tbMultipler_TextChanged);
-            
+            // 
+            // cbMappingType
+            // 
+            this.cbMappingType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMappingType.FormattingEnabled = true;
+            this.cbMappingType.Location = new System.Drawing.Point(19, 90);
+            this.cbMappingType.Name = "cbMappingType";
+            this.cbMappingType.Size = new System.Drawing.Size(868, 23);
+            this.cbMappingType.TabIndex = 4;
             // 
             // lblMultiplier
             // 
@@ -278,11 +258,45 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeactivate.Enabled = false;
+            this.btnDeactivate.Location = new System.Drawing.Point(447, 11);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
+            this.btnDeactivate.TabIndex = 14;
+            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.UseVisualStyleBackColor = true;
+            // 
+            // btnActivate
+            // 
+            this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnActivate.Location = new System.Drawing.Point(297, 11);
+            this.btnActivate.Name = "btnActivate";
+            this.btnActivate.Size = new System.Drawing.Size(131, 29);
+            this.btnActivate.TabIndex = 6;
+            this.btnActivate.Text = "Activate";
+            this.btnActivate.UseVisualStyleBackColor = true;
+            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.btnDeactivate);
+            this.panel1.Controls.Add(this.btnActivate);
+            this.panel1.Location = new System.Drawing.Point(242, 492);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(915, 52);
+            this.panel1.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 544);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMainArea);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
@@ -295,6 +309,7 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.ResumeLayout(false);
             this.pnlMainArea.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -324,6 +339,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbOutput;
         private System.Windows.Forms.Button btnDeactivate;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
