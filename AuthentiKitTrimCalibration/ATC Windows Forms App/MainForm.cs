@@ -85,24 +85,30 @@ namespace ATC_Windows_Forms_App
                 // Activate Button
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
 
+                // Deactivate Button
+                btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
+
                 // Panel Activation
                 pnlMainArea.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
             }
         }
 
-        private void tbMultipler_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnActivate_Click(object sender, EventArgs e)
         {
-
+            if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                && mappingViewModel.Deactivated)
+            {
+                mappingViewModel.Activate();
+            }
         }
 
         private void btnDeactivate_Click(object sender, EventArgs e)
         {
-
+            if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                && mappingViewModel.Activated)
+            {
+                mappingViewModel.Deactivate();
+            }
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)

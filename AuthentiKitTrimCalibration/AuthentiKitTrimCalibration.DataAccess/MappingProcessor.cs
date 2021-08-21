@@ -83,6 +83,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("Activating MappingProcessor with type {0}", _mapping.TypeId);
             if (_mapping.TypeId == MappingType.BUTTON)
             {
+                Debug.WriteLine("Which means button, and the output channel is " + _mapping.OutputChannel.Name);
                 if (_mapping.OutputChannel is OutputButton outputButton)
                 {
                     Debug.WriteLine("so creating new Button Processor...");
@@ -91,6 +92,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }   
             else if (_mapping.TypeId == MappingType.AXIS)
             {
+                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("so creating new Axis Processor...");
