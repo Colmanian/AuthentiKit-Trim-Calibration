@@ -77,6 +77,9 @@ namespace ATC_Windows_Forms_App
                 cbOutput.ValueMember = "Name";
                 cbOutput.ValueMember = "Id";
                 cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelId");
+                
+                // Multiplier
+                tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");
 
                 // Activate Button
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");

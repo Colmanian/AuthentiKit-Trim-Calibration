@@ -37,6 +37,7 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping = new System.Windows.Forms.Panel();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.pnlMainArea = new System.Windows.Forms.Panel();
+            this.tbMultiplier = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace ATC_Windows_Forms_App
             this.cbInputB = new System.Windows.Forms.ComboBox();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.tbMultipler = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblMappingType = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
             this.pnlMainArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace ATC_Windows_Forms_App
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1157, 100);
+            this.pnlHeader.Size = new System.Drawing.Size(649, 100);
             this.pnlHeader.TabIndex = 0;
             // 
             // headerControl2
@@ -76,7 +77,7 @@ namespace ATC_Windows_Forms_App
             this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.headerControl2.Location = new System.Drawing.Point(0, 0);
             this.headerControl2.Name = "headerControl2";
-            this.headerControl2.Size = new System.Drawing.Size(1157, 100);
+            this.headerControl2.Size = new System.Drawing.Size(649, 100);
             this.headerControl2.TabIndex = 0;
             // 
             // pnlNavigation
@@ -86,7 +87,7 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.Location = new System.Drawing.Point(0, 100);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(242, 444);
+            this.pnlNavigation.Size = new System.Drawing.Size(242, 421);
             this.pnlNavigation.TabIndex = 1;
             // 
             // lsbMappings
@@ -96,14 +97,14 @@ namespace ATC_Windows_Forms_App
             this.lsbMappings.ItemHeight = 15;
             this.lsbMappings.Location = new System.Drawing.Point(0, 0);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(242, 381);
+            this.lsbMappings.Size = new System.Drawing.Size(242, 358);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
             // 
             this.pnlAddMapping.Controls.Add(this.btnAddMapping);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddMapping.Location = new System.Drawing.Point(0, 381);
+            this.pnlAddMapping.Location = new System.Drawing.Point(0, 358);
             this.pnlAddMapping.Name = "pnlAddMapping";
             this.pnlAddMapping.Size = new System.Drawing.Size(242, 63);
             this.pnlAddMapping.TabIndex = 0;
@@ -124,6 +125,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainArea.Controls.Add(this.tbMultiplier);
             this.pnlMainArea.Controls.Add(this.label3);
             this.pnlMainArea.Controls.Add(this.cbOutput);
             this.pnlMainArea.Controls.Add(this.label2);
@@ -131,15 +133,26 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Controls.Add(this.cbInputB);
             this.pnlMainArea.Controls.Add(this.cbInputA);
             this.pnlMainArea.Controls.Add(this.tbName);
-            this.pnlMainArea.Controls.Add(this.tbMultipler);
             this.pnlMainArea.Controls.Add(this.cbMappingType);
             this.pnlMainArea.Controls.Add(this.lblMultiplier);
             this.pnlMainArea.Controls.Add(this.lblMappingType);
             this.pnlMainArea.Controls.Add(this.lblName);
             this.pnlMainArea.Location = new System.Drawing.Point(242, 100);
             this.pnlMainArea.Name = "pnlMainArea";
-            this.pnlMainArea.Size = new System.Drawing.Size(915, 345);
+            this.pnlMainArea.Size = new System.Drawing.Size(407, 345);
             this.pnlMainArea.TabIndex = 2;
+            // 
+            // tbMultiplier
+            // 
+            this.tbMultiplier.Location = new System.Drawing.Point(19, 307);
+            this.tbMultiplier.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tbMultiplier.Name = "tbMultiplier";
+            this.tbMultiplier.Size = new System.Drawing.Size(360, 23);
+            this.tbMultiplier.TabIndex = 14;
             // 
             // label3
             // 
@@ -158,7 +171,7 @@ namespace ATC_Windows_Forms_App
             this.cbOutput.FormattingEnabled = true;
             this.cbOutput.Location = new System.Drawing.Point(19, 257);
             this.cbOutput.Name = "cbOutput";
-            this.cbOutput.Size = new System.Drawing.Size(868, 23);
+            this.cbOutput.Size = new System.Drawing.Size(360, 23);
             this.cbOutput.TabIndex = 12;
             // 
             // label2
@@ -187,7 +200,7 @@ namespace ATC_Windows_Forms_App
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(19, 208);
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(868, 23);
+            this.cbInputB.Size = new System.Drawing.Size(360, 23);
             this.cbInputB.TabIndex = 9;
             // 
             // cbInputA
@@ -198,7 +211,7 @@ namespace ATC_Windows_Forms_App
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(19, 159);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(868, 23);
+            this.cbInputA.Size = new System.Drawing.Size(360, 23);
             this.cbInputA.TabIndex = 8;
             // 
             // tbName
@@ -207,18 +220,8 @@ namespace ATC_Windows_Forms_App
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbName.Location = new System.Drawing.Point(19, 36);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(868, 23);
+            this.tbName.Size = new System.Drawing.Size(360, 23);
             this.tbName.TabIndex = 7;
-            // 
-            // tbMultipler
-            // 
-            this.tbMultipler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMultipler.Location = new System.Drawing.Point(19, 306);
-            this.tbMultipler.Name = "tbMultipler";
-            this.tbMultipler.Size = new System.Drawing.Size(869, 23);
-            this.tbMultipler.TabIndex = 5;
-            this.tbMultipler.TextChanged += new System.EventHandler(this.tbMultipler_TextChanged);
             // 
             // cbMappingType
             // 
@@ -228,7 +231,7 @@ namespace ATC_Windows_Forms_App
             this.cbMappingType.FormattingEnabled = true;
             this.cbMappingType.Location = new System.Drawing.Point(19, 90);
             this.cbMappingType.Name = "cbMappingType";
-            this.cbMappingType.Size = new System.Drawing.Size(868, 23);
+            this.cbMappingType.Size = new System.Drawing.Size(360, 23);
             this.cbMappingType.TabIndex = 4;
             // 
             // lblMultiplier
@@ -262,7 +265,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(447, 11);
+            this.btnDeactivate.Location = new System.Drawing.Point(213, 11);
             this.btnDeactivate.Name = "btnDeactivate";
             this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
             this.btnDeactivate.TabIndex = 14;
@@ -272,7 +275,7 @@ namespace ATC_Windows_Forms_App
             // btnActivate
             // 
             this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActivate.Location = new System.Drawing.Point(297, 11);
+            this.btnActivate.Location = new System.Drawing.Point(63, 11);
             this.btnActivate.Name = "btnActivate";
             this.btnActivate.Size = new System.Drawing.Size(131, 29);
             this.btnActivate.TabIndex = 6;
@@ -286,20 +289,22 @@ namespace ATC_Windows_Forms_App
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnDeactivate);
             this.panel1.Controls.Add(this.btnActivate);
-            this.panel1.Location = new System.Drawing.Point(242, 492);
+            this.panel1.Location = new System.Drawing.Point(242, 469);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(915, 52);
+            this.panel1.Size = new System.Drawing.Size(407, 52);
             this.panel1.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 544);
+            this.ClientSize = new System.Drawing.Size(649, 521);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMainArea);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
+            this.MaximumSize = new System.Drawing.Size(665, 560);
+            this.MinimumSize = new System.Drawing.Size(665, 560);
             this.Name = "MainForm";
             this.Text = "Authentikit Trim Calibration";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -308,6 +313,7 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping.ResumeLayout(false);
             this.pnlMainArea.ResumeLayout(false);
             this.pnlMainArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -326,7 +332,6 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.ComboBox cbMappingType;
-        private System.Windows.Forms.TextBox tbMultipler;
         private System.Windows.Forms.Button btnActivate;
         private Controls.HeaderControl headerControl1;
         private System.Windows.Forms.BindingSource mappingBindingSource;
@@ -340,6 +345,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ComboBox cbOutput;
         private System.Windows.Forms.Button btnDeactivate;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NumericUpDown tbMultiplier;
     }
 }
 
