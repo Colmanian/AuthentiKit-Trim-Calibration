@@ -57,25 +57,25 @@ namespace ATC_Windows_Forms_App
 
                 // Mapping Type
                 cbMappingType.DataSource = _viewModel.MappingTypes;
-                cbMappingType.ValueMember = "Name";
+                cbMappingType.DisplayMember = "Name";
                 cbMappingType.ValueMember = "Id";
                 cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
 
                 // Input A
                 cbInputA.DataSource = _viewModel.InputChannelsA;
-                cbInputA.ValueMember = "Name";
+                cbInputA.DisplayMember = "Name";
                 cbInputA.ValueMember = "Id";
                 cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAId");
 
                 // Input B
                 cbInputB.DataSource = _viewModel.InputChannelsB;
-                cbInputB.ValueMember = "Name";
+                cbInputB.DisplayMember = "Name";
                 cbInputB.ValueMember = "Id";
                 cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBId");
 
                 // Output
                 cbOutput.DataSource = _viewModel.OutputChannels;
-                cbOutput.ValueMember = "Name";
+                cbOutput.DisplayMember = "Name";
                 cbOutput.ValueMember = "Id";
                 cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelId");
 
