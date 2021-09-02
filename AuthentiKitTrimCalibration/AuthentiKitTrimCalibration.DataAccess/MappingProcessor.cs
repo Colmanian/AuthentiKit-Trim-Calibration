@@ -44,7 +44,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     if (_mapping.TypeId == MappingType.BUTTON && _buttonProcessor != null)
                     {
                         _buttonProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
-                    } else if (_mapping.TypeId == MappingType.AXIS & _axisProcessor != null)
+                    }
+                    else if (_mapping.TypeId == MappingType.AXIS & _axisProcessor != null)
                     {
                         // Button B Polling (Used for Axis Only)
                         if (buttonBState != joystickA.GetCurrentState().Buttons[_mapping.InputChannelB.Button])
@@ -89,7 +90,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Debug.WriteLine("so creating new Button Processor...");
                     _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
                 }
-            }   
+            }
             else if (_mapping.TypeId == MappingType.AXIS)
             {
                 Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);

@@ -23,6 +23,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         long _previousATime;
         long _previousBTime;
 
+        readonly long BUTTON_FILTER = 0; // Ignore new button presses less than this (ms)
+
         public AxisProcessor(int multiplier, OutputAxis outputAxis)
         {
             _multiplier = multiplier;
@@ -57,7 +59,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             if (_priorAState != buttonAState)
             {
                 var timeSinceLast = (elapsedMilliseconds - _previousATime);
-                if (buttonAState && (timeSinceLast > 150)) // filter out spureous output
+                if (buttonAState && (timeSinceLast > BUTTON_FILTER)) // filter out spureous output
                 {
                     MoveAxisBy(_multiplier);
                     _previousATime = elapsedMilliseconds;
@@ -69,7 +71,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             if (_priorBState != buttonBState)
             {
                 var timeSinceLast = (elapsedMilliseconds - _previousBTime);
-                if (buttonBState && (timeSinceLast > 150))
+                if (buttonBState && (timeSinceLast > BUTTON_FILTER))
                 {
                     MoveAxisBy(-_multiplier);
                     _previousBTime = elapsedMilliseconds;
