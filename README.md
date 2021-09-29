@@ -1,73 +1,37 @@
 # AuthentiKit Trim Calibration
-![Version 0.2 Beta](https://img.shields.io/badge/Version-0.2--beta-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-Exprimental-blue)
 
-Proof of concept tool for better mapping of Authentikit Trim Wheels to Microsoft Flight Simulator 2020. 
+Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
-Direct Download Link: [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/raw/main/dist/AuthentiKit%20Trim%20Calibration.exe)
+**Requements**
+* Windows 10
+* vJoy 2.2.1 - [download here](https://github.com/njz3/vJoy/releases/download/v2.2.1.1/vJoySetup-2.2.1-signed.exe)
 
-Maps game controller buttons to vJoy buttons, calibrated for use as trim wheel up/down in MSFS. Mappings are currently hard coded as follows
-* Input Button 11 -> vJoy Button 1
-* Input Button 12 -> vJoy Button 2
-* Input Button 09 -> vJoy Button 3
-* Input Button 10 -> vJoy Button 4
+**Installer Download**
 
-# Usage
+See our [releases page](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
 
- 1. Set up your AuthentiKit Trim Wheel: https://authentikit.org/ 
- 2. Install vJoy https://sourceforge.net/projects/vjoystick/ 
- 3. Download and run [AuthentiKit Trim Calibration.exe](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/blob/main/dist/AuthentiKit%20Trim%20Calibration.exe)
- 4. Select input device (usually `BU0835 Interface` for Authentkit) and vjoy output device (usually `1`)
- 5. Verify vJoy buttons 1 and 2 illuminate in your monitor of choice. The console window also gives a good indication that things are working.
- 6. Leave the AuthentiKit Trim Calibration window running and open up MSFS 
- 7. Ensure the trim wheels aren't bound to anything in MSFS directly.
- 8. Map button 1 and 2 of your vJoy device in MSFS to Elevator Trim Up and Down. 3 and 4 go to Rudder trim. Note you'll have to use the drop downs to select these.
-
-Limitations with this proof of concept: 
- - Elevator trim wheel is expected only at Buttons 11 and 12 of the 'BU0836 Interface' 
- - Elevator trim outputs are be mapped across only to vJoy buttons 1 and 2 
-
-# Development & Build
-Running an exe you've downloaded of the internet can be understandably uncomfortable. If you'd like to build it from scratch yourself, you can, all the source code is provided. Just follow these steps. You'll need to be comfortable in Python to do so.
-
-The project requires the `vJoyInterface.dll` to be copied across to project directory from your vJoy install directory to this project's `python\pyvjoy` directory. To install and run:
-* `pip install -r requirements.txt`
-* `python python/app.py`
-
-Build using PyInstaller which requires you to have copied vJoyInterface.dll as above. Note the `\` and `/` might be diferent for you depending on what type of terminal you're using. 
-
-`pyinstaller.exe --onefile --icon=images/icon.ico --add-binary='python\pyvjoy\vJoyInterface.dll:.' --name='AuthentiKit Trim Calibration' python/app.py`
-
-Your newly built `.exe` file will be overwrite the one in the `dist/` directory.
 
 # Change Log
 
-* 0.2-beta (18-Apr-2021)
-    * Input devices configurable from dropdown (buttons still hard coded)
-    * Cleaned up GUI
-    * Added additional mappings for rudder trim. Complete mappings now
-        * Input Button 11 -> vJoy Button 1
-        * Input Button 12 -> vJoy Button 2
-        * Input Button 09 -> vJoy Button 3
-        * Input Button 10 -> vJoy Button 4
-    * Hidden anything 'vJoy' from input device list to avoid loop conditions
+For now, features will be completely fluid and the latest release tagged as 'Experimental' until we reach a minimum viable product for wider sharing. After this point, releases will have version numbers and changes will be logged here accordingly. 
 
-* 0.1-beta (15-Apr-2021)
-    * Inital Release
-    * Basic hard coded mapping of BU0836 buttons 11 and 12 to vJoy device 1 buttons 1 and 2
-    * vJoy DLL bundled into exe
-    * Console window displays to show debug info
+# Development & Build
+This application is written in .NET CORE's WinForms framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
 
+To develop and build, open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
 # Credits
-* pyvjoy - https://github.com/tidzo/pyvjoy
 * vJoy - https://sourceforge.net/projects/vjoystick/
 * AuthentiKit - https://www.authentikit.org
 
 # License
 
-This work was written by Ian Colman and is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International license. You are free to:
+This project was written by Ian Colman for the AuthentiKit Community. The AuthentiKit brand/identity is owned by Phil Hulme.
 
-**Share** — copy and redistribute the material in any medium or format
+This project is and is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license. Unde the terms of this license you are free to:
+
+**Use and share** — run, copy and redistribute the material in any medium or format
 
 The licensor cannot revoke these freedoms as long as you follow the following license terms:
 
