@@ -11,7 +11,7 @@ namespace MappingManager.Common.Model
         public string Name { get; set; }
         override public string ToString()
         {
-            return (Device + ": Button " + (Button+1));
+            return ("(ID: " + Id + ") "+ Device + ": Button " + (Button+1));
         }
     }
 }

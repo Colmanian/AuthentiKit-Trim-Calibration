@@ -12,6 +12,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             ObservableCollection<InputChannel> inputChannels = new();
             var directInput = new DirectInput();
+            int id = 0;
             foreach (var d in directInput.GetDevices())
             {
 
@@ -21,7 +22,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     var buttons = joystick.Capabilities.ButtonCount;
                     for (int i = 0; i < buttons; i++)
                     {
-                        inputChannels.Add(item: new InputChannel { Id = i, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) }); ;
+                        inputChannels.Add(item: new InputChannel { Id = id++, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) }); ;
                     }
                 }
             }
