@@ -1,46 +1,23 @@
 # AuthentiKit Trim Calibration
-![Version 0.3 Beta](https://img.shields.io/badge/Version-0.3--beta-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-Exprimental-blue)
 
-Windows Desktop Application to calbirate button-based Trim Wheels for use in Microsoft Flight Simulator 2020. 
+Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
 **Requements**
 * Windows 10
-* vJoy installed - [vjoystick.sourceforge.net](vjoystick.sourceforge.net)
+* vJoy 2.2.1 - [download here](https://github.com/njz3/vJoy/releases/download/v2.2.1.1/vJoySetup-2.2.1-signed.exe)
 
 **Installer Download**
 
-(In Progress)
+See our [releases page](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
 
-
-# Setup
-
-(In Progress)
 
 # Change Log
 
-* 0.3-beta (INSERT DATE)
-    * Complete re-write as a .NET CORE Win32 Desktop Application, using WinUI 3.0
-    * Added an installer
-    * Uses the vJoy DLL installed on the user's PC rather than one bundled inthe app.
-
-* 0.2-beta (18-Apr-2021)
-    * Input devices configurable from dropdown (buttons still hard coded)
-    * Cleaned up GUI
-    * Added additional mappings for rudder trim. Complete mappings now
-        * Input Button 11 -> vJoy Button 1
-        * Input Button 12 -> vJoy Button 2
-        * Input Button 09 -> vJoy Button 3
-        * Input Button 10 -> vJoy Button 4
-    * Hidden anything 'vJoy' from input device list to avoid loop conditions
-
-* 0.1-beta (15-Apr-2021)
-    * Inital Release
-    * Basic hard coded mapping of BU0836 buttons 11 and 12 to vJoy device 1 buttons 1 and 2
-    * vJoy DLL bundled into exe
-    * Console window displays to show debug info
+For now, features will be completely fluid and the latest release tagged as 'Experimental' until we reach a minimum viable product for wider sharing. After this point, releases will have version numbers and changes will be logged here accordingly. 
 
 # Development & Build
-This application is written in .NET CORE's WinUI framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
+This application is written in .NET CORE's WinForms framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
 
 To develop and build, open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
