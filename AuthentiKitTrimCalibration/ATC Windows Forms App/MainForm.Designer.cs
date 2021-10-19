@@ -30,8 +30,10 @@ namespace ATC_Windows_Forms_App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -65,6 +67,7 @@ namespace ATC_Windows_Forms_App
             // pnlHeader
             // 
             this.pnlHeader.Controls.Add(this.headerControl2);
+            this.pnlHeader.Controls.Add(this.menuStrip1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -75,10 +78,18 @@ namespace ATC_Windows_Forms_App
             // 
             this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headerControl2.Location = new System.Drawing.Point(0, 0);
+            this.headerControl2.Location = new System.Drawing.Point(0, 24);
             this.headerControl2.Name = "headerControl2";
-            this.headerControl2.Size = new System.Drawing.Size(649, 100);
+            this.headerControl2.Size = new System.Drawing.Size(649, 76);
             this.headerControl2.TabIndex = 0;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(649, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // pnlNavigation
             // 
@@ -87,24 +98,24 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.Location = new System.Drawing.Point(0, 100);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(242, 421);
+            this.pnlNavigation.Size = new System.Drawing.Size(242, 441);
             this.pnlNavigation.TabIndex = 1;
             // 
             // lsbMappings
             // 
-            this.lsbMappings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbMappings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lsbMappings.FormattingEnabled = true;
             this.lsbMappings.ItemHeight = 15;
             this.lsbMappings.Location = new System.Drawing.Point(0, 0);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(242, 358);
+            this.lsbMappings.Size = new System.Drawing.Size(242, 364);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
             // 
             this.pnlAddMapping.Controls.Add(this.btnAddMapping);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddMapping.Location = new System.Drawing.Point(0, 358);
+            this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
             this.pnlAddMapping.Name = "pnlAddMapping";
             this.pnlAddMapping.Size = new System.Drawing.Size(242, 63);
             this.pnlAddMapping.TabIndex = 0;
@@ -123,7 +134,7 @@ namespace ATC_Windows_Forms_App
             // 
             // pnlMainArea
             // 
-            this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlMainArea.Controls.Add(this.tbMultiplier);
             this.pnlMainArea.Controls.Add(this.label3);
@@ -139,7 +150,7 @@ namespace ATC_Windows_Forms_App
             this.pnlMainArea.Controls.Add(this.lblName);
             this.pnlMainArea.Location = new System.Drawing.Point(242, 100);
             this.pnlMainArea.Name = "pnlMainArea";
-            this.pnlMainArea.Size = new System.Drawing.Size(407, 345);
+            this.pnlMainArea.Size = new System.Drawing.Size(407, 378);
             this.pnlMainArea.TabIndex = 2;
             // 
             // tbMultiplier
@@ -265,7 +276,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(213, 11);
+            this.btnDeactivate.Location = new System.Drawing.Point(213, 22);
             this.btnDeactivate.Name = "btnDeactivate";
             this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
             this.btnDeactivate.TabIndex = 14;
@@ -276,7 +287,7 @@ namespace ATC_Windows_Forms_App
             // btnActivate
             // 
             this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActivate.Location = new System.Drawing.Point(63, 11);
+            this.btnActivate.Location = new System.Drawing.Point(63, 22);
             this.btnActivate.Name = "btnActivate";
             this.btnActivate.Size = new System.Drawing.Size(131, 29);
             this.btnActivate.TabIndex = 6;
@@ -290,27 +301,30 @@ namespace ATC_Windows_Forms_App
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btnDeactivate);
             this.panel1.Controls.Add(this.btnActivate);
-            this.panel1.Location = new System.Drawing.Point(242, 469);
+            this.panel1.Location = new System.Drawing.Point(242, 478);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 52);
+            this.panel1.Size = new System.Drawing.Size(407, 63);
             this.panel1.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 521);
+            this.ClientSize = new System.Drawing.Size(649, 541);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMainArea);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
-            this.MaximumSize = new System.Drawing.Size(665, 560);
-            this.MinimumSize = new System.Drawing.Size(665, 560);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(665, 580);
+            this.MinimumSize = new System.Drawing.Size(665, 580);
             this.Name = "MainForm";
-            this.Text = "Authentikit Trim Calibration";
+            this.Text = "AuthentiKit Tuning App";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.pnlNavigation.ResumeLayout(false);
             this.pnlAddMapping.ResumeLayout(false);
             this.pnlMainArea.ResumeLayout(false);
@@ -348,6 +362,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Button btnDeactivate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown tbMultiplier;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
