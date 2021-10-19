@@ -99,6 +99,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 return status;
             }
         }
+
+        internal MappingDTO getMappingDTO()
+        {
+            return _mapping;
+        }
+
         public int TypeId
         {
             get => _mapping.TypeId;

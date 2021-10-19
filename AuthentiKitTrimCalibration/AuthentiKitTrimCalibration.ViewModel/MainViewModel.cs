@@ -75,7 +75,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         public void SaveMappings()
         {
-            throw new NotImplementedException();
+            ObservableCollection<MappingDTO> mappings = new();
+            foreach (var m in Mappings)
+            {
+                mappings.Add(m.getMappingDTO());
+            }
+            _mainDataHandler.SaveMappings(mappings);
         }
     }
 }

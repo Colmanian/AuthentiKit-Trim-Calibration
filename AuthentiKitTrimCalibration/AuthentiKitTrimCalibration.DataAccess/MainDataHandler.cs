@@ -10,6 +10,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
     public class MainDataHandler : IMainDataHandler
     {
         private readonly string FILENAME = "settings.xml";
+        private readonly string MAPPINGS = "MAPPINGS";
+        private readonly string MAPPING = "MAPPING";
+        private readonly string NAME = "NAME";
+        private readonly string TYPE_ID = "TYPE_ID";
+        private readonly string ACTIVE = "ACTIVE";
+        private readonly string INPUT_CHANNEL_A = "INPUT_CHANNEL_A";
+        private readonly string INPUT_CHANNEL_B = "INPUT_CHANNEL_B";
+        private readonly string OUTPUT_CHANNEL = "OUTPUT_CHANNEL";
+        private readonly string MULTIPLIER = "MULTIPLIER";
+        private readonly string RESET_COMMAND = "RESET_COMMAND";
+
         public MappingDTO GetDefaultMapping()
         {
             return new MappingDTO { Name = "New Mapping" };
@@ -20,7 +31,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             // Open the XML Document
             XmlDocument settingsFile = new();
             settingsFile.Load(FILENAME);
-            XmlNode mappingsNode = settingsFile.SelectSingleNode("MAPPINGS");
+            XmlNode mappingsNode = settingsFile.SelectSingleNode(MAPPINGS);
 
             // Loop through each mapping
             List<MappingDTO> mappings = new();
@@ -29,11 +40,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Parse values from XML
                 try
                 {
-                    string name = mappingNode.SelectSingleNode("NAME").InnerText;
-                    int typeId = int.Parse(mappingNode.SelectSingleNode("TYPE_ID").InnerText);
-                    bool active = bool.Parse(mappingNode.SelectSingleNode("ACTIVE").InnerText);
-                    int multiplier = int.Parse(mappingNode.SelectSingleNode("MULTIPLIER").InnerText);
-                    string resetCommand = mappingNode.SelectSingleNode("RESET_COMMAND").InnerText;
+                    string name = mappingNode.SelectSingleNode(NAME).InnerText;
+                    int typeId = int.Parse(mappingNode.SelectSingleNode(TYPE_ID).InnerText);
+                    bool active = bool.Parse(mappingNode.SelectSingleNode(ACTIVE).InnerText);
+                    int multiplier = int.Parse(mappingNode.SelectSingleNode(MULTIPLIER).InnerText);
+                    string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
 
                     // Create Mapping from values and add to mappings list
                     mappings.Add(new MappingDTO
@@ -50,44 +61,64 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 }
                 catch
                 {
-                    throw new Exception("Error reading or understanding settings.xml");
+                    throw new Exception("Error finding or reading settings.xml");
                 }
             }
             return mappings;
         }
-
-        /*
-                public IEnumerable<MappingDTO> LoadMappings()
-                {
-                    return new List<MappingDTO>
-                    {
-                        new MappingDTO
-                        {
-                          Name = "Elevator Trim Axis",
-                          TypeId = MappingType.AXIS,
-                          Active = true,
-                          InputChannelA = new InputChannel(),
-                          InputChannelB = new InputChannel(),
-                          OutputChannel = new OutputChannel(),
-                          Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
-                          ResetCommand = "CTRL+T"
-                        },new MappingDTO
-                        {
-                          Name = "Rudder Trim Axis",
-                          TypeId = MappingType.AXIS,
-                          Active = false,
-                          InputChannelA = new InputChannel(),
-                          InputChannelB = new InputChannel(),
-                          OutputChannel = new OutputChannel(),
-                          Multiplier = 341, // 2 full turns Nose Up and 2 full turns Nose Down (use bodnar PW of 24ms)
-                          ResetCommand = "CTRL+T"
-                        }
-                    };
-                }*/
-
         public void SaveMappings(IEnumerable<MappingDTO> mappings)
         {
-            Debug.WriteLine("*** SAVE MAPPINGS IS NOT YET IMPLEMENTED ***");
+            XmlDocument doc = new ();
+            XmlElement mappingsNode = doc.CreateElement(MAPPINGS);
+
+            foreach(var mapping in mappings)
+            {
+                XmlElement mappingNode = doc.CreateElement(MAPPING);
+
+                // Name
+                XmlElement nameNode = doc.CreateElement(NAME);
+                nameNode.InnerText = mapping.Name;
+                mappingNode.AppendChild(nameNode);
+
+                // TypeId
+                XmlElement typeIdNode = doc.CreateElement(TYPE_ID);
+                typeIdNode.InnerText = String.Format("{0}", mapping.TypeId);
+                mappingNode.AppendChild(typeIdNode);
+
+                // Active
+                XmlElement activeNode = doc.CreateElement(ACTIVE);
+                activeNode.InnerText = String.Format("{0}", mapping.Active);
+                mappingNode.AppendChild(activeNode);
+
+                // InputChannelA
+                XmlElement inputChannelANode = doc.CreateElement(INPUT_CHANNEL_A);
+                inputChannelANode.InnerText = " ";
+                mappingNode.AppendChild(inputChannelANode);
+
+                // InputChannelB
+                XmlElement inputChannelBNode = doc.CreateElement(INPUT_CHANNEL_B);
+                inputChannelBNode.InnerText = " ";
+                mappingNode.AppendChild(inputChannelBNode);
+
+                // OutputChannel
+                XmlElement outputChannelNode = doc.CreateElement(OUTPUT_CHANNEL);
+                outputChannelNode.InnerText = " ";
+                mappingNode.AppendChild(outputChannelNode);
+
+                // Multiplier
+                XmlElement multiplierNode = doc.CreateElement(MULTIPLIER);
+                multiplierNode.InnerText = String.Format("{0}", mapping.Multiplier);
+                mappingNode.AppendChild(multiplierNode);
+
+                // ResetCommand
+                XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
+                resetCommandNode.InnerText = mapping.ResetCommand;
+                mappingNode.AppendChild(resetCommandNode);
+                mappingsNode.AppendChild(mappingNode);
+            }
+
+            doc.AppendChild(mappingsNode);
+            doc.Save(FILENAME);
         }
     }
 }
