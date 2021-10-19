@@ -1,13 +1,6 @@
 ﻿using AuthentiKitTrimCalibration.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App
@@ -18,22 +11,49 @@ namespace ATC_Windows_Forms_App
 
         public MainForm()
         {
-            InitializeComponent();
-            _viewModel = new MainViewModel();
+            try
+            {
+                InitializeComponent();
+                _viewModel = new MainViewModel();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Error on Startup",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            _viewModel.LoadMappings();
-            LoadFormData();
+            try
+            {
+                _viewModel.LoadMappings();
+                LoadFormData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error loading app",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
         }
 
 
         private void btnAddMapping_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Adding New mapping"); /// You're trying to get this function working
-            _viewModel.NewMapping();
-            LoadFormData();
+            try
+            {
+                Debug.WriteLine("Adding New mapping"); /// You're trying to get this function working
+                _viewModel.NewMapping();
+                LoadFormData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error adding new mapping",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
         }
 
         private void LoadFormData()
@@ -95,19 +115,37 @@ namespace ATC_Windows_Forms_App
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
-            if (mappingBindingSource.Current is MappingViewModel mappingViewModel
-                && mappingViewModel.Deactivated)
+            try
             {
-                mappingViewModel.Activate();
+                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Deactivated)
+                {
+                    mappingViewModel.Activate();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error activating mapping",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
             }
         }
 
         private void btnDeactivate_Click(object sender, EventArgs e)
         {
-            if (mappingBindingSource.Current is MappingViewModel mappingViewModel
-                && mappingViewModel.Activated)
+            try
             {
-                mappingViewModel.Deactivate();
+                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Activated)
+                {
+                    mappingViewModel.Deactivate();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error deactivating mapping",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
             }
         }
 
