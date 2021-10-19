@@ -153,5 +153,34 @@ namespace ATC_Windows_Forms_App
         {
             _viewModel.Stop();
         }
+
+        private void Save_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _viewModel.SaveMappings();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error while saving",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
+        }
+
+        private void Load_btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _viewModel.LoadMappings();
+                LoadFormData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error while loading",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
+        }
     }
 }

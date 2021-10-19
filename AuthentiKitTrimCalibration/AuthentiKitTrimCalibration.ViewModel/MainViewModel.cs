@@ -1,7 +1,7 @@
 ﻿using AuthentiKitTrimCalibration.DataAccess;
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
-using System.Collections.Generic;
+using System;
 using System.Collections.ObjectModel;
 
 namespace AuthentiKitTrimCalibration.ViewModel
@@ -71,6 +71,11 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             _selectedMapping.Deactivate();
             Mappings.Remove(_selectedMapping);
+        }
+
+        public void SaveMappings()
+        {
+            throw new NotImplementedException();
         }
     }
 }

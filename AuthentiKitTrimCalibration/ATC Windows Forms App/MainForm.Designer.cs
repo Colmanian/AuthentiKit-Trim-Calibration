@@ -55,6 +55,8 @@ namespace ATC_Windows_Forms_App
             this.btnActivate = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.save_btn = new System.Windows.Forms.Button();
+            this.load_btn = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
@@ -66,6 +68,8 @@ namespace ATC_Windows_Forms_App
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.load_btn);
+            this.pnlHeader.Controls.Add(this.save_btn);
             this.pnlHeader.Controls.Add(this.headerControl2);
             this.pnlHeader.Controls.Add(this.menuStrip1);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -306,6 +310,26 @@ namespace ATC_Windows_Forms_App
             this.panel1.Size = new System.Drawing.Size(407, 63);
             this.panel1.TabIndex = 3;
             // 
+            // save_btn
+            // 
+            this.save_btn.Location = new System.Drawing.Point(1, 1);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(75, 23);
+            this.save_btn.TabIndex = 2;
+            this.save_btn.Text = "Save";
+            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.Save_btn_Click);
+            // 
+            // load_btn
+            // 
+            this.load_btn.Location = new System.Drawing.Point(80, 1);
+            this.load_btn.Name = "load_btn";
+            this.load_btn.Size = new System.Drawing.Size(75, 23);
+            this.load_btn.TabIndex = 3;
+            this.load_btn.Text = "Load";
+            this.load_btn.UseVisualStyleBackColor = true;
+            this.load_btn.Click += new System.EventHandler(this.Load_btn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -363,6 +387,8 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown tbMultiplier;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Button load_btn;
     }
 }
 
