@@ -13,7 +13,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             ObservableCollection<InputChannel> inputChannels = new();
             var directInput = new DirectInput();
-            int id = 0;
             foreach (var d in directInput.GetDevices())
             {
                 if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
@@ -23,7 +22,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     //Debug.WriteLine("*** DEVICE: instance {0}, {1}; product {2}, {3}", d.InstanceName, d.InstanceGuid, d.ProductName, d.ProductGuid);
                     for (int i = 0; i < buttons; i++)
                     {
-                        inputChannels.Add(item: new InputChannel { Id = id++, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
+                        inputChannels.Add(item: new InputChannel { Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
                     }
                 }
             }

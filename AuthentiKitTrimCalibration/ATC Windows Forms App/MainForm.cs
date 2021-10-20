@@ -84,14 +84,14 @@ namespace ATC_Windows_Forms_App
                 // Input A
                 cbInputA.DataSource = _viewModel.InputChannelsA;
                 cbInputA.DisplayMember = "Name";
-                cbInputA.ValueMember = "Id";
-                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAId");
+                cbInputA.ValueMember = "Hash";
+                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
 
                 // Input B
                 cbInputB.DataSource = _viewModel.InputChannelsB;
                 cbInputB.DisplayMember = "Name";
-                cbInputB.ValueMember = "Id";
-                cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBId");
+                cbInputB.ValueMember = "Hash";
+                cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBHash");
 
                 // Output
                 cbOutput.DataSource = _viewModel.OutputChannels;

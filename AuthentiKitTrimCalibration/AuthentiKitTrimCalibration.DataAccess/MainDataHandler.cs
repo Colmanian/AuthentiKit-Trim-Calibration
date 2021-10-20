@@ -2,6 +2,7 @@
 using MappingManager.Common.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Xml;
 
@@ -15,8 +16,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string NAME = "NAME";
         private readonly string TYPE_ID = "TYPE_ID";
         private readonly string ACTIVE = "ACTIVE";
-        private readonly string INPUT_CHANNEL_A = "INPUT_CHANNEL_A";
-        private readonly string INPUT_CHANNEL_B = "INPUT_CHANNEL_B";
+        private readonly string INPUT_CHANNEL_A_HASH = "INPUT_CHANNEL_A_HASH";
+        private readonly string INPUT_CHANNEL_B_HASH = "INPUT_CHANNEL_B_HASH";
         private readonly string OUTPUT_CHANNEL = "OUTPUT_CHANNEL";
         private readonly string MULTIPLIER = "MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
@@ -32,7 +33,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             throw new NotImplementedException();
         }
 
-        public IEnumerable<MappingDTO> LoadMappings()
+        public IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
         {
             // Open the XML Document
             XmlDocument settingsFile = new();
@@ -49,6 +50,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     string name = mappingNode.SelectSingleNode(NAME).InnerText;
                     int typeId = int.Parse(mappingNode.SelectSingleNode(TYPE_ID).InnerText);
                     bool active = bool.Parse(mappingNode.SelectSingleNode(ACTIVE).InnerText);
+                    int inputChannelAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_A_HASH).InnerText);
+                    int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
                     int multiplier = int.Parse(mappingNode.SelectSingleNode(MULTIPLIER).InnerText);
                     string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
 
@@ -58,8 +61,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         Name = name,
                         TypeId = typeId,
                         Active = active,
-                        InputChannelA = new InputChannel(),
-                        InputChannelB = new InputChannel(),
+                        InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
+                        InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
                         OutputChannel = new OutputChannel(),
                         Multiplier = multiplier,
                         ResetCommand = resetCommand
@@ -97,13 +100,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 mappingNode.AppendChild(activeNode);
 
                 // InputChannelA
-                XmlElement inputChannelANode = doc.CreateElement(INPUT_CHANNEL_A);
-                inputChannelANode.InnerText = " ";
+                XmlElement inputChannelANode = doc.CreateElement(INPUT_CHANNEL_A_HASH);
+                inputChannelANode.InnerText = String.Format("{0}", mapping.InputChannelA.Hash);
                 mappingNode.AppendChild(inputChannelANode);
 
                 // InputChannelB
-                XmlElement inputChannelBNode = doc.CreateElement(INPUT_CHANNEL_B);
-                inputChannelBNode.InnerText = " ";
+                XmlElement inputChannelBNode = doc.CreateElement(INPUT_CHANNEL_B_HASH);
+                inputChannelBNode.InnerText = String.Format("{0}", mapping.InputChannelB.Hash);
                 mappingNode.AppendChild(inputChannelBNode);
 
                 // OutputChannel
@@ -125,6 +128,20 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             doc.AppendChild(mappingsNode);
             doc.Save(FILENAME);
+        }
+        private static InputChannel GetInputChannel(int hash, ObservableCollection<InputChannel> inputChannels)
+        {
+            Debug.WriteLine("Getting input for hash " + hash);
+            foreach (var channel in inputChannels)
+            {
+                if (channel.Hash == hash)
+                {
+                    Debug.WriteLine("Found " + channel.ToString());
+                    return channel;
+                }
+            }
+            Debug.WriteLine("Not Found anything");
+            return new InputChannel();
         }
     }
 }

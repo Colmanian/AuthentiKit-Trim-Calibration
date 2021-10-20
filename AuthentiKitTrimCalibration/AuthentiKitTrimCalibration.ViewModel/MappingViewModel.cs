@@ -1,8 +1,6 @@
 ﻿using AuthentiKitTrimCalibration.DataAccess;
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
@@ -10,14 +8,16 @@ namespace AuthentiKitTrimCalibration.ViewModel
 {
     public class MappingViewModel : ViewModelBase
     {
-        private IMappingProcessor _mappingProcessor;
-        private MappingDTO _mapping;
-        private ObservableCollection<InputChannel> InputChannels;
-        private ObservableCollection<OutputChannel> OutputChannels;
+        private readonly IMappingProcessor _mappingProcessor;
+        private readonly MappingDTO _mapping;
+        private readonly ObservableCollection<InputChannel> InputChannelsA;
+        private readonly ObservableCollection<InputChannel> InputChannelsB;
+        private readonly ObservableCollection<OutputChannel> OutputChannels;
 
-        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputs, ObservableCollection<OutputChannel> outputs)
+        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputsA, ObservableCollection<InputChannel> inputsB, ObservableCollection<OutputChannel> outputs)
         {
-            InputChannels = inputs;
+            InputChannelsA = inputsA;
+            InputChannelsB = inputsB;
             OutputChannels = outputs;
             _mappingProcessor = new MappingProcessor();
             _mapping = mapping;
@@ -118,27 +118,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public int InputChannelAId
+        public int InputChannelAHash
         {
-            get => _mapping.InputChannelA.Id;
+            get => _mapping.InputChannelA.Hash;
             set
             {
-                if (_mapping.InputChannelA.Id != value)
+                if (_mapping.InputChannelA.Hash != value)
                 {
-                    _mapping.InputChannelA = GetInputChannel(value);
+                    _mapping.InputChannelA = GetInputChannelA(value);
                     RaisePropertyChanged();
                 }
             }
         }
 
-        public int InputChannelBId
+        public int InputChannelBHash
         {
-            get => _mapping.InputChannelB.Id;
+            get => _mapping.InputChannelB.Hash;
             set
             {
-                if (_mapping.InputChannelB.Id != value)
+                if (_mapping.InputChannelB.Hash != value)
                 {
-                    _mapping.InputChannelB = GetInputChannel(value);
+                    _mapping.InputChannelB = GetInputChannelB(value);
                     RaisePropertyChanged();
                 }
             }
@@ -155,20 +155,35 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        private InputChannel GetInputChannel(int id)
+        private InputChannel GetInputChannelA(int hash)
         {
-            Debug.WriteLine("Getting input for id " + id);
-            for (int i = 0; i < InputChannels.Count; i++)
+            Debug.WriteLine("Getting input for hash " + hash);
+            foreach (var channel in InputChannelsA)
             {
-                if (id == InputChannels[i].Id)
+                if (channel.Hash == hash)
                 {
-                    Debug.WriteLine("Found " + InputChannels[i]);
-                    return InputChannels[i];
+                    Debug.WriteLine("Found " + channel.ToString());
+                    return channel;
                 }
             }
             Debug.WriteLine("Not Found anything");
             return new InputChannel();
         }
+        private InputChannel GetInputChannelB(int hash)
+        {
+            Debug.WriteLine("Getting input for hash " + hash);
+            foreach (var channel in InputChannelsB)
+            {
+                if (channel.Hash == hash)
+                {
+                    Debug.WriteLine("Found " + channel.ToString());
+                    return channel;
+                }
+            }
+            Debug.WriteLine("Not Found anything");
+            return new InputChannel();
+        }
+
         private OutputChannel GetOutputChannel(int id)
         {
             for (int i = 0; i < OutputChannels.Count; i++)

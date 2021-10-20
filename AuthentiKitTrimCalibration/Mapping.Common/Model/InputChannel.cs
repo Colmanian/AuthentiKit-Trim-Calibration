@@ -9,9 +9,11 @@ namespace MappingManager.Common.Model
         public string Device { get; set; } // Name of device
         public int Button { get; set; } // Integer button number
         public string Name { get; set; } // Channel name as combination of device and button
+        public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for a device and button combo
+
         override public string ToString()
         {
-            return ("(ID: " + Id + ") "+ Device + ": Button " + (Button+1));
+            return (String.Format("{0}: Button {1}", Device, (Button+1)));
         }
     }
 }

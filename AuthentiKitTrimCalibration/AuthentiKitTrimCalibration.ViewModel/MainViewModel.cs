@@ -49,17 +49,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             Stop();
             Mappings.Clear();
-            var mappings = _mainDataHandler.LoadMappings();
+            var mappings = _mainDataHandler.LoadMappings(InputChannelsA, InputChannelsB, OutputChannels);
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, OutputChannels));
+                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputChannels));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, OutputChannels));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, InputChannelsB, OutputChannels));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
