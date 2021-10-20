@@ -4,11 +4,22 @@ namespace MappingManager.Common.Model
 {
     public class OutputChannel
     {
-        public int Id { get; set; }
         public int VJoyId { get; set; }
         public uint VJoyDevice { get; set; }
         public uint VJoyItem { get; set; }
         public string Name { get; set; }
+        public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for storage
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash *= 23 + (int)VJoyDevice;
+                hash *= 83 + (int)VJoyItem;
+                return hash;
+            }
+        }
     }
 
     public class OutputAxis : OutputChannel

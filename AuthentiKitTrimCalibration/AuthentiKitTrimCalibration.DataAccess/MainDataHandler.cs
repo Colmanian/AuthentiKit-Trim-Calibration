@@ -18,7 +18,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string ACTIVE = "ACTIVE";
         private readonly string INPUT_CHANNEL_A_HASH = "INPUT_CHANNEL_A_HASH";
         private readonly string INPUT_CHANNEL_B_HASH = "INPUT_CHANNEL_B_HASH";
-        private readonly string OUTPUT_CHANNEL = "OUTPUT_CHANNEL";
+        private readonly string OUTPUT_CHANNEL_HASH = "OUTPUT_CHANNEL_HASH";
         private readonly string MULTIPLIER = "MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
 
@@ -52,6 +52,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     bool active = bool.Parse(mappingNode.SelectSingleNode(ACTIVE).InnerText);
                     int inputChannelAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_A_HASH).InnerText);
                     int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
+                    int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
                     int multiplier = int.Parse(mappingNode.SelectSingleNode(MULTIPLIER).InnerText);
                     string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
 
@@ -63,7 +64,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         Active = active,
                         InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
                         InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
-                        OutputChannel = new OutputChannel(),
+                        OutputChannel = GetOutputChannel(outputChannelHash, outputChannels),
                         Multiplier = multiplier,
                         ResetCommand = resetCommand
                     });
@@ -110,8 +111,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 mappingNode.AppendChild(inputChannelBNode);
 
                 // OutputChannel
-                XmlElement outputChannelNode = doc.CreateElement(OUTPUT_CHANNEL);
-                outputChannelNode.InnerText = " ";
+                XmlElement outputChannelNode = doc.CreateElement(OUTPUT_CHANNEL_HASH);
+                outputChannelNode.InnerText = String.Format("{0}", mapping.OutputChannel.Hash);
                 mappingNode.AppendChild(outputChannelNode);
 
                 // Multiplier
@@ -131,17 +132,25 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
         private static InputChannel GetInputChannel(int hash, ObservableCollection<InputChannel> inputChannels)
         {
-            Debug.WriteLine("Getting input for hash " + hash);
             foreach (var channel in inputChannels)
             {
                 if (channel.Hash == hash)
                 {
-                    Debug.WriteLine("Found " + channel.ToString());
                     return channel;
                 }
             }
-            Debug.WriteLine("Not Found anything");
             return new InputChannel();
+        }
+        private static OutputChannel GetOutputChannel(int hash, ObservableCollection<OutputChannel> outputChannels)
+        {
+            foreach (var channel in outputChannels)
+            {
+                if (channel.Hash == hash)
+                { 
+                    return channel;
+                }
+            }
+            return new OutputChannel();
         }
     }
 }

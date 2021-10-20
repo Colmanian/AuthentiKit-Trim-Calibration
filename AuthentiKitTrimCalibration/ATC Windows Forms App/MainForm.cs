@@ -96,8 +96,8 @@ namespace ATC_Windows_Forms_App
                 // Output
                 cbOutput.DataSource = _viewModel.OutputChannels;
                 cbOutput.DisplayMember = "Name";
-                cbOutput.ValueMember = "Id";
-                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelId");
+                cbOutput.ValueMember = "Hash";
+                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
 
                 // Multiplier
                 tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");

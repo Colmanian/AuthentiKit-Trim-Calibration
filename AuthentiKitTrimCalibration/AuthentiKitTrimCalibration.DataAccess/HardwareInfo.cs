@@ -43,7 +43,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     outputChannels.Add(new OutputButton
                     {
-                        Id = id++,
                         VJoyId = output_id++,
                         VJoyDevice = vjoy_id,
                         VJoyItem = b,
@@ -61,7 +60,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         {
                             outputChannels.Add(new OutputAxis
                             {
-                                Id = id++,
                                 VJoyId = output_id++,
                                 VJoyDevice = vjoy_id,
                                 VJoyItem = (uint)axis,

@@ -143,12 +143,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        public int OutputChannelId
+        public int OutputChannelHash
         {
-            get => _mapping.OutputChannel.Id;
+            get => _mapping.OutputChannel.Hash;
             set
             {
-                if (_mapping.OutputChannel.Id != value)
+                if (_mapping.OutputChannel.Hash != value)
                 {
                     _mapping.OutputChannel = GetOutputChannel(value);
                     RaisePropertyChanged();
@@ -157,40 +157,34 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         private InputChannel GetInputChannelA(int hash)
         {
-            Debug.WriteLine("Getting input for hash " + hash);
             foreach (var channel in InputChannelsA)
             {
                 if (channel.Hash == hash)
                 {
-                    Debug.WriteLine("Found " + channel.ToString());
                     return channel;
                 }
             }
-            Debug.WriteLine("Not Found anything");
             return new InputChannel();
         }
         private InputChannel GetInputChannelB(int hash)
         {
-            Debug.WriteLine("Getting input for hash " + hash);
             foreach (var channel in InputChannelsB)
             {
                 if (channel.Hash == hash)
                 {
-                    Debug.WriteLine("Found " + channel.ToString());
                     return channel;
                 }
             }
-            Debug.WriteLine("Not Found anything");
             return new InputChannel();
         }
 
-        private OutputChannel GetOutputChannel(int id)
+        private OutputChannel GetOutputChannel(int hash)
         {
-            for (int i = 0; i < OutputChannels.Count; i++)
+            foreach (var channel in OutputChannels)
             {
-                if (id == OutputChannels[i].Id)
+                if (channel.Hash == hash)
                 {
-                    return OutputChannels[i];
+                    return channel;
                 }
             }
             return new OutputChannel();
