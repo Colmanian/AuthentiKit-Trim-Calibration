@@ -21,9 +21,15 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string MULTIPLIER = "MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
 
-        public MappingDTO GetDefaultMapping()
+        public MappingDTO GetBlankMapping()
         {
             return new MappingDTO { Name = "New Mapping" };
+        }
+
+        public IEnumerable<MappingDTO> GetDefaultMappings()
+        {
+            //TODO Load in standard setup for Spit MkIX, and if AuthentiKit is detected, select appropriate inputs.
+            throw new NotImplementedException();
         }
 
         public IEnumerable<MappingDTO> LoadMappings()

@@ -59,7 +59,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetDefaultMapping(), InputChannelsA, OutputChannels));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, OutputChannels));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)

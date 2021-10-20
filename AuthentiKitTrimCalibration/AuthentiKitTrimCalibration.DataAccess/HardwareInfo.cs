@@ -3,6 +3,7 @@ using SharpDX.DirectInput;
 using vJoyInterfaceWrap;
 using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -15,14 +16,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
             int id = 0;
             foreach (var d in directInput.GetDevices())
             {
-
                 if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
                 {
                     var joystick = new Joystick(directInput, d.InstanceGuid);
                     var buttons = joystick.Capabilities.ButtonCount;
+                    //Debug.WriteLine("*** DEVICE: instance {0}, {1}; product {2}, {3}", d.InstanceName, d.InstanceGuid, d.ProductName, d.ProductGuid);
                     for (int i = 0; i < buttons; i++)
                     {
-                        inputChannels.Add(item: new InputChannel { Id = id++, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) }); ;
+                        inputChannels.Add(item: new InputChannel { Id = id++, Guid = d.InstanceGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
                     }
                 }
             }
@@ -32,7 +33,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public static ObservableCollection<OutputChannel> GetOutputChannels()
         {
             ObservableCollection<OutputChannel> outputChannels = new();
-            vJoy joystick = new vJoy();
+            vJoy joystick = new();
             int output_id = 0;
 
             int id = 0;
@@ -41,8 +42,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Buttons
                 for (uint b = 1; b <= joystick.GetVJDButtonNumber(vjoy_id); b++)
                 {
-                    outputChannels.Add(new OutputButton {Id = id++, VJoyId = output_id++, VJoyDevice = vjoy_id, VJoyItem = b,
-                        Name = string.Format("vJoy " + vjoy_id + ": Button " + b) });
+                    outputChannels.Add(new OutputButton
+                    {
+                        Id = id++,
+                        VJoyId = output_id++,
+                        VJoyDevice = vjoy_id,
+                        VJoyItem = b,
+                        Name = string.Format("vJoy " + vjoy_id + ": Button " + b)
+                    });
                 }
 
                 // Axes
@@ -53,8 +60,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     {
                         if (joystick.GetVJDAxisExist(vjoy_id, axis))
                         {
-                            outputChannels.Add(new OutputAxis { Id = id++, VJoyId = output_id++, VJoyDevice = vjoy_id, VJoyItem = (uint)axis,
-                                Name = string.Format("vJoy " + vjoy_id + ": Axis " + (OutputAxis.AxisId)axis) });
+                            outputChannels.Add(new OutputAxis
+                            {
+                                Id = id++,
+                                VJoyId = output_id++,
+                                VJoyDevice = vjoy_id,
+                                VJoyItem = (uint)axis,
+                                Name = string.Format("vJoy " + vjoy_id + ": Axis " + (OutputAxis.AxisId)axis)
+                            });
                         }
                     }
                 }

@@ -7,6 +7,7 @@ namespace MappingManager.Common.DataProvider
     {
         IEnumerable<MappingDTO> LoadMappings();
         void SaveMappings(IEnumerable<MappingDTO> mappings);
-        MappingDTO GetDefaultMapping();
+        MappingDTO GetBlankMapping();
+        IEnumerable<MappingDTO> GetDefaultMappings();
     }
 }
