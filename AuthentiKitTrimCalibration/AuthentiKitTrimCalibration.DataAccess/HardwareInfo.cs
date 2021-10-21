@@ -19,10 +19,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     var joystick = new Joystick(directInput, d.InstanceGuid);
                     var buttons = joystick.Capabilities.ButtonCount;
-                    //Debug.WriteLine("*** DEVICE: instance {0}, {1}; product {2}, {3}", d.InstanceName, d.InstanceGuid, d.ProductName, d.ProductGuid);
                     for (int i = 0; i < buttons; i++)
                     {
                         inputChannels.Add(item: new InputChannel { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
+                        
                     }
                 }
             }

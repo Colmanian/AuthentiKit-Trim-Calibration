@@ -15,14 +15,22 @@ namespace MappingManager.Common.Model
         {
             unchecked
             {
-                int hash = 17;
+                int hash = 5381;
                 if (Device != null)
                 {
                     for (int i = 0; i < Device.Length; i++)
                     {
-                        hash *= 31 + Device[i];
+                        hash = hash * 33 + Device[i];
                     }
-                    hash *= 23 + Button;
+                    hash = hash * 23 + Button;
+                }
+
+                if (Device != null)
+                {
+                    if (Device.Contains("Throttle"))
+                    {
+                        Debug.WriteLine(String.Format("{0}\t+\t{1}\t=\t{2}", Device, Button, hash));
+                    }
                 }
                 return hash;
             }

@@ -14,9 +14,9 @@ namespace MappingManager.Common.Model
         {
             unchecked
             {
-                int hash = 17;
-                hash *= 23 + (int)VJoyDevice;
-                hash *= 83 + (int)VJoyItem;
+                int hash = 5381;
+                hash = hash * 23 + (int)VJoyDevice;
+                hash = hash * 83 + (int)VJoyItem;
                 return hash;
             }
         }
