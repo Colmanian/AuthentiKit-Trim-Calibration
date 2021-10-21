@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Xml;
+using static MappingManager.Common.Model.OutputAxis;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
@@ -25,12 +26,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public MappingDTO GetBlankMapping()
         {
             return new MappingDTO { Name = "New Mapping" };
-        }
-
-        public IEnumerable<MappingDTO> GetDefaultMappings()
-        {
-            //TODO Load in standard setup for Spit MkIX, and if AuthentiKit is detected, select appropriate inputs.
-            throw new NotImplementedException();
         }
 
         public IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
@@ -78,10 +73,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
         public void SaveMappings(IEnumerable<MappingDTO> mappings)
         {
-            XmlDocument doc = new ();
+            XmlDocument doc = new();
             XmlElement mappingsNode = doc.CreateElement(MAPPINGS);
 
-            foreach(var mapping in mappings)
+            foreach (var mapping in mappings)
             {
                 XmlElement mappingNode = doc.CreateElement(MAPPING);
 
@@ -146,16 +141,53 @@ namespace AuthentiKitTrimCalibration.DataAccess
             foreach (var channel in outputChannels)
             {
                 if (channel.Hash == hash)
-                { 
+                {
                     return channel;
                 }
             }
             return new OutputChannel();
         }
 
+        /// Returns an AuthentiKit or BU0836 input channel for the specified button, if available
+        private InputChannel getAuthentiKitInputChannel(ObservableCollection<InputChannel> channels, int button)
+        {
+            foreach (var channel in channels)
+                if ((channel.Button == button) && (channel.Device.Contains("AuthentiKit")))
+                    return channel;
+
+            foreach (var channel in channels)
+                if ((channel.Button == button) && (channel.Device.Contains("BU0836")))
+                    return channel;
+
+            return new InputChannel();
+        }
+
+        /// Returns the specified vJoy output if available
+        private OutputChannel getOutputChannel (ObservableCollection<OutputChannel> channels, uint vJoyItem)
+        {
+            foreach (var channel in channels)
+                if (channel.VJoyItem == vJoyItem)
+                    return channel;
+            return new OutputAxis();
+        }
         public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
         {
-            throw new NotImplementedException();
+            ObservableCollection<MappingDTO> mappings = new();
+            if (aircraft == Aircraft.SPITFIRE_MKIX)
+            {
+                // Elevator Trim Axis
+                mappings.Add(new MappingDTO {
+                    Name = "Elevator Trim (Axis)",
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
+                    InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
+                    OutputChannel = getOutputChannel(outputChannels, (uint) AxisId.X),
+                    Multiplier = 347,
+                });
+
+                // Rudder Trum Button
+                //TODO
+            }
+            return mappings;
         }
     }
 }
