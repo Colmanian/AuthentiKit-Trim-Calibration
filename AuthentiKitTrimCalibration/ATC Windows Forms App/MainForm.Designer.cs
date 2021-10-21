@@ -33,7 +33,9 @@ namespace ATC_Windows_Forms_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.load_btn = new System.Windows.Forms.Button();
+            this.save_btn = new System.Windows.Forms.Button();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -55,8 +57,6 @@ namespace ATC_Windows_Forms_App
             this.btnActivate = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.save_btn = new System.Windows.Forms.Button();
-            this.load_btn = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
@@ -68,10 +68,8 @@ namespace ATC_Windows_Forms_App
             // 
             // pnlHeader
             // 
-            this.pnlHeader.Controls.Add(this.load_btn);
-            this.pnlHeader.Controls.Add(this.save_btn);
             this.pnlHeader.Controls.Add(this.headerControl2);
-            this.pnlHeader.Controls.Add(this.menuStrip1);
+            this.pnlHeader.Controls.Add(this.menuStrip);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
@@ -80,23 +78,47 @@ namespace ATC_Windows_Forms_App
             // 
             // headerControl2
             // 
-            this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(9)))));
             this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headerControl2.Location = new System.Drawing.Point(0, 24);
+            this.headerControl2.Location = new System.Drawing.Point(0, 0);
             this.headerControl2.Name = "headerControl2";
             this.headerControl2.Size = new System.Drawing.Size(649, 76);
             this.headerControl2.TabIndex = 0;
+            this.headerControl2.Load += new System.EventHandler(this.headerControl2_Load);
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(649, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.menuStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip.Location = new System.Drawing.Point(0, 76);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(649, 24);
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.Text = "menuStrip";
+            // 
+            // load_btn
+            // 
+            this.load_btn.Location = new System.Drawing.Point(121, 36);
+            this.load_btn.Name = "load_btn";
+            this.load_btn.Size = new System.Drawing.Size(108, 23);
+            this.load_btn.TabIndex = 3;
+            this.load_btn.Text = "Load";
+            this.load_btn.UseVisualStyleBackColor = true;
+            this.load_btn.Click += new System.EventHandler(this.Load_btn_Click);
+            // 
+            // save_btn
+            // 
+            this.save_btn.Location = new System.Drawing.Point(12, 36);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(103, 23);
+            this.save_btn.TabIndex = 2;
+            this.save_btn.Text = "Save";
+            this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // pnlNavigation
             // 
+            this.pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
             this.pnlNavigation.Controls.Add(this.lsbMappings);
             this.pnlNavigation.Controls.Add(this.pnlAddMapping);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
@@ -108,15 +130,19 @@ namespace ATC_Windows_Forms_App
             // lsbMappings
             // 
             this.lsbMappings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lsbMappings.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lsbMappings.FormattingEnabled = true;
             this.lsbMappings.ItemHeight = 15;
-            this.lsbMappings.Location = new System.Drawing.Point(0, 0);
+            this.lsbMappings.Location = new System.Drawing.Point(7, 6);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(242, 364);
+            this.lsbMappings.Size = new System.Drawing.Size(230, 364);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
             // 
+            this.pnlAddMapping.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAddMapping.Controls.Add(this.load_btn);
+            this.pnlAddMapping.Controls.Add(this.save_btn);
             this.pnlAddMapping.Controls.Add(this.btnAddMapping);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
@@ -128,7 +154,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.btnAddMapping.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddMapping.Location = new System.Drawing.Point(12, 16);
+            this.btnAddMapping.Location = new System.Drawing.Point(12, 4);
             this.btnAddMapping.Name = "btnAddMapping";
             this.btnAddMapping.Size = new System.Drawing.Size(217, 30);
             this.btnAddMapping.TabIndex = 0;
@@ -140,6 +166,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlMainArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMainArea.BackColor = System.Drawing.SystemColors.Control;
             this.pnlMainArea.Controls.Add(this.tbMultiplier);
             this.pnlMainArea.Controls.Add(this.label3);
             this.pnlMainArea.Controls.Add(this.cbOutput);
@@ -303,32 +330,13 @@ namespace ATC_Windows_Forms_App
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.btnDeactivate);
             this.panel1.Controls.Add(this.btnActivate);
             this.panel1.Location = new System.Drawing.Point(242, 478);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 63);
             this.panel1.TabIndex = 3;
-            // 
-            // save_btn
-            // 
-            this.save_btn.Location = new System.Drawing.Point(1, 1);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(75, 23);
-            this.save_btn.TabIndex = 2;
-            this.save_btn.Text = "Save";
-            this.save_btn.UseVisualStyleBackColor = true;
-            this.save_btn.Click += new System.EventHandler(this.Save_btn_Click);
-            // 
-            // load_btn
-            // 
-            this.load_btn.Location = new System.Drawing.Point(80, 1);
-            this.load_btn.Name = "load_btn";
-            this.load_btn.Size = new System.Drawing.Size(75, 23);
-            this.load_btn.TabIndex = 3;
-            this.load_btn.Text = "Load";
-            this.load_btn.UseVisualStyleBackColor = true;
-            this.load_btn.Click += new System.EventHandler(this.Load_btn_Click);
             // 
             // MainForm
             // 
@@ -340,7 +348,6 @@ namespace ATC_Windows_Forms_App
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(665, 580);
             this.MinimumSize = new System.Drawing.Size(665, 580);
             this.Name = "MainForm";
@@ -386,9 +393,9 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Button btnDeactivate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown tbMultiplier;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button save_btn;
         private System.Windows.Forms.Button load_btn;
+        private System.Windows.Forms.MenuStrip menuStrip;
     }
 }
 
