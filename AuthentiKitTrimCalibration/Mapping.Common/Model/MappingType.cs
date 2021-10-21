@@ -28,7 +28,7 @@ namespace MappingManager.Common.Model
         {
             ObservableCollection<MappingType> types = new();
             types.Add(new MappingType(AXIS, AXIS_STRING));
-            // types.Add(new MappingType(BUTTON, "Button")); // Just support axis for now
+            types.Add(new MappingType(BUTTON, "Button")); // Just support axis for now
             return types;
         }
 

@@ -57,62 +57,7 @@ namespace ATC_Windows_Forms_App
             }
         }
 
-        private void LoadFormData()
-        {
-            // Mapping selection on the Left
-            mappingBindingSource.DataSource = _viewModel.Mappings;
-            lsbMappings.DataSource = mappingBindingSource;
-            lsbMappings.DisplayMember = "Name";
-
-            var dataBindingsInitalised = (tbName.DataBindings.Count > 0) ||
-                (cbMappingType.DataBindings.Count > 0) ||
-                (btnActivate.DataBindings.Count > 0);
-            if (dataBindingsInitalised)
-            {
-                mappingBindingSource.ResetBindings(false);
-            }
-            else
-            {
-                // Mapping Name
-                tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
-
-                // Mapping Type
-                cbMappingType.DataSource = _viewModel.MappingTypes;
-                cbMappingType.DisplayMember = "Name";
-                cbMappingType.ValueMember = "Id";
-                cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
-
-                // Input A
-                cbInputA.DataSource = _viewModel.InputChannelsA;
-                cbInputA.DisplayMember = "Name";
-                cbInputA.ValueMember = "Hash";
-                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
-
-                // Input B
-                cbInputB.DataSource = _viewModel.InputChannelsB;
-                cbInputB.DisplayMember = "Name";
-                cbInputB.ValueMember = "Hash";
-                cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBHash");
-
-                // Output
-                cbOutput.DataSource = _viewModel.OutputChannels;
-                cbOutput.DisplayMember = "Name";
-                cbOutput.ValueMember = "Hash";
-                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
-
-                // Multiplier
-                tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");
-
-                // Activate Button
-                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
-
-                // Deactivate Button
-                btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
-
-                // Panel Activation
-                pnlMainArea.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
-            }
-        }
+        
 
         private void btnActivate_Click(object sender, EventArgs e)
         {
@@ -160,7 +105,18 @@ namespace ATC_Windows_Forms_App
 
         }
 
-        private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void LoadFormData()
+        {
+            // Mapping selection on the Left
+            mappingBindingSource.DataSource = _viewModel.Mappings;
+            lsbMappings.DataSource = mappingBindingSource;
+            lsbMappings.DisplayMember = "Name";
+
+            // AxisConfigControl
+            axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+        }
+            private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (e.ClickedItem.Name.Equals("saveMenuItem"))
             {
