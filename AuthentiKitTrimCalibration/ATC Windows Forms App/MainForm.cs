@@ -1,4 +1,5 @@
 ﻿using AuthentiKitTrimCalibration.ViewModel;
+using MappingManager.Common.Model;
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
@@ -154,43 +155,75 @@ namespace ATC_Windows_Forms_App
             _viewModel.Stop();
         }
 
-        private void Save_btn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _viewModel.SaveMappings();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error while saving",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _viewModel.Stop();
-            }
-        }
-
-        private void Load_btn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                _viewModel.LoadMappings();
-                LoadFormData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error while loading",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _viewModel.Stop();
-            }
-        }
-
         private void headerControl2_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            if (e.ClickedItem.Name.Equals("saveMenuItem"))
+            {
+                try
+                {
+                    _viewModel.SaveMappings();
+                    MessageBox.Show("Your config has been saved", "Saved",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error while saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _viewModel.Stop();
+                }
 
+            }
+            else if (e.ClickedItem.Name.Equals("loadMenuItem"))
+            {
+                try
+                {
+                    _viewModel.LoadMappings();
+                    LoadFormData();
+                    MessageBox.Show("Your config has been loaded", "Loaded",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error while loading",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _viewModel.Stop();
+                }
+            }
+        }
+
+        private void resetMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            try
+            {
+                if (e.ClickedItem.Name.Equals("clearMenuItem"))
+                {
+                    _viewModel.Reset(Aircraft.NONE);
+                }
+                else if (e.ClickedItem.Name.Equals("spitfireMkIXMenuItem"))
+                {
+                    _viewModel.Reset(Aircraft.SPITFIRE_MKIX);
+                    MessageBox.Show("Loaded recommended tuning for the MSFS FlyingIron Spitfire MK.IX", "Reset",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                LoadFormData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error while resetting",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
+        }
+
+        private void helpMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            string msg = String.Format("Item clicked: {0}", e.ClickedItem.Text);
+            MessageBox.Show(msg, "Clicked", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

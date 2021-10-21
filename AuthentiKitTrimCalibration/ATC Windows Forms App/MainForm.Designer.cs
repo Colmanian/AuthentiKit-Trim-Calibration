@@ -39,13 +39,13 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.load_btn = new System.Windows.Forms.Button();
-            this.save_btn = new System.Windows.Forms.Button();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -128,7 +128,6 @@ namespace ATC_Windows_Forms_App
             this.menuStrip.Size = new System.Drawing.Size(649, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip";
-            this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
             // 
             // configMenuItem
             // 
@@ -138,6 +137,7 @@ namespace ATC_Windows_Forms_App
             this.configMenuItem.Name = "configMenuItem";
             this.configMenuItem.Size = new System.Drawing.Size(55, 20);
             this.configMenuItem.Text = "&Config";
+            this.configMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.configMenuItemClicked);
             // 
             // saveMenuItem
             // 
@@ -160,16 +160,30 @@ namespace ATC_Windows_Forms_App
             // resetMenuItem
             // 
             this.resetMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spitfireMkIXMenuItem});
+            this.spitfireMkIXMenuItem,
+            this.toolStripSeparator4,
+            this.clearMenuItem});
             this.resetMenuItem.Name = "resetMenuItem";
             this.resetMenuItem.Size = new System.Drawing.Size(47, 20);
             this.resetMenuItem.Text = "&Reset";
+            this.resetMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.resetMenuItemClicked);
             // 
             // spitfireMkIXMenuItem
             // 
             this.spitfireMkIXMenuItem.Name = "spitfireMkIXMenuItem";
             this.spitfireMkIXMenuItem.Size = new System.Drawing.Size(261, 22);
             this.spitfireMkIXMenuItem.Text = "&Spitfire Mk.IX  (FlyingIron for MSFS)";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(139, 6);
+            // 
+            // clearMenuItem
+            // 
+            this.clearMenuItem.Name = "clearMenuItem";
+            this.clearMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.clearMenuItem.Text = "&Clear All";
             // 
             // helpMenuItem
             // 
@@ -181,6 +195,7 @@ namespace ATC_Windows_Forms_App
             this.helpMenuItem.Name = "helpMenuItem";
             this.helpMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpMenuItem.Text = "&Help";
+            this.helpMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.helpMenuItemClicked);
             // 
             // userGuideMenuItem
             // 
@@ -204,26 +219,6 @@ namespace ATC_Windows_Forms_App
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // load_btn
-            // 
-            this.load_btn.Location = new System.Drawing.Point(121, 36);
-            this.load_btn.Name = "load_btn";
-            this.load_btn.Size = new System.Drawing.Size(108, 23);
-            this.load_btn.TabIndex = 3;
-            this.load_btn.Text = "Load";
-            this.load_btn.UseVisualStyleBackColor = true;
-            this.load_btn.Click += new System.EventHandler(this.Load_btn_Click);
-            // 
-            // save_btn
-            // 
-            this.save_btn.Location = new System.Drawing.Point(12, 36);
-            this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(103, 23);
-            this.save_btn.TabIndex = 2;
-            this.save_btn.Text = "Save";
-            this.save_btn.UseVisualStyleBackColor = true;
-            this.save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // pnlNavigation
             // 
@@ -250,8 +245,6 @@ namespace ATC_Windows_Forms_App
             // pnlAddMapping
             // 
             this.pnlAddMapping.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAddMapping.Controls.Add(this.load_btn);
-            this.pnlAddMapping.Controls.Add(this.save_btn);
             this.pnlAddMapping.Controls.Add(this.btnAddMapping);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
@@ -595,8 +588,6 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Button btnDeactivate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown tbMultiplier;
-        private System.Windows.Forms.Button save_btn;
-        private System.Windows.Forms.Button load_btn;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem configMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -611,6 +602,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resetMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spitfireMkIXMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;

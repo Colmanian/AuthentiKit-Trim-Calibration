@@ -152,5 +152,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             return new OutputChannel();
         }
+
+        public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
