@@ -49,6 +49,7 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
+            this.btnRemoveMapping = new System.Windows.Forms.Button();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +70,8 @@ namespace ATC_Windows_Forms_App
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axisConfigControl = new ATC_Windows_Forms_App.Controls.AxisConfigControl();
+            this.btnDeactivate = new System.Windows.Forms.Button();
+            this.btnActivate = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -226,6 +229,7 @@ namespace ATC_Windows_Forms_App
             // pnlAddMapping
             // 
             this.pnlAddMapping.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAddMapping.Controls.Add(this.btnRemoveMapping);
             this.pnlAddMapping.Controls.Add(this.btnAddMapping);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
@@ -233,13 +237,23 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping.Size = new System.Drawing.Size(242, 63);
             this.pnlAddMapping.TabIndex = 0;
             // 
+            // btnRemoveMapping
+            // 
+            this.btnRemoveMapping.Location = new System.Drawing.Point(129, 8);
+            this.btnRemoveMapping.Name = "btnRemoveMapping";
+            this.btnRemoveMapping.Size = new System.Drawing.Size(84, 47);
+            this.btnRemoveMapping.TabIndex = 1;
+            this.btnRemoveMapping.Text = "Remove Mapping";
+            this.btnRemoveMapping.UseVisualStyleBackColor = true;
+            this.btnRemoveMapping.Click += new System.EventHandler(this.btnRemoveMapping_Click);
+            // 
             // btnAddMapping
             // 
             this.btnAddMapping.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddMapping.Location = new System.Drawing.Point(12, 4);
+            this.btnAddMapping.Location = new System.Drawing.Point(25, 8);
             this.btnAddMapping.Name = "btnAddMapping";
-            this.btnAddMapping.Size = new System.Drawing.Size(217, 30);
+            this.btnAddMapping.Size = new System.Drawing.Size(84, 47);
             this.btnAddMapping.TabIndex = 0;
             this.btnAddMapping.Text = "Add Mapping";
             this.btnAddMapping.UseVisualStyleBackColor = true;
@@ -334,14 +348,39 @@ namespace ATC_Windows_Forms_App
             // 
             this.axisConfigControl.Location = new System.Drawing.Point(242, 100);
             this.axisConfigControl.Name = "axisConfigControl";
-            this.axisConfigControl.Size = new System.Drawing.Size(407, 441);
+            this.axisConfigControl.Size = new System.Drawing.Size(407, 380);
             this.axisConfigControl.TabIndex = 4;
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeactivate.Enabled = false;
+            this.btnDeactivate.Location = new System.Drawing.Point(458, 495);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
+            this.btnDeactivate.TabIndex = 18;
+            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.UseVisualStyleBackColor = true;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
+            // 
+            // btnActivate
+            // 
+            this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnActivate.Location = new System.Drawing.Point(308, 495);
+            this.btnActivate.Name = "btnActivate";
+            this.btnActivate.Size = new System.Drawing.Size(131, 29);
+            this.btnActivate.TabIndex = 17;
+            this.btnActivate.Text = "Activate";
+            this.btnActivate.UseVisualStyleBackColor = true;
+            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 541);
+            this.Controls.Add(this.btnDeactivate);
+            this.Controls.Add(this.btnActivate);
             this.Controls.Add(this.axisConfigControl);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
@@ -405,6 +444,9 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private Controls.AxisConfigControl axisConfigControl;
+        private System.Windows.Forms.Button btnRemoveMapping;
+        private System.Windows.Forms.Button btnDeactivate;
+        private System.Windows.Forms.Button btnActivate;
     }
 }
 

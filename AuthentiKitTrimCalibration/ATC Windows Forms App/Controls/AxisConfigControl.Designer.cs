@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace ATC_Windows_Forms_App.Controls
 {
     partial class AxisConfigControl
@@ -42,8 +44,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.btnDeactivate = new System.Windows.Forms.Button();
-            this.btnActivate = new System.Windows.Forms.Button();
             this.pnlAxisConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).BeginInit();
             this.SuspendLayout();
@@ -53,8 +53,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAxisConfig.Controls.Add(this.btnDeactivate);
-            this.pnlAxisConfig.Controls.Add(this.btnActivate);
             this.pnlAxisConfig.Controls.Add(this.tbMultiplier);
             this.pnlAxisConfig.Controls.Add(this.label3);
             this.pnlAxisConfig.Controls.Add(this.cbOutput);
@@ -69,7 +67,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Controls.Add(this.lblName);
             this.pnlAxisConfig.Location = new System.Drawing.Point(0, 0);
             this.pnlAxisConfig.Name = "pnlAxisConfig";
-            this.pnlAxisConfig.Size = new System.Drawing.Size(407, 441);
+            this.pnlAxisConfig.Size = new System.Drawing.Size(407, 380);
             this.pnlAxisConfig.TabIndex = 3;
             // 
             // tbMultiplier
@@ -189,34 +187,13 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
-            // btnDeactivate
-            // 
-            this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(213, 391);
-            this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
-            this.btnDeactivate.TabIndex = 16;
-            this.btnDeactivate.Text = "Deactivate";
-            this.btnDeactivate.UseVisualStyleBackColor = true;
-            // 
-            // btnActivate
-            // 
-            this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActivate.Location = new System.Drawing.Point(63, 391);
-            this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(131, 29);
-            this.btnActivate.TabIndex = 15;
-            this.btnActivate.Text = "Activate";
-            this.btnActivate.UseVisualStyleBackColor = true;
-            // 
             // AxisConfigControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlAxisConfig);
             this.Name = "AxisConfigControl";
-            this.Size = new System.Drawing.Size(407, 441);
+            this.Size = new System.Drawing.Size(407, 380);
             this.pnlAxisConfig.ResumeLayout(false);
             this.pnlAxisConfig.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).EndInit();
@@ -240,7 +217,5 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.BindingSource mappingBindingSource;
-        private System.Windows.Forms.Button btnDeactivate;
-        private System.Windows.Forms.Button btnActivate;
     }
 }

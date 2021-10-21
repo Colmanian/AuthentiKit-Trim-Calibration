@@ -68,10 +68,13 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 CanAddMapping = false;
             }
         }
-        public void RemoveMapping()
+        public void RemoveSelectedMapping()
         {
-            _selectedMapping.Deactivate();
-            Mappings.Remove(_selectedMapping);
+            if(_selectedMapping != null)
+            {
+                _selectedMapping.Deactivate();
+                Mappings.Remove(_selectedMapping);
+            }
         }
 
         public void SaveMappings()

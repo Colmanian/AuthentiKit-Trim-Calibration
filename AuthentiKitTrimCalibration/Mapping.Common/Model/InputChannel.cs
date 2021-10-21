@@ -24,14 +24,6 @@ namespace MappingManager.Common.Model
                     }
                     hash = hash * 23 + Button;
                 }
-
-                if (Device != null)
-                {
-                    if (Device.Contains("Throttle"))
-                    {
-                        Debug.WriteLine(String.Format("{0}\t+\t{1}\t=\t{2}", Device, Button, hash));
-                    }
-                }
                 return hash;
             }
         }

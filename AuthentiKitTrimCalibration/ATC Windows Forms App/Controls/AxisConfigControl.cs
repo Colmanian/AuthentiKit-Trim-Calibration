@@ -19,10 +19,9 @@ namespace ATC_Windows_Forms_App.Controls
         }
         public void LoadFormData(ref MainViewModel viewModel, ref BindingSource mappingBindingSource)
         {
-
             var dataBindingsInitalised = (tbName.DataBindings.Count > 0) ||
                 (cbMappingType.DataBindings.Count > 0) ||
-                (btnActivate.DataBindings.Count > 0);
+                (cbMappingType.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
@@ -58,12 +57,6 @@ namespace ATC_Windows_Forms_App.Controls
 
                 // Multiplier
                 tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");
-
-                // Activate Button
-                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
-
-                // Deactivate Button
-                btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
 
                 // Panel Activation
                 pnlAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");

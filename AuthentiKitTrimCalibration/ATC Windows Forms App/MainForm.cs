@@ -45,7 +45,7 @@ namespace ATC_Windows_Forms_App
         {
             try
             {
-                Debug.WriteLine("Adding New mapping"); /// You're trying to get this function working
+                Debug.WriteLine("Adding New mapping");
                 _viewModel.NewMapping();
                 LoadFormData();
             }
@@ -57,43 +57,23 @@ namespace ATC_Windows_Forms_App
             }
         }
 
-        
-
-        private void btnActivate_Click(object sender, EventArgs e)
+        private void btnRemoveMapping_Click(object sender, EventArgs e)
         {
             try
             {
-                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
-                    && mappingViewModel.Deactivated)
-                {
-                    mappingViewModel.Activate();
-                }
+                Debug.WriteLine("Removing selected mapping");
+                _viewModel.RemoveSelectedMapping();
+                LoadFormData();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error activating mapping",
+                MessageBox.Show(ex.Message, "Error removing mapping",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _viewModel.Stop();
             }
         }
 
-        private void btnDeactivate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
-                    && mappingViewModel.Activated)
-                {
-                    mappingViewModel.Deactivate();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error deactivating mapping",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _viewModel.Stop();
-            }
-        }
+
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -115,8 +95,23 @@ namespace ATC_Windows_Forms_App
             // AxisConfigControl
             axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
+            var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
+                (btnDeactivate.DataBindings.Count > 0);
+            if (dataBindingsInitalised)
+            {
+                mappingBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                // Activate Button
+                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+
+                // Deactivate Button
+                btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
+            }
+
         }
-            private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             if (e.ClickedItem.Name.Equals("saveMenuItem"))
             {
@@ -180,6 +175,42 @@ namespace ATC_Windows_Forms_App
         {
             string msg = String.Format("Item clicked: {0}", e.ClickedItem.Text);
             MessageBox.Show(msg, "Clicked", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Deactivated)
+                {
+                    mappingViewModel.Activate();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error activating mapping",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
+        }
+
+        private void btnDeactivate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (mappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Activated)
+                {
+                    mappingViewModel.Deactivate();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error deactivating mapping",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
         }
     }
 }
