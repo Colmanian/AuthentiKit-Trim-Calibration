@@ -14,8 +14,6 @@ namespace ATC_Windows_Forms_App
             try
             {
                 InitializeComponent();
-                ToolStripMenuItem config = menuStrip.dro
-                config.Items.Add("FUCKOFF");
                 _viewModel = new MainViewModel();
             }
             catch (Exception e)
@@ -186,6 +184,11 @@ namespace ATC_Windows_Forms_App
         }
 
         private void headerControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
