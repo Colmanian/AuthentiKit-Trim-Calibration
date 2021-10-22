@@ -22,7 +22,7 @@ namespace ATC_Windows_Forms_App.Controls
             var dataBindingsInitalised = (cbInputA.DataBindings.Count > 0) ||
                 (cbInputB.DataBindings.Count > 0) ||
                 (cbOutput.DataBindings.Count > 0) ||
-                (tbMultiplier.DataBindings.Count > 0) ||
+                (tbAxisSensitivity.DataBindings.Count > 0) ||
                 (pnlAxisConfig.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
@@ -50,10 +50,58 @@ namespace ATC_Windows_Forms_App.Controls
                 cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
 
                 // Multiplier
-                tbMultiplier.DataBindings.Add("Text", mappingBindingSource, "Multiplier");
+                tbAxisSensitivity.DataBindings.Add("Text", mappingBindingSource, "AxisSensitivity");
 
                 // Panel Activation
                 pnlAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
+            }
+        }
+
+
+        /*
+         * The following methods only exist to trigger an update of the data binding without having to
+         * select another control. The main way that data is updated in the mapping is via the databindings
+         * specified in the LoadFormData above.
+         */
+
+        private void cbInputA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Binding b in cbInputA.DataBindings)
+            {
+                b.WriteValue();
+            }
+        }
+
+        private void cbInputB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Binding b in cbInputB.DataBindings)
+            {
+                b.WriteValue();
+            }
+        }
+
+        private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Binding b in cbOutput.DataBindings)
+            {
+                b.WriteValue();
+            }
+        }
+
+        private void tbAxisSensitivity_KeyUp(object sender, KeyEventArgs e)
+        {
+            foreach (Binding b in tbAxisSensitivity.DataBindings)
+            {
+                b.WriteValue();
+            }
+            tbAxisSensitivity.Select(Right, 0);
+        }
+
+        private void tbAxisSensitivity_Click(object sender, EventArgs e)
+        {
+            foreach (Binding b in tbAxisSensitivity.DataBindings)
+            {
+                b.WriteValue();
             }
         }
     }

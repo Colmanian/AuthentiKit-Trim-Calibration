@@ -114,7 +114,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 if (_mapping.TypeId != value)
                 {
                     _mapping.TypeId = value;
-                    Debug.WriteLine("RAISING PROPERTY CHANGED to {0}", _mapping.TypeId);
                     RaisePropertyChanged();
                 }
             }
@@ -192,15 +191,30 @@ namespace AuthentiKitTrimCalibration.ViewModel
             return new OutputChannel();
         }
 
-        public int Multiplier
+        public int AxisSensitivity
         {
-            get { return _mapping.Multiplier; }
+            get { return _mapping.AxisSensitivity; }
             set
             {
-                if (_mapping.Multiplier != value)
+                if (_mapping.AxisSensitivity != value)
                 {
                     Deactivate();
-                    _mapping.Multiplier = value;
+                    _mapping.AxisSensitivity = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+
+        public int ButtonMultiplier
+        {
+            get { return _mapping.ButtonMultiplier; }
+            set
+            {
+                if (_mapping.ButtonMultiplier != value)
+                {
+                    Deactivate();
+                    _mapping.ButtonMultiplier = value;
                     RaisePropertyChanged();
                     UpdateStatus();
                 }

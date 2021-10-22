@@ -20,7 +20,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string INPUT_CHANNEL_A_HASH = "INPUT_CHANNEL_A_HASH";
         private readonly string INPUT_CHANNEL_B_HASH = "INPUT_CHANNEL_B_HASH";
         private readonly string OUTPUT_CHANNEL_HASH = "OUTPUT_CHANNEL_HASH";
-        private readonly string MULTIPLIER = "MULTIPLIER";
+        private readonly string AXIS_SENSITIVITY = "AXIS_SENSITIVITY";
+        private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
 
         public MappingDTO GetBlankMapping()
@@ -48,7 +49,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     int inputChannelAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_A_HASH).InnerText);
                     int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
                     int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
-                    int multiplier = int.Parse(mappingNode.SelectSingleNode(MULTIPLIER).InnerText);
+                    int axisSensitivity = int.Parse(mappingNode.SelectSingleNode(AXIS_SENSITIVITY).InnerText);
+                    int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
                     string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
 
                     // Create Mapping from values and add to mappings list
@@ -60,7 +62,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
                         InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
                         OutputChannel = GetOutputChannel(outputChannelHash, outputChannels),
-                        Multiplier = multiplier,
+                        AxisSensitivity = axisSensitivity,
+                        ButtonMultiplier = buttonMultiplier,
                         ResetCommand = resetCommand
                     });
                 }
@@ -110,10 +113,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 outputChannelNode.InnerText = String.Format("{0}", mapping.OutputChannel.Hash);
                 mappingNode.AppendChild(outputChannelNode);
 
-                // Multiplier
-                XmlElement multiplierNode = doc.CreateElement(MULTIPLIER);
-                multiplierNode.InnerText = String.Format("{0}", mapping.Multiplier);
-                mappingNode.AppendChild(multiplierNode);
+                // AxisSensitivity
+                XmlElement axisSensitivityNode = doc.CreateElement(AXIS_SENSITIVITY);
+                axisSensitivityNode.InnerText = String.Format("{0}", mapping.AxisSensitivity);
+                mappingNode.AppendChild(axisSensitivityNode);
+
+
+                // ButtonMultiplier
+                XmlElement buttoMultiplierNode = doc.CreateElement(BUTTON_MULTIPLIER);
+                buttoMultiplierNode.InnerText = String.Format("{0}", mapping.ButtonMultiplier);
+                mappingNode.AppendChild(buttoMultiplierNode);
 
                 // ResetCommand
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
@@ -181,7 +190,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
                     OutputChannel = getOutputChannel(outputChannels, (uint) AxisId.X),
-                    Multiplier = 347,
+                    AxisSensitivity = 347,
                 });
 
                 // Rudder Trum Button

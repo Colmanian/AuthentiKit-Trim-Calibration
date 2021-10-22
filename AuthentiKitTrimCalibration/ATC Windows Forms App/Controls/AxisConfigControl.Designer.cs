@@ -32,7 +32,7 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlAxisConfig = new System.Windows.Forms.Panel();
-            this.tbMultiplier = new System.Windows.Forms.NumericUpDown();
+            this.tbAxisSensitivity = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.pnlAxisConfig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAxisConfig
@@ -49,7 +49,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAxisConfig.Controls.Add(this.tbMultiplier);
+            this.pnlAxisConfig.Controls.Add(this.tbAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.label3);
             this.pnlAxisConfig.Controls.Add(this.cbOutput);
             this.pnlAxisConfig.Controls.Add(this.label2);
@@ -62,17 +62,19 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.TabIndex = 3;
             // 
-            // tbMultiplier
+            // tbAxisSensitivity
             // 
-            this.tbMultiplier.Location = new System.Drawing.Point(19, 201);
-            this.tbMultiplier.Maximum = new decimal(new int[] {
+            this.tbAxisSensitivity.Location = new System.Drawing.Point(19, 201);
+            this.tbAxisSensitivity.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.tbMultiplier.Name = "tbMultiplier";
-            this.tbMultiplier.Size = new System.Drawing.Size(360, 23);
-            this.tbMultiplier.TabIndex = 14;
+            this.tbAxisSensitivity.Name = "tbAxisSensitivity";
+            this.tbAxisSensitivity.Size = new System.Drawing.Size(360, 23);
+            this.tbAxisSensitivity.TabIndex = 14;
+            this.tbAxisSensitivity.Click += new System.EventHandler(this.tbAxisSensitivity_Click);
+            this.tbAxisSensitivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbAxisSensitivity_KeyUp);
             // 
             // label3
             // 
@@ -93,6 +95,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbOutput.Name = "cbOutput";
             this.cbOutput.Size = new System.Drawing.Size(360, 23);
             this.cbOutput.TabIndex = 12;
+            this.cbOutput.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -122,6 +125,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB.Name = "cbInputB";
             this.cbInputB.Size = new System.Drawing.Size(360, 23);
             this.cbInputB.TabIndex = 9;
+            this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
             // cbInputA
             // 
@@ -133,6 +137,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.Name = "cbInputA";
             this.cbInputA.Size = new System.Drawing.Size(360, 23);
             this.cbInputA.TabIndex = 8;
+            this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
             // lblMultiplier
             // 
@@ -152,7 +157,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.ResumeLayout(false);
             this.pnlAxisConfig.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,7 +165,7 @@ namespace ATC_Windows_Forms_App.Controls
         #endregion
 
         private System.Windows.Forms.Panel pnlAxisConfig;
-        private System.Windows.Forms.NumericUpDown tbMultiplier;
+        private System.Windows.Forms.NumericUpDown tbAxisSensitivity;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbOutput;
         private System.Windows.Forms.Label label2;

@@ -98,6 +98,9 @@ namespace ATC_Windows_Forms_App
             // AxisConfigControl
             axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
+            // buttonConfigControl
+            buttonConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
             // Non Axis nor Button specific data bindings
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
@@ -130,8 +133,8 @@ namespace ATC_Windows_Forms_App
                 btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
 
                 // Panel Visibility
-                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "CanApply");
-                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "CanApply");
+                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
+                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
             }
 
             // Update Selected Mapping

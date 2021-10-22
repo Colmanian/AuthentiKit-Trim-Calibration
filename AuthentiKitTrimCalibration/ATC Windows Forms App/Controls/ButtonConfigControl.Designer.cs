@@ -30,14 +30,14 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlButtonConfig = new System.Windows.Forms.Panel();
-            this.tbMultiplier = new System.Windows.Forms.NumericUpDown();
+            this.tbButtonMultiplier = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.pnlButtonConfig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbButtonMultiplier)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlButtonConfig
@@ -45,7 +45,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlButtonConfig.Controls.Add(this.tbMultiplier);
+            this.pnlButtonConfig.Controls.Add(this.tbButtonMultiplier);
             this.pnlButtonConfig.Controls.Add(this.label3);
             this.pnlButtonConfig.Controls.Add(this.cbOutput);
             this.pnlButtonConfig.Controls.Add(this.label1);
@@ -56,17 +56,19 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlButtonConfig.TabIndex = 4;
             // 
-            // tbMultiplier
+            // tbButtonMultiplier
             // 
-            this.tbMultiplier.Location = new System.Drawing.Point(19, 154);
-            this.tbMultiplier.Maximum = new decimal(new int[] {
+            this.tbButtonMultiplier.Location = new System.Drawing.Point(19, 154);
+            this.tbButtonMultiplier.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.tbMultiplier.Name = "tbMultiplier";
-            this.tbMultiplier.Size = new System.Drawing.Size(360, 23);
-            this.tbMultiplier.TabIndex = 14;
+            this.tbButtonMultiplier.Name = "tbButtonMultiplier";
+            this.tbButtonMultiplier.Size = new System.Drawing.Size(360, 23);
+            this.tbButtonMultiplier.TabIndex = 14;
+            this.tbButtonMultiplier.Click += new System.EventHandler(this.tbButtonMultiplier_Click);
+            this.tbButtonMultiplier.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbButtonMultiplier_KeyUp);
             // 
             // label3
             // 
@@ -87,6 +89,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbOutput.Name = "cbOutput";
             this.cbOutput.Size = new System.Drawing.Size(360, 23);
             this.cbOutput.TabIndex = 12;
+            this.cbOutput.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -107,6 +110,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.Name = "cbInputA";
             this.cbInputA.Size = new System.Drawing.Size(360, 23);
             this.cbInputA.TabIndex = 8;
+            this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
             // lblMultiplier
             // 
@@ -126,7 +130,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlButtonConfig.ResumeLayout(false);
             this.pnlButtonConfig.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbMultiplier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbButtonMultiplier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,7 +138,7 @@ namespace ATC_Windows_Forms_App.Controls
         #endregion
 
         private System.Windows.Forms.Panel pnlButtonConfig;
-        private System.Windows.Forms.NumericUpDown tbMultiplier;
+        private System.Windows.Forms.NumericUpDown tbButtonMultiplier;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbOutput;
         private System.Windows.Forms.Label label1;

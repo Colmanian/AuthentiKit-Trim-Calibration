@@ -8,7 +8,8 @@
             TypeId = MappingType.AXIS;
             Active = false;
             OutputChannel = new();
-            Multiplier = 1;
+            ButtonMultiplier = 1;
+            AxisSensitivity = 1;
             InputChannelA = new();
             InputChannelB = new();
             ResetCommand = "";
@@ -23,7 +24,8 @@
         public bool Active { get; set; } // Both
         public OutputChannel OutputChannel { get; set; } // Both
         public int OutputChannelId { get; set; } // Both
-        public int Multiplier { get; set; } // Both
+        public int ButtonMultiplier { get; set; } // Button Only
+        public int AxisSensitivity { get; set; } // Axis Only
         public InputChannel InputChannelA { get; set; } // Both
         public InputChannel InputChannelB { get; set; } // Axis Only
         public string ResetCommand { get; set; } // Axis Only

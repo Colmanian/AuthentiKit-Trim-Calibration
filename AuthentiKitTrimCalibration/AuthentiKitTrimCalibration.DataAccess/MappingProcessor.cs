@@ -88,7 +88,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputButton outputButton)
                 {
                     Debug.WriteLine("so creating new Button Processor...");
-                    _buttonProcessor = new ButtonProcessor(_mapping.Multiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
+                    _buttonProcessor = new ButtonProcessor(_mapping.ButtonMultiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
                 }
             }
             else if (_mapping.TypeId == MappingType.AXIS)
@@ -97,7 +97,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("so creating new Axis Processor...");
-                    _axisProcessor = new AxisProcessor(_mapping.Multiplier, outputAxis);
+                    _axisProcessor = new AxisProcessor(_mapping.ButtonMultiplier, outputAxis);
                 }
             }
             else
