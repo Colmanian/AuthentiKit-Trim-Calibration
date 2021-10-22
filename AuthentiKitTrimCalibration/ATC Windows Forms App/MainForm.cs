@@ -95,19 +95,35 @@ namespace ATC_Windows_Forms_App
             // AxisConfigControl
             axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
+            // Non Axis nor Button specific data bindings
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
-                (btnDeactivate.DataBindings.Count > 0);
+                (btnDeactivate.DataBindings.Count > 0) ||
+                (axisConfigControl.DataBindings.Count > 0) ||
+                (tbName.DataBindings.Count > 0) ||
+                (cbMappingType.DataBindings.Count > 0) ||
+                (buttonConfigControl.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
             }
             else
             {
-                // Activate Button
-                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+                // Mapping Name
+                tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
 
-                // Deactivate Button
+                // Mapping Type
+                cbMappingType.DataSource = _viewModel.MappingTypes;
+                cbMappingType.DisplayMember = "Name";
+                cbMappingType.ValueMember = "Id";
+                cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+
+                // Activate and Deactivate Buttons
+                btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
                 btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
+
+                // Panel Visibility
+                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
+                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
             }
 
         }
@@ -210,6 +226,15 @@ namespace ATC_Windows_Forms_App
                 MessageBox.Show(ex.Message, "Error deactivating mapping",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _viewModel.Stop();
+            }
+        }
+        private void cbMappingType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+            {
+                string selected = cbMappingType.SelectedValue.ToString();
+                if (selected.Equals("0") || selected.Equals("1"))
+                    mappingViewModel.TypeId = int.Parse(selected);
             }
         }
     }

@@ -19,23 +19,17 @@ namespace ATC_Windows_Forms_App.Controls
         }
         public void LoadFormData(ref MainViewModel viewModel, ref BindingSource mappingBindingSource)
         {
-            var dataBindingsInitalised = (tbName.DataBindings.Count > 0) ||
-                (cbMappingType.DataBindings.Count > 0) ||
-                (cbMappingType.DataBindings.Count > 0);
+            var dataBindingsInitalised = (cbInputA.DataBindings.Count > 0) ||
+                (cbInputB.DataBindings.Count > 0) ||
+                (cbOutput.DataBindings.Count > 0) ||
+                (tbMultiplier.DataBindings.Count > 0) ||
+                (pnlAxisConfig.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
             }
             else
             {
-                // Mapping Name
-                tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
-
-                // Mapping Type
-                cbMappingType.DataSource = viewModel.MappingTypes;
-                cbMappingType.DisplayMember = "Name";
-                cbMappingType.ValueMember = "Id";
-                cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
 
                 // Input A
                 cbInputA.DataSource = viewModel.InputChannelsA;

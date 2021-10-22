@@ -1,6 +1,7 @@
 ﻿using AuthentiKitTrimCalibration.DataAccess;
 using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 
@@ -113,6 +114,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 if (_mapping.TypeId != value)
                 {
                     _mapping.TypeId = value;
+                    Debug.WriteLine("RAISING PROPERTY CHANGED to {0}", _mapping.TypeId);
                     RaisePropertyChanged();
                 }
             }
@@ -252,6 +254,5 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get { return _mappingProcessor.IsRunning(); }
         }
         public bool Deactivated => !Activated;
-
     }
 }
