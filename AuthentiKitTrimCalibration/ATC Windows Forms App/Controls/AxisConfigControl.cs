@@ -19,42 +19,31 @@ namespace ATC_Windows_Forms_App.Controls
         }
         public void LoadFormData(ref MainViewModel viewModel, ref BindingSource mappingBindingSource)
         {
-            var dataBindingsInitalised = (cbInputA.DataBindings.Count > 0) ||
-                (cbInputB.DataBindings.Count > 0) ||
-                (cbOutput.DataBindings.Count > 0) ||
-                (tbAxisSensitivity.DataBindings.Count > 0) ||
-                (pnlAxisConfig.DataBindings.Count > 0);
-            if (dataBindingsInitalised)
-            {
-                mappingBindingSource.ResetBindings(false);
-            }
-            else
-            {
 
-                // Input A
-                cbInputA.DataSource = viewModel.InputChannelsA;
-                cbInputA.DisplayMember = "Name";
-                cbInputA.ValueMember = "Hash";
-                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
+            // Input A
+            cbInputA.DataSource = viewModel.InputChannelsA;
+            cbInputA.DisplayMember = "Name";
+            cbInputA.ValueMember = "Hash";
+            cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
 
-                // Input B
-                cbInputB.DataSource = viewModel.InputChannelsB;
-                cbInputB.DisplayMember = "Name";
-                cbInputB.ValueMember = "Hash";
-                cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBHash");
+            // Input B
+            cbInputB.DataSource = viewModel.InputChannelsB;
+            cbInputB.DisplayMember = "Name";
+            cbInputB.ValueMember = "Hash";
+            cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBHash");
 
-                // Output
-                cbOutput.DataSource = viewModel.OutputChannels;
-                cbOutput.DisplayMember = "Name";
-                cbOutput.ValueMember = "Hash";
-                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
+            // Output
+            cbOutput.DataSource = viewModel.OutputChannels;
+            cbOutput.DisplayMember = "Name";
+            cbOutput.ValueMember = "Hash";
+            cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
 
-                // Multiplier
-                tbAxisSensitivity.DataBindings.Add("Text", mappingBindingSource, "AxisSensitivity");
+            // Multiplier
+            tbAxisSensitivity.DataBindings.Add("Text", mappingBindingSource, "AxisSensitivity");
 
-                // Panel Activation
-                pnlAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
-            }
+            // Panel Activation
+            pnlAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
+
         }
 
 
@@ -66,42 +55,57 @@ namespace ATC_Windows_Forms_App.Controls
 
         private void cbInputA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Binding b in cbInputA.DataBindings)
+            if (cbInputA.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in cbInputA.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
 
         private void cbInputB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Binding b in cbInputB.DataBindings)
+            if (cbInputB.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in cbInputB.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
 
         private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Binding b in cbOutput.DataBindings)
+            if (cbOutput.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in cbOutput.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
 
         private void tbAxisSensitivity_KeyUp(object sender, KeyEventArgs e)
         {
-            foreach (Binding b in tbAxisSensitivity.DataBindings)
+            if (tbAxisSensitivity.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in tbAxisSensitivity.DataBindings)
+                {
+                    b.WriteValue();
+                }
+                tbAxisSensitivity.Select(Right, 0);
             }
-            tbAxisSensitivity.Select(Right, 0);
         }
 
         private void tbAxisSensitivity_Click(object sender, EventArgs e)
         {
-            foreach (Binding b in tbAxisSensitivity.DataBindings)
+            if (tbAxisSensitivity.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in tbAxisSensitivity.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
     }

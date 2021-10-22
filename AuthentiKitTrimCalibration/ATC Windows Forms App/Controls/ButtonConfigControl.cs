@@ -13,34 +13,23 @@ namespace ATC_Windows_Forms_App.Controls
 
         public void LoadFormData(ref MainViewModel viewModel, ref BindingSource mappingBindingSource)
         {
-            var dataBindingsInitalised = (cbInputA.DataBindings.Count > 0) ||
-                (cbOutput.DataBindings.Count > 0) ||
-                (tbButtonMultiplier.DataBindings.Count > 0);
-            if (dataBindingsInitalised)
-            {
-                mappingBindingSource.ResetBindings(false);
-            }
-            else
-            {
+            // Input A
+            cbInputA.DataSource = viewModel.InputChannelsA;
+            cbInputA.DisplayMember = "Name";
+            cbInputA.ValueMember = "Hash";
+            cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
 
-                // Input A
-                cbInputA.DataSource = viewModel.InputChannelsA;
-                cbInputA.DisplayMember = "Name";
-                cbInputA.ValueMember = "Hash";
-                cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
+            // Output
+            cbOutput.DataSource = viewModel.OutputChannels;
+            cbOutput.DisplayMember = "Name";
+            cbOutput.ValueMember = "Hash";
+            cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
 
-                // Output
-                cbOutput.DataSource = viewModel.OutputChannels;
-                cbOutput.DisplayMember = "Name";
-                cbOutput.ValueMember = "Hash";
-                cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
+            // Multiplier
+            tbButtonMultiplier.DataBindings.Add("Value", mappingBindingSource, "ButtonMultiplier");
 
-                // Multiplier
-                tbButtonMultiplier.DataBindings.Add("Value", mappingBindingSource, "ButtonMultiplier");
-
-                // Panel Activation
-                pnlButtonConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
-            }
+            // Panel Activation
+            pnlButtonConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
         }
 
         /*
@@ -50,34 +39,46 @@ namespace ATC_Windows_Forms_App.Controls
          */
         private void tbButtonMultiplier_Click(object sender, EventArgs e)
         {
-            foreach (Binding b in tbButtonMultiplier.DataBindings)
+            if (tbButtonMultiplier.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in tbButtonMultiplier.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
 
         private void tbButtonMultiplier_KeyUp(object sender, KeyEventArgs e)
         {
-            foreach (Binding b in tbButtonMultiplier.DataBindings)
+            if (tbButtonMultiplier.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in tbButtonMultiplier.DataBindings)
+                {
+                    b.WriteValue();
+                }
+                tbButtonMultiplier.Select(Right, 0);
             }
-            tbButtonMultiplier.Select(Right, 0);
         }
 
         private void cbInputA_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Binding b in cbInputA.DataBindings)
+            if (cbInputA.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in cbInputA.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
 
         private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Binding b in cbOutput.DataBindings)
+            if (cbOutput.Focused)
             {
-                b.WriteValue();
+                foreach (Binding b in cbOutput.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
     }

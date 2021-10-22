@@ -90,18 +90,14 @@ namespace ATC_Windows_Forms_App
 
         private void LoadFormData()
         {
-            // Mapping selection on the Left
+            // Initialise the BindingSource
             mappingBindingSource.DataSource = _viewModel.Mappings;
+
+            // Mapping selection on the Left
             lsbMappings.DataSource = mappingBindingSource;
             lsbMappings.DisplayMember = "Name";
 
-            // AxisConfigControl
-            axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
-            // buttonConfigControl
-            buttonConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
-
-            // Non Axis nor Button specific data bindings
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
                 (axisConfigControl.DataBindings.Count > 0) ||
@@ -135,6 +131,12 @@ namespace ATC_Windows_Forms_App
                 // Panel Visibility
                 axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
                 buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
+
+                // AxisConfigControl
+                axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+                // buttonConfigControl
+                buttonConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
             }
 
             // Update Selected Mapping
@@ -247,19 +249,28 @@ namespace ATC_Windows_Forms_App
                 _viewModel.Stop();
             }
         }
+
+        /*
+         * The following methods only exist to trigger an update of the data binding without having to
+         * select another control. The main way that data is updated in the mapping is via the databindings
+         * specified in the LoadFormData above.
+         */
         private void cbMappingType_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+            if ((mappingBindingSource.Current is MappingViewModel mappingViewModel) && (_viewModel.Mappings.Count > 0))
             {
-                string selected = cbMappingType.SelectedValue.ToString();
-                if (selected.Equals("0") || selected.Equals("1"))
-                    mappingViewModel.TypeId = int.Parse(selected);
+                if (cbMappingType.SelectedValue != null)
+                {
+                    string selected = cbMappingType.SelectedValue.ToString();
+                    if (selected.Equals("0") || selected.Equals("1"))
+                        mappingViewModel.TypeId = int.Parse(selected);
+                }
             }
         }
 
         private void tbName_TextChanged(object sender, EventArgs e)
         {
-            if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+            if ((mappingBindingSource.Current is MappingViewModel mappingViewModel) && (_viewModel.Mappings.Count > 0))
             {
                 mappingViewModel.Name = tbName.Text;
                 tbName.SelectionStart = tbName.Text.Length;
