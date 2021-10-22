@@ -18,6 +18,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public ObservableCollection<OutputChannel> OutputChannels = HardwareInfo.GetOutputChannels();
         public bool CanAddMapping { get; private set; }
 
+        public bool AtLeastOneMapping { get => Mappings.Count > 0; }
+
         public MainViewModel()
         {
             _mainDataHandler = new MainDataHandler();
@@ -55,7 +57,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void RemoveMapping(MappingViewModel mappingToDelete)
         {
-           foreach (var m in Mappings)
+            foreach (var m in Mappings)
             {
                 if (m.Equals(mappingToDelete))
                 {

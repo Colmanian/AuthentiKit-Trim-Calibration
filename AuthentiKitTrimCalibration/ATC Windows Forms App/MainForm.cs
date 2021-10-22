@@ -112,20 +112,25 @@ namespace ATC_Windows_Forms_App
             {
                 // Mapping Name
                 tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
+                tbName.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
 
                 // Mapping Type
                 cbMappingType.DataSource = _viewModel.MappingTypes;
                 cbMappingType.DisplayMember = "Name";
                 cbMappingType.ValueMember = "Id";
                 cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
+                cbMappingType.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+
+                // Remove Mapping Button
+                btnRemoveMapping.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
 
                 // Activate and Deactivate Buttons
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
                 btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
 
                 // Panel Visibility
-                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
-                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
+                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "CanApply");
+                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "CanApply");
             }
 
             // Update Selected Mapping
