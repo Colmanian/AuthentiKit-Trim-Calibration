@@ -10,6 +10,8 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
+        private readonly string VERSION="experimental";
+
         public MainForm()
         {
             try
@@ -211,8 +213,48 @@ namespace ATC_Windows_Forms_App
 
         private void helpMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            string msg = String.Format("Item clicked: {0}", e.ClickedItem.Text);
-            MessageBox.Show(msg, "Clicked", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            try
+            {
+                if (e.ClickedItem.Name.Equals("userGuideMenuItem"))
+                {
+                    ProcessStartInfo sInfo = new(@"Readme\index.html")
+                    {
+                        UseShellExecute = true
+                    };
+                    Process.Start(sInfo);
+                } else if (e.ClickedItem.Name.Equals("bugReportMenuItem"))
+                {
+                    ProcessStartInfo sInfo = new(@"Readme\index.html")
+                    {
+                        UseShellExecute = true
+                    };
+                    Process.Start(sInfo);
+                }
+                else if (e.ClickedItem.Name.Equals("aboutToolStripMenuItem"))
+                {
+                    string message = String.Format("AuthentiKit Tuning App ({0})\n\n" +
+                        "Authored by Ian Colman and licensed under CC BY NC ND 4.0.\n\n" +
+                        "You cand find more details at the readme pages. Would you like to go there now?",
+                        VERSION);
+                    string title = "Raise a bug";
+                    MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.OK)
+                    {
+                        ProcessStartInfo sInfo = new(@"Readme\index.html")
+                        {
+                            UseShellExecute = true
+                        };
+                        Process.Start(sInfo);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error displaying help windows",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
         }
 
         private void btnActivate_Click(object sender, EventArgs e)
