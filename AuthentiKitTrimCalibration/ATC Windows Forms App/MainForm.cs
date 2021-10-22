@@ -16,6 +16,7 @@ namespace ATC_Windows_Forms_App
             {
                 InitializeComponent();
                 _viewModel = new MainViewModel();
+                InitalSetup();
             }
             catch (Exception e)
             {
@@ -23,6 +24,15 @@ namespace ATC_Windows_Forms_App
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _viewModel.Stop();
             }
+        }
+
+        private void InitalSetup()
+        {
+            axisConfigControl.Visible = false;
+            buttonConfigControl.Visible = false;
+            btnActivate.Enabled = false;
+            btnDeactivate.Enabled = false;
+            btnRemoveMapping.Enabled = false;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
