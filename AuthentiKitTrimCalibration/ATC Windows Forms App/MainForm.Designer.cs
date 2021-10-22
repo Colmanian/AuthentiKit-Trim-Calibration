@@ -77,6 +77,7 @@ namespace ATC_Windows_Forms_App
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -102,7 +103,7 @@ namespace ATC_Windows_Forms_App
             this.headerControl2.Name = "headerControl2";
             this.headerControl2.Size = new System.Drawing.Size(649, 76);
             this.headerControl2.TabIndex = 0;
-            this.headerControl2.Load += new System.EventHandler(this.headerControl2_Load);
+
             // 
             // menuStrip
             // 
@@ -424,11 +425,19 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Name";
             // 
+            // encoderAxisControl1
+            // 
+            this.encoderAxisControl.Location = new System.Drawing.Point(242, 224);
+            this.encoderAxisControl.Name = "encoderAxisControl1";
+            this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
+            this.encoderAxisControl.TabIndex = 24;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 541);
+            this.Controls.Add(this.encoderAxisControl);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.cbMappingType);
             this.Controls.Add(this.lblMappingType);
@@ -508,6 +517,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ComboBox cbMappingType;
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.Label lblName;
+        private Controls.EncoderAxisControl encoderAxisControl;
     }
 }
 

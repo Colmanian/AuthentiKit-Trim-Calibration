@@ -13,6 +13,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private MappingDTO _mapping;
         private ButtonProcessor _buttonProcessor;
         private AxisProcessor _axisProcessor;
+        private EncoderAxisProcessor _encoderAxisProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -59,6 +60,20 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         }
                         _axisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds);
                     }
+                    else if (_mapping.TypeId == MappingType.ENCODER_AXIS & _encoderAxisProcessor != null)
+                    {
+                        // Button B Polling (Used for Axis Only)
+                        if (buttonBState != joystickA.GetCurrentState().Buttons[_mapping.InputChannelB.Button])
+                        {
+                            buttonBState = joystickA.GetCurrentState().Buttons[_mapping.InputChannelB.Button];
+                        }
+                        if (_needToCentre)
+                        {
+                            _axisProcessor.Centre();
+                            _needToCentre = false;
+                        }
+                        _encoderAxisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds);
+                    }
                 }
             }
             catch (ThreadInterruptedException e)
@@ -96,8 +111,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
-                    Debug.WriteLine("so creating new Axis Processor...");
+                    Debug.WriteLine("and creating new Axis Processor...");
                     _axisProcessor = new AxisProcessor(_mapping.AxisSensitivity, outputAxis);
+                }
+            }
+            else if (_mapping.TypeId == MappingType.ENCODER_AXIS)
+            {
+                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);
+                if (_mapping.OutputChannel is OutputAxis outputAxis)
+                {
+                    Debug.WriteLine("and creating new Encoder to Axis Processor...");
+                    _encoderAxisProcessor = new EncoderAxisProcessor(_mapping.AxisSensitivity, outputAxis);
                 }
             }
             else

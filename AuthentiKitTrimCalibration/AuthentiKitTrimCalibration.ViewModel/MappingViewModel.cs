@@ -51,6 +51,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public bool CanApply => !string.IsNullOrEmpty(Name) && Deactivated;
         public bool IsAxisMapping => TypeId == MappingType.AXIS;
         public bool IsButtonMapping => TypeId == MappingType.BUTTON;
+        public bool IsEncoderAxisMapping => TypeId == MappingType.ENCODER_AXIS;
 
         public string Name
         {

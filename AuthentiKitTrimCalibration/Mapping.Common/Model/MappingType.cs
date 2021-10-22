@@ -9,11 +9,13 @@ namespace MappingManager.Common.Model
 {
     public class MappingType
     {
-        private const string AXIS_STRING = "Axis";
-        private const string BUTTON_STRING = "Button";
+        private const string AXIS_STRING = "Buttons -> Virtual Axis";
+        private const string BUTTON_STRING = "Button -> Virtual Button";
+        private const string ENCODER_AXIS_STRING = "Encoder Pattern -> Virtual Axis";
 
         public const int AXIS = 0;
-        public const int BUTTON = 1; // Just support axis for now
+        public const int BUTTON = 1;
+        public const int ENCODER_AXIS = 2;
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -28,7 +30,8 @@ namespace MappingManager.Common.Model
         {
             ObservableCollection<MappingType> types = new();
             types.Add(new MappingType(AXIS, AXIS_STRING));
-            types.Add(new MappingType(BUTTON, "Button")); // Just support axis for now
+            types.Add(new MappingType(BUTTON, BUTTON_STRING));
+            types.Add(new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING));
             return types;
         }
 
@@ -41,6 +44,10 @@ namespace MappingManager.Common.Model
             else if(BUTTON_STRING.ToLower().Equals(s.ToLower()))
             {
                 return new MappingType(BUTTON, BUTTON_STRING);
+            }
+            else if (ENCODER_AXIS_STRING.ToLower().Equals(s.ToLower()))
+            {
+                return new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING);
             }
             throw new Exception(String.Format("Unsupported MappingType: {0}", s));
         }
