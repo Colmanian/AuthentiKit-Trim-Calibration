@@ -24,10 +24,11 @@
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": ""
+		"name": "AuthentiKit Tuning App"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Home">
+    <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body"><header class="u-clearfix u-custom-color-2 u-header u-header" id="sec-a72b"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -63,7 +64,7 @@
         <div class="u-image u-image-circle u-image-1" alt="" data-image-width="1392" data-image-height="1392"></div>
         <h2 class="u-text u-text-default u-text-1">AuthentiKit Tuning App</h2>
         <p class="u-align-center u-text u-text-2">Experimental Release</p>
-        <p class="u-align-left u-text u-text-3">This software maps game controller buttons to virtual outputs that can be tuned for optimal experience in sim. Outputs can be virtual axes, or vitual buttons. A typical use would be mapping your <a href="https://authentikit.org/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">AuthentiKit</a>&nbsp;Sptifire Mk IX elevator trim wheel to a single virutal axis that you use in sim. What's more, you can tune the sensitivity of the axis to aproximate the correct turn rate of the trim wheel in sim.&nbsp;<br>
+        <p class="u-align-left u-text u-text-3">This software maps game controller<i></i>physical buttons<i></i>to virtual outputs that can be tuned for an optimal in-sim experience. Outputs can be virtual axes, or vitual buttons. A typical use would be mapping your <a href="https://authentikit.org/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">AuthentiKit</a>&nbsp;Sptifire Mk IX elevator trim wheel to a single virutal axis that you use in sim. What's more, you can tune the sensitivity of the axis to aproximate the correct turn rate of the trim wheel in sim.&nbsp;<br>
           <br>
         </p>
         <a href="https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2" target="_blank">Download Latest Release</a>
@@ -82,7 +83,7 @@
 </g></svg></span>
                 <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-6">Found a problem?<br>
                 </h5>
-                <p class="u-text u-text-grey-60 u-text-7">If you find something that doesn't work corrently, or not as you expect, please let me know and I'll see what I can do.</p>
+                <p class="u-text u-text-grey-60 u-text-7">If you find something that doesn't work corrently, or is not as you expect, please let me know and I'll see what I can do.</p>
                 <a href="https://github.com/Colmanian/AuthentiKit-Trim-Calibration/issues" class="u-active-black u-border-none u-btn u-btn-round u-button-style u-custom-color-3 u-hover-black u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-4" target="_blank">Report a Bug</a>
               </div>
             </div>
@@ -165,7 +166,7 @@
                     <li>Hit <b>Apply</b> if needed
                     </li>
                   </ul>
-                  <p class="u-align-left u-text u-text-default u-text-3"><i>Note:&nbsp;The vJoy software sometimes takes a few seconds to respond to clicks. If this happens, it probably hasn't crashed, just give it a minute.</i>
+                  <p class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-3"><i>Note:&nbsp;The vJoy software sometimes takes a few seconds to respond to clicks. If this happens, it probably hasn't crashed, just give it a minute.</i>
                   </p>
                 </div>
               </div>
@@ -186,24 +187,26 @@
                 <div class="u-container-layout u-container-layout-1" src=""></div>
               </div>
               <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-                <div class="u-container-layout u-container-layout-2">
+                <div class="u-container-layout u-valign-bottom u-container-layout-2">
                   <h2 class="u-align-center u-text u-text-default u-text-1"><b>4.&nbsp;</b>&nbsp;Configure Tuning App<br>
                   </h2>
                   <p class="u-align-left u-text u-text-2">Each virtual output is driven my a <b>Mapping</b>. There are two types of mapping.<br>
                   </p>
                   <ul class="u-align-left u-text u-text-3">
-                    <li><b>Axis Mapping</b>:&nbsp; One input button moves the virutal axis up, and a different button moves the axis down. The sensitivity, is (for now) an arbetrary value
+                    <li><b>Axis Mapping</b>:&nbsp; One input button moves the virutal axis up, and a different button moves the axis down. The sensitivity, is (for now) an arbetrary value that you set as a number.
                     </li>
                     <li><b>Button Mapping: </b>One input button is used to pulse a virtual output button several times, as specificed by the multiplier value.
                     </li>
                   </ul>
-                  <p class="u-align-left u-text u-text-4">You can <b>Save </b>and <b>Load </b>your configurations from the <b>Config </b>menu. The <b>Presets </b>menu provides default configurations for AuthentiKit setups using the Leo Bodnar&nbsp;BU0836A. The presets use devices called <i>AuthentKit </i>or <i>BU0836 Interface</i> as inputs.<br>
+                  <p class="u-align-left u-text u-text-4">You can <b>Save </b>and <b>Load </b>your configurations from the <b>Config </b>menu. The <b>Presets </b>menu provides default configurations for AuthentiKit setups using the Leo Bodnar&nbsp;BU0836A. The software looks for devices called <i>AuthentKit </i>or <i>BU0836 Interface</i> as inputs when loading a preset. You can modify any setting after loading a preset. So far, the presets are as follows.<br>
                   </p>
                   <ul class="u-align-left u-text u-text-5">
                     <li>FlyingIron <a href="https://authentikit.org/spitfire-mkix/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Spitfire Mk. IX</a> for MSFS
                     </li>
                   </ul>
-                  <p class="u-align-left u-text u-text-6">You must click the <b>Activate</b>&nbsp;button for each mapping before you'll see the vJoy outputs move.
+                  <p class="u-align-left u-text u-text-6">After you've set the configuration you want, you must click the <b>Activate</b>&nbsp;button for each mapping before you'll see the vJoy outputs move.
+                  </p>
+                  <p class="u-align-left u-text u-text-custom-color-1 u-text-7"><i>Note: If you're using the BU0836 Rotary Encoders Configuration tool as part of your AuthentiKit setup, the recommended pulse width is 32ms.</i>
                   </p>
                 </div>
               </div>
@@ -221,10 +224,10 @@
                 <div class="u-container-layout u-valign-bottom u-container-layout-1">
                   <h2 class="u-align-center u-text u-text-1"><b>5.</b>&nbsp; Configure Simulator<br>
                   </h2>
-                  <p class="u-align-left u-text u-text-2">The vJoy outputs should be assigned to the relevant actions in your sim of choice. For example, for the FlyingIron Spitfire Mk. IX preset, you should map<i> vJoy 1: Axis X </i>to the<i> Elevator Trim axis</i> in MSFS, ensuring that the input buttons 11/12 are not used in sim.<br>
+                  <p class="u-align-left u-text u-text-2">The Virtual Output Axes/Buttons should be assigned to the relevant actions in your sim of choice. For example, for the FlyingIron Spitfire Mk. IX preset, you should map<i> vJoy 1: Axis X </i>to the<i> Elevator Trim axis</i> in MSFS.<br>
                     <br>Due to the nature of the pulses from the trim wheel encoder, it is not realistic to get an extact 1:1 mapping. You can absolutely get something that most people will find more than good enough for full imersion in VR though.&nbsp;
                   </p>
-                  <p class="u-align-left u-text u-text-3"><i>Note: For sims at allow multiple inputs bound to the same sim actions (e.g. MSFS), be sure to unasign the input buttons from the sim, and only use the virtual axis that's being driven by the Tuning App.&nbsp;</i>
+                  <p class="u-align-left u-text u-text-custom-color-1 u-text-3"><i>Note: For sims that allow multiple inputs bound to the same sim actions (e.g. MSFS), be sure to unasign the input buttons from the sim, and only use the virtual axis that's being driven by the Tuning App.&nbsp;</i>
                   </p>
                 </div>
               </div>
