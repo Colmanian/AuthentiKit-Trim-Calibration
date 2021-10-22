@@ -97,7 +97,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("so creating new Axis Processor...");
-                    _axisProcessor = new AxisProcessor(_mapping.ButtonMultiplier, outputAxis);
+                    _axisProcessor = new AxisProcessor(_mapping.AxisSensitivity, outputAxis);
                 }
             }
             else

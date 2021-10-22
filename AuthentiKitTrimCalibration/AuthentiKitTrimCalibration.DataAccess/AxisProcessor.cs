@@ -11,7 +11,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     class AxisProcessor
     {
-        int _multiplier;
+        int _sensitivity;
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyAxisNumber;
@@ -25,10 +25,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         readonly long BUTTON_FILTER = 0; // Ignore new button presses less than this (ms)
 
-        public AxisProcessor(int multiplier, OutputAxis outputAxis)
+        public AxisProcessor(int axisSensitivity, OutputAxis outputAxis)
         {
-            Debug.WriteLine("Multiplier is {0}", multiplier);
-            _multiplier = multiplier;
+            Debug.WriteLine("Multiplier is {0}", axisSensitivity);
+            _sensitivity = axisSensitivity;
             _vJoyId = outputAxis.VJoyDevice;
             _vJoyAxisNumber = outputAxis.VJoyItem;
             _joystick = new vJoy();
@@ -62,9 +62,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 var timeSinceLast = (elapsedMilliseconds - _previousATime);
                 if (buttonAState && (timeSinceLast > BUTTON_FILTER)) // filter out spureous output
                 {
-                    MoveAxisBy(_multiplier);
+                    MoveAxisBy(_sensitivity);
                     _previousATime = elapsedMilliseconds;
-                    Debug.WriteLine("+{0} : {1}ms", _multiplier, timeSinceLast);
+                    Debug.WriteLine("+{0} : {1}ms", _sensitivity, timeSinceLast);
                 }
                 _priorAState = buttonAState;
             }
@@ -74,9 +74,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 var timeSinceLast = (elapsedMilliseconds - _previousBTime);
                 if (buttonBState && (timeSinceLast > BUTTON_FILTER))
                 {
-                    MoveAxisBy(-_multiplier);
+                    MoveAxisBy(-_sensitivity);
                     _previousBTime = elapsedMilliseconds;
-                    Debug.WriteLine("-{0} : {1}ms", _multiplier, timeSinceLast);
+                    Debug.WriteLine("-{0} : {1}ms", _sensitivity, timeSinceLast);
                 }
                 _priorBState = buttonBState;
             }
