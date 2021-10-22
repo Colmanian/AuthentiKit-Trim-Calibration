@@ -16,9 +16,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
         public ObservableCollection<InputChannel> InputChannelsB = HardwareInfo.GetInputChannels();
         public ObservableCollection<OutputChannel> OutputChannels = HardwareInfo.GetOutputChannels();
-
-        private MappingViewModel _selectedMapping;
-        public bool IsAnyMappingSelected => _selectedMapping != null;
         public bool CanAddMapping { get; private set; }
 
         public MainViewModel()
@@ -26,19 +23,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mainDataHandler = new MainDataHandler();
             CanAddMapping = true;
         }
-        public MappingViewModel SelectedMapping
-        {
-            get => _selectedMapping;
-            set
-            {
-                if (_selectedMapping != value)
-                {
-                    _selectedMapping = value;
-                    RaisePropertyChanged();
-                    RaisePropertyChanged(nameof(IsAnyMappingSelected));
-                }
-            }
-        }
+
         public void Stop()
         {
             foreach (var mapping in Mappings)
@@ -68,12 +53,16 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 CanAddMapping = false;
             }
         }
-        public void RemoveSelectedMapping()
+        public void RemoveMapping(MappingViewModel mappingToDelete)
         {
-            if(_selectedMapping != null)
+           foreach (var m in Mappings)
             {
-                _selectedMapping.Deactivate();
-                Mappings.Remove(_selectedMapping);
+                if (m.Equals(mappingToDelete))
+                {
+                    m.Deactivate();
+                    Mappings.Remove(m);
+                    return;
+                }
             }
         }
 

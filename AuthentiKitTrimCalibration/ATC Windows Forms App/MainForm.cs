@@ -61,8 +61,10 @@ namespace ATC_Windows_Forms_App
         {
             try
             {
-                Debug.WriteLine("Removing selected mapping");
-                _viewModel.RemoveSelectedMapping();
+                if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+                {
+                    _viewModel.RemoveMapping(mappingViewModel);
+                }
                 LoadFormData();
             }
             catch (Exception ex)
@@ -124,6 +126,14 @@ namespace ATC_Windows_Forms_App
                 // Panel Visibility
                 axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
                 buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
+            }
+
+            // Update Selected Mapping
+            if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+            {
+                mappingViewModel.Name = tbName.Text;
+                tbName.SelectionStart = tbName.Text.Length;
+                tbName.SelectionLength = 0;
             }
 
         }
