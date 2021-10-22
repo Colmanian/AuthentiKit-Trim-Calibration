@@ -21,6 +21,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string INPUT_CHANNEL_B_HASH = "INPUT_CHANNEL_B_HASH";
         private readonly string OUTPUT_CHANNEL_HASH = "OUTPUT_CHANNEL_HASH";
         private readonly string AXIS_SENSITIVITY = "AXIS_SENSITIVITY";
+        private readonly string ENCODER_PPR = "ENCODER_PPR";
+        private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
         private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
 
@@ -50,6 +52,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
                     int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
                     int axisSensitivity = int.Parse(mappingNode.SelectSingleNode(AXIS_SENSITIVITY).InnerText);
+                    int encoderPPR = int.Parse(mappingNode.SelectSingleNode(ENCODER_PPR).InnerText);
+                    float revsInPerRevsOut = float.Parse(mappingNode.SelectSingleNode(REVS_IN_PER_REVS_OUT).InnerText);
                     int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
                     string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
 
@@ -63,9 +67,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
                         OutputChannel = GetOutputChannel(outputChannelHash, outputChannels),
                         AxisSensitivity = axisSensitivity,
+                        EncoderPPR = encoderPPR,
+                        RevsInPerRevsOut = revsInPerRevsOut,
                         ButtonMultiplier = buttonMultiplier,
                         ResetCommand = resetCommand
-                    });
+                    }) ;
                 }
                 catch
                 {
@@ -118,6 +124,15 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 axisSensitivityNode.InnerText = String.Format("{0}", mapping.AxisSensitivity);
                 mappingNode.AppendChild(axisSensitivityNode);
 
+                // encoderPPRNode
+                XmlElement encoderPPRNode = doc.CreateElement(ENCODER_PPR);
+                encoderPPRNode.InnerText = String.Format("{0}", mapping.EncoderPPR);
+                mappingNode.AppendChild(encoderPPRNode);
+
+                // revsInPerRevsOut
+                XmlElement revsInPerRevsOut = doc.CreateElement(REVS_IN_PER_REVS_OUT);
+                revsInPerRevsOut.InnerText = String.Format("{0}", mapping.RevsInPerRevsOut);
+                mappingNode.AppendChild(revsInPerRevsOut);
 
                 // ButtonMultiplier
                 XmlElement buttoMultiplierNode = doc.CreateElement(BUTTON_MULTIPLIER);

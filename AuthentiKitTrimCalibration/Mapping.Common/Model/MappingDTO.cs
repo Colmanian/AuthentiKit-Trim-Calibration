@@ -10,6 +10,8 @@
             OutputChannel = new();
             ButtonMultiplier = 1;
             AxisSensitivity = 1;
+            EncoderPPR = 24;
+            RevsInPerRevsOut = 4;
             InputChannelA = new();
             InputChannelB = new();
             ResetCommand = "";
@@ -26,6 +28,8 @@
         public int OutputChannelId { get; set; } // Both
         public int ButtonMultiplier { get; set; } // Button Only
         public int AxisSensitivity { get; set; } // Axis Only
+        public int EncoderPPR { get; set; } // Encoder Axis Only
+        public float RevsInPerRevsOut { get; set; } // Encoder Axis Only
         public InputChannel InputChannelA { get; set; } // Both
         public InputChannel InputChannelB { get; set; } // Axis Only
         public string ResetCommand { get; set; } // Axis Only

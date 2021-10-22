@@ -34,7 +34,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.label5 = new System.Windows.Forms.Label();
             this.tbRevsInPerRevsOut = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rbEncoderPPR = new System.Windows.Forms.NumericUpDown();
+            this.tbEncoderPPR = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutput = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,10 +43,10 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.pnlEncoderAxisConfig.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbEncoderPPR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEncoderPPR)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlAxisConfig
+            // pnlEncoderAxisConfig
             // 
             this.pnlEncoderAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -55,7 +55,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlEncoderAxisConfig.Controls.Add(this.label5);
             this.pnlEncoderAxisConfig.Controls.Add(this.tbRevsInPerRevsOut);
             this.pnlEncoderAxisConfig.Controls.Add(this.label4);
-            this.pnlEncoderAxisConfig.Controls.Add(this.rbEncoderPPR);
+            this.pnlEncoderAxisConfig.Controls.Add(this.tbEncoderPPR);
             this.pnlEncoderAxisConfig.Controls.Add(this.label3);
             this.pnlEncoderAxisConfig.Controls.Add(this.cbOutput);
             this.pnlEncoderAxisConfig.Controls.Add(this.label2);
@@ -64,7 +64,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlEncoderAxisConfig.Controls.Add(this.cbInputA);
             this.pnlEncoderAxisConfig.Controls.Add(this.lblMultiplier);
             this.pnlEncoderAxisConfig.Location = new System.Drawing.Point(0, 0);
-            this.pnlEncoderAxisConfig.Name = "pnlAxisConfig";
+            this.pnlEncoderAxisConfig.Name = "pnlEncoderAxisConfig";
             this.pnlEncoderAxisConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlEncoderAxisConfig.TabIndex = 4;
             // 
@@ -86,10 +86,10 @@ namespace ATC_Windows_Forms_App.Controls
             this.label5.TabIndex = 18;
             this.label5.Text = "(min=0.2, max=16)";
             // 
-            // textBox1
+            // tbRevsInPerRevsOut
             // 
             this.tbRevsInPerRevsOut.Location = new System.Drawing.Point(225, 221);
-            this.tbRevsInPerRevsOut.Name = "textBox1";
+            this.tbRevsInPerRevsOut.Name = "tbRevsInPerRevsOut";
             this.tbRevsInPerRevsOut.Size = new System.Drawing.Size(150, 23);
             this.tbRevsInPerRevsOut.TabIndex = 17;
             this.tbRevsInPerRevsOut.TextChanged += new System.EventHandler(this.tbRevsInPerRevsOut_TextChanged);
@@ -103,29 +103,29 @@ namespace ATC_Windows_Forms_App.Controls
             this.label4.TabIndex = 16;
             this.label4.Text = "Revolutions In per Rev. Out";
             // 
-            // rbEncoderPPR
+            // tbEncoderPPR
             // 
-            this.rbEncoderPPR.Location = new System.Drawing.Point(18, 221);
-            this.rbEncoderPPR.Maximum = new decimal(new int[] {
-            24,
+            this.tbEncoderPPR.Location = new System.Drawing.Point(18, 221);
+            this.tbEncoderPPR.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.rbEncoderPPR.Minimum = new decimal(new int[] {
+            this.tbEncoderPPR.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.tbEncoderPPR.Name = "tbEncoderPPR";
+            this.tbEncoderPPR.Size = new System.Drawing.Size(163, 23);
+            this.tbEncoderPPR.TabIndex = 14;
+            this.tbEncoderPPR.Value = new decimal(new int[] {
             6,
             0,
             0,
             0});
-            this.rbEncoderPPR.Name = "rbEncoderPPR";
-            this.rbEncoderPPR.Size = new System.Drawing.Size(163, 23);
-            this.rbEncoderPPR.TabIndex = 14;
-            this.rbEncoderPPR.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
-            this.rbEncoderPPR.Click += new System.EventHandler(this.tbEncoderPPR_Click);
-            this.rbEncoderPPR.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbEncoderPPR_KeyUp);
+            this.tbEncoderPPR.Click += new System.EventHandler(this.tbEncoderPPR_Click);
+            this.tbEncoderPPR.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbEncoderPPR_KeyUp);
             // 
             // label3
             // 
@@ -208,7 +208,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlEncoderAxisConfig.ResumeLayout(false);
             this.pnlEncoderAxisConfig.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rbEncoderPPR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEncoderPPR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -216,7 +216,7 @@ namespace ATC_Windows_Forms_App.Controls
         #endregion
 
         private System.Windows.Forms.Panel pnlEncoderAxisConfig;
-        private System.Windows.Forms.NumericUpDown rbEncoderPPR;
+        private System.Windows.Forms.NumericUpDown tbEncoderPPR;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbOutput;
         private System.Windows.Forms.Label label2;

@@ -206,6 +206,34 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
+        public int EncoderPPR
+        {
+            get { return _mapping.EncoderPPR; }
+            set
+            {
+                if (_mapping.EncoderPPR != value)
+                {
+                    Deactivate();
+                    _mapping.EncoderPPR = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public float RevsInPerRevsOut
+        {
+            get { return _mapping.RevsInPerRevsOut; }
+            set
+            {
+                if (_mapping.RevsInPerRevsOut != value)
+                {
+                    Deactivate();
+                    _mapping.RevsInPerRevsOut = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
 
         public int ButtonMultiplier
         {

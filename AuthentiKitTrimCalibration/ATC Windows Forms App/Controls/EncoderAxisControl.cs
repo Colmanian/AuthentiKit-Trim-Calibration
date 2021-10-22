@@ -39,7 +39,10 @@ namespace ATC_Windows_Forms_App.Controls
             cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
 
             // Encoder Pulses per Revolution
-            rbEncoderPPR.DataBindings.Add("Text", mappingBindingSource, "AxisSensitivity");
+            tbEncoderPPR.DataBindings.Add("Text", mappingBindingSource, "EncoderPPR");
+                
+            // Encoder Pulses per Revolution
+            tbRevsInPerRevsOut.DataBindings.Add("Text", mappingBindingSource, "RevsInPerRevsOut");
 
             // Panel Activation
             pnlEncoderAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
@@ -87,21 +90,21 @@ namespace ATC_Windows_Forms_App.Controls
         }
         private void tbEncoderPPR_KeyUp(object sender, KeyEventArgs e)
         {
-            if (rbEncoderPPR.Focused)
+            if (tbEncoderPPR.Focused)
             {
-                foreach (Binding b in rbEncoderPPR.DataBindings)
+                foreach (Binding b in tbEncoderPPR.DataBindings)
                 {
                     b.WriteValue();
                 }
-                rbEncoderPPR.Select(Right, 0);
+                tbEncoderPPR.Select(Right, 0);
             }
         }
 
         private void tbEncoderPPR_Click(object sender, EventArgs e)
         {
-            if (rbEncoderPPR.Focused)
+            if (tbEncoderPPR.Focused)
             {
-                foreach (Binding b in rbEncoderPPR.DataBindings)
+                foreach (Binding b in tbEncoderPPR.DataBindings)
                 {
                     b.WriteValue();
                 }

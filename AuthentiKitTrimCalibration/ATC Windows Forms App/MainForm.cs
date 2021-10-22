@@ -79,8 +79,6 @@ namespace ATC_Windows_Forms_App
             }
         }
 
-
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             _viewModel.Stop();
