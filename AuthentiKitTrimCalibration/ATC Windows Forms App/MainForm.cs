@@ -48,6 +48,7 @@ namespace ATC_Windows_Forms_App
                 Debug.WriteLine("Adding New mapping");
                 _viewModel.NewMapping();
                 LoadFormData();
+                lsbMappings.SelectedIndex = lsbMappings.Items.Count - 1;
             }
             catch (Exception ex)
             {
