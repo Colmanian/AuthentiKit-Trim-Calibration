@@ -392,6 +392,7 @@ namespace ATC_Windows_Forms_App
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(360, 23);
             this.tbName.TabIndex = 23;
+            this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // cbMappingType
             // 

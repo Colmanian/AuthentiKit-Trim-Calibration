@@ -237,5 +237,15 @@ namespace ATC_Windows_Forms_App
                     mappingViewModel.TypeId = int.Parse(selected);
             }
         }
+
+        private void tbName_TextChanged(object sender, EventArgs e)
+        {
+            if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+            {
+                mappingViewModel.Name = tbName.Text;
+                tbName.SelectionStart = tbName.Text.Length;
+                tbName.SelectionLength = 0;
+            }
+        }
     }
 }
