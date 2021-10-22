@@ -27,6 +27,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public AxisProcessor(int multiplier, OutputAxis outputAxis)
         {
+            Debug.WriteLine("Multiplier is {0}", multiplier);
             _multiplier = multiplier;
             _vJoyId = outputAxis.VJoyDevice;
             _vJoyAxisNumber = outputAxis.VJoyItem;

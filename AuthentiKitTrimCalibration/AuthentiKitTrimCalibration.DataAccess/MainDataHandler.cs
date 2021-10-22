@@ -194,22 +194,22 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     AxisSensitivity = 347,
                 });
 
-                // Rudder Trim Button Up
+                // Rudder Trim Button Left
                 mappings.Add(new MappingDTO
                 {
                     Name = "Rudder Trim Left (Button)",
                     TypeId = MappingType.BUTTON,
-                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 8),
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 9),
                     OutputChannel = getOutputChannel(outputChannels, 1),
                     ButtonMultiplier = 7
                 });
 
-                // Rudder Trim Button Down
+                // Rudder Trim Button Right
                 mappings.Add(new MappingDTO
                 {
                     Name = "Rudder Trim Right (Button)",
                     TypeId = MappingType.BUTTON,
-                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 9),
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 8),
                     OutputChannel = getOutputChannel(outputChannels, 2),
                     ButtonMultiplier = 7
                 });
