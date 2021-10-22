@@ -121,7 +121,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Encoder to Axis Processor...");
-                    _encoderAxisProcessor = new EncoderAxisProcessor(_mapping.AxisSensitivity, outputAxis);
+                    _encoderAxisProcessor = new EncoderAxisProcessor(_mapping.EncoderPPR,_mapping.RevsInPerRevsOut, outputAxis);
                 }
             }
             else
