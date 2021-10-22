@@ -26,15 +26,6 @@ namespace ATC_Windows_Forms_App
             }
         }
 
-        private void InitalSetup()
-        {
-            axisConfigControl.Visible = false;
-            buttonConfigControl.Visible = false;
-            btnActivate.Enabled = false;
-            btnDeactivate.Enabled = false;
-            btnRemoveMapping.Enabled = false;
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             try
@@ -139,6 +130,8 @@ namespace ATC_Windows_Forms_App
                 btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
 
                 // Panel Visibility
+                axisConfigControl.Visible = true;
+                buttonConfigControl.Visible = true;
                 axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
                 buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
 
@@ -194,7 +187,7 @@ namespace ATC_Windows_Forms_App
             }
         }
 
-        private void resetMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void presetsMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             try
             {
@@ -205,8 +198,6 @@ namespace ATC_Windows_Forms_App
                 else if (e.ClickedItem.Name.Equals("spitfireMkIXMenuItem"))
                 {
                     _viewModel.Reset(Aircraft.SPITFIRE_MKIX);
-                    MessageBox.Show("Loaded recommended tuning for the MSFS FlyingIron Spitfire MK.IX", "Reset",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 LoadFormData();
             }
@@ -285,6 +276,30 @@ namespace ATC_Windows_Forms_App
                 mappingViewModel.Name = tbName.Text;
                 tbName.SelectionStart = tbName.Text.Length;
                 tbName.SelectionLength = 0;
+            }
+        }
+
+        private void InitalSetup()
+        {
+            if (!_viewModel.AtLeastOneMapping)
+            {
+                try
+                {
+                    _viewModel.NewMapping();
+                    LoadFormData();
+                    lsbMappings.SelectedIndex = lsbMappings.Items.Count - 1;
+                    if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+                    {
+                        _viewModel.RemoveMapping(mappingViewModel);
+                    }
+                    LoadFormData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error starting up",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _viewModel.Stop();
+                }
             }
         }
     }

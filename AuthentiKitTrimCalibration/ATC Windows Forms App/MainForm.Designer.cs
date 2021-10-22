@@ -37,7 +37,7 @@ namespace ATC_Windows_Forms_App
             this.configMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,7 +109,7 @@ namespace ATC_Windows_Forms_App
             this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.configMenuItem,
-            this.resetMenuItem,
+            this.presetsMenuItem,
             this.helpMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -146,16 +146,16 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.Size = new System.Drawing.Size(140, 22);
             this.loadMenuItem.Text = "&Load";
             // 
-            // resetMenuItem
+            // presetsMenuItem
             // 
-            this.resetMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spitfireMkIXMenuItem,
             this.toolStripSeparator4,
             this.clearMenuItem});
-            this.resetMenuItem.Name = "resetMenuItem";
-            this.resetMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.resetMenuItem.Text = "&Reset";
-            this.resetMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.resetMenuItemClicked);
+            this.presetsMenuItem.Name = "presetsMenuItem";
+            this.presetsMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.presetsMenuItem.Text = "&Presets";
+            this.presetsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.presetsMenuItemClicked);
             // 
             // spitfireMkIXMenuItem
             // 
@@ -481,7 +481,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem resetMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem presetsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spitfireMkIXMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
