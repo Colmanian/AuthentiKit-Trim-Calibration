@@ -18,13 +18,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         uint _vJoyAxisNumber;
         long _maxAxisValue;
         int _axisPosition;
-        bool _priorAState;
-        bool _priorBState;
-
-        long _previousATime;
-        long _previousBTime;
-
-        readonly long BUTTON_FILTER = 0; // Ignore new button presses less than this (ms)
+        int _positiveDirection;
+        int _negativeDirection;
 
         public EncoderAxisProcessor(int encoderPPR, float revsInPerRevsOut, OutputAxis outputAxis)
         {
@@ -57,31 +52,48 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
         internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {
+            int seqNumber = getEncoderSequenceNumber(buttonAState, buttonBState);
 
-
-            if (_priorAState != buttonAState)
+            if (seqNumber == _positiveDirection)
             {
-                var timeSinceLast = (elapsedMilliseconds - _previousATime);
-                if (buttonAState && (timeSinceLast > BUTTON_FILTER)) // filter out spureous output
-                {
-                    MoveAxisBy(_encoderPPR);
-                    _previousATime = elapsedMilliseconds;
-                    Debug.WriteLine("+{0} : {1}ms", _encoderPPR, timeSinceLast);
-                }
-                _priorAState = buttonAState;
+                MoveAxisBy(200);
+                Debug.WriteLine("Moving on UP!");
+
+            } else if (seqNumber == _negativeDirection)
+            {
+                MoveAxisBy(-200);
+                Debug.WriteLine("Moving on DOWN!");
             }
 
-            if (_priorBState != buttonBState)
+            // Work out what the next sequence number wil be if you extrapolate in the positve and negative directions
+            _positiveDirection = seqNumber + 1;
+            if (_positiveDirection > 3)
+                _positiveDirection = 0;
+            _negativeDirection = seqNumber - 1;
+            if (_negativeDirection < 0)
+                _negativeDirection = 3;
+        }
+
+        private int getEncoderSequenceNumber(bool buttonAState, bool buttonBState)
+        {
+            /*
+             * This looks a little confusing but it's just a standard 2 bit encoder sequence
+             * 00, 10, 11, 01, which I map to 0, 1, 2, 3 resectively 
+             */
+            int number = 0;
+            if (buttonAState && buttonBState)
             {
-                var timeSinceLast = (elapsedMilliseconds - _previousBTime);
-                if (buttonBState && (timeSinceLast > BUTTON_FILTER))
-                {
-                    MoveAxisBy(-_encoderPPR);
-                    _previousBTime = elapsedMilliseconds;
-                    Debug.WriteLine("-{0} : {1}ms", _encoderPPR, timeSinceLast);
-                }
-                _priorBState = buttonBState;
+                number = 2;
             }
+            else if (buttonAState)
+            {
+                number = 1;
+            }
+            else if (buttonBState)
+            {
+                number = 3;
+            }
+            return number;
         }
 
         internal void CleanUp()
