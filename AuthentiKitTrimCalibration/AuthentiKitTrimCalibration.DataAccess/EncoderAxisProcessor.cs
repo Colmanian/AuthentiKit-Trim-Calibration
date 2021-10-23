@@ -11,8 +11,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     class EncoderAxisProcessor
     {
-        int _encoderPPR;
-        float _revsInPerRevsOut;
+        int _outputIncrement;
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyAxisNumber;
@@ -23,9 +22,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public EncoderAxisProcessor(int encoderPPR, float revsInPerRevsOut, OutputAxis outputAxis)
         {
-            Debug.WriteLine("Encoder PPR is {0} and Revs In per Out is {1}", encoderPPR, revsInPerRevsOut);
-            _encoderPPR = encoderPPR;
-            _revsInPerRevsOut = revsInPerRevsOut;
             _vJoyId = outputAxis.VJoyDevice;
             _vJoyAxisNumber = outputAxis.VJoyItem;
             _joystick = new vJoy();
@@ -49,6 +45,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
             _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
             Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
             Centre();
+
+            // Calculate how much to move the output by for each input pulse
+            Debug.WriteLine("Encoder PPR is {0} and Revs In per Out is {1}", encoderPPR, revsInPerRevsOut);
+            float outputRevolutionSize = _maxAxisValue / revsInPerRevsOut;
+            encoderPPR *= 4; // I think I can get 4x the resolution out of the encoder using the tranistions between pulses
+            Debug.WriteLine("Modifying Encoder PPR to {0}", encoderPPR);
+            _outputIncrement = (int)(outputRevolutionSize/encoderPPR);
+            Debug.WriteLine("Output Increment calculated as {0}", _outputIncrement);
         }
         internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {
@@ -56,13 +60,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             if (seqNumber == _positiveDirection)
             {
-                MoveAxisBy(200);
-                Debug.WriteLine("Moving on UP!");
+                MoveAxisBy(_outputIncrement);
 
             } else if (seqNumber == _negativeDirection)
             {
-                MoveAxisBy(-200);
-                Debug.WriteLine("Moving on DOWN!");
+                MoveAxisBy(-_outputIncrement);
             }
 
             // Work out what the next sequence number wil be if you extrapolate in the positve and negative directions
