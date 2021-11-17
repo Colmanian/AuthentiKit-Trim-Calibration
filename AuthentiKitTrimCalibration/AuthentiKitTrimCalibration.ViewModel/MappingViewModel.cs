@@ -13,13 +13,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private readonly MappingDTO _mapping;
         private readonly ObservableCollection<InputChannel> InputChannelsA;
         private readonly ObservableCollection<InputChannel> InputChannelsB;
-        private readonly ObservableCollection<OutputChannel> OutputChannels;
+        private readonly ObservableCollection<OutputChannel> OutputAxes;
+        private readonly ObservableCollection<OutputChannel> OutputButtons;
 
-        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputsA, ObservableCollection<InputChannel> inputsB, ObservableCollection<OutputChannel> outputs)
+        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputsA, ObservableCollection<InputChannel> inputsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
             InputChannelsA = inputsA;
             InputChannelsB = inputsB;
-            OutputChannels = outputs;
+            OutputAxes = outputAxes;
+            OutputButtons = outputButtons;
             _mappingProcessor = new MappingProcessor();
             _mapping = mapping;
             Deactivate();
@@ -145,14 +147,26 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        public int OutputChannelHash
+        public int OutputAxisHash
         {
             get => _mapping.OutputChannel.Hash;
             set
             {
                 if (_mapping.OutputChannel.Hash != value)
                 {
-                    _mapping.OutputChannel = GetOutputChannel(value);
+                    _mapping.OutputChannel = GetOutputAxis(value);
+                    RaisePropertyChanged();
+                }
+            }
+        }
+        public int OutputButtonHash
+        {
+            get => _mapping.OutputChannel.Hash;
+            set
+            {
+                if (_mapping.OutputChannel.Hash != value)
+                {
+                    _mapping.OutputChannel = GetOutputButton(value);
                     RaisePropertyChanged();
                 }
             }
@@ -180,9 +194,20 @@ namespace AuthentiKitTrimCalibration.ViewModel
             return new InputChannel();
         }
 
-        private OutputChannel GetOutputChannel(int hash)
+        private OutputChannel GetOutputAxis(int hash)
         {
-            foreach (var channel in OutputChannels)
+            foreach (var channel in OutputAxes)
+            {
+                if (channel.Hash == hash)
+                {
+                    return channel;
+                }
+            }
+            return new OutputChannel();
+        }
+        private OutputChannel GetOutputButton(int hash)
+        {
+            foreach (var channel in OutputButtons)
             {
                 if (channel.Hash == hash)
                 {

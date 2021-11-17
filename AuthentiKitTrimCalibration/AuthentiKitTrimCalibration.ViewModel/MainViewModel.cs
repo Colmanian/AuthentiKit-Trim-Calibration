@@ -15,7 +15,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
         public ObservableCollection<InputChannel> InputChannelsB = HardwareInfo.GetInputChannels();
-        public ObservableCollection<OutputChannel> OutputChannels = HardwareInfo.GetOutputChannels();
+        public ObservableCollection<OutputChannel> OutputAxes = HardwareInfo.GetOutputAxes();
+        public ObservableCollection<OutputChannel> OutputButtons = HardwareInfo.GetOutputButtons();
         public bool CanAddMapping { get; private set; }
 
         public bool AtLeastOneMapping { get => Mappings.Count > 0; }
@@ -37,17 +38,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             Stop();
             Mappings.Clear();
-            var mappings = _mainDataHandler.LoadMappings(InputChannelsA, InputChannelsB, OutputChannels);
+            var mappings = _mainDataHandler.LoadMappings(InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputChannels));
+                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, InputChannelsB, OutputChannels));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
@@ -85,10 +86,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Mappings.Clear();
             if (aircraft != Aircraft.NONE)
             {
-                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputChannelsA, InputChannelsB, OutputChannels);
+                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
                 foreach (var mapping in mappings)
                 {
-                    Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputChannels));
+                    Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
                 }
             }
         }

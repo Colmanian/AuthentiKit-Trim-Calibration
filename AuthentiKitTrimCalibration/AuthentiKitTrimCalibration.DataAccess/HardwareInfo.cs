@@ -22,34 +22,20 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     for (int i = 0; i < buttons; i++)
                     {
                         inputChannels.Add(item: new InputChannel { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
-                        
+
                     }
                 }
             }
             return inputChannels;
         }
-
-        public static ObservableCollection<OutputChannel> GetOutputChannels()
+        
+        public static ObservableCollection<OutputChannel> GetOutputAxes()
         {
             ObservableCollection<OutputChannel> outputChannels = new();
             vJoy joystick = new();
             int output_id = 0;
-
-            int id = 0;
             for (uint vjoy_id = 1; vjoy_id <= 16; vjoy_id++)
             {
-                // Buttons
-                for (uint b = 1; b <= joystick.GetVJDButtonNumber(vjoy_id); b++)
-                {
-                    outputChannels.Add(new OutputButton
-                    {
-                        VJoyId = output_id++,
-                        VJoyDevice = vjoy_id,
-                        VJoyItem = b,
-                        Name = string.Format("vJoy " + vjoy_id + ": Button " + b)
-                    });
-                }
-
                 // Axes
                 VjdStat status = joystick.GetVJDStatus(vjoy_id);
                 if (status == VjdStat.VJD_STAT_FREE)
@@ -67,6 +53,28 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             });
                         }
                     }
+                }
+            }
+            return outputChannels;
+        }
+
+        public static ObservableCollection<OutputChannel> GetOutputButtons()
+        {
+            ObservableCollection<OutputChannel> outputChannels = new();
+            vJoy joystick = new();
+            int output_id = 0;
+            for (uint vjoy_id = 1; vjoy_id <= 16; vjoy_id++)
+            {
+                // Buttons
+                for (uint b = 1; b <= joystick.GetVJDButtonNumber(vjoy_id); b++)
+                {
+                    outputChannels.Add(new OutputButton
+                    {
+                        VJoyId = output_id++,
+                        VJoyDevice = vjoy_id,
+                        VJoyItem = b,
+                        Name = string.Format("vJoy " + vjoy_id + ": Button " + b)
+                    });
                 }
             }
             return outputChannels;

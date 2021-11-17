@@ -33,10 +33,10 @@ namespace ATC_Windows_Forms_App.Controls
             cbInputB.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelBHash");
 
             // Output
-            cbOutput.DataSource = viewModel.OutputChannels;
-            cbOutput.DisplayMember = "Name";
-            cbOutput.ValueMember = "Hash";
-            cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
+            cbOutputAxis.DataSource = viewModel.OutputAxes;
+            cbOutputAxis.DisplayMember = "Name";
+            cbOutputAxis.ValueMember = "Hash";
+            cbOutputAxis.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputAxisHash");
 
             // Encoder Pulses per Revolution
             tbEncoderPPR.DataBindings.Add("Text", mappingBindingSource, "EncoderPPR");
@@ -80,9 +80,9 @@ namespace ATC_Windows_Forms_App.Controls
 
         private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbOutput.Focused)
+            if (cbOutputAxis.Focused)
             {
-                foreach (Binding b in cbOutput.DataBindings)
+                foreach (Binding b in cbOutputAxis.DataBindings)
                 {
                     b.WriteValue();
                 }

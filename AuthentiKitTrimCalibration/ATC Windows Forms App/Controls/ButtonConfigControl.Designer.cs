@@ -32,7 +32,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig = new System.Windows.Forms.Panel();
             this.tbButtonMultiplier = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbOutput = new System.Windows.Forms.ComboBox();
+            this.cbOutputButton = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
             this.pnlButtonConfig.Controls.Add(this.tbButtonMultiplier);
             this.pnlButtonConfig.Controls.Add(this.label3);
-            this.pnlButtonConfig.Controls.Add(this.cbOutput);
+            this.pnlButtonConfig.Controls.Add(this.cbOutputButton);
             this.pnlButtonConfig.Controls.Add(this.label1);
             this.pnlButtonConfig.Controls.Add(this.cbInputA);
             this.pnlButtonConfig.Controls.Add(this.lblMultiplier);
@@ -81,15 +81,15 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // cbOutput
             // 
-            this.cbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbOutputButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOutput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOutput.FormattingEnabled = true;
-            this.cbOutput.Location = new System.Drawing.Point(19, 91);
-            this.cbOutput.Name = "cbOutput";
-            this.cbOutput.Size = new System.Drawing.Size(360, 23);
-            this.cbOutput.TabIndex = 12;
-            this.cbOutput.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
+            this.cbOutputButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputButton.FormattingEnabled = true;
+            this.cbOutputButton.Location = new System.Drawing.Point(19, 91);
+            this.cbOutputButton.Name = "cbOutput";
+            this.cbOutputButton.Size = new System.Drawing.Size(360, 23);
+            this.cbOutputButton.TabIndex = 12;
+            this.cbOutputButton.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -140,7 +140,7 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.Panel pnlButtonConfig;
         private System.Windows.Forms.NumericUpDown tbButtonMultiplier;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbOutput;
+        private System.Windows.Forms.ComboBox cbOutputButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbInputA;
         private System.Windows.Forms.Label lblMultiplier;

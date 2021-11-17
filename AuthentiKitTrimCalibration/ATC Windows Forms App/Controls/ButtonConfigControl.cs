@@ -20,10 +20,10 @@ namespace ATC_Windows_Forms_App.Controls
             cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
 
             // Output
-            cbOutput.DataSource = viewModel.OutputChannels;
-            cbOutput.DisplayMember = "Name";
-            cbOutput.ValueMember = "Hash";
-            cbOutput.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputChannelHash");
+            cbOutputButton.DataSource = viewModel.OutputButtons;
+            cbOutputButton.DisplayMember = "Name";
+            cbOutputButton.ValueMember = "Hash";
+            cbOutputButton.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputButtonHash");
 
             // Multiplier
             tbButtonMultiplier.DataBindings.Add("Value", mappingBindingSource, "ButtonMultiplier");
@@ -73,9 +73,9 @@ namespace ATC_Windows_Forms_App.Controls
 
         private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbOutput.Focused)
+            if (cbOutputButton.Focused)
             {
-                foreach (Binding b in cbOutput.DataBindings)
+                foreach (Binding b in cbOutputButton.DataBindings)
                 {
                     b.WriteValue();
                 }

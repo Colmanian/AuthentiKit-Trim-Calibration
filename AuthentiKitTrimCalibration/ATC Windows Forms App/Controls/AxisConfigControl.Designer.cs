@@ -34,7 +34,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig = new System.Windows.Forms.Panel();
             this.tbAxisSensitivity = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbOutput = new System.Windows.Forms.ComboBox();
+            this.cbOutputAxis = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbInputB = new System.Windows.Forms.ComboBox();
@@ -51,7 +51,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAxisConfig.Controls.Add(this.tbAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.label3);
-            this.pnlAxisConfig.Controls.Add(this.cbOutput);
+            this.pnlAxisConfig.Controls.Add(this.cbOutputAxis);
             this.pnlAxisConfig.Controls.Add(this.label2);
             this.pnlAxisConfig.Controls.Add(this.label1);
             this.pnlAxisConfig.Controls.Add(this.cbInputB);
@@ -87,15 +87,15 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // cbOutput
             // 
-            this.cbOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbOutputAxis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbOutput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOutput.FormattingEnabled = true;
-            this.cbOutput.Location = new System.Drawing.Point(19, 144);
-            this.cbOutput.Name = "cbOutput";
-            this.cbOutput.Size = new System.Drawing.Size(360, 23);
-            this.cbOutput.TabIndex = 12;
-            this.cbOutput.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
+            this.cbOutputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputAxis.FormattingEnabled = true;
+            this.cbOutputAxis.Location = new System.Drawing.Point(19, 144);
+            this.cbOutputAxis.Name = "cbOutput";
+            this.cbOutputAxis.Size = new System.Drawing.Size(360, 23);
+            this.cbOutputAxis.TabIndex = 12;
+            this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -167,7 +167,7 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.Panel pnlAxisConfig;
         private System.Windows.Forms.NumericUpDown tbAxisSensitivity;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbOutput;
+        private System.Windows.Forms.ComboBox cbOutputAxis;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbInputB;

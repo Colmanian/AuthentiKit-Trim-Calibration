@@ -31,7 +31,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             return new MappingDTO { Name = "New Mapping" };
         }
 
-        public IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
+        public IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
             // Open the XML Document
             XmlDocument settingsFile = new();
@@ -65,13 +65,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         Active = active,
                         InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
                         InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
-                        OutputChannel = GetOutputChannel(outputChannelHash, outputChannels),
+                        OutputChannel = GetOutputChannel(outputChannelHash, outputAxes, outputButtons),
                         AxisSensitivity = axisSensitivity,
                         EncoderPPR = encoderPPR,
                         RevsInPerRevsOut = revsInPerRevsOut,
                         ButtonMultiplier = buttonMultiplier,
                         ResetCommand = resetCommand
-                    }) ;
+                    });
                 }
                 catch
                 {
@@ -160,9 +160,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             return new InputChannel();
         }
-        private static OutputChannel GetOutputChannel(int hash, ObservableCollection<OutputChannel> outputChannels)
+        private static OutputChannel GetOutputChannel(int hash, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
-            foreach (var channel in outputChannels)
+            foreach (var channel in outputAxes)
+            {
+                if (channel.Hash == hash)
+                {
+                    return channel;
+                }
+            }
+            foreach (var channel in outputButtons)
             {
                 if (channel.Hash == hash)
                 {
@@ -187,25 +194,26 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
 
         /// Returns the specified vJoy output if available
-        private OutputChannel getOutputChannel (ObservableCollection<OutputChannel> channels, uint vJoyItem)
+        private OutputChannel getOutputChannel(ObservableCollection<OutputChannel> channels, uint vJoyItem)
         {
             foreach (var channel in channels)
                 if (channel.VJoyItem == vJoyItem)
                     return channel;
             return new OutputAxis();
         }
-        public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputChannels)
+        public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
             ObservableCollection<MappingDTO> mappings = new();
             if (aircraft == Aircraft.SPITFIRE_MKIX)
             {
                 // Elevator Trim Axis
-                mappings.Add(new MappingDTO {
+                mappings.Add(new MappingDTO
+                {
                     Name = "Elevator Trim (Axis)",
                     TypeId = MappingType.AXIS,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
-                    OutputChannel = getOutputChannel(outputChannels, (uint) AxisId.X),
+                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
                     AxisSensitivity = 347,
                 });
 
@@ -215,7 +223,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Rudder Trim Left (Button)",
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 9),
-                    OutputChannel = getOutputChannel(outputChannels, 1),
+                    OutputChannel = getOutputChannel(outputButtons, 1),
                     ButtonMultiplier = 7
                 });
 
@@ -225,7 +233,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Rudder Trim Right (Button)",
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 8),
-                    OutputChannel = getOutputChannel(outputChannels, 2),
+                    OutputChannel = getOutputChannel(outputButtons, 2),
                     ButtonMultiplier = 7
                 });
 
@@ -236,7 +244,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.ENCODER_AXIS,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
-                    OutputChannel = getOutputChannel(outputChannels, (uint)AxisId.X),
+                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
                     EncoderPPR = 24,
                     RevsInPerRevsOut = 4
                 });
