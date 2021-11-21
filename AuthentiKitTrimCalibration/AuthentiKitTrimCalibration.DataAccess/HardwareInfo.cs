@@ -48,8 +48,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             {
                                 VJoyId = output_id++,
                                 VJoyDevice = vjoy_id,
-                                VJoyItem = (uint)axis,
-                                Name = string.Format("vJoy " + vjoy_id + ": Axis " + (OutputAxis.AxisId)axis)
+                                VJoyItem = (uint)axis
                             });
                         }
                     }
@@ -73,7 +72,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         VJoyId = output_id++,
                         VJoyDevice = vjoy_id,
                         VJoyItem = b,
-                        Name = string.Format("vJoy " + vjoy_id + ": Button " + b)
                     });
                 }
             }

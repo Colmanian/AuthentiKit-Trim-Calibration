@@ -7,7 +7,7 @@ namespace MappingManager.Common.Model
         public int VJoyId { get; set; }
         public uint VJoyDevice { get; set; }
         public uint VJoyItem { get; set; }
-        public string Name { get; set; }
+        public string Name { get => this.ToString(); }
         public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for storage
 
         public override int GetHashCode()
@@ -46,7 +46,20 @@ namespace MappingManager.Common.Model
         }
         override public string ToString()
         {
-            return ("vJoy " + VJoyDevice + ": Axis " + (AxisId)VJoyItem);
+            string s;
+            if (VJoyItem <= (int)AxisId.Z)
+            {
+                s = (AxisId)VJoyItem + " Axis   (R-Axis " + (AxisId)VJoyItem + " in MSFS)";
+            }
+            else if (VJoyItem <= (int)AxisId.RZ)
+            {
+                s = (AxisId)VJoyItem + " Rotation   (L-Axis " + (AxisId)VJoyItem + " in MSFS)";
+            }
+            else
+            {
+                s = (AxisId)VJoyItem + "";
+            }
+            return "vJoy " + VJoyDevice + ": " + s;
         }
     }
     public class OutputButton : OutputChannel
