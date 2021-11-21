@@ -237,7 +237,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     ButtonMultiplier = 7
                 });
 
-                // Experimental Encoder based Elevator Trim
+               /* // Experimental Encoder based Elevator Trim
                 mappings.Add(new MappingDTO
                 {
                     Name = "EXPERIMENTAL: Elevator Trim (Axis)",
@@ -247,7 +247,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
                     EncoderPPR = 24,
                     RevsInPerRevsOut = 4
-                });
+                });*/
             }
             return mappings;
         }
