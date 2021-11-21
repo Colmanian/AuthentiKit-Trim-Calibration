@@ -1,26 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MappingManager.Common.Model
 {
     public class MappingType
     {
-        private const string AXIS_STRING = "Buttons -> Virtual Axis";
-        private const string BUTTON_STRING = "Button -> Virtual Button";
-        private const string ENCODER_AXIS_STRING = "Encoder Pattern -> Virtual Axis";
+        private const string AXIS_STRING = "Axis Mapping";
+        private const string BUTTON_STRING = "Button Mapping";
+        private const string ENCODER_AXIS_STRING = "Axis Mapping (Raw Encoder)";
+        private const string ENCODER_BUTTON_STRING = "Button Mapping (Raw Encoder)";
 
         public const int AXIS = 0;
         public const int BUTTON = 1;
         public const int ENCODER_AXIS = 2;
+        public const int ENCODER_BUTTON = 3;
 
         public int Id { get; set; }
         public string Name { get; set; }
-    
-        private MappingType (int Id, string Name)
+
+        private MappingType(int Id, string Name)
         {
             this.Id = Id;
             this.Name = Name;
@@ -32,6 +30,7 @@ namespace MappingManager.Common.Model
             types.Add(new MappingType(AXIS, AXIS_STRING));
             types.Add(new MappingType(BUTTON, BUTTON_STRING));
             types.Add(new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING));
+            //types.Add(new MappingType(ENCODER_BUTTON, ENCODER_BUTTON_STRING));
             return types;
         }
 
@@ -41,7 +40,7 @@ namespace MappingManager.Common.Model
             {
                 return new MappingType(AXIS, AXIS_STRING);
             }
-            else if(BUTTON_STRING.ToLower().Equals(s.ToLower()))
+            else if (BUTTON_STRING.ToLower().Equals(s.ToLower()))
             {
                 return new MappingType(BUTTON, BUTTON_STRING);
             }
