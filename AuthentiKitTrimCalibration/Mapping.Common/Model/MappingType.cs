@@ -5,15 +5,18 @@ namespace MappingManager.Common.Model
 {
     public class MappingType
     {
-        private const string AXIS_STRING = "Axis Mapping";
-        private const string BUTTON_STRING = "Button Mapping";
-        private const string ENCODER_AXIS_STRING = "Axis Mapping (Raw Encoder)";
-        private const string ENCODER_BUTTON_STRING = "Button Mapping (Raw Encoder)";
+        private const string AXIS_STRING = "Axis";
+        private const string BUTTON_STRING = "Button";
+        private const string ENCODER_AXIS_STRING = "Axis (from raw encoder)";
+        private const string ENCODER_BUTTON_STRING = "Button (from raw encoder)";
+        private const string AXIS_AXIS_STRING = "Axis (from axis)";
 
         public const int AXIS = 0;
         public const int BUTTON = 1;
         public const int ENCODER_AXIS = 2;
         public const int ENCODER_BUTTON = 3;
+        public const int AXIS_AXIS = 4;
+
 
         public int Id { get; set; }
         public string Name { get; set; }
@@ -31,6 +34,7 @@ namespace MappingManager.Common.Model
             types.Add(new MappingType(BUTTON, BUTTON_STRING));
             types.Add(new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING));
             //types.Add(new MappingType(ENCODER_BUTTON, ENCODER_BUTTON_STRING));
+            //types.Add(new MappingType(AXIS_AXIS, AXIS_AXIS_STRING));
             return types;
         }
 
