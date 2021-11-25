@@ -394,5 +394,15 @@ namespace ATC_Windows_Forms_App
                 }
             }
         }
+
+        private void btnStartAll_Click(object sender, EventArgs e)
+        {
+            _viewModel.Start();
+        }
+
+        private void btnStopAll_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+        }
     }
 }

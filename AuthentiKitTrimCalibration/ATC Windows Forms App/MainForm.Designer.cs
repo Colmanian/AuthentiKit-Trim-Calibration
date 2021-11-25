@@ -50,10 +50,12 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.btnAddMapping = new System.Windows.Forms.Button();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
+            this.btnStopAll = new System.Windows.Forms.Button();
+            this.btnStartAll = new System.Windows.Forms.Button();
             this.btnRemoveMapping = new System.Windows.Forms.Button();
-            this.btnAddMapping = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -81,7 +83,6 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
-            this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -189,6 +190,21 @@ namespace ATC_Windows_Forms_App
             this.clearMenuItem.Size = new System.Drawing.Size(261, 22);
             this.clearMenuItem.Text = "&Clear All";
             // 
+            // settingsMenuItem
+            // 
+            this.settingsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startupMenuItem});
+            this.settingsMenuItem.Name = "settingsMenuItem";
+            this.settingsMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsMenuItem.Text = "&Settings";
+            this.settingsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.settingsMenuItemClicked);
+            // 
+            // startupMenuItem
+            // 
+            this.startupMenuItem.Name = "startupMenuItem";
+            this.startupMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.startupMenuItem.Text = "&Run on Windows Start?";
+            // 
             // helpMenuItem
             // 
             this.helpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -227,6 +243,7 @@ namespace ATC_Windows_Forms_App
             // pnlNavigation
             // 
             this.pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlNavigation.Controls.Add(this.btnAddMapping);
             this.pnlNavigation.Controls.Add(this.lsbMappings);
             this.pnlNavigation.Controls.Add(this.pnlAddMapping);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
@@ -234,6 +251,18 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(242, 441);
             this.pnlNavigation.TabIndex = 1;
+            // 
+            // btnAddMapping
+            // 
+            this.btnAddMapping.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddMapping.Location = new System.Drawing.Point(7, 344);
+            this.btnAddMapping.Name = "btnAddMapping";
+            this.btnAddMapping.Size = new System.Drawing.Size(229, 26);
+            this.btnAddMapping.TabIndex = 0;
+            this.btnAddMapping.Text = "Add Mapping";
+            this.btnAddMapping.UseVisualStyleBackColor = true;
+            this.btnAddMapping.Click += new System.EventHandler(this.btnAddMapping_Click);
             // 
             // lsbMappings
             // 
@@ -243,60 +272,49 @@ namespace ATC_Windows_Forms_App
             this.lsbMappings.ItemHeight = 15;
             this.lsbMappings.Location = new System.Drawing.Point(7, 6);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(230, 364);
+            this.lsbMappings.Size = new System.Drawing.Size(230, 334);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
             // 
             this.pnlAddMapping.BackColor = System.Drawing.SystemColors.Control;
-            this.pnlAddMapping.Controls.Add(this.btnRemoveMapping);
-            this.pnlAddMapping.Controls.Add(this.btnAddMapping);
+            this.pnlAddMapping.Controls.Add(this.btnStopAll);
+            this.pnlAddMapping.Controls.Add(this.btnStartAll);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
             this.pnlAddMapping.Name = "pnlAddMapping";
             this.pnlAddMapping.Size = new System.Drawing.Size(242, 63);
             this.pnlAddMapping.TabIndex = 0;
             // 
+            // btnStopAll
+            // 
+            this.btnStopAll.Location = new System.Drawing.Point(126, 0);
+            this.btnStopAll.Name = "btnStopAll";
+            this.btnStopAll.Size = new System.Drawing.Size(110, 54);
+            this.btnStopAll.TabIndex = 1;
+            this.btnStopAll.Text = "Stop All";
+            this.btnStopAll.UseVisualStyleBackColor = true;
+            this.btnStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
+            // 
+            // btnStartAll
+            // 
+            this.btnStartAll.Location = new System.Drawing.Point(7, 0);
+            this.btnStartAll.Name = "btnStartAll";
+            this.btnStartAll.Size = new System.Drawing.Size(113, 54);
+            this.btnStartAll.TabIndex = 0;
+            this.btnStartAll.Text = "Start All";
+            this.btnStartAll.UseVisualStyleBackColor = true;
+            this.btnStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
+            // 
             // btnRemoveMapping
             // 
-            this.btnRemoveMapping.Location = new System.Drawing.Point(129, 8);
+            this.btnRemoveMapping.Location = new System.Drawing.Point(507, 495);
             this.btnRemoveMapping.Name = "btnRemoveMapping";
-            this.btnRemoveMapping.Size = new System.Drawing.Size(84, 47);
+            this.btnRemoveMapping.Size = new System.Drawing.Size(91, 29);
             this.btnRemoveMapping.TabIndex = 1;
-            this.btnRemoveMapping.Text = "Remove Mapping";
+            this.btnRemoveMapping.Text = "Delete";
             this.btnRemoveMapping.UseVisualStyleBackColor = true;
             this.btnRemoveMapping.Click += new System.EventHandler(this.btnRemoveMapping_Click);
-            // 
-            // btnAddMapping
-            // 
-            this.btnAddMapping.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddMapping.Location = new System.Drawing.Point(25, 8);
-            this.btnAddMapping.Name = "btnAddMapping";
-            this.btnAddMapping.Size = new System.Drawing.Size(84, 47);
-            this.btnAddMapping.TabIndex = 0;
-            this.btnAddMapping.Text = "Add Mapping";
-            this.btnAddMapping.UseVisualStyleBackColor = true;
-            this.btnAddMapping.Click += new System.EventHandler(this.btnAddMapping_Click);
-
-
-            // 
-            // settingsMenuItem
-            // 
-            this.settingsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startupMenuItem});
-            this.settingsMenuItem.Name = "settingsMenuItem";
-            this.settingsMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.settingsMenuItem.Text = "&Settings";
-            this.settingsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.settingsMenuItemClicked);
-
-            // 
-            // startupMenuItem
-            // 
-            this.startupMenuItem.Name = "startupMenuItem";
-            this.startupMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.startupMenuItem.Text = "&Run on Windows Start?";
-
             // 
             // newToolStripMenuItem
             // 
@@ -394,22 +412,22 @@ namespace ATC_Windows_Forms_App
             // 
             this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(458, 495);
+            this.btnDeactivate.Location = new System.Drawing.Point(395, 495);
             this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(124, 29);
+            this.btnDeactivate.Size = new System.Drawing.Size(91, 29);
             this.btnDeactivate.TabIndex = 18;
-            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.Text = "Stop";
             this.btnDeactivate.UseVisualStyleBackColor = true;
             this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
             // 
             // btnActivate
             // 
             this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActivate.Location = new System.Drawing.Point(308, 495);
+            this.btnActivate.Location = new System.Drawing.Point(286, 495);
             this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(131, 29);
+            this.btnActivate.Size = new System.Drawing.Size(91, 29);
             this.btnActivate.TabIndex = 17;
-            this.btnActivate.Text = "Activate";
+            this.btnActivate.Text = "Start";
             this.btnActivate.UseVisualStyleBackColor = true;
             this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
@@ -470,6 +488,7 @@ namespace ATC_Windows_Forms_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 541);
+            this.Controls.Add(this.btnRemoveMapping);
             this.Controls.Add(this.encoderAxisControl);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.cbMappingType);
@@ -554,6 +573,8 @@ namespace ATC_Windows_Forms_App
         private Controls.EncoderAxisControl encoderAxisControl;
         private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startupMenuItem;
+        private System.Windows.Forms.Button btnStopAll;
+        private System.Windows.Forms.Button btnStartAll;
     }
 }
 

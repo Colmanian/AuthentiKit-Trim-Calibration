@@ -5,6 +5,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -27,7 +28,13 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mainDataHandler = new MainDataHandler();
             CanAddMapping = true;
         }
-
+        public void Start()
+        {
+            foreach (var mapping in Mappings)
+            {
+                mapping.Activate();
+            }
+        }
         public void Stop()
         {
             foreach (var mapping in Mappings)
