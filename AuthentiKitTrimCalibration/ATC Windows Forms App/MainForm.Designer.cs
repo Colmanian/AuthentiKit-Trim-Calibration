@@ -36,6 +36,7 @@ namespace ATC_Windows_Forms_App
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,6 +123,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveMenuItem,
+            this.saveAsMenuItem,
             this.loadMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -136,6 +138,15 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.saveMenuItem.Size = new System.Drawing.Size(140, 22);
             this.saveMenuItem.Text = "&Save";
+            // 
+            // saveAsMenuItem
+            // 
+            this.saveAsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveMenuItem.Image")));
+            this.saveAsMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveAsMenuItem.Name = "saveAsMenuItem";
+            this.saveAsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F12)));
+            this.saveAsMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.saveAsMenuItem.Text = "&Save As";
             // 
             // loadMenuItem
             // 
@@ -483,6 +494,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem loadMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem saveMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;

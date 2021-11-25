@@ -169,6 +169,21 @@ namespace ATC_Windows_Forms_App
                 }
 
             }
+            else if (e.ClickedItem.Name.Equals("saveAsMenuItem"))
+            {
+                try
+                {
+                    MessageBox.Show("Save as Config", "Save As",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error while saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _viewModel.Stop();
+                }
+
+            }
             else if (e.ClickedItem.Name.Equals("loadMenuItem"))
             {
                 try
