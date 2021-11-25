@@ -1,4 +1,4 @@
-.u-section-1 {
+ .u-section-1 {
   background-image: none;
 }
 
@@ -271,7 +271,7 @@
   .u-section-1 .u-text-1 {
     font-size: 2.25rem;
   }
-}.u-section-2 {
+} .u-section-2 {
   background-image: none;
 }
 
@@ -399,7 +399,7 @@
   .u-section-2 .u-image-1 {
     min-height: 257px;
   }
-}.u-section-3 {
+} .u-section-3 {
   background-image: none;
 }
 
@@ -507,7 +507,7 @@
   .u-section-3 .u-image-1 {
     min-height: 257px;
   }
-}.u-section-4 {
+} .u-section-4 {
   background-image: none;
 }
 
@@ -631,7 +631,7 @@
   .u-section-4 .u-image-1 {
     min-height: 257px;
   }
-}.u-section-5 {
+} .u-section-5 {
   background-image: none;
 }
 
@@ -648,7 +648,7 @@
 .u-section-5 .u-image-1 {
   min-height: 431px;
   pointer-events: auto;
-  background-image: url("images/tuningapp.JPG");
+  background-image: url("images/Preset.png");
   background-position: 50% 50%;
 }
 
@@ -673,28 +673,29 @@
   margin: 37px 25px 0 0;
 }
 
+.u-section-5 .u-btn-1 {
+  background-image: none;
+  padding: 0;
+}
+
 .u-section-5 .u-text-3 {
-  margin: 20px 25px 0 0;
+  margin: 20px 20px 0 5px;
 }
 
 .u-section-5 .u-text-4 {
-  margin: 20px 20px 0 5px;
+  margin: 20px 25px 0 0;
+}
+
+.u-section-5 .u-btn-2 {
+  background-image: none;
+  padding: 0;
 }
 
 .u-section-5 .u-text-5 {
   margin: 20px 25px 0 0;
 }
 
-.u-section-5 .u-btn-1 {
-  background-image: none;
-  padding: 0;
-}
-
 .u-section-5 .u-text-6 {
-  margin: 20px 25px 0 0;
-}
-
-.u-section-5 .u-text-7 {
   margin: 20px 25px 0 0;
 }
 
@@ -716,11 +717,11 @@
   }
 
   .u-section-5 .u-text-3 {
+    margin-left: 0;
     margin-right: 0;
   }
 
   .u-section-5 .u-text-4 {
-    margin-left: 0;
     margin-right: 0;
   }
 
@@ -729,10 +730,6 @@
   }
 
   .u-section-5 .u-text-6 {
-    margin-right: 0;
-  }
-
-  .u-section-5 .u-text-7 {
     margin-right: 0;
   }
 }
@@ -781,7 +778,7 @@
   .u-section-5 .u-image-1 {
     min-height: 257px;
   }
-}.u-section-6 {
+} .u-section-6 {
   background-image: none;
 }
 
