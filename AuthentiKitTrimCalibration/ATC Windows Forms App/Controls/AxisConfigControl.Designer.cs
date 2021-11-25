@@ -69,24 +69,20 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             this.tBarAxisSensitivity.Location = new System.Drawing.Point(19, 204);
             this.tBarAxisSensitivity.Maximum = 1000;
-            this.tBarAxisSensitivity.Minimum = 1;
             this.tBarAxisSensitivity.Name = "tBarAxisSensitivity";
             this.tBarAxisSensitivity.Size = new System.Drawing.Size(305, 45);
             this.tBarAxisSensitivity.TabIndex = 15;
             this.tBarAxisSensitivity.TickFrequency = 50;
             this.tBarAxisSensitivity.Value = 1;
+            this.tBarAxisSensitivity.Click += new System.EventHandler(this.RefreshSensitivityBindings);
             this.tBarAxisSensitivity.ValueChanged += new System.EventHandler(this.RefreshSensitivityBindings);
+            this.tBarAxisSensitivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RefreshSensitivityBindings);
             // 
             // tbAxisSensitivity
             // 
             this.tbAxisSensitivity.Location = new System.Drawing.Point(330, 204);
             this.tbAxisSensitivity.Maximum = new decimal(new int[] {
             1000,
-            0,
-            0,
-            0});
-            this.tbAxisSensitivity.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
@@ -193,6 +189,7 @@ namespace ATC_Windows_Forms_App.Controls
 
         private System.Windows.Forms.Panel pnlAxisConfig;
         private System.Windows.Forms.NumericUpDown tbAxisSensitivity;
+        private System.Windows.Forms.TrackBar tBarAxisSensitivity;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbOutputAxis;
         private System.Windows.Forms.Label label2;
@@ -201,6 +198,5 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.ComboBox cbInputA;
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.BindingSource mappingBindingSource;
-        private TrackBar tBarAxisSensitivity;
     }
 }

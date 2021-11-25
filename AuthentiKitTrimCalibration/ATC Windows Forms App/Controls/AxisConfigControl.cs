@@ -1,12 +1,5 @@
 ﻿using AuthentiKitTrimCalibration.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App.Controls
@@ -95,6 +88,9 @@ namespace ATC_Windows_Forms_App.Controls
                 {
                     b.WriteValue();
                 }
+            }
+            if (tbAxisSensitivity.Focused)
+            {
                 foreach (Binding b in tbAxisSensitivity.DataBindings)
                 {
                     b.WriteValue();
