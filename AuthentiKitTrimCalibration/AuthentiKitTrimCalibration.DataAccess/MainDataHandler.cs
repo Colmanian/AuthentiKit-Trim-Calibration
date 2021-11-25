@@ -1,5 +1,6 @@
 ﻿using MappingManager.Common.DataProvider;
 using MappingManager.Common.Model;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,6 +27,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
         private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
+        private readonly string REGISTRY_LOCATION = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
+        private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
 
         private string SaveFilePath;
 
@@ -293,13 +296,27 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public void SetSaveFilePath(string filePath)
         {
             SaveFilePath = filePath;
-            //TODO Save to Registry as well
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(@REGISTRY_LOCATION);
+            key.SetValue(REGISTRY_SAVE_FILE_PATH, SaveFilePath);
+            key.Close();
         }
         private string LoadFilePathFromRegistry()
         {
+            SaveFilePath = "";
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_LOCATION);
+
+            //if it does exist, retrieve the stored values  
             string filePath = "";
-            //TODO 
-            return filePath;
+            if (key != null)
+            {
+                filePath = key.GetValue(REGISTRY_SAVE_FILE_PATH).ToString();
+                key.Close();
+            }
+            if (File.Exists(filePath))
+            {
+                SaveFilePath = filePath;
+            }
+            return SaveFilePath;
         }
     }
 }
