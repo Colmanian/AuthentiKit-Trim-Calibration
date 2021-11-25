@@ -10,7 +10,7 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION="experimental";
+        private readonly string VERSION = "experimental";
 
         public MainForm()
         {
@@ -153,6 +153,7 @@ namespace ATC_Windows_Forms_App
         }
         private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            fileMenuItem.DropDown.Close();
             if (e.ClickedItem.Name.Equals("saveMenuItem"))
             {
                 try
@@ -173,8 +174,15 @@ namespace ATC_Windows_Forms_App
             {
                 try
                 {
-                    MessageBox.Show("Save as Config", "Save As",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SaveFileDialog saveFileDialog = new();
+                    saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                    saveFileDialog.FilterIndex = 0;
+                    saveFileDialog.DefaultExt = "xml";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        _viewModel.SaveMappings(saveFileDialog.FileName);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -235,7 +243,8 @@ namespace ATC_Windows_Forms_App
                         UseShellExecute = true
                     };
                     Process.Start(sInfo);
-                } else if (e.ClickedItem.Name.Equals("bugReportMenuItem"))
+                }
+                else if (e.ClickedItem.Name.Equals("bugReportMenuItem"))
                 {
                     ProcessStartInfo sInfo = new(@"Readme\index.html")
                     {

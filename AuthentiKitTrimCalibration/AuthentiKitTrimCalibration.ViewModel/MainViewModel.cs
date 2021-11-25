@@ -78,6 +78,16 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             _mainDataHandler.SaveMappings(mappings);
         }
+        public void SaveMappings(string fileName)
+        {
+            Debug.WriteLine("Saving to " + fileName);
+            ObservableCollection<MappingDTO> mappings = new();
+            foreach (var m in Mappings)
+            {
+                mappings.Add(m.getMappingDTO());
+            }
+            _mainDataHandler.SaveMappings(mappings, fileName);
+        }
 
         public void Reset(Aircraft aircraft)
         {

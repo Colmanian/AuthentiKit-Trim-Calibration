@@ -11,7 +11,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     public class MainDataHandler : IMainDataHandler
     {
-        private readonly string FILENAME = "settings.xml";
+        private readonly string DEFAULT_FILENAME = "settings.xml";
         private readonly string CONFIG = "CONFIG";
         private readonly string GROUP = "GROUP";
         private readonly string MAPPING = "MAPPING";
@@ -36,7 +36,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             // Open the XML Document
             XmlDocument settingsFile = new();
-            settingsFile.Load(FILENAME);
+            settingsFile.Load(DEFAULT_FILENAME);
 
             // Parse values from XML
             XmlNode config = settingsFile.SelectSingleNode(CONFIG);
@@ -94,6 +94,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
 
         public void SaveMappings(IEnumerable<MappingDTO> mappings)
+        {
+            SaveMappings(mappings, DEFAULT_FILENAME);
+        }
+
+        public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath)
         {
             XmlDocument doc = new();
             XmlElement configNode = doc.CreateElement(CONFIG);
@@ -164,7 +169,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             configNode.AppendChild(groupNode);
             doc.AppendChild(configNode);
-            doc.Save(FILENAME);
+            doc.Save(filePath);
         }
         private static InputChannel GetInputChannel(int hash, ObservableCollection<InputChannel> inputChannels)
         {
