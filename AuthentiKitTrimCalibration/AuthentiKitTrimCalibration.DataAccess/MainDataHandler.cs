@@ -226,7 +226,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Elevator Trim Axis
                 mappings.Add(new MappingDTO
                 {
-                    Name = "Elevator Trim (Axis)",
+                    Name = "Elevator Trim",
                     TypeId = MappingType.AXIS,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
@@ -237,7 +237,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Rudder Trim Button Left
                 mappings.Add(new MappingDTO
                 {
-                    Name = "Rudder Trim Left (Button)",
+                    Name = "Rudder Trim Left",
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 9),
                     OutputChannel = getOutputChannel(outputButtons, 1),
@@ -247,7 +247,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 // Rudder Trim Button Right
                 mappings.Add(new MappingDTO
                 {
-                    Name = "Rudder Trim Right (Button)",
+                    Name = "Rudder Trim Right",
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 8),
                     OutputChannel = getOutputChannel(outputButtons, 2),

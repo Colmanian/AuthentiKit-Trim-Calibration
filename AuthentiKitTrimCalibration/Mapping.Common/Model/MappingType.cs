@@ -5,11 +5,11 @@ namespace MappingManager.Common.Model
 {
     public class MappingType
     {
-        private const string AXIS_STRING = "Axis";
-        private const string BUTTON_STRING = "Button";
-        private const string ENCODER_AXIS_STRING = "Axis (from raw encoder)";
-        private const string ENCODER_BUTTON_STRING = "Button (from raw encoder)";
-        private const string AXIS_AXIS_STRING = "Axis (from axis)";
+        private const string AXIS_STRING = "Remap to Axis";
+        private const string BUTTON_STRING = "Button Multiplier";
+        private const string ENCODER_AXIS_STRING = "Remap to Axis  (Advanced)";
+        private const string ENCODER_BUTTON_STRING = "Button Multiplier  (Advanced)";
+        private const string AXIS_AXIS_STRING = "Axis to Axis";
 
         public const int AXIS = 0;
         public const int BUTTON = 1;

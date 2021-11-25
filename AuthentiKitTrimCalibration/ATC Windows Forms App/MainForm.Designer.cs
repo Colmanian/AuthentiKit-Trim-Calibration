@@ -34,7 +34,7 @@ namespace ATC_Windows_Forms_App
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.configMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,13 +103,12 @@ namespace ATC_Windows_Forms_App
             this.headerControl2.Name = "headerControl2";
             this.headerControl2.Size = new System.Drawing.Size(649, 76);
             this.headerControl2.TabIndex = 0;
-
             // 
             // menuStrip
             // 
             this.menuStrip.BackColor = System.Drawing.SystemColors.ControlLight;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configMenuItem,
+            this.fileMenuItem,
             this.presetsMenuItem,
             this.helpMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -119,15 +118,15 @@ namespace ATC_Windows_Forms_App
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip";
             // 
-            // configMenuItem
+            // fileMenuItem
             // 
-            this.configMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveMenuItem,
             this.loadMenuItem});
-            this.configMenuItem.Name = "configMenuItem";
-            this.configMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.configMenuItem.Text = "&Config";
-            this.configMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.configMenuItemClicked);
+            this.fileMenuItem.Name = "fileMenuItem";
+            this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileMenuItem.Text = "&File";
+            this.fileMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.configMenuItemClicked);
             // 
             // saveMenuItem
             // 
@@ -425,10 +424,10 @@ namespace ATC_Windows_Forms_App
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Name";
             // 
-            // encoderAxisControl1
+            // encoderAxisControl
             // 
             this.encoderAxisControl.Location = new System.Drawing.Point(242, 224);
-            this.encoderAxisControl.Name = "encoderAxisControl1";
+            this.encoderAxisControl.Name = "encoderAxisControl";
             this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
             this.encoderAxisControl.TabIndex = 24;
             // 
@@ -479,7 +478,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.BindingSource mappingBindingSource;
         private Controls.HeaderControl headerControl2;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem configMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
