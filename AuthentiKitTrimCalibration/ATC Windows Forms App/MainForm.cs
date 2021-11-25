@@ -154,23 +154,7 @@ namespace ATC_Windows_Forms_App
         private void configMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             fileMenuItem.DropDown.Close();
-            if (e.ClickedItem.Name.Equals("saveMenuItem"))
-            {
-                try
-                {
-                    _viewModel.SaveMappings();
-                    MessageBox.Show("Your config has been saved", "Saved",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error while saving",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _viewModel.Stop();
-                }
-
-            }
-            else if (e.ClickedItem.Name.Equals("saveAsMenuItem"))
+            if (e.ClickedItem.Name.Equals("saveAsMenuItem") || ((e.ClickedItem.Name.Equals("saveMenuItem")) && (!_viewModel.SaveFileExists())))
             {
                 try
                 {
@@ -192,14 +176,36 @@ namespace ATC_Windows_Forms_App
                 }
 
             }
+            else if (e.ClickedItem.Name.Equals("saveMenuItem"))
+            {
+                try
+                {
+                    _viewModel.SaveMappings();
+                    MessageBox.Show("Your config has been saved to " + _viewModel.GetSaveFilePath(), "Saved",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error while saving",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _viewModel.Stop();
+                }
+
+            }
             else if (e.ClickedItem.Name.Equals("loadMenuItem"))
             {
                 try
                 {
-                    _viewModel.LoadMappings();
-                    LoadFormData();
-                    MessageBox.Show("Your config has been loaded", "Loaded",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OpenFileDialog openFileDialog = new();
+                    openFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                    openFileDialog.FilterIndex = 0;
+                    openFileDialog.DefaultExt = "xml";
+
+                    if (openFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        _viewModel.LoadMappings(openFileDialog.FileName);
+                        LoadFormData();
+                    }
                 }
                 catch (Exception ex)
                 {

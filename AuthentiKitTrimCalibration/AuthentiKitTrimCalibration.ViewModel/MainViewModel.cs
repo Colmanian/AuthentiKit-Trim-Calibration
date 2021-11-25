@@ -4,6 +4,7 @@ using MappingManager.Common.Model;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.IO;
 
 namespace AuthentiKitTrimCalibration.ViewModel
 {
@@ -34,10 +35,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 mapping.Deactivate();
             }
         }
+
         public void LoadMappings()
+        {
+            if (SaveFileExists())
+                LoadMappings(GetSaveFilePath());
+        }
+        public void LoadMappings(string filePath)
         {
             Stop();
             Mappings.Clear();
+            _mainDataHandler.SetSaveFilePath(filePath);
             var mappings = _mainDataHandler.LoadMappings(InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
             foreach (var mapping in mappings)
             {
@@ -102,6 +110,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
                 }
             }
+        }
+
+        public bool SaveFileExists()
+        {
+            bool saveFileExists = File.Exists(_mainDataHandler.GetSaveFilePath());
+            return saveFileExists;
+        }
+
+        public string GetSaveFilePath()
+        {
+            return _mainDataHandler.GetSaveFilePath();
         }
     }
 }
