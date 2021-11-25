@@ -30,6 +30,10 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlButtonConfig = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbHoldThresholdStop = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbHoldThresholdStart = new System.Windows.Forms.NumericUpDown();
             this.tbButtonMultiplier = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutputButton = new System.Windows.Forms.ComboBox();
@@ -37,6 +41,8 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.pnlButtonConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbButtonMultiplier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +51,10 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlButtonConfig.Controls.Add(this.label4);
+            this.pnlButtonConfig.Controls.Add(this.tbHoldThresholdStop);
+            this.pnlButtonConfig.Controls.Add(this.label2);
+            this.pnlButtonConfig.Controls.Add(this.tbHoldThresholdStart);
             this.pnlButtonConfig.Controls.Add(this.tbButtonMultiplier);
             this.pnlButtonConfig.Controls.Add(this.label3);
             this.pnlButtonConfig.Controls.Add(this.cbOutputButton);
@@ -55,6 +65,52 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Name = "pnlButtonConfig";
             this.pnlButtonConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlButtonConfig.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(222, 195);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 15);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Hold Threshold Stop (ms)";
+            // 
+            // tbHoldThresholdStop
+            // 
+            this.tbHoldThresholdStop.Location = new System.Drawing.Point(211, 213);
+            this.tbHoldThresholdStop.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tbHoldThresholdStop.Name = "tbHoldThresholdStop";
+            this.tbHoldThresholdStop.Size = new System.Drawing.Size(168, 23);
+            this.tbHoldThresholdStop.TabIndex = 17;
+            this.tbHoldThresholdStop.Click += new System.EventHandler(this.tbHoldThresholdStop_click);
+            this.tbHoldThresholdStop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbHoldThresholdStop_keyUp);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 15);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Hold Threshold Start (ms)";
+            // 
+            // tbHoldThresholdStart
+            // 
+            this.tbHoldThresholdStart.Location = new System.Drawing.Point(19, 213);
+            this.tbHoldThresholdStart.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.tbHoldThresholdStart.Name = "tbHoldThresholdStart";
+            this.tbHoldThresholdStart.Size = new System.Drawing.Size(164, 23);
+            this.tbHoldThresholdStart.TabIndex = 15;
+            this.tbHoldThresholdStart.Click += new System.EventHandler(this.tbHoldThresholdStart_click);
+            this.tbHoldThresholdStart.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbHoldThresholdStart_keyUp);
             // 
             // tbButtonMultiplier
             // 
@@ -79,14 +135,14 @@ namespace ATC_Windows_Forms_App.Controls
             this.label3.TabIndex = 13;
             this.label3.Text = "Virtual Output Button";
             // 
-            // cbOutput
+            // cbOutputButton
             // 
             this.cbOutputButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutputButton.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputButton.FormattingEnabled = true;
             this.cbOutputButton.Location = new System.Drawing.Point(19, 91);
-            this.cbOutputButton.Name = "cbOutput";
+            this.cbOutputButton.Name = "cbOutputButton";
             this.cbOutputButton.Size = new System.Drawing.Size(360, 23);
             this.cbOutputButton.TabIndex = 12;
             this.cbOutputButton.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
@@ -130,6 +186,8 @@ namespace ATC_Windows_Forms_App.Controls
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlButtonConfig.ResumeLayout(false);
             this.pnlButtonConfig.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbButtonMultiplier)).EndInit();
             this.ResumeLayout(false);
 
@@ -144,5 +202,9 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbInputA;
         private System.Windows.Forms.Label lblMultiplier;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown tbHoldThresholdStart;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown tbHoldThresholdStop;
     }
 }

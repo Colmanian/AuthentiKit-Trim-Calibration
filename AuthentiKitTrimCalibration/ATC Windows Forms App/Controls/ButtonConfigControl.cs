@@ -28,6 +28,12 @@ namespace ATC_Windows_Forms_App.Controls
             // Multiplier
             tbButtonMultiplier.DataBindings.Add("Value", mappingBindingSource, "ButtonMultiplier");
 
+            // tbHoldThresholdStart
+            tbHoldThresholdStart.DataBindings.Add("Value", mappingBindingSource, "HoldThresholdStart");
+
+            // tbHoldThresholdStop
+            tbHoldThresholdStop.DataBindings.Add("Value", mappingBindingSource, "HoldThresholdStop");
+
             // Panel Activation
             pnlButtonConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
         }
@@ -45,6 +51,48 @@ namespace ATC_Windows_Forms_App.Controls
                 {
                     b.WriteValue();
                 }
+            }
+        }
+        private void tbHoldThresholdStart_click(object sender, EventArgs e)
+        {
+            if (tbHoldThresholdStart.Focused)
+            {
+                foreach (Binding b in tbHoldThresholdStart.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+        private void tbHoldThresholdStop_click(object sender, EventArgs e)
+        {
+            if (tbHoldThresholdStop.Focused)
+            {
+                foreach (Binding b in tbHoldThresholdStop.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+        private void tbHoldThresholdStart_keyUp(object sender, KeyEventArgs e)
+        {
+            if (tbHoldThresholdStart.Focused)
+            {
+                foreach (Binding b in tbHoldThresholdStart.DataBindings)
+                {
+                    b.WriteValue();
+                }
+                tbHoldThresholdStart.Select(Right, 0);
+            }
+        }
+        private void tbHoldThresholdStop_keyUp(object sender, KeyEventArgs e)
+        {
+            if (tbHoldThresholdStop.Focused)
+            {
+                foreach (Binding b in tbHoldThresholdStop.DataBindings)
+                {
+                    b.WriteValue();
+                }
+                tbHoldThresholdStop.Select(Right, 0);
             }
         }
 
