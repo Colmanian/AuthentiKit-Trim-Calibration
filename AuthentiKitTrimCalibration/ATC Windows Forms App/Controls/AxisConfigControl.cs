@@ -38,8 +38,9 @@ namespace ATC_Windows_Forms_App.Controls
             cbOutputAxis.ValueMember = "Hash";
             cbOutputAxis.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputAxisHash");
 
-            // Multiplier
+            // Axis Sensitivity
             tbAxisSensitivity.DataBindings.Add("Text", mappingBindingSource, "AxisSensitivity");
+            tBarAxisSensitivity.DataBindings.Add("Value", mappingBindingSource, "AxisSensitivity");
 
             // Panel Activation
             pnlAxisConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
@@ -86,26 +87,19 @@ namespace ATC_Windows_Forms_App.Controls
             }
         }
 
-        private void tbAxisSensitivity_KeyUp(object sender, KeyEventArgs e)
+        private void RefreshSensitivityBindings(object sender, EventArgs e)
         {
-            if (tbAxisSensitivity.Focused)
+            if (tBarAxisSensitivity.Focused)
             {
+                foreach (Binding b in tBarAxisSensitivity.DataBindings)
+                {
+                    b.WriteValue();
+                }
                 foreach (Binding b in tbAxisSensitivity.DataBindings)
                 {
                     b.WriteValue();
                 }
                 tbAxisSensitivity.Select(Right, 0);
-            }
-        }
-
-        private void tbAxisSensitivity_Click(object sender, EventArgs e)
-        {
-            if (tbAxisSensitivity.Focused)
-            {
-                foreach (Binding b in tbAxisSensitivity.DataBindings)
-                {
-                    b.WriteValue();
-                }
             }
         }
     }

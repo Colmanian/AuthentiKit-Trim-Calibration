@@ -32,6 +32,7 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlAxisConfig = new System.Windows.Forms.Panel();
+            this.tBarAxisSensitivity = new System.Windows.Forms.TrackBar();
             this.tbAxisSensitivity = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.cbOutputAxis = new System.Windows.Forms.ComboBox();
@@ -41,6 +42,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
             this.pnlAxisConfig.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tBarAxisSensitivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAxisConfig.Controls.Add(this.tBarAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.tbAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.label3);
             this.pnlAxisConfig.Controls.Add(this.cbOutputAxis);
@@ -62,19 +65,42 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.TabIndex = 3;
             // 
+            // tBarAxisSensitivity
+            // 
+            this.tBarAxisSensitivity.Location = new System.Drawing.Point(19, 204);
+            this.tBarAxisSensitivity.Maximum = 1000;
+            this.tBarAxisSensitivity.Minimum = 1;
+            this.tBarAxisSensitivity.Name = "tBarAxisSensitivity";
+            this.tBarAxisSensitivity.Size = new System.Drawing.Size(305, 45);
+            this.tBarAxisSensitivity.TabIndex = 15;
+            this.tBarAxisSensitivity.TickFrequency = 50;
+            this.tBarAxisSensitivity.Value = 1;
+            this.tBarAxisSensitivity.ValueChanged += new System.EventHandler(this.RefreshSensitivityBindings);
+            // 
             // tbAxisSensitivity
             // 
-            this.tbAxisSensitivity.Location = new System.Drawing.Point(19, 201);
+            this.tbAxisSensitivity.Location = new System.Drawing.Point(330, 204);
             this.tbAxisSensitivity.Maximum = new decimal(new int[] {
-            10000,
+            1000,
+            0,
+            0,
+            0});
+            this.tbAxisSensitivity.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             this.tbAxisSensitivity.Name = "tbAxisSensitivity";
-            this.tbAxisSensitivity.Size = new System.Drawing.Size(360, 23);
+            this.tbAxisSensitivity.Size = new System.Drawing.Size(49, 23);
             this.tbAxisSensitivity.TabIndex = 14;
-            this.tbAxisSensitivity.Click += new System.EventHandler(this.tbAxisSensitivity_Click);
-            this.tbAxisSensitivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbAxisSensitivity_KeyUp);
+            this.tbAxisSensitivity.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.tbAxisSensitivity.ValueChanged += new System.EventHandler(this.RefreshSensitivityBindings);
+            this.tbAxisSensitivity.Click += new System.EventHandler(this.RefreshSensitivityBindings);
+            this.tbAxisSensitivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RefreshSensitivityBindings);
             // 
             // label3
             // 
@@ -85,14 +111,14 @@ namespace ATC_Windows_Forms_App.Controls
             this.label3.TabIndex = 13;
             this.label3.Text = "Virtual Output Axis";
             // 
-            // cbOutput
+            // cbOutputAxis
             // 
             this.cbOutputAxis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputAxis.FormattingEnabled = true;
             this.cbOutputAxis.Location = new System.Drawing.Point(19, 144);
-            this.cbOutputAxis.Name = "cbOutput";
+            this.cbOutputAxis.Name = "cbOutputAxis";
             this.cbOutputAxis.Size = new System.Drawing.Size(360, 23);
             this.cbOutputAxis.TabIndex = 12;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
@@ -157,6 +183,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.ResumeLayout(false);
             this.pnlAxisConfig.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tBarAxisSensitivity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).EndInit();
             this.ResumeLayout(false);
 
@@ -174,5 +201,6 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.ComboBox cbInputA;
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.BindingSource mappingBindingSource;
+        private TrackBar tBarAxisSensitivity;
     }
 }
