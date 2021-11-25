@@ -6,6 +6,7 @@
     <RootNamespace>ATC_Windows_Forms_App</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x86</Platforms>
+    <ApplicationIcon>Authentikit.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
