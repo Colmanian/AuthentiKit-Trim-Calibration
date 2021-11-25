@@ -12,7 +12,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
     public class MainDataHandler : IMainDataHandler
     {
         private readonly string FILENAME = "settings.xml";
-        private readonly string MAPPINGS = "MAPPINGS";
+        private readonly string CONFIG = "CONFIG";
+        private readonly string GROUP = "GROUP";
         private readonly string MAPPING = "MAPPING";
         private readonly string NAME = "NAME";
         private readonly string TYPE_ID = "TYPE_ID";
@@ -36,54 +37,67 @@ namespace AuthentiKitTrimCalibration.DataAccess
             // Open the XML Document
             XmlDocument settingsFile = new();
             settingsFile.Load(FILENAME);
-            XmlNode mappingsNode = settingsFile.SelectSingleNode(MAPPINGS);
 
-            // Loop through each mapping
+            // Parse values from XML
+            XmlNode config = settingsFile.SelectSingleNode(CONFIG);
             List<MappingDTO> mappings = new();
-            foreach (XmlNode mappingNode in mappingsNode.ChildNodes)
+            try
             {
-                // Parse values from XML
-                try
+                // Loop through each group
+                foreach (XmlNode groupNode in config.SelectNodes(GROUP))
                 {
-                    string name = mappingNode.SelectSingleNode(NAME).InnerText;
-                    int typeId = int.Parse(mappingNode.SelectSingleNode(TYPE_ID).InnerText);
-                    bool active = bool.Parse(mappingNode.SelectSingleNode(ACTIVE).InnerText);
-                    int inputChannelAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_A_HASH).InnerText);
-                    int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
-                    int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
-                    int axisSensitivity = int.Parse(mappingNode.SelectSingleNode(AXIS_SENSITIVITY).InnerText);
-                    int encoderPPR = int.Parse(mappingNode.SelectSingleNode(ENCODER_PPR).InnerText);
-                    float revsInPerRevsOut = float.Parse(mappingNode.SelectSingleNode(REVS_IN_PER_REVS_OUT).InnerText);
-                    int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
-                    string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
-
-                    // Create Mapping from values and add to mappings list
-                    mappings.Add(new MappingDTO
+                    var groupName = groupNode.Attributes[NAME];
+                    if (groupName != null)
                     {
-                        Name = name,
-                        TypeId = typeId,
-                        Active = active,
-                        InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
-                        InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
-                        OutputChannel = GetOutputChannel(outputChannelHash, outputAxes, outputButtons),
-                        AxisSensitivity = axisSensitivity,
-                        EncoderPPR = encoderPPR,
-                        RevsInPerRevsOut = revsInPerRevsOut,
-                        ButtonMultiplier = buttonMultiplier,
-                        ResetCommand = resetCommand
-                    });
+                        Debug.WriteLine("Reading Group: " + groupName.Value);
+                    }
+
+                    // Loop through each mapping
+                    foreach (XmlNode mappingNode in groupNode.SelectNodes(MAPPING))
+                    {
+                        // Parse values from XML
+                        string name = mappingNode.SelectSingleNode(NAME).InnerText;
+                        int typeId = int.Parse(mappingNode.SelectSingleNode(TYPE_ID).InnerText);
+                        bool active = bool.Parse(mappingNode.SelectSingleNode(ACTIVE).InnerText);
+                        int inputChannelAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_A_HASH).InnerText);
+                        int inputChannelBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_CHANNEL_B_HASH).InnerText);
+                        int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
+                        int axisSensitivity = int.Parse(mappingNode.SelectSingleNode(AXIS_SENSITIVITY).InnerText);
+                        int encoderPPR = int.Parse(mappingNode.SelectSingleNode(ENCODER_PPR).InnerText);
+                        float revsInPerRevsOut = float.Parse(mappingNode.SelectSingleNode(REVS_IN_PER_REVS_OUT).InnerText);
+                        int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
+                        string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
+
+                        // Create Mapping from values and add to mappings list
+                        mappings.Add(new MappingDTO
+                        {
+                            Name = name,
+                            TypeId = typeId,
+                            Active = active,
+                            InputChannelA = GetInputChannel(inputChannelAHash, inputChannelsA),
+                            InputChannelB = GetInputChannel(inputChannelBHash, inputChannelsB),
+                            OutputChannel = GetOutputChannel(outputChannelHash, outputAxes, outputButtons),
+                            AxisSensitivity = axisSensitivity,
+                            EncoderPPR = encoderPPR,
+                            RevsInPerRevsOut = revsInPerRevsOut,
+                            ButtonMultiplier = buttonMultiplier,
+                            ResetCommand = resetCommand
+                        });
+                    }
                 }
-                catch
-                {
-                    throw new Exception("Error finding or reading settings.xml");
-                }
+            }
+            catch
+            {
+                throw new Exception("Error finding or reading settings.xml");
             }
             return mappings;
         }
+
         public void SaveMappings(IEnumerable<MappingDTO> mappings)
         {
             XmlDocument doc = new();
-            XmlElement mappingsNode = doc.CreateElement(MAPPINGS);
+            XmlElement configNode = doc.CreateElement(CONFIG);
+            XmlElement groupNode = doc.CreateElement(GROUP);
 
             foreach (var mapping in mappings)
             {
@@ -143,10 +157,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
                 resetCommandNode.InnerText = mapping.ResetCommand;
                 mappingNode.AppendChild(resetCommandNode);
-                mappingsNode.AppendChild(mappingNode);
+
+                // Add to group
+                groupNode.AppendChild(mappingNode);
             }
 
-            doc.AppendChild(mappingsNode);
+            configNode.AppendChild(groupNode);
+            doc.AppendChild(configNode);
             doc.Save(FILENAME);
         }
         private static InputChannel GetInputChannel(int hash, ObservableCollection<InputChannel> inputChannels)
@@ -237,17 +254,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     ButtonMultiplier = 7
                 });
 
-               /* // Experimental Encoder based Elevator Trim
-                mappings.Add(new MappingDTO
-                {
-                    Name = "EXPERIMENTAL: Elevator Trim (Axis)",
-                    TypeId = MappingType.ENCODER_AXIS,
-                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
-                    InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
-                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
-                    EncoderPPR = 24,
-                    RevsInPerRevsOut = 4
-                });*/
+                /* // Experimental Encoder based Elevator Trim
+                 mappings.Add(new MappingDTO
+                 {
+                     Name = "EXPERIMENTAL: Elevator Trim (Axis)",
+                     TypeId = MappingType.ENCODER_AXIS,
+                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
+                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
+                     OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
+                     EncoderPPR = 24,
+                     RevsInPerRevsOut = 4
+                 });*/
             }
             return mappings;
         }
