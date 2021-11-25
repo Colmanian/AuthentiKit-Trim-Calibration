@@ -122,5 +122,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             return _mainDataHandler.GetSaveFilePath();
         }
+
+        public void SetRunOnStartup(bool runOnStartup)
+        {
+            _mainDataHandler.SetRunOnStartup(runOnStartup);
+        }
     }
 }

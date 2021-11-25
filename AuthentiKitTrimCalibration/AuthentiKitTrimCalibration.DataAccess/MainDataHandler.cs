@@ -27,8 +27,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
         private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
-        private readonly string REGISTRY_LOCATION = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
+        private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
+        private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
+        private readonly string REGISTRY_STARTUP_APP_NAME = "AuthentiKit";
 
         private string SaveFilePath;
 
@@ -109,7 +111,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath)
         {
-            SetSaveFilePath(filePath);         
+            SetSaveFilePath(filePath);
             SaveMappings(mappings);
         }
         public void SaveMappings(IEnumerable<MappingDTO> mappings)
@@ -296,14 +298,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public void SetSaveFilePath(string filePath)
         {
             SaveFilePath = filePath;
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(@REGISTRY_LOCATION);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
             key.SetValue(REGISTRY_SAVE_FILE_PATH, SaveFilePath);
             key.Close();
         }
         private string LoadFilePathFromRegistry()
         {
             SaveFilePath = "";
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_LOCATION);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
 
             //if it does exist, retrieve the stored values  
             string filePath = "";
@@ -317,6 +319,21 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 SaveFilePath = filePath;
             }
             return SaveFilePath;
+        }
+
+        public void SetRunOnStartup(bool runOnStartup)
+        {
+            RegistryKey startUpKey = Registry.CurrentUser.OpenSubKey(REGISTRY_STARTUP_SETTINGS, true);
+            bool valueSet = !(startUpKey.GetValue(REGISTRY_STARTUP_APP_NAME) == null);
+            if (runOnStartup && !valueSet)
+            {
+                string path = Process.GetCurrentProcess().MainModule.FileName;
+                startUpKey.SetValue(REGISTRY_STARTUP_APP_NAME, path);
+            }
+            else if (!runOnStartup && valueSet)
+            {
+                startUpKey.DeleteValue(REGISTRY_STARTUP_APP_NAME, false);
+            }
         }
     }
 }

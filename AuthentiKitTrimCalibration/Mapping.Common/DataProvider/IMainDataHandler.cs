@@ -13,5 +13,6 @@ namespace MappingManager.Common.DataProvider
         IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons);
         string GetSaveFilePath();
         void SetSaveFilePath(string fileName);
+        void SetRunOnStartup(bool runOnStartup);
     }
 }

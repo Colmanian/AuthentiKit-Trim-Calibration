@@ -237,6 +237,28 @@ namespace ATC_Windows_Forms_App
                 _viewModel.Stop();
             }
         }
+        private void settingsMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Would you like to run this application on Windows Start Up?", "Start Up Options", MessageBoxButtons.YesNo);
+                bool runOnStartup = false;
+                if (dialogResult == DialogResult.Yes)
+                {
+                    runOnStartup = true;
+                }
+                _viewModel.SetRunOnStartup(runOnStartup);
+                MessageBox.Show("Run on Windows Startup set to " + runOnStartup, "Setting Updated",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error changing settings",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _viewModel.Stop();
+            }
+        }
 
         private void helpMenuItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

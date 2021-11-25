@@ -42,6 +42,8 @@ namespace ATC_Windows_Forms_App
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startupMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +81,7 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
+            this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -111,6 +114,7 @@ namespace ATC_Windows_Forms_App
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenuItem,
             this.presetsMenuItem,
+            this.settingsMenuItem,
             this.helpMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -136,16 +140,16 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveMenuItem.Name = "saveMenuItem";
             this.saveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.saveMenuItem.Size = new System.Drawing.Size(171, 22);
             this.saveMenuItem.Text = "&Save";
             // 
             // saveAsMenuItem
             // 
-            this.saveAsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveMenuItem.Image")));
+            this.saveAsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveAsMenuItem.Image")));
             this.saveAsMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveAsMenuItem.Name = "saveAsMenuItem";
             this.saveAsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F12)));
-            this.saveAsMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.saveAsMenuItem.Size = new System.Drawing.Size(171, 22);
             this.saveAsMenuItem.Text = "&Save As";
             // 
             // loadMenuItem
@@ -154,7 +158,7 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.loadMenuItem.Name = "loadMenuItem";
             this.loadMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loadMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.loadMenuItem.Size = new System.Drawing.Size(171, 22);
             this.loadMenuItem.Text = "&Load";
             // 
             // presetsMenuItem
@@ -274,6 +278,25 @@ namespace ATC_Windows_Forms_App
             this.btnAddMapping.Text = "Add Mapping";
             this.btnAddMapping.UseVisualStyleBackColor = true;
             this.btnAddMapping.Click += new System.EventHandler(this.btnAddMapping_Click);
+
+
+            // 
+            // settingsMenuItem
+            // 
+            this.settingsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startupMenuItem});
+            this.settingsMenuItem.Name = "settingsMenuItem";
+            this.settingsMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsMenuItem.Text = "&Settings";
+            this.settingsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.settingsMenuItemClicked);
+
+            // 
+            // startupMenuItem
+            // 
+            this.startupMenuItem.Name = "startupMenuItem";
+            this.startupMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.startupMenuItem.Text = "&Run on Windows Start?";
+
             // 
             // newToolStripMenuItem
             // 
@@ -529,6 +552,8 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.Label lblName;
         private Controls.EncoderAxisControl encoderAxisControl;
+        private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startupMenuItem;
     }
 }
 
