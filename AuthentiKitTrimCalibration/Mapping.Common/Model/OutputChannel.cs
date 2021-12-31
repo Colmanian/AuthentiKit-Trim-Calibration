@@ -49,11 +49,11 @@ namespace MappingManager.Common.Model
             string s;
             if (VJoyItem <= (int)AxisId.Z)
             {
-                s = (AxisId)VJoyItem + " Axis   (R-Axis " + (AxisId)VJoyItem + " in MSFS)";
+                s = (AxisId)VJoyItem + " Axis   (L-Axis " + (AxisId)VJoyItem + " in MSFS)";
             }
             else if (VJoyItem <= (int)AxisId.RZ)
             {
-                s = (AxisId)VJoyItem + " Rotation   (L-Axis " + (AxisId)VJoyItem + " in MSFS)";
+                s = (AxisId)VJoyItem + " Rotation   (R-Axis " + (AxisId)VJoyItem + " in MSFS)";
             }
             else
             {

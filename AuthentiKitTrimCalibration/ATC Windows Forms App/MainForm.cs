@@ -10,7 +10,7 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "experimental";
+        private readonly string VERSION = "v1.0.0";
 
         public MainForm()
         {
@@ -290,7 +290,7 @@ namespace ATC_Windows_Forms_App
                         "Authored by Ian Colman and licensed under CC BY NC ND 4.0.\n\n" +
                         "You cand find more details at the readme pages. Would you like to go there now?",
                         VERSION);
-                    string title = "Raise a bug";
+                    string title = "About";
                     MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.OK)

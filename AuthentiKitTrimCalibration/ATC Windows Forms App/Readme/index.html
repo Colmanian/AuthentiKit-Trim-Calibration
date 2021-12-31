@@ -11,10 +11,9 @@
 <link rel="stylesheet" href="Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 3.30.2, nicepage.com">
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    
     
     
     
@@ -35,7 +34,7 @@
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </symbol>
 </defs></svg>
@@ -44,6 +43,7 @@
           <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Mapping-Types.html" style="padding: 10px 20px;">Mapping Types</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Troubleshooting.html" style="padding: 10px 20px;">Troubleshooting</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="License.html" style="padding: 10px 20px;">License</a>
 </li></ul>
           </div>
@@ -53,6 +53,7 @@
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Mapping-Types.html" style="padding: 10px 20px;">Mapping Types</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Troubleshooting.html" style="padding: 10px 20px;">Troubleshooting</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="License.html" style="padding: 10px 20px;">License</a>
 </li></ul>
               </div>
@@ -65,7 +66,7 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-image u-image-circle u-image-1" alt="" data-image-width="1392" data-image-height="1392"></div>
         <h2 class="u-text u-text-default u-text-1">AuthentiKit Tuning App</h2>
-        <p class="u-align-center u-text u-text-2">Experimental Release</p>
+        <p class="u-align-center u-text u-text-2">v1.0.0</p>
         <p class="u-align-left u-text u-text-3">This software maps joystick buttons<i>&nbsp;</i>and encoders to virtual outputs that can be tuned for an optimal in-sim experience. Outputs can be virtual axes, or vitual buttons. A typical use would be mapping your <a href="https://authentikit.org/" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">AuthentiKit</a>&nbsp;Sptifire Mk IX elevator trim wheel to a single virutal axis that you use in sim. What's more, you can tune the sensitivity of the axis to aproximate the correct turn rate of the trim wheel in sim.&nbsp;<br>
           <br>
         </p>
@@ -154,42 +155,6 @@
             <div class="u-layout-row" style="">
               <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
                 <div class="u-container-layout u-container-layout-1">
-                  <h2 class="u-align-center u-text u-text-default u-text-1"><b>3.</b>&nbsp; Configure vJoy<br>
-                  </h2>
-                  <ul class="u-align-left u-text u-text-default u-text-2">
-                    <li>Open the&nbsp;<b style="background-color: transparent; color: #111111; font-family: 'Open Sans',sans-serif; font-size: 1rem;">Configure vJoy&nbsp;</b>app, which you can find this from the windows start menu, and typing "vJoy".
-                    </li>
-                    <li>Ensure <b>Enable vJoy </b>is ticked
-                    </li>
-                    <li>On Tab 1, Ensure that Axes<b> X, Y and Z are checked</b> as a minimum, though ​Rx<b>, </b>Ry and Rz are also supported.
-                    </li>
-                    <li>On Tab 1, Ensure that at some buttons are available, e.g.&nbsp;<b>10.</b>
-                    </li>
-                    <li>Hit <b>Apply</b> if needed
-                    </li>
-                  </ul>
-                  <p class="u-align-left u-text u-text-custom-color-1 u-text-default u-text-3"><i>Note:&nbsp;The vJoy software sometimes takes a few seconds to respond to clicks. If this happens, it probably hasn't crashed, just give it a minute.</i>
-                  </p>
-                </div>
-              </div>
-              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="391" data-image-height="550">
-                <div class="u-container-layout u-container-layout-2" src=""></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-grey-5 u-section-5" id="carousel_5737">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout" style="">
-            <div class="u-layout-row" style="">
-              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="651" data-image-height="573">
-                <div class="u-container-layout u-container-layout-1" src=""></div>
-              </div>
-              <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
-                <div class="u-container-layout u-valign-bottom u-container-layout-2">
                   <h2 class="u-align-center u-text u-text-default u-text-1"><b>4.&nbsp;</b>&nbsp;Configure Tuning App<br>
                   </h2>
                   <p class="u-align-left u-text u-text-2">Each virtual output is driven my a <b>Mapping</b>. There are differnt types of mapping as described <a href="Mapping-Types.html" data-page-id="781807975" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">here</a>.<br>
@@ -207,18 +172,24 @@
                   </p>
                 </div>
               </div>
+              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="651" data-image-height="573">
+                <div class="u-container-layout u-container-layout-2" src=""></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-grey-5 u-section-6" id="carousel_b2ae">
+    <section class="u-clearfix u-grey-5 u-section-5" id="carousel_5737">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout" style="">
             <div class="u-layout-row" style="">
-              <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1" src="">
-                <div class="u-container-layout u-valign-bottom u-container-layout-1">
+              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="1345" data-image-height="1134">
+                <div class="u-container-layout u-container-layout-1" src=""></div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2" src="">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
                   <h2 class="u-align-center u-text u-text-1"><b>5.</b>&nbsp; Configure Simulator<br>
                   </h2>
                   <p class="u-align-left u-text u-text-2">The Virtual Output Axes/Buttons should be assigned to the relevant actions in your sim of choice. For example, for the FlyingIron Spitfire Mk. IX preset, you should map<i></i>vJoy <b style="">Joystick R-Axis X</b><i>&nbsp;</i>to the<i> Elevator Trim axis</i> in MSFS. You'll have to select it from the dropdown, rather than by moving the trim wheel.<br>
@@ -227,9 +198,6 @@
                   <p class="u-align-left u-text u-text-custom-color-1 u-text-3"><i>Note: For sims that allow multiple inputs bound to the same sim actions (e.g. MSFS), be sure to unasign the input buttons from the sim, and only use the virtual axis that's being driven by the Tuning App.&nbsp;</i>
                   </p>
                 </div>
-              </div>
-              <div class="u-align-center u-container-style u-image u-image-contain u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="1345" data-image-height="1134">
-                <div class="u-container-layout u-container-layout-2" src=""></div>
               </div>
             </div>
           </div>
