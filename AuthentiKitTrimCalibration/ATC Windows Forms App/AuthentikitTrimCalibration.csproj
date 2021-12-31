@@ -53,6 +53,9 @@
     <None Update="Readme\Home.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Readme\images\604522.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Readme\images\AuthentikitRoundal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
