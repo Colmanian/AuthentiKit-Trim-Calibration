@@ -80,6 +80,7 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // tbAxisSensitivity
             // 
+            this.tbAxisSensitivity.Enabled = false;
             this.tbAxisSensitivity.Location = new System.Drawing.Point(330, 204);
             this.tbAxisSensitivity.Maximum = new decimal(new int[] {
             1000,
@@ -87,6 +88,7 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0});
             this.tbAxisSensitivity.Name = "tbAxisSensitivity";
+            this.tbAxisSensitivity.ReadOnly = true;
             this.tbAxisSensitivity.Size = new System.Drawing.Size(49, 23);
             this.tbAxisSensitivity.TabIndex = 14;
             this.tbAxisSensitivity.Value = new decimal(new int[] {
@@ -94,9 +96,6 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0,
             0});
-            this.tbAxisSensitivity.ValueChanged += new System.EventHandler(this.RefreshSensitivityBindings);
-            this.tbAxisSensitivity.Click += new System.EventHandler(this.RefreshSensitivityBindings);
-            this.tbAxisSensitivity.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RefreshSensitivityBindings);
             // 
             // label3
             // 

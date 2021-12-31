@@ -252,7 +252,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
                     OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
-                    AxisSensitivity = 347,
+                    AxisSensitivity = 150,
                 });
 
                 // Rudder Trim Button Left
@@ -262,7 +262,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 9),
                     OutputChannel = getOutputChannel(outputButtons, 1),
-                    ButtonMultiplier = 7
+                    ButtonMultiplier = 5,
+                    HoldThresholdStart = 150,
+                    HoldThresholdStop = 150,
                 });
 
                 // Rudder Trim Button Right
@@ -272,7 +274,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.BUTTON,
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 8),
                     OutputChannel = getOutputChannel(outputButtons, 2),
-                    ButtonMultiplier = 7
+                    ButtonMultiplier = 5,
+                    HoldThresholdStart = 150,
+                    HoldThresholdStop = 150,
                 });
 
                 /* // Experimental Encoder based Elevator Trim

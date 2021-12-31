@@ -98,5 +98,10 @@ namespace ATC_Windows_Forms_App.Controls
                 tbAxisSensitivity.Select(Right, 0);
             }
         }
+
+        private void RefreshSensitivityBindings(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
