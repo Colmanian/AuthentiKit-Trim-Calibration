@@ -11,7 +11,7 @@ using static MappingManager.Common.Model.OutputAxis;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    public class MainDataHandler : IMainDataHandler
+    public class DataHandler : IMainDataHandler
     {
         private readonly string CONFIG = "CONFIG";
         private readonly string GROUP = "GROUP";
@@ -34,7 +34,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         private string SaveFilePath;
 
-        public MainDataHandler()
+        public DataHandler()
         {
             // Get Save filepath from registry if there
             SaveFilePath = LoadFilePathFromRegistry();

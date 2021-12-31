@@ -25,7 +25,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
 
         public MainViewModel()
         {
-            _mainDataHandler = new MainDataHandler();
+            _mainDataHandler = new DataHandler();
             CanAddMapping = true;
         }
         public void Start()
@@ -93,15 +93,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             _mainDataHandler.SaveMappings(mappings);
         }
-        public void SaveMappings(string fileName)
+        public void SaveMappings(string filePath)
         {
-            Debug.WriteLine("Saving to " + fileName);
+            Debug.WriteLine("Saving to " + filePath);
             ObservableCollection<MappingDTO> mappings = new();
             foreach (var m in Mappings)
             {
                 mappings.Add(m.getMappingDTO());
             }
-            _mainDataHandler.SaveMappings(mappings, fileName);
+            _mainDataHandler.SaveMappings(mappings, filePath);
         }
 
         public void Reset(Aircraft aircraft)

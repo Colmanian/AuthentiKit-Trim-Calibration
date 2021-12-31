@@ -162,6 +162,8 @@ namespace ATC_Windows_Forms_App
                     saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
                     saveFileDialog.FilterIndex = 0;
                     saveFileDialog.DefaultExt = "xml";
+                    saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                    saveFileDialog.RestoreDirectory = true;
 
                     if (saveFileDialog.ShowDialog() == DialogResult.OK)
                     {
@@ -200,6 +202,8 @@ namespace ATC_Windows_Forms_App
                     openFileDialog.Filter = "XML Files (*.xml)|*.xml";
                     openFileDialog.FilterIndex = 0;
                     openFileDialog.DefaultExt = "xml";
+                    openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                    openFileDialog.RestoreDirectory = true;
 
                     if (openFileDialog.ShowDialog() == DialogResult.OK)
                     {
