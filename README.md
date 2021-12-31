@@ -19,7 +19,7 @@ For now, features will be completely fluid and the latest release tagged as 'Exp
 # Development & Build
 This application is written in .NET CORE's WinForms framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
 
-To develop and build, open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
+To develop and build, install `.NET 5.0.403 SDK` or later (untested with later versions) and open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
 # Credits
 * vJoy - https://sourceforge.net/projects/vjoystick/
