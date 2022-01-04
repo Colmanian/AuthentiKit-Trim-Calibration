@@ -151,13 +151,11 @@
 }
 
 .u-section-2 .u-text-2 {
-  margin: 19px 0 0;
+  margin: 15px 0 0;
 }
 
 .u-section-2 .u-text-3 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin: 24px 0 0;
 }
 
 @media (max-width: 1199px) {

@@ -10,7 +10,8 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "v1.0.0";
+        private readonly string VERSION = "v1.0.1";
+        private readonly string DOCS_URL = "https://authentikit.org/tuning";
 
         public MainForm()
         {
@@ -270,7 +271,7 @@ namespace ATC_Windows_Forms_App
             {
                 if (e.ClickedItem.Name.Equals("userGuideMenuItem"))
                 {
-                    ProcessStartInfo sInfo = new(@"Readme\index.html")
+                    ProcessStartInfo sInfo = new(DOCS_URL)
                     {
                         UseShellExecute = true
                     };
@@ -278,7 +279,7 @@ namespace ATC_Windows_Forms_App
                 }
                 else if (e.ClickedItem.Name.Equals("bugReportMenuItem"))
                 {
-                    ProcessStartInfo sInfo = new(@"Readme\index.html")
+                    ProcessStartInfo sInfo = new(DOCS_URL)
                     {
                         UseShellExecute = true
                     };
@@ -295,7 +296,7 @@ namespace ATC_Windows_Forms_App
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.OK)
                     {
-                        ProcessStartInfo sInfo = new(@"Readme\index.html")
+                        ProcessStartInfo sInfo = new(DOCS_URL)
                         {
                             UseShellExecute = true
                         };
