@@ -10,7 +10,7 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "v1.0.1";
+        private readonly string VERSION = "v1.0.2";
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
 
         public MainForm()

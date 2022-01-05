@@ -252,7 +252,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 10),
                     InputChannelB = getAuthentiKitInputChannel(inputChannelsB, 11),
                     OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
-                    AxisSensitivity = 150,
+                    AxisSensitivity = 90,
                 });
 
                 // Rudder Trim Button Left
