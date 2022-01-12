@@ -10,8 +10,9 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "v1.0.2";
+        private readonly string VERSION = "v1.1.0";
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
+        private readonly string DEVELOPER_URL = "https://collotech.net";
 
         public MainForm()
         {
@@ -289,14 +290,14 @@ namespace ATC_Windows_Forms_App
                 {
                     string message = String.Format("AuthentiKit Tuning App ({0})\n\n" +
                         "Authored by Ian Colman and licensed under CC BY NC ND 4.0.\n\n" +
-                        "You cand find more details at the readme pages. Would you like to go there now?",
+                        "You can find more details at the developer's home page. Would you like to go there now?",
                         VERSION);
                     string title = "About";
                     MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.OK)
                     {
-                        ProcessStartInfo sInfo = new(DOCS_URL)
+                        ProcessStartInfo sInfo = new(DEVELOPER_URL)
                         {
                             UseShellExecute = true
                         };
