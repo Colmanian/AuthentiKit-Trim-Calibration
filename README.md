@@ -1,5 +1,5 @@
 # AuthentiKit Trim Calibration
-![Version Experimtal](https://img.shields.io/badge/Version-1.2.0-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-1.1.0-blue)
 
 Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
