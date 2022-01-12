@@ -279,6 +279,30 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     HoldThresholdStop = 150,
                 });
 
+                // Flaps Up
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Up",
+                    TypeId = MappingType.BUTTON,
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 6),
+                    OutputChannel = getOutputChannel(outputButtons, 3),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
+                // Flaps Down
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Down",
+                    TypeId = MappingType.BUTTON,
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 7),
+                    OutputChannel = getOutputChannel(outputButtons, 4),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
                 /* // Experimental Encoder based Elevator Trim
                  mappings.Add(new MappingDTO
                  {

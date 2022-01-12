@@ -65,8 +65,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
                     if (!_holdingOn)
                     {
+                        // Start Holding
+                        if (_holdThresholdStart == 0)
+                        {
+                            Debug.WriteLine("*********** HOLD ON *********** ({0}ms)", timeSinceLast);
+                            _holdingOn = true;
+                            SetOutput(true);
+                            _pulsesLeft = 0;
+                        }
                         // Pulse
-                        if (timeSinceLast > _holdThresholdStart)
+                        else if (timeSinceLast > _holdThresholdStart)
                         {
                             Debug.WriteLine("*********** PULSE ***********", timeSinceLast);
                             _pulsesLeft = _multiplier;

@@ -69,11 +69,11 @@ namespace ATC_Windows_Forms_App.Controls
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(222, 195);
+            this.label4.Location = new System.Drawing.Point(211, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 15);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Hold Threshold Stop (ms)";
+            this.label4.Text = "Stop Holding After... (ms)";
             // 
             // tbHoldThresholdStop
             // 
@@ -92,11 +92,12 @@ namespace ATC_Windows_Forms_App.Controls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 195);
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(18, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 15);
+            this.label2.Size = new System.Drawing.Size(158, 15);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Hold Threshold Start (ms)";
+            this.label2.Text = "Hold Output On After... (ms)";
             // 
             // tbHoldThresholdStart
             // 
