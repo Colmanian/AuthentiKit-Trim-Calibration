@@ -3,7 +3,7 @@
 
 Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
-* [**Download Installer**]((https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases))
+* [**Download Installer**](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
 
 * [**User Guide**](https://authentikit.org/tuning)
 
