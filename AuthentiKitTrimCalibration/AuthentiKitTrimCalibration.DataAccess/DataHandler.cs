@@ -11,7 +11,7 @@ using static MappingManager.Common.Model.OutputAxis;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    public class DataHandler : IMainDataHandler
+    public class DataHandler : IDataHandler
     {
         private readonly string CONFIG = "CONFIG";
         private readonly string GROUP = "GROUP";

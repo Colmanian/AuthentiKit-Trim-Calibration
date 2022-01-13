@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace MappingManager.Common.DataProvider
 {
-    public interface IMainDataHandler
+    public interface IDataHandler
     {
         IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons);
         void SaveMappings(IEnumerable<MappingDTO> mappings);

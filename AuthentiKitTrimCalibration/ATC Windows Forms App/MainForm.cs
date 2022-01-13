@@ -10,7 +10,7 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "Development 12-Jan-22";
+        private readonly string VERSION = "Development 13-Jan-22";
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
         private readonly string DEVELOPER_URL = "https://collotech.net";
 

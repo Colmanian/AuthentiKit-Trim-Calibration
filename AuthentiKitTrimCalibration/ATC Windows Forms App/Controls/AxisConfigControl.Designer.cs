@@ -41,6 +41,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB = new System.Windows.Forms.ComboBox();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
+            this.DetectButton1 = new System.Windows.Forms.Button();
             this.pnlAxisConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tBarAxisSensitivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).BeginInit();
@@ -51,6 +52,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlAxisConfig.Controls.Add(this.DetectButton1);
             this.pnlAxisConfig.Controls.Add(this.tBarAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.tbAxisSensitivity);
             this.pnlAxisConfig.Controls.Add(this.label3);
@@ -144,7 +146,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(19, 90);
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(360, 23);
+            this.cbInputB.Size = new System.Drawing.Size(295, 23);
             this.cbInputB.TabIndex = 9;
             this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
@@ -156,7 +158,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(19, 33);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(360, 23);
+            this.cbInputA.Size = new System.Drawing.Size(295, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -168,6 +170,16 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier.Size = new System.Drawing.Size(60, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Sensitivity";
+            // 
+            // DetectButton1
+            // 
+            this.DetectButton1.Location = new System.Drawing.Point(321, 33);
+            this.DetectButton1.Name = "DetectButton1";
+            this.DetectButton1.Size = new System.Drawing.Size(75, 23);
+            this.DetectButton1.TabIndex = 16;
+            this.DetectButton1.Text = "Detect";
+            this.DetectButton1.UseVisualStyleBackColor = true;
+            this.DetectButton1.Click += new System.EventHandler(this.DetectButton1_Click);
             // 
             // AxisConfigControl
             // 
@@ -197,5 +209,6 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.ComboBox cbInputA;
         private System.Windows.Forms.Label lblMultiplier;
         private System.Windows.Forms.BindingSource mappingBindingSource;
+        private Button DetectButton1;
     }
 }

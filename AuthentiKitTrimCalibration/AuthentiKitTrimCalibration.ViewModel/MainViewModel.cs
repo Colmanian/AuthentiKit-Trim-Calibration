@@ -12,7 +12,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private readonly int MAX_MAPPINGS = 20;
-        private IMainDataHandler _mainDataHandler;
+        private IDataHandler _mainDataHandler;
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
