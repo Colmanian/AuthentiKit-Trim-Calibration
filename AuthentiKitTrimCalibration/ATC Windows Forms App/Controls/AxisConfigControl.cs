@@ -132,5 +132,30 @@ namespace ATC_Windows_Forms_App.Controls
             }
         }
 
+        private void DetectButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DetectButton2.Text = "Listening...";
+                cbInputB.Enabled = false;
+                pnlAxisConfig.Refresh();
+                if (MappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Deactivated)
+                {
+                    mappingViewModel.DetectInputB();
+                }
+                DetectButton2.Text = "Detect";
+                cbInputB.Enabled = true;
+                pnlAxisConfig.Refresh();
+            }
+            catch (Exception ex)
+            {
+                DetectButton2.Text = "Detect";
+                cbInputB.Enabled = true;
+                pnlAxisConfig.Refresh();
+                MessageBox.Show(ex.Message, "Error detecting input",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

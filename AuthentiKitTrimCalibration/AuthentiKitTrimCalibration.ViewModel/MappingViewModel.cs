@@ -59,6 +59,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
             RaisePropertyChanged(nameof(InputChannelAHash));
             UpdateStatus();
         }
+        public void DetectInputB()
+        {
+            Deactivate();
+            _mapping.InputChannelB = _inputDetector.Detect();
+            RaisePropertyChanged();
+            RaisePropertyChanged(nameof(InputChannelBHash));
+            UpdateStatus();
+        }
 
         public bool CanApply => !string.IsNullOrEmpty(Name) && Deactivated;
         public bool IsAxisMapping => TypeId == MappingType.AXIS;
