@@ -30,6 +30,7 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlEncoderAxisConfig = new System.Windows.Forms.Panel();
+            this.DetectButton1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbRevsInPerRevsOut = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB = new System.Windows.Forms.ComboBox();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
+            this.DetectButton2 = new System.Windows.Forms.Button();
             this.pnlEncoderAxisConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbEncoderPPR)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +53,8 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlEncoderAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncoderAxisConfig.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlEncoderAxisConfig.Controls.Add(this.DetectButton2);
+            this.pnlEncoderAxisConfig.Controls.Add(this.DetectButton1);
             this.pnlEncoderAxisConfig.Controls.Add(this.label6);
             this.pnlEncoderAxisConfig.Controls.Add(this.label5);
             this.pnlEncoderAxisConfig.Controls.Add(this.tbRevsInPerRevsOut);
@@ -67,6 +71,16 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlEncoderAxisConfig.Name = "pnlEncoderAxisConfig";
             this.pnlEncoderAxisConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlEncoderAxisConfig.TabIndex = 4;
+            // 
+            // DetectButton1
+            // 
+            this.DetectButton1.Location = new System.Drawing.Point(315, 29);
+            this.DetectButton1.Name = "DetectButton1";
+            this.DetectButton1.Size = new System.Drawing.Size(73, 23);
+            this.DetectButton1.TabIndex = 20;
+            this.DetectButton1.Text = "Detect";
+            this.DetectButton1.UseVisualStyleBackColor = true;
+            this.DetectButton1.Click += new System.EventHandler(this.DetectButton_Click);
             // 
             // label6
             // 
@@ -136,15 +150,15 @@ namespace ATC_Windows_Forms_App.Controls
             this.label3.TabIndex = 13;
             this.label3.Text = "Virtual Output Axis";
             // 
-            // cbOutput
+            // cbOutputAxis
             // 
             this.cbOutputAxis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputAxis.FormattingEnabled = true;
             this.cbOutputAxis.Location = new System.Drawing.Point(19, 141);
-            this.cbOutputAxis.Name = "cbOutput";
-            this.cbOutputAxis.Size = new System.Drawing.Size(360, 23);
+            this.cbOutputAxis.Name = "cbOutputAxis";
+            this.cbOutputAxis.Size = new System.Drawing.Size(369, 23);
             this.cbOutputAxis.TabIndex = 12;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
@@ -174,7 +188,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(19, 87);
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(360, 23);
+            this.cbInputB.Size = new System.Drawing.Size(290, 23);
             this.cbInputB.TabIndex = 9;
             this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
@@ -184,9 +198,9 @@ namespace ATC_Windows_Forms_App.Controls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInputA.FormattingEnabled = true;
-            this.cbInputA.Location = new System.Drawing.Point(19, 29);
+            this.cbInputA.Location = new System.Drawing.Point(18, 29);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(360, 23);
+            this.cbInputA.Size = new System.Drawing.Size(291, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -198,6 +212,16 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier.Size = new System.Drawing.Size(166, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Encoder Pulses per Revolution";
+            // 
+            // DetectButton2
+            // 
+            this.DetectButton2.Location = new System.Drawing.Point(315, 87);
+            this.DetectButton2.Name = "DetectButton2";
+            this.DetectButton2.Size = new System.Drawing.Size(73, 23);
+            this.DetectButton2.TabIndex = 21;
+            this.DetectButton2.Text = "Detect";
+            this.DetectButton2.UseVisualStyleBackColor = true;
+            this.DetectButton2.Click += new System.EventHandler(this.DetectButton2_Click);
             // 
             // EncoderAxisControl
             // 
@@ -228,5 +252,7 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbRevsInPerRevsOut;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button DetectButton1;
+        private System.Windows.Forms.Button DetectButton2;
     }
 }

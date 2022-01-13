@@ -32,6 +32,7 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlAxisConfig = new System.Windows.Forms.Panel();
+            this.DetectButton2 = new System.Windows.Forms.Button();
             this.DetectButton1 = new System.Windows.Forms.Button();
             this.tBarAxisSensitivity = new System.Windows.Forms.TrackBar();
             this.tbAxisSensitivity = new System.Windows.Forms.NumericUpDown();
@@ -42,7 +43,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB = new System.Windows.Forms.ComboBox();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
-            this.DetectButton2 = new System.Windows.Forms.Button();
             this.pnlAxisConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tBarAxisSensitivity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).BeginInit();
@@ -69,11 +69,21 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlAxisConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.TabIndex = 3;
             // 
+            // DetectButton2
+            // 
+            this.DetectButton2.Location = new System.Drawing.Point(321, 90);
+            this.DetectButton2.Name = "DetectButton2";
+            this.DetectButton2.Size = new System.Drawing.Size(70, 23);
+            this.DetectButton2.TabIndex = 17;
+            this.DetectButton2.Text = "Detect";
+            this.DetectButton2.UseVisualStyleBackColor = true;
+            this.DetectButton2.Click += new System.EventHandler(this.DetectButton2_Click);
+            // 
             // DetectButton1
             // 
             this.DetectButton1.Location = new System.Drawing.Point(321, 33);
             this.DetectButton1.Name = "DetectButton1";
-            this.DetectButton1.Size = new System.Drawing.Size(75, 23);
+            this.DetectButton1.Size = new System.Drawing.Size(70, 23);
             this.DetectButton1.TabIndex = 16;
             this.DetectButton1.Text = "Detect";
             this.DetectButton1.UseVisualStyleBackColor = true;
@@ -128,7 +138,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbOutputAxis.FormattingEnabled = true;
             this.cbOutputAxis.Location = new System.Drawing.Point(19, 144);
             this.cbOutputAxis.Name = "cbOutputAxis";
-            this.cbOutputAxis.Size = new System.Drawing.Size(360, 23);
+            this.cbOutputAxis.Size = new System.Drawing.Size(372, 23);
             this.cbOutputAxis.TabIndex = 12;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
@@ -182,16 +192,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier.Size = new System.Drawing.Size(60, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Sensitivity";
-            // 
-            // DetectButton2
-            // 
-            this.DetectButton2.Location = new System.Drawing.Point(321, 90);
-            this.DetectButton2.Name = "DetectButton2";
-            this.DetectButton2.Size = new System.Drawing.Size(75, 23);
-            this.DetectButton2.TabIndex = 17;
-            this.DetectButton2.Text = "Detect";
-            this.DetectButton2.UseVisualStyleBackColor = true;
-            this.DetectButton2.Click += new System.EventHandler(this.DetectButton2_Click);
             // 
             // AxisConfigControl
             // 
