@@ -110,7 +110,6 @@ namespace ATC_Windows_Forms_App
             {
                 // Mapping Name
                 tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
-                tbName.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
 
                 // Mapping Type
                 cbMappingType.DataSource = _viewModel.MappingTypes;
