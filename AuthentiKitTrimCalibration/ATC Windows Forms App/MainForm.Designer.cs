@@ -38,6 +38,8 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -83,8 +85,6 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -166,6 +166,19 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadMenuItem.Text = "&Load";
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            // 
+            // exitMenuItem
+            // 
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
+            // 
             // presetsMenuItem
             // 
             this.presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -224,24 +237,24 @@ namespace ATC_Windows_Forms_App
             // userGuideMenuItem
             // 
             this.userGuideMenuItem.Name = "userGuideMenuItem";
-            this.userGuideMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.userGuideMenuItem.Size = new System.Drawing.Size(180, 22);
             this.userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             this.bugReportMenuItem.Name = "bugReportMenuItem";
-            this.bugReportMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.bugReportMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bugReportMenuItem.Text = "&Report a Bug";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // pnlNavigation
@@ -486,19 +499,6 @@ namespace ATC_Windows_Forms_App
             this.encoderAxisControl.Name = "encoderAxisControl";
             this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
             this.encoderAxisControl.TabIndex = 24;
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
-            // 
-            // exitMenuItem
-            // 
-            this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitMenuItem.Text = "Exit";
-            this.exitMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MainForm
             // 
