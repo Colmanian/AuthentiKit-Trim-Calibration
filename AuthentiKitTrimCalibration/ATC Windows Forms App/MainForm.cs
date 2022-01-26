@@ -415,5 +415,11 @@ namespace ATC_Windows_Forms_App
             _viewModel.Stop();
             Application.Exit();
         }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+            Application.Exit();
+        }
     }
 }
