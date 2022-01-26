@@ -83,6 +83,8 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -129,7 +131,9 @@ namespace ATC_Windows_Forms_App
             this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveMenuItem,
             this.saveAsMenuItem,
-            this.loadMenuItem});
+            this.loadMenuItem,
+            this.toolStripSeparator6,
+            this.exitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileMenuItem.Text = "&File";
@@ -141,7 +145,7 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveMenuItem.Name = "saveMenuItem";
             this.saveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.saveMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveMenuItem.Text = "&Save";
             // 
             // saveAsMenuItem
@@ -150,7 +154,7 @@ namespace ATC_Windows_Forms_App
             this.saveAsMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveAsMenuItem.Name = "saveAsMenuItem";
             this.saveAsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F12)));
-            this.saveAsMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.saveAsMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsMenuItem.Text = "&Save As";
             // 
             // loadMenuItem
@@ -159,7 +163,7 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.loadMenuItem.Name = "loadMenuItem";
             this.loadMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loadMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.loadMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadMenuItem.Text = "&Load";
             // 
             // presetsMenuItem
@@ -483,6 +487,19 @@ namespace ATC_Windows_Forms_App
             this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
             this.encoderAxisControl.TabIndex = 24;
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            // 
+            // exitMenuItem
+            // 
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -575,6 +592,8 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem startupMenuItem;
         private System.Windows.Forms.Button btnStopAll;
         private System.Windows.Forms.Button btnStartAll;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
     }
 }
 
