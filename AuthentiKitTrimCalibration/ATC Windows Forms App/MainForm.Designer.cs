@@ -38,6 +38,8 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -83,11 +85,19 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
+            this.notifyIconTray = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStripTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemStartAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemStopAll = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
             this.pnlAddMapping.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).BeginInit();
+            this.contextMenuStripTray.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -129,7 +139,9 @@ namespace ATC_Windows_Forms_App
             this.fileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveMenuItem,
             this.saveAsMenuItem,
-            this.loadMenuItem});
+            this.loadMenuItem,
+            this.toolStripSeparator6,
+            this.exitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
             this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileMenuItem.Text = "&File";
@@ -162,10 +174,24 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.Size = new System.Drawing.Size(171, 22);
             this.loadMenuItem.Text = "&Load";
             // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(168, 6);
+            // 
+            // exitMenuItem
+            // 
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
+            // 
             // presetsMenuItem
             // 
             this.presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spitfireMkIXMenuItem,
+            this.honeycombBravoMenuItem,
             this.toolStripSeparator4,
             this.clearMenuItem});
             this.presetsMenuItem.Name = "presetsMenuItem";
@@ -483,6 +509,55 @@ namespace ATC_Windows_Forms_App
             this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
             this.encoderAxisControl.TabIndex = 24;
             // 
+            // notifyIconTray
+            // 
+            this.notifyIconTray.ContextMenuStrip = this.contextMenuStripTray;
+            this.notifyIconTray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconTray.Icon")));
+            this.notifyIconTray.Text = "AuthentiKit Tuning App";
+            this.notifyIconTray.Visible = true;
+            // 
+            // contextMenuStripTray
+            // 
+            this.contextMenuStripTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemStartAll,
+            this.toolStripMenuItemStopAll,
+            this.toolStripSeparator7,
+            this.toolStripMenuItemExit});
+            this.contextMenuStripTray.Name = "contextMenuStripTray";
+            this.contextMenuStripTray.Size = new System.Drawing.Size(116, 76);
+            // 
+            // toolStripMenuItemStartAll
+            // 
+            this.toolStripMenuItemStartAll.Name = "toolStripMenuItemStartAll";
+            this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemStartAll.Text = "Start All";
+            this.toolStripMenuItemStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
+            // 
+            // toolStripMenuItemStopAll
+            // 
+            this.toolStripMenuItemStopAll.Name = "toolStripMenuItemStopAll";
+            this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemStopAll.Text = "Stop All";
+            this.toolStripMenuItemStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(112, 6);
+            // 
+            // toolStripMenuItemExit
+            // 
+            this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemExit.Text = "Exit";
+            this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+            // 
+            // honeycombBravoMenuItem
+            // 
+            this.honeycombBravoMenuItem.Name = "honeycombBravoMenuItem";
+            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.honeycombBravoMenuItem.Text = "&Honeycomb Bravo (for MSFS)";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -515,6 +590,7 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.ResumeLayout(false);
             this.pnlAddMapping.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mappingBindingSource)).EndInit();
+            this.contextMenuStripTray.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,6 +651,15 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem startupMenuItem;
         private System.Windows.Forms.Button btnStopAll;
         private System.Windows.Forms.Button btnStartAll;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIconTray;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripTray;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemStartAll;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemStopAll;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem honeycombBravoMenuItem;
     }
 }
 

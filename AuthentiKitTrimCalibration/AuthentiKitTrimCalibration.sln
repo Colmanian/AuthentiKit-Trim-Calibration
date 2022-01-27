@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingManager.Common", "Mapping.Common\MappingManager.Common.csproj", "{F8334BA6-910B-4F6B-98E7-91CBB0FA644F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.MappingProcessor", "AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.MappingProcessor.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.Processor", "AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.Processor.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentikitTrimCalibration", "ATC Windows Forms App\AuthentikitTrimCalibration.csproj", "{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
 EndProject

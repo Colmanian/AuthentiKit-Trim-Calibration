@@ -11,7 +11,7 @@ using static MappingManager.Common.Model.OutputAxis;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    public class DataHandler : IMainDataHandler
+    public class DataHandler : IDataHandler
     {
         private readonly string CONFIG = "CONFIG";
         private readonly string GROUP = "GROUP";
@@ -239,10 +239,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     return channel;
             return new OutputAxis();
         }
-        public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
+        public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
+            
             ObservableCollection<MappingDTO> mappings = new();
-            if (aircraft == Aircraft.SPITFIRE_MKIX)
+            if (preset == Preset.SPITFIRE_MKIX)
             {
                 // Elevator Trim Axis
                 mappings.Add(new MappingDTO
@@ -279,6 +280,30 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     HoldThresholdStop = 150,
                 });
 
+                // Flaps Up
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Up",
+                    TypeId = MappingType.BUTTON,
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 6),
+                    OutputChannel = getOutputChannel(outputButtons, 3),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
+                // Flaps Down
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Down",
+                    TypeId = MappingType.BUTTON,
+                    InputChannelA = getAuthentiKitInputChannel(inputChannelsA, 7),
+                    OutputChannel = getOutputChannel(outputButtons, 4),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
                 /* // Experimental Encoder based Elevator Trim
                  mappings.Add(new MappingDTO
                  {
@@ -290,6 +315,18 @@ namespace AuthentiKitTrimCalibration.DataAccess
                      EncoderPPR = 24,
                      RevsInPerRevsOut = 4
                  });*/
+            }
+            else if (preset == Preset.HONEYCOMB_BRAVO)
+            {
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Elevator Axis",
+                    TypeId = MappingType.AXIS,
+                    InputChannelA = GetInputChannel(-102191463, inputChannelsA),
+                    InputChannelB = GetInputChannel(-102191464, inputChannelsB),
+                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
+                    AxisSensitivity = 360,
+                });
             }
             return mappings;
         }

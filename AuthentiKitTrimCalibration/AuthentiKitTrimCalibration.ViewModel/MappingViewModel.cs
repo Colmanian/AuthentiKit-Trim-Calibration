@@ -10,6 +10,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MappingViewModel : ViewModelBase
     {
         private readonly IMappingProcessor _mappingProcessor;
+        private readonly IInputDetector _inputDetector;
         private readonly MappingDTO _mapping;
         private readonly ObservableCollection<InputChannel> InputChannelsA;
         private readonly ObservableCollection<InputChannel> InputChannelsB;
@@ -23,6 +24,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             OutputAxes = outputAxes;
             OutputButtons = outputButtons;
             _mappingProcessor = new MappingProcessor();
+            _inputDetector = new InputDetector();
             _mapping = mapping;
             Deactivate();
         }
@@ -47,6 +49,22 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public void CentreAxis()
         {
             _mappingProcessor.Centre();
+            UpdateStatus();
+        }
+        public void DetectInputA()
+        {
+            Deactivate();
+            _mapping.InputChannelA = _inputDetector.Detect();
+            RaisePropertyChanged();
+            RaisePropertyChanged(nameof(InputChannelAHash));
+            UpdateStatus();
+        }
+        public void DetectInputB()
+        {
+            Deactivate();
+            _mapping.InputChannelB = _inputDetector.Detect();
+            RaisePropertyChanged();
+            RaisePropertyChanged(nameof(InputChannelBHash));
             UpdateStatus();
         }
 

@@ -2,6 +2,7 @@
 using MappingManager.Common.Model;
 using System;
 using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App
@@ -10,8 +11,9 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "v1.0.2";
+        private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
+        private readonly string DEVELOPER_URL = "https://collotech.net";
 
         public MainForm()
         {
@@ -109,7 +111,6 @@ namespace ATC_Windows_Forms_App
             {
                 // Mapping Name
                 tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
-                tbName.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
 
                 // Mapping Type
                 cbMappingType.DataSource = _viewModel.MappingTypes;
@@ -227,11 +228,15 @@ namespace ATC_Windows_Forms_App
             {
                 if (e.ClickedItem.Name.Equals("clearMenuItem"))
                 {
-                    _viewModel.Reset(Aircraft.NONE);
+                    _viewModel.Reset(Preset.NONE);
                 }
                 else if (e.ClickedItem.Name.Equals("spitfireMkIXMenuItem"))
                 {
-                    _viewModel.Reset(Aircraft.SPITFIRE_MKIX);
+                    _viewModel.Reset(Preset.SPITFIRE_MKIX);
+                }
+                else if (e.ClickedItem.Name.Equals("honeycombBravoMenuItem"))
+                {
+                    _viewModel.Reset(Preset.HONEYCOMB_BRAVO);
                 }
                 LoadFormData();
             }
@@ -289,14 +294,14 @@ namespace ATC_Windows_Forms_App
                 {
                     string message = String.Format("AuthentiKit Tuning App ({0})\n\n" +
                         "Authored by Ian Colman and licensed under CC BY NC ND 4.0.\n\n" +
-                        "You cand find more details at the readme pages. Would you like to go there now?",
+                        "You can find more details at the developer's home page. Would you like to go there now?",
                         VERSION);
                     string title = "About";
                     MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.OK)
                     {
-                        ProcessStartInfo sInfo = new(DOCS_URL)
+                        ProcessStartInfo sInfo = new(DEVELOPER_URL)
                         {
                             UseShellExecute = true
                         };
@@ -408,6 +413,18 @@ namespace ATC_Windows_Forms_App
         private void btnStopAll_Click(object sender, EventArgs e)
         {
             _viewModel.Stop();
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+            Application.Exit();
+        }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+            Application.Exit();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private readonly int MAX_MAPPINGS = 20;
-        private IMainDataHandler _mainDataHandler;
+        private IDataHandler _mainDataHandler;
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
@@ -104,12 +104,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mainDataHandler.SaveMappings(mappings, filePath);
         }
 
-        public void Reset(Aircraft aircraft)
+        public void Reset(Preset aircraft)
         {
             Debug.WriteLine(String.Format("{0}", aircraft));
             Stop();
             Mappings.Clear();
-            if (aircraft != Aircraft.NONE)
+            if (aircraft != Preset.NONE)
             {
                 var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
                 foreach (var mapping in mappings)

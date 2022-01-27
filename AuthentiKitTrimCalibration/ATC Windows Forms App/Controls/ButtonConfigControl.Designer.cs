@@ -40,6 +40,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.label1 = new System.Windows.Forms.Label();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
+            this.DetectButton = new System.Windows.Forms.Button();
             this.pnlButtonConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStart)).BeginInit();
@@ -51,6 +52,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlButtonConfig.Controls.Add(this.DetectButton);
             this.pnlButtonConfig.Controls.Add(this.label4);
             this.pnlButtonConfig.Controls.Add(this.tbHoldThresholdStop);
             this.pnlButtonConfig.Controls.Add(this.label2);
@@ -73,11 +75,11 @@ namespace ATC_Windows_Forms_App.Controls
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 15);
             this.label4.TabIndex = 18;
-            this.label4.Text = "Hold Threshold Stop (ms)";
+            this.label4.Text = "Stop Holding After... (ms)";
             // 
             // tbHoldThresholdStop
             // 
-            this.tbHoldThresholdStop.Location = new System.Drawing.Point(211, 213);
+            this.tbHoldThresholdStop.Location = new System.Drawing.Point(222, 213);
             this.tbHoldThresholdStop.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -92,11 +94,12 @@ namespace ATC_Windows_Forms_App.Controls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 195);
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(18, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 15);
+            this.label2.Size = new System.Drawing.Size(158, 15);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Hold Threshold Start (ms)";
+            this.label2.Text = "Hold Output On After... (ms)";
             // 
             // tbHoldThresholdStart
             // 
@@ -121,7 +124,7 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0});
             this.tbButtonMultiplier.Name = "tbButtonMultiplier";
-            this.tbButtonMultiplier.Size = new System.Drawing.Size(360, 23);
+            this.tbButtonMultiplier.Size = new System.Drawing.Size(371, 23);
             this.tbButtonMultiplier.TabIndex = 14;
             this.tbButtonMultiplier.Click += new System.EventHandler(this.tbButtonMultiplier_Click);
             this.tbButtonMultiplier.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbButtonMultiplier_KeyUp);
@@ -143,7 +146,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbOutputButton.FormattingEnabled = true;
             this.cbOutputButton.Location = new System.Drawing.Point(19, 91);
             this.cbOutputButton.Name = "cbOutputButton";
-            this.cbOutputButton.Size = new System.Drawing.Size(360, 23);
+            this.cbOutputButton.Size = new System.Drawing.Size(371, 23);
             this.cbOutputButton.TabIndex = 12;
             this.cbOutputButton.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
@@ -164,7 +167,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(19, 33);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(360, 23);
+            this.cbInputA.Size = new System.Drawing.Size(296, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -176,6 +179,16 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier.Size = new System.Drawing.Size(209, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Multipler (pulses out per button press)";
+            // 
+            // DetectButton
+            // 
+            this.DetectButton.Location = new System.Drawing.Point(322, 33);
+            this.DetectButton.Name = "DetectButton";
+            this.DetectButton.Size = new System.Drawing.Size(68, 23);
+            this.DetectButton.TabIndex = 19;
+            this.DetectButton.Text = "Detect";
+            this.DetectButton.UseVisualStyleBackColor = true;
+            this.DetectButton.Click += new System.EventHandler(this.DetectButton_Click);
             // 
             // ButtonConfigControl
             // 
@@ -206,5 +219,6 @@ namespace ATC_Windows_Forms_App.Controls
         private System.Windows.Forms.NumericUpDown tbHoldThresholdStart;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown tbHoldThresholdStop;
+        private System.Windows.Forms.Button DetectButton;
     }
 }

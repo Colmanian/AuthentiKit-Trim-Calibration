@@ -6,6 +6,7 @@ namespace ATC_Windows_Forms_App.Controls
 {
     public partial class ButtonConfigControl : UserControl
     {
+        private BindingSource MappingBindingSource;
         public ButtonConfigControl()
         {
             InitializeComponent();
@@ -13,29 +14,31 @@ namespace ATC_Windows_Forms_App.Controls
 
         public void LoadFormData(ref MainViewModel viewModel, ref BindingSource mappingBindingSource)
         {
+            MappingBindingSource = mappingBindingSource;
+
             // Input A
             cbInputA.DataSource = viewModel.InputChannelsA;
             cbInputA.DisplayMember = "Name";
             cbInputA.ValueMember = "Hash";
-            cbInputA.DataBindings.Add("SelectedValue", mappingBindingSource, "InputChannelAHash");
+            cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputChannelAHash");
 
             // Output
             cbOutputButton.DataSource = viewModel.OutputButtons;
             cbOutputButton.DisplayMember = "Name";
             cbOutputButton.ValueMember = "Hash";
-            cbOutputButton.DataBindings.Add("SelectedValue", mappingBindingSource, "OutputButtonHash");
+            cbOutputButton.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonHash");
 
             // Multiplier
-            tbButtonMultiplier.DataBindings.Add("Value", mappingBindingSource, "ButtonMultiplier");
+            tbButtonMultiplier.DataBindings.Add("Value", MappingBindingSource, "ButtonMultiplier");
 
             // tbHoldThresholdStart
-            tbHoldThresholdStart.DataBindings.Add("Value", mappingBindingSource, "HoldThresholdStart");
+            tbHoldThresholdStart.DataBindings.Add("Value", MappingBindingSource, "HoldThresholdStart");
 
             // tbHoldThresholdStop
-            tbHoldThresholdStop.DataBindings.Add("Value", mappingBindingSource, "HoldThresholdStop");
+            tbHoldThresholdStop.DataBindings.Add("Value", MappingBindingSource, "HoldThresholdStop");
 
             // Panel Activation
-            pnlButtonConfig.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
+            pnlButtonConfig.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
         }
 
         /*
@@ -127,6 +130,32 @@ namespace ATC_Windows_Forms_App.Controls
                 {
                     b.WriteValue();
                 }
+            }
+        }
+
+        private void DetectButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DetectButton.Text = "Listening...";
+                cbInputA.Enabled = false;
+                pnlButtonConfig.Refresh();
+                if (MappingBindingSource.Current is MappingViewModel mappingViewModel
+                    && mappingViewModel.Deactivated)
+                {
+                    mappingViewModel.DetectInputA();
+                }
+                DetectButton.Text = "Detect";
+                cbInputA.Enabled = true;
+                pnlButtonConfig.Refresh();
+            }
+            catch (Exception ex)
+            {
+                DetectButton.Text = "Detect";
+                cbInputA.Enabled = true;
+                pnlButtonConfig.Refresh();
+                MessageBox.Show(ex.Message, "Error detecting input",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
