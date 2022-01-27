@@ -2,6 +2,7 @@
 using MappingManager.Common.Model;
 using System;
 using System.Diagnostics;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App
@@ -10,7 +11,7 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = "Development 13-Jan-22";
+        private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
         private readonly string DEVELOPER_URL = "https://collotech.net";
 
@@ -408,6 +409,18 @@ namespace ATC_Windows_Forms_App
         private void btnStopAll_Click(object sender, EventArgs e)
         {
             _viewModel.Stop();
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+            Application.Exit();
+        }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            _viewModel.Stop();
+            Application.Exit();
         }
     }
 }
