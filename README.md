@@ -1,31 +1,19 @@
 # AuthentiKit Trim Calibration
-![Version Experimtal](https://img.shields.io/badge/Version-Exprimental-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-1.1.0-blue)
 
 Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
-**User Guide**
+* [**Download Installer**](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
 
-https://authentikit.org/tuning
+* [**User Guide**](https://authentikit.org/tuning)
+
+* [**About the Developer**](https://collotech.net)
 
 **Requements**
 * Windows 10/11
 * vJoy 2.2.1 or earlier for Windows 10 - [download here](https://github.com/njz3/vJoy/releases/tag/v2.2.1.1)
 * vJoy 2.1.9 for Windows 11 - [download here](https://github.com/jshafer817/vJoy/releases/tag/v2.1.9.1)
 
-
-**Installer Download**
-
-See our [releases page](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
-
-
-# Change Log
-
-See our [releases page](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
-
-# Development & Build
-This application is written in .NET CORE's WinForms framework as a Win32 Desktop app. This was choson over UWP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application. 
-
-To develop and build, install `.NET 5.0.403 SDK` or later (untested with later versions) and open up the soluiton found the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
 # Versioning Strategy
 
@@ -34,6 +22,14 @@ To develop and build, install `.NET 5.0.403 SDK` or later (untested with later v
 * `Major` is a significant update, like a redesigned user interface
 * `Minor` is an incremental update, like adding in a new mapping type, or a selection of new presets
 * `Hotfix` is a reactive change like a bug fix or tweak to existing functionality
+
+
+# Contributing
+It's best to reach out if you'd like to collaberate to maximise the chances of getting your changes into the released software. 
+
+This application is written in .NET 5.0. This was choson over .Net Core / UMP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application (as far as I can tell anyway).
+
+To develop and build, install `.NET 5.0.403 SDK` or later (untested with later versions) and open up the soluiton found in the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
 
 # Credits
 * vJoy - https://sourceforge.net/projects/vjoystick/

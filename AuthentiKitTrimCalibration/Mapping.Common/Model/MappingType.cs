@@ -6,7 +6,7 @@ namespace MappingManager.Common.Model
     public class MappingType
     {
         private const string AXIS_STRING = "Remap to Axis";
-        private const string BUTTON_STRING = "Button Multiplier";
+        private const string BUTTON_STRING = "Remap to Button";
         private const string ENCODER_AXIS_STRING = "Remap to Axis  (Advanced)";
         private const string ENCODER_BUTTON_STRING = "Button Multiplier  (Advanced)";
         private const string AXIS_AXIS_STRING = "Axis to Axis";
