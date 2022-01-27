@@ -529,12 +529,14 @@ namespace ATC_Windows_Forms_App
             this.toolStripMenuItemStartAll.Name = "toolStripMenuItemStartAll";
             this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemStartAll.Text = "Start All";
+            this.toolStripMenuItemStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
             // 
             // toolStripMenuItemStopAll
             // 
             this.toolStripMenuItemStopAll.Name = "toolStripMenuItemStopAll";
             this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemStopAll.Text = "Stop All";
+            this.toolStripMenuItemStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
             // 
             // toolStripSeparator7
             // 
