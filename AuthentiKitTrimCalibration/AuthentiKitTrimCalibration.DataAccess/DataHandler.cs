@@ -239,10 +239,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     return channel;
             return new OutputAxis();
         }
-        public IEnumerable<MappingDTO> GetDefaultMappings(Aircraft aircraft, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
+        public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset, ObservableCollection<InputChannel> inputChannelsA, ObservableCollection<InputChannel> inputChannelsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
+            
             ObservableCollection<MappingDTO> mappings = new();
-            if (aircraft == Aircraft.SPITFIRE_MKIX)
+            if (preset == Preset.SPITFIRE_MKIX)
             {
                 // Elevator Trim Axis
                 mappings.Add(new MappingDTO
@@ -314,6 +315,18 @@ namespace AuthentiKitTrimCalibration.DataAccess
                      EncoderPPR = 24,
                      RevsInPerRevsOut = 4
                  });*/
+            }
+            else if (preset == Preset.HONEYCOMB_BRAVO)
+            {
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Elevator Axis",
+                    TypeId = MappingType.AXIS,
+                    InputChannelA = GetInputChannel(-102191463, inputChannelsA),
+                    InputChannelB = GetInputChannel(-102191464, inputChannelsB),
+                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
+                    AxisSensitivity = 360,
+                });
             }
             return mappings;
         }

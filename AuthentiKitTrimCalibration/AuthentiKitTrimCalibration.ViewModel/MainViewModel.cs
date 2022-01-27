@@ -104,12 +104,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
             _mainDataHandler.SaveMappings(mappings, filePath);
         }
 
-        public void Reset(Aircraft aircraft)
+        public void Reset(Preset aircraft)
         {
             Debug.WriteLine(String.Format("{0}", aircraft));
             Stop();
             Mappings.Clear();
-            if (aircraft != Aircraft.NONE)
+            if (aircraft != Preset.NONE)
             {
                 var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
                 foreach (var mapping in mappings)

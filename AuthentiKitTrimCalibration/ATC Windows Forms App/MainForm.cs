@@ -228,11 +228,15 @@ namespace ATC_Windows_Forms_App
             {
                 if (e.ClickedItem.Name.Equals("clearMenuItem"))
                 {
-                    _viewModel.Reset(Aircraft.NONE);
+                    _viewModel.Reset(Preset.NONE);
                 }
                 else if (e.ClickedItem.Name.Equals("spitfireMkIXMenuItem"))
                 {
-                    _viewModel.Reset(Aircraft.SPITFIRE_MKIX);
+                    _viewModel.Reset(Preset.SPITFIRE_MKIX);
+                }
+                else if (e.ClickedItem.Name.Equals("honeycombBravoMenuItem"))
+                {
+                    _viewModel.Reset(Preset.HONEYCOMB_BRAVO);
                 }
                 LoadFormData();
             }

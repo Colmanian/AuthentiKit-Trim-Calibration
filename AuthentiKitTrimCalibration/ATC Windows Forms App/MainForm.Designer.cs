@@ -91,6 +91,7 @@ namespace ATC_Windows_Forms_App
             this.toolStripMenuItemStopAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -190,6 +191,7 @@ namespace ATC_Windows_Forms_App
             // 
             this.presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spitfireMkIXMenuItem,
+            this.honeycombBravoMenuItem,
             this.toolStripSeparator4,
             this.clearMenuItem});
             this.presetsMenuItem.Name = "presetsMenuItem";
@@ -522,33 +524,39 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator7,
             this.toolStripMenuItemExit});
             this.contextMenuStripTray.Name = "contextMenuStripTray";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(181, 98);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(116, 76);
             // 
             // toolStripMenuItemStartAll
             // 
             this.toolStripMenuItemStartAll.Name = "toolStripMenuItemStartAll";
-            this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(115, 22);
             this.toolStripMenuItemStartAll.Text = "Start All";
             this.toolStripMenuItemStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
             // 
             // toolStripMenuItemStopAll
             // 
             this.toolStripMenuItemStopAll.Name = "toolStripMenuItemStopAll";
-            this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(115, 22);
             this.toolStripMenuItemStopAll.Text = "Stop All";
             this.toolStripMenuItemStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(112, 6);
             // 
             // toolStripMenuItemExit
             // 
             this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(115, 22);
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
+            // 
+            // honeycombBravoMenuItem
+            // 
+            this.honeycombBravoMenuItem.Name = "honeycombBravoMenuItem";
+            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.honeycombBravoMenuItem.Text = "&Honeycomb Bravo (for MSFS)";
             // 
             // MainForm
             // 
@@ -651,6 +659,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemStopAll;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem honeycombBravoMenuItem;
     }
 }
 
