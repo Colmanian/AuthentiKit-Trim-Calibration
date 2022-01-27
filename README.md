@@ -7,13 +7,12 @@ Windows Desktop Application to calbirate button-based peripherals (e.g. Authenti
 
 * [**User Guide**](https://authentikit.org/tuning)
 
-* [**About the Developer**](https://collotech.net)
+* [**About the Initial Developer**](https://collotech.net)
 
 **Requements**
 * Windows 10/11
 * vJoy 2.2.1 or earlier for Windows 10 - [download here](https://github.com/njz3/vJoy/releases/tag/v2.2.1.1)
 * vJoy 2.1.9 for Windows 11 - [download here](https://github.com/jshafer817/vJoy/releases/tag/v2.1.9.1)
-
 
 # Versioning Strategy
 
@@ -37,7 +36,7 @@ To develop and build, install `.NET 5.0.403 SDK` or later (untested with later v
 
 # License
 
-This project was written by Ian Colman for the AuthentiKit Community. The AuthentiKit brand/identity is owned by Phil Hulme.
+This project was written by Ian Colman for the AuthentiKit Community, with contribution from others via GitHub. The AuthentiKit brand/identity is owned by Phil Hulme.
 
 This project is and is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license. Unde the terms of this license you are free to:
 
