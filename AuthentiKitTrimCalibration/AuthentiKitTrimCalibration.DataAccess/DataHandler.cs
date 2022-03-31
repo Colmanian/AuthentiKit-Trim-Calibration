@@ -339,7 +339,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
             string filePath = "";
             if (key != null)
             {
-                filePath = key.GetValue(REGISTRY_SAVE_FILE_PATH).ToString();
+                if (key.GetValue(REGISTRY_SAVE_FILE_PATH) != null)
+                {
+                    filePath = key.GetValue(REGISTRY_SAVE_FILE_PATH).ToString();
+                }
                 key.Close();
             }
             if (File.Exists(filePath))
