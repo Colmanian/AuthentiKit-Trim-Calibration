@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>ATC_Windows_Forms_App</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x86</Platforms>
@@ -47,6 +47,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Authentikit.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Readme\Home.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
