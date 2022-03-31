@@ -9,7 +9,7 @@
   <Identity
     Name="9c708f24-5f45-4b1d-acf8-0c7b41c5eb43"
     Publisher="CN=colma"
-    Version="0.2.0.0" />
+    Version="1.1.0.0" />
 
   <Properties>
     <DisplayName>AuthentiKitTrimCalibration (Package)</DisplayName>
