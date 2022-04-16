@@ -1,7 +1,7 @@
-# AuthentiKit Trim Calibration
-![Version Experimtal](https://img.shields.io/badge/Version-1.1.0-blue)
+# AuthentiKit Tuning App
+![Version Experimtal](https://img.shields.io/badge/Version-1.2.0-blue)
 
-Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels) for use in simulators (e.g Microsoft Flight Simulator 2020). 
+Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels, Honeycombe Bravo Trim Wheel) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
 * [**Download Installer**](https://github.com/Colmanian/AuthentiKit-Trim-Calibration/releases)
 
@@ -26,9 +26,9 @@ Windows Desktop Application to calbirate button-based peripherals (e.g. Authenti
 # Contributing
 It's best to reach out if you'd like to collaberate to maximise the chances of getting your changes into the released software. 
 
-This application is written in .NET 5.0. This was choson over .Net Core / UMP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application (as far as I can tell anyway).
+This application is written in .NET 6. This was choson over .Net Core / UMP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application (as far as I can tell anyway).
 
-To develop and build, install `.NET 5.0.403 SDK` or later (untested with later versions) and open up the soluiton found in the `/AuthentiKitTrimCalibration` directory in Visual Studio 2019. It's written using a pretty standard pattern so if you're familar with the WinUI framework in .NET Core you should be able to dev and build with relative ease.
+To develop and build, install `.NET 6 SDK` and open up the soluiton found in the `/AuthentiKitTrimCalibration` solution in Visual Studio 2022. It's written using a pretty standard pattern so if you're familar with the .NET you should be able to dev and build with relative ease. You'll need the [Installer Projects plugin](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects) for Visual Studio.
 
 # Credits
 * vJoy - https://sourceforge.net/projects/vjoystick/
