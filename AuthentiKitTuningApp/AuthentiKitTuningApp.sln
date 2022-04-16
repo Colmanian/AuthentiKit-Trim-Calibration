@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.ViewModel", "AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj", "{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTuningApp.ViewModel", "AuthentiKitTuningApp.ViewModel\AuthentiKitTuningApp.ViewModel.csproj", "{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MappingManager.Common", "Mapping.Common\MappingManager.Common.csproj", "{F8334BA6-910B-4F6B-98E7-91CBB0FA644F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTuningApp.Common", "AuthentiKitTuningApp.Common\AuthentiKitTuningApp.Common.csproj", "{F8334BA6-910B-4F6B-98E7-91CBB0FA644F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTrimCalibration.Processor", "AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.Processor.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTuningApp.Processor", "AuthentiKitTuningApp.Processor\AuthentiKitTuningApp.Processor.csproj", "{60A14763-F721-47AB-9242-5E4D08467E02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentikitTrimCalibration", "ATC Windows Forms App\AuthentikitTrimCalibration.csproj", "{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthentiKitTuningApp", "AuthentiKitTuningApp\AuthentiKitTuningApp.csproj", "{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AuthentiKitTrimCalibration.Installer", "AuthentiKitTrimCalibration.Installer\AuthentiKitTrimCalibration.Installer.vdproj", "{41B037C0-A4A7-4762-8FCB-F3B8FDEBB5BC}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AuthentiKitTuningApp.Installer", "AuthentiKitTuningApp.Installer\AuthentiKitTrimCalibration.Installer.vdproj", "{41B037C0-A4A7-4762-8FCB-F3B8FDEBB5BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +19,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Debug|x86.ActiveCfg = Debug|x86
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Debug|x86.Build.0 = Debug|x86
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Debug|x86.Deploy.0 = Debug|x86
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Release|x86.ActiveCfg = Release|x86
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Release|x86.Build.0 = Release|x86
-		{32155FF4-658D-4F49-ABE0-4BDCE3EDA773}.Release|x86.Deploy.0 = Release|x86
 		{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}.Debug|x86.Build.0 = Debug|Any CPU
 		{7917DDCB-23B8-480B-ACEF-E8AC6077CCBA}.Release|x86.ActiveCfg = Release|Any CPU

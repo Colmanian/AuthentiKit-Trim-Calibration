@@ -5,12 +5,12 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>ATC_Windows_Forms_App</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <Platforms>AnyCPU;x86</Platforms>
+    <Platforms>AnyCPU;x86;x64</Platforms>
     <ApplicationIcon>Authentikit.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <Version>1.1.0</Version>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -28,12 +28,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AuthentiKitTrimCalibration.DataAccess\AuthentiKitTrimCalibration.Processor.csproj" />
-    <ProjectReference Include="..\AuthentiKitTrimCalibration.ViewModel\AuthentiKitTrimCalibration.ViewModel.csproj" />
-    <ProjectReference Include="..\Mapping.Common\MappingManager.Common.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -58,6 +52,12 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthentiKitTuningApp.Common\AuthentiKitTuningApp.Common.csproj" />
+    <ProjectReference Include="..\AuthentiKitTuningApp.Processor\AuthentiKitTuningApp.Processor.csproj" />
+    <ProjectReference Include="..\AuthentiKitTuningApp.ViewModel\AuthentiKitTuningApp.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>

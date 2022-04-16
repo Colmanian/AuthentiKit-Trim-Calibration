@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,20 +19,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mapping.Common\MappingManager.Common.csproj" />
+    <ProjectReference Include="..\AuthentiKitTuningApp.Common\AuthentiKitTuningApp.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="vJoyInterfaceWrap">
       <HintPath>vJoyInterfaceWrap.dll</HintPath>
-      <Private>true</Private>
-      <CopyLocal>True</CopyLocal>
     </Reference>
-	  <Reference Include="vJoyInterface">
-		  <HintPath>vJoyInterface.dll</HintPath>
-		  <Private>true</Private>
-		  <CopyLocal>True</CopyLocal>
-	  </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +33,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="vJoyInterfaceWrap.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
