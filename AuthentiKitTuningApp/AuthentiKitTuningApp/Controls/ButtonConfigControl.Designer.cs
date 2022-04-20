@@ -30,6 +30,7 @@ namespace ATC_Windows_Forms_App.Controls
         private void InitializeComponent()
         {
             this.pnlButtonConfig = new System.Windows.Forms.Panel();
+            this.DetectButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbHoldThresholdStop = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.label1 = new System.Windows.Forms.Label();
             this.cbInputA = new System.Windows.Forms.ComboBox();
             this.lblMultiplier = new System.Windows.Forms.Label();
-            this.DetectButton = new System.Windows.Forms.Button();
             this.pnlButtonConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbHoldThresholdStart)).BeginInit();
@@ -49,8 +49,6 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // pnlButtonConfig
             // 
-            this.pnlButtonConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
             this.pnlButtonConfig.Controls.Add(this.DetectButton);
             this.pnlButtonConfig.Controls.Add(this.label4);
@@ -67,6 +65,16 @@ namespace ATC_Windows_Forms_App.Controls
             this.pnlButtonConfig.Name = "pnlButtonConfig";
             this.pnlButtonConfig.Size = new System.Drawing.Size(407, 256);
             this.pnlButtonConfig.TabIndex = 4;
+            // 
+            // DetectButton
+            // 
+            this.DetectButton.Location = new System.Drawing.Point(309, 33);
+            this.DetectButton.Name = "DetectButton";
+            this.DetectButton.Size = new System.Drawing.Size(68, 23);
+            this.DetectButton.TabIndex = 19;
+            this.DetectButton.Text = "Detect";
+            this.DetectButton.UseVisualStyleBackColor = true;
+            this.DetectButton.Click += new System.EventHandler(this.DetectButton_Click);
             // 
             // label4
             // 
@@ -86,7 +94,7 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0});
             this.tbHoldThresholdStop.Name = "tbHoldThresholdStop";
-            this.tbHoldThresholdStop.Size = new System.Drawing.Size(168, 23);
+            this.tbHoldThresholdStop.Size = new System.Drawing.Size(155, 23);
             this.tbHoldThresholdStop.TabIndex = 17;
             this.tbHoldThresholdStop.Click += new System.EventHandler(this.tbHoldThresholdStop_click);
             this.tbHoldThresholdStop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbHoldThresholdStop_keyUp);
@@ -110,7 +118,7 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0});
             this.tbHoldThresholdStart.Name = "tbHoldThresholdStart";
-            this.tbHoldThresholdStart.Size = new System.Drawing.Size(164, 23);
+            this.tbHoldThresholdStart.Size = new System.Drawing.Size(157, 23);
             this.tbHoldThresholdStart.TabIndex = 15;
             this.tbHoldThresholdStart.Click += new System.EventHandler(this.tbHoldThresholdStart_click);
             this.tbHoldThresholdStart.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbHoldThresholdStart_keyUp);
@@ -124,7 +132,7 @@ namespace ATC_Windows_Forms_App.Controls
             0,
             0});
             this.tbButtonMultiplier.Name = "tbButtonMultiplier";
-            this.tbButtonMultiplier.Size = new System.Drawing.Size(371, 23);
+            this.tbButtonMultiplier.Size = new System.Drawing.Size(358, 23);
             this.tbButtonMultiplier.TabIndex = 14;
             this.tbButtonMultiplier.Click += new System.EventHandler(this.tbButtonMultiplier_Click);
             this.tbButtonMultiplier.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbButtonMultiplier_KeyUp);
@@ -146,7 +154,7 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbOutputButton.FormattingEnabled = true;
             this.cbOutputButton.Location = new System.Drawing.Point(19, 91);
             this.cbOutputButton.Name = "cbOutputButton";
-            this.cbOutputButton.Size = new System.Drawing.Size(371, 23);
+            this.cbOutputButton.Size = new System.Drawing.Size(358, 23);
             this.cbOutputButton.TabIndex = 12;
             this.cbOutputButton.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
@@ -164,10 +172,11 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputA.DropDownWidth = 512;
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(19, 33);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(296, 23);
+            this.cbInputA.Size = new System.Drawing.Size(264, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -179,16 +188,6 @@ namespace ATC_Windows_Forms_App.Controls
             this.lblMultiplier.Size = new System.Drawing.Size(209, 15);
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Multipler (pulses out per button press)";
-            // 
-            // DetectButton
-            // 
-            this.DetectButton.Location = new System.Drawing.Point(322, 33);
-            this.DetectButton.Name = "DetectButton";
-            this.DetectButton.Size = new System.Drawing.Size(68, 23);
-            this.DetectButton.TabIndex = 19;
-            this.DetectButton.Text = "Detect";
-            this.DetectButton.UseVisualStyleBackColor = true;
-            this.DetectButton.Click += new System.EventHandler(this.DetectButton_Click);
             // 
             // ButtonConfigControl
             // 

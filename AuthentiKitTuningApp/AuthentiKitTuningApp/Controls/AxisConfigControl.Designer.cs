@@ -50,8 +50,7 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // pnlAxisConfig
             // 
-            this.pnlAxisConfig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAxisConfig.AutoSize = true;
             this.pnlAxisConfig.BackColor = System.Drawing.SystemColors.Control;
             this.pnlAxisConfig.Controls.Add(this.DetectButton2);
             this.pnlAxisConfig.Controls.Add(this.DetectButton1);
@@ -71,9 +70,10 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // DetectButton2
             // 
-            this.DetectButton2.Location = new System.Drawing.Point(321, 90);
+            this.DetectButton2.AutoSize = true;
+            this.DetectButton2.Location = new System.Drawing.Point(305, 87);
             this.DetectButton2.Name = "DetectButton2";
-            this.DetectButton2.Size = new System.Drawing.Size(70, 23);
+            this.DetectButton2.Size = new System.Drawing.Size(73, 25);
             this.DetectButton2.TabIndex = 17;
             this.DetectButton2.Text = "Detect";
             this.DetectButton2.UseVisualStyleBackColor = true;
@@ -81,9 +81,10 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // DetectButton1
             // 
-            this.DetectButton1.Location = new System.Drawing.Point(321, 33);
+            this.DetectButton1.AutoSize = true;
+            this.DetectButton1.Location = new System.Drawing.Point(305, 37);
             this.DetectButton1.Name = "DetectButton1";
-            this.DetectButton1.Size = new System.Drawing.Size(70, 23);
+            this.DetectButton1.Size = new System.Drawing.Size(73, 25);
             this.DetectButton1.TabIndex = 16;
             this.DetectButton1.Text = "Detect";
             this.DetectButton1.UseVisualStyleBackColor = true;
@@ -91,10 +92,10 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // tBarAxisSensitivity
             // 
-            this.tBarAxisSensitivity.Location = new System.Drawing.Point(19, 204);
+            this.tBarAxisSensitivity.Location = new System.Drawing.Point(20, 204);
             this.tBarAxisSensitivity.Maximum = 1000;
             this.tBarAxisSensitivity.Name = "tBarAxisSensitivity";
-            this.tBarAxisSensitivity.Size = new System.Drawing.Size(305, 45);
+            this.tBarAxisSensitivity.Size = new System.Drawing.Size(304, 45);
             this.tBarAxisSensitivity.TabIndex = 15;
             this.tBarAxisSensitivity.TickFrequency = 50;
             this.tBarAxisSensitivity.Value = 1;
@@ -104,6 +105,7 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // tbAxisSensitivity
             // 
+            this.tbAxisSensitivity.AutoSize = true;
             this.tbAxisSensitivity.Enabled = false;
             this.tbAxisSensitivity.Location = new System.Drawing.Point(330, 204);
             this.tbAxisSensitivity.Maximum = new decimal(new int[] {
@@ -123,8 +125,9 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // label3
             // 
+            this.label3.AutoEllipsis = true;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 126);
+            this.label3.Location = new System.Drawing.Point(20, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 15);
             this.label3.TabIndex = 13;
@@ -136,16 +139,17 @@ namespace ATC_Windows_Forms_App.Controls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputAxis.FormattingEnabled = true;
-            this.cbOutputAxis.Location = new System.Drawing.Point(19, 144);
+            this.cbOutputAxis.Location = new System.Drawing.Point(20, 143);
             this.cbOutputAxis.Name = "cbOutputAxis";
-            this.cbOutputAxis.Size = new System.Drawing.Size(372, 23);
+            this.cbOutputAxis.Size = new System.Drawing.Size(358, 23);
             this.cbOutputAxis.TabIndex = 12;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
             // label2
             // 
+            this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 72);
+            this.label2.Location = new System.Drawing.Point(20, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 11;
@@ -153,8 +157,9 @@ namespace ATC_Windows_Forms_App.Controls
             // 
             // label1
             // 
+            this.label1.AutoEllipsis = true;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Location = new System.Drawing.Point(20, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 10;
@@ -165,10 +170,11 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputB.DropDownWidth = 512;
             this.cbInputB.FormattingEnabled = true;
-            this.cbInputB.Location = new System.Drawing.Point(19, 90);
+            this.cbInputB.Location = new System.Drawing.Point(20, 89);
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(295, 23);
+            this.cbInputB.Size = new System.Drawing.Size(255, 23);
             this.cbInputB.TabIndex = 9;
             this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
@@ -177,17 +183,19 @@ namespace ATC_Windows_Forms_App.Controls
             this.cbInputA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputA.DropDownWidth = 512;
             this.cbInputA.FormattingEnabled = true;
-            this.cbInputA.Location = new System.Drawing.Point(19, 33);
+            this.cbInputA.Location = new System.Drawing.Point(20, 37);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(295, 23);
+            this.cbInputA.Size = new System.Drawing.Size(255, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
             // lblMultiplier
             // 
+            this.lblMultiplier.AutoEllipsis = true;
             this.lblMultiplier.AutoSize = true;
-            this.lblMultiplier.Location = new System.Drawing.Point(18, 182);
+            this.lblMultiplier.Location = new System.Drawing.Point(20, 186);
             this.lblMultiplier.Name = "lblMultiplier";
             this.lblMultiplier.Size = new System.Drawing.Size(60, 15);
             this.lblMultiplier.TabIndex = 2;
@@ -205,6 +213,7 @@ namespace ATC_Windows_Forms_App.Controls
             ((System.ComponentModel.ISupportInitialize)(this.tBarAxisSensitivity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAxisSensitivity)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

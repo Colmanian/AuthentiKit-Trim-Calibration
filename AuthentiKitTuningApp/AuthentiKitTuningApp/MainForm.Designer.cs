@@ -42,6 +42,7 @@ namespace ATC_Windows_Forms_App
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,22 +77,21 @@ namespace ATC_Windows_Forms_App
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisConfigControl = new ATC_Windows_Forms_App.Controls.AxisConfigControl();
             this.btnDeactivate = new System.Windows.Forms.Button();
             this.btnActivate = new System.Windows.Forms.Button();
-            this.buttonConfigControl = new ATC_Windows_Forms_App.Controls.ButtonConfigControl();
             this.tbName = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMappingType = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
             this.notifyIconTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStripTray = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemStartAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemStopAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.axisConfigControl = new ATC_Windows_Forms_App.Controls.AxisConfigControl();
+            this.buttonConfigControl = new ATC_Windows_Forms_App.Controls.ButtonConfigControl();
+            this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -106,17 +106,19 @@ namespace ATC_Windows_Forms_App
             this.pnlHeader.Controls.Add(this.menuStrip);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(649, 100);
+            this.pnlHeader.Size = new System.Drawing.Size(1391, 246);
             this.pnlHeader.TabIndex = 0;
             // 
             // headerControl2
             // 
             this.headerControl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(9)))));
             this.headerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.headerControl2.Location = new System.Drawing.Point(0, 24);
+            this.headerControl2.Location = new System.Drawing.Point(0, 48);
+            this.headerControl2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.headerControl2.Name = "headerControl2";
-            this.headerControl2.Size = new System.Drawing.Size(649, 76);
+            this.headerControl2.Size = new System.Drawing.Size(1391, 198);
             this.headerControl2.TabIndex = 0;
             // 
             // menuStrip
@@ -129,8 +131,9 @@ namespace ATC_Windows_Forms_App
             this.helpMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(13, 6, 0, 6);
             this.menuStrip.ShowItemToolTips = true;
-            this.menuStrip.Size = new System.Drawing.Size(649, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1391, 48);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -143,7 +146,7 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator6,
             this.exitMenuItem});
             this.fileMenuItem.Name = "fileMenuItem";
-            this.fileMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileMenuItem.Size = new System.Drawing.Size(63, 36);
             this.fileMenuItem.Text = "&File";
             this.fileMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.configMenuItemClicked);
             // 
@@ -153,7 +156,7 @@ namespace ATC_Windows_Forms_App
             this.saveMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveMenuItem.Name = "saveMenuItem";
             this.saveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.saveMenuItem.Size = new System.Drawing.Size(287, 36);
             this.saveMenuItem.Text = "&Save";
             // 
             // saveAsMenuItem
@@ -162,7 +165,7 @@ namespace ATC_Windows_Forms_App
             this.saveAsMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveAsMenuItem.Name = "saveAsMenuItem";
             this.saveAsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F12)));
-            this.saveAsMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.saveAsMenuItem.Size = new System.Drawing.Size(287, 36);
             this.saveAsMenuItem.Text = "&Save As";
             // 
             // loadMenuItem
@@ -171,19 +174,19 @@ namespace ATC_Windows_Forms_App
             this.loadMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.loadMenuItem.Name = "loadMenuItem";
             this.loadMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.loadMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.loadMenuItem.Size = new System.Drawing.Size(287, 36);
             this.loadMenuItem.Text = "&Load";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(284, 6);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
             this.exitMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(287, 36);
             this.exitMenuItem.Text = "Exit";
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
@@ -195,25 +198,31 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator4,
             this.clearMenuItem});
             this.presetsMenuItem.Name = "presetsMenuItem";
-            this.presetsMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.presetsMenuItem.Size = new System.Drawing.Size(101, 36);
             this.presetsMenuItem.Text = "&Presets";
             this.presetsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.presetsMenuItemClicked);
             // 
             // spitfireMkIXMenuItem
             // 
             this.spitfireMkIXMenuItem.Name = "spitfireMkIXMenuItem";
-            this.spitfireMkIXMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.spitfireMkIXMenuItem.Size = new System.Drawing.Size(468, 36);
             this.spitfireMkIXMenuItem.Text = "&Spitfire Mk.IX  (FlyingIron for MSFS)";
+            // 
+            // honeycombBravoMenuItem
+            // 
+            this.honeycombBravoMenuItem.Name = "honeycombBravoMenuItem";
+            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(468, 36);
+            this.honeycombBravoMenuItem.Text = "&Honeycomb Bravo (for MSFS)";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(258, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(465, 6);
             // 
             // clearMenuItem
             // 
             this.clearMenuItem.Name = "clearMenuItem";
-            this.clearMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.clearMenuItem.Size = new System.Drawing.Size(468, 36);
             this.clearMenuItem.Text = "&Clear All";
             // 
             // settingsMenuItem
@@ -221,14 +230,14 @@ namespace ATC_Windows_Forms_App
             this.settingsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.startupMenuItem});
             this.settingsMenuItem.Name = "settingsMenuItem";
-            this.settingsMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsMenuItem.Size = new System.Drawing.Size(112, 36);
             this.settingsMenuItem.Text = "&Settings";
             this.settingsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.settingsMenuItemClicked);
             // 
             // startupMenuItem
             // 
             this.startupMenuItem.Name = "startupMenuItem";
-            this.startupMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.startupMenuItem.Size = new System.Drawing.Size(335, 36);
             this.startupMenuItem.Text = "&Run on Windows Start?";
             // 
             // helpMenuItem
@@ -239,31 +248,31 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator5,
             this.aboutToolStripMenuItem});
             this.helpMenuItem.Name = "helpMenuItem";
-            this.helpMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpMenuItem.Size = new System.Drawing.Size(76, 36);
             this.helpMenuItem.Text = "&Help";
             this.helpMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.helpMenuItemClicked);
             // 
             // userGuideMenuItem
             // 
             this.userGuideMenuItem.Name = "userGuideMenuItem";
-            this.userGuideMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.userGuideMenuItem.Size = new System.Drawing.Size(226, 36);
             this.userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             this.bugReportMenuItem.Name = "bugReportMenuItem";
-            this.bugReportMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.bugReportMenuItem.Size = new System.Drawing.Size(226, 36);
             this.bugReportMenuItem.Text = "&Report a Bug";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(223, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(226, 36);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // pnlNavigation
@@ -273,18 +282,20 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.Controls.Add(this.lsbMappings);
             this.pnlNavigation.Controls.Add(this.pnlAddMapping);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNavigation.Location = new System.Drawing.Point(0, 100);
+            this.pnlNavigation.Location = new System.Drawing.Point(0, 246);
+            this.pnlNavigation.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(242, 441);
+            this.pnlNavigation.Size = new System.Drawing.Size(519, 1061);
             this.pnlNavigation.TabIndex = 1;
             // 
             // btnAddMapping
             // 
             this.btnAddMapping.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddMapping.Location = new System.Drawing.Point(7, 344);
+            this.btnAddMapping.Location = new System.Drawing.Point(15, 849);
+            this.btnAddMapping.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnAddMapping.Name = "btnAddMapping";
-            this.btnAddMapping.Size = new System.Drawing.Size(229, 26);
+            this.btnAddMapping.Size = new System.Drawing.Size(491, 65);
             this.btnAddMapping.TabIndex = 0;
             this.btnAddMapping.Text = "Add Mapping";
             this.btnAddMapping.UseVisualStyleBackColor = true;
@@ -295,10 +306,11 @@ namespace ATC_Windows_Forms_App
             this.lsbMappings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lsbMappings.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lsbMappings.FormattingEnabled = true;
-            this.lsbMappings.ItemHeight = 15;
-            this.lsbMappings.Location = new System.Drawing.Point(7, 6);
+            this.lsbMappings.ItemHeight = 37;
+            this.lsbMappings.Location = new System.Drawing.Point(15, -12);
+            this.lsbMappings.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(230, 334);
+            this.lsbMappings.Size = new System.Drawing.Size(488, 818);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
@@ -307,16 +319,18 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping.Controls.Add(this.btnStopAll);
             this.pnlAddMapping.Controls.Add(this.btnStartAll);
             this.pnlAddMapping.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlAddMapping.Location = new System.Drawing.Point(0, 378);
+            this.pnlAddMapping.Location = new System.Drawing.Point(0, 906);
+            this.pnlAddMapping.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.pnlAddMapping.Name = "pnlAddMapping";
-            this.pnlAddMapping.Size = new System.Drawing.Size(242, 63);
+            this.pnlAddMapping.Size = new System.Drawing.Size(519, 155);
             this.pnlAddMapping.TabIndex = 0;
             // 
             // btnStopAll
             // 
-            this.btnStopAll.Location = new System.Drawing.Point(126, 0);
+            this.btnStopAll.Location = new System.Drawing.Point(270, 0);
+            this.btnStopAll.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnStopAll.Name = "btnStopAll";
-            this.btnStopAll.Size = new System.Drawing.Size(110, 54);
+            this.btnStopAll.Size = new System.Drawing.Size(236, 133);
             this.btnStopAll.TabIndex = 1;
             this.btnStopAll.Text = "Stop All";
             this.btnStopAll.UseVisualStyleBackColor = true;
@@ -324,9 +338,10 @@ namespace ATC_Windows_Forms_App
             // 
             // btnStartAll
             // 
-            this.btnStartAll.Location = new System.Drawing.Point(7, 0);
+            this.btnStartAll.Location = new System.Drawing.Point(15, 0);
+            this.btnStartAll.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnStartAll.Name = "btnStartAll";
-            this.btnStartAll.Size = new System.Drawing.Size(113, 54);
+            this.btnStartAll.Size = new System.Drawing.Size(242, 133);
             this.btnStartAll.TabIndex = 0;
             this.btnStartAll.Text = "Start All";
             this.btnStartAll.UseVisualStyleBackColor = true;
@@ -334,9 +349,10 @@ namespace ATC_Windows_Forms_App
             // 
             // btnRemoveMapping
             // 
-            this.btnRemoveMapping.Location = new System.Drawing.Point(507, 495);
+            this.btnRemoveMapping.Location = new System.Drawing.Point(1189, 1178);
+            this.btnRemoveMapping.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnRemoveMapping.Name = "btnRemoveMapping";
-            this.btnRemoveMapping.Size = new System.Drawing.Size(91, 29);
+            this.btnRemoveMapping.Size = new System.Drawing.Size(141, 133);
             this.btnRemoveMapping.TabIndex = 1;
             this.btnRemoveMapping.Text = "Delete";
             this.btnRemoveMapping.UseVisualStyleBackColor = true;
@@ -427,20 +443,14 @@ namespace ATC_Windows_Forms_App
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
-            // axisConfigControl
-            // 
-            this.axisConfigControl.Location = new System.Drawing.Point(242, 100);
-            this.axisConfigControl.Name = "axisConfigControl";
-            this.axisConfigControl.Size = new System.Drawing.Size(407, 380);
-            this.axisConfigControl.TabIndex = 4;
-            // 
             // btnDeactivate
             // 
             this.btnDeactivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(395, 495);
+            this.btnDeactivate.Location = new System.Drawing.Point(767, 1152);
+            this.btnDeactivate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(91, 29);
+            this.btnDeactivate.Size = new System.Drawing.Size(195, 133);
             this.btnDeactivate.TabIndex = 18;
             this.btnDeactivate.Text = "Stop";
             this.btnDeactivate.UseVisualStyleBackColor = true;
@@ -449,26 +459,21 @@ namespace ATC_Windows_Forms_App
             // btnActivate
             // 
             this.btnActivate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActivate.Location = new System.Drawing.Point(286, 495);
+            this.btnActivate.Location = new System.Drawing.Point(559, 1152);
+            this.btnActivate.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(91, 29);
+            this.btnActivate.Size = new System.Drawing.Size(195, 133);
             this.btnActivate.TabIndex = 17;
             this.btnActivate.Text = "Start";
             this.btnActivate.UseVisualStyleBackColor = true;
             this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
-            // buttonConfigControl
-            // 
-            this.buttonConfigControl.Location = new System.Drawing.Point(242, 224);
-            this.buttonConfigControl.Name = "buttonConfigControl";
-            this.buttonConfigControl.Size = new System.Drawing.Size(407, 256);
-            this.buttonConfigControl.TabIndex = 19;
-            // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(261, 137);
+            this.tbName.Location = new System.Drawing.Point(559, 339);
+            this.tbName.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(360, 23);
+            this.tbName.Size = new System.Drawing.Size(767, 43);
             this.tbName.TabIndex = 23;
             this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
@@ -478,36 +483,32 @@ namespace ATC_Windows_Forms_App
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMappingType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMappingType.FormattingEnabled = true;
-            this.cbMappingType.Location = new System.Drawing.Point(261, 191);
+            this.cbMappingType.Location = new System.Drawing.Point(559, 472);
+            this.cbMappingType.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.cbMappingType.Name = "cbMappingType";
-            this.cbMappingType.Size = new System.Drawing.Size(360, 23);
+            this.cbMappingType.Size = new System.Drawing.Size(767, 45);
             this.cbMappingType.TabIndex = 22;
             this.cbMappingType.SelectedValueChanged += new System.EventHandler(this.cbMappingType_SelectedValueChanged);
             // 
             // lblMappingType
             // 
             this.lblMappingType.AutoSize = true;
-            this.lblMappingType.Location = new System.Drawing.Point(261, 173);
+            this.lblMappingType.Location = new System.Drawing.Point(559, 427);
+            this.lblMappingType.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblMappingType.Name = "lblMappingType";
-            this.lblMappingType.Size = new System.Drawing.Size(82, 15);
+            this.lblMappingType.Size = new System.Drawing.Size(188, 37);
             this.lblMappingType.TabIndex = 21;
             this.lblMappingType.Text = "Mapping Type";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(261, 119);
+            this.lblName.Location = new System.Drawing.Point(559, 294);
+            this.lblName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 15);
+            this.lblName.Size = new System.Drawing.Size(88, 37);
             this.lblName.TabIndex = 20;
             this.lblName.Text = "Name";
-            // 
-            // encoderAxisControl
-            // 
-            this.encoderAxisControl.Location = new System.Drawing.Point(242, 224);
-            this.encoderAxisControl.Name = "encoderAxisControl";
-            this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
-            this.encoderAxisControl.TabIndex = 24;
             // 
             // notifyIconTray
             // 
@@ -524,61 +525,80 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator7,
             this.toolStripMenuItemExit});
             this.contextMenuStripTray.Name = "contextMenuStripTray";
-            this.contextMenuStripTray.Size = new System.Drawing.Size(116, 76);
+            this.contextMenuStripTray.Size = new System.Drawing.Size(187, 136);
             // 
             // toolStripMenuItemStartAll
             // 
             this.toolStripMenuItemStartAll.Name = "toolStripMenuItemStartAll";
-            this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemStartAll.Size = new System.Drawing.Size(186, 42);
             this.toolStripMenuItemStartAll.Text = "Start All";
             this.toolStripMenuItemStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
             // 
             // toolStripMenuItemStopAll
             // 
             this.toolStripMenuItemStopAll.Name = "toolStripMenuItemStopAll";
-            this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemStopAll.Size = new System.Drawing.Size(186, 42);
             this.toolStripMenuItemStopAll.Text = "Stop All";
             this.toolStripMenuItemStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(112, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(183, 6);
             // 
             // toolStripMenuItemExit
             // 
             this.toolStripMenuItemExit.Name = "toolStripMenuItemExit";
-            this.toolStripMenuItemExit.Size = new System.Drawing.Size(115, 22);
+            this.toolStripMenuItemExit.Size = new System.Drawing.Size(186, 42);
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
             // 
-            // honeycombBravoMenuItem
+            // axisConfigControl
             // 
-            this.honeycombBravoMenuItem.Name = "honeycombBravoMenuItem";
-            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.honeycombBravoMenuItem.Text = "&Honeycomb Bravo (for MSFS)";
+            this.axisConfigControl.Location = new System.Drawing.Point(519, 538);
+            this.axisConfigControl.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.axisConfigControl.Name = "axisConfigControl";
+            this.axisConfigControl.Size = new System.Drawing.Size(872, 631);
+            this.axisConfigControl.TabIndex = 24;
+            // 
+            // buttonConfigControl
+            // 
+            this.buttonConfigControl.Location = new System.Drawing.Point(519, 538);
+            this.buttonConfigControl.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.buttonConfigControl.Name = "buttonConfigControl";
+            this.buttonConfigControl.Size = new System.Drawing.Size(872, 631);
+            this.buttonConfigControl.TabIndex = 25;
+            // 
+            // encoderAxisControl
+            // 
+            this.encoderAxisControl.Location = new System.Drawing.Point(519, 538);
+            this.encoderAxisControl.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.encoderAxisControl.Name = "encoderAxisControl";
+            this.encoderAxisControl.Size = new System.Drawing.Size(872, 631);
+            this.encoderAxisControl.TabIndex = 26;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 541);
-            this.Controls.Add(this.btnRemoveMapping);
+            this.ClientSize = new System.Drawing.Size(1391, 1307);
             this.Controls.Add(this.encoderAxisControl);
+            this.Controls.Add(this.buttonConfigControl);
+            this.Controls.Add(this.axisConfigControl);
+            this.Controls.Add(this.btnRemoveMapping);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.cbMappingType);
             this.Controls.Add(this.lblMappingType);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.buttonConfigControl);
             this.Controls.Add(this.btnDeactivate);
             this.Controls.Add(this.btnActivate);
-            this.Controls.Add(this.axisConfigControl);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(665, 580);
-            this.MinimumSize = new System.Drawing.Size(665, 580);
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.MaximumSize = new System.Drawing.Size(1407, 1358);
+            this.MinimumSize = new System.Drawing.Size(1407, 1358);
             this.Name = "MainForm";
             this.Text = "AuthentiKit Tuning App";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -637,16 +657,13 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private Controls.AxisConfigControl axisConfigControl;
         private System.Windows.Forms.Button btnRemoveMapping;
         private System.Windows.Forms.Button btnDeactivate;
         private System.Windows.Forms.Button btnActivate;
-        private Controls.ButtonConfigControl buttonConfigControl;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.ComboBox cbMappingType;
         private System.Windows.Forms.Label lblMappingType;
         private System.Windows.Forms.Label lblName;
-        private Controls.EncoderAxisControl encoderAxisControl;
         private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startupMenuItem;
         private System.Windows.Forms.Button btnStopAll;
@@ -660,6 +677,9 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
         private System.Windows.Forms.ToolStripMenuItem honeycombBravoMenuItem;
+        private Controls.AxisConfigControl axisConfigControl;
+        private Controls.ButtonConfigControl buttonConfigControl;
+        private Controls.EncoderAxisControl encoderAxisControl;
     }
 }
 
