@@ -12,7 +12,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     public class InputDetector : IInputDetector
     {
-        public InputButton Detect()
+        public InputAxis DetectAxis()
+        {
+            throw new NotImplementedException();
+        }
+
+        public InputButton DetectButton()
         {
             InputButton detected = new();
             var directInput = new DirectInput();

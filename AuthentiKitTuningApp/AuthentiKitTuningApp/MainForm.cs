@@ -146,7 +146,7 @@ namespace ATC_Windows_Forms_App
                 encoderToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
                 // axisToAxisControl
-                //axisToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+                axisToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
             }
 
             // Update Selected Mapping

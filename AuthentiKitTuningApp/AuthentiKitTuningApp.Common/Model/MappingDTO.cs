@@ -14,6 +14,7 @@
             RevsInPerRevsOut = 4;
             InputButtonA = new();
             InputButtonB = new();
+            InputAxis = new();
             ResetCommand = "";
             HoldThresholdStart = 500;
             HoldThresholdStop = 1000;
@@ -30,8 +31,9 @@
         public int AxisSensitivity { get; set; } // Axis Only
         public int EncoderPPR { get; set; } // Encoder Axis Only
         public float RevsInPerRevsOut { get; set; } // Encoder Axis Only
-        public InputButton InputButtonA { get; set; } // Both
+        public InputButton InputButtonA { get; set; } // Button and Axis
         public InputButton InputButtonB { get; set; } // Axis Only
+        public InputAxis InputAxis { get; set; } // AxisToAxis Only
         public string ResetCommand { get; set; } // Axis Only
         public int HoldThresholdStart { get; set; } // Button Only
         public int HoldThresholdStop { get; set; } // Button Only

@@ -6,7 +6,7 @@ namespace MappingManager.Common.DataProvider
 {
     public interface IDataHandler
     {
-        IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputButton> inputButtonsA, ObservableCollection<InputButton> inputButtonsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons);
+        IEnumerable<MappingDTO> LoadMappings(ObservableCollection<InputButton> inputButtonsA, ObservableCollection<InputButton> inputButtonsB, ObservableCollection<InputAxis> inputAxes, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons);
         void SaveMappings(IEnumerable<MappingDTO> mappings);
         void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath);
         MappingDTO GetBlankMapping();

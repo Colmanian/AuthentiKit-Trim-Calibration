@@ -17,6 +17,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
         public ObservableCollection<InputButton> InputButtonsA = HardwareInfo.GetInputButtons();
         public ObservableCollection<InputButton> InputButtonsB = HardwareInfo.GetInputButtons();
+        public ObservableCollection<InputAxis> InputAxes = HardwareInfo.GetInputAxes();
         public ObservableCollection<OutputChannel> OutputAxes = HardwareInfo.GetOutputAxes();
         public ObservableCollection<OutputChannel> OutputButtons = HardwareInfo.GetOutputButtons();
         public bool CanAddMapping { get; private set; }
@@ -53,17 +54,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Stop();
             Mappings.Clear();
             _mainDataHandler.SetSaveFilePath(filePath);
-            var mappings = _mainDataHandler.LoadMappings(InputButtonsA, InputButtonsB, OutputAxes, OutputButtons);
+            var mappings = _mainDataHandler.LoadMappings(InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtons);
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
+                Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtons));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtons));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
@@ -114,7 +115,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons);
                 foreach (var mapping in mappings)
                 {
-                    Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
+                    Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtons));
                 }
             }
         }

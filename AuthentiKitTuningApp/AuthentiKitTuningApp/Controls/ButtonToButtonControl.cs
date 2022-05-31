@@ -143,7 +143,7 @@ namespace ATC_Windows_Forms_App.Controls
                 if (MappingBindingSource.Current is MappingViewModel mappingViewModel
                     && mappingViewModel.Deactivated)
                 {
-                    mappingViewModel.DetectInputA();
+                    mappingViewModel.DetectButtonInputA();
                 }
                 DetectButton.Text = "Detect";
                 cbInputA.Enabled = true;
