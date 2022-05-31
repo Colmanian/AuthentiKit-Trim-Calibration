@@ -55,8 +55,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                     Guid = device.ProductGuid,
                                     Device = device.InstanceName,
                                     AxisId = offset,
-                                    Min = objectProperties.LogicalRange.Minimum,
-                                    Max = objectProperties.LogicalRange.Maximum,
+                                    Min = objectProperties.Range.Minimum, // Note to self: logical range is used as the calibration -> can you set this??
+                                    Max = objectProperties.Range.Maximum,
                                     Name = string.Format(device.InstanceName + " : " + instance.Name)
                                 });
                             }

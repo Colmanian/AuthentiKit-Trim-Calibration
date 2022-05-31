@@ -104,7 +104,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     joystick.Acquire();
                     while (true)
                     {
-                        Thread.Sleep(200); // Pole joystick state every this milliseconds WAS 2
+                        Thread.Sleep(2); 
                         {
                             if (_mapping.TypeId == MappingType.AXIS_TO_AXIS & _axisToAxisProcessor != null)
                             {
