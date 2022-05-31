@@ -423,5 +423,147 @@ namespace AuthentiKitTrimCalibration.ViewModel
             get { return _mappingProcessor.IsRunning(); }
         }
         public bool Deactivated => !Activated;
+
+        // TECH DEBT. NEED A BETTER WAY OF DOING THIS
+        public bool GatewayEnabled1
+        {
+            get { return _mapping.GatewayEnabled1; }
+            set
+            {
+                if (_mapping.GatewayEnabled1 != value)
+                {
+                    Deactivate();
+                    _mapping.GatewayEnabled1 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public bool GatewayEnabled2
+        {
+            get { return _mapping.GatewayEnabled2; }
+            set
+            {
+                if (_mapping.GatewayEnabled2 != value)
+                {
+                    Deactivate();
+                    _mapping.GatewayEnabled2 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public bool GatewayEnabled3
+        {
+            get { return _mapping.GatewayEnabled3; }
+            set
+            {
+                if (_mapping.GatewayEnabled3 != value)
+                {
+                    Deactivate();
+                    _mapping.GatewayEnabled3 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public bool GatewayEnabled4
+        {
+            get { return _mapping.GatewayEnabled4; }
+            set
+            {
+                if (_mapping.GatewayEnabled4 != value)
+                {
+                    Deactivate();
+                    _mapping.GatewayEnabled4 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public bool GatewayEnabled5
+        {
+            get { return _mapping.GatewayEnabled5; }
+            set
+            {
+                if (_mapping.GatewayEnabled5 != value)
+                {
+                    Deactivate();
+                    _mapping.GatewayEnabled5 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public int Gateway1
+        {
+            get { return _mapping.Gateway1; }
+            set
+            {
+                if (_mapping.Gateway1 != value)
+                {
+                    Deactivate();
+                    _mapping.Gateway1 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public int Gateway2
+        {
+            get { return _mapping.Gateway2; }
+            set
+            {
+                if (_mapping.Gateway2 != value)
+                {
+                    Deactivate();
+                    _mapping.Gateway2 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public int Gateway3
+        {
+            get { return _mapping.Gateway3; }
+            set
+            {
+                if (_mapping.Gateway3 != value)
+                {
+                    Deactivate();
+                    _mapping.Gateway3 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public int Gateway4
+        {
+            get { return _mapping.Gateway4; }
+            set
+            {
+                if (_mapping.Gateway4 != value)
+                {
+                    Deactivate();
+                    _mapping.Gateway4 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
+        public int Gateway5
+        {
+            get { return _mapping.Gateway5; }
+            set
+            {
+                if (_mapping.Gateway5 != value)
+                {
+                    Deactivate();
+                    _mapping.Gateway5 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                }
+            }
+        }
     }
 }

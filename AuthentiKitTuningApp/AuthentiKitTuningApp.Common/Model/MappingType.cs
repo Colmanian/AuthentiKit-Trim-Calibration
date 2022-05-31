@@ -37,7 +37,7 @@ namespace MappingManager.Common.Model
             types.Add(new MappingType(ENCODER_TO_AXIS, ENCODER_TO_AXIS_STRING));
             //types.Add(new MappingType(ENCODER_TO_BUTTON, ENCODER_TO_BUTTON_STRING));
             types.Add(new MappingType(AXIS_TO_AXIS, AXIS_TO_AXIS_STRING));
-            //types.Add(new MappingType(AXIS_TO_BUTTON, AXIS_TO_BUTTON_STRING));
+            types.Add(new MappingType(AXIS_TO_BUTTON, AXIS_TO_BUTTON_STRING));
             return types;
         }
 

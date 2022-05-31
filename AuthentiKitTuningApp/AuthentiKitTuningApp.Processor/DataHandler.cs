@@ -29,6 +29,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
         private readonly string FLIPPED = "FLIPPED";
+        private readonly string GATEWAY1 = "GATEWAY1";
+        private readonly string GATEWAY2 = "GATEWAY2";
+        private readonly string GATEWAY3 = "GATEWAY3";
+        private readonly string GATEWAY4 = "GATEWAY4";
+        private readonly string GATEWAY5 = "GATEWAY5";
+        private readonly string GATEWAY_ENABLED_1 = "GATEWAY_ENABLED_1";
+        private readonly string GATEWAY_ENABLED_2 = "GATEWAY_ENABLED_2";
+        private readonly string GATEWAY_ENABLED_3 = "GATEWAY_ENABLED_3";
+        private readonly string GATEWAY_ENABLED_4 = "GATEWAY_ENABLED_4";
+        private readonly string GATEWAY_ENABLED_5 = "GATEWAY_ENABLED_5";
         private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
         private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
@@ -90,16 +100,42 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
                             string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
                             bool flipped = false; // See below
+                            int gateway1 = 0;
+                            int gateway2 = 0;
+                            int gateway3 = 0;
+                            int gateway4 = 0;
+                            int gateway5 = 0;
+                            bool gatewayEnabled1 = false;
+                            bool gatewayEnabled2 = false;
+                            bool gatewayEnabled3 = false;
+                            bool gatewayEnabled4 = false;
+                            bool gatewayEnabled5 = false;
 
-                            if (mappingNode.SelectSingleNode(INPUT_AXIS) != null) // Backwards compatability with earlier save files than 1.2
-                            {
+                            // Backwards compatability with earlier save files than 1.2
+                            if (mappingNode.SelectSingleNode(INPUT_AXIS) != null)
                                 inputAxisHash = int.Parse(mappingNode.SelectSingleNode(INPUT_AXIS).InnerText);
-                            }
-
-                            if (mappingNode.SelectSingleNode(FLIPPED) != null) // Backwards compatability with earlier save files than 1.2
-                            {
+                            if (mappingNode.SelectSingleNode(FLIPPED) != null)
                                 flipped = bool.Parse(mappingNode.SelectSingleNode(FLIPPED).InnerText);
-                            }
+                            if (mappingNode.SelectSingleNode(GATEWAY1) != null)
+                                gateway1 = int.Parse(mappingNode.SelectSingleNode(GATEWAY1).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY2) != null)
+                                gateway2 = int.Parse(mappingNode.SelectSingleNode(GATEWAY2).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY3) != null)
+                                gateway3 = int.Parse(mappingNode.SelectSingleNode(GATEWAY3).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY4) != null)
+                                gateway4 = int.Parse(mappingNode.SelectSingleNode(GATEWAY4).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY5) != null)
+                                gateway5 = int.Parse(mappingNode.SelectSingleNode(GATEWAY5).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_1) != null)
+                                gatewayEnabled1 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_1).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_2) != null)
+                                gatewayEnabled2 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_2).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_3) != null)
+                                gatewayEnabled3 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_3).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_4) != null)
+                                gatewayEnabled4 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_4).InnerText);
+                            if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_5) != null)
+                                gatewayEnabled5 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_5).InnerText);
 
                             // Create Mapping from values and add to mappings list
                             mappings.Add(new MappingDTO
@@ -116,7 +152,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 RevsInPerRevsOut = revsInPerRevsOut,
                                 ButtonMultiplier = buttonMultiplier,
                                 ResetCommand = resetCommand,
-                                Flipped = flipped
+                                Flipped = flipped,
+                                Gateway1 = gateway1,
+                                Gateway2 = gateway2,
+                                Gateway3 = gateway3,
+                                Gateway4 = gateway4,
+                                Gateway5 = gateway5,
+                                GatewayEnabled1 = gatewayEnabled1,
+                                GatewayEnabled2 = gatewayEnabled2,  
+                                GatewayEnabled3 = gatewayEnabled3,
+                                GatewayEnabled4 = gatewayEnabled4,
+                                GatewayEnabled5 = gatewayEnabled5
                             });
                         }
                     }
@@ -204,10 +250,60 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 resetCommandNode.InnerText = mapping.ResetCommand;
                 mappingNode.AppendChild(resetCommandNode);
 
-                // ResetCommand
+                // Flipped
                 XmlElement flippedNode = doc.CreateElement(FLIPPED);
                 flippedNode.InnerText = String.Format("{0}", mapping.Flipped);
                 mappingNode.AppendChild(flippedNode);
+
+                // Gateway1
+                XmlElement gateway1 = doc.CreateElement(GATEWAY1);
+                gateway1.InnerText = String.Format("{0}", mapping.Gateway1);
+                mappingNode.AppendChild(gateway1);
+
+                // Gateway2
+                XmlElement gateway2 = doc.CreateElement(GATEWAY2);
+                gateway2.InnerText = String.Format("{0}", mapping.Gateway2);
+                mappingNode.AppendChild(gateway2);
+
+                // Gateway3
+                XmlElement gateway3 = doc.CreateElement(GATEWAY3);
+                gateway3.InnerText = String.Format("{0}", mapping.Gateway3);
+                mappingNode.AppendChild(gateway3);
+
+                // Gateway4
+                XmlElement gateway4 = doc.CreateElement(GATEWAY4);
+                gateway4.InnerText = String.Format("{0}", mapping.Gateway4);
+                mappingNode.AppendChild(gateway4);
+
+                // Gateway5
+                XmlElement gateway5 = doc.CreateElement(GATEWAY5);
+                gateway5.InnerText = String.Format("{0}", mapping.Gateway5);
+                mappingNode.AppendChild(gateway5);
+
+                // GatewayEnabled1
+                XmlElement gatewayEnabled1 = doc.CreateElement(GATEWAY_ENABLED_1);
+                gatewayEnabled1.InnerText = String.Format("{0}", mapping.GatewayEnabled1);
+                mappingNode.AppendChild(gatewayEnabled1);
+
+                // GatewayEnabled2
+                XmlElement gatewayEnabled2 = doc.CreateElement(GATEWAY_ENABLED_2);
+                gatewayEnabled2.InnerText = String.Format("{0}", mapping.GatewayEnabled2);
+                mappingNode.AppendChild(gatewayEnabled2);
+
+                // Gateway3
+                XmlElement gatewayEnabled3 = doc.CreateElement(GATEWAY_ENABLED_3);
+                gatewayEnabled3.InnerText = String.Format("{0}", mapping.GatewayEnabled3);
+                mappingNode.AppendChild(gatewayEnabled3);
+
+                // Gateway4
+                XmlElement gatewayEnabled4 = doc.CreateElement(GATEWAY_ENABLED_4);
+                gatewayEnabled4.InnerText = String.Format("{0}", mapping.GatewayEnabled4);
+                mappingNode.AppendChild(gatewayEnabled4);
+
+                // Gateway5
+                XmlElement gatewayEnabled5 = doc.CreateElement(GATEWAY_ENABLED_5);
+                gatewayEnabled5.InnerText = String.Format("{0}", mapping.GatewayEnabled5);
+                mappingNode.AppendChild(gatewayEnabled5);
 
                 // Add to group
                 groupNode.AppendChild(mappingNode);
@@ -282,7 +378,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
         public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset, ObservableCollection<InputButton> inputButtonsA, ObservableCollection<InputButton> inputButtonsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
-            
+
             ObservableCollection<MappingDTO> mappings = new();
             if (preset == Preset.SPITFIRE_MKIX)
             {

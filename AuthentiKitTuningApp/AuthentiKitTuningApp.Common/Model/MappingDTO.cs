@@ -21,6 +21,16 @@
             Flipped = false;
             Errored = false;
             ErrorMessage = "";
+            GatewayEnabled1 = false;
+            GatewayEnabled2 = false;
+            GatewayEnabled3 = false;
+            GatewayEnabled4 = false;
+            GatewayEnabled5 = false;
+            Gateway1 = 0;
+            Gateway2 = 0;
+            Gateway3 = 0;
+            Gateway4 = 0;
+            Gateway5 = 0;
         }
 
         public string Name { get; set; } // Both
@@ -41,5 +51,15 @@
         public bool Flipped { get; set; }// AxisToAxis Only
         public bool Errored { get; set; }
         public string ErrorMessage { get; set; }
+        public bool GatewayEnabled1 { get; set; }
+        public bool GatewayEnabled2 { get; set; }
+        public bool GatewayEnabled3 { get; set; }
+        public bool GatewayEnabled4 { get; set; }
+        public bool GatewayEnabled5 { get; set; }
+        public int Gateway1 { get; set; }
+        public int Gateway2 { get; set; }
+        public int Gateway3 { get; set; }
+        public int Gateway4 { get; set; }
+        public int Gateway5 { get; set; }
     }
 }

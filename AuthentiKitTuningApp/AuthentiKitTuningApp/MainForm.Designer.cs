@@ -56,9 +56,11 @@ namespace ATC_Windows_Forms_App
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
+            this.btnActivate = new System.Windows.Forms.Button();
+            this.btnDeactivate = new System.Windows.Forms.Button();
             this.btnStopAll = new System.Windows.Forms.Button();
-            this.btnStartAll = new System.Windows.Forms.Button();
             this.btnRemoveMapping = new System.Windows.Forms.Button();
+            this.btnStartAll = new System.Windows.Forms.Button();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -77,8 +79,6 @@ namespace ATC_Windows_Forms_App
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDeactivate = new System.Windows.Forms.Button();
-            this.btnActivate = new System.Windows.Forms.Button();
             this.tbName = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMappingType = new System.Windows.Forms.Label();
@@ -93,6 +93,7 @@ namespace ATC_Windows_Forms_App
             this.buttonToButtonControl = new ATC_Windows_Forms_App.Controls.ButtonToButtonControl();
             this.encoderToAxisControl = new ATC_Windows_Forms_App.Controls.EncoderToAxisControl();
             this.axisToAxisControl = new ATC_Windows_Forms_App.Controls.AxisToAxisControl();
+            this.axisToButtonControl1 = new ATC_Windows_Forms_App.Controls.AxisToButtonControl();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -277,13 +278,14 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlNavigation.AutoSize = true;
             this.pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlNavigation.Controls.Add(this.axisToButtonControl1);
             this.pnlNavigation.Controls.Add(this.btnAddMapping);
             this.pnlNavigation.Controls.Add(this.lsbMappings);
             this.pnlNavigation.Controls.Add(this.pnlAddMapping);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.Location = new System.Drawing.Point(0, 100);
             this.pnlNavigation.Name = "pnlNavigation";
-            this.pnlNavigation.Size = new System.Drawing.Size(640, 435);
+            this.pnlNavigation.Size = new System.Drawing.Size(652, 435);
             this.pnlNavigation.TabIndex = 1;
             // 
             // btnAddMapping
@@ -321,6 +323,31 @@ namespace ATC_Windows_Forms_App
             this.pnlAddMapping.Size = new System.Drawing.Size(637, 56);
             this.pnlAddMapping.TabIndex = 0;
             // 
+            // btnActivate
+            // 
+            this.btnActivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActivate.AutoSize = true;
+            this.btnActivate.Location = new System.Drawing.Point(252, 25);
+            this.btnActivate.Name = "btnActivate";
+            this.btnActivate.Size = new System.Drawing.Size(91, 28);
+            this.btnActivate.TabIndex = 17;
+            this.btnActivate.Text = "Start";
+            this.btnActivate.UseVisualStyleBackColor = true;
+            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
+            // 
+            // btnDeactivate
+            // 
+            this.btnDeactivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDeactivate.AutoSize = true;
+            this.btnDeactivate.Enabled = false;
+            this.btnDeactivate.Location = new System.Drawing.Point(349, 25);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(91, 28);
+            this.btnDeactivate.TabIndex = 18;
+            this.btnDeactivate.Text = "Stop";
+            this.btnDeactivate.UseVisualStyleBackColor = true;
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
+            // 
             // btnStopAll
             // 
             this.btnStopAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -332,17 +359,6 @@ namespace ATC_Windows_Forms_App
             this.btnStopAll.UseVisualStyleBackColor = true;
             this.btnStopAll.Click += new System.EventHandler(this.btnStopAll_Click);
             // 
-            // btnStartAll
-            // 
-            this.btnStartAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnStartAll.Location = new System.Drawing.Point(7, 25);
-            this.btnStartAll.Name = "btnStartAll";
-            this.btnStartAll.Size = new System.Drawing.Size(113, 28);
-            this.btnStartAll.TabIndex = 0;
-            this.btnStartAll.Text = "Start All";
-            this.btnStartAll.UseVisualStyleBackColor = true;
-            this.btnStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
-            // 
             // btnRemoveMapping
             // 
             this.btnRemoveMapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -353,6 +369,17 @@ namespace ATC_Windows_Forms_App
             this.btnRemoveMapping.Text = "Delete";
             this.btnRemoveMapping.UseVisualStyleBackColor = true;
             this.btnRemoveMapping.Click += new System.EventHandler(this.btnRemoveMapping_Click);
+            // 
+            // btnStartAll
+            // 
+            this.btnStartAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnStartAll.Location = new System.Drawing.Point(7, 25);
+            this.btnStartAll.Name = "btnStartAll";
+            this.btnStartAll.Size = new System.Drawing.Size(113, 28);
+            this.btnStartAll.TabIndex = 0;
+            this.btnStartAll.Text = "Start All";
+            this.btnStartAll.UseVisualStyleBackColor = true;
+            this.btnStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
             // 
             // newToolStripMenuItem
             // 
@@ -438,31 +465,6 @@ namespace ATC_Windows_Forms_App
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
-            // btnDeactivate
-            // 
-            this.btnDeactivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDeactivate.AutoSize = true;
-            this.btnDeactivate.Enabled = false;
-            this.btnDeactivate.Location = new System.Drawing.Point(349, 25);
-            this.btnDeactivate.Name = "btnDeactivate";
-            this.btnDeactivate.Size = new System.Drawing.Size(91, 28);
-            this.btnDeactivate.TabIndex = 18;
-            this.btnDeactivate.Text = "Stop";
-            this.btnDeactivate.UseVisualStyleBackColor = true;
-            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
-            // 
-            // btnActivate
-            // 
-            this.btnActivate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnActivate.AutoSize = true;
-            this.btnActivate.Location = new System.Drawing.Point(252, 25);
-            this.btnActivate.Name = "btnActivate";
-            this.btnActivate.Size = new System.Drawing.Size(91, 28);
-            this.btnActivate.TabIndex = 17;
-            this.btnActivate.Text = "Start";
-            this.btnActivate.UseVisualStyleBackColor = true;
-            this.btnActivate.Click += new System.EventHandler(this.btnActivate_Click);
             // 
             // tbName
             // 
@@ -579,6 +581,13 @@ namespace ATC_Windows_Forms_App
             this.axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             this.axisToAxisControl.TabIndex = 27;
             // 
+            // axisToButtonControl1
+            // 
+            this.axisToButtonControl1.Location = new System.Drawing.Point(242, 121);
+            this.axisToButtonControl1.Name = "axisToButtonControl1";
+            this.axisToButtonControl1.Size = new System.Drawing.Size(407, 256);
+            this.axisToButtonControl1.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -683,6 +692,7 @@ namespace ATC_Windows_Forms_App
         private Controls.ButtonToButtonControl buttonToButtonControl;
         private Controls.EncoderToAxisControl encoderToAxisControl;
         private Controls.AxisToAxisControl axisToAxisControl;
+        private Controls.AxisToButtonControl axisToButtonControl1;
     }
 }
 
