@@ -147,6 +147,9 @@ namespace ATC_Windows_Forms_App
 
                 // axisToAxisControl
                 axisToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+                // Form Activation
+                tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
             }
 
             // Update Selected Mapping

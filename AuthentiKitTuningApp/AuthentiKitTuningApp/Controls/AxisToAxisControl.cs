@@ -29,6 +29,9 @@ namespace ATC_Windows_Forms_App.Controls
 
             // Flipped
             chbFlip.DataBindings.Add("Checked", MappingBindingSource, "Flipped");
+
+            // Panel Activation
+            pnlAxisToAxisConfig.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
         }
 
         private void cbInputAxis_SelectedIndexChanged(object sender, EventArgs e)
