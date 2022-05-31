@@ -35,6 +35,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Deactivate();
         }
 
+
         private void UpdateStatus()
         {
             RaisePropertyChanged(nameof(Activated));
@@ -75,14 +76,44 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void DetectAxisInput()
         {
-           Deactivate();
+            Deactivate();
             _mapping.InputAxis = _inputDetector.DetectAxis();
             RaisePropertyChanged();
             RaisePropertyChanged(nameof(InputAxisHash));
             UpdateStatus();
         }
 
-        public bool CanApply => !string.IsNullOrEmpty(Name) && Deactivated;
+        public bool CanApply
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Name) || Activated || (_mapping.OutputChannel.VJoyDevice == 0))
+                    return false;
+                else
+                {
+                    bool buttonA = _mapping.InputButtonA.Device != null;
+                    bool buttonB = _mapping.InputButtonB.Device != null;
+                    bool axis = _mapping.InputAxis.Device != null;
+                    switch (_mapping.TypeId)
+                    {
+                        case MappingType.BUTTON_TO_AXIS:
+                            return buttonA && buttonB;
+                        case MappingType.ENCODER_TO_AXIS:
+                            return buttonA && buttonB;
+                        case MappingType.ENCODER_TO_BUTTON:
+                            return buttonA && buttonB;
+                        case MappingType.AXIS_TO_AXIS:
+                            return axis;
+                        case MappingType.AXIS_TO_BUTTON:
+                            return axis;
+                        case MappingType.BUTTON_TO_BUTTON:
+                            return buttonA;
+                    }
+                }
+                return false;
+            }
+        }
+        public bool Exists => true;
         public bool IsButtonToAxisMapping => TypeId == MappingType.BUTTON_TO_AXIS;
         public bool IsButtonToButtonMapping => TypeId == MappingType.BUTTON_TO_BUTTON;
         public bool IsEncoderToAxisMapping => TypeId == MappingType.ENCODER_TO_AXIS;

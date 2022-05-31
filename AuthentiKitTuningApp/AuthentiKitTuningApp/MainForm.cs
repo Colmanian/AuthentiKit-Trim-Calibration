@@ -117,10 +117,10 @@ namespace ATC_Windows_Forms_App
                 cbMappingType.DisplayMember = "Name";
                 cbMappingType.ValueMember = "Id";
                 cbMappingType.DataBindings.Add("SelectedValue", mappingBindingSource, "TypeId");
-                cbMappingType.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+                cbMappingType.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
 
                 // Remove Mapping Button
-                btnRemoveMapping.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
+                btnRemoveMapping.DataBindings.Add("Enabled", mappingBindingSource, "Exists");
 
                 // Activate and Deactivate Buttons
                 btnActivate.DataBindings.Add("Enabled", mappingBindingSource, "CanApply");
