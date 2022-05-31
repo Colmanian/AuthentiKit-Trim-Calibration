@@ -22,7 +22,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string INPUT_BUTTON_A_HASH = "INPUT_CHANNEL_A_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
         private readonly string INPUT_BUTTON_B_HASH = "INPUT_CHANNEL_B_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
         private readonly string INPUT_AXIS = "INPUT_AXIS";
-        private readonly string OUTPUT_CHANNEL_HASH = "OUTPUT_CHANNEL_HASH";
+        private readonly string OUTPUT_CHANNEL_A_HASH = "OUTPUT_CHANNEL_HASH"; //(should be OUTPUT_CHANNEL_A_HASH  but can't rename due to it already being in users' XML save file)
+        private readonly string OUTPUT_CHANNEL_B_HASH = "OUTPUT_CHANNEL_B_HASH";
         private readonly string AXIS_SENSITIVITY = "AXIS_SENSITIVITY";
         private readonly string ENCODER_PPR = "ENCODER_PPR";
         private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
@@ -61,7 +62,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             ObservableCollection<InputButton> inputButtonsB,
             ObservableCollection<InputAxis> inputAxes,
             ObservableCollection<OutputChannel> outputAxes,
-            ObservableCollection<OutputChannel> outputButtons)
+            ObservableCollection<OutputChannel> outputButtonsA,
+            ObservableCollection<OutputChannel> outputButtonsB)
         {
             List<MappingDTO> mappings = new();
             if (File.Exists(SaveFilePath))
@@ -93,7 +95,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             int inputButtonAHash = int.Parse(mappingNode.SelectSingleNode(INPUT_BUTTON_A_HASH).InnerText);
                             int inputButtonBHash = int.Parse(mappingNode.SelectSingleNode(INPUT_BUTTON_B_HASH).InnerText);
                             int inputAxisHash = new InputAxis().Hash; // See below
-                            int outputChannelHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_HASH).InnerText);
+                            int outputChannelAHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_A_HASH).InnerText);
+                            int outputChannelBHash = 0; // See below
                             int axisSensitivity = int.Parse(mappingNode.SelectSingleNode(AXIS_SENSITIVITY).InnerText);
                             int encoderPPR = int.Parse(mappingNode.SelectSingleNode(ENCODER_PPR).InnerText);
                             float revsInPerRevsOut = float.Parse(mappingNode.SelectSingleNode(REVS_IN_PER_REVS_OUT).InnerText);
@@ -136,6 +139,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 gatewayEnabled4 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_4).InnerText);
                             if (mappingNode.SelectSingleNode(GATEWAY_ENABLED_5) != null)
                                 gatewayEnabled5 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_5).InnerText);
+                            if (mappingNode.SelectSingleNode(OUTPUT_CHANNEL_B_HASH) != null)
+                                outputChannelBHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_B_HASH).InnerText);
 
                             // Create Mapping from values and add to mappings list
                             mappings.Add(new MappingDTO
@@ -146,7 +151,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 InputButtonA = GetInputButton(inputButtonAHash, inputButtonsA),
                                 InputButtonB = GetInputButton(inputButtonBHash, inputButtonsB),
                                 InputAxis = GetInputAxis(inputAxisHash, inputAxes),
-                                OutputChannel = GetOutputChannel(outputChannelHash, outputAxes, outputButtons),
+                                OutputChannelA = GetOutputChannel(outputChannelAHash, outputAxes, outputButtonsA),
+                                OutputChannelB = GetOutputChannel(outputChannelBHash, outputAxes, outputButtonsB),
                                 AxisSensitivity = axisSensitivity,
                                 EncoderPPR = encoderPPR,
                                 RevsInPerRevsOut = revsInPerRevsOut,
@@ -159,7 +165,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 Gateway4 = gateway4,
                                 Gateway5 = gateway5,
                                 GatewayEnabled1 = gatewayEnabled1,
-                                GatewayEnabled2 = gatewayEnabled2,  
+                                GatewayEnabled2 = gatewayEnabled2,
                                 GatewayEnabled3 = gatewayEnabled3,
                                 GatewayEnabled4 = gatewayEnabled4,
                                 GatewayEnabled5 = gatewayEnabled5
@@ -220,10 +226,15 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 inputAxisNode.InnerText = String.Format("{0}", mapping.InputAxis.Hash);
                 mappingNode.AppendChild(inputAxisNode);
 
-                // OutputChannel
-                XmlElement outputChannelNode = doc.CreateElement(OUTPUT_CHANNEL_HASH);
-                outputChannelNode.InnerText = String.Format("{0}", mapping.OutputChannel.Hash);
-                mappingNode.AppendChild(outputChannelNode);
+                // OutputChannelA
+                XmlElement outputChannelANode = doc.CreateElement(OUTPUT_CHANNEL_A_HASH);
+                outputChannelANode.InnerText = String.Format("{0}", mapping.OutputChannelA.Hash);
+                mappingNode.AppendChild(outputChannelANode);
+
+                // OutputChannelB
+                XmlElement outputChannelBNode = doc.CreateElement(OUTPUT_CHANNEL_B_HASH);
+                outputChannelBNode.InnerText = String.Format("{0}", mapping.OutputChannelB.Hash);
+                mappingNode.AppendChild(outputChannelBNode);
 
                 // AxisSensitivity
                 XmlElement axisSensitivityNode = doc.CreateElement(AXIS_SENSITIVITY);
@@ -376,7 +387,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     return channel;
             return new OutputAxis();
         }
-        public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset, ObservableCollection<InputButton> inputButtonsA, ObservableCollection<InputButton> inputButtonsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
+        public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset,
+            ObservableCollection<InputButton> inputButtonsA,
+            ObservableCollection<InputButton> inputButtonsB,
+            ObservableCollection<OutputChannel> outputAxes,
+            ObservableCollection<OutputChannel> outputButtonsA,
+            ObservableCollection<OutputChannel> outputButtonsB)
         {
 
             ObservableCollection<MappingDTO> mappings = new();
@@ -389,7 +405,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.BUTTON_TO_AXIS,
                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 10),
                     InputButtonB = getAuthentiKitInputButton(inputButtonsB, 11),
-                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
+                    OutputChannelA = getOutputChannel(outputAxes, (uint)AxisId.X),
                     AxisSensitivity = 90,
                 });
 
@@ -399,7 +415,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Rudder Trim Left",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 9),
-                    OutputChannel = getOutputChannel(outputButtons, 1),
+                    OutputChannelA = getOutputChannel(outputButtonsA, 1),
                     ButtonMultiplier = 5,
                     HoldThresholdStart = 150,
                     HoldThresholdStop = 150,
@@ -411,7 +427,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Rudder Trim Right",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 8),
-                    OutputChannel = getOutputChannel(outputButtons, 2),
+                    OutputChannelA = getOutputChannel(outputButtonsA, 2),
                     ButtonMultiplier = 5,
                     HoldThresholdStart = 150,
                     HoldThresholdStop = 150,
@@ -423,7 +439,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Flaps Up",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 6),
-                    OutputChannel = getOutputChannel(outputButtons, 3),
+                    OutputChannelA = getOutputChannel(outputButtonsA, 3),
                     ButtonMultiplier = 1,
                     HoldThresholdStart = 0,
                     HoldThresholdStop = 500,
@@ -435,7 +451,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     Name = "Flaps Down",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 7),
-                    OutputChannel = getOutputChannel(outputButtons, 4),
+                    OutputChannelA = getOutputChannel(outputButtonsA, 4),
                     ButtonMultiplier = 1,
                     HoldThresholdStart = 0,
                     HoldThresholdStop = 500,
@@ -461,7 +477,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.BUTTON_TO_AXIS,
                     InputButtonA = GetInputButton(-102191463, inputButtonsA),
                     InputButtonB = GetInputButton(-102191464, inputButtonsB),
-                    OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
+                    OutputChannelA = getOutputChannel(outputAxes, (uint)AxisId.X),
                     AxisSensitivity = 360,
                 });
             }

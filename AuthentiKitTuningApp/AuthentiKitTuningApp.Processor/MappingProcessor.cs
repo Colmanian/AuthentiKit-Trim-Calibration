@@ -167,8 +167,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("Activating MappingProcessor with type {0}", _mapping.TypeId);
             if (_mapping.TypeId == MappingType.BUTTON_TO_BUTTON)
             {
-                Debug.WriteLine("Which means button, and the output channel is " + _mapping.OutputChannel.Name);
-                if (_mapping.OutputChannel is OutputButton outputButton)
+                Debug.WriteLine("Which means button, and the output channel is " + _mapping.OutputChannelA.Name);
+                if (_mapping.OutputChannelA is OutputButton outputButton)
                 {
                     Debug.WriteLine("so creating new Button Processor...");
                     _buttonTobuttonProcessor = new ButtonToButtonProcessor(_mapping.ButtonMultiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
@@ -176,8 +176,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             else if (_mapping.TypeId == MappingType.BUTTON_TO_AXIS)
             {
-                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);
-                if (_mapping.OutputChannel is OutputAxis outputAxis)
+                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannelA.Name);
+                if (_mapping.OutputChannelA is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Axis Processor...");
                     _buttonToaxisProcessor = new ButtonToAxisProcessor(_mapping.AxisSensitivity, outputAxis);
@@ -185,8 +185,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             else if (_mapping.TypeId == MappingType.ENCODER_TO_AXIS)
             {
-                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannel.Name);
-                if (_mapping.OutputChannel is OutputAxis outputAxis)
+                Debug.WriteLine("Which means axis, and the output channel is " + _mapping.OutputChannelA.Name);
+                if (_mapping.OutputChannelA is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Encoder to Axis Processor...");
                     _encoderToAxisProcessor = new EncoderToAxisProcessor(_mapping.EncoderPPR, _mapping.RevsInPerRevsOut, outputAxis);
@@ -194,8 +194,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             else if (_mapping.TypeId == MappingType.AXIS_TO_AXIS)
             {
-                Debug.WriteLine("Which means axis to axis, and the output channel is " + _mapping.OutputChannel.Name);
-                if (_mapping.OutputChannel is OutputAxis outputAxis)
+                Debug.WriteLine("Which means axis to axis, and the output channel is " + _mapping.OutputChannelA.Name);
+                if (_mapping.OutputChannelA is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Axis to Axis Processor...");
                     _axisToAxisProcessor = new AxisToAxisProcessor(inputAxis: _mapping.InputAxis, outputAxis: outputAxis, flipped: _mapping.Flipped);

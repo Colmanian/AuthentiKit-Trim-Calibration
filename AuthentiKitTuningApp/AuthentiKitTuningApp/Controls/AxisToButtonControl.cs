@@ -23,16 +23,16 @@ namespace ATC_Windows_Forms_App.Controls
             cbInputAxis.DataBindings.Add("SelectedValue", MappingBindingSource, "InputAxisHash");
 
             // Output A
-            cbOutputButton1.DataSource = viewModel.OutputButtons;
+            cbOutputButton1.DataSource = viewModel.OutputButtonsA;
             cbOutputButton1.DisplayMember = "Name";
             cbOutputButton1.ValueMember = "Hash";
-            cbOutputButton1.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonHash");
+            cbOutputButton1.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonAHash");
             
             // Output B
-            cbOutputButton2.DataSource = viewModel.OutputButtons;
+            cbOutputButton2.DataSource = viewModel.OutputButtonsB;
             cbOutputButton2.DisplayMember = "Name";
             cbOutputButton2.ValueMember = "Hash";
-            cbOutputButton2.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonHash");
+            cbOutputButton2.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonBHash");
 
             // Gateways
             numericUpDown1.DataBindings.Add("Value", MappingBindingSource, "Gateway1");
@@ -151,6 +151,38 @@ namespace ATC_Windows_Forms_App.Controls
             if (numericUpDown5.Focused)
             {
                 foreach (Binding b in numericUpDown5.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void cbOutputButton1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputButton1.Focused)
+            {
+                foreach (Binding b in cbOutputButton1.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void cbOutputButton2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputButton2.Focused)
+            {
+                foreach (Binding b in cbOutputButton2.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+        private void cbInputAxis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbInputAxis.Focused)
+            {
+                foreach (Binding b in cbInputAxis.DataBindings)
                 {
                     b.WriteValue();
                 }

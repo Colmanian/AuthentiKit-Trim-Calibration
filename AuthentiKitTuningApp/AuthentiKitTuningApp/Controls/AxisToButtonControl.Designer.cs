@@ -196,6 +196,7 @@
             this.cbOutputButton2.Name = "cbOutputButton2";
             this.cbOutputButton2.Size = new System.Drawing.Size(369, 23);
             this.cbOutputButton2.TabIndex = 23;
+            this.cbOutputButton2.SelectedIndexChanged += new System.EventHandler(this.cbOutputButton2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -216,6 +217,7 @@
             this.cbOutputButton1.Name = "cbOutputButton1";
             this.cbOutputButton1.Size = new System.Drawing.Size(369, 23);
             this.cbOutputButton1.TabIndex = 21;
+            this.cbOutputButton1.SelectedIndexChanged += new System.EventHandler(this.cbOutputButton1_SelectedIndexChanged);
             // 
             // cbInputAxis
             // 
@@ -228,6 +230,7 @@
             this.cbInputAxis.Name = "cbInputAxis";
             this.cbInputAxis.Size = new System.Drawing.Size(369, 23);
             this.cbInputAxis.TabIndex = 20;
+            this.cbInputAxis.SelectedIndexChanged += new System.EventHandler(this.cbInputAxis_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -23,10 +23,10 @@ namespace ATC_Windows_Forms_App.Controls
             cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonAHash");
 
             // Output
-            cbOutputButton.DataSource = viewModel.OutputButtons;
+            cbOutputButton.DataSource = viewModel.OutputButtonsA;
             cbOutputButton.DisplayMember = "Name";
             cbOutputButton.ValueMember = "Hash";
-            cbOutputButton.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonHash");
+            cbOutputButton.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonAHash");
 
             // Multiplier
             tbButtonMultiplier.DataBindings.Add("Value", MappingBindingSource, "ButtonMultiplier");

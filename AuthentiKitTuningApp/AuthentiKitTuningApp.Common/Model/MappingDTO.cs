@@ -7,7 +7,8 @@
             Name = "";
             TypeId = MappingType.BUTTON_TO_AXIS;
             Active = false;
-            OutputChannel = new();
+            OutputChannelA = new();
+            OutputChannelB = new();
             ButtonMultiplier = 1;
             AxisSensitivity = 1;
             EncoderPPR = 24;
@@ -36,8 +37,10 @@
         public string Name { get; set; } // Both
         public int TypeId { get; set; } // Both
         public bool Active { get; set; } // Both
-        public OutputChannel OutputChannel { get; set; } // Both
-        public int OutputChannelId { get; set; } // Both
+        public OutputChannel OutputChannelA { get; set; } // Both
+        public OutputChannel OutputChannelB { get; set; } // Both
+        public int OutputChannelAId { get; set; } // Both
+        public int OutputChannelBId { get; set; } // Both
         public int ButtonMultiplier { get; set; } // Button Only
         public int AxisSensitivity { get; set; } // Axis Only
         public int EncoderPPR { get; set; } // Encoder Axis Only

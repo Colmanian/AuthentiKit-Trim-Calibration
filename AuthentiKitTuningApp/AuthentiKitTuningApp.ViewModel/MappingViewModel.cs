@@ -16,19 +16,22 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private readonly ObservableCollection<InputButton> InputButtonsB;
         private readonly ObservableCollection<InputAxis> InputAxes;
         private readonly ObservableCollection<OutputChannel> OutputAxes;
-        private readonly ObservableCollection<OutputChannel> OutputButtons;
+        private readonly ObservableCollection<OutputChannel> OutputButtonsA;
+        private readonly ObservableCollection<OutputChannel> OutputButtonsB;
 
         public MappingViewModel(MappingDTO mapping, ObservableCollection<InputButton> inputButtonsA,
             ObservableCollection<InputButton> inputButtonsB,
             ObservableCollection<InputAxis> inputAxes,
             ObservableCollection<OutputChannel> outputAxes,
-            ObservableCollection<OutputChannel> outputButtons)
+            ObservableCollection<OutputChannel> outputButtonsA,
+            ObservableCollection<OutputChannel> outputButtonsB)
         {
             InputButtonsA = inputButtonsA;
             InputButtonsB = inputButtonsB;
             InputAxes = inputAxes;
             OutputAxes = outputAxes;
-            OutputButtons = outputButtons;
+            OutputButtonsA = outputButtonsA;
+            OutputButtonsB = outputButtonsB;
             _mappingProcessor = new MappingProcessor();
             _inputDetector = new InputDetector();
             _mapping = mapping;
@@ -87,7 +90,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             get
             {
-                if (string.IsNullOrEmpty(Name) || Activated || (_mapping.OutputChannel.VJoyDevice == 0))
+                if (string.IsNullOrEmpty(Name) || Activated || (_mapping.OutputChannelA.VJoyDevice == 0))
                     return false;
                 else
                 {
@@ -227,24 +230,36 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public int OutputAxisHash
         {
-            get => _mapping.OutputChannel.Hash;
+            get => _mapping.OutputChannelA.Hash;
             set
             {
-                if (_mapping.OutputChannel.Hash != value)
+                if (_mapping.OutputChannelA.Hash != value)
                 {
-                    _mapping.OutputChannel = GetOutputAxis(value);
+                    _mapping.OutputChannelA = GetOutputAxis(value);
                     RaisePropertyChanged();
                 }
             }
         }
-        public int OutputButtonHash
+        public int OutputButtonAHash
         {
-            get => _mapping.OutputChannel.Hash;
+            get => _mapping.OutputChannelA.Hash;
             set
             {
-                if (_mapping.OutputChannel.Hash != value)
+                if (_mapping.OutputChannelA.Hash != value)
                 {
-                    _mapping.OutputChannel = GetOutputButton(value);
+                    _mapping.OutputChannelA = GetOutputButtonA(value);
+                    RaisePropertyChanged();
+                }
+            }
+        }
+        public int OutputButtonBHash
+        {
+            get => _mapping.OutputChannelB.Hash;
+            set
+            {
+                if (_mapping.OutputChannelB.Hash != value)
+                {
+                    _mapping.OutputChannelB = GetOutputButtonB(value);
                     RaisePropertyChanged();
                 }
             }
@@ -306,9 +321,20 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
             return new OutputChannel();
         }
-        private OutputChannel GetOutputButton(int hash)
+        private OutputChannel GetOutputButtonA(int hash)
         {
-            foreach (var channel in OutputButtons)
+            foreach (var channel in OutputButtonsA)
+            {
+                if (channel.Hash == hash)
+                {
+                    return channel;
+                }
+            }
+            return new OutputChannel();
+        }
+        private OutputChannel GetOutputButtonB(int hash)
+        {
+            foreach (var channel in OutputButtonsB)
             {
                 if (channel.Hash == hash)
                 {
