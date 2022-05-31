@@ -11,7 +11,9 @@ namespace MappingManager.Common.Model
         public int AxisId { get; set; } // Integer button number
         public string Name { get; set; } // Channel name as combination of device and button
         public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for a device and button combo
-        
+        public int Min { get; set; } // Minimum calibrated value
+        public int Max { get; set; } // Max calibrated value
+
         public override int GetHashCode()
         {
             unchecked
@@ -31,7 +33,7 @@ namespace MappingManager.Common.Model
 
         override public string ToString()
         {
-            return (String.Format("{0}: Button {1}", Device, (AxisId+1)));
+            return (String.Format("{0}: {1}", Device, Name));
         }
     }
 }

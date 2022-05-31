@@ -11,7 +11,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     class AxisToAxisProcessor
     {
-        int _inputAxisId; 
+        int _inputAxisId;
+        int _minInputAxisValue;
+        int _maxInputAxisValue;
         
         vJoy _joystick;
         uint _vJoyId;
@@ -24,8 +26,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public AxisToAxisProcessor(InputAxis inputAxis, OutputAxis outputAxis, bool flipped)
         {
             _inputAxisId = inputAxis.AxisId;
+            _minInputAxisValue = inputAxis.Min;
+            _maxInputAxisValue = inputAxis.Max;
             _flipped = flipped;
-            Debug.WriteLine("Flipped: {0}", _flipped);
+            Debug.WriteLine("Min: {0}, Max: {1}, Flipped: {2}", _minInputAxisValue, _maxInputAxisValue, _flipped);
 
             // Acquire Input Axis
             //TODO
@@ -57,7 +61,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
         internal void Process(int inputAxisValue)
         {
-           Debug.WriteLine(inputAxisValue);
+          Debug.WriteLine(inputAxisValue);
         }
 
         internal void CleanUp()

@@ -109,7 +109,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             if (_mapping.TypeId == MappingType.AXIS_TO_AXIS & _axisToAxisProcessor != null)
                             {
                                 JoystickOffset axisType = (JoystickOffset)_axisToAxisProcessor.getAxisId();
-
                                 switch (axisType)
                                 {
                                     case JoystickOffset.X:
@@ -199,7 +198,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Axis to Axis Processor...");
-                    _axisToAxisProcessor = new AxisToAxisProcessor(_mapping.InputAxis, outputAxis, _mapping.Flipped);
+                    _axisToAxisProcessor = new AxisToAxisProcessor(inputAxis: _mapping.InputAxis, outputAxis: outputAxis, flipped: _mapping.Flipped);
                 }
             }
             else

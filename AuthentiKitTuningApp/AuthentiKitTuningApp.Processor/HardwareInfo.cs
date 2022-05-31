@@ -11,8 +11,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
     public static class HardwareInfo
     {
-        private static List<JoystickOffset> joystickAxisOffsets = new List<JoystickOffset>() { JoystickOffset.X, JoystickOffset.Y, JoystickOffset.Z, JoystickOffset.RotationX, JoystickOffset.RotationY, JoystickOffset.RotationZ, JoystickOffset.Sliders0, JoystickOffset.Sliders1 };
-
         public static ObservableCollection<InputButton> GetInputButtons()
         {
             ObservableCollection<InputButton> inputButtons = new();
@@ -26,7 +24,6 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     for (int i = 0; i < buttons; i++)
                     {
                         inputButtons.Add(item: new InputButton { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
-
                     }
                 }
             }
@@ -38,32 +35,70 @@ namespace AuthentiKitTrimCalibration.DataAccess
         {
             ObservableCollection<InputAxis> inputAxes = new();
             var directInput = new DirectInput();
-            foreach (var d in directInput.GetDevices())
-
+            foreach (var device in directInput.GetDevices())
             {
-                if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
+                if ((device.Subtype != 256) && (device.Type != DeviceType.Keyboard) && (device.Type != DeviceType.Mouse) && (!device.InstanceName.Contains("vJoy")))
                 {
-                    var joystick = new Joystick(directInput, d.InstanceGuid);
-                    var numberOfaxes = joystick.Capabilities.AxeCount;
-
-                    for (int i = 0; i < numberOfaxes; i++)
+                    var joystick = new Joystick(directInput, device.InstanceGuid);
+                    try
                     {
-                        try
+                        foreach (var instance in joystick.GetObjects())
                         {
-                            var name = joystick.GetObjectInfoByName(joystickAxisOffsets[i].ToString()).Name;
-                            Debug.WriteLine("+++ " + d.InstanceName + "    " + name);
-                            inputAxes.Add(item: new InputAxis { Guid = d.ProductGuid, Device = d.InstanceName, AxisId = (int)joystickAxisOffsets[i], Name = string.Format(d.InstanceName + ": " + name) });
+                            var objectProperties = joystick.GetObjectPropertiesById(instance.ObjectId);
+                            var objectInfo = joystick.GetObjectInfoById(instance.ObjectId);
+                            int offset = getOffsetFromName(instance.Name);
+                            var a = instance.ObjectType;
+                            if (instance.ObjectId.Flags == DeviceObjectTypeFlags.AbsoluteAxis)
+                            {
+                                inputAxes.Add(item: new InputAxis
+                                {
+                                    Guid = device.ProductGuid,
+                                    Device = device.InstanceName,
+                                    AxisId = offset,
+                                    Min = objectProperties.LogicalRange.Minimum,
+                                    Max = objectProperties.LogicalRange.Maximum,
+                                    Name = string.Format(device.InstanceName + " : " + instance.Name)
+                                });
+                            }
                         }
-                        catch { }
                     }
-                    /*for (int i = 0; i < buttons; i++)
-                    {
-                        inputAxes.Add(item: new InputButton { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
-
-                    }*/
+                    catch { }
                 }
             }
             return inputAxes;
+        }
+
+        private static int getOffsetFromName(String name)
+        {
+            int offset = 0;
+            switch (name)
+            {
+                case "X Axis":
+                    offset = 0;
+                    break;
+                case "Y Axis":
+                    offset = 4;
+                    break;
+                case "Z Axis":
+                    offset = 8;
+                    break;
+                case "X Rotation":
+                    offset = 12;
+                    break;
+                case "Y Rotation":
+                    offset = 0x10;
+                    break;
+                case "Z Rotation":
+                    offset = 20;
+                    break;
+                case "Dial":
+                    offset = 24;
+                    break;
+                case "Slider":
+                    offset = 28;
+                    break;
+            }
+            return offset;
         }
 
         public static ObservableCollection<OutputChannel> GetOutputAxes()
