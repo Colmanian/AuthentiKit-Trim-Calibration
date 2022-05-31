@@ -21,6 +21,11 @@ namespace ATC_Windows_Forms_App.Controls
             cbInputAxis.ValueMember = "Hash";
             cbInputAxis.DataBindings.Add("SelectedValue", MappingBindingSource, "InputAxisHash");
 
+            // Output Axis
+            cbOutputAxis.DataSource = viewModel.OutputAxes;
+            cbOutputAxis.DisplayMember = "Name";
+            cbOutputAxis.ValueMember = "Hash";
+            cbOutputAxis.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputAxisHash");
         }
         private void cbInputAxis_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -56,6 +61,16 @@ namespace ATC_Windows_Forms_App.Controls
                 pnlAxisToAxisConfig.Refresh();
                 MessageBox.Show(ex.Message, "Error detecting input",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputAxis.Focused)
+            {
+                foreach (Binding b in cbOutputAxis.DataBindings)
+                {
+                    b.WriteValue();
+                }
             }
         }
     }

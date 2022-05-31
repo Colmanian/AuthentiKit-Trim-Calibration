@@ -11,9 +11,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
     {
         private Thread _mappingThread;
         private MappingDTO _mapping;
-        private ButtonProcessor _buttonProcessor;
-        private AxisProcessor _axisProcessor;
-        private EncoderAxisProcessor _encoderAxisProcessor;
+        private ButtonToButtonProcessor _buttonProcessor;
+        private ButtonToAxisProcessor _axisProcessor;
+        private EncoderToAxisProcessor _encoderAxisProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -103,7 +103,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputButton outputButton)
                 {
                     Debug.WriteLine("so creating new Button Processor...");
-                    _buttonProcessor = new ButtonProcessor(_mapping.ButtonMultiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
+                    _buttonProcessor = new ButtonToButtonProcessor(_mapping.ButtonMultiplier, _mapping.HoldThresholdStart, _mapping.HoldThresholdStop, outputButton);
                 }
             }
             else if (_mapping.TypeId == MappingType.BUTTON_TO_AXIS)
@@ -112,7 +112,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Axis Processor...");
-                    _axisProcessor = new AxisProcessor(_mapping.AxisSensitivity, outputAxis);
+                    _axisProcessor = new ButtonToAxisProcessor(_mapping.AxisSensitivity, outputAxis);
                 }
             }
             else if (_mapping.TypeId == MappingType.ENCODER_TO_AXIS)
@@ -121,7 +121,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 if (_mapping.OutputChannel is OutputAxis outputAxis)
                 {
                     Debug.WriteLine("and creating new Encoder to Axis Processor...");
-                    _encoderAxisProcessor = new EncoderAxisProcessor(_mapping.EncoderPPR,_mapping.RevsInPerRevsOut, outputAxis);
+                    _encoderAxisProcessor = new EncoderToAxisProcessor(_mapping.EncoderPPR,_mapping.RevsInPerRevsOut, outputAxis);
                 }
             }
             else

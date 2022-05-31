@@ -9,19 +9,26 @@ using vJoyInterfaceWrap;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    class EncoderAxisProcessor
+    class ButtonToAxisProcessor
     {
-        int _outputIncrement;
+        int _sensitivity;
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyAxisNumber;
         long _maxAxisValue;
         int _axisPosition;
-        int _positiveDirection;
-        int _negativeDirection;
+        bool _priorAState;
+        bool _priorBState;
 
-        public EncoderAxisProcessor(int encoderPPR, float revsInPerRevsOut, OutputAxis outputAxis)
+        long _previousATime;
+        long _previousBTime;
+
+        readonly long BUTTON_FILTER = 0; // Ignore new button presses less than this (ms)
+
+        public ButtonToAxisProcessor(int axisSensitivity, OutputAxis outputAxis)
         {
+            Debug.WriteLine("Multiplier is {0}", axisSensitivity);
+            _sensitivity = axisSensitivity;
             _vJoyId = outputAxis.VJoyDevice;
             _vJoyAxisNumber = outputAxis.VJoyItem;
             _joystick = new vJoy();
@@ -45,57 +52,34 @@ namespace AuthentiKitTrimCalibration.DataAccess
             _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
             Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
             Centre();
-
-            // Calculate how much to move the output by for each input pulse
-            Debug.WriteLine("Encoder PPR is {0} and Revs In per Out is {1}", encoderPPR, revsInPerRevsOut);
-            float outputRevolutionSize = _maxAxisValue / revsInPerRevsOut;
-            encoderPPR *= 4; // I think I can get 4x the resolution out of the encoder using the tranistions between pulses
-            Debug.WriteLine("Modifying Encoder PPR to {0}", encoderPPR);
-            _outputIncrement = (int)(outputRevolutionSize/encoderPPR);
-            Debug.WriteLine("Output Increment calculated as {0}", _outputIncrement);
         }
         internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {
-            int seqNumber = getEncoderSequenceNumber(buttonAState, buttonBState);
 
-            if (seqNumber == _positiveDirection)
-            {
-                MoveAxisBy(_outputIncrement);
 
-            } else if (seqNumber == _negativeDirection)
+            if (_priorAState != buttonAState)
             {
-                MoveAxisBy(-_outputIncrement);
+                var timeSinceLast = (elapsedMilliseconds - _previousATime);
+                if (buttonAState && (timeSinceLast > BUTTON_FILTER)) // filter out spureous output
+                {
+                    MoveAxisBy(_sensitivity);
+                    _previousATime = elapsedMilliseconds;
+                    Debug.WriteLine("+{0} : {1}ms", _sensitivity, timeSinceLast);
+                }
+                _priorAState = buttonAState;
             }
 
-            // Work out what the next sequence number wil be if you extrapolate in the positve and negative directions
-            _positiveDirection = seqNumber + 1;
-            if (_positiveDirection > 3)
-                _positiveDirection = 0;
-            _negativeDirection = seqNumber - 1;
-            if (_negativeDirection < 0)
-                _negativeDirection = 3;
-        }
-
-        private int getEncoderSequenceNumber(bool buttonAState, bool buttonBState)
-        {
-            /*
-             * This looks a little confusing but it's just a standard 2 bit encoder sequence
-             * 00, 10, 11, 01, which I map to 0, 1, 2, 3 resectively 
-             */
-            int number = 0;
-            if (buttonAState && buttonBState)
+            if (_priorBState != buttonBState)
             {
-                number = 2;
+                var timeSinceLast = (elapsedMilliseconds - _previousBTime);
+                if (buttonBState && (timeSinceLast > BUTTON_FILTER))
+                {
+                    MoveAxisBy(-_sensitivity);
+                    _previousBTime = elapsedMilliseconds;
+                    Debug.WriteLine("-{0} : {1}ms", _sensitivity, timeSinceLast);
+                }
+                _priorBState = buttonBState;
             }
-            else if (buttonAState)
-            {
-                number = 1;
-            }
-            else if (buttonBState)
-            {
-                number = 3;
-            }
-            return number;
         }
 
         internal void CleanUp()

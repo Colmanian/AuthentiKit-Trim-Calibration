@@ -9,7 +9,7 @@ using vJoyInterfaceWrap;
 
 namespace AuthentiKitTrimCalibration.DataAccess
 {
-    class ButtonProcessor
+    class ButtonToButtonProcessor
     {
         int _multiplier;
         int _holdThresholdStart;
@@ -25,7 +25,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         const int PULSE_LENGTH = 60; //ms
 
-        public ButtonProcessor(int multiplier, int holdThresholdStart, int holdThresholdStop, OutputButton outputButton)
+        public ButtonToButtonProcessor(int multiplier, int holdThresholdStart, int holdThresholdStop, OutputButton outputButton)
         {
             _multiplier = multiplier;
             _holdThresholdStart = holdThresholdStart;
