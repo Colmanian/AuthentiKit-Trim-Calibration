@@ -26,12 +26,37 @@ namespace ATC_Windows_Forms_App.Controls
             cbOutputAxis.DisplayMember = "Name";
             cbOutputAxis.ValueMember = "Hash";
             cbOutputAxis.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputAxisHash");
+
+            // Flipped
+            chbFlip.DataBindings.Add("Checked", MappingBindingSource, "Flipped");
         }
+
         private void cbInputAxis_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbInputAxis.Focused)
             {
                 foreach (Binding b in cbInputAxis.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+        private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputAxis.Focused)
+            {
+                foreach (Binding b in cbOutputAxis.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void chbFlip_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbFlip.Focused)
+            {
+                foreach (Binding b in chbFlip.DataBindings)
                 {
                     b.WriteValue();
                 }
@@ -61,16 +86,6 @@ namespace ATC_Windows_Forms_App.Controls
                 pnlAxisToAxisConfig.Refresh();
                 MessageBox.Show(ex.Message, "Error detecting input",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void cbOutput_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbOutputAxis.Focused)
-            {
-                foreach (Binding b in cbOutputAxis.DataBindings)
-                {
-                    b.WriteValue();
-                }
             }
         }
     }

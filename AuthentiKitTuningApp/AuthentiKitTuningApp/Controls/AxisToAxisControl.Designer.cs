@@ -94,6 +94,7 @@
             this.chbFlip.TabIndex = 22;
             this.chbFlip.Text = "Flip Output Axis";
             this.chbFlip.UseVisualStyleBackColor = true;
+            this.chbFlip.CheckedChanged += new System.EventHandler(this.chbFlip_CheckedChanged);
             // 
             // label3
             // 

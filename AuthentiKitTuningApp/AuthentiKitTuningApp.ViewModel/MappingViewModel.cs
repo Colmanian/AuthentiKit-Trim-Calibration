@@ -218,6 +218,18 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
+        public bool Flipped
+        {
+            get => _mapping.Flipped;
+            set
+            {
+                if (_mapping.Flipped != value)
+                {
+                    _mapping.Flipped = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
         private InputButton GetInputButtonA(int hash)
         {
             foreach (var channel in InputButtonsA)

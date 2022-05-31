@@ -28,6 +28,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
         private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private readonly string RESET_COMMAND = "RESET_COMMAND";
+        private readonly string FLIPPED = "FLIPPED";
         private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
         private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
@@ -88,11 +89,16 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             float revsInPerRevsOut = float.Parse(mappingNode.SelectSingleNode(REVS_IN_PER_REVS_OUT).InnerText);
                             int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
                             string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
-                            
+                            bool flipped = false; // See below
 
                             if (mappingNode.SelectSingleNode(INPUT_AXIS) != null) // Backwards compatability with earlier save files than 1.2
                             {
                                 inputAxisHash = int.Parse(mappingNode.SelectSingleNode(INPUT_AXIS).InnerText);
+                            }
+
+                            if (mappingNode.SelectSingleNode(FLIPPED) != null) // Backwards compatability with earlier save files than 1.2
+                            {
+                                flipped = bool.Parse(mappingNode.SelectSingleNode(FLIPPED).InnerText);
                             }
 
                             // Create Mapping from values and add to mappings list
@@ -109,7 +115,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 EncoderPPR = encoderPPR,
                                 RevsInPerRevsOut = revsInPerRevsOut,
                                 ButtonMultiplier = buttonMultiplier,
-                                ResetCommand = resetCommand
+                                ResetCommand = resetCommand,
+                                Flipped = flipped
                             });
                         }
                     }
@@ -196,6 +203,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
                 resetCommandNode.InnerText = mapping.ResetCommand;
                 mappingNode.AppendChild(resetCommandNode);
+
+                // ResetCommand
+                XmlElement flippedNode = doc.CreateElement(FLIPPED);
+                flippedNode.InnerText = String.Format("{0}", mapping.Flipped);
+                mappingNode.AppendChild(flippedNode);
 
                 // Add to group
                 groupNode.AppendChild(mappingNode);
