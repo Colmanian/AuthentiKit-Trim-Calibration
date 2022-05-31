@@ -18,6 +18,7 @@
             ResetCommand = "";
             HoldThresholdStart = 500;
             HoldThresholdStop = 1000;
+            Flipped = false;
             Errored = false;
             ErrorMessage = "";
         }
@@ -37,6 +38,7 @@
         public string ResetCommand { get; set; } // Axis Only
         public int HoldThresholdStart { get; set; } // Button Only
         public int HoldThresholdStop { get; set; } // Button Only
+        public bool Flipped { get; set; }// AxisToAxis Only
         public bool Errored { get; set; }
         public string ErrorMessage { get; set; }
     }

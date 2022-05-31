@@ -52,7 +52,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         {
                             var name = joystick.GetObjectInfoByName(joystickAxisOffsets[i].ToString()).Name;
                             Debug.WriteLine("+++ " + d.InstanceName + "    " + name);
-                            inputAxes.Add(item: new InputAxis { Guid = d.ProductGuid, Device = d.InstanceName, Axis = i, Name = string.Format(d.InstanceName + ": Axis " + name) });
+                            inputAxes.Add(item: new InputAxis { Guid = d.ProductGuid, Device = d.InstanceName, AxisId = (int)joystickAxisOffsets[i], Name = string.Format(d.InstanceName + ": " + name) });
                         }
                         catch { }
                     }

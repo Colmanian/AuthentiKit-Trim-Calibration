@@ -11,16 +11,19 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     class AxisToAxisProcessor
     {
+        int _inputAxisId; 
+        
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyAxisNumber;
         long _maxOutputAxisValue;
-        int _outputAxisPosition;
-
+        int _outputAxisPosition;        
+       
         bool _flipped;
 
         public AxisToAxisProcessor(InputAxis inputAxis, OutputAxis outputAxis, bool flipped)
         {
+            _inputAxisId = inputAxis.AxisId;
             _flipped = flipped;
             Debug.WriteLine("Flipped: {0}", _flipped);
 
@@ -52,9 +55,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
             Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxOutputAxisValue);
             Centre();
         }
-        internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
+        internal void Process(int inputAxisValue)
         {
-           
+           Debug.WriteLine(inputAxisValue);
         }
 
         internal void CleanUp()
@@ -88,6 +91,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 _outputAxisPosition = (int)(_maxOutputAxisValue / 2);
                 MoveAxisBy(0);
             }
+        }
+        public int getAxisId()
+        {
+            return _inputAxisId;
         }
     }
 }

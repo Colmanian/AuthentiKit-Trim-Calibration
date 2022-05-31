@@ -8,7 +8,7 @@ namespace MappingManager.Common.Model
 
         public Guid Guid { get; set; } // A unique ID for the device, that persists betweens sessions and unplugging
         public string Device { get; set; } // Name of device
-        public int Axis { get; set; } // Integer button number
+        public int AxisId { get; set; } // Integer button number
         public string Name { get; set; } // Channel name as combination of device and button
         public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for a device and button combo
         
@@ -23,7 +23,7 @@ namespace MappingManager.Common.Model
                     {
                         hash = hash * 33 + Device[i];
                     }
-                    hash = hash * 23 + Axis;
+                    hash = hash * 23 + AxisId;
                 }
                 return hash;
             }
@@ -31,7 +31,7 @@ namespace MappingManager.Common.Model
 
         override public string ToString()
         {
-            return (String.Format("{0}: Button {1}", Device, (Axis+1)));
+            return (String.Format("{0}: Button {1}", Device, (AxisId+1)));
         }
     }
 }
