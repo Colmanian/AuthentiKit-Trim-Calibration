@@ -12,9 +12,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     public class InputDetector : IInputDetector
     {
-        public InputChannel Detect()
+        public InputButton Detect()
         {
-            InputChannel detected = new();
+            InputButton detected = new();
             var directInput = new DirectInput();
             var allDevices = directInput.GetDevices();
             var joysticks = new ObservableCollection<Joystick>();
@@ -64,7 +64,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         if (currentStates[i][button] != priorStates[i][button])
                         {
                             Debug.WriteLine(devices[i].InstanceName + ": Button " + button);
-                            detected = new InputChannel
+                            detected = new InputButton
                             {
                                 Guid = devices[i].ProductGuid,
                                 Device = devices[i].InstanceName,

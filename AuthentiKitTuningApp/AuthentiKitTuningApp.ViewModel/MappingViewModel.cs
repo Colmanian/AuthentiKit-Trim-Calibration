@@ -12,15 +12,15 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private readonly IMappingProcessor _mappingProcessor;
         private readonly IInputDetector _inputDetector;
         private readonly MappingDTO _mapping;
-        private readonly ObservableCollection<InputChannel> InputChannelsA;
-        private readonly ObservableCollection<InputChannel> InputChannelsB;
+        private readonly ObservableCollection<InputButton> InputButtonsA;
+        private readonly ObservableCollection<InputButton> InputButtonsB;
         private readonly ObservableCollection<OutputChannel> OutputAxes;
         private readonly ObservableCollection<OutputChannel> OutputButtons;
 
-        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputChannel> inputsA, ObservableCollection<InputChannel> inputsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
+        public MappingViewModel(MappingDTO mapping, ObservableCollection<InputButton> inputsA, ObservableCollection<InputButton> inputsB, ObservableCollection<OutputChannel> outputAxes, ObservableCollection<OutputChannel> outputButtons)
         {
-            InputChannelsA = inputsA;
-            InputChannelsB = inputsB;
+            InputButtonsA = inputsA;
+            InputButtonsB = inputsB;
             OutputAxes = outputAxes;
             OutputButtons = outputButtons;
             _mappingProcessor = new MappingProcessor();
@@ -54,24 +54,26 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public void DetectInputA()
         {
             Deactivate();
-            _mapping.InputChannelA = _inputDetector.Detect();
+            _mapping.InputButtonA = _inputDetector.Detect();
             RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputChannelAHash));
+            RaisePropertyChanged(nameof(InputButtonAHash));
             UpdateStatus();
         }
         public void DetectInputB()
         {
             Deactivate();
-            _mapping.InputChannelB = _inputDetector.Detect();
+            _mapping.InputButtonB = _inputDetector.Detect();
             RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputChannelBHash));
+            RaisePropertyChanged(nameof(InputButtonBHash));
             UpdateStatus();
         }
 
         public bool CanApply => !string.IsNullOrEmpty(Name) && Deactivated;
-        public bool IsAxisMapping => TypeId == MappingType.AXIS;
-        public bool IsButtonMapping => TypeId == MappingType.BUTTON;
-        public bool IsEncoderAxisMapping => TypeId == MappingType.ENCODER_AXIS;
+        public bool IsButtonToAxisMapping => TypeId == MappingType.BUTTON_TO_AXIS;
+        public bool IsButtonToButtonMapping => TypeId == MappingType.BUTTON_TO_BUTTON;
+        public bool IsEncoderToAxisMapping => TypeId == MappingType.ENCODER_TO_AXIS;
+        public bool IsAxisToAxisMapping => TypeId == MappingType.AXIS_TO_AXIS;
+        public bool IsAxisToButtonMapping => TypeId == MappingType.AXIS_TO_BUTTON;
 
         public string Name
         {
@@ -140,27 +142,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
             }
         }
 
-        public int InputChannelAHash
+        public int InputButtonAHash
         {
-            get => _mapping.InputChannelA.Hash;
+            get => _mapping.InputButtonA.Hash;
             set
             {
-                if (_mapping.InputChannelA.Hash != value)
+                if (_mapping.InputButtonA.Hash != value)
                 {
-                    _mapping.InputChannelA = GetInputChannelA(value);
+                    _mapping.InputButtonA = GetInputButtonA(value);
                     RaisePropertyChanged();
                 }
             }
         }
 
-        public int InputChannelBHash
+        public int InputButtonBHash
         {
-            get => _mapping.InputChannelB.Hash;
+            get => _mapping.InputButtonB.Hash;
             set
             {
-                if (_mapping.InputChannelB.Hash != value)
+                if (_mapping.InputButtonB.Hash != value)
                 {
-                    _mapping.InputChannelB = GetInputChannelB(value);
+                    _mapping.InputButtonB = GetInputButtonB(value);
                     RaisePropertyChanged();
                 }
             }
@@ -189,27 +191,27 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 }
             }
         }
-        private InputChannel GetInputChannelA(int hash)
+        private InputButton GetInputButtonA(int hash)
         {
-            foreach (var channel in InputChannelsA)
+            foreach (var channel in InputButtonsA)
             {
                 if (channel.Hash == hash)
                 {
                     return channel;
                 }
             }
-            return new InputChannel();
+            return new InputButton();
         }
-        private InputChannel GetInputChannelB(int hash)
+        private InputButton GetInputButtonB(int hash)
         {
-            foreach (var channel in InputChannelsB)
+            foreach (var channel in InputButtonsB)
             {
                 if (channel.Hash == hash)
                 {
                     return channel;
                 }
             }
-            return new InputChannel();
+            return new InputButton();
         }
 
         private OutputChannel GetOutputAxis(int hash)

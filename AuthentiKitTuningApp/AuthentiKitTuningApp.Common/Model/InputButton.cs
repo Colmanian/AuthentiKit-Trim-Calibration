@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace MappingManager.Common.Model
 {
-    public class InputChannel
+    public class InputButton
     {
         public Guid Guid { get; set; } // A unique ID for the device, that persists betweens sessions and unplugging
         public string Device { get; set; } // Name of device

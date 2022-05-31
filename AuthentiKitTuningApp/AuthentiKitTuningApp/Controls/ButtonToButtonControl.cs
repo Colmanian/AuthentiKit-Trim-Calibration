@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App.Controls
 {
-    public partial class ButtonConfigControl : UserControl
+    public partial class ButtonToButtonControl : UserControl
     {
         private BindingSource MappingBindingSource;
-        public ButtonConfigControl()
+        public ButtonToButtonControl()
         {
             InitializeComponent();
         }
@@ -17,10 +17,10 @@ namespace ATC_Windows_Forms_App.Controls
             MappingBindingSource = mappingBindingSource;
 
             // Input A
-            cbInputA.DataSource = viewModel.InputChannelsA;
+            cbInputA.DataSource = viewModel.InputButtonsA;
             cbInputA.DisplayMember = "Name";
             cbInputA.ValueMember = "Hash";
-            cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputChannelAHash");
+            cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonAHash");
 
             // Output
             cbOutputButton.DataSource = viewModel.OutputButtons;

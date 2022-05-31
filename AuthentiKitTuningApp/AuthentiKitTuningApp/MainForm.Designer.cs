@@ -89,9 +89,10 @@ namespace ATC_Windows_Forms_App
             this.toolStripMenuItemStopAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.axisConfigControl = new ATC_Windows_Forms_App.Controls.AxisConfigControl();
-            this.buttonConfigControl = new ATC_Windows_Forms_App.Controls.ButtonConfigControl();
-            this.encoderAxisControl = new ATC_Windows_Forms_App.Controls.EncoderAxisControl();
+            this.buttonToAxisControl = new ATC_Windows_Forms_App.Controls.ButtonToAxisControl();
+            this.buttonToButtonControl = new ATC_Windows_Forms_App.Controls.ButtonToButtonControl();
+            this.encoderToAxisControl = new ATC_Windows_Forms_App.Controls.EncoderToAxisControl();
+            this.axisToAxisControl = new ATC_Windows_Forms_App.Controls.AxisToAxisControl();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -537,38 +538,46 @@ namespace ATC_Windows_Forms_App
             this.toolStripMenuItemExit.Text = "Exit";
             this.toolStripMenuItemExit.Click += new System.EventHandler(this.toolStripMenuItemExit_Click);
             // 
-            // axisConfigControl
+            // buttonToAxisControl
             // 
-            this.axisConfigControl.Location = new System.Drawing.Point(242, 218);
-            this.axisConfigControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.axisConfigControl.Name = "axisConfigControl";
-            this.axisConfigControl.Size = new System.Drawing.Size(407, 256);
-            this.axisConfigControl.TabIndex = 24;
+            this.buttonToAxisControl.Location = new System.Drawing.Point(242, 218);
+            this.buttonToAxisControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonToAxisControl.Name = "axisConfigControl";
+            this.buttonToAxisControl.Size = new System.Drawing.Size(407, 256);
+            this.buttonToAxisControl.TabIndex = 24;
             // 
-            // buttonConfigControl
+            // buttonToButtonControl
             // 
-            this.buttonConfigControl.Location = new System.Drawing.Point(242, 218);
-            this.buttonConfigControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonConfigControl.Name = "buttonConfigControl";
-            this.buttonConfigControl.Size = new System.Drawing.Size(407, 256);
-            this.buttonConfigControl.TabIndex = 25;
+            this.buttonToButtonControl.Location = new System.Drawing.Point(242, 218);
+            this.buttonToButtonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonToButtonControl.Name = "buttonConfigControl";
+            this.buttonToButtonControl.Size = new System.Drawing.Size(407, 256);
+            this.buttonToButtonControl.TabIndex = 25;
             // 
-            // encoderAxisControl
+            // encoderToAxisControl
             // 
-            this.encoderAxisControl.Location = new System.Drawing.Point(242, 218);
-            this.encoderAxisControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.encoderAxisControl.Name = "encoderAxisControl";
-            this.encoderAxisControl.Size = new System.Drawing.Size(407, 256);
-            this.encoderAxisControl.TabIndex = 26;
+            this.encoderToAxisControl.Location = new System.Drawing.Point(242, 218);
+            this.encoderToAxisControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.encoderToAxisControl.Name = "encoderAxisControl";
+            this.encoderToAxisControl.Size = new System.Drawing.Size(407, 256);
+            this.encoderToAxisControl.TabIndex = 26;
+            // 
+            // axisToAxisControl
+            // 
+            this.axisToAxisControl.Location = new System.Drawing.Point(242, 218);
+            this.axisToAxisControl.Name = "axisToAxisControl";
+            this.axisToAxisControl.Size = new System.Drawing.Size(407, 256);
+            this.axisToAxisControl.TabIndex = 27;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 535);
-            this.Controls.Add(this.encoderAxisControl);
-            this.Controls.Add(this.buttonConfigControl);
-            this.Controls.Add(this.axisConfigControl);
+            this.Controls.Add(this.axisToAxisControl);
+            this.Controls.Add(this.encoderToAxisControl);
+            this.Controls.Add(this.buttonToButtonControl);
+            this.Controls.Add(this.buttonToAxisControl);
             this.Controls.Add(this.btnRemoveMapping);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.cbMappingType);
@@ -660,9 +669,10 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit;
         private System.Windows.Forms.ToolStripMenuItem honeycombBravoMenuItem;
-        private Controls.AxisConfigControl axisConfigControl;
-        private Controls.ButtonConfigControl buttonConfigControl;
-        private Controls.EncoderAxisControl encoderAxisControl;
+        private Controls.ButtonToAxisControl buttonToAxisControl;
+        private Controls.ButtonToButtonControl buttonToButtonControl;
+        private Controls.EncoderToAxisControl encoderToAxisControl;
+        private Controls.AxisToAxisControl axisToAxisControl;
     }
 }
 

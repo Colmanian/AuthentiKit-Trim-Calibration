@@ -99,10 +99,10 @@ namespace ATC_Windows_Forms_App
 
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
-                (axisConfigControl.DataBindings.Count > 0) ||
+                (buttonToAxisControl.DataBindings.Count > 0) ||
                 (tbName.DataBindings.Count > 0) ||
                 (cbMappingType.DataBindings.Count > 0) ||
-                (buttonConfigControl.DataBindings.Count > 0);
+                (buttonToButtonControl.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
@@ -127,21 +127,26 @@ namespace ATC_Windows_Forms_App
                 btnDeactivate.DataBindings.Add("Enabled", mappingBindingSource, "Activated");
 
                 // Panel Visibility
-                axisConfigControl.Visible = true;
-                buttonConfigControl.Visible = true;
-                encoderAxisControl.Visible = true;
-                axisConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisMapping");
-                buttonConfigControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonMapping");
-                encoderAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsEncoderAxisMapping");
+                buttonToAxisControl.Visible = true;
+                buttonToButtonControl.Visible = true;
+                encoderToAxisControl.Visible = true;
+                axisToAxisControl.Visible = true;
+                buttonToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToAxisMapping");
+                buttonToButtonControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToButtonMapping");
+                encoderToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsEncoderToAxisMapping");
+                axisToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisToAxisMapping");
 
-                // axisConfigControl
-                axisConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+                // buttonToAxisControl
+                buttonToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
-                // buttonConfigControl
-                buttonConfigControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+                // buttonToButtonControl
+                buttonToButtonControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
-                // encoderAxisControl
-                encoderAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+                // encoderToAxisControl
+                encoderToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+                // axisToAxisControl
+                //axisToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
             }
 
             // Update Selected Mapping
@@ -365,7 +370,12 @@ namespace ATC_Windows_Forms_App
                 if (cbMappingType.SelectedValue != null)
                 {
                     string selected = cbMappingType.SelectedValue.ToString();
-                    if (selected.Equals("0") || selected.Equals("1") || selected.Equals("2"))
+                    if (selected.Equals("0") ||
+                        selected.Equals("1") ||
+                        selected.Equals("2") ||
+                        selected.Equals("3") ||
+                        selected.Equals("4") ||
+                        selected.Equals("5"))
                         mappingViewModel.TypeId = int.Parse(selected);
                 }
             }

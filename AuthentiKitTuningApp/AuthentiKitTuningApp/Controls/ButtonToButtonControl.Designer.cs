@@ -1,7 +1,7 @@
 ﻿
 namespace ATC_Windows_Forms_App.Controls
 {
-    partial class ButtonConfigControl
+    partial class ButtonToButtonControl
     {
         /// <summary> 
         /// Required designer variable.

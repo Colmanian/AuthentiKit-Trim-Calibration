@@ -5,10 +5,10 @@ using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App.Controls
 {
-    public partial class EncoderAxisControl : UserControl
+    public partial class EncoderToAxisControl : UserControl
     {
         private BindingSource MappingBindingSource;
-        public EncoderAxisControl()
+        public EncoderToAxisControl()
         {
             InitializeComponent();
         }
@@ -17,16 +17,16 @@ namespace ATC_Windows_Forms_App.Controls
             MappingBindingSource = mappingBindingSource;
 
             // Input A
-            cbInputA.DataSource = viewModel.InputChannelsA;
+            cbInputA.DataSource = viewModel.InputButtonsA;
             cbInputA.DisplayMember = "Name";
             cbInputA.ValueMember = "Hash";
-            cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputChannelAHash");
+            cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonAHash");
 
             // Input B
-            cbInputB.DataSource = viewModel.InputChannelsB;
+            cbInputB.DataSource = viewModel.InputButtonsB;
             cbInputB.DisplayMember = "Name";
             cbInputB.ValueMember = "Hash";
-            cbInputB.DataBindings.Add("SelectedValue", MappingBindingSource, "InputChannelBHash");
+            cbInputB.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonBHash");
 
             // Output
             cbOutputAxis.DataSource = viewModel.OutputAxes;

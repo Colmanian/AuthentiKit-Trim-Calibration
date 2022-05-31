@@ -1,7 +1,7 @@
 ﻿
 namespace ATC_Windows_Forms_App.Controls
 {
-    partial class EncoderAxisControl
+    partial class EncoderToAxisControl
     {
         /// <summary> 
         /// Required designer variable.

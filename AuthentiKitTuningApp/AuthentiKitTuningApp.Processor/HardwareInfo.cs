@@ -9,9 +9,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
 {
     public static class HardwareInfo
     {
-        public static ObservableCollection<InputChannel> GetInputChannels()
+        public static ObservableCollection<InputButton> GetInputButtons()
         {
-            ObservableCollection<InputChannel> inputChannels = new();
+            ObservableCollection<InputButton> inputButtons = new();
             var directInput = new DirectInput();
             foreach (var d in directInput.GetDevices())
             {
@@ -21,12 +21,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     var buttons = joystick.Capabilities.ButtonCount;
                     for (int i = 0; i < buttons; i++)
                     {
-                        inputChannels.Add(item: new InputChannel { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
+                        inputButtons.Add(item: new InputButton { Guid = d.ProductGuid, Device = d.InstanceName, Button = i, Name = string.Format(d.InstanceName + ": Button " + (i + 1)) });
 
                     }
                 }
             }
-            return inputChannels;
+            return inputButtons;
         }
         
         public static ObservableCollection<OutputChannel> GetOutputAxes()

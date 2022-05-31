@@ -15,8 +15,8 @@ namespace AuthentiKitTrimCalibration.ViewModel
         private IDataHandler _mainDataHandler;
         public ObservableCollection<MappingViewModel> Mappings { get; set; } = new();
         public ObservableCollection<MappingType> MappingTypes = MappingType.GetMappingTypes();
-        public ObservableCollection<InputChannel> InputChannelsA = HardwareInfo.GetInputChannels();
-        public ObservableCollection<InputChannel> InputChannelsB = HardwareInfo.GetInputChannels();
+        public ObservableCollection<InputButton> InputButtonsA = HardwareInfo.GetInputButtons();
+        public ObservableCollection<InputButton> InputButtonsB = HardwareInfo.GetInputButtons();
         public ObservableCollection<OutputChannel> OutputAxes = HardwareInfo.GetOutputAxes();
         public ObservableCollection<OutputChannel> OutputButtons = HardwareInfo.GetOutputButtons();
         public bool CanAddMapping { get; private set; }
@@ -53,17 +53,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Stop();
             Mappings.Clear();
             _mainDataHandler.SetSaveFilePath(filePath);
-            var mappings = _mainDataHandler.LoadMappings(InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
+            var mappings = _mainDataHandler.LoadMappings(InputButtonsA, InputButtonsB, OutputAxes, OutputButtons);
             foreach (var mapping in mappings)
             {
-                Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
+                Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
             }
         }
         public void NewMapping()
         {
             if (Mappings.Count < MAX_MAPPINGS)
             {
-                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
+                Mappings.Add(new MappingViewModel(_mainDataHandler.GetBlankMapping(), InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
             }
 
             if (Mappings.Count >= MAX_MAPPINGS)
@@ -111,10 +111,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Mappings.Clear();
             if (aircraft != Preset.NONE)
             {
-                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons);
+                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons);
                 foreach (var mapping in mappings)
                 {
-                    Mappings.Add(new MappingViewModel(mapping, InputChannelsA, InputChannelsB, OutputAxes, OutputButtons));
+                    Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, OutputAxes, OutputButtons));
                 }
             }
         }

@@ -5,6 +5,6 @@ namespace MappingManager.Common.DataProvider
 {
     public interface IInputDetector
     {
-        InputChannel Detect();
+        InputButton Detect();
     }
 }

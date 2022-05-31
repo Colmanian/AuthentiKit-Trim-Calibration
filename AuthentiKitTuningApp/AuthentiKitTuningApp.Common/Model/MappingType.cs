@@ -5,17 +5,19 @@ namespace MappingManager.Common.Model
 {
     public class MappingType
     {
-        private const string AXIS_STRING = "Remap to Axis";
-        private const string BUTTON_STRING = "Remap to Button";
-        private const string ENCODER_AXIS_STRING = "Remap to Axis  (Advanced)";
-        private const string ENCODER_BUTTON_STRING = "Button Multiplier  (Advanced)";
-        private const string AXIS_AXIS_STRING = "Axis to Axis";
+        private const string AXIS_TO_STRING = "Remap Button to Virtual Axis";
+        private const string BUTTON_TO_STRING = "Remap Button to Virtual Button";
+        private const string ENCODER_TO_AXIS_STRING = "Remap Encoder to Virtual Axis";
+        private const string ENCODER_TO_BUTTON_STRING = "Remap Encoder to Virtual Button";
+        private const string AXIS_TO_AXIS_STRING = "Remap Axis to Virtual Axis";
+        private const string AXIS_TO_BUTTON_STRING = "Remap Axis to Virtual Button";
 
-        public const int AXIS = 0;
-        public const int BUTTON = 1;
-        public const int ENCODER_AXIS = 2;
-        public const int ENCODER_BUTTON = 3;
-        public const int AXIS_AXIS = 4;
+        public const int BUTTON_TO_AXIS = 0;
+        public const int BUTTON_TO_BUTTON = 1;
+        public const int ENCODER_TO_AXIS = 2;
+        public const int ENCODER_TO_BUTTON = 3;
+        public const int AXIS_TO_AXIS = 4;
+        public const int AXIS_TO_BUTTON = 5;
 
 
         public int Id { get; set; }
@@ -30,27 +32,28 @@ namespace MappingManager.Common.Model
         public static ObservableCollection<MappingType> GetMappingTypes()
         {
             ObservableCollection<MappingType> types = new();
-            types.Add(new MappingType(AXIS, AXIS_STRING));
-            types.Add(new MappingType(BUTTON, BUTTON_STRING));
-            types.Add(new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING));
-            //types.Add(new MappingType(ENCODER_BUTTON, ENCODER_BUTTON_STRING));
-            //types.Add(new MappingType(AXIS_AXIS, AXIS_AXIS_STRING));
+            types.Add(new MappingType(BUTTON_TO_AXIS, AXIS_TO_STRING));
+            types.Add(new MappingType(BUTTON_TO_BUTTON, BUTTON_TO_STRING));
+            types.Add(new MappingType(ENCODER_TO_AXIS, ENCODER_TO_AXIS_STRING));
+            //types.Add(new MappingType(ENCODER_TO_BUTTON, ENCODER_TO_BUTTON_STRING));
+            types.Add(new MappingType(AXIS_TO_AXIS, AXIS_TO_AXIS_STRING));
+            //types.Add(new MappingType(AXIS_TO_BUTTON, AXIS_TO_BUTTON_STRING));
             return types;
         }
 
         public static MappingType FromString(string s)
         {
-            if (AXIS_STRING.ToLower().Equals(s.ToLower()))
+            if (AXIS_TO_STRING.ToLower().Equals(s.ToLower()))
             {
-                return new MappingType(AXIS, AXIS_STRING);
+                return new MappingType(BUTTON_TO_AXIS, AXIS_TO_STRING);
             }
-            else if (BUTTON_STRING.ToLower().Equals(s.ToLower()))
+            else if (BUTTON_TO_STRING.ToLower().Equals(s.ToLower()))
             {
-                return new MappingType(BUTTON, BUTTON_STRING);
+                return new MappingType(BUTTON_TO_BUTTON, BUTTON_TO_STRING);
             }
-            else if (ENCODER_AXIS_STRING.ToLower().Equals(s.ToLower()))
+            else if (ENCODER_TO_AXIS_STRING.ToLower().Equals(s.ToLower()))
             {
-                return new MappingType(ENCODER_AXIS, ENCODER_AXIS_STRING);
+                return new MappingType(ENCODER_TO_AXIS, ENCODER_TO_AXIS_STRING);
             }
             throw new Exception(String.Format("Unsupported MappingType: {0}", s));
         }

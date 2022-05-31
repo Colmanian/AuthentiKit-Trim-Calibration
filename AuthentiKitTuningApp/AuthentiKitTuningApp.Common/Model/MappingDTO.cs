@@ -5,15 +5,15 @@
         public MappingDTO()
         {
             Name = "";
-            TypeId = MappingType.AXIS;
+            TypeId = MappingType.BUTTON_TO_AXIS;
             Active = false;
             OutputChannel = new();
             ButtonMultiplier = 1;
             AxisSensitivity = 1;
             EncoderPPR = 24;
             RevsInPerRevsOut = 4;
-            InputChannelA = new();
-            InputChannelB = new();
+            InputButtonA = new();
+            InputButtonB = new();
             ResetCommand = "";
             HoldThresholdStart = 500;
             HoldThresholdStop = 1000;
@@ -30,8 +30,8 @@
         public int AxisSensitivity { get; set; } // Axis Only
         public int EncoderPPR { get; set; } // Encoder Axis Only
         public float RevsInPerRevsOut { get; set; } // Encoder Axis Only
-        public InputChannel InputChannelA { get; set; } // Both
-        public InputChannel InputChannelB { get; set; } // Axis Only
+        public InputButton InputButtonA { get; set; } // Both
+        public InputButton InputButtonB { get; set; } // Axis Only
         public string ResetCommand { get; set; } // Axis Only
         public int HoldThresholdStart { get; set; } // Button Only
         public int HoldThresholdStop { get; set; } // Button Only

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace ATC_Windows_Forms_App.Controls
 {
-    partial class AxisConfigControl
+    partial class ButtonToAxisControl
     {
         /// <summary> 
         /// Required designer variable.
