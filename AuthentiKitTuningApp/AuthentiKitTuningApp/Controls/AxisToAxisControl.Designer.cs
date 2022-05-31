@@ -50,12 +50,13 @@
             // DetectButton
             // 
             this.DetectButton.AutoSize = true;
-            this.DetectButton.Location = new System.Drawing.Point(332, 42);
+            this.DetectButton.Location = new System.Drawing.Point(315, 179);
             this.DetectButton.Name = "DetectButton";
             this.DetectButton.Size = new System.Drawing.Size(51, 25);
             this.DetectButton.TabIndex = 17;
             this.DetectButton.Text = "Detect";
             this.DetectButton.UseVisualStyleBackColor = true;
+            this.DetectButton.Visible = false;
             this.DetectButton.Click += new System.EventHandler(this.DetectButton_Click);
             // 
             // cbInputAxis
@@ -67,7 +68,7 @@
             this.cbInputAxis.FormattingEnabled = true;
             this.cbInputAxis.Location = new System.Drawing.Point(20, 42);
             this.cbInputAxis.Name = "cbInputAxis";
-            this.cbInputAxis.Size = new System.Drawing.Size(306, 23);
+            this.cbInputAxis.Size = new System.Drawing.Size(376, 23);
             this.cbInputAxis.TabIndex = 18;
             this.cbInputAxis.SelectedIndexChanged += new System.EventHandler(this.cbInputAxis_SelectedIndexChanged);
             // 
@@ -114,7 +115,7 @@
             this.cbOutputAxis.FormattingEnabled = true;
             this.cbOutputAxis.Location = new System.Drawing.Point(20, 96);
             this.cbOutputAxis.Name = "cbOutputAxis";
-            this.cbOutputAxis.Size = new System.Drawing.Size(375, 23);
+            this.cbOutputAxis.Size = new System.Drawing.Size(376, 23);
             this.cbOutputAxis.TabIndex = 19;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
