@@ -103,9 +103,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     var joystick = new Joystick(directInput, inputGuid);
                     joystick.Properties.BufferSize = 128;
                     joystick.Acquire();
+                    Stopwatch stopWatch = new();
+                    stopWatch.Start();
                     while (true)
                     {
-                        Thread.Sleep(200);  // WAS 2
+                        Thread.Sleep(2);  // WAS 2
                         {
                             if (_mapping.TypeId == MappingType.AXIS_TO_AXIS & _axisToAxisProcessor != null)
                             {
@@ -145,28 +147,28 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 switch (axisType)
                                 {
                                     case JoystickOffset.X:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().X);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().X, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.Y:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Y);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Y, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.Z:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Z);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Z, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.RotationX:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationX);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationX, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.RotationY:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationY);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationY, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.RotationZ:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationZ);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationZ, stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.Sliders0:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[0]);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[0], stopWatch.ElapsedMilliseconds);
                                         break;
                                     case JoystickOffset.Sliders1:
-                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[1]);
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[1], stopWatch.ElapsedMilliseconds);
                                         break;
                                     default:
                                         break;
