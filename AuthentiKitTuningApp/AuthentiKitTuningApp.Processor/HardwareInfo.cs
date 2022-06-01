@@ -59,6 +59,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                     Max = objectProperties.Range.Maximum,
                                     Name = string.Format(device.InstanceName + " : " + instance.Name)
                                 });
+                                if ((device.InstanceName == "Saitek Pro Flight Rudder Pedals") && (instance.Name == "Z Rotation")) // TODO Remove
+                                {
+                                    Debug.WriteLine("Registry would be " + GetRegistryName(inputAxes[inputAxes.Count-1]));
+                                }
                             }
                         }
                     }
@@ -66,6 +70,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 }
             }
             return inputAxes;
+        }
+
+        public static string GetRegistryName(InputAxis inputAxis)
+        {
+            string registryName = string.Empty;
+            string guid = inputAxis.Guid.ToString().ToUpper();
+            registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0,4));
+            return registryName;
         }
 
         private static int getOffsetFromName(String name)

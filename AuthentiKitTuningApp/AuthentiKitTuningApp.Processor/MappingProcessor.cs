@@ -107,7 +107,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     stopWatch.Start();
                     while (true)
                     {
-                        Thread.Sleep(2);  // WAS 2
+                        Thread.Sleep(2);
                         {
                             if (_mapping.TypeId == MappingType.AXIS_TO_AXIS & _axisToAxisProcessor != null)
                             {
