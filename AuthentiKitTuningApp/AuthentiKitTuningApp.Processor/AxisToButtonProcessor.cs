@@ -14,6 +14,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
         int _inputAxisId;
         int _inputMin;
         int _inputMax;
+        int _priorInputPercent;
+
+        List<int> _gateways;
 
         vJoy _joystick;
         uint _vJoyId;
@@ -31,23 +34,40 @@ namespace AuthentiKitTrimCalibration.DataAccess
             _inputAxisId = inputAxis.AxisId;
             _inputMin = inputAxis.Min;
             _inputMax = inputAxis.Max;
+            _priorInputPercent = 0;
 
             Debug.WriteLine("Min: {0}, Max: {1}", _inputMin, _inputMax);
 
             gateways.Sort();
-            foreach (var gateway in gateways)
+            _gateways = gateways;
+        }
+        internal void Process(int input)
+        {
+            int inputPercent = GetInputAsPercent(input);
+
+            foreach (var gateway in _gateways)
             {
-                if ((gateway > 0) && (gateway < 100))
+                if (inputPercent == _priorInputPercent)
                 {
-                    Debug.WriteLine("Gateway: {0}", gateway);
+                    // There's been no transition and you might be resting on a gateway, so ignore this.
+                }
+                else if (inputPercent <= gateway && gateway <= _priorInputPercent)
+                {
+                    Debug.WriteLine("Moving <<< Through {0}", gateway);
+                }
+                else if (_priorInputPercent <= gateway && gateway <= inputPercent)
+                {
+                    Debug.WriteLine("Moving >>> Through {0}", gateway);
                 }
             }
-
-
+            Debug.WriteLine("{0}%", inputPercent);
+            _priorInputPercent = inputPercent;
         }
-        internal void Process(int inputValue)
+
+        private int GetInputAsPercent(int input)
         {
-            Debug.WriteLine("I'm alive but useless");
+            double outputPercentage = 100.0 * (input - _inputMin) / (_inputMax - _inputMin);
+            return (int)outputPercentage;
         }
 
         internal void CleanUp()

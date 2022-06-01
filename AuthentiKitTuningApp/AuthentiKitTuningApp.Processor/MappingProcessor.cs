@@ -105,7 +105,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     joystick.Acquire();
                     while (true)
                     {
-                        Thread.Sleep(2); 
+                        Thread.Sleep(200);  // WAS 2
                         {
                             if (_mapping.TypeId == MappingType.AXIS_TO_AXIS & _axisToAxisProcessor != null)
                             {
