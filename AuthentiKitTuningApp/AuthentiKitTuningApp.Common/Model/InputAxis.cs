@@ -9,6 +9,7 @@ namespace MappingManager.Common.Model
         public Guid Guid { get; set; } // A unique ID for the device, that persists betweens sessions and unplugging
         public string Device { get; set; } // Name of device
         public int AxisId { get; set; } // Integer button number
+        public int InstanceOffset { get; set; } // Integer button number
         public string Name { get; set; } // Channel name as combination of device and button
         public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for a device and button combo
         public int Min { get; set; } // Minimum calibrated value

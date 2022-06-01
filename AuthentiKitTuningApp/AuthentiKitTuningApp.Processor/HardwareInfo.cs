@@ -46,7 +46,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                         {
                             var objectProperties = joystick.GetObjectPropertiesById(instance.ObjectId);
                             var objectInfo = joystick.GetObjectInfoById(instance.ObjectId);
-                            int offset = getOffsetFromName(instance.Name);
+                            int axisId = getAxisIdFromName(instance.Name);
+                            int instanceOffset = getInstanceOffsetFromName(instance.Name);
                             var a = instance.ObjectType;
                             if (instance.ObjectId.Flags == DeviceObjectTypeFlags.AbsoluteAxis)
                             {
@@ -54,33 +55,31 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 {
                                     Guid = device.ProductGuid,
                                     Device = device.InstanceName,
-                                    AxisId = offset,
-                                    Min = objectProperties.Range.Minimum, // Note to self: logical range is used as the calibration -> can you set this??
+                                    AxisId = axisId,
+                                    InstanceOffset = instanceOffset,
+                                    Min = objectProperties.Range.Minimum,
                                     Max = objectProperties.Range.Maximum,
                                     Name = string.Format(device.InstanceName + " : " + instance.Name)
-                                });
-                                if ((device.InstanceName == "Saitek Pro Flight Rudder Pedals") && (instance.Name == "Z Rotation")) // TODO Remove
-                                {
-                                    Debug.WriteLine("Registry would be " + GetRegistryName(inputAxes[inputAxes.Count-1]));
-                                }
+                                }) ;
                             }
                         }
                     }
                     catch { }
                 }
             }
+
+            // Debug print any calibrations found
+            foreach (var axis in inputAxes) 
+            {
+                CalibrationDTO calibration = DataHandler.GetCalibrationFromRegistry(axis);
+                if(calibration != null)
+                    if (calibration.IsSet)
+                        Debug.WriteLine("{0}/t Calibration: {1}", axis, calibration);
+            }
             return inputAxes;
         }
 
-        public static string GetRegistryName(InputAxis inputAxis)
-        {
-            string registryName = string.Empty;
-            string guid = inputAxis.Guid.ToString().ToUpper();
-            registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0,4));
-            return registryName;
-        }
-
-        private static int getOffsetFromName(String name)
+        private static int getAxisIdFromName(String name)
         {
             int offset = 0;
             switch (name)
@@ -108,6 +107,39 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     break;
                 case "Slider":
                     offset = 28;
+                    break;
+            }
+            return offset;
+        }
+
+        private static int getInstanceOffsetFromName(String name)
+        {
+            int offset = 0;
+            switch (name)
+            {
+                case "X Axis":
+                    offset = 0;
+                    break;
+                case "Y Axis":
+                    offset = 1;
+                    break;
+                case "Z Axis":
+                    offset = 2;
+                    break;
+                case "X Rotation":
+                    offset = 3;
+                    break;
+                case "Y Rotation":
+                    offset = 4;
+                    break;
+                case "Z Rotation":
+                    offset = 5;
+                    break;
+                case "Dial":
+                    offset = 6;
+                    break;
+                case "Slider":
+                    offset = 7;
                     break;
             }
             return offset;

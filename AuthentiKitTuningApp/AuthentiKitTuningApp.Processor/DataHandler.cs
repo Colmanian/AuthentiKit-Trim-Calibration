@@ -44,6 +44,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
         private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_STARTUP_APP_NAME = "AuthentiKit";
+        private static readonly string REGISTRY_CALIBRATION_SETTINGS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
 
         private string SaveFilePath;
 
@@ -179,6 +180,52 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 }
             }
             return mappings;
+        }
+        public static CalibrationDTO GetCalibrationFromRegistry(InputAxis inputAxis)
+        {
+            string registryPath = GetRegistryPath(inputAxis);
+
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath);
+
+            //if it does exist, retrieve the stored calibration   
+            Byte[] calibrationBytes = { };
+            if (key != null)
+            {
+                if (key.GetValue("Calibration", "EMPTY") != null)
+                {
+                    calibrationBytes = key.GetValue("Calibration", "EMPTY") as Byte[];
+                }
+                key.Close();
+            }
+
+            int min = 0;
+            int cen = 0;
+            int max = 0;
+            if (calibrationBytes != null)
+            {
+                if (calibrationBytes.Length == 12)
+                {
+                    min = 256 * calibrationBytes[1] + calibrationBytes[0];
+                    cen = 256 * calibrationBytes[5] + calibrationBytes[4];
+                    max = 256 * calibrationBytes[9] + calibrationBytes[8];
+                }
+            }
+            return new CalibrationDTO(min, cen, max);
+        }
+
+        // Ref: https://stackoverflow.com/a/51824114
+        public static string GetRegistryPath(InputAxis inputAxis)
+        {
+            string registryName = string.Empty;
+            string guid = inputAxis.Guid.ToString().ToUpper();
+            registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0, 4));
+
+            string registryPath = REGISTRY_CALIBRATION_SETTINGS
+                + registryName
+                + "\\Calibration\\0\\Type\\Axes\\"
+                + inputAxis.InstanceOffset;
+
+            return registryPath;
         }
 
         public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath)
