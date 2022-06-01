@@ -35,6 +35,7 @@ namespace MappingManager.Common.Model
             Gateway3 = 0;
             Gateway4 = 0;
             Gateway5 = 0;
+            Calibration = new CalibrationDTO();
         }
 
         public string Name { get; set; } // Both
@@ -67,6 +68,7 @@ namespace MappingManager.Common.Model
         public int Gateway3 { get; set; }
         public int Gateway4 { get; set; }
         public int Gateway5 { get; set; }
+        public CalibrationDTO Calibration { get; set; }
 
         public List<int> Gateways
         {

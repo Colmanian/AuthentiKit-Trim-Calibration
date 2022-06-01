@@ -262,16 +262,32 @@ namespace ATC_Windows_Forms_App
         {
             try
             {
-                DialogResult dialogResult = MessageBox.Show("Would you like to run this application on Windows Start Up?", "Start Up Options", MessageBoxButtons.YesNo);
-                bool runOnStartup = false;
-                if (dialogResult == DialogResult.Yes)
+                if (e.ClickedItem.Name.Equals("startupMenuItem"))
                 {
-                    runOnStartup = true;
+                    string message = "Would you like to run this application on Windows Start Up ?";
+                    DialogResult dialogResult = MessageBox.Show(message, "Start Up Options", MessageBoxButtons.YesNo);
+                    bool runOnStartup = false;
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        runOnStartup = true;
+                    }
+                    _viewModel.SetRunOnStartup(runOnStartup);
+                    MessageBox.Show("Run on Windows Startup set to " + runOnStartup, "Setting Updated",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                _viewModel.SetRunOnStartup(runOnStartup);
-                MessageBox.Show("Run on Windows Startup set to " + runOnStartup, "Setting Updated",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                else if (e.ClickedItem.Name.Equals("calibrationMenuItem"))
+                {
+                    string message = "Would you like persist axis calibrations along with your mappings?";
+                    DialogResult dialogResult = MessageBox.Show(message, "Start Up Options", MessageBoxButtons.YesNo);
+                    bool persist = false;
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        persist = true;
+                    }
+                    _viewModel.PersistCalibration = persist;
+                    MessageBox.Show("Persist calibrations set to " + _viewModel.PersistCalibration, "Setting Updated",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {

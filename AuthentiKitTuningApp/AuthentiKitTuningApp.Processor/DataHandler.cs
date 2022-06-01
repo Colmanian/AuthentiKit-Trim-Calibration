@@ -40,18 +40,24 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string GATEWAY_ENABLED_3 = "GATEWAY_ENABLED_3";
         private readonly string GATEWAY_ENABLED_4 = "GATEWAY_ENABLED_4";
         private readonly string GATEWAY_ENABLED_5 = "GATEWAY_ENABLED_5";
+        private readonly string CALIBRATION_MIN = "CALIBRATION_MIN";
+        private readonly string CALIBRATION_CEN = "CALIBRATION_CEN";
+        private readonly string CALIBRATION_MAX = "CALIBRATION_MAX";
         private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
+        private readonly string REGISTRY_PERSIST_CALIBRATION_PATH = "PersistCalibration";
         private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_STARTUP_APP_NAME = "AuthentiKit";
         private static readonly string REGISTRY_CALIBRATION_SETTINGS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
 
         private string SaveFilePath;
+        private bool _persistCalibration;
 
         public DataHandler()
         {
             // Get Save filepath from registry if there
             SaveFilePath = LoadFilePathFromRegistry();
+            _persistCalibration = GetPersistCalibration();
         }
 
         public MappingDTO GetBlankMapping()
@@ -114,6 +120,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             bool gatewayEnabled3 = false;
                             bool gatewayEnabled4 = false;
                             bool gatewayEnabled5 = false;
+                            CalibrationDTO Calibration = new();
 
                             // Backwards compatability with earlier save files than 1.2
                             if (mappingNode.SelectSingleNode(INPUT_AXIS) != null)
@@ -142,6 +149,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 gatewayEnabled5 = bool.Parse(mappingNode.SelectSingleNode(GATEWAY_ENABLED_5).InnerText);
                             if (mappingNode.SelectSingleNode(OUTPUT_CHANNEL_B_HASH) != null)
                                 outputChannelBHash = int.Parse(mappingNode.SelectSingleNode(OUTPUT_CHANNEL_B_HASH).InnerText);
+                            if (mappingNode.SelectSingleNode(CALIBRATION_MIN) != null)
+                                Calibration.Min = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_MIN).InnerText);
+                            if (mappingNode.SelectSingleNode(CALIBRATION_CEN) != null)
+                                Calibration.Cen = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_CEN).InnerText);
+                            if (mappingNode.SelectSingleNode(CALIBRATION_MAX) != null)
+                                Calibration.Max = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_MAX).InnerText);
 
                             // Create Mapping from values and add to mappings list
                             mappings.Add(new MappingDTO
@@ -169,8 +182,18 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 GatewayEnabled2 = gatewayEnabled2,
                                 GatewayEnabled3 = gatewayEnabled3,
                                 GatewayEnabled4 = gatewayEnabled4,
-                                GatewayEnabled5 = gatewayEnabled5
+                                GatewayEnabled5 = gatewayEnabled5,
+                                Calibration = Calibration
                             });
+
+                            // If we're to load in the calibration settings then do so
+                            if (_persistCalibration)
+                            {
+                                if (Calibration.IsSet)
+                                {
+                                    WriteCalibrationToRegistry(GetInputAxis(inputAxisHash, inputAxes), Calibration);
+                                }
+                            }
                         }
                     }
                 }
@@ -181,7 +204,32 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
             return mappings;
         }
-        public static CalibrationDTO GetCalibrationFromRegistry(InputAxis inputAxis)
+
+        public static void WriteCalibrationToRegistry(InputAxis inputAxis, CalibrationDTO calibration)
+        {
+            int min = calibration.Min;
+            int cen = calibration.Cen;
+            int max = calibration.Max;
+            Byte[] calibrationBytes = {
+                (byte)(min % 256),
+                (byte)(min / 256),
+                (byte)0,
+                (byte)0,
+                (byte)(cen % 256),
+                (byte)(cen / 256),
+                (byte)0,
+                (byte)0,
+                (byte)(max % 256),
+                (byte)(max / 256),
+                (byte)0,
+                (byte)0,
+            };
+            string registryPath = GetRegistryPath(inputAxis);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
+            key.SetValue("Calibration", calibrationBytes);
+        }
+
+        public static CalibrationDTO ReadCalibrationFromRegistry(InputAxis inputAxis)
         {
             string registryPath = GetRegistryPath(inputAxis);
 
@@ -228,12 +276,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
             return registryPath;
         }
 
-        public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath)
+        public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath, ObservableCollection<InputAxis> inputAxes)
         {
             SetSaveFilePath(filePath);
-            SaveMappings(mappings);
+            SaveMappings(mappings, inputAxes);
         }
-        public void SaveMappings(IEnumerable<MappingDTO> mappings)
+        public void SaveMappings(IEnumerable<MappingDTO> mappings, ObservableCollection<InputAxis> inputAxes)
         {
             XmlDocument doc = new();
             XmlElement configNode = doc.CreateElement(CONFIG);
@@ -241,6 +289,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             foreach (var mapping in mappings)
             {
+                // If we're to persist calibration info then get it from the registry
+                if (_persistCalibration)
+                {
+                    CalibrationDTO calibration = ReadCalibrationFromRegistry(GetInputAxis(mapping.InputAxis.Hash, inputAxes));
+                    mapping.Calibration = calibration;
+                }
+
                 XmlElement mappingNode = doc.CreateElement(MAPPING);
 
                 // Name
@@ -362,6 +417,21 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 XmlElement gatewayEnabled5 = doc.CreateElement(GATEWAY_ENABLED_5);
                 gatewayEnabled5.InnerText = String.Format("{0}", mapping.GatewayEnabled5);
                 mappingNode.AppendChild(gatewayEnabled5);
+
+                // CalibrationMin
+                XmlElement calibrationMin = doc.CreateElement(CALIBRATION_MIN);
+                calibrationMin.InnerText = String.Format("{0}", mapping.Calibration.Min);
+                mappingNode.AppendChild(calibrationMin);
+
+                // CalibrationCen
+                XmlElement calibrationCen = doc.CreateElement(CALIBRATION_CEN);
+                calibrationCen.InnerText = String.Format("{0}", mapping.Calibration.Cen);
+                mappingNode.AppendChild(calibrationCen);
+
+                // CalibrationMax
+                XmlElement calibrationMax = doc.CreateElement(CALIBRATION_MAX);
+                calibrationMax.InnerText = String.Format("{0}", mapping.Calibration.Max);
+                mappingNode.AppendChild(calibrationMax);
 
                 // Add to group
                 groupNode.AppendChild(mappingNode);
@@ -543,6 +613,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
             key.SetValue(REGISTRY_SAVE_FILE_PATH, SaveFilePath);
             key.Close();
         }
+        public void SetPersistCalibration(bool persist)
+        {
+            _persistCalibration = persist;
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
+            key.SetValue(REGISTRY_PERSIST_CALIBRATION_PATH, persist);
+            key.Close();
+        }
+
         private string LoadFilePathFromRegistry()
         {
             SaveFilePath = "";
@@ -563,6 +641,28 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 SaveFilePath = filePath;
             }
             return SaveFilePath;
+        }
+        public bool GetPersistCalibration()
+        {
+            _persistCalibration = false;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+
+            //if it does exist, retrieve the stored value  
+            string persistString = "";
+            if (key != null)
+            {
+                if (key.GetValue(REGISTRY_PERSIST_CALIBRATION_PATH) != null)
+                {
+                    persistString = key.GetValue(REGISTRY_PERSIST_CALIBRATION_PATH).ToString();
+                }
+                key.Close();
+            }
+            try
+            {
+                _persistCalibration = bool.Parse(persistString);
+            }
+            catch { }
+            return _persistCalibration;
         }
 
         public void SetRunOnStartup(bool runOnStartup)

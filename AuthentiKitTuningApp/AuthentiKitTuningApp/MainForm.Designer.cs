@@ -53,6 +53,7 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.axisToButtonControl1 = new ATC_Windows_Forms_App.Controls.AxisToButtonControl();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -93,7 +94,7 @@ namespace ATC_Windows_Forms_App
             this.buttonToButtonControl = new ATC_Windows_Forms_App.Controls.ButtonToButtonControl();
             this.encoderToAxisControl = new ATC_Windows_Forms_App.Controls.EncoderToAxisControl();
             this.axisToAxisControl = new ATC_Windows_Forms_App.Controls.AxisToAxisControl();
-            this.axisToButtonControl1 = new ATC_Windows_Forms_App.Controls.AxisToButtonControl();
+            this.calibrationMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -227,7 +228,8 @@ namespace ATC_Windows_Forms_App
             // settingsMenuItem
             // 
             this.settingsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startupMenuItem});
+            this.startupMenuItem,
+            this.calibrationMenuItem});
             this.settingsMenuItem.Name = "settingsMenuItem";
             this.settingsMenuItem.Size = new System.Drawing.Size(61, 20);
             this.settingsMenuItem.Text = "&Settings";
@@ -236,7 +238,7 @@ namespace ATC_Windows_Forms_App
             // startupMenuItem
             // 
             this.startupMenuItem.Name = "startupMenuItem";
-            this.startupMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.startupMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startupMenuItem.Text = "&Run on Windows Start?";
             // 
             // helpMenuItem
@@ -254,24 +256,24 @@ namespace ATC_Windows_Forms_App
             // userGuideMenuItem
             // 
             this.userGuideMenuItem.Name = "userGuideMenuItem";
-            this.userGuideMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.userGuideMenuItem.Size = new System.Drawing.Size(180, 22);
             this.userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             this.bugReportMenuItem.Name = "bugReportMenuItem";
-            this.bugReportMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.bugReportMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bugReportMenuItem.Text = "&Report a Bug";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // pnlNavigation
@@ -287,6 +289,13 @@ namespace ATC_Windows_Forms_App
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(652, 435);
             this.pnlNavigation.TabIndex = 1;
+            // 
+            // axisToButtonControl1
+            // 
+            this.axisToButtonControl1.Location = new System.Drawing.Point(242, 121);
+            this.axisToButtonControl1.Name = "axisToButtonControl1";
+            this.axisToButtonControl1.Size = new System.Drawing.Size(407, 256);
+            this.axisToButtonControl1.TabIndex = 2;
             // 
             // btnAddMapping
             // 
@@ -581,12 +590,11 @@ namespace ATC_Windows_Forms_App
             this.axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             this.axisToAxisControl.TabIndex = 27;
             // 
-            // axisToButtonControl1
+            // calibrationMenuItem
             // 
-            this.axisToButtonControl1.Location = new System.Drawing.Point(242, 121);
-            this.axisToButtonControl1.Name = "axisToButtonControl1";
-            this.axisToButtonControl1.Size = new System.Drawing.Size(407, 256);
-            this.axisToButtonControl1.TabIndex = 2;
+            this.calibrationMenuItem.Name = "calibrationMenuItem";
+            this.calibrationMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.calibrationMenuItem.Text = "&Save and Load Axis Calibrations?";
             // 
             // MainForm
             // 
@@ -693,6 +701,7 @@ namespace ATC_Windows_Forms_App
         private Controls.EncoderToAxisControl encoderToAxisControl;
         private Controls.AxisToAxisControl axisToAxisControl;
         private Controls.AxisToButtonControl axisToButtonControl1;
+        private System.Windows.Forms.ToolStripMenuItem calibrationMenuItem;
     }
 }
 

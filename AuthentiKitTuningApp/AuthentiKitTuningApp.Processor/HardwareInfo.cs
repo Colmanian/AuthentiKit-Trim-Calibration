@@ -71,7 +71,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             // Debug print any calibrations found
             foreach (var axis in inputAxes) 
             {
-                CalibrationDTO calibration = DataHandler.GetCalibrationFromRegistry(axis);
+                CalibrationDTO calibration = DataHandler.ReadCalibrationFromRegistry(axis);
                 if(calibration != null)
                     if (calibration.IsSet)
                         Debug.WriteLine("{0}/t Calibration: {1}", axis, calibration);

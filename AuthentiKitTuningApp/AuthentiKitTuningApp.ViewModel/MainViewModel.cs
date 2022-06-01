@@ -93,7 +93,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 mappings.Add(m.getMappingDTO());
             }
-            _mainDataHandler.SaveMappings(mappings);
+            _mainDataHandler.SaveMappings(mappings, InputAxes);
         }
         public void SaveMappings(string filePath)
         {
@@ -103,7 +103,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 mappings.Add(m.getMappingDTO());
             }
-            _mainDataHandler.SaveMappings(mappings, filePath);
+            _mainDataHandler.SaveMappings(mappings, filePath, InputAxes);
         }
 
         public void Reset(Preset aircraft)
@@ -135,6 +135,17 @@ namespace AuthentiKitTrimCalibration.ViewModel
         public void SetRunOnStartup(bool runOnStartup)
         {
             _mainDataHandler.SetRunOnStartup(runOnStartup);
+        }
+        public bool PersistCalibration
+        {
+            get
+            {
+                return _mainDataHandler.GetPersistCalibration();
+            }
+            set
+            {
+                _mainDataHandler.SetPersistCalibration(value);
+            }
         }
     }
 }
