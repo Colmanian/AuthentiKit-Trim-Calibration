@@ -15,6 +15,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private ButtonToAxisProcessor _buttonToaxisProcessor;
         private EncoderToAxisProcessor _encoderToAxisProcessor;
         private AxisToAxisProcessor _axisToAxisProcessor;
+        private AxisToButtonProcessor _axisToButtonProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -93,7 +94,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     }
 
                 }
-                // Mappings based on Button Input
+                // Mappings based on Axis Input
                 else if (_mapping.TypeId == MappingType.AXIS_TO_AXIS || _mapping.TypeId == MappingType.AXIS_TO_BUTTON)
                 {
                     // Input Event Generation
@@ -138,9 +139,40 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                     default:
                                         break;
                                 }
+                            } else if (_mapping.TypeId == MappingType.AXIS_TO_BUTTON & _axisToButtonProcessor != null)
+                            {
+                                JoystickOffset axisType = (JoystickOffset)_axisToButtonProcessor.getAxisId();
+                                switch (axisType)
+                                {
+                                    case JoystickOffset.X:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().X);
+                                        break;
+                                    case JoystickOffset.Y:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Y);
+                                        break;
+                                    case JoystickOffset.Z:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Z);
+                                        break;
+                                    case JoystickOffset.RotationX:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationX);
+                                        break;
+                                    case JoystickOffset.RotationY:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationY);
+                                        break;
+                                    case JoystickOffset.RotationZ:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().RotationZ);
+                                        break;
+                                    case JoystickOffset.Sliders0:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[0]);
+                                        break;
+                                    case JoystickOffset.Sliders1:
+                                        _axisToButtonProcessor.Process(joystick.GetCurrentState().Sliders[1]);
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                         }
-                        //TODO Axis to Button processor goes here
                     }
                 }
             }
@@ -199,6 +231,18 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     Debug.WriteLine("and creating new Axis to Axis Processor...");
                     _axisToAxisProcessor = new AxisToAxisProcessor(inputAxis: _mapping.InputAxis, outputAxis: outputAxis, flipped: _mapping.Flipped);
+                }
+            }
+            else if (_mapping.TypeId == MappingType.AXIS_TO_BUTTON)
+            {
+                Debug.WriteLine("Which means axis to button, and the output channels are {0} and {1}", _mapping.OutputChannelA.Name, _mapping.OutputChannelB.Name);
+                if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
+                {
+                    Debug.WriteLine("and creating new Axis to Button Processor...");
+                    _axisToButtonProcessor = new AxisToButtonProcessor(inputAxis: _mapping.InputAxis,
+                        outputButtonA: outputButtonA,
+                        outputButtonB: outputButtonB,
+                        gateways: _mapping.Gateways);
                 }
             }
             else

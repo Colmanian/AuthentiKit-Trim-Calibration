@@ -1,4 +1,7 @@
-﻿namespace MappingManager.Common.Model
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace MappingManager.Common.Model
 {
     public class MappingDTO
     {
@@ -64,5 +67,25 @@
         public int Gateway3 { get; set; }
         public int Gateway4 { get; set; }
         public int Gateway5 { get; set; }
+
+        public List<int> Gateways
+        {
+            get
+            {
+                List<int> list = new List<int>();
+                if ((GatewayEnabled1) && (1 <= Gateway1 && Gateway1 <= 100))
+                    list.Add(Gateway1);
+                if ((GatewayEnabled2) && (1 <= Gateway2 && Gateway2 <= 100))
+                    list.Add(Gateway2);
+                if ((GatewayEnabled3) && (1 <= Gateway3 && Gateway3 <= 100))
+                    list.Add(Gateway3);
+                if ((GatewayEnabled4) && (1 <= Gateway4 && Gateway4 <= 100))
+                    list.Add(Gateway4);
+                if ((GatewayEnabled5) && (1 <= Gateway5 && Gateway5 <= 100))
+                    list.Add(Gateway5);
+                list.Sort();
+                return list.Distinct().ToList();
+            }
+        }
     }
 }

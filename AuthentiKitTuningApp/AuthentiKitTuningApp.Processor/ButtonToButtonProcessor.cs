@@ -14,9 +14,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
         int _multiplier;
         int _holdThresholdStart;
         int _holdThresholdStop;
+
         vJoy _joystick;
         uint _vJoyId;
         uint _vJoyButtonNumber;
+
         bool _priorState;
         long _priorButtonPressTime;
         bool _holdingOn;
