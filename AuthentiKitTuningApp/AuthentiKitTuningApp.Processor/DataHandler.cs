@@ -46,18 +46,21 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
         private readonly string REGISTRY_PERSIST_CALIBRATION_PATH = "PersistCalibration";
+        private readonly string REGISTRY_START_ALL_ON_OPEN = "StartAllOnOpen";
         private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
         private readonly string REGISTRY_STARTUP_APP_NAME = "AuthentiKit";
         private static readonly string REGISTRY_CALIBRATION_SETTINGS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
 
         private string SaveFilePath;
         private bool _persistCalibration;
+        private bool _startAllOnOpen;
 
         public DataHandler()
         {
             // Get Save filepath from registry if there
             SaveFilePath = LoadFilePathFromRegistry();
             _persistCalibration = GetPersistCalibration();
+            _startAllOnOpen = GetStartAllOnOpen();
         }
 
         public MappingDTO GetBlankMapping()
@@ -679,5 +682,36 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 startUpKey.DeleteValue(REGISTRY_STARTUP_APP_NAME, false);
             }
         }
+
+        public void SetStartAllOnOpen(bool startAllOnOpen)
+        {
+            _startAllOnOpen = startAllOnOpen;
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
+            key.SetValue(REGISTRY_START_ALL_ON_OPEN, startAllOnOpen);
+            key.Close();
+        }
+        public bool GetStartAllOnOpen()
+        {
+            _startAllOnOpen = false;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+
+            //if it does exist, retrieve the stored value  
+            string startAllOnOpenString = "";
+            if (key != null)
+            {
+                if (key.GetValue(REGISTRY_START_ALL_ON_OPEN) != null)
+                {
+                    startAllOnOpenString = key.GetValue(REGISTRY_START_ALL_ON_OPEN).ToString();
+                }
+                key.Close();
+            }
+            try
+            {
+                _startAllOnOpen = bool.Parse(startAllOnOpenString);
+            }
+            catch { }
+            return _startAllOnOpen;
+        }
+
     }
 }

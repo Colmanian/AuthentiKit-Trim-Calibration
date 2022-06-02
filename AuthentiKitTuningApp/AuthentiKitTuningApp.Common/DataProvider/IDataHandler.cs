@@ -16,5 +16,7 @@ namespace MappingManager.Common.DataProvider
         void SetRunOnStartup(bool runOnStartup);
         bool GetPersistCalibration();
         void SetPersistCalibration(bool persist);
+        bool GetStartAllOnOpen();
+        void SetStartAllOnOpen(bool startAllOnOpen);
     }
 }

@@ -147,5 +147,16 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 _mainDataHandler.SetPersistCalibration(value);
             }
         }
+        public bool StartAllOnOpen
+        {
+            get
+            {
+                return _mainDataHandler.GetStartAllOnOpen();
+            }
+            set
+            {
+                _mainDataHandler.SetStartAllOnOpen(value);
+            }
+        }
     }
 }

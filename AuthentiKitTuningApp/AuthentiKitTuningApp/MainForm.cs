@@ -37,6 +37,10 @@ namespace ATC_Windows_Forms_App
             {
                 _viewModel.LoadMappings();
                 LoadFormData();
+                if (_viewModel.StartAllOnOpen)
+                {
+                    _viewModel.Start();
+                }
             }
             catch (Exception ex)
             {
@@ -278,7 +282,7 @@ namespace ATC_Windows_Forms_App
                 else if (e.ClickedItem.Name.Equals("calibrationMenuItem"))
                 {
                     string message = "Would you like persist axis calibrations along with your mappings?";
-                    DialogResult dialogResult = MessageBox.Show(message, "Start Up Options", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show(message, "Axis Calibration  Options", MessageBoxButtons.YesNo);
                     bool persist = false;
                     if (dialogResult == DialogResult.Yes)
                     {
@@ -286,6 +290,19 @@ namespace ATC_Windows_Forms_App
                     }
                     _viewModel.PersistCalibration = persist;
                     MessageBox.Show("Persist calibrations set to " + _viewModel.PersistCalibration, "Setting Updated",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (e.ClickedItem.Name.Equals("startAllMappingsMenuItem"))
+                {
+                    string message = "Would you like start all mappings whenever the app starts?";
+                    DialogResult dialogResult = MessageBox.Show(message, "Start All on Open", MessageBoxButtons.YesNo);
+                    bool startAllOnOpen = false;
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        startAllOnOpen = true;
+                    }
+                    _viewModel.StartAllOnOpen = startAllOnOpen;
+                    MessageBox.Show("Start All Mappigns is set to " + _viewModel.StartAllOnOpen, "Setting Updated",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
