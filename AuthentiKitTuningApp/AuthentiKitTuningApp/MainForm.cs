@@ -11,7 +11,10 @@ namespace ATC_Windows_Forms_App
     {
         private MainViewModel _viewModel;
 
-        private readonly string VERSION = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        private readonly string VERSION =
+            Assembly.GetExecutingAssembly().GetName().Version.Major + "."
+            + Assembly.GetExecutingAssembly().GetName().Version.Minor + "."
+            + Assembly.GetExecutingAssembly().GetName().Version.Build;
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
         private readonly string DEVELOPER_URL = "https://collotech.net";
 
@@ -48,6 +51,8 @@ namespace ATC_Windows_Forms_App
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _viewModel.Stop();
             }
+
+            lblVersion.Text = VERSION;
         }
 
 
@@ -158,6 +163,9 @@ namespace ATC_Windows_Forms_App
                 // Form Activation
                 tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
             }
+
+            // Update SaveFile Label
+            lblSaveFileName.Text = _viewModel.GetSaveFileName();
 
             // Update Selected Mapping
             if (mappingBindingSource.Current is MappingViewModel mappingViewModel)

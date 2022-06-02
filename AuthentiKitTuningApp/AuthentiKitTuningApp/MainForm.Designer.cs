@@ -32,6 +32,7 @@ namespace ATC_Windows_Forms_App
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,12 +49,14 @@ namespace ATC_Windows_Forms_App
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startupMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calibrationMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.startAllMappingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
+            this.lblSaveFileName = new System.Windows.Forms.Label();
             this.axisToButtonControl1 = new ATC_Windows_Forms_App.Controls.AxisToButtonControl();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.lsbMappings = new System.Windows.Forms.ListBox();
@@ -63,6 +66,7 @@ namespace ATC_Windows_Forms_App
             this.btnStopAll = new System.Windows.Forms.Button();
             this.btnRemoveMapping = new System.Windows.Forms.Button();
             this.btnStartAll = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
             this.mappingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -84,7 +88,6 @@ namespace ATC_Windows_Forms_App
             this.tbName = new System.Windows.Forms.TextBox();
             this.cbMappingType = new System.Windows.Forms.ComboBox();
             this.lblMappingType = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.notifyIconTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStripTray = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemStartAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,7 +98,6 @@ namespace ATC_Windows_Forms_App
             this.buttonToButtonControl = new ATC_Windows_Forms_App.Controls.ButtonToButtonControl();
             this.encoderToAxisControl = new ATC_Windows_Forms_App.Controls.EncoderToAxisControl();
             this.axisToAxisControl = new ATC_Windows_Forms_App.Controls.AxisToAxisControl();
-            this.startAllMappingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -106,6 +108,7 @@ namespace ATC_Windows_Forms_App
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.lblVersion);
             this.pnlHeader.Controls.Add(this.headerControl2);
             this.pnlHeader.Controls.Add(this.menuStrip);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -113,6 +116,19 @@ namespace ATC_Windows_Forms_App
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(649, 100);
             this.pnlHeader.TabIndex = 0;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.BackColor = System.Drawing.SystemColors.Desktop;
+            this.lblVersion.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblVersion.Location = new System.Drawing.Point(601, 82);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(45, 15);
+            this.lblVersion.TabIndex = 2;
+            this.lblVersion.Text = "version";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // headerControl2
             // 
@@ -249,6 +265,12 @@ namespace ATC_Windows_Forms_App
             this.calibrationMenuItem.Size = new System.Drawing.Size(246, 22);
             this.calibrationMenuItem.Text = "&Save and Load Axis Calibrations?";
             // 
+            // startAllMappingsMenuItem
+            // 
+            this.startAllMappingsMenuItem.Name = "startAllMappingsMenuItem";
+            this.startAllMappingsMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.startAllMappingsMenuItem.Text = "Start All Mappings on App Start?";
+            // 
             // helpMenuItem
             // 
             this.helpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -288,15 +310,28 @@ namespace ATC_Windows_Forms_App
             // 
             this.pnlNavigation.AutoSize = true;
             this.pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlNavigation.Controls.Add(this.lblSaveFileName);
             this.pnlNavigation.Controls.Add(this.axisToButtonControl1);
             this.pnlNavigation.Controls.Add(this.btnAddMapping);
             this.pnlNavigation.Controls.Add(this.lsbMappings);
             this.pnlNavigation.Controls.Add(this.pnlAddMapping);
+            this.pnlNavigation.Controls.Add(this.lblName);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.Location = new System.Drawing.Point(0, 100);
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(652, 435);
             this.pnlNavigation.TabIndex = 1;
+            // 
+            // lblSaveFileName
+            // 
+            this.lblSaveFileName.AutoSize = true;
+            this.lblSaveFileName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSaveFileName.Location = new System.Drawing.Point(3, 3);
+            this.lblSaveFileName.Name = "lblSaveFileName";
+            this.lblSaveFileName.Padding = new System.Windows.Forms.Padding(5);
+            this.lblSaveFileName.Size = new System.Drawing.Size(60, 25);
+            this.lblSaveFileName.TabIndex = 21;
+            this.lblSaveFileName.Text = "SaveFile";
             // 
             // axisToButtonControl1
             // 
@@ -320,9 +355,9 @@ namespace ATC_Windows_Forms_App
             this.lsbMappings.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lsbMappings.FormattingEnabled = true;
             this.lsbMappings.ItemHeight = 15;
-            this.lsbMappings.Location = new System.Drawing.Point(7, 15);
+            this.lsbMappings.Location = new System.Drawing.Point(7, 31);
             this.lsbMappings.Name = "lsbMappings";
-            this.lsbMappings.Size = new System.Drawing.Size(229, 319);
+            this.lsbMappings.Size = new System.Drawing.Size(229, 304);
             this.lsbMappings.TabIndex = 1;
             // 
             // pnlAddMapping
@@ -397,6 +432,15 @@ namespace ATC_Windows_Forms_App
             this.btnStartAll.Text = "Start All";
             this.btnStartAll.UseVisualStyleBackColor = true;
             this.btnStartAll.Click += new System.EventHandler(this.btnStartAll_Click);
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(261, 19);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(39, 15);
+            this.lblName.TabIndex = 20;
+            this.lblName.Text = "Name";
             // 
             // newToolStripMenuItem
             // 
@@ -514,15 +558,6 @@ namespace ATC_Windows_Forms_App
             this.lblMappingType.TabIndex = 21;
             this.lblMappingType.Text = "Mapping Type";
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(261, 119);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 15);
-            this.lblName.TabIndex = 20;
-            this.lblName.Text = "Name";
-            // 
             // notifyIconTray
             // 
             this.notifyIconTray.ContextMenuStrip = this.contextMenuStripTray;
@@ -598,12 +633,6 @@ namespace ATC_Windows_Forms_App
             this.axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             this.axisToAxisControl.TabIndex = 27;
             // 
-            // startAllMappingsMenuItem
-            // 
-            this.startAllMappingsMenuItem.Name = "startAllMappingsMenuItem";
-            this.startAllMappingsMenuItem.Size = new System.Drawing.Size(246, 22);
-            this.startAllMappingsMenuItem.Text = "Start All Mappings on App Start?";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -617,7 +646,6 @@ namespace ATC_Windows_Forms_App
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.cbMappingType);
             this.Controls.Add(this.lblMappingType);
-            this.Controls.Add(this.lblName);
             this.Controls.Add(this.pnlNavigation);
             this.Controls.Add(this.pnlHeader);
             this.HelpButton = true;
@@ -711,6 +739,8 @@ namespace ATC_Windows_Forms_App
         private Controls.AxisToButtonControl axisToButtonControl1;
         private System.Windows.Forms.ToolStripMenuItem calibrationMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startAllMappingsMenuItem;
+        private System.Windows.Forms.Label lblSaveFileName;
+        private System.Windows.Forms.Label lblVersion;
     }
 }
 
