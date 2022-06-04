@@ -15,13 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_23C98E2589304E909A89D84B9D13F8F6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_30420CB77A2040789421FB12A33F4DA1"
+        "MsmKey" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -35,12 +29,6 @@
         {
         "MsmKey" = "8:_BE7C9CBEF5344A139DD6B628D5ED744A"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_23C98E2589304E909A89D84B9D13F8F6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -102,6 +90,11 @@
             "ComponentsUrl" = "8:https://github.com/jshafer817/vJoy/releases/download/v2.1.9.1/vJoySetup.exe"
                 "Items"
                 {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.8"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.8 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.8"
+                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.6.0.x86"
                     {
                     "Name" = "8:.NET Runtime 6.0.4 (x86)"
@@ -126,7 +119,15 @@
         {
             "LaunchCondition"
             {
-                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_61D5EFA4B45147FF9EDF189679019805"
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_94FACF5C5BEE4DAAB23A92BA4D61D08D"
+                {
+                "Name" = "8:.NET Framework"
+                "Message" = "8:[VSDNETMSG]"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.8"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
+                }
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_BDF2B65A286049F788F1D279203D4029"
                 {
                 "Name" = "8:.NET Core"
                 "Message" = "8:[VSDNETCOREMSG]"
@@ -136,49 +137,10 @@
                 "Architecture" = "2:0"
                 "Runtime" = "2:0"
                 }
-                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_94FACF5C5BEE4DAAB23A92BA4D61D08D"
-                {
-                "Name" = "8:.NET Framework"
-                "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.8"
-                "AllowLaterVersions" = "11:FALSE"
-                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
-                }
             }
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_23C98E2589304E909A89D84B9D13F8F6"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:vJoyInterfaceWrap, Version=2.2.0.0, Culture=neutral, processorArchitecture=x86"
-                "ScatterAssemblies"
-                {
-                    "_23C98E2589304E909A89D84B9D13F8F6"
-                    {
-                    "Name" = "8:vJoyInterfaceWrap.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AuthentiKitTuningApp.Processor\\vJoyInterfaceWrap.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8095A12BB8E148B4973D8BD1F0CAE640"
             {
             "SourcePath" = "8:..\\AuthentiKitTuningApp\\Authentikit.ico"
@@ -276,7 +238,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
         "ProductCode" = "8:{A268854B-5F32-431F-A863-F61564700D93}"
-        "PackageCode" = "8:{63146725-2C87-4DF0-8F89-185C696C499E}"
+        "PackageCode" = "8:{A785C0F1-1295-4E40-BB33-23787D791810}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -396,32 +358,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_15ACBC226A07424BA0E11FCAEE32C1A2"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4724C7AE263B49EDB2B86ABFB1D7F05A"
             {
-            "Name" = "8:Authentikit Tuning App"
+            "Name" = "8:AuthentiKit Tuning App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_30420CB77A2040789421FB12A33F4DA1"
+            "Target" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
             "Folder" = "8:_5F4B5EEA01FD4F64BB974C83E6ECD8B7"
             "WorkingFolder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
-            "Icon" = "8:_8095A12BB8E148B4973D8BD1F0CAE640"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B07E31E6E6E54F0E92C779B84E5734EA"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DB6769B51F1D42878FA34D6CAF880E79"
             {
-            "Name" = "8:Authentikit Tuning App"
+            "Name" = "8:AuthentiKit Tuning App"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_30420CB77A2040789421FB12A33F4DA1"
+            "Target" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
             "Folder" = "8:_47836210F48040E89CF1FD4DAA8615E0"
             "WorkingFolder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
-            "Icon" = "8:_8095A12BB8E148B4973D8BD1F0CAE640"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -463,8 +425,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -708,8 +670,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1202"
+                            "Setting" = "3:2"
+                            "Value" = "8:License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license."
                             "DefaultValue" = "8:#1202"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -833,7 +795,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_30420CB77A2040789421FB12A33F4DA1"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_65D5F7BC9CD94B349E6B1D45C322FFA7"
             {
             "SourcePath" = "8:..\\AuthentiKitTuningApp\\obj\\x86\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
@@ -857,7 +819,6 @@
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
             "ShowKeyOutput" = "11:TRUE"
-            "PublishProfilePath" = "8:Properties\\PublishProfiles\\FolderProfile.pubxml"
                 "ExcludeFilters"
                 {
                 }
