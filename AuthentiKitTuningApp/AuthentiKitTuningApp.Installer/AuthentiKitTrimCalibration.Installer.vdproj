@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_2AB765847CEB4650BAF7A7E02F6518BE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +35,12 @@
         {
         "MsmKey" = "8:_BE7C9CBEF5344A139DD6B628D5ED744A"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2AB765847CEB4650BAF7A7E02F6518BE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -141,6 +153,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2AB765847CEB4650BAF7A7E02F6518BE"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:vJoyInterfaceWrap, Version=2.2.0.0, Culture=neutral, processorArchitecture=x86"
+                "ScatterAssemblies"
+                {
+                    "_2AB765847CEB4650BAF7A7E02F6518BE"
+                    {
+                    "Name" = "8:vJoyInterfaceWrap.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AuthentiKitTuningApp.Processor\\vJoyInterfaceWrap.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8095A12BB8E148B4973D8BD1F0CAE640"
             {
             "SourcePath" = "8:..\\AuthentiKitTuningApp\\Authentikit.ico"
@@ -238,7 +281,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
         "ProductCode" = "8:{A268854B-5F32-431F-A863-F61564700D93}"
-        "PackageCode" = "8:{A785C0F1-1295-4E40-BB33-23787D791810}"
+        "PackageCode" = "8:{19F79504-81D9-4CCB-9379-34727A9A25A3}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
