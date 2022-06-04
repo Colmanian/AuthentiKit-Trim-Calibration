@@ -136,9 +136,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             get
             {
-                string name = Path.GetFileName(GetSaveFilePath())[0..^4];
-                if (AnyFormDirty) { name += " (unsaved changes)"; }
-                return name;
+                return Path.GetFileName(GetSaveFilePath())[0..^4];
             }
         }
 

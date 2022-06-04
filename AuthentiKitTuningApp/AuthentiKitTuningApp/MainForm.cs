@@ -18,8 +18,6 @@ namespace ATC_Windows_Forms_App
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
         private readonly string DEVELOPER_URL = "https://collotech.net";
 
-
-
         public MainForm()
         {
             try
@@ -197,6 +195,7 @@ namespace ATC_Windows_Forms_App
                     {
                         _viewModel.SaveMappings(saveFileDialog.FileName);
                     }
+                    lblSaveFileName.Text = SaveFileName;
                 }
                 catch (Exception ex)
                 {
@@ -211,6 +210,7 @@ namespace ATC_Windows_Forms_App
                 try
                 {
                     _viewModel.SaveMappings();
+                    lblSaveFileName.Text = SaveFileName;
                     MessageBox.Show("Your config has been saved to " + _viewModel.GetSaveFilePath(), "Saved",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
