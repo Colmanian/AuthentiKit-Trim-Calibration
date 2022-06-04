@@ -18,6 +18,8 @@ namespace ATC_Windows_Forms_App
         private readonly string DOCS_URL = "https://authentikit.org/tuning";
         private readonly string DEVELOPER_URL = "https://collotech.net";
 
+
+
         public MainForm()
         {
             try
@@ -32,6 +34,7 @@ namespace ATC_Windows_Forms_App
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 _viewModel.Stop();
             }
+            Debug.WriteLine(SaveFileName);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -105,6 +108,8 @@ namespace ATC_Windows_Forms_App
             lsbMappings.DataSource = mappingBindingSource;
             lsbMappings.DisplayMember = "Name";
 
+            // Save File Name
+            lblSaveFileName.Text = SaveFileName;
 
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
@@ -118,6 +123,7 @@ namespace ATC_Windows_Forms_App
             }
             else
             {
+
                 // Mapping Name
                 tbName.DataBindings.Add("Text", mappingBindingSource, "Name");
 
@@ -163,9 +169,6 @@ namespace ATC_Windows_Forms_App
                 // Form Activation
                 tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
             }
-
-            // Update SaveFile Label
-            lblSaveFileName.Text = _viewModel.GetSaveFileName();
 
             // Update Selected Mapping
             if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
@@ -483,5 +486,7 @@ namespace ATC_Windows_Forms_App
             _viewModel.Stop();
             Application.Exit();
         }
+
+        private string SaveFileName { get { return _viewModel.SaveFileName; } }
     }
 }

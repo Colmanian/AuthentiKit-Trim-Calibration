@@ -132,9 +132,14 @@ namespace AuthentiKitTrimCalibration.ViewModel
             return _mainDataHandler.GetSaveFilePath();
         }
 
-        public string GetSaveFileName()
+        public string SaveFileName
         {
-            return Path.GetFileName(GetSaveFilePath())[0..^4];
+            get
+            {
+                string name = Path.GetFileName(GetSaveFilePath())[0..^4];
+                if (AnyFormDirty) { name += " (unsaved changes)"; }
+                return name;
+            }
         }
 
         public void SetRunOnStartup(bool runOnStartup)
@@ -161,6 +166,18 @@ namespace AuthentiKitTrimCalibration.ViewModel
             set
             {
                 _mainDataHandler.SetStartAllOnOpen(value);
+            }
+        }
+
+        public bool AnyFormDirty
+        {
+            get
+            {
+                foreach (var mapping in Mappings)
+                {
+                    if (mapping.IsDirty) { return true; }
+                }
+                return false;
             }
         }
     }

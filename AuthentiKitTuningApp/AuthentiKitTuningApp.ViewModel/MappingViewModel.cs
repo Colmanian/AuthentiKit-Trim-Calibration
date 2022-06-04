@@ -38,7 +38,6 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Deactivate();
         }
 
-
         private void UpdateStatus()
         {
             RaisePropertyChanged(nameof(Activated));
@@ -135,6 +134,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     RaisePropertyChanged();
                     RaisePropertyChanged(nameof(CanApply));
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -186,6 +186,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.TypeId = value;
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -199,6 +200,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.InputButtonA = GetInputButtonA(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -212,6 +214,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.InputButtonB = GetInputButtonB(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -225,6 +228,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.InputAxis = GetInputAxis(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -237,6 +241,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.OutputChannelA = GetOutputAxis(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -249,6 +254,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.OutputChannelA = GetOutputButtonA(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -261,6 +267,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.OutputChannelB = GetOutputButtonB(value);
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -273,6 +280,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                 {
                     _mapping.Flipped = value;
                     RaisePropertyChanged();
+                    IsDirty = true;
                 }
             }
         }
@@ -355,6 +363,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.AxisSensitivity = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -369,6 +378,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.EncoderPPR = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -383,6 +393,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.RevsInPerRevsOut = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -398,6 +409,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.ButtonMultiplier = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -412,6 +424,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.HoldThresholdStart = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -426,6 +439,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.HoldThresholdStop = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -440,6 +454,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.ResetCommand = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -462,6 +477,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.GatewayEnabled1 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -476,6 +492,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.GatewayEnabled2 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -490,6 +507,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.GatewayEnabled3 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -504,6 +522,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.GatewayEnabled4 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -518,6 +537,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.GatewayEnabled5 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -532,6 +552,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.Gateway1 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -546,6 +567,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.Gateway2 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -560,6 +582,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.Gateway3 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -574,6 +597,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.Gateway4 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
@@ -588,8 +612,12 @@ namespace AuthentiKitTrimCalibration.ViewModel
                     _mapping.Gateway5 = value;
                     RaisePropertyChanged();
                     UpdateStatus();
+                    IsDirty = true;
                 }
             }
         }
+
+        public bool IsDirty { get; set; }
+
     }
 }
