@@ -24,11 +24,14 @@ namespace AuthentiKitTrimCalibration.DataAccess
         uint _vJoyIdB;
         uint _vJoyButtonNumberB;
 
-        const int PULSE_LENGTH = 500; //ms
+        const int PULSE_LENGTH = 300; //ms
+        const int MAX_NUMBER_OF_PULSES = 5; // To avoid lots of them queueing up
         long _pulseStartA;
         long _pulseStartB;
         bool _isPulsingA;
         bool _isPulsingB;
+        int _pulseACount;
+        int _pulseBCount;
 
         public AxisToButtonProcessor(InputAxis inputAxis,
             OutputButton outputButtonA,
@@ -46,6 +49,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
             _gateways = gateways;
             _pulseStartA = 0;
             _pulseStartB = 0;
+            _pulseACount = 0;
+            _pulseBCount = 0;
 
             // Initialise the Output Buttons
             _vJoyIdA = outputButtonA.VJoyDevice;
@@ -98,47 +103,72 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     // There's been no transition and you might be resting on a gateway, so ignore this.
                 }
-                else if (_priorInputPercent <= gateway && gateway <= inputPercent)
+                else if (_priorInputPercent < gateway && gateway <= inputPercent)
                 {
-                    Debug.WriteLine("Moving >>> Through {0} from {1}%", gateway, inputPercent);
-                    PulseOnA(elapsedMilliseconds);
+                    //Debug.WriteLine("{2} \t Moving >>> Through {0} from {1} to {2}%", gateway, _priorInputPercent, inputPercent, elapsedMilliseconds);
+                    if (_pulseACount < MAX_NUMBER_OF_PULSES) { _pulseACount++; }
                 }
-                else if (inputPercent <= gateway && gateway <= _priorInputPercent)
+                else if (inputPercent <= gateway && gateway < _priorInputPercent)
                 {
-                    Debug.WriteLine("Moving <<< Through {0} from {1}%", gateway, inputPercent);
+                    //Debug.WriteLine("{2} \t Moving <<< Through {0} from {1} to {2}%", gateway, _priorInputPercent, inputPercent, elapsedMilliseconds);
                     SetOutputB(true);
-                    PulseOnB(elapsedMilliseconds);
+                    if (_pulseBCount < MAX_NUMBER_OF_PULSES) { _pulseBCount++; }
                 }
-                CheckPulseOffA(elapsedMilliseconds);
-                CheckPulseOffB(elapsedMilliseconds);
+                PulseAProcessor(elapsedMilliseconds);
+                PulseBProcessor(elapsedMilliseconds);
             }
             _priorInputPercent = inputPercent;
         }
-
-        private void PulseOnA(long elapsedMilliseconds)
+        private void PulseAProcessor(long elapsedMilliseconds)
         {
-            SetOutputA(true);
-            _isPulsingA = true;
-            _pulseStartA = elapsedMilliseconds;
-        }
-        private void PulseOnB(long elapsedMilliseconds)
-        {
-            SetOutputB(true);
-            _isPulsingB = true;
-            _pulseStartB = elapsedMilliseconds;
-        }
-        private void CheckPulseOffA(long elapsedMilliseconds)
-        {
-            if (_isPulsingA && ((elapsedMilliseconds - _pulseStartA) > PULSE_LENGTH))
+            if (_pulseACount > 0)
             {
-                SetOutputA(false);
+                if (!_isPulsingA)
+                {
+                    // start pulsing
+                    //Debug.WriteLine("{0} \t A: Start", elapsedMilliseconds);
+                    _pulseStartA = elapsedMilliseconds;
+                    _isPulsingA = true;
+                    SetOutputA(true);
+                }
+                else if ((elapsedMilliseconds - _pulseStartA) > (2 * PULSE_LENGTH))
+                {
+                    // end of a full cycle
+                    // Debug.WriteLine("{0} \t A: End", elapsedMilliseconds);
+                    _pulseACount--;
+                    _isPulsingA = false;
+
+                }
+                else if ((elapsedMilliseconds - _pulseStartA) > PULSE_LENGTH)
+                {
+                    SetOutputA(false);
+                }
             }
         }
-        private void CheckPulseOffB(long elapsedMilliseconds)
+        private void PulseBProcessor(long elapsedMilliseconds)
         {
-            if (_isPulsingB && ((elapsedMilliseconds - _pulseStartB) > PULSE_LENGTH))
+            if (_pulseBCount > 0)
             {
-                SetOutputB(false);
+                if (!_isPulsingB)
+                {
+                    // start pulsing
+                    //Debug.WriteLine("{0} \t B: Start", elapsedMilliseconds);
+                    _pulseStartB = elapsedMilliseconds;
+                    _isPulsingB = true;
+                    SetOutputB(true);
+                }
+                else if ((elapsedMilliseconds - _pulseStartB) > (2 * PULSE_LENGTH))
+                {
+                    // end of a full cycle
+                    // Debug.WriteLine("{0} \t B: End", elapsedMilliseconds);
+                    _pulseBCount--;
+                    _isPulsingB = false;
+
+                }
+                else if ((elapsedMilliseconds - _pulseStartB) > PULSE_LENGTH)
+                {
+                    SetOutputB(false);
+                }
             }
         }
 
