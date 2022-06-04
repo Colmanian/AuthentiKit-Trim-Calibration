@@ -53,6 +53,9 @@ namespace AuthentiKitTrimCalibration.DataAccess
             else
                 Debug.WriteLine("Acquired: vJoy device number {0}.", _vJoyId);
             _joystick.ResetVJD(_vJoyId);
+
+            // Initalise
+            SetOutput(false);
         }
 
         internal void Process(bool buttonAState, long elapsedMilliseconds)

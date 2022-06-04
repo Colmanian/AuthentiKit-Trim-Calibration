@@ -90,6 +90,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 _joystick.ResetVJD(_vJoyIdB);
             }
 
+            // Initialise Outputs
             SetOutputA(false);
             SetOutputB(false);
         }

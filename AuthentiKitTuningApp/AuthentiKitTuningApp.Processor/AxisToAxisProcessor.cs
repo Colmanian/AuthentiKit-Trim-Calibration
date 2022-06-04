@@ -54,6 +54,10 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _outputMax);
             Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _outputMax);
+
+            // Initialise Output
+            SetOutputAxisUsingToInputAxisScale(0);
+
         }
         internal void Process(int inputValue)
         {
