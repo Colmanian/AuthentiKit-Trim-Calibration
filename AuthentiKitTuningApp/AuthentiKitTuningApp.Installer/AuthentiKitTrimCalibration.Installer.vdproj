@@ -70,10 +70,10 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.DesktopRuntime.6.0.x64"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.6.0.x86"
                     {
-                    "Name" = "8:.NET Desktop Runtime 6.0.3 (x64)"
-                    "ProductCode" = "8:Microsoft.NetCore.DesktopRuntime.6.0.x64"
+                    "Name" = "8:.NET Runtime 6.0.5 (x86)"
+                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.6.0.x86"
                     }
                 }
             }
@@ -109,7 +109,7 @@
                     }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.6.0.x86"
                     {
-                    "Name" = "8:.NET Runtime 6.0.4 (x86)"
+                    "Name" = "8:.NET Runtime 6.0.5 (x86)"
                     "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.6.0.x86"
                     }
                 }
@@ -281,7 +281,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
         "ProductCode" = "8:{A268854B-5F32-431F-A863-F61564700D93}"
-        "PackageCode" = "8:{727C7657-0C55-4C80-890A-009473026824}"
+        "PackageCode" = "8:{F71A3358-711D-4140-B0D2-E560E2E8E889}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -481,8 +481,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:NOTE: If you're upgrading from v1.1 of the AuthentiKit App or earlier, please uninstall the existing version first."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -840,7 +840,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_65D5F7BC9CD94B349E6B1D45C322FFA7"
             {
-            "SourcePath" = "8:..\\AuthentiKitTuningApp\\obj\\x86\\Release\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\AuthentiKitTuningApp\\bin\\x86\\Release\\net6.0-windows\\publish\\win-x86\\AuthentiKitTuningApp.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
@@ -862,6 +862,7 @@
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
             "ShowKeyOutput" = "11:TRUE"
+            "PublishProfilePath" = "8:Properties\\PublishProfiles\\FolderProfile.pubxml"
                 "ExcludeFilters"
                 {
                 }

@@ -136,7 +136,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             get
             {
-                return Path.GetFileName(GetSaveFilePath())[0..^4];
+                if (SaveFileExists())
+                    return Path.GetFileName(GetSaveFilePath())[0..^4];
+                else 
+                    return "Mapping List";
             }
         }
 
