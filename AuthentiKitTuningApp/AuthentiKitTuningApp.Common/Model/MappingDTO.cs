@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MappingManager.Common.Model
@@ -30,11 +31,11 @@ namespace MappingManager.Common.Model
             GatewayEnabled3 = false;
             GatewayEnabled4 = false;
             GatewayEnabled5 = false;
-            Gateway1 = 0;
-            Gateway2 = 0;
-            Gateway3 = 0;
-            Gateway4 = 0;
-            Gateway5 = 0;
+            gw1 = 1;
+            gw2 = 25;
+            gw3 = 50;
+            gw4 = 75;
+            gw5 = 99;
             Calibration = new CalibrationDTO();
         }
 
@@ -63,11 +64,17 @@ namespace MappingManager.Common.Model
         public bool GatewayEnabled3 { get; set; }
         public bool GatewayEnabled4 { get; set; }
         public bool GatewayEnabled5 { get; set; }
-        public int Gateway1 { get; set; }
-        public int Gateway2 { get; set; }
-        public int Gateway3 { get; set; }
-        public int Gateway4 { get; set; }
-        public int Gateway5 { get; set; }
+
+        private int gw1;
+        private int gw2;
+        private int gw3;
+        private int gw4;
+        private int gw5;
+        public int Gateway1 { get { return gw1; } set { gw1 = Clamp(value, 1, 99); } }
+        public int Gateway2 { get { return gw2; } set { gw2 = Clamp(value, 1, 99); } }
+        public int Gateway3 { get { return gw3; } set { gw3 = Clamp(value, 1, 99); } }
+        public int Gateway4 { get { return gw4; } set { gw4 = Clamp(value, 1, 99); } }
+        public int Gateway5 { get { return gw5; } set { gw5 = Clamp(value, 1, 99); } }
         public CalibrationDTO Calibration { get; set; }
 
         public List<int> Gateways
@@ -89,5 +96,10 @@ namespace MappingManager.Common.Model
                 return list.Distinct().ToList();
             }
         }
+        private static int Clamp(int value, int min, int max)
+        {
+            return (value < min) ? min : (value > max) ? max : value;
+        }
+
     }
 }

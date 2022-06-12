@@ -47,7 +47,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
         }
         public void Activate()
         {
-            _mappingProcessor.Activate(_mapping);
+            if (CanApply)
+            {
+                _mappingProcessor.Activate(_mapping);
+            }
             UpdateStatus();
         }
         public void Deactivate()
@@ -89,27 +92,30 @@ namespace AuthentiKitTrimCalibration.ViewModel
         {
             get
             {
-                if (string.IsNullOrEmpty(Name) || Activated || (_mapping.OutputChannelA.VJoyDevice == 0))
+                if (string.IsNullOrEmpty(Name) || Activated)
                     return false;
                 else
                 {
-                    bool buttonA = _mapping.InputButtonA.Device != null;
-                    bool buttonB = _mapping.InputButtonB.Device != null;
-                    bool axis = _mapping.InputAxis.Device != null;
+                    bool inputButtonA = _mapping.InputButtonA.Device != null;
+                    bool inputButtonB = _mapping.InputButtonB.Device != null;
+                    bool inputAxis = _mapping.InputAxis.Device != null;
+                    bool outputChannelA = _mapping.OutputChannelA.VJoyDevice > 0;
+                    bool outputChannelB = _mapping.OutputChannelB.VJoyDevice > 0;
+                    bool atLeastOneGateway = _mapping.Gateways.Count > 0;
                     switch (_mapping.TypeId)
                     {
                         case MappingType.BUTTON_TO_AXIS:
-                            return buttonA && buttonB;
+                            return inputButtonA && inputButtonB && outputChannelA;
                         case MappingType.ENCODER_TO_AXIS:
-                            return buttonA && buttonB;
+                            return inputButtonA && inputButtonB && outputChannelA;
                         case MappingType.ENCODER_TO_BUTTON:
-                            return buttonA && buttonB;
+                            return inputButtonA && inputButtonB && outputChannelA;
                         case MappingType.AXIS_TO_AXIS:
-                            return axis;
+                            return inputAxis && outputChannelA;
                         case MappingType.AXIS_TO_BUTTON:
-                            return axis;
+                            return inputAxis && outputChannelA && outputChannelB && atLeastOneGateway;
                         case MappingType.BUTTON_TO_BUTTON:
-                            return buttonA;
+                            return inputButtonA && outputChannelA;
                     }
                 }
                 return false;

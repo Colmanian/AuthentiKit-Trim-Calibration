@@ -446,11 +446,14 @@ namespace ATC_Windows_Forms_App
 
         private void tbName_TextChanged(object sender, EventArgs e)
         {
-            if ((mappingBindingSource.Current is MappingViewModel mappingViewModel) && (_viewModel.Mappings.Count > 0))
+            if (mappingBindingSource != null)
             {
-                mappingViewModel.Name = tbName.Text;
-                tbName.SelectionStart = tbName.Text.Length;
-                tbName.SelectionLength = 0;
+                if ((mappingBindingSource.Current is MappingViewModel mappingViewModel) && (_viewModel.Mappings.Count > 0))
+                {
+                    mappingViewModel.Name = tbName.Text;
+                    tbName.SelectionStart = tbName.Text.Length;
+                    tbName.SelectionLength = 0;
+                }
             }
         }
 

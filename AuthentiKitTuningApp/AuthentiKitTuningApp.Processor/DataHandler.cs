@@ -113,11 +113,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             int buttonMultiplier = int.Parse(mappingNode.SelectSingleNode(BUTTON_MULTIPLIER).InnerText);
                             string resetCommand = mappingNode.SelectSingleNode(RESET_COMMAND).InnerText;
                             bool flipped = false; // See below
-                            int gateway1 = 0;
-                            int gateway2 = 0;
-                            int gateway3 = 0;
-                            int gateway4 = 0;
-                            int gateway5 = 0;
+                            int gateway1 = 1;
+                            int gateway2 = 1;
+                            int gateway3 = 1;
+                            int gateway4 = 1;
+                            int gateway5 = 1;
                             bool gatewayEnabled1 = false;
                             bool gatewayEnabled2 = false;
                             bool gatewayEnabled3 = false;
@@ -158,6 +158,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                 Calibration.Cen = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_CEN).InnerText);
                             if (mappingNode.SelectSingleNode(CALIBRATION_MAX) != null)
                                 Calibration.Max = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_MAX).InnerText);
+
+                           
 
                             // Create Mapping from values and add to mappings list
                             mappings.Add(new MappingDTO
