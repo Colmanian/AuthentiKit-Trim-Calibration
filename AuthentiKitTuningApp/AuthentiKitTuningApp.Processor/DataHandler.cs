@@ -210,10 +210,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public static void WriteCalibrationToRegistry(InputAxis inputAxis, CalibrationDTO calibration)
         {
-            int min = calibration.Min;
-            int cen = calibration.Cen;
-            int max = calibration.Max;
-            Byte[] calibrationBytes = {
+            if (!inputAxis.IsEmpty)
+            {
+                int min = calibration.Min;
+                int cen = calibration.Cen;
+                int max = calibration.Max;
+                Byte[] calibrationBytes = {
                 (byte)(min % 256),
                 (byte)(min / 256),
                 (byte)0,
@@ -225,11 +227,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 (byte)(max % 256),
                 (byte)(max / 256),
                 (byte)0,
-                (byte)0,
-            };
-            string registryPath = GetRegistryPath(inputAxis);
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
-            key.SetValue("Calibration", calibrationBytes);
+                (byte)0,};
+                string registryPath = GetRegistryPath(inputAxis);
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
+                if (key != null)
+                    key.SetValue("Calibration", calibrationBytes);
+            }
         }
 
         public static CalibrationDTO ReadCalibrationFromRegistry(InputAxis inputAxis)
@@ -705,7 +708,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             return runOnStartup;
         }
 
-            public void SetStartAllOnOpen(bool startAllOnOpen)
+        public void SetStartAllOnOpen(bool startAllOnOpen)
         {
             _startAllOnOpen = startAllOnOpen;
             RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);

@@ -14,6 +14,7 @@ namespace MappingManager.Common.Model
         public int Hash { get => this.GetHashCode(); } // Used as a pseudo unique reference for a device and button combo
         public int Min { get; set; } // Minimum calibrated value
         public int Max { get; set; } // Max calibrated value
+        public bool IsEmpty { get => Name == null; }
 
         public override int GetHashCode()
         {
