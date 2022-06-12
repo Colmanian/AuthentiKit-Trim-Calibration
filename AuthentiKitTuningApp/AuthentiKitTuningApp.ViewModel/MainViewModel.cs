@@ -138,15 +138,23 @@ namespace AuthentiKitTrimCalibration.ViewModel
             {
                 if (SaveFileExists())
                     return Path.GetFileName(GetSaveFilePath())[0..^4];
-                else 
+                else
                     return "Mapping List";
             }
         }
 
-        public void SetRunOnStartup(bool runOnStartup)
+        public bool RunOnStartup
         {
-            _mainDataHandler.SetRunOnStartup(runOnStartup);
+            get
+            {
+                return _mainDataHandler.GetRunOnStartup();
+            }
+            set
+            {
+                _mainDataHandler.SetRunOnStartup(value);
+            }
         }
+
         public bool PersistCalibration
         {
             get

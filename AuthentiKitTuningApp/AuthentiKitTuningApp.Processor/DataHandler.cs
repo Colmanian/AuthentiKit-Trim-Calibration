@@ -682,8 +682,30 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 startUpKey.DeleteValue(REGISTRY_STARTUP_APP_NAME, false);
             }
         }
+        public bool GetRunOnStartup()
+        {
+            bool runOnStartup = false;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
 
-        public void SetStartAllOnOpen(bool startAllOnOpen)
+            //if it does exist, retrieve the stored value  
+            string runOnStartupString = "";
+            if (key != null)
+            {
+                if (key.GetValue(REGISTRY_STARTUP_SETTINGS) != null)
+                {
+                    runOnStartupString = key.GetValue(REGISTRY_STARTUP_SETTINGS).ToString();
+                }
+                key.Close();
+            }
+            try
+            {
+                _persistCalibration = bool.Parse(runOnStartupString);
+            }
+            catch { }
+            return runOnStartup;
+        }
+
+            public void SetStartAllOnOpen(bool startAllOnOpen)
         {
             _startAllOnOpen = startAllOnOpen;
             RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);

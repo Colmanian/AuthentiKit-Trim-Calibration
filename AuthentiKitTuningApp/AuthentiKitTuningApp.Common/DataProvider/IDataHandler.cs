@@ -14,6 +14,7 @@ namespace MappingManager.Common.DataProvider
         string GetSaveFilePath();
         void SetSaveFilePath(string fileName);
         void SetRunOnStartup(bool runOnStartup);
+        bool GetRunOnStartup();
         bool GetPersistCalibration();
         void SetPersistCalibration(bool persist);
         bool GetStartAllOnOpen();

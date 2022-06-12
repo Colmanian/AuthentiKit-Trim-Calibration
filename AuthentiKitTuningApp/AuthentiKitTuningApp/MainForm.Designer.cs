@@ -255,18 +255,21 @@ namespace ATC_Windows_Forms_App
             // 
             // startupMenuItem
             // 
+            this.startupMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
             this.startupMenuItem.Name = "startupMenuItem";
             this.startupMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startupMenuItem.Text = "&Run on Windows Start?";
             // 
             // calibrationMenuItem
             // 
+            this.calibrationMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
             this.calibrationMenuItem.Name = "calibrationMenuItem";
             this.calibrationMenuItem.Size = new System.Drawing.Size(246, 22);
             this.calibrationMenuItem.Text = "&Save and Load Axis Calibrations?";
             // 
             // startAllMappingsMenuItem
             // 
+            this.startAllMappingsMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
             this.startAllMappingsMenuItem.Name = "startAllMappingsMenuItem";
             this.startAllMappingsMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startAllMappingsMenuItem.Text = "Start All Mappings on App Start?";

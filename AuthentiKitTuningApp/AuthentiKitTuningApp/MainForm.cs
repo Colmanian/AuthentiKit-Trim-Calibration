@@ -2,6 +2,7 @@
 using MappingManager.Common.Model;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -108,6 +109,14 @@ namespace ATC_Windows_Forms_App
 
             // Save File Name
             lblSaveFileName.Text = SaveFileName;
+
+            // Settings Icons
+            if (_viewModel.RunOnStartup)
+                startupMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
+            if (_viewModel.PersistCalibration)
+                calibrationMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
+            if (_viewModel.StartAllOnOpen)
+                startAllMappingsMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
 
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
@@ -282,39 +291,39 @@ namespace ATC_Windows_Forms_App
                     string message = "Would you like to run this application on Windows Start Up ?";
                     DialogResult dialogResult = MessageBox.Show(message, "Start Up Options", MessageBoxButtons.YesNo);
                     bool runOnStartup = false;
+                    startupMenuItem.Image = new Bitmap(Properties.Resources.white_circle_26aa);
                     if (dialogResult == DialogResult.Yes)
                     {
                         runOnStartup = true;
+                        startupMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
                     }
-                    _viewModel.SetRunOnStartup(runOnStartup);
-                    MessageBox.Show("Run on Windows Startup set to " + runOnStartup, "Setting Updated",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _viewModel.RunOnStartup = runOnStartup;
                 }
                 else if (e.ClickedItem.Name.Equals("calibrationMenuItem"))
                 {
                     string message = "Would you like persist axis calibrations along with your mappings?";
                     DialogResult dialogResult = MessageBox.Show(message, "Axis Calibration  Options", MessageBoxButtons.YesNo);
                     bool persist = false;
+                    calibrationMenuItem.Image = new Bitmap(Properties.Resources.white_circle_26aa);
                     if (dialogResult == DialogResult.Yes)
                     {
                         persist = true;
+                        calibrationMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
                     }
                     _viewModel.PersistCalibration = persist;
-                    MessageBox.Show("Persist calibrations set to " + _viewModel.PersistCalibration, "Setting Updated",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (e.ClickedItem.Name.Equals("startAllMappingsMenuItem"))
                 {
                     string message = "Would you like start all mappings whenever the app starts?";
                     DialogResult dialogResult = MessageBox.Show(message, "Start All on Open", MessageBoxButtons.YesNo);
                     bool startAllOnOpen = false;
+                    startAllMappingsMenuItem.Image = new Bitmap(Properties.Resources.white_circle_26aa);
                     if (dialogResult == DialogResult.Yes)
                     {
                         startAllOnOpen = true;
+                        startAllMappingsMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
                     }
                     _viewModel.StartAllOnOpen = startAllOnOpen;
-                    MessageBox.Show("Start All Mappigns is set to " + _viewModel.StartAllOnOpen, "Setting Updated",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
