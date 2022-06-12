@@ -159,7 +159,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                             if (mappingNode.SelectSingleNode(CALIBRATION_MAX) != null)
                                 Calibration.Max = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_MAX).InnerText);
 
-                           
+
 
                             // Create Mapping from values and add to mappings list
                             mappings.Add(new MappingDTO
@@ -628,7 +628,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RY),
                 });
             }
-            else if(preset == Preset.P40B)
+            else if (preset == Preset.P40B)
             {
                 // Elevator Trim Axis
                 mappings.Add(new MappingDTO
@@ -712,7 +712,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RY),
                     OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RY),
                 });
-            }else if (preset == Preset.HONEYCOMB_BRAVO)
+            }
+            else if (preset == Preset.HONEYCOMB_BRAVO)
             {
                 mappings.Add(new MappingDTO
                 {
@@ -732,6 +733,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
             return SaveFilePath;
         }
 
+        public string GetLoadDirectory()
+        {
+            if (String.IsNullOrEmpty(SaveFilePath))
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            }
+            else
+            {
+                return Path.GetDirectoryName(SaveFilePath);
+            }
+        }
         public void SetSaveFilePath(string filePath)
         {
             SaveFilePath = filePath;

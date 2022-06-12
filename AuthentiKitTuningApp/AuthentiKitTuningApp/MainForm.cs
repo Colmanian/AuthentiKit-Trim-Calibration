@@ -239,7 +239,7 @@ namespace ATC_Windows_Forms_App
                     openFileDialog.Filter = "XML Files (*.xml)|*.xml";
                     openFileDialog.FilterIndex = 0;
                     openFileDialog.DefaultExt = "xml";
-                    openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+                    openFileDialog.InitialDirectory = _viewModel.GetLoadDirectory();
                     openFileDialog.RestoreDirectory = true;
 
                     if (openFileDialog.ShowDialog() == DialogResult.OK)

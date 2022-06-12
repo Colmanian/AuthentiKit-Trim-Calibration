@@ -132,6 +132,10 @@ namespace AuthentiKitTrimCalibration.ViewModel
             return _mainDataHandler.GetSaveFilePath();
         }
 
+        public string GetLoadDirectory()
+        {
+            return _mainDataHandler.GetLoadDirectory();
+        }
         public string SaveFileName
         {
             get
