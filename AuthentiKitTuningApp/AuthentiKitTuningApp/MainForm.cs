@@ -265,9 +265,13 @@ namespace ATC_Windows_Forms_App
                 {
                     _viewModel.Reset(Preset.NONE);
                 }
-                else if (e.ClickedItem.Name.Equals("spitfireMkIXMenuItem"))
+                else if (e.ClickedItem.Name.Equals("spitfireMenuItem"))
                 {
-                    _viewModel.Reset(Preset.SPITFIRE_MKIX);
+                    _viewModel.Reset(Preset.SPITFIRE);
+                }
+                else if (e.ClickedItem.Name.Equals("p40BMenuItem"))
+                {
+                    _viewModel.Reset(Preset.P40B);
                 }
                 else if (e.ClickedItem.Name.Equals("honeycombBravoMenuItem"))
                 {

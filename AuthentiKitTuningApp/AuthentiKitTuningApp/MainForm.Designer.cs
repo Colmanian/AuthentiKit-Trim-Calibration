@@ -42,8 +42,9 @@ namespace ATC_Windows_Forms_App
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.presetsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spitfireMkIXMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spitfireMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.p40BMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -210,8 +211,9 @@ namespace ATC_Windows_Forms_App
             // presetsMenuItem
             // 
             this.presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.spitfireMkIXMenuItem,
+            this.spitfireMenuItem,
             this.honeycombBravoMenuItem,
+            this.p40BMenuItem,
             this.toolStripSeparator4,
             this.clearMenuItem});
             this.presetsMenuItem.Name = "presetsMenuItem";
@@ -219,27 +221,33 @@ namespace ATC_Windows_Forms_App
             this.presetsMenuItem.Text = "&Presets";
             this.presetsMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.presetsMenuItemClicked);
             // 
-            // spitfireMkIXMenuItem
+            // spitfireMenuItem
             // 
-            this.spitfireMkIXMenuItem.Name = "spitfireMkIXMenuItem";
-            this.spitfireMkIXMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.spitfireMkIXMenuItem.Text = "&Spitfire Mk.IX  (FlyingIron for MSFS)";
+            this.spitfireMenuItem.Name = "spitfireMenuItem";
+            this.spitfireMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.spitfireMenuItem.Text = "&Spitfire Mk.I / Mk.IX (for MSFS)";
             // 
             // honeycombBravoMenuItem
             // 
             this.honeycombBravoMenuItem.Name = "honeycombBravoMenuItem";
-            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.honeycombBravoMenuItem.Size = new System.Drawing.Size(236, 22);
             this.honeycombBravoMenuItem.Text = "&Honeycomb Bravo (for MSFS)";
+            // 
+            // p40BMenuItem
+            // 
+            this.p40BMenuItem.Name = "p40BMenuItem";
+            this.p40BMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.p40BMenuItem.Text = "&P-40B (for MSFS)";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(258, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(233, 6);
             // 
             // clearMenuItem
             // 
             this.clearMenuItem.Name = "clearMenuItem";
-            this.clearMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.clearMenuItem.Size = new System.Drawing.Size(236, 22);
             this.clearMenuItem.Text = "&Clear All";
             // 
             // settingsMenuItem
@@ -698,7 +706,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem presetsMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem spitfireMkIXMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spitfireMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearMenuItem;
         private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -744,6 +752,7 @@ namespace ATC_Windows_Forms_App
         private System.Windows.Forms.ToolStripMenuItem startAllMappingsMenuItem;
         private System.Windows.Forms.Label lblSaveFileName;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.ToolStripMenuItem p40BMenuItem;
     }
 }
 

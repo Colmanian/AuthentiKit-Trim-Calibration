@@ -113,7 +113,7 @@ namespace AuthentiKitTrimCalibration.ViewModel
             Mappings.Clear();
             if (aircraft != Preset.NONE)
             {
-                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputButtonsA, InputButtonsB, OutputAxes, OutputButtonsA, OutputButtonsB);
+                var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtonsA, OutputButtonsB);
                 foreach (var mapping in mappings)
                 {
                     Mappings.Add(new MappingViewModel(mapping, InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtonsA, OutputButtonsB));

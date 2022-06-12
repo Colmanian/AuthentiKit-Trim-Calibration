@@ -5,7 +5,17 @@ namespace MappingManager.Common.Model
 {
     public class InputAxis
     {
-
+        public enum TYPE
+        {
+            X = 0,
+            Y = 4,
+            Z = 8,
+            RX = 12,
+            RY = 16,
+            RZ = 20,
+            SL0 = 24,
+            SL1 = 28
+        }
         public Guid Guid { get; set; } // A unique ID for the device, that persists betweens sessions and unplugging
         public string Device { get; set; } // Name of device
         public int AxisId { get; set; } // Integer button number

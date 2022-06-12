@@ -489,21 +489,43 @@ namespace AuthentiKitTrimCalibration.DataAccess
         }
 
         /// Returns an AuthentiKit or BU0836 input channel for the specified button, if available
-        private InputButton getAuthentiKitInputButton(ObservableCollection<InputButton> inputButtons, int button)
+        private InputButton GetAuthentiKitInputButton(ObservableCollection<InputButton> inputButtons, int buttonZeroIndexedNumber)
         {
-            foreach (var channel in inputButtons)
-                if ((channel.Button == button) && (channel.Device.Contains("AuthentiKit")))
-                    return channel;
+            foreach (var button in inputButtons)
+                if ((button.Button == buttonZeroIndexedNumber) && (button.Device.Contains("AuthentiKit")))
+                    return button;
 
             foreach (var channel in inputButtons)
-                if ((channel.Button == button) && (channel.Device.Contains("BU0836")))
+                if ((channel.Button == buttonZeroIndexedNumber) && (channel.Device.Contains("BU0836")))
                     return channel;
 
             return new InputButton();
         }
 
+
+        /// Returns an AuthentiKit or BU0836 input channel for the specified button, if available
+        private InputAxis GetAuthentiKitInputAxis(ObservableCollection<InputAxis> inputAxes, InputAxis.TYPE type)
+        {
+
+
+            foreach (var axis in inputAxes)
+            {
+                if ((axis.AxisId == (int)type) && (axis.Name.Contains("AuthentiKit")))
+                    return axis;
+            }
+
+            foreach (var axis in inputAxes)
+            {
+                if ((axis.AxisId == (int)type) && (axis.Name.Contains("BU0836")))
+                    return axis;
+            }
+
+            return new InputAxis();
+        }
+
+
         /// Returns the specified vJoy output if available
-        private OutputChannel getOutputChannel(ObservableCollection<OutputChannel> channels, uint vJoyItem)
+        private OutputChannel GetOutputChannel(ObservableCollection<OutputChannel> channels, uint vJoyItem)
         {
             foreach (var channel in channels)
                 if (channel.VJoyItem == vJoyItem)
@@ -513,23 +535,23 @@ namespace AuthentiKitTrimCalibration.DataAccess
         public IEnumerable<MappingDTO> GetDefaultMappings(Preset preset,
             ObservableCollection<InputButton> inputButtonsA,
             ObservableCollection<InputButton> inputButtonsB,
+            ObservableCollection<InputAxis> inputAxes,
             ObservableCollection<OutputChannel> outputAxes,
             ObservableCollection<OutputChannel> outputButtonsA,
             ObservableCollection<OutputChannel> outputButtonsB)
         {
-
             ObservableCollection<MappingDTO> mappings = new();
-            if (preset == Preset.SPITFIRE_MKIX)
+            if (preset == Preset.SPITFIRE)
             {
                 // Elevator Trim Axis
                 mappings.Add(new MappingDTO
                 {
                     Name = "Elevator Trim",
                     TypeId = MappingType.BUTTON_TO_AXIS,
-                    InputButtonA = getAuthentiKitInputButton(inputButtonsA, 10),
-                    InputButtonB = getAuthentiKitInputButton(inputButtonsB, 11),
-                    OutputChannelA = getOutputChannel(outputAxes, (uint)AxisId.X),
-                    AxisSensitivity = 90,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 10),
+                    InputButtonB = GetAuthentiKitInputButton(inputButtonsB, 11),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RX),
+                    AxisSensitivity = 115,
                 });
 
                 // Rudder Trim Button Left
@@ -537,8 +559,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     Name = "Rudder Trim Left",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
-                    InputButtonA = getAuthentiKitInputButton(inputButtonsA, 9),
-                    OutputChannelA = getOutputChannel(outputButtonsA, 1),
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 9),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 1),
                     ButtonMultiplier = 5,
                     HoldThresholdStart = 150,
                     HoldThresholdStop = 150,
@@ -549,8 +571,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     Name = "Rudder Trim Right",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
-                    InputButtonA = getAuthentiKitInputButton(inputButtonsA, 8),
-                    OutputChannelA = getOutputChannel(outputButtonsA, 2),
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 8),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 2),
                     ButtonMultiplier = 5,
                     HoldThresholdStart = 150,
                     HoldThresholdStop = 150,
@@ -561,8 +583,8 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     Name = "Flaps Up",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
-                    InputButtonA = getAuthentiKitInputButton(inputButtonsA, 6),
-                    OutputChannelA = getOutputChannel(outputButtonsA, 3),
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 6),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 3),
                     ButtonMultiplier = 1,
                     HoldThresholdStart = 0,
                     HoldThresholdStop = 500,
@@ -573,26 +595,122 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 {
                     Name = "Flaps Down",
                     TypeId = MappingType.BUTTON_TO_BUTTON,
-                    InputButtonA = getAuthentiKitInputButton(inputButtonsA, 7),
-                    OutputChannelA = getOutputChannel(outputButtonsA, 4),
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 7),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 4),
                     ButtonMultiplier = 1,
                     HoldThresholdStart = 0,
                     HoldThresholdStop = 500,
                 });
 
-                /* // Experimental Encoder based Elevator Trim
-                 mappings.Add(new MappingDTO
-                 {
-                     Name = "EXPERIMENTAL: Elevator Trim (Axis)",
-                     TypeId = MappingType.ENCODER_AXIS,
-                     InputButtonA = getAuthentiKitInputButton(inputButtonsA, 10),
-                     InputButtonB = getAuthentiKitInputButton(inputButtonsB, 11),
-                     OutputChannel = getOutputChannel(outputAxes, (uint)AxisId.X),
-                     EncoderPPR = 24,
-                     RevsInPerRevsOut = 4
-                 });*/
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Throttle Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.Z),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.Z),
+                });
+
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Mixture Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RX),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RZ),
+                });
+
+                mappings.Add(new MappingDTO
+                {
+                    Name = "RPM Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RY),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RY),
+                });
             }
-            else if (preset == Preset.HONEYCOMB_BRAVO)
+            else if(preset == Preset.P40B)
+            {
+                // Elevator Trim Axis
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Elevator Trim",
+                    TypeId = MappingType.BUTTON_TO_AXIS,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 10),
+                    InputButtonB = GetAuthentiKitInputButton(inputButtonsB, 11),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RX),
+                    AxisSensitivity = 115,
+                });
+
+                // Rudder Trim Button Left
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Rudder Trim Left",
+                    TypeId = MappingType.BUTTON_TO_BUTTON,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 9),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 1),
+                    ButtonMultiplier = 5,
+                    HoldThresholdStart = 150,
+                    HoldThresholdStop = 150,
+                });
+
+                // Rudder Trim Button Right
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Rudder Trim Right",
+                    TypeId = MappingType.BUTTON_TO_BUTTON,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 8),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 2),
+                    ButtonMultiplier = 5,
+                    HoldThresholdStart = 150,
+                    HoldThresholdStop = 150,
+                });
+
+                // Flaps Up
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Up",
+                    TypeId = MappingType.BUTTON_TO_BUTTON,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 6),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 3),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
+                // Flaps Down
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Flaps Down",
+                    TypeId = MappingType.BUTTON_TO_BUTTON,
+                    InputButtonA = GetAuthentiKitInputButton(inputButtonsA, 7),
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 4),
+                    ButtonMultiplier = 1,
+                    HoldThresholdStart = 0,
+                    HoldThresholdStop = 500,
+                });
+
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Throttle Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.Z),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.Z),
+                });
+
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Mixture Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RX),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RZ),
+                });
+
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Prop Axis",
+                    TypeId = MappingType.AXIS_TO_AXIS,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RY),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.RY),
+                });
+            }else if (preset == Preset.HONEYCOMB_BRAVO)
             {
                 mappings.Add(new MappingDTO
                 {
@@ -600,7 +718,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                     TypeId = MappingType.BUTTON_TO_AXIS,
                     InputButtonA = GetInputButton(-102191463, inputButtonsA),
                     InputButtonB = GetInputButton(-102191464, inputButtonsB),
-                    OutputChannelA = getOutputChannel(outputAxes, (uint)AxisId.X),
+                    OutputChannelA = GetOutputChannel(outputAxes, (uint)AxisId.X),
                     AxisSensitivity = 360,
                 });
             }

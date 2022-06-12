@@ -2,11 +2,8 @@
 {
     public enum Preset
     {
-        SPITFIRE_MKIX,
-        SPITFIRE_MKI,
-        P37,
-        P51,
-        MOSQUITO,
+        SPITFIRE,
+        P40B,
         HONEYCOMB_BRAVO,
         NONE
     }
