@@ -30,6 +30,11 @@ This application is written in .NET 6. This was choson over .Net Core / UMP so t
 
 To develop and build, install `.NET 6 SDK` and open up the soluiton found in the `/AuthentiKitTrimCalibration` solution in Visual Studio 2022. It's written using a pretty standard pattern so if you're familar with the .NET you should be able to dev and build with relative ease. You'll need the [Installer Projects plugin](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects) for Visual Studio.
 
+## User Interface Testing using WinAppDriver
+To run the UI tests, you'll need [WinAppDriver](https://github.com/microsoft/WinAppDriver). Grab the MSI installer for v1.2.1 if you're having issues.
+* Run the WinAppDriver Server at `C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe`
+* Run the tests in the MSTest Project `AuthentiKitTuningApp.Test` to automatically open the latest Debug build and run through a series of tests before closin the app and giving a test summary. Note that your mouse will move around as the tests execute.
+
 # Credits
 * vJoy - https://sourceforge.net/projects/vjoystick/
 * AuthentiKit - https://www.authentikit.org
