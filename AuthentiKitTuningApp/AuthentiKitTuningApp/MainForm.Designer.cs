@@ -1,5 +1,5 @@
 ﻿
-namespace ATC_Windows_Forms_App
+namespace AuthentiKitTuningApp
 {
     partial class MainForm
     {
@@ -33,7 +33,7 @@ namespace ATC_Windows_Forms_App
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.headerControl2 = new ATC_Windows_Forms_App.Controls.HeaderControl();
+            this.headerControl2 = new AuthentiKitTuningApp.Controls.HeaderControl();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +58,7 @@ namespace ATC_Windows_Forms_App
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.lblSaveFileName = new System.Windows.Forms.Label();
-            this.axisToButtonControl1 = new ATC_Windows_Forms_App.Controls.AxisToButtonControl();
+            this.axisToButtonControl1 = new AuthentiKitTuningApp.Controls.AxisToButtonControl();
             this.btnAddMapping = new System.Windows.Forms.Button();
             this.lsbMappings = new System.Windows.Forms.ListBox();
             this.pnlAddMapping = new System.Windows.Forms.Panel();
@@ -95,10 +95,10 @@ namespace ATC_Windows_Forms_App
             this.toolStripMenuItemStopAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonToAxisControl = new ATC_Windows_Forms_App.Controls.ButtonToAxisControl();
-            this.buttonToButtonControl = new ATC_Windows_Forms_App.Controls.ButtonToButtonControl();
-            this.encoderToAxisControl = new ATC_Windows_Forms_App.Controls.EncoderToAxisControl();
-            this.axisToAxisControl = new ATC_Windows_Forms_App.Controls.AxisToAxisControl();
+            this.buttonToAxisControl = new AuthentiKitTuningApp.Controls.ButtonToAxisControl();
+            this.buttonToButtonControl = new AuthentiKitTuningApp.Controls.ButtonToButtonControl();
+            this.encoderToAxisControl = new AuthentiKitTuningApp.Controls.EncoderToAxisControl();
+            this.axisToAxisControl = new AuthentiKitTuningApp.Controls.AxisToAxisControl();
             this.pnlHeader.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.pnlNavigation.SuspendLayout();
@@ -263,21 +263,21 @@ namespace ATC_Windows_Forms_App
             // 
             // startupMenuItem
             // 
-            this.startupMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
+            this.startupMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
             this.startupMenuItem.Name = "startupMenuItem";
             this.startupMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startupMenuItem.Text = "&Run on Windows Start?";
             // 
             // calibrationMenuItem
             // 
-            this.calibrationMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
+            this.calibrationMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
             this.calibrationMenuItem.Name = "calibrationMenuItem";
             this.calibrationMenuItem.Size = new System.Drawing.Size(246, 22);
             this.calibrationMenuItem.Text = "&Save and Load Axis Calibrations?";
             // 
             // startAllMappingsMenuItem
             // 
-            this.startAllMappingsMenuItem.Image = global::ATC_Windows_Forms_App.Properties.Resources.white_circle_26aa;
+            this.startAllMappingsMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
             this.startAllMappingsMenuItem.Name = "startAllMappingsMenuItem";
             this.startAllMappingsMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startAllMappingsMenuItem.Text = "Start All Mappings on App Start?";

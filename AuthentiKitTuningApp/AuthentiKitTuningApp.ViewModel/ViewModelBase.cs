@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace AuthentiKitTrimCalibration.ViewModel
+namespace AuthentiKitTuningApp.ViewModel
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace ATC_Windows_Forms_App.Controls
+namespace AuthentiKitTuningApp.Controls
 {
     partial class ButtonToButtonControl
     {

@@ -1,5 +1,5 @@
-﻿using MappingManager.Common.DataProvider;
-using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.DataProvider;
+using AuthentiKitTuningApp.Common.Model;
 using System.Diagnostics;
 using System.Threading;
 using System;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
-namespace AuthentiKitTrimCalibration.DataAccess
+namespace AuthentiKitTuningApp.Processor.Hardware
 {
     public class InputDetector : IInputDetector
     {
@@ -30,7 +30,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             // For each device
             foreach (var d in allDevices)
             {
-                if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
+                if (d.Subtype != 256 && d.Type != DeviceType.Keyboard && d.Type != DeviceType.Mouse && !d.InstanceName.Contains("vJoy"))
                 {
                     Debug.WriteLine("Creating Joystick object for" + d.InstanceName);
                     devices.Add(d);

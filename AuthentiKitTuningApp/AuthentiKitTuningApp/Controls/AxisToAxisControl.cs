@@ -1,8 +1,8 @@
-﻿using AuthentiKitTrimCalibration.ViewModel;
+﻿using AuthentiKitTuningApp.ViewModel;
 using System;
 using System.Windows.Forms;
 
-namespace ATC_Windows_Forms_App.Controls
+namespace AuthentiKitTuningApp.Controls
 {
     public partial class AxisToAxisControl : UserControl
     {

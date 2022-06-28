@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MappingManager.Common.Model
+namespace AuthentiKitTuningApp.Common.Model
 {
     public class CalibrationDTO
     {

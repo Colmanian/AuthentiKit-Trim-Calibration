@@ -1,5 +1,5 @@
-﻿using MappingManager.Common.DataProvider;
-using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.DataProvider;
+using AuthentiKitTuningApp.Common.Model;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -7,9 +7,9 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Xml;
-using static MappingManager.Common.Model.OutputAxis;
+using static AuthentiKitTuningApp.Common.Model.OutputAxis;
 
-namespace AuthentiKitTrimCalibration.DataAccess
+namespace AuthentiKitTuningApp.Processor.Data
 {
     public class DataHandler : IDataHandler
     {
@@ -217,19 +217,19 @@ namespace AuthentiKitTrimCalibration.DataAccess
                 int min = calibration.Min;
                 int cen = calibration.Cen;
                 int max = calibration.Max;
-                Byte[] calibrationBytes = {
+                byte[] calibrationBytes = {
                 (byte)(min % 256),
                 (byte)(min / 256),
-                (byte)0,
-                (byte)0,
+                0,
+                0,
                 (byte)(cen % 256),
                 (byte)(cen / 256),
-                (byte)0,
-                (byte)0,
+                0,
+                0,
                 (byte)(max % 256),
                 (byte)(max / 256),
-                (byte)0,
-                (byte)0,};
+                0,
+                0,};
                 string registryPath = GetRegistryPath(inputAxis);
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
                 if (key != null)
@@ -244,12 +244,12 @@ namespace AuthentiKitTrimCalibration.DataAccess
             RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath);
 
             //if it does exist, retrieve the stored calibration   
-            Byte[] calibrationBytes = { };
+            byte[] calibrationBytes = { };
             if (key != null)
             {
                 if (key.GetValue("Calibration", "EMPTY") != null)
                 {
-                    calibrationBytes = key.GetValue("Calibration", "EMPTY") as Byte[];
+                    calibrationBytes = key.GetValue("Calibration", "EMPTY") as byte[];
                 }
                 key.Close();
             }
@@ -313,57 +313,57 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
                 // TypeId
                 XmlElement typeIdNode = doc.CreateElement(TYPE_ID);
-                typeIdNode.InnerText = String.Format("{0}", mapping.TypeId);
+                typeIdNode.InnerText = string.Format("{0}", mapping.TypeId);
                 mappingNode.AppendChild(typeIdNode);
 
                 // Active
                 XmlElement activeNode = doc.CreateElement(ACTIVE);
-                activeNode.InnerText = String.Format("{0}", mapping.Active);
+                activeNode.InnerText = string.Format("{0}", mapping.Active);
                 mappingNode.AppendChild(activeNode);
 
                 // inputButtonA
                 XmlElement inputButtonANode = doc.CreateElement(INPUT_BUTTON_A_HASH);
-                inputButtonANode.InnerText = String.Format("{0}", mapping.InputButtonA.Hash);
+                inputButtonANode.InnerText = string.Format("{0}", mapping.InputButtonA.Hash);
                 mappingNode.AppendChild(inputButtonANode);
 
                 // inputButtonB
                 XmlElement inputButtonBNode = doc.CreateElement(INPUT_BUTTON_B_HASH);
-                inputButtonBNode.InnerText = String.Format("{0}", mapping.InputButtonB.Hash);
+                inputButtonBNode.InnerText = string.Format("{0}", mapping.InputButtonB.Hash);
                 mappingNode.AppendChild(inputButtonBNode);
 
                 // inputAxis
                 XmlElement inputAxisNode = doc.CreateElement(INPUT_AXIS);
-                inputAxisNode.InnerText = String.Format("{0}", mapping.InputAxis.Hash);
+                inputAxisNode.InnerText = string.Format("{0}", mapping.InputAxis.Hash);
                 mappingNode.AppendChild(inputAxisNode);
 
                 // OutputChannelA
                 XmlElement outputChannelANode = doc.CreateElement(OUTPUT_CHANNEL_A_HASH);
-                outputChannelANode.InnerText = String.Format("{0}", mapping.OutputChannelA.Hash);
+                outputChannelANode.InnerText = string.Format("{0}", mapping.OutputChannelA.Hash);
                 mappingNode.AppendChild(outputChannelANode);
 
                 // OutputChannelB
                 XmlElement outputChannelBNode = doc.CreateElement(OUTPUT_CHANNEL_B_HASH);
-                outputChannelBNode.InnerText = String.Format("{0}", mapping.OutputChannelB.Hash);
+                outputChannelBNode.InnerText = string.Format("{0}", mapping.OutputChannelB.Hash);
                 mappingNode.AppendChild(outputChannelBNode);
 
                 // AxisSensitivity
                 XmlElement axisSensitivityNode = doc.CreateElement(AXIS_SENSITIVITY);
-                axisSensitivityNode.InnerText = String.Format("{0}", mapping.AxisSensitivity);
+                axisSensitivityNode.InnerText = string.Format("{0}", mapping.AxisSensitivity);
                 mappingNode.AppendChild(axisSensitivityNode);
 
                 // encoderPPRNode
                 XmlElement encoderPPRNode = doc.CreateElement(ENCODER_PPR);
-                encoderPPRNode.InnerText = String.Format("{0}", mapping.EncoderPPR);
+                encoderPPRNode.InnerText = string.Format("{0}", mapping.EncoderPPR);
                 mappingNode.AppendChild(encoderPPRNode);
 
                 // revsInPerRevsOut
                 XmlElement revsInPerRevsOut = doc.CreateElement(REVS_IN_PER_REVS_OUT);
-                revsInPerRevsOut.InnerText = String.Format("{0}", mapping.RevsInPerRevsOut);
+                revsInPerRevsOut.InnerText = string.Format("{0}", mapping.RevsInPerRevsOut);
                 mappingNode.AppendChild(revsInPerRevsOut);
 
                 // ButtonMultiplier
                 XmlElement buttoMultiplierNode = doc.CreateElement(BUTTON_MULTIPLIER);
-                buttoMultiplierNode.InnerText = String.Format("{0}", mapping.ButtonMultiplier);
+                buttoMultiplierNode.InnerText = string.Format("{0}", mapping.ButtonMultiplier);
                 mappingNode.AppendChild(buttoMultiplierNode);
 
                 // ResetCommand
@@ -373,72 +373,72 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
                 // Flipped
                 XmlElement flippedNode = doc.CreateElement(FLIPPED);
-                flippedNode.InnerText = String.Format("{0}", mapping.Flipped);
+                flippedNode.InnerText = string.Format("{0}", mapping.Flipped);
                 mappingNode.AppendChild(flippedNode);
 
                 // Gateway1
                 XmlElement gateway1 = doc.CreateElement(GATEWAY1);
-                gateway1.InnerText = String.Format("{0}", mapping.Gateway1);
+                gateway1.InnerText = string.Format("{0}", mapping.Gateway1);
                 mappingNode.AppendChild(gateway1);
 
                 // Gateway2
                 XmlElement gateway2 = doc.CreateElement(GATEWAY2);
-                gateway2.InnerText = String.Format("{0}", mapping.Gateway2);
+                gateway2.InnerText = string.Format("{0}", mapping.Gateway2);
                 mappingNode.AppendChild(gateway2);
 
                 // Gateway3
                 XmlElement gateway3 = doc.CreateElement(GATEWAY3);
-                gateway3.InnerText = String.Format("{0}", mapping.Gateway3);
+                gateway3.InnerText = string.Format("{0}", mapping.Gateway3);
                 mappingNode.AppendChild(gateway3);
 
                 // Gateway4
                 XmlElement gateway4 = doc.CreateElement(GATEWAY4);
-                gateway4.InnerText = String.Format("{0}", mapping.Gateway4);
+                gateway4.InnerText = string.Format("{0}", mapping.Gateway4);
                 mappingNode.AppendChild(gateway4);
 
                 // Gateway5
                 XmlElement gateway5 = doc.CreateElement(GATEWAY5);
-                gateway5.InnerText = String.Format("{0}", mapping.Gateway5);
+                gateway5.InnerText = string.Format("{0}", mapping.Gateway5);
                 mappingNode.AppendChild(gateway5);
 
                 // GatewayEnabled1
                 XmlElement gatewayEnabled1 = doc.CreateElement(GATEWAY_ENABLED_1);
-                gatewayEnabled1.InnerText = String.Format("{0}", mapping.GatewayEnabled1);
+                gatewayEnabled1.InnerText = string.Format("{0}", mapping.GatewayEnabled1);
                 mappingNode.AppendChild(gatewayEnabled1);
 
                 // GatewayEnabled2
                 XmlElement gatewayEnabled2 = doc.CreateElement(GATEWAY_ENABLED_2);
-                gatewayEnabled2.InnerText = String.Format("{0}", mapping.GatewayEnabled2);
+                gatewayEnabled2.InnerText = string.Format("{0}", mapping.GatewayEnabled2);
                 mappingNode.AppendChild(gatewayEnabled2);
 
                 // Gateway3
                 XmlElement gatewayEnabled3 = doc.CreateElement(GATEWAY_ENABLED_3);
-                gatewayEnabled3.InnerText = String.Format("{0}", mapping.GatewayEnabled3);
+                gatewayEnabled3.InnerText = string.Format("{0}", mapping.GatewayEnabled3);
                 mappingNode.AppendChild(gatewayEnabled3);
 
                 // Gateway4
                 XmlElement gatewayEnabled4 = doc.CreateElement(GATEWAY_ENABLED_4);
-                gatewayEnabled4.InnerText = String.Format("{0}", mapping.GatewayEnabled4);
+                gatewayEnabled4.InnerText = string.Format("{0}", mapping.GatewayEnabled4);
                 mappingNode.AppendChild(gatewayEnabled4);
 
                 // Gateway5
                 XmlElement gatewayEnabled5 = doc.CreateElement(GATEWAY_ENABLED_5);
-                gatewayEnabled5.InnerText = String.Format("{0}", mapping.GatewayEnabled5);
+                gatewayEnabled5.InnerText = string.Format("{0}", mapping.GatewayEnabled5);
                 mappingNode.AppendChild(gatewayEnabled5);
 
                 // CalibrationMin
                 XmlElement calibrationMin = doc.CreateElement(CALIBRATION_MIN);
-                calibrationMin.InnerText = String.Format("{0}", mapping.Calibration.Min);
+                calibrationMin.InnerText = string.Format("{0}", mapping.Calibration.Min);
                 mappingNode.AppendChild(calibrationMin);
 
                 // CalibrationCen
                 XmlElement calibrationCen = doc.CreateElement(CALIBRATION_CEN);
-                calibrationCen.InnerText = String.Format("{0}", mapping.Calibration.Cen);
+                calibrationCen.InnerText = string.Format("{0}", mapping.Calibration.Cen);
                 mappingNode.AppendChild(calibrationCen);
 
                 // CalibrationMax
                 XmlElement calibrationMax = doc.CreateElement(CALIBRATION_MAX);
-                calibrationMax.InnerText = String.Format("{0}", mapping.Calibration.Max);
+                calibrationMax.InnerText = string.Format("{0}", mapping.Calibration.Max);
                 mappingNode.AppendChild(calibrationMax);
 
                 // Add to group
@@ -494,11 +494,11 @@ namespace AuthentiKitTrimCalibration.DataAccess
         private InputButton GetAuthentiKitInputButton(ObservableCollection<InputButton> inputButtons, int buttonZeroIndexedNumber)
         {
             foreach (var button in inputButtons)
-                if ((button.Button == buttonZeroIndexedNumber) && (button.Device.Contains("AuthentiKit")))
+                if (button.Button == buttonZeroIndexedNumber && button.Device.Contains("AuthentiKit"))
                     return button;
 
             foreach (var channel in inputButtons)
-                if ((channel.Button == buttonZeroIndexedNumber) && (channel.Device.Contains("BU0836")))
+                if (channel.Button == buttonZeroIndexedNumber && channel.Device.Contains("BU0836"))
                     return channel;
 
             return new InputButton();
@@ -512,13 +512,13 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
             foreach (var axis in inputAxes)
             {
-                if ((axis.AxisId == (int)type) && (axis.Name.Contains("AuthentiKit")))
+                if (axis.AxisId == (int)type && axis.Name.Contains("AuthentiKit"))
                     return axis;
             }
 
             foreach (var axis in inputAxes)
             {
-                if ((axis.AxisId == (int)type) && (axis.Name.Contains("BU0836")))
+                if (axis.AxisId == (int)type && axis.Name.Contains("BU0836"))
                     return axis;
             }
 
@@ -735,7 +735,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
 
         public string GetLoadDirectory()
         {
-            if (String.IsNullOrEmpty(SaveFilePath))
+            if (string.IsNullOrEmpty(SaveFilePath))
             {
                 return Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             }

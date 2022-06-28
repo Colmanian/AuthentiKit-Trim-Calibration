@@ -1,8 +1,8 @@
-﻿using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace MappingManager.Common.DataProvider
+namespace AuthentiKitTuningApp.Common.DataProvider
 {
     public interface IDataHandler
     {

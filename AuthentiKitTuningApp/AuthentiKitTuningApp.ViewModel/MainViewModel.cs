@@ -1,13 +1,15 @@
-﻿using AuthentiKitTrimCalibration.DataAccess;
-using MappingManager.Common.DataProvider;
-using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Processor;
+using AuthentiKitTuningApp.Common.DataProvider;
+using AuthentiKitTuningApp.Common.Model;
+using AuthentiKitTuningApp.Processor.Hardware;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using AuthentiKitTuningApp.Processor.Data;
 
-namespace AuthentiKitTrimCalibration.ViewModel
+namespace AuthentiKitTuningApp.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {

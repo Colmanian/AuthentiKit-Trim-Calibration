@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MappingManager.Common.Model
+namespace AuthentiKitTuningApp.Common.Model
 {
     public class MappingDTO
     {

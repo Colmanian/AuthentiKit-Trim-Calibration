@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATC_Windows_Forms_App.Controls
+namespace AuthentiKitTuningApp.Controls
 {
     public partial class HeaderControl : UserControl
     {

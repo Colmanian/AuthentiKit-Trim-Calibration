@@ -1,4 +1,4 @@
-﻿namespace MappingManager.Common.Model
+﻿namespace AuthentiKitTuningApp.Common.Model
 {
     public enum Preset
     {

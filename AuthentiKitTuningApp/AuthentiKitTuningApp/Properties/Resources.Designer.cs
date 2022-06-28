@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ATC_Windows_Forms_App.Properties {
+namespace AuthentiKitTuningApp.Properties {
     using System;
     
     

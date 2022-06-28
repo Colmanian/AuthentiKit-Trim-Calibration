@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATC_Windows_Forms_App
+namespace AuthentiKitTuningApp
 {
     static class Program
     {

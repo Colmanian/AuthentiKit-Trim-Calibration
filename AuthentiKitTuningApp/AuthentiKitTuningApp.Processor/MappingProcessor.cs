@@ -1,11 +1,11 @@
-﻿using MappingManager.Common.DataProvider;
-using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.DataProvider;
+using AuthentiKitTuningApp.Common.Model;
 using System.Diagnostics;
 using System.Threading;
 using System;
 using SharpDX.DirectInput;
 
-namespace AuthentiKitTrimCalibration.DataAccess
+namespace AuthentiKitTuningApp.Processor
 {
     public class MappingProcessor : IMappingProcessor
     {

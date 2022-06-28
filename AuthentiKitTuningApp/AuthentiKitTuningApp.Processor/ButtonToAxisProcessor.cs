@@ -1,4 +1,4 @@
-﻿using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using vJoyInterfaceWrap;
 
-namespace AuthentiKitTrimCalibration.DataAccess
+namespace AuthentiKitTuningApp.Processor
 {
     class ButtonToAxisProcessor
     {

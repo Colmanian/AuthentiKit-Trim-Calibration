@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 
-namespace MappingManager.Common.Model
+namespace AuthentiKitTuningApp.Common.Model
 {
     public class MappingType
     {

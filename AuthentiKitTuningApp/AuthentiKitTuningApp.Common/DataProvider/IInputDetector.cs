@@ -1,7 +1,7 @@
-﻿using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.Model;
 using System;
 
-namespace MappingManager.Common.DataProvider
+namespace AuthentiKitTuningApp.Common.DataProvider
 {
     public interface IInputDetector
     {

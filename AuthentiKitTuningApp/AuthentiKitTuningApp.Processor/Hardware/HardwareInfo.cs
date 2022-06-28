@@ -1,12 +1,13 @@
-﻿using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.Common.Model;
 using SharpDX.DirectInput;
 using vJoyInterfaceWrap;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Collections.Generic;
+using AuthentiKitTuningApp.Processor.Data;
 
-namespace AuthentiKitTrimCalibration.DataAccess
+namespace AuthentiKitTuningApp.Processor.Hardware
 {
 
     public static class HardwareInfo
@@ -17,7 +18,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             var directInput = new DirectInput();
             foreach (var d in directInput.GetDevices())
             {
-                if ((d.Subtype != 256) && (d.Type != DeviceType.Keyboard) && (d.Type != DeviceType.Mouse) && (!d.InstanceName.Contains("vJoy")))
+                if (d.Subtype != 256 && d.Type != DeviceType.Keyboard && d.Type != DeviceType.Mouse && !d.InstanceName.Contains("vJoy"))
                 {
                     var joystick = new Joystick(directInput, d.InstanceGuid);
                     var buttons = joystick.Capabilities.ButtonCount;
@@ -37,7 +38,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             var directInput = new DirectInput();
             foreach (var device in directInput.GetDevices())
             {
-                if ((device.Subtype != 256) && (device.Type != DeviceType.Keyboard) && (device.Type != DeviceType.Mouse) && (!device.InstanceName.Contains("vJoy")))
+                if (device.Subtype != 256 && device.Type != DeviceType.Keyboard && device.Type != DeviceType.Mouse && !device.InstanceName.Contains("vJoy"))
                 {
                     var joystick = new Joystick(directInput, device.InstanceGuid);
                     try
@@ -60,7 +61,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
                                     Min = objectProperties.Range.Minimum,
                                     Max = objectProperties.Range.Maximum,
                                     Name = string.Format(device.InstanceName + " : " + instance.Name)
-                                }) ;
+                                });
                             }
                         }
                     }
@@ -69,17 +70,17 @@ namespace AuthentiKitTrimCalibration.DataAccess
             }
 
             // Debug print any calibrations found
-            foreach (var axis in inputAxes) 
+            foreach (var axis in inputAxes)
             {
                 CalibrationDTO calibration = DataHandler.ReadCalibrationFromRegistry(axis);
-                if(calibration != null)
+                if (calibration != null)
                     if (calibration.IsSet)
                         Debug.WriteLine("{0}/t Calibration: {1}", axis, calibration);
             }
             return inputAxes;
         }
 
-        private static int getAxisIdFromName(String name)
+        private static int getAxisIdFromName(string name)
         {
             int offset = 0;
             switch (name)
@@ -112,7 +113,7 @@ namespace AuthentiKitTrimCalibration.DataAccess
             return offset;
         }
 
-        private static int getInstanceOffsetFromName(String name)
+        private static int getInstanceOffsetFromName(string name)
         {
             int offset = 0;
             switch (name)

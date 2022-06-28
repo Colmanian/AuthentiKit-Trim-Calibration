@@ -1,12 +1,12 @@
-﻿using AuthentiKitTrimCalibration.ViewModel;
-using MappingManager.Common.Model;
+﻿using AuthentiKitTuningApp.ViewModel;
+using AuthentiKitTuningApp.Common.Model;
 using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace ATC_Windows_Forms_App
+namespace AuthentiKitTuningApp
 {
     public partial class MainForm : Form
     {
