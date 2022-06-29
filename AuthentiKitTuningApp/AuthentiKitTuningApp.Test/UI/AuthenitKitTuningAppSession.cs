@@ -12,8 +12,8 @@ namespace AuthentiKitTuningApp.Test.UI
     internal class AuthenitKitTuningAppSession
     {
         private const string WindowsApplicationDriverURL = "http://127.0.0.1:4723";
-        protected static WindowsDriver<WindowsElement>? session;
-        protected static RemoteTouchScreen? touchScreen;
+        public static WindowsDriver<WindowsElement>? session;
+        public static RemoteTouchScreen? touchScreen;
 
         public static void Setup([CallerFilePath] string sourceFilePath = "")
         {
@@ -25,7 +25,6 @@ namespace AuthentiKitTuningApp.Test.UI
                     Uri pathOfThisFile = new(path, UriKind.Absolute);
                     Uri relativePathToDebugExe = new(@"..\..\AuthentiKitTuningApp\AuthentiKitTuningApp\bin\x86\Debug\net6.0-windows\AuthentiKitTuningApp.exe", UriKind.Relative);
                     string debugExePath = new Uri(pathOfThisFile, relativePathToDebugExe).ToString();
-                    //Trace.WriteLine("");
 
                     TearDown();
 
