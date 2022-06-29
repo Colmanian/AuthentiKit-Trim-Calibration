@@ -100,6 +100,10 @@ namespace AuthentiKitTuningApp
 
         private void LoadFormData()
         {
+            // Always ensure that there's at least one mapping
+            if (!_viewModel.AtLeastOneMapping)
+                _viewModel.NewMapping();
+
             // Initialise the BindingSource
             mappingBindingSource.DataSource = _viewModel.Mappings;
 

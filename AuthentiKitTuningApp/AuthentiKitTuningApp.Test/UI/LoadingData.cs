@@ -12,6 +12,7 @@ namespace AuthentiKitTuningApp.Test.UI
             // See https://github.com/microsoft/WinAppDriver
             AuthenitKitTuningAppSession.Setup();
             Assert.AreEqual(false, AppHasThrownException());
+            Assert.AreEqual(true, AppIsRunning());
         }
 
         [ClassCleanup]
@@ -32,7 +33,24 @@ namespace AuthentiKitTuningApp.Test.UI
                     session.SwitchTo().Window(windowHandle);
                     //Trace.WriteLine(i + ". " +session.Title);
                     if (session.Title != null)
-                        if(session.Title.Contains("Error"))
+                        if (session.Title.Contains("Error"))
+                            return true;
+                }
+            }
+            return false;
+        }
+        private bool AppIsRunning()
+        {
+            var session = AuthenitKitTuningAppSession.session;
+            if (session != null)
+            {
+                var allWindowHandles = session.WindowHandles;
+                foreach (var windowHandle in allWindowHandles)
+                {
+                    session.SwitchTo().Window(windowHandle);
+                    //Trace.WriteLine(i + ". " +session.Title);
+                    if (session.Title != null)
+                        if (session.Title.Contains("AuthentiKit"))
                             return true;
                 }
             }
