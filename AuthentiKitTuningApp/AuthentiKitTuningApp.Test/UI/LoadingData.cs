@@ -5,19 +5,37 @@ namespace AuthentiKitTuningApp.Test.UI
     [TestClass]
     public class LoadingData
     {
+        // Note that you need to install and have running WinAppDriver for this Test Class to work.
+        // See https://github.com/microsoft/WinAppDriver
+
         [TestMethod]
-        public void Open_App()
+        public void App_Starts()
         {
-            // Note that you need to install and have running WinAppDriver for this Test Class to work.
-            // See https://github.com/microsoft/WinAppDriver
             AuthenitKitTuningAppSession.Setup();
+
             Assert.AreEqual(false, AppHasThrownException());
             Assert.AreEqual(true, AppIsRunning());
+            AuthenitKitTuningAppSession.TearDown();
         }
 
-        [ClassCleanup]
-        public static void Close_App()
+        [TestMethod]
+        public void Clear_All_Mappings()
         {
+            AuthenitKitTuningAppSession.Setup();
+
+            var session = AuthenitKitTuningAppSession.session;
+            if (session != null)
+            {
+                session.FindElementByName("New Mapping").Click();
+                session.FindElementByName("menuStrip").SendKeys("%p");
+                session.FindElementByName("Clear All").Click();
+                session.FindElementByName("Delete").Click();
+                session.FindElementByName("Delete").Click();
+                session.FindElementByName("Delete").Click();
+            }
+
+            Assert.AreEqual(false, AppHasThrownException());
+            Assert.AreEqual(true, AppIsRunning());
             AuthenitKitTuningAppSession.TearDown();
         }
 
