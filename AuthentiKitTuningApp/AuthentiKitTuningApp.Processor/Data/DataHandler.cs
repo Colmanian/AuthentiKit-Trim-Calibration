@@ -284,6 +284,16 @@ namespace AuthentiKitTuningApp.Processor.Data
             return registryPath;
         }
 
+        public static string GetRegistryPathsDebugDisplay(ObservableCollection<InputAxis> inputAxes)
+        {
+            string registryPaths = "";
+            foreach (InputAxis inputAxis in inputAxes)
+            {
+                registryPaths += string.Format("||{0} {1}||HKEY_CURRENT_USER\\{2}\n", inputAxis.Device, inputAxis.Name, GetRegistryPath(inputAxis));
+            }
+            return registryPaths;
+        }
+
         public void SaveMappings(IEnumerable<MappingDTO> mappings, string filePath, ObservableCollection<InputAxis> inputAxes)
         {
             SetSaveFilePath(filePath);

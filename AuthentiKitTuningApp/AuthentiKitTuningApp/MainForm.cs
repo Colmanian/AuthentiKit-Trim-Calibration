@@ -319,6 +319,8 @@ namespace AuthentiKitTuningApp
                         calibrationMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
                     }
                     _viewModel.PersistCalibration = persist;
+
+                    MessageBox.Show(MainViewModel.GetAxisRegistryPathsDebugString());
                 }
                 else if (e.ClickedItem.Name.Equals("startAllMappingsMenuItem"))
                 {

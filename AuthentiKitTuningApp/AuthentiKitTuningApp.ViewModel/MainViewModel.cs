@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using AuthentiKitTuningApp.Processor.Data;
+using System.Collections.Generic;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -194,6 +195,11 @@ namespace AuthentiKitTuningApp.ViewModel
                 }
                 return false;
             }
+        }
+
+        public static string GetAxisRegistryPathsDebugString()
+        {
+            return DataHandler.GetRegistryPathsDebugDisplay(HardwareInfo.GetInputAxes());
         }
     }
 }
