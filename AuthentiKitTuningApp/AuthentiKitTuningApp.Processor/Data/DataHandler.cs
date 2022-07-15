@@ -830,23 +830,17 @@ namespace AuthentiKitTuningApp.Processor.Data
         public bool GetRunOnStartup()
         {
             bool runOnStartup = false;
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_STARTUP_SETTINGS);
 
-            //if it does exist, retrieve the stored value  
-            string runOnStartupString = "";
+            //if it does exist, then run on startup is set
             if (key != null)
             {
-                if (key.GetValue(REGISTRY_STARTUP_SETTINGS) != null)
+                if (key.GetValue(REGISTRY_STARTUP_APP_NAME) != null)
                 {
-                    runOnStartupString = key.GetValue(REGISTRY_STARTUP_SETTINGS).ToString();
+                    runOnStartup = true;
                 }
                 key.Close();
             }
-            try
-            {
-                _persistCalibration = bool.Parse(runOnStartupString);
-            }
-            catch { }
             return runOnStartup;
         }
 
