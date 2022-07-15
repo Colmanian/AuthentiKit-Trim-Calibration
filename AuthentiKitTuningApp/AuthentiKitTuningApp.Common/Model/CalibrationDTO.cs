@@ -21,5 +21,19 @@ namespace AuthentiKitTuningApp.Common.Model
         }
 
         public bool IsSet => Max > 0;
+
+        public override bool Equals(Object obj)
+        {
+            //Check for null and compare run-time types.
+            if ((obj == null) || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                CalibrationDTO b = (CalibrationDTO)obj;
+                return (Min == b.Min) && (Cen == b.Cen) && (Max == b.Max);
+            }
+        }
     }
 }

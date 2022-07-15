@@ -97,6 +97,10 @@ namespace AuthentiKitTuningApp.ViewModel
                 mappings.Add(m.getMappingDTO());
             }
             _mainDataHandler.SaveMappings(mappings, InputAxes);
+            foreach (var m in Mappings)
+            {
+                m.UpdateStatus();
+            }
         }
         public void SaveMappings(string filePath)
         {
@@ -107,6 +111,11 @@ namespace AuthentiKitTuningApp.ViewModel
                 mappings.Add(m.getMappingDTO());
             }
             _mainDataHandler.SaveMappings(mappings, filePath, InputAxes);
+            foreach (var m in Mappings)
+            {
+                m.UpdateStatus();
+            }
+
         }
 
         public void Reset(Preset aircraft)

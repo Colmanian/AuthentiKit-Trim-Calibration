@@ -30,6 +30,9 @@ namespace AuthentiKitTuningApp.Controls
             // Flipped
             chbFlip.DataBindings.Add("Checked", MappingBindingSource, "Flipped");
 
+            // Calibration Label
+            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationString");
+
             // Panel Activation
             pnlAxisToAxisConfig.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
         }
@@ -66,30 +69,10 @@ namespace AuthentiKitTuningApp.Controls
             }
         }
 
-        private void DetectButton_Click(object sender, EventArgs e)
+        private void GetCalibrationButtonClick(object sender, EventArgs e)
         {
-            try
-            {
-                DetectButton.Text = "Listening...";
-                cbInputAxis.Enabled = false;
-                pnlAxisToAxisConfig.Refresh();
-                if (MappingBindingSource.Current is MappingViewModel mappingViewModel
-                    && mappingViewModel.Deactivated)
-                {
-                    mappingViewModel.DetectButtonInputA();
-                }
-                DetectButton.Text = "Detect";
-                cbInputAxis.Enabled = true;
-                pnlAxisToAxisConfig.Refresh();
-            }
-            catch (Exception ex)
-            {
-                DetectButton.Text = "Detect";
-                cbInputAxis.Enabled = true;
-                pnlAxisToAxisConfig.Refresh();
-                MessageBox.Show(ex.Message, "Error detecting input",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            lblCalibration.DataBindings.Clear();
+            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationString");
         }
     }
 }

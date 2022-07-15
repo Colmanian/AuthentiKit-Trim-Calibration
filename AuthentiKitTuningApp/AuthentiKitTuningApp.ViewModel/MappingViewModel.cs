@@ -5,6 +5,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using AuthentiKitTuningApp.Processor.Hardware;
+using AuthentiKitTuningApp.Processor.Data;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -39,12 +40,13 @@ namespace AuthentiKitTuningApp.ViewModel
             Deactivate();
         }
 
-        private void UpdateStatus()
+        public void UpdateStatus()
         {
             RaisePropertyChanged(nameof(Activated));
             RaisePropertyChanged(nameof(Deactivated));
             RaisePropertyChanged(nameof(Status));
             RaisePropertyChanged(nameof(StatusColour));
+            RaisePropertyChanged(nameof(CalibrationString));
         }
         public void Activate()
         {
@@ -276,6 +278,22 @@ namespace AuthentiKitTuningApp.ViewModel
                     RaisePropertyChanged();
                     IsDirty = true;
                 }
+            }
+        }
+
+        public string CalibrationString
+        {
+            get
+            {
+                CalibrationDTO savedCalibration = _mapping.Calibration;
+                CalibrationDTO actualCalibration = DataHandler.GetAxisCalibration(_mapping.InputAxis);
+                if (savedCalibration != null)
+                    if (!savedCalibration.Equals(actualCalibration))
+                    {
+                        return "* " + actualCalibration.ToString() + "  (unsaved)";
+                    }
+
+                return actualCalibration.ToString();
             }
         }
         public bool Flipped
