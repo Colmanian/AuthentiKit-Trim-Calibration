@@ -320,7 +320,7 @@ namespace AuthentiKitTuningApp
                     }
                     _viewModel.PersistCalibration = persist;
 
-                    MessageBox.Show(MainViewModel.GetAxisRegistryPathsDebugString());
+                   // MessageBox.Show(MainViewModel.GetAxisRegistryPathsDebugString());
                 }
                 else if (e.ClickedItem.Name.Equals("startAllMappingsMenuItem"))
                 {
