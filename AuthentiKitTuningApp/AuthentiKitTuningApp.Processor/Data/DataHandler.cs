@@ -13,43 +13,43 @@ namespace AuthentiKitTuningApp.Processor.Data
 {
     public class DataHandler : IDataHandler
     {
-        private readonly string CONFIG = "CONFIG";
-        private readonly string GROUP = "GROUP";
-        private readonly string MAPPING = "MAPPING";
-        private readonly string NAME = "NAME";
-        private readonly string TYPE_ID = "TYPE_ID";
-        private readonly string ACTIVE = "ACTIVE";
-        private readonly string INPUT_BUTTON_A_HASH = "INPUT_CHANNEL_A_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
-        private readonly string INPUT_BUTTON_B_HASH = "INPUT_CHANNEL_B_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
-        private readonly string INPUT_AXIS = "INPUT_AXIS";
-        private readonly string OUTPUT_CHANNEL_A_HASH = "OUTPUT_CHANNEL_HASH"; //(should be OUTPUT_CHANNEL_A_HASH  but can't rename due to it already being in users' XML save file)
-        private readonly string OUTPUT_CHANNEL_B_HASH = "OUTPUT_CHANNEL_B_HASH";
-        private readonly string AXIS_SENSITIVITY = "AXIS_SENSITIVITY";
-        private readonly string ENCODER_PPR = "ENCODER_PPR";
-        private readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
-        private readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
-        private readonly string RESET_COMMAND = "RESET_COMMAND";
-        private readonly string FLIPPED = "FLIPPED";
-        private readonly string GATEWAY1 = "GATEWAY1";
-        private readonly string GATEWAY2 = "GATEWAY2";
-        private readonly string GATEWAY3 = "GATEWAY3";
-        private readonly string GATEWAY4 = "GATEWAY4";
-        private readonly string GATEWAY5 = "GATEWAY5";
-        private readonly string GATEWAY_ENABLED_1 = "GATEWAY_ENABLED_1";
-        private readonly string GATEWAY_ENABLED_2 = "GATEWAY_ENABLED_2";
-        private readonly string GATEWAY_ENABLED_3 = "GATEWAY_ENABLED_3";
-        private readonly string GATEWAY_ENABLED_4 = "GATEWAY_ENABLED_4";
-        private readonly string GATEWAY_ENABLED_5 = "GATEWAY_ENABLED_5";
-        private readonly string CALIBRATION_MIN = "CALIBRATION_MIN";
-        private readonly string CALIBRATION_CEN = "CALIBRATION_CEN";
-        private readonly string CALIBRATION_MAX = "CALIBRATION_MAX";
-        private readonly string REGISTRY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
-        private readonly string REGISTRY_SAVE_FILE_PATH = "SaveFileName";
-        private readonly string REGISTRY_PERSIST_CALIBRATION_PATH = "PersistCalibration";
-        private readonly string REGISTRY_START_ALL_ON_OPEN = "StartAllOnOpen";
-        private readonly string REGISTRY_STARTUP_SETTINGS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
-        private readonly string REGISTRY_STARTUP_APP_NAME = "AuthentiKit";
-        private static readonly string REGISTRY_CALIBRATION_SETTINGS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
+        private static readonly string CONFIG = "CONFIG";
+        private static readonly string GROUP = "GROUP";
+        private static readonly string MAPPING = "MAPPING";
+        private static readonly string NAME = "NAME";
+        private static readonly string TYPE_ID = "TYPE_ID";
+        private static readonly string ACTIVE = "ACTIVE";
+        private static readonly string INPUT_BUTTON_A_HASH = "INPUT_CHANNEL_A_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
+        private static readonly string INPUT_BUTTON_B_HASH = "INPUT_CHANNEL_B_HASH"; //(should be BUTTON rather than CHANNEL, but can't rename due to it already being in users' XML save file)
+        private static readonly string INPUT_AXIS = "INPUT_AXIS";
+        private static readonly string OUTPUT_CHANNEL_A_HASH = "OUTPUT_CHANNEL_HASH"; //(should be OUTPUT_CHANNEL_A_HASH  but can't rename due to it already being in users' XML save file)
+        private static readonly string OUTPUT_CHANNEL_B_HASH = "OUTPUT_CHANNEL_B_HASH";
+        private static readonly string AXIS_SENSITIVITY = "AXIS_SENSITIVITY";
+        private static readonly string ENCODER_PPR = "ENCODER_PPR";
+        private static readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
+        private static readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
+        private static readonly string RESET_COMMAND = "RESET_COMMAND";
+        private static readonly string FLIPPED = "FLIPPED";
+        private static readonly string GATEWAY1 = "GATEWAY1";
+        private static readonly string GATEWAY2 = "GATEWAY2";
+        private static readonly string GATEWAY3 = "GATEWAY3";
+        private static readonly string GATEWAY4 = "GATEWAY4";
+        private static readonly string GATEWAY5 = "GATEWAY5";
+        private static readonly string GATEWAY_ENABLED_1 = "GATEWAY_ENABLED_1";
+        private static readonly string GATEWAY_ENABLED_2 = "GATEWAY_ENABLED_2";
+        private static readonly string GATEWAY_ENABLED_3 = "GATEWAY_ENABLED_3";
+        private static readonly string GATEWAY_ENABLED_4 = "GATEWAY_ENABLED_4";
+        private static readonly string GATEWAY_ENABLED_5 = "GATEWAY_ENABLED_5";
+        private static readonly string CALIBRATION_MIN = "CALIBRATION_MIN";
+        private static readonly string CALIBRATION_CEN = "CALIBRATION_CEN";
+        private static readonly string CALIBRATION_MAX = "CALIBRATION_MAX";
+        private static readonly string REGISTRY_KEY_APP_SETTINGS = "SOFTWARE\\AuthentiKit"; //Under HKEY_CURRENT_USER
+        private static readonly string REGISTRY_VALUE_SAVE_FILE_NAME = "SaveFileName";
+        private static readonly string REGISTRY_VALUE_PERSIST_CALIBRATION = "PersistCalibration";
+        private static readonly string REGISTRY_VALUE_START_ALL_ON_OPEN = "StartAllOnOpen";
+        private static readonly string REGISTRY_KEY_STARTUP_APPS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
+        private static readonly string REGISTRY_VALUE_APP_NAME = "AuthentiKit";
+        private static readonly string REGISTRY_KEY_CALIBRATIONS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
 
         private string SaveFilePath;
         private bool _persistCalibration;
@@ -196,7 +196,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                             {
                                 if (Calibration.IsSet)
                                 {
-                                    WriteCalibrationToRegistry(GetInputAxis(inputAxisHash, inputAxes), Calibration);
+                                    SetAxisCalibration(GetInputAxis(inputAxisHash, inputAxes), Calibration);
                                 }
                             }
                         }
@@ -210,7 +210,7 @@ namespace AuthentiKitTuningApp.Processor.Data
             return mappings;
         }
 
-        public static void WriteCalibrationToRegistry(InputAxis inputAxis, CalibrationDTO calibration)
+        public static void SetAxisCalibration(InputAxis inputAxis, CalibrationDTO calibration)
         {
             if (!inputAxis.IsEmpty)
             {
@@ -230,16 +230,16 @@ namespace AuthentiKitTuningApp.Processor.Data
                 (byte)(max / 256),
                 0,
                 0,};
-                string registryPath = GetRegistryPath(inputAxis);
+                string registryPath = GetCalibrationRegistryKey(inputAxis);
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
                 if (key != null)
                     key.SetValue("Calibration", calibrationBytes);
             }
         }
 
-        public static CalibrationDTO ReadCalibrationFromRegistry(InputAxis inputAxis)
+        public static CalibrationDTO GetAxisCalibration(InputAxis inputAxis)
         {
-            string registryPath = GetRegistryPath(inputAxis);
+            string registryPath = GetCalibrationRegistryKey(inputAxis);
 
             RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath);
 
@@ -270,13 +270,13 @@ namespace AuthentiKitTuningApp.Processor.Data
         }
 
         // Ref: https://stackoverflow.com/a/51824114
-        public static string GetRegistryPath(InputAxis inputAxis)
+        public static string GetCalibrationRegistryKey(InputAxis inputAxis)
         {
             string registryName = string.Empty;
             string guid = inputAxis.Guid.ToString().ToUpper();
             registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0, 4));
 
-            string registryPath = REGISTRY_CALIBRATION_SETTINGS
+            string registryPath = REGISTRY_KEY_CALIBRATIONS
                 + registryName
                 + "\\Calibration\\0\\Type\\Axes\\"
                 + inputAxis.InstanceOffset;
@@ -289,7 +289,7 @@ namespace AuthentiKitTuningApp.Processor.Data
             string registryPaths = "";
             foreach (InputAxis inputAxis in inputAxes)
             {
-                registryPaths += string.Format("||{0} {1}||HKEY_CURRENT_USER\\{2}\n", inputAxis.Device, inputAxis.Name, GetRegistryPath(inputAxis));
+                registryPaths += string.Format("||{0} {1}||HKEY_CURRENT_USER\\{2}\n", inputAxis.Device, inputAxis.Name, GetCalibrationRegistryKey(inputAxis));
             }
             return registryPaths;
         }
@@ -310,7 +310,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                 // If we're to persist calibration info then get it from the registry
                 if (_persistCalibration)
                 {
-                    CalibrationDTO calibration = ReadCalibrationFromRegistry(GetInputAxis(mapping.InputAxis.Hash, inputAxes));
+                    CalibrationDTO calibration = GetAxisCalibration(GetInputAxis(mapping.InputAxis.Hash, inputAxes));
                     mapping.Calibration = calibration;
                 }
 
@@ -757,30 +757,30 @@ namespace AuthentiKitTuningApp.Processor.Data
         public void SetSaveFilePath(string filePath)
         {
             SaveFilePath = filePath;
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
-            key.SetValue(REGISTRY_SAVE_FILE_PATH, SaveFilePath);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_KEY_APP_SETTINGS);
+            key.SetValue(REGISTRY_VALUE_SAVE_FILE_NAME, SaveFilePath);
             key.Close();
         }
         public void SetPersistCalibration(bool persist)
         {
             _persistCalibration = persist;
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
-            key.SetValue(REGISTRY_PERSIST_CALIBRATION_PATH, persist);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_KEY_APP_SETTINGS);
+            key.SetValue(REGISTRY_VALUE_PERSIST_CALIBRATION, persist);
             key.Close();
         }
 
         private string LoadFilePathFromRegistry()
         {
             SaveFilePath = "";
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_APP_SETTINGS);
 
             //if it does exist, retrieve the stored values  
             string filePath = "";
             if (key != null)
             {
-                if (key.GetValue(REGISTRY_SAVE_FILE_PATH) != null)
+                if (key.GetValue(REGISTRY_VALUE_SAVE_FILE_NAME) != null)
                 {
-                    filePath = key.GetValue(REGISTRY_SAVE_FILE_PATH).ToString();
+                    filePath = key.GetValue(REGISTRY_VALUE_SAVE_FILE_NAME).ToString();
                 }
                 key.Close();
             }
@@ -793,15 +793,15 @@ namespace AuthentiKitTuningApp.Processor.Data
         public bool GetPersistCalibration()
         {
             _persistCalibration = false;
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_APP_SETTINGS);
 
             //if it does exist, retrieve the stored value  
             string persistString = "";
             if (key != null)
             {
-                if (key.GetValue(REGISTRY_PERSIST_CALIBRATION_PATH) != null)
+                if (key.GetValue(REGISTRY_VALUE_PERSIST_CALIBRATION) != null)
                 {
-                    persistString = key.GetValue(REGISTRY_PERSIST_CALIBRATION_PATH).ToString();
+                    persistString = key.GetValue(REGISTRY_VALUE_PERSIST_CALIBRATION).ToString();
                 }
                 key.Close();
             }
@@ -815,27 +815,27 @@ namespace AuthentiKitTuningApp.Processor.Data
 
         public void SetRunOnStartup(bool runOnStartup)
         {
-            RegistryKey startUpKey = Registry.CurrentUser.OpenSubKey(REGISTRY_STARTUP_SETTINGS, true);
-            bool valueSet = !(startUpKey.GetValue(REGISTRY_STARTUP_APP_NAME) == null);
+            RegistryKey startUpKey = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_STARTUP_APPS, true);
+            bool valueSet = !(startUpKey.GetValue(REGISTRY_VALUE_APP_NAME) == null);
             if (runOnStartup && !valueSet)
             {
                 string path = Process.GetCurrentProcess().MainModule.FileName;
-                startUpKey.SetValue(REGISTRY_STARTUP_APP_NAME, path);
+                startUpKey.SetValue(REGISTRY_VALUE_APP_NAME, path);
             }
             else if (!runOnStartup && valueSet)
             {
-                startUpKey.DeleteValue(REGISTRY_STARTUP_APP_NAME, false);
+                startUpKey.DeleteValue(REGISTRY_VALUE_APP_NAME, false);
             }
         }
         public bool GetRunOnStartup()
         {
             bool runOnStartup = false;
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_STARTUP_SETTINGS);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_STARTUP_APPS);
 
             //if it does exist, then run on startup is set
             if (key != null)
             {
-                if (key.GetValue(REGISTRY_STARTUP_APP_NAME) != null)
+                if (key.GetValue(REGISTRY_VALUE_APP_NAME) != null)
                 {
                     runOnStartup = true;
                 }
@@ -847,22 +847,22 @@ namespace AuthentiKitTuningApp.Processor.Data
         public void SetStartAllOnOpen(bool startAllOnOpen)
         {
             _startAllOnOpen = startAllOnOpen;
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_APP_SETTINGS);
-            key.SetValue(REGISTRY_START_ALL_ON_OPEN, startAllOnOpen);
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_KEY_APP_SETTINGS);
+            key.SetValue(REGISTRY_VALUE_START_ALL_ON_OPEN, startAllOnOpen);
             key.Close();
         }
         public bool GetStartAllOnOpen()
         {
             _startAllOnOpen = false;
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_APP_SETTINGS);
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_APP_SETTINGS);
 
             //if it does exist, retrieve the stored value  
             string startAllOnOpenString = "";
             if (key != null)
             {
-                if (key.GetValue(REGISTRY_START_ALL_ON_OPEN) != null)
+                if (key.GetValue(REGISTRY_VALUE_START_ALL_ON_OPEN) != null)
                 {
-                    startAllOnOpenString = key.GetValue(REGISTRY_START_ALL_ON_OPEN).ToString();
+                    startAllOnOpenString = key.GetValue(REGISTRY_VALUE_START_ALL_ON_OPEN).ToString();
                 }
                 key.Close();
             }
