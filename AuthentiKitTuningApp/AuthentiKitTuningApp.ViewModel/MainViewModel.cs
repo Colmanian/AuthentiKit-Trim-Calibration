@@ -123,6 +123,7 @@ namespace AuthentiKitTuningApp.ViewModel
             Debug.WriteLine(String.Format("{0}", aircraft));
             Stop();
             Mappings.Clear();
+            _mainDataHandler.SetSaveFilePath("");
             if (aircraft != Preset.NONE)
             {
                 var mappings = _mainDataHandler.GetDefaultMappings(aircraft, InputButtonsA, InputButtonsB, InputAxes, OutputAxes, OutputButtonsA, OutputButtonsB);
