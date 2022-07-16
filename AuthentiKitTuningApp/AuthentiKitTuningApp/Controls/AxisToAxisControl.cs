@@ -31,7 +31,7 @@ namespace AuthentiKitTuningApp.Controls
             chbFlip.DataBindings.Add("Checked", MappingBindingSource, "Flipped");
 
             // Calibration Label
-            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationString");
+            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationDisplayString");
 
             // Panel Activation
             pnlAxisToAxisConfig.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
@@ -72,7 +72,7 @@ namespace AuthentiKitTuningApp.Controls
         private void GetCalibrationButtonClick(object sender, EventArgs e)
         {
             lblCalibration.DataBindings.Clear();
-            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationString");
+            lblCalibration.DataBindings.Add("Text", MappingBindingSource, "CalibrationDisplayString");
         }
     }
 }

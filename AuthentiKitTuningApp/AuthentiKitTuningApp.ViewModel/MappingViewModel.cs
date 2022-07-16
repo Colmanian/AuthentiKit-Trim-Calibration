@@ -46,7 +46,7 @@ namespace AuthentiKitTuningApp.ViewModel
             RaisePropertyChanged(nameof(Deactivated));
             RaisePropertyChanged(nameof(Status));
             RaisePropertyChanged(nameof(StatusColour));
-            RaisePropertyChanged(nameof(CalibrationString));
+            RaisePropertyChanged(nameof(CalibrationDisplayString));
         }
         public void Activate()
         {
@@ -281,19 +281,26 @@ namespace AuthentiKitTuningApp.ViewModel
             }
         }
 
-        public string CalibrationString
+        public string CalibrationDisplayString
         {
             get
             {
                 CalibrationDTO savedCalibration = _mapping.Calibration;
                 CalibrationDTO actualCalibration = DataHandler.GetAxisCalibration(_mapping.InputAxis);
-                if (savedCalibration != null)
-                    if (!savedCalibration.Equals(actualCalibration))
-                    {
-                        return "* " + actualCalibration.ToString() + "  (unsaved)";
-                    }
+                string returnString = "Axis not calibratied yet";
 
-                return actualCalibration.ToString();
+                if ((savedCalibration != null) && (actualCalibration != null))
+                {
+                    if (actualCalibration.IsSet && savedCalibration.Equals(actualCalibration))
+                    {
+                        returnString = actualCalibration.ToString();
+                    }
+                    else if (actualCalibration.IsSet && !savedCalibration.Equals(actualCalibration))
+                    {
+                        returnString = "* " + actualCalibration.ToString() + "  (unsaved)";
+                    }
+                }
+                return returnString;
             }
         }
         public bool Flipped
