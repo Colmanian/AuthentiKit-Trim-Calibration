@@ -36,6 +36,7 @@ namespace AuthentiKitTuningApp.Processor.Hardware
         {
             ObservableCollection<InputAxis> inputAxes = new();
             var directInput = new DirectInput();
+            Debug.WriteLine("ProductGuid\tInstanceName\tName\tAxisId\tCaluclatedOffset\tOffset\tObjectType\tInstanceNumber");
             foreach (var device in directInput.GetDevices())
             {
                 if (device.Subtype != 256 && device.Type != DeviceType.Keyboard && device.Type != DeviceType.Mouse && !device.InstanceName.Contains("vJoy"))
@@ -48,7 +49,7 @@ namespace AuthentiKitTuningApp.Processor.Hardware
                             var objectProperties = joystick.GetObjectPropertiesById(instance.ObjectId);
                             var objectInfo = joystick.GetObjectInfoById(instance.ObjectId);
                             int axisId = getAxisIdFromName(instance.Name);
-                            int instanceOffset = getInstanceOffsetFromName(instance.Name);
+                            int instanceOffset = getInstanceOffsetFromName(instance.Name); //instance.Offset;
                             var a = instance.ObjectType;
                             if (instance.ObjectId.Flags == DeviceObjectTypeFlags.AbsoluteAxis)
                             {
@@ -57,11 +58,23 @@ namespace AuthentiKitTuningApp.Processor.Hardware
                                     Guid = device.ProductGuid,
                                     Device = device.InstanceName,
                                     AxisId = axisId,
+                                    InstanceNumber = instance.ObjectId.InstanceNumber,
                                     InstanceOffset = instanceOffset,
                                     Min = objectProperties.Range.Minimum,
                                     Max = objectProperties.Range.Maximum,
                                     Name = string.Format(device.InstanceName + " : " + instance.Name)
                                 });
+
+                                Debug.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",//\t{8}",//\t{9}\t{10}\t{11}",
+                                    device.ProductGuid,
+                                    device.InstanceName,
+                                    instance.Name,
+                                    axisId,
+                                    instanceOffset,
+                                    instance.Offset,
+                                    instance.ObjectType,
+                                    instance.ObjectId.InstanceNumber
+                                );
                             }
                         }
                     }

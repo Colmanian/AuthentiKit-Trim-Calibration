@@ -272,16 +272,9 @@ namespace AuthentiKitTuningApp.Processor.Data
         // Ref: https://stackoverflow.com/a/51824114
         public static string GetCalibrationRegistryKey(InputAxis inputAxis)
         {
-            string registryName = string.Empty;
             string guid = inputAxis.Guid.ToString().ToUpper();
-            registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0, 4));
-
-            string registryPath = REGISTRY_KEY_CALIBRATIONS
-                + registryName
-                + "\\Calibration\\0\\Type\\Axes\\"
-                + inputAxis.InstanceOffset;
-
-            return registryPath;
+            string registryName = string.Concat("VID_", guid.AsSpan(4, 4), "&PID_", guid.AsSpan(0, 4));
+            return REGISTRY_KEY_CALIBRATIONS + registryName + "\\Calibration\\0\\Type\\Axes\\" + inputAxis.InstanceNumber;
         }
 
         public static string GetRegistryPathsDebugDisplay(ObservableCollection<InputAxis> inputAxes)
