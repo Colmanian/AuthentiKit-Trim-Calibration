@@ -28,6 +28,8 @@ namespace AuthentiKitTuningApp.Processor.Data
         private static readonly string ENCODER_PPR = "ENCODER_PPR";
         private static readonly string REVS_IN_PER_REVS_OUT = "REVS_IN_PER_REVS_OUT";
         private static readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
+        private static readonly string HOLD_OUTPUT_ON_AFTER = "HOLD_OUTPUT_ON_AFTER";
+        private static readonly string STOP_HOLDING_AFTER = "STOP_HOLDING_AFTER";
         private static readonly string RESET_COMMAND = "RESET_COMMAND";
         private static readonly string FLIPPED = "FLIPPED";
         private static readonly string GATEWAY1 = "GATEWAY1";
@@ -123,6 +125,8 @@ namespace AuthentiKitTuningApp.Processor.Data
                             bool gatewayEnabled3 = false;
                             bool gatewayEnabled4 = false;
                             bool gatewayEnabled5 = false;
+                            int holdOutputOnAfter = 500;
+                            int stopHoldingAter = 1000;
                             CalibrationDTO Calibration = new();
 
                             // Backwards compatability with earlier save files than 1.2
@@ -158,6 +162,10 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 Calibration.Cen = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_CEN).InnerText);
                             if (mappingNode.SelectSingleNode(CALIBRATION_MAX) != null)
                                 Calibration.Max = int.Parse(mappingNode.SelectSingleNode(CALIBRATION_MAX).InnerText);
+                            if (mappingNode.SelectSingleNode(HOLD_OUTPUT_ON_AFTER) != null)
+                                holdOutputOnAfter = int.Parse(mappingNode.SelectSingleNode(HOLD_OUTPUT_ON_AFTER).InnerText);
+                            if (mappingNode.SelectSingleNode(STOP_HOLDING_AFTER) != null)
+                                stopHoldingAter = int.Parse(mappingNode.SelectSingleNode(STOP_HOLDING_AFTER).InnerText);
 
 
 
@@ -176,6 +184,8 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 EncoderPPR = encoderPPR,
                                 RevsInPerRevsOut = revsInPerRevsOut,
                                 ButtonMultiplier = buttonMultiplier,
+                                HoldThresholdStart = holdOutputOnAfter,
+                                HoldThresholdStop = stopHoldingAter,
                                 ResetCommand = resetCommand,
                                 Flipped = flipped,
                                 Gateway1 = gateway1,
@@ -365,9 +375,19 @@ namespace AuthentiKitTuningApp.Processor.Data
                 mappingNode.AppendChild(revsInPerRevsOut);
 
                 // ButtonMultiplier
-                XmlElement buttoMultiplierNode = doc.CreateElement(BUTTON_MULTIPLIER);
-                buttoMultiplierNode.InnerText = string.Format("{0}", mapping.ButtonMultiplier);
-                mappingNode.AppendChild(buttoMultiplierNode);
+                XmlElement buttonMultiplierNode = doc.CreateElement(BUTTON_MULTIPLIER);
+                buttonMultiplierNode.InnerText = string.Format("{0}", mapping.ButtonMultiplier);
+                mappingNode.AppendChild(buttonMultiplierNode);
+
+                // HoldThresholdStart
+                XmlElement holdThresholdStartNode = doc.CreateElement(HOLD_OUTPUT_ON_AFTER);
+                holdThresholdStartNode.InnerText = string.Format("{0}", mapping.HoldThresholdStart);
+                mappingNode.AppendChild(holdThresholdStartNode);
+
+                // HoldThresholdStop
+                XmlElement holdThresholdStopNode = doc.CreateElement(STOP_HOLDING_AFTER);
+                holdThresholdStopNode.InnerText = string.Format("{0}", mapping.HoldThresholdStop);
+                mappingNode.AppendChild(holdThresholdStopNode);
 
                 // ResetCommand
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
