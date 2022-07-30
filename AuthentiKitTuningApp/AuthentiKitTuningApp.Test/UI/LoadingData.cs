@@ -28,7 +28,7 @@ namespace AuthentiKitTuningApp.Test.UI
             var session = AuthenitKitTuningAppSession.session;
             if (session != null)
             {
-                session.FindElementByName("New Mapping").Click();
+                session.FindElementByName("Add Mapping").Click();
                 session.FindElementByName("menuStrip").SendKeys("%p");
                 session.FindElementByName("Clear All").Click();
                 session.FindElementByName("Delete").Click();
