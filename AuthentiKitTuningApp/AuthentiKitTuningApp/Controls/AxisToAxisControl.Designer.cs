@@ -53,7 +53,7 @@
             this.cbInputAxis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputAxis.DropDownWidth = 512;
+            this.cbInputAxis.DropDownWidth = 800;
             this.cbInputAxis.FormattingEnabled = true;
             this.cbInputAxis.Location = new System.Drawing.Point(20, 42);
             this.cbInputAxis.Name = "cbInputAxis";

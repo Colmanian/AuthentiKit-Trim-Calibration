@@ -74,9 +74,9 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton2
             // 
             this.DetectButton2.AutoSize = true;
-            this.DetectButton2.Location = new System.Drawing.Point(305, 88);
+            this.DetectButton2.Location = new System.Drawing.Point(322, 88);
             this.DetectButton2.Name = "DetectButton2";
-            this.DetectButton2.Size = new System.Drawing.Size(73, 25);
+            this.DetectButton2.Size = new System.Drawing.Size(59, 25);
             this.DetectButton2.TabIndex = 21;
             this.DetectButton2.Text = "Detect";
             this.DetectButton2.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton1
             // 
             this.DetectButton1.AutoSize = true;
-            this.DetectButton1.Location = new System.Drawing.Point(305, 37);
+            this.DetectButton1.Location = new System.Drawing.Point(322, 37);
             this.DetectButton1.Name = "DetectButton1";
-            this.DetectButton1.Size = new System.Drawing.Size(73, 25);
+            this.DetectButton1.Size = new System.Drawing.Size(59, 25);
             this.DetectButton1.TabIndex = 20;
             this.DetectButton1.Text = "Detect";
             this.DetectButton1.UseVisualStyleBackColor = true;
@@ -201,13 +201,15 @@ namespace AuthentiKitTuningApp.Controls
             // cbInputB
             // 
             this.cbInputB.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.cbInputB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputB.DropDownWidth = 512;
+            this.cbInputB.DropDownWidth = 800;
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(20, 88);
             this.cbInputB.MaxDropDownItems = 16;
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(255, 23);
+            this.cbInputB.Size = new System.Drawing.Size(296, 23);
             this.cbInputB.TabIndex = 9;
             this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
@@ -217,12 +219,12 @@ namespace AuthentiKitTuningApp.Controls
             this.cbInputA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputA.DropDownWidth = 512;
+            this.cbInputA.DropDownWidth = 800;
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(20, 37);
             this.cbInputA.MaxDropDownItems = 16;
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(255, 23);
+            this.cbInputA.Size = new System.Drawing.Size(296, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -237,12 +239,12 @@ namespace AuthentiKitTuningApp.Controls
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Encoder Pulses per Rev.";
             // 
-            // EncoderAxisControl
+            // EncoderToAxisControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlEncoderAxisConfig);
-            this.Name = "EncoderAxisControl";
+            this.Name = "EncoderToAxisControl";
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlEncoderAxisConfig.ResumeLayout(false);
             this.pnlEncoderAxisConfig.PerformLayout();

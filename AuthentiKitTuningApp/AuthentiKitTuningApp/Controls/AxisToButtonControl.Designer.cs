@@ -81,11 +81,24 @@
             // numericUpDown5
             // 
             this.numericUpDown5.Location = new System.Drawing.Point(331, 199);
-            this.numericUpDown5.Maximum = 99;
-            this.numericUpDown5.Minimum = 1;
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(54, 23);
             this.numericUpDown5.TabIndex = 35;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // checkBox5
@@ -101,11 +114,24 @@
             // numericUpDown4
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(254, 199);
-            this.numericUpDown4.Maximum = 99;
-            this.numericUpDown4.Minimum = 1;
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown4.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(54, 23);
             this.numericUpDown4.TabIndex = 33;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // checkBox4
@@ -121,11 +147,24 @@
             // numericUpDown3
             // 
             this.numericUpDown3.Location = new System.Drawing.Point(177, 199);
-            this.numericUpDown3.Maximum = 99;
-            this.numericUpDown3.Minimum = 1;
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(54, 23);
             this.numericUpDown3.TabIndex = 31;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // checkBox3
@@ -141,11 +180,24 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(100, 199);
-            this.numericUpDown2.Maximum = 99;
-            this.numericUpDown2.Minimum = 1;
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(54, 23);
             this.numericUpDown2.TabIndex = 29;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // checkBox2
@@ -161,11 +213,24 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(18, 199);
-            this.numericUpDown1.Maximum = 99;
-            this.numericUpDown1.Minimum = 1;
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(54, 23);
             this.numericUpDown1.TabIndex = 27;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // checkBox1
@@ -201,6 +266,7 @@
             this.cbOutputButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbOutputButton2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputButton2.DropDownWidth = 800;
             this.cbOutputButton2.FormattingEnabled = true;
             this.cbOutputButton2.Location = new System.Drawing.Point(18, 141);
             this.cbOutputButton2.Name = "cbOutputButton2";
@@ -234,7 +300,7 @@
             this.cbInputAxis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputAxis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputAxis.DropDownWidth = 512;
+            this.cbInputAxis.DropDownWidth = 800;
             this.cbInputAxis.FormattingEnabled = true;
             this.cbInputAxis.Location = new System.Drawing.Point(18, 32);
             this.cbInputAxis.Name = "cbInputAxis";

@@ -71,9 +71,9 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton2
             // 
             this.DetectButton2.AutoSize = true;
-            this.DetectButton2.Location = new System.Drawing.Point(305, 87);
+            this.DetectButton2.Location = new System.Drawing.Point(332, 89);
             this.DetectButton2.Name = "DetectButton2";
-            this.DetectButton2.Size = new System.Drawing.Size(73, 25);
+            this.DetectButton2.Size = new System.Drawing.Size(59, 25);
             this.DetectButton2.TabIndex = 17;
             this.DetectButton2.Text = "Detect";
             this.DetectButton2.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton1
             // 
             this.DetectButton1.AutoSize = true;
-            this.DetectButton1.Location = new System.Drawing.Point(305, 37);
+            this.DetectButton1.Location = new System.Drawing.Point(332, 37);
             this.DetectButton1.Name = "DetectButton1";
-            this.DetectButton1.Size = new System.Drawing.Size(73, 25);
+            this.DetectButton1.Size = new System.Drawing.Size(59, 25);
             this.DetectButton1.TabIndex = 16;
             this.DetectButton1.Text = "Detect";
             this.DetectButton1.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace AuthentiKitTuningApp.Controls
             this.tBarAxisSensitivity.Location = new System.Drawing.Point(20, 204);
             this.tBarAxisSensitivity.Maximum = 1000;
             this.tBarAxisSensitivity.Name = "tBarAxisSensitivity";
-            this.tBarAxisSensitivity.Size = new System.Drawing.Size(304, 45);
+            this.tBarAxisSensitivity.Size = new System.Drawing.Size(306, 45);
             this.tBarAxisSensitivity.TabIndex = 15;
             this.tBarAxisSensitivity.TickFrequency = 50;
             this.tBarAxisSensitivity.Value = 1;
@@ -141,7 +141,7 @@ namespace AuthentiKitTuningApp.Controls
             this.cbOutputAxis.FormattingEnabled = true;
             this.cbOutputAxis.Location = new System.Drawing.Point(20, 143);
             this.cbOutputAxis.Name = "cbOutputAxis";
-            this.cbOutputAxis.Size = new System.Drawing.Size(358, 23);
+            this.cbOutputAxis.Size = new System.Drawing.Size(371, 23);
             this.cbOutputAxis.TabIndex = 12;
             this.cbOutputAxis.SelectedIndexChanged += new System.EventHandler(this.cbOutput_SelectedIndexChanged);
             // 
@@ -170,11 +170,11 @@ namespace AuthentiKitTuningApp.Controls
             this.cbInputB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputB.DropDownWidth = 512;
+            this.cbInputB.DropDownWidth = 800;
             this.cbInputB.FormattingEnabled = true;
             this.cbInputB.Location = new System.Drawing.Point(20, 89);
             this.cbInputB.Name = "cbInputB";
-            this.cbInputB.Size = new System.Drawing.Size(255, 23);
+            this.cbInputB.Size = new System.Drawing.Size(306, 23);
             this.cbInputB.TabIndex = 9;
             this.cbInputB.SelectedIndexChanged += new System.EventHandler(this.cbInputB_SelectedIndexChanged);
             // 
@@ -183,11 +183,11 @@ namespace AuthentiKitTuningApp.Controls
             this.cbInputA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbInputA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInputA.DropDownWidth = 512;
+            this.cbInputA.DropDownWidth = 800;
             this.cbInputA.FormattingEnabled = true;
             this.cbInputA.Location = new System.Drawing.Point(20, 37);
             this.cbInputA.Name = "cbInputA";
-            this.cbInputA.Size = new System.Drawing.Size(255, 23);
+            this.cbInputA.Size = new System.Drawing.Size(306, 23);
             this.cbInputA.TabIndex = 8;
             this.cbInputA.SelectedIndexChanged += new System.EventHandler(this.cbInputA_SelectedIndexChanged);
             // 
@@ -201,12 +201,12 @@ namespace AuthentiKitTuningApp.Controls
             this.lblMultiplier.TabIndex = 2;
             this.lblMultiplier.Text = "Sensitivity";
             // 
-            // AxisConfigControl
+            // ButtonToAxisControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlAxisConfig);
-            this.Name = "AxisConfigControl";
+            this.Name = "ButtonToAxisControl";
             this.Size = new System.Drawing.Size(407, 256);
             this.pnlAxisConfig.ResumeLayout(false);
             this.pnlAxisConfig.PerformLayout();
