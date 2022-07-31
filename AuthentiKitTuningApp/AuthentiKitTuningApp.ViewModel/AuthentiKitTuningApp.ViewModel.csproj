@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthentiKitTuningApp.Common\AuthentiKitTuningApp.Common.csproj" />
+    <ProjectReference Include="..\AuthentiKitTuningApp.Processor\AuthentiKitTuningApp.Processor.csproj" />
+  </ItemGroup>
+
+</Project>
