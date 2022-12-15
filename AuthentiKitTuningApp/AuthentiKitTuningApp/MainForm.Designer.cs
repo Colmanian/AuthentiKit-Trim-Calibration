@@ -263,21 +263,21 @@ namespace AuthentiKitTuningApp
             // 
             // startupMenuItem
             // 
-            this.startupMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
+            this.startupMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("startupMenuItem.Image")));
             this.startupMenuItem.Name = "startupMenuItem";
             this.startupMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startupMenuItem.Text = "&Run on Windows Start?";
             // 
             // calibrationMenuItem
             // 
-            this.calibrationMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
+            this.calibrationMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("calibrationMenuItem.Image")));
             this.calibrationMenuItem.Name = "calibrationMenuItem";
             this.calibrationMenuItem.Size = new System.Drawing.Size(246, 22);
             this.calibrationMenuItem.Text = "&Save and Load Axis Calibrations?";
             // 
             // startAllMappingsMenuItem
             // 
-            this.startAllMappingsMenuItem.Image = global::AuthentiKitTuningApp.Properties.Resources.white_circle_26aa;
+            this.startAllMappingsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("startAllMappingsMenuItem.Image")));
             this.startAllMappingsMenuItem.Name = "startAllMappingsMenuItem";
             this.startAllMappingsMenuItem.Size = new System.Drawing.Size(246, 22);
             this.startAllMappingsMenuItem.Text = "Start All Mappings on App Start?";
@@ -575,6 +575,7 @@ namespace AuthentiKitTuningApp
             this.notifyIconTray.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconTray.Icon")));
             this.notifyIconTray.Text = "AuthentiKit Tuning App";
             this.notifyIconTray.Visible = true;
+            this.notifyIconTray.DoubleClick += new System.EventHandler(this.notifyIconTray_DoubleClick);
             // 
             // contextMenuStripTray
             // 
@@ -667,6 +668,7 @@ namespace AuthentiKitTuningApp
             this.Text = "AuthentiKit Tuning App";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.menuStrip.ResumeLayout(false);
