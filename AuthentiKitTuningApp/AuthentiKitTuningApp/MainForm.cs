@@ -510,5 +510,24 @@ namespace AuthentiKitTuningApp
         }
 
         private string SaveFileName { get { return _viewModel.SaveFileName; } }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (WindowState is FormWindowState.Minimized)
+            {
+                this.Hide();
+            }
+        }
+
+        private void notifyIconTray_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState is FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+
+            this.Activate();
+        }
     }
 }
