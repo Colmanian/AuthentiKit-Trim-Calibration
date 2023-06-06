@@ -22,5 +22,8 @@ namespace AuthentiKitTuningApp.Common.DataProvider
         void SetPersistCalibration(bool persist);
         bool GetStartAllOnOpen();
         void SetStartAllOnOpen(bool startAllOnOpen);
+        bool GetMinimiseToSystemTray();
+        void SetMinimiseToSystemTray(bool minimiseToSystemTray);
+        
     }
 }

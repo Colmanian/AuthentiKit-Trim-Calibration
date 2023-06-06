@@ -49,6 +49,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         private static readonly string REGISTRY_VALUE_SAVE_FILE_NAME = "SaveFileName";
         private static readonly string REGISTRY_VALUE_PERSIST_CALIBRATION = "PersistCalibration";
         private static readonly string REGISTRY_VALUE_START_ALL_ON_OPEN = "StartAllOnOpen";
+        private static readonly string REGISTRY_VALUE_MINIMISE_TO_SYSTEM_TRAY = "MinimiseToSystemTray";
         private static readonly string REGISTRY_KEY_STARTUP_APPS = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Under HKEY_CURRENT_USER
         private static readonly string REGISTRY_VALUE_APP_NAME = "AuthentiKit";
         private static readonly string REGISTRY_KEY_CALIBRATIONS = "System\\CurrentControlSet\\Control\\MediaProperties\\PrivateProperties\\DirectInput\\"; //Under HKEY_CURRENT_USER
@@ -56,6 +57,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         private string SaveFilePath;
         private bool _persistCalibration;
         private bool _startAllOnOpen;
+        private bool _minimiseToSystemTray;
 
         public DataHandler()
         {
@@ -885,6 +887,36 @@ namespace AuthentiKitTuningApp.Processor.Data
             }
             catch { }
             return _startAllOnOpen;
+        }
+
+        public void SetMinimiseToSystemTray(bool minimiseToSystemTray)
+        {
+            _minimiseToSystemTray = minimiseToSystemTray;
+            RegistryKey key = Registry.CurrentUser.CreateSubKey(REGISTRY_KEY_APP_SETTINGS);
+            key.SetValue(REGISTRY_VALUE_MINIMISE_TO_SYSTEM_TRAY, minimiseToSystemTray);
+            key.Close();
+        }
+        public bool GetMinimiseToSystemTray()
+        {
+            _startAllOnOpen = false;
+            RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_APP_SETTINGS);
+
+            //if it does exist, retrieve the stored value  
+            string minimiseToSystemTray = "";
+            if (key != null)
+            {
+                if (key.GetValue(REGISTRY_VALUE_MINIMISE_TO_SYSTEM_TRAY) != null)
+                {
+                    minimiseToSystemTray = key.GetValue(REGISTRY_VALUE_MINIMISE_TO_SYSTEM_TRAY).ToString();
+                }
+                key.Close();
+            }
+            try
+            {
+                _minimiseToSystemTray = bool.Parse(minimiseToSystemTray);
+            }
+            catch { }
+            return _minimiseToSystemTray;
         }
 
     }

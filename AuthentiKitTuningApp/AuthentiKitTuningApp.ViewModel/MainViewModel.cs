@@ -194,6 +194,17 @@ namespace AuthentiKitTuningApp.ViewModel
                 _mainDataHandler.SetStartAllOnOpen(value);
             }
         }
+        public bool MinimiseToSystemTray
+        {
+            get
+            {
+                return _mainDataHandler.GetMinimiseToSystemTray();
+            }
+            set
+            {
+                _mainDataHandler.SetMinimiseToSystemTray(value);
+            }
+        }
 
         public bool AnyFormDirty
         {
