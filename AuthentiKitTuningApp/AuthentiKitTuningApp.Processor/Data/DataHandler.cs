@@ -750,6 +750,49 @@ namespace AuthentiKitTuningApp.Processor.Data
                     AxisSensitivity = 360,
                 });
             }
+            else if (preset == Preset.BF109)
+            {
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Booster Pumps Off - P1",
+                    TypeId = MappingType.AXIS_TO_BUTTON,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RX),
+                    GatewayEnabled1 = true,
+                    Gateway1 = 80,
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 1),
+                    OutputChannelB = GetOutputChannel(outputButtonsB, 2)
+                });
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Booster Pumps P1 - P2",
+                    TypeId = MappingType.AXIS_TO_BUTTON,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RX),
+                    GatewayEnabled1 = true,
+                    Gateway1 = 40,
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 2),
+                    OutputChannelB = GetOutputChannel(outputButtonsB, 3)
+                });
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Booster Pumps P2 - P1+P2",
+                    TypeId = MappingType.AXIS_TO_BUTTON,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RX),
+                    GatewayEnabled1 = true,
+                    Gateway1 = 10,
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 3),
+                    OutputChannelB = GetOutputChannel(outputButtonsB, 4)
+                });
+                mappings.Add(new MappingDTO
+                {
+                    Name = "Engine Cut-Off ON/OFF (UP=ON, DOWN=OFF)",
+                    TypeId = MappingType.AXIS_TO_BUTTON,
+                    InputAxis = GetAuthentiKitInputAxis(inputAxes, InputAxis.TYPE.RY),
+                    GatewayEnabled1 = true,
+                    Gateway1 = 60,
+                    OutputChannelA = GetOutputChannel(outputButtonsA, 5),
+                    OutputChannelB = GetOutputChannel(outputButtonsB, 6)
+                });
+            }
             return mappings;
         }
 

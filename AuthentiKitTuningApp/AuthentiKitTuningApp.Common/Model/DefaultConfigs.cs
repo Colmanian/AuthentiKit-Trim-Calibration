@@ -5,6 +5,7 @@
         SPITFIRE,
         P40B,
         HONEYCOMB_BRAVO,
+        BF109,
         NONE
     }
 }

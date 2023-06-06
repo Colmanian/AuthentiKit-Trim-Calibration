@@ -283,6 +283,10 @@ namespace AuthentiKitTuningApp
                 {
                     _viewModel.Reset(Preset.HONEYCOMB_BRAVO);
                 }
+                else if (e.ClickedItem.Name.Equals("bf109MenuItem"))
+                {
+                    _viewModel.Reset(Preset.BF109);
+                }
                 LoadFormData();
             }
             catch (Exception ex)

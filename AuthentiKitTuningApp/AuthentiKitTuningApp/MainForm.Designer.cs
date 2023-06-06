@@ -50,6 +50,7 @@ namespace AuthentiKitTuningApp
             spitfireMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             honeycombBravoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             p40BMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            bf109MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             clearMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -240,7 +241,7 @@ namespace AuthentiKitTuningApp
             // 
             // presetsMenuItem
             // 
-            presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { spitfireMenuItem, honeycombBravoMenuItem, p40BMenuItem, toolStripSeparator4, clearMenuItem });
+            presetsMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { spitfireMenuItem, honeycombBravoMenuItem, p40BMenuItem, bf109MenuItem, toolStripSeparator4, clearMenuItem });
             presetsMenuItem.Name = "presetsMenuItem";
             presetsMenuItem.Size = new System.Drawing.Size(56, 20);
             presetsMenuItem.Text = "&Presets";
@@ -263,6 +264,12 @@ namespace AuthentiKitTuningApp
             p40BMenuItem.Name = "p40BMenuItem";
             p40BMenuItem.Size = new System.Drawing.Size(236, 22);
             p40BMenuItem.Text = "&P-40B (for MSFS)";
+            // 
+            // bf109MenuItem
+            // 
+            bf109MenuItem.Name = "bf109MenuItem";
+            bf109MenuItem.Size = new System.Drawing.Size(236, 22);
+            bf109MenuItem.Text = "&Bf 109 (for DCS)";
             // 
             // toolStripSeparator4
             // 
@@ -750,6 +757,7 @@ namespace AuthentiKitTuningApp
         private System.Windows.Forms.Label lblSaveFileName;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.ToolStripMenuItem p40BMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bf109MenuItem;
         private System.Windows.Forms.ToolStripMenuItem minimiseToSystemTrayMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
