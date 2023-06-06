@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_8095A12BB8E148B4973D8BD1F0CAE640"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -281,7 +275,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
         "ProductCode" = "8:{AF21D847-B68B-4956-83C3-440D9350C2DC}"
-        "PackageCode" = "8:{8B2BB198-2B5A-4240-80E9-C7F7FCB3BD6B}"
+        "PackageCode" = "8:{A8BFEA85-5FA2-4726-8AD8-F80E8BAEBDEA}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -409,7 +403,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
+            "Target" = "8:_876DFACD282B48FC8BA87CD94157C14E"
             "Folder" = "8:_5F4B5EEA01FD4F64BB974C83E6ECD8B7"
             "WorkingFolder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
             "Icon" = "8:_8095A12BB8E148B4973D8BD1F0CAE640"
@@ -423,7 +417,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_65D5F7BC9CD94B349E6B1D45C322FFA7"
+            "Target" = "8:_876DFACD282B48FC8BA87CD94157C14E"
             "Folder" = "8:_47836210F48040E89CF1FD4DAA8615E0"
             "WorkingFolder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
             "Icon" = "8:_8095A12BB8E148B4973D8BD1F0CAE640"
@@ -838,9 +832,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_65D5F7BC9CD94B349E6B1D45C322FFA7"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_876DFACD282B48FC8BA87CD94157C14E"
             {
-            "SourcePath" = "8:..\\AuthentiKitTuningApp\\bin\\x86\\Release\\net6.0-windows\\publish\\win-x86\\AuthentiKitTuningApp.exe"
+            "SourcePath" = "8:..\\AuthentiKitTuningApp\\obj\\x86\\Release\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4FB4ADA3CE524727A373EA32303F46C7"
@@ -862,7 +856,6 @@
             "OutputGroupCanonicalName" = "8:PublishItems"
             "OutputProjectGuid" = "8:{6961E85C-AE8A-4BC1-8992-B383FCD7F96E}"
             "ShowKeyOutput" = "11:TRUE"
-            "PublishProfilePath" = "8:Properties\\PublishProfiles\\FolderProfile.pubxml"
                 "ExcludeFilters"
                 {
                 }
