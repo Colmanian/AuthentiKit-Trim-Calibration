@@ -41,21 +41,25 @@ namespace AuthentiKitTuningApp.Processor
             }
             else
             {
-                Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
+                Debug.WriteLine("vJoy Enabled: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
             }
-            // Acquire the target
+
+
+            // Acquire the target A
             VjdStat status = _joystick.GetVJDStatus(_vJoyId);
-            if ((status == VjdStat.VJD_STAT_OWN) || ((status == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyId))))
+            bool acquired = _joystick.AcquireVJD(_vJoyId);
+            if (!acquired)
             {
-                Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyId);
+                Debug.WriteLine("Failed to acquire vJoy device number {0} because {1}", _vJoyId, status.ToString());
                 return;
             }
             else
-                Debug.WriteLine("Acquired: vJoy device number {0}.", _vJoyId);
-            _joystick.ResetVJD(_vJoyId);
-
-            // Initalise
-            SetOutput(false);
+            {
+                Debug.WriteLine("Acquired vJoy device number {0}", _vJoyId);
+                
+                // Initalise
+                SetOutput(false);
+            }
         }
 
         internal void Process(bool buttonAState, long elapsedMilliseconds)

@@ -31,28 +31,33 @@ namespace AuthentiKitTuningApp.Processor
             }
             else
             {
-                Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
+                Debug.WriteLine("vJoy Enabled: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
             }
 
-            // Acquire the target (Not currently used really...)
+
+            // Acquire the target
             VjdStat status = _joystick.GetVJDStatus(_vJoyId);
-            Debug.WriteLine("vJoy Status: " + status.ToString());
-            if ((status == VjdStat.VJD_STAT_OWN) || ((status == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyId))))
+            bool acquiredA = _joystick.AcquireVJD(_vJoyId);
+            if (!acquiredA)
             {
-                Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyId);
+                Debug.WriteLine("Failed to acquire vJoy device number {0} because {1}", _vJoyId, status.ToString());
+                return;
             }
+            else
+            {
+                Debug.WriteLine("Acquired and vJoy device number {0}", _vJoyId);
+                _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
+                Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
+                Centre();
 
-            _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
-            Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
-            Centre();
-
-            // Calculate how much to move the output by for each input pulse
-            Debug.WriteLine("Encoder PPR is {0} and Revs In per Out is {1}", encoderPPR, revsInPerRevsOut);
-            float outputRevolutionSize = _maxAxisValue / revsInPerRevsOut;
-            encoderPPR *= 4; // I think I can get 4x the resolution out of the encoder using the tranistions between pulses
-            Debug.WriteLine("Modifying Encoder PPR to {0}", encoderPPR);
-            _outputIncrement = (int)(outputRevolutionSize/encoderPPR);
-            Debug.WriteLine("Output Increment calculated as {0}", _outputIncrement);
+                // Calculate how much to move the output by for each input pulse
+                Debug.WriteLine("Encoder PPR is {0} and Revs In per Out is {1}", encoderPPR, revsInPerRevsOut);
+                float outputRevolutionSize = _maxAxisValue / revsInPerRevsOut;
+                encoderPPR *= 4; // I think I can get 4x the resolution out of the encoder using the tranistions between pulses
+                Debug.WriteLine("Modifying Encoder PPR to {0}", encoderPPR);
+                _outputIncrement = (int)(outputRevolutionSize / encoderPPR);
+                Debug.WriteLine("Output Increment calculated as {0}", _outputIncrement);
+            }
         }
         internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {

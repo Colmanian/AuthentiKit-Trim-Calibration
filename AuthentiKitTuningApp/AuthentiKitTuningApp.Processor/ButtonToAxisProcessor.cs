@@ -38,20 +38,24 @@ namespace AuthentiKitTuningApp.Processor
             }
             else
             {
-                Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
+                Debug.WriteLine("vJoy Enabled: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
             }
 
-            // Acquire the target (Not currently used really...)
+            // Acquire the target
             VjdStat status = _joystick.GetVJDStatus(_vJoyId);
-            Debug.WriteLine("vJoy Status: " + status.ToString());
-            if ((status == VjdStat.VJD_STAT_OWN) || ((status == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyId))))
+            bool acquiredA = _joystick.AcquireVJD(_vJoyId);
+            if (!acquiredA)
             {
-                Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyId);
+                Debug.WriteLine("Failed to acquire vJoy device number {0} because {1}", _vJoyId, status.ToString());
+                return;
             }
-
-            _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
-            Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
-            Centre();
+            else
+            {
+                Debug.WriteLine("Acquired and vJoy device number {0}", _vJoyId);
+                _joystick.GetVJDAxisMax(_vJoyId, (HID_USAGES)_vJoyAxisNumber, ref _maxAxisValue);
+                Debug.WriteLine("Max value of VJID {0} axis {1} is {2}", _vJoyId, (HID_USAGES)_vJoyAxisNumber, _maxAxisValue);
+                Centre();
+            }
         }
         internal void Process(bool buttonAState, bool buttonBState, long elapsedMilliseconds)
         {
