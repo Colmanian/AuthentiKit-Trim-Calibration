@@ -1,5 +1,5 @@
 # AuthentiKit Tuning App
-![Version Experimtal](https://img.shields.io/badge/Version-1.2.0-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-1.3.0-blue)
 
 Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels, Honeycombe Bravo Trim Wheel) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
@@ -10,9 +10,10 @@ Windows Desktop Application to calbirate button-based peripherals (e.g. Authenti
 * [**About the Initial Developer**](https://collotech.net)
 
 **Requements**
-* Windows 10/11
-* vJoy 2.2.1 or earlier for Windows 10 - [download here](https://github.com/njz3/vJoy/releases/tag/v2.2.1.1)
-* vJoy 2.1.9 for Windows 11 - [download here](https://github.com/jshafer817/vJoy/releases/tag/v2.1.9.1)
+* Windows 10 / 11
+* vJoy 2.1.9 - [download here](https://github.com/jshafer817/vJoy/releases/tag/v2.1.9.1)
+
+Note: vJoy 2.1.9 is recommended, especially if you're experiencing vJoy crashes, but some people have had success with vJoy 2.2.1 as well ([download here](https://github.com/njz3/vJoy/releases/tag/v2.2.1.1)) 
 
 # Versioning Strategy
 
