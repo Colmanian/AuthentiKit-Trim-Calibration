@@ -121,6 +121,8 @@ namespace AuthentiKitTuningApp
                 calibrationMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
             if (_viewModel.StartAllOnOpen)
                 startAllMappingsMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
+            if (_viewModel.MinimiseToSystemTray)
+                minimiseToSystemTrayMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
 
             var dataBindingsInitalised = (btnActivate.DataBindings.Count > 0) ||
                 (btnDeactivate.DataBindings.Count > 0) ||
@@ -281,6 +283,10 @@ namespace AuthentiKitTuningApp
                 {
                     _viewModel.Reset(Preset.HONEYCOMB_BRAVO);
                 }
+                else if (e.ClickedItem.Name.Equals("bf109MenuItem"))
+                {
+                    _viewModel.Reset(Preset.BF109);
+                }
                 LoadFormData();
             }
             catch (Exception ex)
@@ -320,7 +326,7 @@ namespace AuthentiKitTuningApp
                     }
                     _viewModel.PersistCalibration = persist;
 
-                   // MessageBox.Show(MainViewModel.GetAxisRegistryPathsDebugString());
+                    // MessageBox.Show(MainViewModel.GetAxisRegistryPathsDebugString());
                 }
                 else if (e.ClickedItem.Name.Equals("startAllMappingsMenuItem"))
                 {
@@ -334,6 +340,19 @@ namespace AuthentiKitTuningApp
                         startAllMappingsMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
                     }
                     _viewModel.StartAllOnOpen = startAllOnOpen;
+                }
+                else if (e.ClickedItem.Name.Equals("minimiseToSystemTrayMenuItem"))
+                {
+                    string message = "Would you like to minimise the app to the system tray instead of the Windows Taskbar?";
+                    DialogResult dialogResult = MessageBox.Show(message, "Minimise to System Tray", MessageBoxButtons.YesNo);
+                    bool minimiseToSystemTray = false;
+                    minimiseToSystemTrayMenuItem.Image = new Bitmap(Properties.Resources.white_circle_26aa);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        minimiseToSystemTray = true;
+                        minimiseToSystemTrayMenuItem.Image = new Bitmap(Properties.Resources.large_green_circle_1f7e2);
+                    }
+                    _viewModel.MinimiseToSystemTray = minimiseToSystemTray;
                 }
             }
             catch (Exception ex)
@@ -497,6 +516,7 @@ namespace AuthentiKitTuningApp
             _viewModel.Stop();
         }
 
+
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
             _viewModel.Stop();
@@ -510,5 +530,34 @@ namespace AuthentiKitTuningApp
         }
 
         private string SaveFileName { get { return _viewModel.SaveFileName; } }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if ((_viewModel.MinimiseToSystemTray) && (WindowState is FormWindowState.Minimized))
+            {
+                this.Hide();
+            }
+        }
+
+        private void notifyIconTray_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState is FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+
+            this.Activate();
+        }
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            if (WindowState is FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+
+            this.Activate();
+        }
     }
 }

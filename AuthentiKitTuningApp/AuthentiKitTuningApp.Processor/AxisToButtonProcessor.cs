@@ -64,30 +64,36 @@ namespace AuthentiKitTuningApp.Processor
             }
             else
             {
-                Debug.WriteLine("Vendor: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
+                Debug.WriteLine("vJoy Enabled: {0}\nProduct :{1}\nVersion Number:{2}\n", _joystick.GetvJoyManufacturerString(), _joystick.GetvJoyProductString(), _joystick.GetvJoySerialNumberString());
             }
             // Acquire the target A
             VjdStat statusA = _joystick.GetVJDStatus(_vJoyIdA);
-            if ((statusA == VjdStat.VJD_STAT_OWN) || ((statusA == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyIdA))))
+            bool acquiredA = _joystick.AcquireVJD(_vJoyIdA);
+            if (!acquiredA)
             {
-                Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyIdA);
+                Debug.WriteLine("Failed to acquire vJoy device number {0} because {1}", _vJoyIdA, statusA.ToString());
                 return;
             }
-            else
-                Debug.WriteLine("Acquired: vJoy device number {0}.", _vJoyIdA);
-            _joystick.ResetVJD(_vJoyIdA);
+            else {
+                Debug.WriteLine("Acquired vJoy device number {0}", _vJoyIdA);
+                //_joystick.ResetVJD(_vJoyIdA);
+            }
+
             // Acquire the target B if necessary
             if (_vJoyIdB != _vJoyIdA)
             {
                 VjdStat statusB = _joystick.GetVJDStatus(_vJoyIdB);
-                if ((statusB == VjdStat.VJD_STAT_OWN) || ((statusB == VjdStat.VJD_STAT_FREE) && (!_joystick.AcquireVJD(_vJoyIdB))))
+                bool acquiredB = _joystick.AcquireVJD(_vJoyIdB);
+                if (!acquiredB)
                 {
-                    Debug.WriteLine("Failed to acquire vJoy device number {0}.", _vJoyIdB);
+                    Debug.WriteLine("Failed to acquire vJoy device number {0} because {1}", _vJoyIdB, statusB.ToString());
                     return;
                 }
                 else
-                    Debug.WriteLine("Acquired: vJoy device number {0}.", _vJoyIdB);
-                _joystick.ResetVJD(_vJoyIdB);
+                {
+                    Debug.WriteLine("Acquired vJoy device number {0}", _vJoyIdB);
+                    //_joystick.ResetVJD(_vJoyIdB);
+                }
             }
 
             // Initialise Outputs
