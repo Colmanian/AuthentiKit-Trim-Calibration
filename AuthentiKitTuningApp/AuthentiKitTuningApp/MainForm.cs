@@ -31,7 +31,8 @@ namespace AuthentiKitTuningApp
             {
                 MessageBox.Show(e.Message, "Error on Startup",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                _viewModel.Stop();
+                if (_viewModel != null)
+                    _viewModel.Stop();
             }
             Debug.WriteLine(SaveFileName);
         }
@@ -40,11 +41,14 @@ namespace AuthentiKitTuningApp
         {
             try
             {
-                _viewModel.LoadMappings();
-                LoadFormData();
-                if (_viewModel.StartAllOnOpen)
+                if (_viewModel != null)
                 {
-                    _viewModel.Start();
+                    _viewModel.LoadMappings();
+                    LoadFormData();
+                    if (_viewModel.StartAllOnOpen)
+                    {
+                        _viewModel.Start();
+                    }
                 }
             }
             catch (Exception ex)
@@ -484,58 +488,68 @@ namespace AuthentiKitTuningApp
 
         private void InitalSetup()
         {
-            if (!_viewModel.AtLeastOneMapping)
+            if (_viewModel != null)
             {
-                try
+                if (!_viewModel.AtLeastOneMapping)
                 {
-                    _viewModel.NewMapping();
-                    LoadFormData();
-                    lsbMappings.SelectedIndex = lsbMappings.Items.Count - 1;
-                    if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+                    try
                     {
-                        _viewModel.RemoveMapping(mappingViewModel);
+                        _viewModel.NewMapping();
+                        LoadFormData();
+                        lsbMappings.SelectedIndex = lsbMappings.Items.Count - 1;
+                        if (mappingBindingSource.Current is MappingViewModel mappingViewModel)
+                        {
+                            _viewModel.RemoveMapping(mappingViewModel);
+                        }
+                        LoadFormData();
                     }
-                    LoadFormData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error starting up",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    _viewModel.Stop();
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error starting up",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        _viewModel.Stop();
+                    }
                 }
             }
         }
 
         private void btnStartAll_Click(object sender, EventArgs e)
         {
-            _viewModel.Start();
+            if (_viewModel != null)
+                _viewModel.Start();
         }
 
         private void btnStopAll_Click(object sender, EventArgs e)
         {
-            _viewModel.Stop();
+            if (_viewModel != null)
+                _viewModel.Stop();
         }
 
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
-            _viewModel.Stop();
+            if (_viewModel != null)
+                _viewModel.Stop();
             Application.Exit();
         }
 
         private void toolStripMenuItemExit_Click(object sender, EventArgs e)
         {
-            _viewModel.Stop();
+            if (_viewModel != null)
+                _viewModel.Stop();
             Application.Exit();
         }
 
-        private string SaveFileName { get { return _viewModel.SaveFileName; } }
+        private string SaveFileName { get { if (_viewModel != null) { return _viewModel.SaveFileName; } else { return ""; } } }
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            if ((_viewModel.MinimiseToSystemTray) && (WindowState is FormWindowState.Minimized))
+            if (_viewModel != null)
             {
-                this.Hide();
+                if ((_viewModel.MinimiseToSystemTray) && (WindowState is FormWindowState.Minimized))
+                {
+                    this.Hide();
+                }
             }
         }
 

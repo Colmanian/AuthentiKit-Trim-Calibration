@@ -941,7 +941,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         }
         public bool GetMinimiseToSystemTray()
         {
-            _startAllOnOpen = false;
+            _minimiseToSystemTray = false;
             RegistryKey key = Registry.CurrentUser.OpenSubKey(REGISTRY_KEY_APP_SETTINGS);
 
             //if it does exist, retrieve the stored value  
