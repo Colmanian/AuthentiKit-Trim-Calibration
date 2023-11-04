@@ -35,7 +35,7 @@ namespace AuthentiKitTuningApp.Controls
 
             // Axis Sensitivity
             tbAxisSensitivity.DataBindings.Add("Text", MappingBindingSource, "AxisSensitivity");
-            tBarAxisSensitivity.DataBindings.Add("Value", MappingBindingSource, "AxisSensitivity");
+            tbAxisSensitivity.DataBindings.Add("Value", MappingBindingSource, "AxisSensitivity");
 
             // Panel Activation
             pnlAxisConfig.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
@@ -84,9 +84,9 @@ namespace AuthentiKitTuningApp.Controls
 
         private void RefreshSensitivityBindings(object sender, EventArgs e)
         {
-            if (tBarAxisSensitivity.Focused)
+            if (tbAxisSensitivity.Focused)
             {
-                foreach (Binding b in tBarAxisSensitivity.DataBindings)
+                foreach (Binding b in tbAxisSensitivity.DataBindings)
                 {
                     b.WriteValue();
                 }
