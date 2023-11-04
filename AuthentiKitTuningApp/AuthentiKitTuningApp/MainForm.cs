@@ -41,6 +41,16 @@ namespace AuthentiKitTuningApp
         {
             try
             {
+                var diagnostics = MainViewModel.RunDiagnostics();
+                if (diagnostics != null)
+                {
+                    if (!diagnostics.Healthy)
+                    {
+                        MessageBox.Show(diagnostics.Message, "vJoy Checks Failed",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
                 if (_viewModel != null)
                 {
                     _viewModel.LoadMappings();
