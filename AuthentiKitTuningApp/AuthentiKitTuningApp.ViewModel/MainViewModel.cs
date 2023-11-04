@@ -222,5 +222,20 @@ namespace AuthentiKitTuningApp.ViewModel
         {
             return DataHandler.GetRegistryPathsDebugDisplay(HardwareInfo.GetInputAxes());
         }
+
+        public static DiagnosticDTO RunDiagnostics()
+        {
+            var results = new DiagnosticDTO();
+            var diagnosticProcessor = new DiagnosticProcessor();
+            if (diagnosticProcessor != null)
+            {
+                results = diagnosticProcessor.RunDiagnostics();
+            }
+            else
+            {
+                results.Message = "Failed to create diagnostic processor";
+            }
+            return results;
+        }
     }
 }

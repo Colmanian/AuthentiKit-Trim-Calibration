@@ -387,6 +387,10 @@ namespace AuthentiKitTuningApp
                     };
                     Process.Start(sInfo);
                 }
+                else if (e.ClickedItem.Name.Equals("diagnosticsToolStripItem"))
+                {
+                    MessageBox.Show(MainViewModel.RunDiagnostics().Message);
+                }
                 else if (e.ClickedItem.Name.Equals("aboutToolStripMenuItem"))
                 {
                     string message = String.Format("AuthentiKit Tuning App ({0})\n\n" +
