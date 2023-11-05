@@ -198,17 +198,11 @@ namespace AuthentiKitTuningApp.Processor
         }
         internal void SetOutputA(bool state)
         {
-            if (_joystick != null)
-            {
-                _joystick.SetBtn(state, _vJoyIdA, _vJoyButtonNumberA);
-            }
+            _joystick?.SetBtn(state, _vJoyIdA, _vJoyButtonNumberA);
         }
         internal void SetOutputB(bool state)
         {
-            if (_joystick != null)
-            {
-                _joystick.SetBtn(state, _vJoyIdB, _vJoyButtonNumberB);
-            }
+            _joystick?.SetBtn(state, _vJoyIdB, _vJoyButtonNumberB);
         }
     }
 }

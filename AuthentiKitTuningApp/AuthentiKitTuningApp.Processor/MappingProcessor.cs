@@ -181,10 +181,7 @@ namespace AuthentiKitTuningApp.Processor
             catch (ThreadInterruptedException e)
             {
                 Debug.WriteLine("Thread Interrupted Exception: {0}", _mapping.Name, e);
-                if (_buttonToaxisProcessor != null)
-                {
-                    _buttonToaxisProcessor.CleanUp();
-                }
+                _buttonToaxisProcessor?.CleanUp();
             }
             catch (Exception e)
             {

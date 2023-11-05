@@ -31,8 +31,7 @@ namespace AuthentiKitTuningApp
             {
                 MessageBox.Show(e.Message, "Error on Startup",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (_viewModel != null)
-                    _viewModel.Stop();
+                _viewModel?.Stop();
             }
             Debug.WriteLine(SaveFileName);
         }
@@ -529,28 +528,24 @@ namespace AuthentiKitTuningApp
 
         private void btnStartAll_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.StartAll();
+            _viewModel?.StartAll();
         }
 
         private void btnStopAll_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
         }
 
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
             Application.Exit();
         }
 
         private void toolStripMenuItemExit_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
             Application.Exit();
         }
 
