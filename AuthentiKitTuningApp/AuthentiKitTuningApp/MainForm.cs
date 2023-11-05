@@ -57,7 +57,7 @@ namespace AuthentiKitTuningApp
                     LoadFormData();
                     if (_viewModel.StartAllOnOpen)
                     {
-                        _viewModel.Start();
+                        _viewModel.StartAll();
                     }
                 }
             }
@@ -530,7 +530,7 @@ namespace AuthentiKitTuningApp
         private void btnStartAll_Click(object sender, EventArgs e)
         {
             if (_viewModel != null)
-                _viewModel.Start();
+                _viewModel.StartAll();
         }
 
         private void btnStopAll_Click(object sender, EventArgs e)

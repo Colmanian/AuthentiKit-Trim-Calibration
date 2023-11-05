@@ -33,11 +33,12 @@ namespace AuthentiKitTuningApp.ViewModel
             _mainDataHandler = new DataHandler();
             CanAddMapping = true;
         }
-        public void Start()
+        public void StartAll()
         {
             foreach (var mapping in Mappings)
             {
                 mapping.Activate();
+                Thread.Sleep(60);
             }
         }
         public void Stop()
