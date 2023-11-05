@@ -244,8 +244,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                 0,};
                 string registryPath = GetCalibrationRegistryKey(inputAxis);
                 RegistryKey key = Registry.CurrentUser.OpenSubKey(registryPath, true);
-                if (key != null)
-                    key.SetValue("Calibration", calibrationBytes);
+                key?.SetValue("Calibration", calibrationBytes);
             }
         }
 

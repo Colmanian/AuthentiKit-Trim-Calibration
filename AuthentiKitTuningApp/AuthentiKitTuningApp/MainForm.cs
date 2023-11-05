@@ -31,8 +31,7 @@ namespace AuthentiKitTuningApp
             {
                 MessageBox.Show(e.Message, "Error on Startup",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (_viewModel != null)
-                    _viewModel.Stop();
+                _viewModel?.Stop();
             }
             Debug.WriteLine(SaveFileName);
         }
@@ -41,13 +40,23 @@ namespace AuthentiKitTuningApp
         {
             try
             {
+                var diagnostics = MainViewModel.RunDiagnostics();
+                if (diagnostics != null)
+                {
+                    if (!diagnostics.Healthy)
+                    {
+                        MessageBox.Show(diagnostics.Message, "vJoy Checks Failed",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
                 if (_viewModel != null)
                 {
                     _viewModel.LoadMappings();
                     LoadFormData();
                     if (_viewModel.StartAllOnOpen)
                     {
-                        _viewModel.Start();
+                        _viewModel.StartAll();
                     }
                 }
             }
@@ -387,6 +396,10 @@ namespace AuthentiKitTuningApp
                     };
                     Process.Start(sInfo);
                 }
+                else if (e.ClickedItem.Name.Equals("diagnosticsToolStripItem"))
+                {
+                    MessageBox.Show(MainViewModel.RunDiagnostics().Message);
+                }
                 else if (e.ClickedItem.Name.Equals("aboutToolStripMenuItem"))
                 {
                     string message = String.Format("AuthentiKit Tuning App ({0})\n\n" +
@@ -515,28 +528,24 @@ namespace AuthentiKitTuningApp
 
         private void btnStartAll_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Start();
+            _viewModel?.StartAll();
         }
 
         private void btnStopAll_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
         }
 
 
         private void exitMenuItem_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
             Application.Exit();
         }
 
         private void toolStripMenuItemExit_Click(object sender, EventArgs e)
         {
-            if (_viewModel != null)
-                _viewModel.Stop();
+            _viewModel?.Stop();
             Application.Exit();
         }
 

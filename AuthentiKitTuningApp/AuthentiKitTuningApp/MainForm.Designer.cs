@@ -103,6 +103,7 @@ namespace AuthentiKitTuningApp
             buttonToButtonControl = new Controls.ButtonToButtonControl();
             encoderToAxisControl = new Controls.EncoderToAxisControl();
             axisToAxisControl = new Controls.AxisToAxisControl();
+            diagnosticsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             pnlHeader.SuspendLayout();
             menuStrip.SuspendLayout();
             pnlNavigation.SuspendLayout();
@@ -284,7 +285,7 @@ namespace AuthentiKitTuningApp
             // 
             // helpMenuItem
             // 
-            helpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { userGuideMenuItem, bugReportMenuItem, toolStripSeparator5, aboutToolStripMenuItem });
+            helpMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { userGuideMenuItem, bugReportMenuItem, diagnosticsToolStripItem, toolStripSeparator5, aboutToolStripMenuItem });
             helpMenuItem.Name = "helpMenuItem";
             helpMenuItem.Size = new System.Drawing.Size(44, 20);
             helpMenuItem.Text = "&Help";
@@ -293,24 +294,24 @@ namespace AuthentiKitTuningApp
             // userGuideMenuItem
             // 
             userGuideMenuItem.Name = "userGuideMenuItem";
-            userGuideMenuItem.Size = new System.Drawing.Size(142, 22);
+            userGuideMenuItem.Size = new System.Drawing.Size(180, 22);
             userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             bugReportMenuItem.Name = "bugReportMenuItem";
-            bugReportMenuItem.Size = new System.Drawing.Size(142, 22);
+            bugReportMenuItem.Size = new System.Drawing.Size(180, 22);
             bugReportMenuItem.Text = "&Report a Bug";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             aboutToolStripMenuItem.Text = "&About...";
             // 
             // pnlNavigation
@@ -648,6 +649,12 @@ namespace AuthentiKitTuningApp
             axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             axisToAxisControl.TabIndex = 27;
             // 
+            // diagnosticsToolStripItem
+            // 
+            diagnosticsToolStripItem.Name = "diagnosticsToolStripItem";
+            diagnosticsToolStripItem.Size = new System.Drawing.Size(180, 22);
+            diagnosticsToolStripItem.Text = "Run &Diagnostics";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -761,6 +768,7 @@ namespace AuthentiKitTuningApp
         private System.Windows.Forms.ToolStripMenuItem minimiseToSystemTrayMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem diagnosticsToolStripItem;
     }
 }
 
