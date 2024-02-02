@@ -30,7 +30,6 @@ namespace AuthentiKitTuningApp.Controls
         private void InitializeComponent()
         {
             pnlButtonConfig = new System.Windows.Forms.Panel();
-            groupBox1 = new System.Windows.Forms.GroupBox();
             cbLatched = new System.Windows.Forms.CheckBox();
             cbOutputButtonB = new System.Windows.Forms.ComboBox();
             label2 = new System.Windows.Forms.Label();
@@ -39,14 +38,17 @@ namespace AuthentiKitTuningApp.Controls
             cbOutputButtonA = new System.Windows.Forms.ComboBox();
             label1 = new System.Windows.Forms.Label();
             cbInputA = new System.Windows.Forms.ComboBox();
+            label4 = new System.Windows.Forms.Label();
+            label5 = new System.Windows.Forms.Label();
             pnlButtonConfig.SuspendLayout();
-            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlButtonConfig
             // 
             pnlButtonConfig.BackColor = System.Drawing.SystemColors.Control;
-            pnlButtonConfig.Controls.Add(groupBox1);
+            pnlButtonConfig.Controls.Add(label5);
+            pnlButtonConfig.Controls.Add(label4);
+            pnlButtonConfig.Controls.Add(cbLatched);
             pnlButtonConfig.Controls.Add(cbOutputButtonB);
             pnlButtonConfig.Controls.Add(label2);
             pnlButtonConfig.Controls.Add(DetectButton);
@@ -59,24 +61,14 @@ namespace AuthentiKitTuningApp.Controls
             pnlButtonConfig.Size = new System.Drawing.Size(407, 256);
             pnlButtonConfig.TabIndex = 4;
             // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(cbLatched);
-            groupBox1.Location = new System.Drawing.Point(19, 186);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new System.Drawing.Size(371, 48);
-            groupBox1.TabIndex = 23;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Switch Mode";
-            // 
             // cbLatched
             // 
             cbLatched.AutoSize = true;
-            cbLatched.Location = new System.Drawing.Point(6, 22);
+            cbLatched.Location = new System.Drawing.Point(19, 190);
             cbLatched.Name = "cbLatched";
-            cbLatched.Size = new System.Drawing.Size(163, 19);
+            cbLatched.Size = new System.Drawing.Size(98, 19);
             cbLatched.TabIndex = 26;
-            cbLatched.Text = "Latched (Output stays on)";
+            cbLatched.Text = "Hold Outputs";
             cbLatched.UseVisualStyleBackColor = true;
             cbLatched.CheckedChanged += LatchedChanged;
             // 
@@ -151,6 +143,26 @@ namespace AuthentiKitTuningApp.Controls
             cbInputA.TabIndex = 8;
             cbInputA.SelectedIndexChanged += cbInputA_SelectedIndexChanged;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(19, 212);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(312, 15);
+            label4.TabIndex = 27;
+            label4.Text = "If enabled, output A will be on when the input switch is off";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(19, 227);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(275, 15);
+            label5.TabIndex = 28;
+            label5.Text = "and output B will be on when the input switch is on";
+            // 
             // AdvancedButtonToButtonControl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -160,8 +172,6 @@ namespace AuthentiKitTuningApp.Controls
             Size = new System.Drawing.Size(407, 256);
             pnlButtonConfig.ResumeLayout(false);
             pnlButtonConfig.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -176,7 +186,8 @@ namespace AuthentiKitTuningApp.Controls
         private System.Windows.Forms.Button DetectButton;
         private System.Windows.Forms.ComboBox cbOutputButtonB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbLatched;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

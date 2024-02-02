@@ -7,7 +7,7 @@ namespace AuthentiKitTuningApp.Processor
     class AdvancedButtonToButtonProcessor
     {
         bool _latched;
-
+        bool _holding;
 
         vJoy _joystick;
         uint _vJoyId;
@@ -21,11 +21,12 @@ namespace AuthentiKitTuningApp.Processor
 
         const int PULSE_LENGTH = 60; //ms
 
-        public AdvancedButtonToButtonProcessor(bool latched, OutputButton outputButtonA, OutputButton outputButtonB)
+        public AdvancedButtonToButtonProcessor(bool holding, OutputButton outputButtonA, OutputButton outputButtonB)
         {
             _outputA = false;
             _outputB = false;
-            _latched = latched;
+            _latched = false; // This option would implement what I consider to be ordinary latching
+            _holding = holding; // This option is what the Authentikit Project actually needed 
             if (_latched) { _outputA = true; }
             _vJoyId = outputButtonA.VJoyDevice;
             _vJoyButtonNumberA = outputButtonA.VJoyItem;
@@ -54,7 +55,7 @@ namespace AuthentiKitTuningApp.Processor
                 Debug.WriteLine("Acquired vJoy device number {0}", _vJoyId);
 
                 // Initalise
-                SetOutput(_latched, false);
+                SetOutput(holding, false);
             }
         }
 
@@ -63,32 +64,39 @@ namespace AuthentiKitTuningApp.Processor
             // If button has turned on or off
             if (_priorInputButtonState != inputButtonState)
             {
-                // If button is now on
-                if (inputButtonState)
+                if (_holding)
                 {
-                    if (_outputtingOnA)
-                    {
-                        _outputA = true;
-                        _outputB = false;
-                    }
-                    else
-                    {
-                        _outputA = false;
-                        _outputB = true;
-                    }
+                    SetOutput(!inputButtonState, inputButtonState);
                 }
-                // Else if button is now off
                 else
                 {
-                    _outputtingOnA = !_outputtingOnA;
-                    if (!_latched)
+                    // If button is now on
+                    if (inputButtonState)
                     {
-                        _outputA = false;
-                        _outputB = false;
+                        if (_outputtingOnA)
+                        {
+                            _outputA = true;
+                            _outputB = false;
+                        }
+                        else
+                        {
+                            _outputA = false;
+                            _outputB = true;
+                        }
                     }
+                    // Else if button is now off
+                    else
+                    {
+                        _outputtingOnA = !_outputtingOnA;
+                        if (!_latched)
+                        {
+                            _outputA = false;
+                            _outputB = false;
+                        }
+                    }
+                    SetOutput(_outputA, _outputB);
                 }
                 _priorInputButtonState = inputButtonState;
-                SetOutput(_outputA, _outputB);
             }
         }
         internal void SetOutput(bool stateA, bool stateB)
