@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using AuthentiKitTuningApp.Controls;
 
 namespace AuthentiKitTuningApp
 {
@@ -142,7 +143,8 @@ namespace AuthentiKitTuningApp
                 (buttonToAxisControl.DataBindings.Count > 0) ||
                 (tbName.DataBindings.Count > 0) ||
                 (cbMappingType.DataBindings.Count > 0) ||
-                (buttonToButtonControl.DataBindings.Count > 0);
+                (buttonToButtonControl.DataBindings.Count > 0) ||
+                (advancedButtonToButtonControl.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
@@ -170,10 +172,12 @@ namespace AuthentiKitTuningApp
                 // Panel Visibility
                 buttonToAxisControl.Visible = true;
                 buttonToButtonControl.Visible = true;
+                advancedButtonToButtonControl.Visible = true;
                 encoderToAxisControl.Visible = true;
                 axisToAxisControl.Visible = true;
                 buttonToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToAxisMapping");
                 buttonToButtonControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToButtonMapping");
+                advancedButtonToButtonControl.DataBindings.Add("Visible", mappingBindingSource, "IsAdvancedButtonToButtonMapping");
                 encoderToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsEncoderToAxisMapping");
                 axisToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisToAxisMapping");
 
@@ -183,6 +187,9 @@ namespace AuthentiKitTuningApp
                 // buttonToButtonControl
                 buttonToButtonControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
+                // advancedButtonToButtonControl
+                advancedButtonToButtonControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
                 // encoderToAxisControl
                 encoderToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
@@ -190,7 +197,7 @@ namespace AuthentiKitTuningApp
                 axisToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
                 // axisToButtonControl
-                axisToButtonControl1.LoadFormData(ref _viewModel, ref mappingBindingSource);
+                axisToButtonControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
                 // Form Activation
                 tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
@@ -480,7 +487,8 @@ namespace AuthentiKitTuningApp
                         selected.Equals("2") ||
                         selected.Equals("3") ||
                         selected.Equals("4") ||
-                        selected.Equals("5"))
+                        selected.Equals("5") ||
+                        selected.Equals("6"))
                         mappingViewModel.TypeId = int.Parse(selected);
                 }
             }

@@ -11,6 +11,7 @@ namespace AuthentiKitTuningApp.Common.Model
         private const string ENCODER_TO_BUTTON_STRING = "Remap Encoder to Virtual Button";
         private const string AXIS_TO_AXIS_STRING = "Remap Axis to Virtual Axis";
         private const string AXIS_TO_BUTTON_STRING = "Remap Axis to Virtual Button";
+        private const string ADVANCED_BUTTON_TO_STRING = "Remap Button to Multiple Buttons";
 
         public const int BUTTON_TO_AXIS = 0;
         public const int BUTTON_TO_BUTTON = 1;
@@ -18,6 +19,7 @@ namespace AuthentiKitTuningApp.Common.Model
         public const int ENCODER_TO_BUTTON = 3;
         public const int AXIS_TO_AXIS = 4;
         public const int AXIS_TO_BUTTON = 5;
+        public const int ADVANCED_BUTTON_TO_BUTTON = 6;
 
 
         public int Id { get; set; }
@@ -38,6 +40,7 @@ namespace AuthentiKitTuningApp.Common.Model
             //types.Add(new MappingType(ENCODER_TO_BUTTON, ENCODER_TO_BUTTON_STRING));
             types.Add(new MappingType(AXIS_TO_AXIS, AXIS_TO_AXIS_STRING));
             types.Add(new MappingType(AXIS_TO_BUTTON, AXIS_TO_BUTTON_STRING));
+            types.Add(new MappingType(ADVANCED_BUTTON_TO_BUTTON, ADVANCED_BUTTON_TO_STRING));
             return types;
         }
 

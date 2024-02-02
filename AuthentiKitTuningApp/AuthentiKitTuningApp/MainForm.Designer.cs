@@ -32,6 +32,7 @@ namespace AuthentiKitTuningApp
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             pnlHeader = new System.Windows.Forms.Panel();
+            advancedButtonToButtonControl = new Controls.AdvancedButtonToButtonControl();
             lblVersion = new System.Windows.Forms.Label();
             headerControl2 = new Controls.HeaderControl();
             menuStrip = new System.Windows.Forms.MenuStrip();
@@ -56,11 +57,12 @@ namespace AuthentiKitTuningApp
             helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             bugReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            diagnosticsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pnlNavigation = new System.Windows.Forms.Panel();
             lblSaveFileName = new System.Windows.Forms.Label();
-            axisToButtonControl1 = new Controls.AxisToButtonControl();
+            axisToButtonControl = new Controls.AxisToButtonControl();
             btnAddMapping = new System.Windows.Forms.Button();
             lsbMappings = new System.Windows.Forms.ListBox();
             pnlAddMapping = new System.Windows.Forms.Panel();
@@ -103,7 +105,6 @@ namespace AuthentiKitTuningApp
             buttonToButtonControl = new Controls.ButtonToButtonControl();
             encoderToAxisControl = new Controls.EncoderToAxisControl();
             axisToAxisControl = new Controls.AxisToAxisControl();
-            diagnosticsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             pnlHeader.SuspendLayout();
             menuStrip.SuspendLayout();
             pnlNavigation.SuspendLayout();
@@ -122,6 +123,13 @@ namespace AuthentiKitTuningApp
             pnlHeader.Name = "pnlHeader";
             pnlHeader.Size = new System.Drawing.Size(649, 100);
             pnlHeader.TabIndex = 0;
+            // 
+            // advancedButtonToButtonControl
+            // 
+            advancedButtonToButtonControl.Location = new System.Drawing.Point(242, 114);
+            advancedButtonToButtonControl.Name = "advancedButtonToButtonControl";
+            advancedButtonToButtonControl.Size = new System.Drawing.Size(407, 256);
+            advancedButtonToButtonControl.TabIndex = 3;
             // 
             // lblVersion
             // 
@@ -294,32 +302,39 @@ namespace AuthentiKitTuningApp
             // userGuideMenuItem
             // 
             userGuideMenuItem.Name = "userGuideMenuItem";
-            userGuideMenuItem.Size = new System.Drawing.Size(180, 22);
+            userGuideMenuItem.Size = new System.Drawing.Size(159, 22);
             userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             bugReportMenuItem.Name = "bugReportMenuItem";
-            bugReportMenuItem.Size = new System.Drawing.Size(180, 22);
+            bugReportMenuItem.Size = new System.Drawing.Size(159, 22);
             bugReportMenuItem.Text = "&Report a Bug";
+            // 
+            // diagnosticsToolStripItem
+            // 
+            diagnosticsToolStripItem.Name = "diagnosticsToolStripItem";
+            diagnosticsToolStripItem.Size = new System.Drawing.Size(159, 22);
+            diagnosticsToolStripItem.Text = "Run &Diagnostics";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator5.Size = new System.Drawing.Size(156, 6);
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            aboutToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             aboutToolStripMenuItem.Text = "&About...";
             // 
             // pnlNavigation
             // 
             pnlNavigation.AutoSize = true;
             pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
+            pnlNavigation.Controls.Add(advancedButtonToButtonControl);
             pnlNavigation.Controls.Add(lblSaveFileName);
-            pnlNavigation.Controls.Add(axisToButtonControl1);
+            pnlNavigation.Controls.Add(axisToButtonControl);
             pnlNavigation.Controls.Add(btnAddMapping);
             pnlNavigation.Controls.Add(lsbMappings);
             pnlNavigation.Controls.Add(pnlAddMapping);
@@ -341,12 +356,12 @@ namespace AuthentiKitTuningApp
             lblSaveFileName.TabIndex = 21;
             lblSaveFileName.Text = "SaveFile";
             // 
-            // axisToButtonControl1
+            // axisToButtonControl
             // 
-            axisToButtonControl1.Location = new System.Drawing.Point(242, 121);
-            axisToButtonControl1.Name = "axisToButtonControl1";
-            axisToButtonControl1.Size = new System.Drawing.Size(407, 256);
-            axisToButtonControl1.TabIndex = 2;
+            axisToButtonControl.Location = new System.Drawing.Point(242, 121);
+            axisToButtonControl.Name = "axisToButtonControl";
+            axisToButtonControl.Size = new System.Drawing.Size(407, 256);
+            axisToButtonControl.TabIndex = 2;
             // 
             // btnAddMapping
             // 
@@ -649,12 +664,6 @@ namespace AuthentiKitTuningApp
             axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             axisToAxisControl.TabIndex = 27;
             // 
-            // diagnosticsToolStripItem
-            // 
-            diagnosticsToolStripItem.Name = "diagnosticsToolStripItem";
-            diagnosticsToolStripItem.Size = new System.Drawing.Size(180, 22);
-            diagnosticsToolStripItem.Text = "Run &Diagnostics";
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -758,7 +767,8 @@ namespace AuthentiKitTuningApp
         private Controls.ButtonToButtonControl buttonToButtonControl;
         private Controls.EncoderToAxisControl encoderToAxisControl;
         private Controls.AxisToAxisControl axisToAxisControl;
-        private Controls.AxisToButtonControl axisToButtonControl1;
+        private Controls.AxisToButtonControl axisToButtonControl;
+        private Controls.AdvancedButtonToButtonControl advancedButtonToButtonControl;
         private System.Windows.Forms.ToolStripMenuItem calibrationMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startAllMappingsMenuItem;
         private System.Windows.Forms.Label lblSaveFileName;
