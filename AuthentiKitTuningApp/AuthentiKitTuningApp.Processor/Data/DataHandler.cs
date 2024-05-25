@@ -30,6 +30,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         private static readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private static readonly string HOLD_OUTPUT_ON_AFTER = "HOLD_OUTPUT_ON_AFTER";
         private static readonly string STOP_HOLDING_AFTER = "STOP_HOLDING_AFTER";
+        private static readonly string PULSE_DURATION = "PULSE_DURATION";
         private static readonly string RESET_COMMAND = "RESET_COMMAND";
         private static readonly string FLIPPED = "FLIPPED";
         private static readonly string GATEWAY1 = "GATEWAY1";
@@ -130,6 +131,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                             bool gatewayEnabled5 = false;
                             int holdOutputOnAfter = 500;
                             int stopHoldingAter = 1000;
+                            int pulseDuration = 500;
                             bool latched = false;
                             CalibrationDTO Calibration = new();
 
@@ -170,6 +172,8 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 holdOutputOnAfter = int.Parse(mappingNode.SelectSingleNode(HOLD_OUTPUT_ON_AFTER).InnerText);
                             if (mappingNode.SelectSingleNode(STOP_HOLDING_AFTER) != null)
                                 stopHoldingAter = int.Parse(mappingNode.SelectSingleNode(STOP_HOLDING_AFTER).InnerText);
+                            if (mappingNode.SelectSingleNode(PULSE_DURATION) != null)
+                                pulseDuration = int.Parse(mappingNode.SelectSingleNode(PULSE_DURATION).InnerText);
                             if (mappingNode.SelectSingleNode(LATCHED) != null)
                                 latched = bool.Parse(mappingNode.SelectSingleNode(LATCHED).InnerText);
 
@@ -192,6 +196,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 ButtonMultiplier = buttonMultiplier,
                                 HoldThresholdStart = holdOutputOnAfter,
                                 HoldThresholdStop = stopHoldingAter,
+                                PulseDuration = pulseDuration,
                                 ResetCommand = resetCommand,
                                 Flipped = flipped,
                                 Gateway1 = gateway1,
@@ -394,6 +399,11 @@ namespace AuthentiKitTuningApp.Processor.Data
                 XmlElement holdThresholdStopNode = doc.CreateElement(STOP_HOLDING_AFTER);
                 holdThresholdStopNode.InnerText = string.Format("{0}", mapping.HoldThresholdStop);
                 mappingNode.AppendChild(holdThresholdStopNode);
+
+                // HoldThresholdStop
+                XmlElement pulseDurationNode = doc.CreateElement(PULSE_DURATION);
+                pulseDurationNode.InnerText = string.Format("{0}", mapping.PulseDuration);
+                mappingNode.AppendChild(pulseDurationNode);
 
                 // ResetCommand
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);

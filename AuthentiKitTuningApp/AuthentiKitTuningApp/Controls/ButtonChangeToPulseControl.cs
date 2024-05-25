@@ -25,8 +25,8 @@ namespace AuthentiKitTuningApp.Controls
             cbInputA.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonAHash");
 
 
-            // tbHoldThresholdStart
-            tbPulseDuration.DataBindings.Add("Value", MappingBindingSource, "HoldThresholdStart");
+            // PulseDuration 
+            tbPulseDuration.DataBindings.Add("Value", MappingBindingSource, "PulseDuration");
 
 
             // Output

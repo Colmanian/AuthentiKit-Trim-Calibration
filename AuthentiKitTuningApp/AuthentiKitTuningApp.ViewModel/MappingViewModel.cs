@@ -494,6 +494,21 @@ namespace AuthentiKitTuningApp.ViewModel
                 }
             }
         }
+        public int PulseDuration
+        {
+            get { return _mapping.PulseDuration; }
+            set
+            {
+                if (_mapping.PulseDuration != value)
+                {
+                    Deactivate();
+                    _mapping.PulseDuration = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                    IsDirty = true;
+                }
+            }
+        }
         public string ResetCommand
         {
             get { return _mapping.ResetCommand; }

@@ -17,6 +17,7 @@ namespace AuthentiKitTuningApp.Processor
         private AxisToAxisProcessor _axisToAxisProcessor;
         private AxisToButtonProcessor _axisToButtonProcessor;
         private AdvancedButtonToButtonProcessor _advancedButtonToButtonProcessor;
+        private ButtonChangeToPulseProcessor _buttonChangeToPulseProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -27,8 +28,9 @@ namespace AuthentiKitTuningApp.Processor
                 if (_mapping.TypeId == MappingType.BUTTON_TO_BUTTON ||
                     _mapping.TypeId == MappingType.BUTTON_TO_AXIS ||
                     _mapping.TypeId == MappingType.ENCODER_TO_AXIS ||
-                    _mapping.TypeId == MappingType.ENCODER_TO_BUTTON||
-                    _mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON)
+                    _mapping.TypeId == MappingType.ENCODER_TO_BUTTON ||
+                    _mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON ||
+                    _mapping.TypeId == MappingType.BUTTON_CHANGE_TO_PULSE)
                 {
                     // Input Event Generation
                     var directInput = new DirectInput();
@@ -100,6 +102,15 @@ namespace AuthentiKitTuningApp.Processor
                                 buttonAState = joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button];
                             }
                             _advancedButtonToButtonProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
+                        }
+                        else if (_mapping.TypeId == MappingType.BUTTON_CHANGE_TO_PULSE && _buttonChangeToPulseProcessor != null)
+                        {
+                            // Button A Polling
+                            if (buttonAState != joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button])
+                            {
+                                buttonAState = joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button];
+                            }
+                            _buttonChangeToPulseProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
                         }
                     }
 
@@ -259,8 +270,17 @@ namespace AuthentiKitTuningApp.Processor
                 Debug.WriteLine("Which means advanced button, and the output channels are {0} and {1}", _mapping.OutputChannelA.Name, _mapping.OutputChannelB.Name);
                 if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
                 {
-                    Debug.WriteLine("so creating new Button Processor...");
+                    Debug.WriteLine("so creating new Advanced Button Processor...");
                     _advancedButtonToButtonProcessor = new AdvancedButtonToButtonProcessor(_mapping.Latched, outputButtonA, outputButtonB);
+                }
+            }
+            else if (_mapping.TypeId == MappingType.BUTTON_CHANGE_TO_PULSE)
+            {
+                Debug.WriteLine("Which means button change to pulse, and the output channels are {0} and {1}", _mapping.OutputChannelA.Name, _mapping.OutputChannelB.Name);
+                if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
+                {
+                    Debug.WriteLine("so creating new Button Change to PulseProcessor...");
+                    _buttonChangeToPulseProcessor = new ButtonChangeToPulseProcessor(_mapping.Latched, outputButtonA, outputButtonB);
                 }
             }
             else
