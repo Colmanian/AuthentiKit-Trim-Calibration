@@ -7,6 +7,7 @@ using System.Diagnostics;
 using AuthentiKitTuningApp.Processor.Hardware;
 using AuthentiKitTuningApp.Processor.Data;
 using System.Runtime.InteropServices;
+using System.Diagnostics.Contracts;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -131,9 +132,10 @@ namespace AuthentiKitTuningApp.ViewModel
                         case MappingType.BUTTON_TO_BUTTON:
                             return inputButtonA && outputChannelA;
                         case MappingType.ADVANCED_BUTTON_TO_BUTTON:
-                            {
-                                return inputButtonA && outputChannelA && outputChannelB;
-                            }
+                            return inputButtonA && outputChannelA && outputChannelB;
+                        case MappingType.BUTTON_CHANGE_TO_PULSE:
+                            return inputButtonA && outputChannelA && outputChannelB;
+
                     }
                 }
                 return false;
@@ -146,6 +148,7 @@ namespace AuthentiKitTuningApp.ViewModel
         public bool IsAxisToAxisMapping => TypeId == MappingType.AXIS_TO_AXIS;
         public bool IsAxisToButtonMapping => TypeId == MappingType.AXIS_TO_BUTTON;
         public bool IsAdvancedButtonToButtonMapping => TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON;
+        public bool IsButtonChangeToPulseMapping => TypeId == MappingType.BUTTON_CHANGE_TO_PULSE;
 
         public string Name
         {

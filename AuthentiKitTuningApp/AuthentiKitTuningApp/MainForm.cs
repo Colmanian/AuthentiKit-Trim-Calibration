@@ -144,7 +144,8 @@ namespace AuthentiKitTuningApp
                 (tbName.DataBindings.Count > 0) ||
                 (cbMappingType.DataBindings.Count > 0) ||
                 (buttonToButtonControl.DataBindings.Count > 0) ||
-                (advancedButtonToButtonControl.DataBindings.Count > 0);
+                (advancedButtonToButtonControl.DataBindings.Count > 0) ||
+                (buttonChangeToPulseControl1.DataBindings.Count > 0);
             if (dataBindingsInitalised)
             {
                 mappingBindingSource.ResetBindings(false);
@@ -175,11 +176,13 @@ namespace AuthentiKitTuningApp
                 advancedButtonToButtonControl.Visible = true;
                 encoderToAxisControl.Visible = true;
                 axisToAxisControl.Visible = true;
+                buttonChangeToPulseControl1.Visible = true;
                 buttonToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToAxisMapping");
                 buttonToButtonControl.DataBindings.Add("Visible", mappingBindingSource, "IsButtonToButtonMapping");
                 advancedButtonToButtonControl.DataBindings.Add("Visible", mappingBindingSource, "IsAdvancedButtonToButtonMapping");
                 encoderToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsEncoderToAxisMapping");
                 axisToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisToAxisMapping");
+                buttonChangeToPulseControl1.DataBindings.Add("Visible", mappingBindingSource, "IsButtonChangeToPulseMapping");
 
                 // buttonToAxisControl
                 buttonToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
@@ -198,6 +201,9 @@ namespace AuthentiKitTuningApp
 
                 // axisToButtonControl
                 axisToButtonControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+                // buttonChangeToPulseControl1
+                buttonChangeToPulseControl1.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
                 // Form Activation
                 tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
@@ -488,7 +494,8 @@ namespace AuthentiKitTuningApp
                         selected.Equals("3") ||
                         selected.Equals("4") ||
                         selected.Equals("5") ||
-                        selected.Equals("6"))
+                        selected.Equals("6")||
+                        selected.Equals("7"))
                         mappingViewModel.TypeId = int.Parse(selected);
                 }
             }
