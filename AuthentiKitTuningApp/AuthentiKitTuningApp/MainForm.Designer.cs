@@ -56,11 +56,13 @@ namespace AuthentiKitTuningApp
             helpMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             bugReportMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            diagnosticsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            advancedButtonToButtonControl = new Controls.AdvancedButtonToButtonControl();
             pnlNavigation = new System.Windows.Forms.Panel();
             lblSaveFileName = new System.Windows.Forms.Label();
-            axisToButtonControl1 = new Controls.AxisToButtonControl();
+            axisToButtonControl = new Controls.AxisToButtonControl();
             btnAddMapping = new System.Windows.Forms.Button();
             lsbMappings = new System.Windows.Forms.ListBox();
             pnlAddMapping = new System.Windows.Forms.Panel();
@@ -103,7 +105,7 @@ namespace AuthentiKitTuningApp
             buttonToButtonControl = new Controls.ButtonToButtonControl();
             encoderToAxisControl = new Controls.EncoderToAxisControl();
             axisToAxisControl = new Controls.AxisToAxisControl();
-            diagnosticsToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            buttonChangeToPulseControl1 = new Controls.ButtonChangeToPulseControl();
             pnlHeader.SuspendLayout();
             menuStrip.SuspendLayout();
             pnlNavigation.SuspendLayout();
@@ -294,32 +296,47 @@ namespace AuthentiKitTuningApp
             // userGuideMenuItem
             // 
             userGuideMenuItem.Name = "userGuideMenuItem";
-            userGuideMenuItem.Size = new System.Drawing.Size(180, 22);
+            userGuideMenuItem.Size = new System.Drawing.Size(159, 22);
             userGuideMenuItem.Text = "&User Guide";
             // 
             // bugReportMenuItem
             // 
             bugReportMenuItem.Name = "bugReportMenuItem";
-            bugReportMenuItem.Size = new System.Drawing.Size(180, 22);
+            bugReportMenuItem.Size = new System.Drawing.Size(159, 22);
             bugReportMenuItem.Text = "&Report a Bug";
+            // 
+            // diagnosticsToolStripItem
+            // 
+            diagnosticsToolStripItem.Name = "diagnosticsToolStripItem";
+            diagnosticsToolStripItem.Size = new System.Drawing.Size(159, 22);
+            diagnosticsToolStripItem.Text = "Run &Diagnostics";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            toolStripSeparator5.Size = new System.Drawing.Size(156, 6);
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            aboutToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             aboutToolStripMenuItem.Text = "&About...";
+            // 
+            // advancedButtonToButtonControl
+            // 
+            advancedButtonToButtonControl.Location = new System.Drawing.Point(242, 114);
+            advancedButtonToButtonControl.Name = "advancedButtonToButtonControl";
+            advancedButtonToButtonControl.Size = new System.Drawing.Size(407, 256);
+            advancedButtonToButtonControl.TabIndex = 3;
             // 
             // pnlNavigation
             // 
             pnlNavigation.AutoSize = true;
             pnlNavigation.BackColor = System.Drawing.SystemColors.Control;
+            pnlNavigation.Controls.Add(buttonChangeToPulseControl1);
+            pnlNavigation.Controls.Add(advancedButtonToButtonControl);
             pnlNavigation.Controls.Add(lblSaveFileName);
-            pnlNavigation.Controls.Add(axisToButtonControl1);
+            pnlNavigation.Controls.Add(axisToButtonControl);
             pnlNavigation.Controls.Add(btnAddMapping);
             pnlNavigation.Controls.Add(lsbMappings);
             pnlNavigation.Controls.Add(pnlAddMapping);
@@ -327,7 +344,7 @@ namespace AuthentiKitTuningApp
             pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             pnlNavigation.Location = new System.Drawing.Point(0, 100);
             pnlNavigation.Name = "pnlNavigation";
-            pnlNavigation.Size = new System.Drawing.Size(652, 435);
+            pnlNavigation.Size = new System.Drawing.Size(654, 435);
             pnlNavigation.TabIndex = 1;
             // 
             // lblSaveFileName
@@ -341,12 +358,12 @@ namespace AuthentiKitTuningApp
             lblSaveFileName.TabIndex = 21;
             lblSaveFileName.Text = "SaveFile";
             // 
-            // axisToButtonControl1
+            // axisToButtonControl
             // 
-            axisToButtonControl1.Location = new System.Drawing.Point(242, 121);
-            axisToButtonControl1.Name = "axisToButtonControl1";
-            axisToButtonControl1.Size = new System.Drawing.Size(407, 256);
-            axisToButtonControl1.TabIndex = 2;
+            axisToButtonControl.Location = new System.Drawing.Point(242, 121);
+            axisToButtonControl.Name = "axisToButtonControl";
+            axisToButtonControl.Size = new System.Drawing.Size(407, 256);
+            axisToButtonControl.TabIndex = 2;
             // 
             // btnAddMapping
             // 
@@ -649,11 +666,13 @@ namespace AuthentiKitTuningApp
             axisToAxisControl.Size = new System.Drawing.Size(410, 259);
             axisToAxisControl.TabIndex = 27;
             // 
-            // diagnosticsToolStripItem
+            // buttonChangeToPulseControl1
             // 
-            diagnosticsToolStripItem.Name = "diagnosticsToolStripItem";
-            diagnosticsToolStripItem.Size = new System.Drawing.Size(180, 22);
-            diagnosticsToolStripItem.Text = "Run &Diagnostics";
+            buttonChangeToPulseControl1.Location = new System.Drawing.Point(242, 114);
+            buttonChangeToPulseControl1.Name = "buttonChangeToPulseControl1";
+            buttonChangeToPulseControl1.Size = new System.Drawing.Size(407, 256);
+            buttonChangeToPulseControl1.TabIndex = 22;
+
             // 
             // MainForm
             // 
@@ -758,7 +777,8 @@ namespace AuthentiKitTuningApp
         private Controls.ButtonToButtonControl buttonToButtonControl;
         private Controls.EncoderToAxisControl encoderToAxisControl;
         private Controls.AxisToAxisControl axisToAxisControl;
-        private Controls.AxisToButtonControl axisToButtonControl1;
+        private Controls.AxisToButtonControl axisToButtonControl;
+        private Controls.AdvancedButtonToButtonControl advancedButtonToButtonControl;
         private System.Windows.Forms.ToolStripMenuItem calibrationMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startAllMappingsMenuItem;
         private System.Windows.Forms.Label lblSaveFileName;
@@ -769,6 +789,7 @@ namespace AuthentiKitTuningApp
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemShow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripMenuItem diagnosticsToolStripItem;
+        private Controls.ButtonChangeToPulseControl buttonChangeToPulseControl1;
     }
 }
 

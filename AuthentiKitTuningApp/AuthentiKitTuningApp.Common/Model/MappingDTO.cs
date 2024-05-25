@@ -23,6 +23,7 @@ namespace AuthentiKitTuningApp.Common.Model
             ResetCommand = "";
             HoldThresholdStart = 500;
             HoldThresholdStop = 1000;
+            PulseDuration = 500;
             Flipped = false;
             Errored = false;
             ErrorMessage = "";
@@ -36,6 +37,8 @@ namespace AuthentiKitTuningApp.Common.Model
             gw3 = 50;
             gw4 = 75;
             gw5 = 99;
+            Latched = false;
+            Momentary = true;
             Calibration = new CalibrationDTO();
         }
 
@@ -56,6 +59,7 @@ namespace AuthentiKitTuningApp.Common.Model
         public string ResetCommand { get; set; } // Axis Only
         public int HoldThresholdStart { get; set; } // Button Only
         public int HoldThresholdStop { get; set; } // Button Only
+        public int PulseDuration { get; set; } // Button Only
         public bool Flipped { get; set; }// AxisToAxis Only
         public bool Errored { get; set; }
         public string ErrorMessage { get; set; }
@@ -75,6 +79,9 @@ namespace AuthentiKitTuningApp.Common.Model
         public int Gateway3 { get { return gw3; } set { gw3 = Clamp(value, 1, 99); } }
         public int Gateway4 { get { return gw4; } set { gw4 = Clamp(value, 1, 99); } }
         public int Gateway5 { get { return gw5; } set { gw5 = Clamp(value, 1, 99); } }
+        public bool Latched { get; set; }
+        public bool Momentary { get; set; }
+
         public CalibrationDTO Calibration { get; set; }
 
         public List<int> Gateways

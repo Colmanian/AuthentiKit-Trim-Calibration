@@ -6,6 +6,8 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using AuthentiKitTuningApp.Processor.Hardware;
 using AuthentiKitTuningApp.Processor.Data;
+using System.Runtime.InteropServices;
+using System.Diagnostics.Contracts;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -69,18 +71,26 @@ namespace AuthentiKitTuningApp.ViewModel
         public void DetectButtonInputA()
         {
             Deactivate();
-            _mapping.InputButtonA = _inputDetector.DetectButton();
-            RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputButtonAHash));
-            UpdateStatus();
+            InputButton detected = _inputDetector.DetectButton();
+            if (detected != null)
+            {
+                _mapping.InputButtonA = detected;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(InputButtonAHash));
+                UpdateStatus();
+            }
         }
         public void DetectButtonInputB()
         {
             Deactivate();
-            _mapping.InputButtonB = _inputDetector.DetectButton();
-            RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputButtonBHash));
-            UpdateStatus();
+            InputButton detected = _inputDetector.DetectButton();
+            if (detected != null)
+            {
+                _mapping.InputButtonB = detected;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(InputButtonBHash));
+                UpdateStatus();
+            }
         }
         public void DetectAxisInput()
         {
@@ -105,6 +115,8 @@ namespace AuthentiKitTuningApp.ViewModel
                     bool outputChannelA = _mapping.OutputChannelA.VJoyDevice > 0;
                     bool outputChannelB = _mapping.OutputChannelB.VJoyDevice > 0;
                     bool atLeastOneGateway = _mapping.Gateways.Count > 0;
+                    bool latched = _mapping.Latched;
+
                     switch (_mapping.TypeId)
                     {
                         case MappingType.BUTTON_TO_AXIS:
@@ -119,6 +131,11 @@ namespace AuthentiKitTuningApp.ViewModel
                             return inputAxis && outputChannelA && outputChannelB && atLeastOneGateway;
                         case MappingType.BUTTON_TO_BUTTON:
                             return inputButtonA && outputChannelA;
+                        case MappingType.ADVANCED_BUTTON_TO_BUTTON:
+                            return inputButtonA && outputChannelA && outputChannelB;
+                        case MappingType.BUTTON_CHANGE_TO_PULSE:
+                            return inputButtonA && outputChannelA && outputChannelB;
+
                     }
                 }
                 return false;
@@ -130,6 +147,8 @@ namespace AuthentiKitTuningApp.ViewModel
         public bool IsEncoderToAxisMapping => TypeId == MappingType.ENCODER_TO_AXIS;
         public bool IsAxisToAxisMapping => TypeId == MappingType.AXIS_TO_AXIS;
         public bool IsAxisToButtonMapping => TypeId == MappingType.AXIS_TO_BUTTON;
+        public bool IsAdvancedButtonToButtonMapping => TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON;
+        public bool IsButtonChangeToPulseMapping => TypeId == MappingType.BUTTON_CHANGE_TO_PULSE;
 
         public string Name
         {
@@ -475,6 +494,21 @@ namespace AuthentiKitTuningApp.ViewModel
                 }
             }
         }
+        public int PulseDuration
+        {
+            get { return _mapping.PulseDuration; }
+            set
+            {
+                if (_mapping.PulseDuration != value)
+                {
+                    Deactivate();
+                    _mapping.PulseDuration = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                    IsDirty = true;
+                }
+            }
+        }
         public string ResetCommand
         {
             get { return _mapping.ResetCommand; }
@@ -642,6 +676,22 @@ namespace AuthentiKitTuningApp.ViewModel
                 {
                     Deactivate();
                     _mapping.Gateway5 = value;
+                    RaisePropertyChanged();
+                    UpdateStatus();
+                    IsDirty = true;
+                }
+            }
+        }
+
+        public bool Latched
+        {
+            get { return _mapping.Latched; }
+            set
+            {
+                if (_mapping.Latched != value)
+                {
+                    Deactivate();
+                    _mapping.Latched = value;
                     RaisePropertyChanged();
                     UpdateStatus();
                     IsDirty = true;

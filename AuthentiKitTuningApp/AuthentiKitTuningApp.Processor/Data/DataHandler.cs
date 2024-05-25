@@ -30,6 +30,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         private static readonly string BUTTON_MULTIPLIER = "BUTTON_MULTIPLIER";
         private static readonly string HOLD_OUTPUT_ON_AFTER = "HOLD_OUTPUT_ON_AFTER";
         private static readonly string STOP_HOLDING_AFTER = "STOP_HOLDING_AFTER";
+        private static readonly string PULSE_DURATION = "PULSE_DURATION";
         private static readonly string RESET_COMMAND = "RESET_COMMAND";
         private static readonly string FLIPPED = "FLIPPED";
         private static readonly string GATEWAY1 = "GATEWAY1";
@@ -42,6 +43,7 @@ namespace AuthentiKitTuningApp.Processor.Data
         private static readonly string GATEWAY_ENABLED_3 = "GATEWAY_ENABLED_3";
         private static readonly string GATEWAY_ENABLED_4 = "GATEWAY_ENABLED_4";
         private static readonly string GATEWAY_ENABLED_5 = "GATEWAY_ENABLED_5";
+        private static readonly string LATCHED  = "LATCHED";
         private static readonly string CALIBRATION_MIN = "CALIBRATION_MIN";
         private static readonly string CALIBRATION_CEN = "CALIBRATION_CEN";
         private static readonly string CALIBRATION_MAX = "CALIBRATION_MAX";
@@ -129,6 +131,8 @@ namespace AuthentiKitTuningApp.Processor.Data
                             bool gatewayEnabled5 = false;
                             int holdOutputOnAfter = 500;
                             int stopHoldingAter = 1000;
+                            int pulseDuration = 500;
+                            bool latched = false;
                             CalibrationDTO Calibration = new();
 
                             // Backwards compatability with earlier save files than 1.2
@@ -168,6 +172,10 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 holdOutputOnAfter = int.Parse(mappingNode.SelectSingleNode(HOLD_OUTPUT_ON_AFTER).InnerText);
                             if (mappingNode.SelectSingleNode(STOP_HOLDING_AFTER) != null)
                                 stopHoldingAter = int.Parse(mappingNode.SelectSingleNode(STOP_HOLDING_AFTER).InnerText);
+                            if (mappingNode.SelectSingleNode(PULSE_DURATION) != null)
+                                pulseDuration = int.Parse(mappingNode.SelectSingleNode(PULSE_DURATION).InnerText);
+                            if (mappingNode.SelectSingleNode(LATCHED) != null)
+                                latched = bool.Parse(mappingNode.SelectSingleNode(LATCHED).InnerText);
 
 
 
@@ -188,6 +196,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 ButtonMultiplier = buttonMultiplier,
                                 HoldThresholdStart = holdOutputOnAfter,
                                 HoldThresholdStop = stopHoldingAter,
+                                PulseDuration = pulseDuration,
                                 ResetCommand = resetCommand,
                                 Flipped = flipped,
                                 Gateway1 = gateway1,
@@ -200,6 +209,7 @@ namespace AuthentiKitTuningApp.Processor.Data
                                 GatewayEnabled3 = gatewayEnabled3,
                                 GatewayEnabled4 = gatewayEnabled4,
                                 GatewayEnabled5 = gatewayEnabled5,
+                                Latched = latched,
                                 Calibration = Calibration
                             });
 
@@ -390,6 +400,11 @@ namespace AuthentiKitTuningApp.Processor.Data
                 holdThresholdStopNode.InnerText = string.Format("{0}", mapping.HoldThresholdStop);
                 mappingNode.AppendChild(holdThresholdStopNode);
 
+                // HoldThresholdStop
+                XmlElement pulseDurationNode = doc.CreateElement(PULSE_DURATION);
+                pulseDurationNode.InnerText = string.Format("{0}", mapping.PulseDuration);
+                mappingNode.AppendChild(pulseDurationNode);
+
                 // ResetCommand
                 XmlElement resetCommandNode = doc.CreateElement(RESET_COMMAND);
                 resetCommandNode.InnerText = mapping.ResetCommand;
@@ -464,6 +479,11 @@ namespace AuthentiKitTuningApp.Processor.Data
                 XmlElement calibrationMax = doc.CreateElement(CALIBRATION_MAX);
                 calibrationMax.InnerText = string.Format("{0}", mapping.Calibration.Max);
                 mappingNode.AppendChild(calibrationMax);
+
+                // Latched
+                XmlElement latched = doc.CreateElement(LATCHED);
+                latched.InnerText = string.Format("{0}", mapping.Latched);
+                mappingNode.AppendChild(latched);
 
                 // Add to group
                 groupNode.AppendChild(mappingNode);

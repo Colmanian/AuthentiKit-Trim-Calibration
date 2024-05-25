@@ -1,5 +1,5 @@
 # AuthentiKit Tuning App
-![Version Experimtal](https://img.shields.io/badge/Version-1.4.0-blue)
+![Version Experimtal](https://img.shields.io/badge/Version-1.5.1-blue)
 
 Windows Desktop Application to calbirate button-based peripherals (e.g. AuthentiKit Trim Wheels, Honeycombe Bravo Trim Wheel) for use in simulators (e.g Microsoft Flight Simulator 2020). 
 
