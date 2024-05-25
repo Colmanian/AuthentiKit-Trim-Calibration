@@ -89,6 +89,12 @@ namespace AuthentiKitTuningApp.Processor.Hardware
                     currentStates[i].CopyTo(priorStates[i], 0);
                 }
             }
+
+            foreach (var joystick in joysticks)
+            {
+                joystick.Unacquire();
+            }
+
             return detected;
         }
     }
