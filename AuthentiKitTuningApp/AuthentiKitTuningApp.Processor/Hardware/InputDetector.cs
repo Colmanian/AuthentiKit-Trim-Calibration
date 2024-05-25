@@ -27,6 +27,7 @@ namespace AuthentiKitTuningApp.Processor.Hardware
             var priorStates = new ObservableCollection<bool[]>();
             var devices = new ObservableCollection<DeviceInstance>();
 
+
             // For each device
             foreach (var d in allDevices)
             {
@@ -39,6 +40,11 @@ namespace AuthentiKitTuningApp.Processor.Hardware
                     joystick.Acquire();
                     joysticks.Add(joystick);
                 }
+            }
+
+            if (devices.Count < 1)
+            {
+                return null;
             }
 
             // Create state arrays

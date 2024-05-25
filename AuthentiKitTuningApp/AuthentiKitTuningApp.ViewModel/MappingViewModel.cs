@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using AuthentiKitTuningApp.Processor.Hardware;
 using AuthentiKitTuningApp.Processor.Data;
+using System.Runtime.InteropServices;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -69,18 +70,26 @@ namespace AuthentiKitTuningApp.ViewModel
         public void DetectButtonInputA()
         {
             Deactivate();
-            _mapping.InputButtonA = _inputDetector.DetectButton();
-            RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputButtonAHash));
-            UpdateStatus();
+            InputButton detected = _inputDetector.DetectButton();
+            if (detected != null)
+            {
+                _mapping.InputButtonA = detected;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(InputButtonAHash));
+                UpdateStatus();
+            }
         }
         public void DetectButtonInputB()
         {
             Deactivate();
-            _mapping.InputButtonB = _inputDetector.DetectButton();
-            RaisePropertyChanged();
-            RaisePropertyChanged(nameof(InputButtonBHash));
-            UpdateStatus();
+            InputButton detected = _inputDetector.DetectButton();
+            if (detected != null)
+            {
+                _mapping.InputButtonB = detected;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(InputButtonBHash));
+                UpdateStatus();
+            }
         }
         public void DetectAxisInput()
         {
