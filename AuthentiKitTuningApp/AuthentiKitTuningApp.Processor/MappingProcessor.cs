@@ -280,7 +280,7 @@ namespace AuthentiKitTuningApp.Processor
                 if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
                 {
                     Debug.WriteLine("so creating new Button Change to PulseProcessor...");
-                    _buttonChangeToPulseProcessor = new ButtonChangeToPulseProcessor(_mapping.Latched, outputButtonA, outputButtonB);
+                    _buttonChangeToPulseProcessor = new ButtonChangeToPulseProcessor(pulseDuration:_mapping.PulseDuration, outputButtonA: outputButtonA, outputButtonB: outputButtonB);
                 }
             }
             else

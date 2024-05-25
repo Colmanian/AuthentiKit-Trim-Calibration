@@ -1,4 +1,5 @@
 ﻿using AuthentiKitTuningApp.Common.Model;
+using System;
 using System.Diagnostics;
 using vJoyInterfaceWrap;
 
@@ -6,31 +7,24 @@ namespace AuthentiKitTuningApp.Processor
 {
     class ButtonChangeToPulseProcessor
     {
-        bool _latched;
-        bool _holding;
+        private vJoy _joystick;
+        private uint _vJoyId;
+        private uint _vJoyButtonNumberA;
+        private uint _vJoyButtonNumberB;
+        private int _pulseDuration; //ms
 
-        vJoy _joystick;
-        uint _vJoyId;
-        uint _vJoyButtonNumberA;
-        uint _vJoyButtonNumberB;
+        private bool _priorInputButtonState;
+        private bool _pulsing;
+        private long _pulseStart;
 
-        bool _priorInputButtonState;
-        bool _outputtingOnA; // If true we're outputting on A, if false we're outputting on B
-        bool _outputA; // Output A is On
-        bool _outputB; // Output B is On
-
-        const int PULSE_LENGTH = 60; //ms
-
-        public ButtonChangeToPulseProcessor(bool holding, OutputButton outputButtonA, OutputButton outputButtonB)
+        public ButtonChangeToPulseProcessor(OutputButton outputButtonA, OutputButton outputButtonB, int pulseDuration)
         {
-            _outputA = false;
-            _outputB = false;
-            _latched = false; // This option would implement what I consider to be ordinary latching
-            _holding = holding; // This option is what the Authentikit Project actually needed 
-            if (_latched) { _outputA = true; }
+            _pulseDuration = pulseDuration; // ms
             _vJoyId = outputButtonA.VJoyDevice;
             _vJoyButtonNumberA = outputButtonA.VJoyItem;
             _vJoyButtonNumberB = outputButtonB.VJoyItem;
+            _pulsing = false;
+            _pulseStart = 0;
             _joystick = new vJoy();
             if (!_joystick.vJoyEnabled())
             {
@@ -55,54 +49,43 @@ namespace AuthentiKitTuningApp.Processor
                 Debug.WriteLine("Acquired vJoy device number {0}", _vJoyId);
 
                 // Initalise
-                SetOutput(holding, false);
+                SetOutputs(false, false);
             }
         }
 
         internal void Process(bool inputButtonState, long elapsedMilliseconds)
         {
-            // If button has turned on or off
-            if (_priorInputButtonState != inputButtonState)
+            if ((inputButtonState == _priorInputButtonState) && !_pulsing)
+                return;
+
+            if (!_pulsing)
             {
-                if (_holding)
+                // Start Pulsing 
+                _pulsing = true;
+                _pulseStart = elapsedMilliseconds;
+                if (inputButtonState)
                 {
-                    SetOutput(!inputButtonState, inputButtonState);
+                    // Button has tranistioned from OFF to ON
+                    SetOutputs(true, false);
                 }
                 else
                 {
-                    // If button is now on
-                    if (inputButtonState)
-                    {
-                        if (_outputtingOnA)
-                        {
-                            _outputA = true;
-                            _outputB = false;
-                        }
-                        else
-                        {
-                            _outputA = false;
-                            _outputB = true;
-                        }
-                    }
-                    // Else if button is now off
-                    else
-                    {
-                        _outputtingOnA = !_outputtingOnA;
-                        if (!_latched)
-                        {
-                            _outputA = false;
-                            _outputB = false;
-                        }
-                    }
-                    SetOutput(_outputA, _outputB);
+                    // Button has tranistioned from ON to OFF
+                    SetOutputs(false, true);
                 }
-                _priorInputButtonState = inputButtonState;
             }
+            else if (elapsedMilliseconds > (_pulseStart + _pulseDuration))
+            {
+                // Stop Pulsing
+                _pulsing = false;
+                SetOutputs(false, false);
+            }
+            _priorInputButtonState = inputButtonState;
         }
-        internal void SetOutput(bool stateA, bool stateB)
+        internal void SetOutputs(bool stateA, bool stateB)
         {
-            _joystick?.SetBtn(stateA, _vJoyId, _vJoyButtonNumberA);
-            _joystick?.SetBtn(stateB, _vJoyId, _vJoyButtonNumberB);
+            _joystick.SetBtn(stateA, _vJoyId, _vJoyButtonNumberA);
+            _joystick.SetBtn(stateB, _vJoyId, _vJoyButtonNumberB);
         }
     }
 }
