@@ -280,8 +280,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
-        "ProductCode" = "8:{EDD2295C-8F8F-46B5-A121-6C60E7CCE75D}"
-        "PackageCode" = "8:{00645733-76D6-4F13-8D01-395980A68E28}"
+        "ProductCode" = "8:{5E6BE484-E95B-4FBA-9BF9-4B96A1BCE542}"
+        "PackageCode" = "8:{414568F7-55CC-4E94-8124-E389C056B084}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
