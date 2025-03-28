@@ -29,7 +29,7 @@ It's best to reach out if you'd like to collaberate to maximise the chances of g
 
 This application is written in .NET 6. This was choson over .Net Core / UMP so that the application doesn't run in a sandbox, and because UWP applications have 'application and lifecyle management control', meaning they pause when minimised or not in use which wouldn't work for this application (as far as I can tell anyway).
 
-To develop and build, install `.NET 6 SDK` and open up the soluiton found in the `/AuthentiKitTrimCalibration` solution in Visual Studio 2022. It's written using a pretty standard pattern so if you're familar with the .NET you should be able to dev and build with relative ease. You'll need the [Installer Projects plugin](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects) for Visual Studio.
+To develop and build, install `.NET 6 SDK` and open up the soluiton found in the `/AuthentiKitTrimCalibration` solution in `Visual Studio 2022 Version 17.13.5`. It's written using a pretty standard pattern so if you're familar with the .NET you should be able to dev and build with relative ease. You'll need the [Installer Projects plugin](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects) for Visual Studio.
 
 ## User Interface Testing using WinAppDriver
 To run the UI tests, you'll need [WinAppDriver](https://github.com/microsoft/WinAppDriver). Grab the MSI installer for v1.2.1 if you're having issues.
