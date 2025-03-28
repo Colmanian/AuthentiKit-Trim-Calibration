@@ -32,7 +32,7 @@ namespace AuthentiKitTuningApp.Common.Model
             GatewayEnabled3 = false;
             GatewayEnabled4 = false;
             GatewayEnabled5 = false;
-            gw1 = 1;
+            gw1 = 3;
             gw2 = 25;
             gw3 = 50;
             gw4 = 75;

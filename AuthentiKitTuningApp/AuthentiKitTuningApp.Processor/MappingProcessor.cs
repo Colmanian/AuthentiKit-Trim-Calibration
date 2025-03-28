@@ -18,6 +18,7 @@ namespace AuthentiKitTuningApp.Processor
         private AxisToButtonProcessor _axisToButtonProcessor;
         private AdvancedButtonToButtonProcessor _advancedButtonToButtonProcessor;
         private ButtonChangeToPulseProcessor _buttonChangeToPulseProcessor;
+        private RotaryProcessor _rotaryProcessor;
         bool _needToCentre;
 
         private void MappingProcess()
@@ -30,7 +31,8 @@ namespace AuthentiKitTuningApp.Processor
                     _mapping.TypeId == MappingType.ENCODER_TO_AXIS ||
                     _mapping.TypeId == MappingType.ENCODER_TO_BUTTON ||
                     _mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON ||
-                    _mapping.TypeId == MappingType.BUTTON_CHANGE_TO_PULSE)
+                    _mapping.TypeId == MappingType.BUTTON_CHANGE_TO_PULSE ||
+                    _mapping.TypeId == MappingType.ROTARY)
                 {
                     // Input Event Generation
                     var directInput = new DirectInput();
@@ -94,7 +96,8 @@ namespace AuthentiKitTuningApp.Processor
                                 _needToCentre = false;
                             }
                             _encoderToAxisProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds);
-                        } else if (_mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON && _advancedButtonToButtonProcessor != null)
+                        }
+                        else if (_mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON && _advancedButtonToButtonProcessor != null)
                         {
                             // Button A Polling
                             if (buttonAState != joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button])
@@ -111,6 +114,20 @@ namespace AuthentiKitTuningApp.Processor
                                 buttonAState = joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button];
                             }
                             _buttonChangeToPulseProcessor.Process(buttonAState, stopWatch.ElapsedMilliseconds);
+                        }
+                        else if (_mapping.TypeId == MappingType.ROTARY & _rotaryProcessor != null)
+                        {
+                            // Button A Polling
+                            if (buttonAState != joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button])
+                            {
+                                buttonAState = joystick.GetCurrentState().Buttons[_mapping.InputButtonA.Button];
+                            }
+                            // Button B Polling
+                            if (buttonBState != joystick.GetCurrentState().Buttons[_mapping.InputButtonB.Button])
+                            {
+                                buttonBState = joystick.GetCurrentState().Buttons[_mapping.InputButtonB.Button];
+                            }
+                            _rotaryProcessor.Process(buttonAState, buttonBState, stopWatch.ElapsedMilliseconds);
                         }
                     }
 
@@ -162,7 +179,8 @@ namespace AuthentiKitTuningApp.Processor
                                     default:
                                         break;
                                 }
-                            } else if (_mapping.TypeId == MappingType.AXIS_TO_BUTTON & _axisToButtonProcessor != null)
+                            }
+                            else if (_mapping.TypeId == MappingType.AXIS_TO_BUTTON & _axisToButtonProcessor != null)
                             {
                                 JoystickOffset axisType = (JoystickOffset)_axisToButtonProcessor.getAxisId();
                                 switch (axisType)
@@ -265,7 +283,7 @@ namespace AuthentiKitTuningApp.Processor
                         gateways: _mapping.Gateways);
                 }
             }
-            else if(_mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON)
+            else if (_mapping.TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON)
             {
                 Debug.WriteLine("Which means advanced button, and the output channels are {0} and {1}", _mapping.OutputChannelA.Name, _mapping.OutputChannelB.Name);
                 if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
@@ -280,7 +298,16 @@ namespace AuthentiKitTuningApp.Processor
                 if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
                 {
                     Debug.WriteLine("so creating new Button Change to PulseProcessor...");
-                    _buttonChangeToPulseProcessor = new ButtonChangeToPulseProcessor(pulseDuration:_mapping.PulseDuration, outputButtonA: outputButtonA, outputButtonB: outputButtonB);
+                    _buttonChangeToPulseProcessor = new ButtonChangeToPulseProcessor(pulseDuration: _mapping.PulseDuration, outputButtonA: outputButtonA, outputButtonB: outputButtonB);
+                }
+            }
+            else if (_mapping.TypeId == MappingType.ROTARY)
+            {
+                Debug.WriteLine("Which means rotary mapping, and the output channels are {0} to range channels are {0}+{1} with default {1}", _mapping.OutputChannelA.Name, _mapping.Gateway1, _mapping.OutputChannelB.Name);
+                if ((_mapping.OutputChannelA is OutputButton outputButtonA) && (_mapping.OutputChannelB is OutputButton outputButtonB))
+                {
+                    Debug.WriteLine("so creating new Rotary Processor...");
+                    _rotaryProcessor = new RotaryProcessor(rangeStart: outputButtonA, initialButton: outputButtonB, range: _mapping.Gateway1, looping: _mapping.GatewayEnabled1);
                 }
             }
             else

@@ -158,9 +158,9 @@ namespace AuthentiKitTuningApp.Controls
             label4.AutoSize = true;
             label4.Location = new Point(17, 184);
             label4.Name = "label4";
-            label4.Size = new Size(125, 15);
+            label4.Size = new Size(162, 15);
             label4.TabIndex = 28;
-            label4.Text = "Default Output Button";
+            label4.Text = "Inital / Default Output Button";
             // 
             // label5
             // 
@@ -176,9 +176,11 @@ namespace AuthentiKitTuningApp.Controls
             // 
             numericUpDown1.Location = new Point(269, 152);
             numericUpDown1.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.Minimum = new decimal(new int[] { 3, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(120, 23);
             numericUpDown1.TabIndex = 30;
+            numericUpDown1.Value = new decimal(new int[] { 3, 0, 0, 0 });
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // checkBox1

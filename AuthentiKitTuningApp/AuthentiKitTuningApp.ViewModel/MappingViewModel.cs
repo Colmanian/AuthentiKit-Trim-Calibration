@@ -8,6 +8,7 @@ using AuthentiKitTuningApp.Processor.Hardware;
 using AuthentiKitTuningApp.Processor.Data;
 using System.Runtime.InteropServices;
 using System.Diagnostics.Contracts;
+using System.Threading;
 
 namespace AuthentiKitTuningApp.ViewModel
 {
@@ -135,7 +136,26 @@ namespace AuthentiKitTuningApp.ViewModel
                             return inputButtonA && outputChannelA && outputChannelB;
                         case MappingType.BUTTON_CHANGE_TO_PULSE:
                             return inputButtonA && outputChannelA && outputChannelB;
+                        case MappingType.ROTARY:
+                            {
+                                bool valid = true;
+                                // Check same vJoyDevice
+                                if (_mapping.OutputChannelA.VJoyDevice != _mapping.OutputChannelB.VJoyDevice)
+                                {
+                                    valid = false;
+                                }
+                                var buttonStartRange = _mapping.OutputChannelA.VJoyItem;
+                                var defaultButton = _mapping.OutputChannelB.VJoyItem;
+                                var numOfOutputs = _mapping.Gateway1;
 
+                                // Check default button in range
+                                if ((defaultButton < buttonStartRange) || (defaultButton > buttonStartRange + numOfOutputs - 1))
+                                {
+                                    valid = false;
+                                }
+
+                                return valid;
+                            }
                     }
                 }
                 return false;
