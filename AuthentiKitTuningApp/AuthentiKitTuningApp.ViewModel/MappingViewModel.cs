@@ -149,6 +149,7 @@ namespace AuthentiKitTuningApp.ViewModel
         public bool IsAxisToButtonMapping => TypeId == MappingType.AXIS_TO_BUTTON;
         public bool IsAdvancedButtonToButtonMapping => TypeId == MappingType.ADVANCED_BUTTON_TO_BUTTON;
         public bool IsButtonChangeToPulseMapping => TypeId == MappingType.BUTTON_CHANGE_TO_PULSE;
+        public bool IsRotaryMapping => TypeId == MappingType.ROTARY;
 
         public string Name
         {

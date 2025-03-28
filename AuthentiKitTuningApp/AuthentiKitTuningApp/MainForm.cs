@@ -183,6 +183,7 @@ namespace AuthentiKitTuningApp
                 encoderToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsEncoderToAxisMapping");
                 axisToAxisControl.DataBindings.Add("Visible", mappingBindingSource, "IsAxisToAxisMapping");
                 buttonChangeToPulseControl1.DataBindings.Add("Visible", mappingBindingSource, "IsButtonChangeToPulseMapping");
+                rotaryControl1.DataBindings.Add("Visible", mappingBindingSource, "IsRotaryMapping");
 
                 // buttonToAxisControl
                 buttonToAxisControl.LoadFormData(ref _viewModel, ref mappingBindingSource);
@@ -204,6 +205,9 @@ namespace AuthentiKitTuningApp
 
                 // buttonChangeToPulseControl1
                 buttonChangeToPulseControl1.LoadFormData(ref _viewModel, ref mappingBindingSource);
+
+                // rotaryControl1
+                rotaryControl1.LoadFormData(ref _viewModel, ref mappingBindingSource);
 
                 // Form Activation
                 tbName.DataBindings.Add("Enabled", mappingBindingSource, "Deactivated");
@@ -494,8 +498,9 @@ namespace AuthentiKitTuningApp
                         selected.Equals("3") ||
                         selected.Equals("4") ||
                         selected.Equals("5") ||
-                        selected.Equals("6")||
-                        selected.Equals("7"))
+                        selected.Equals("6") ||
+                        selected.Equals("7") ||
+                        selected.Equals("8"))
                         mappingViewModel.TypeId = int.Parse(selected);
                 }
             }

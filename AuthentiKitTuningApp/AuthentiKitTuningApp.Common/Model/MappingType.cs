@@ -13,6 +13,7 @@ namespace AuthentiKitTuningApp.Common.Model
         private const string AXIS_TO_BUTTON_STRING = "Remap Axis to Virtual Button";
         private const string ADVANCED_BUTTON_TO_STRING = "Remap Button to Multiple Buttons";
         private const string BUTTON_CHANGE_TO_PULSE_STRING = "Button Change to Pulse";
+        private const string ROTARY_STRING = "Rotary Clicks to Buttons";
 
         public const int BUTTON_TO_AXIS = 0;
         public const int BUTTON_TO_BUTTON = 1;
@@ -22,6 +23,7 @@ namespace AuthentiKitTuningApp.Common.Model
         public const int AXIS_TO_BUTTON = 5;
         public const int ADVANCED_BUTTON_TO_BUTTON = 6;
         public const int BUTTON_CHANGE_TO_PULSE = 7;
+        public const int ROTARY = 8;
 
 
         public int Id { get; set; }
@@ -43,6 +45,7 @@ namespace AuthentiKitTuningApp.Common.Model
             types.Add(new MappingType(AXIS_TO_BUTTON, AXIS_TO_BUTTON_STRING));
             types.Add(new MappingType(ADVANCED_BUTTON_TO_BUTTON, ADVANCED_BUTTON_TO_STRING));
             types.Add(new MappingType(BUTTON_CHANGE_TO_PULSE, BUTTON_CHANGE_TO_PULSE_STRING));
+            types.Add(new MappingType(ROTARY, ROTARY_STRING));
             return types;
         }
     }
