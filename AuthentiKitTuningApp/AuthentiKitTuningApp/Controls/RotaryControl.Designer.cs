@@ -46,17 +46,33 @@ namespace AuthentiKitTuningApp.Controls
             label5 = new Label();
             numericUpDown1 = new NumericUpDown();
             checkBox1 = new CheckBox();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoSize = true;
-            panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(numericUpDown1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(cbOutputButtonB);
+            panel1.Controls.Add(cbOutputButtonA);
+            panel1.Controls.Add(DetectButton2);
+            panel1.Controls.Add(DetectButton1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(cbInputB);
+            panel1.Controls.Add(cbInputA);
+
+            panel1.BackColor = System.Drawing.SystemColors.Control;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(407, 256);
             panel1.TabIndex = 3;
+
             // 
             // DetectButton2
             // 
@@ -198,19 +214,7 @@ namespace AuthentiKitTuningApp.Controls
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(checkBox1);
-            Controls.Add(numericUpDown1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(cbOutputButtonB);
-            Controls.Add(cbOutputButtonA);
-            Controls.Add(DetectButton2);
-            Controls.Add(DetectButton1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(cbInputB);
-            Controls.Add(cbInputA);
+            Controls.Add(panel1);
             Name = "RotaryControl";
             Size = new Size(407, 256);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
