@@ -102,15 +102,10 @@
             "ComponentsUrl" = "8:https://github.com/jshafer817/vJoy/releases/download/v2.1.9.1/vJoySetup.exe"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.8"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.8.0.x86"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.8 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.8"
-                    }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.6.0.x86"
-                    {
-                    "Name" = "8:.NET Runtime 6.0.5 (x86)"
-                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.6.0.x86"
+                    "Name" = "8:.NET Runtime 8.0.14 (x86)"
+                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.8.0.x86"
                     }
                 }
             }
@@ -135,7 +130,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.8"
+                "FrameworkVersion" = "8:ANY"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
                 }
@@ -280,15 +275,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AuthentiKit Tuning App"
-        "ProductCode" = "8:{96B5964D-2DF9-4B8C-817E-08C392E1F3FD}"
-        "PackageCode" = "8:{14D9D36F-B666-464A-B7D0-B2F742134F24}"
+        "ProductCode" = "8:{9B33C520-00F1-41C4-9039-7BBB36AD1687}"
+        "PackageCode" = "8:{72A4867F-F8DF-4CB3-B8C8-CF4F77B38848}"
         "UpgradeCode" = "8:{13675CC4-C34F-4648-8320-2BAFA23F7BD0}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:FALSE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.5.1"
+        "ProductVersion" = "8:1.6.0"
         "Manufacturer" = "8:AuthentiKit"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
