@@ -39,6 +39,14 @@ namespace AuthentiKitTuningApp.Controls
             label1 = new Label();
             cbInputB = new ComboBox();
             cbInputA = new ComboBox();
+            cbOutputButtonA = new ComboBox();
+            cbOutputButtonB = new ComboBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            numericUpDown1 = new NumericUpDown();
+            checkBox1 = new CheckBox();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -53,7 +61,7 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton2
             // 
             DetectButton2.AutoSize = true;
-            DetectButton2.Location = new Point(330, 69);
+            DetectButton2.Location = new Point(330, 84);
             DetectButton2.Name = "DetectButton2";
             DetectButton2.Size = new Size(59, 25);
             DetectButton2.TabIndex = 23;
@@ -64,7 +72,7 @@ namespace AuthentiKitTuningApp.Controls
             // DetectButton1
             // 
             DetectButton1.AutoSize = true;
-            DetectButton1.Location = new Point(330, 25);
+            DetectButton1.Location = new Point(330, 31);
             DetectButton1.Name = "DetectButton1";
             DetectButton1.Size = new Size(59, 25);
             DetectButton1.TabIndex = 22;
@@ -76,7 +84,7 @@ namespace AuthentiKitTuningApp.Controls
             // 
             label2.AutoEllipsis = true;
             label2.AutoSize = true;
-            label2.Location = new Point(18, 51);
+            label2.Location = new Point(18, 66);
             label2.Name = "label2";
             label2.Size = new Size(82, 15);
             label2.TabIndex = 21;
@@ -86,7 +94,7 @@ namespace AuthentiKitTuningApp.Controls
             // 
             label1.AutoEllipsis = true;
             label1.AutoSize = true;
-            label1.Location = new Point(18, 7);
+            label1.Location = new Point(18, 13);
             label1.Name = "label1";
             label1.Size = new Size(85, 15);
             label1.TabIndex = 20;
@@ -98,7 +106,7 @@ namespace AuthentiKitTuningApp.Controls
             cbInputB.DropDownStyle = ComboBoxStyle.DropDownList;
             cbInputB.DropDownWidth = 800;
             cbInputB.FormattingEnabled = true;
-            cbInputB.Location = new Point(18, 69);
+            cbInputB.Location = new Point(18, 84);
             cbInputB.Name = "cbInputB";
             cbInputB.Size = new Size(306, 23);
             cbInputB.TabIndex = 19;
@@ -110,16 +118,91 @@ namespace AuthentiKitTuningApp.Controls
             cbInputA.DropDownStyle = ComboBoxStyle.DropDownList;
             cbInputA.DropDownWidth = 800;
             cbInputA.FormattingEnabled = true;
-            cbInputA.Location = new Point(18, 25);
+            cbInputA.Location = new Point(18, 31);
             cbInputA.Name = "cbInputA";
             cbInputA.Size = new Size(306, 23);
             cbInputA.TabIndex = 18;
             cbInputA.SelectedIndexChanged += cbInputA_SelectedIndexChanged;
             // 
+            // cbOutputButtonA
+            // 
+            cbOutputButtonA.FormattingEnabled = true;
+            cbOutputButtonA.Location = new Point(17, 151);
+            cbOutputButtonA.Name = "cbOutputButtonA";
+            cbOutputButtonA.Size = new Size(232, 23);
+            cbOutputButtonA.TabIndex = 25;
+            cbOutputButtonA.SelectedIndexChanged += cbOutputButtonA_SelectedIndexChanged;
+            // 
+            // cbOutputButtonB
+            // 
+            cbOutputButtonB.FormattingEnabled = true;
+            cbOutputButtonB.Location = new Point(17, 202);
+            cbOutputButtonB.Name = "cbOutputButtonB";
+            cbOutputButtonB.Size = new Size(232, 23);
+            cbOutputButtonB.TabIndex = 26;
+            cbOutputButtonB.SelectedIndexChanged += cbOutputButtonB_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoEllipsis = true;
+            label3.AutoSize = true;
+            label3.Location = new Point(17, 133);
+            label3.Name = "label3";
+            label3.Size = new Size(108, 15);
+            label3.TabIndex = 27;
+            label3.Text = "Output Range Start";
+            // 
+            // label4
+            // 
+            label4.AutoEllipsis = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(17, 184);
+            label4.Name = "label4";
+            label4.Size = new Size(125, 15);
+            label4.TabIndex = 28;
+            label4.Text = "Default Output Button";
+            // 
+            // label5
+            // 
+            label5.AutoEllipsis = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(269, 133);
+            label5.Name = "label5";
+            label5.Size = new Size(97, 15);
+            label5.TabIndex = 29;
+            label5.Text = "Num. of Outputs";
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(269, 152);
+            numericUpDown1.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 30;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(269, 202);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(127, 19);
+            checkBox1.TabIndex = 31;
+            checkBox1.Text = "Loop Over Outputs";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // RotaryControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(checkBox1);
+            Controls.Add(numericUpDown1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(cbOutputButtonB);
+            Controls.Add(cbOutputButtonA);
             Controls.Add(DetectButton2);
             Controls.Add(DetectButton1);
             Controls.Add(label2);
@@ -128,6 +211,7 @@ namespace AuthentiKitTuningApp.Controls
             Controls.Add(cbInputA);
             Name = "RotaryControl";
             Size = new Size(407, 256);
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +225,12 @@ namespace AuthentiKitTuningApp.Controls
         private ComboBox cbInputB;
         private ComboBox cbInputA;
         private Panel panel1;
+        private ComboBox cbOutputButtonA;
+        private ComboBox cbOutputButtonB;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private NumericUpDown numericUpDown1;
+        private CheckBox checkBox1;
     }
 }

@@ -35,6 +35,21 @@ namespace AuthentiKitTuningApp.Controls
             cbInputB.ValueMember = "Hash";
             cbInputB.DataBindings.Add("SelectedValue", MappingBindingSource, "InputButtonBHash");
 
+            // Output
+            cbOutputButtonA.DataSource = viewModel.OutputButtonsA;
+            cbOutputButtonA.DisplayMember = "Name";
+            cbOutputButtonA.ValueMember = "Hash";
+            cbOutputButtonA.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonAHash");
+
+            cbOutputButtonB.DataSource = viewModel.OutputButtonsB;
+            cbOutputButtonB.DisplayMember = "Name";
+            cbOutputButtonB.ValueMember = "Hash";
+            cbOutputButtonB.DataBindings.Add("SelectedValue", MappingBindingSource, "OutputButtonBHash");
+
+            // Tech Debt. I'm rushed for time so comandeering the GatewayEnabled1 and Gateway1 fields for the rotary control
+            checkBox1.DataBindings.Add("Checked", MappingBindingSource, "GatewayEnabled1");
+            numericUpDown1.DataBindings.Add("Value", MappingBindingSource, "Gateway1");
+
             // Panel Activation
             panel1.DataBindings.Add("Enabled", MappingBindingSource, "Deactivated");
 
@@ -69,6 +84,49 @@ namespace AuthentiKitTuningApp.Controls
             }
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Focused)
+            {
+                foreach (Binding b in checkBox1.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void cbOutputButtonA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputButtonA.Focused)
+            {
+                foreach (Binding b in cbOutputButtonA.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void cbOutputButtonB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbOutputButtonB.Focused)
+            {
+                foreach (Binding b in cbOutputButtonB.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Focused)
+            {
+                foreach (Binding b in numericUpDown1.DataBindings)
+                {
+                    b.WriteValue();
+                }
+            }
+        }
 
         private void DetectButton1_Click(object sender, EventArgs e)
         {
